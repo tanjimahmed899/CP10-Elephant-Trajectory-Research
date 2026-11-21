@@ -1,0 +1,8 @@
+claim,allowed_if_supported,constraint
+The 4-class detector selectively identifies elephants in mixed-animal scenes.,True,Must be supported by frozen COCO metrics; do not generalize beyond evaluated image domains/classes.
+The 4-class detector is more selective than the original elephant-only detector.,True,Requires paired image-clustered CI on pre-locked metrics; do not claim if CI includes no improvement.
+The 4-class detector is robust to unseen animal species.,False,COCO confusers are OOD stress tests only; success does not establish universal unseen-species robustness.
+The 9-image elephant+lion supplement proves broad in-vocabulary robustness.,False,Supplement is small and lion-only; report as supplementary challenge evidence.
+Mixed-species image results validate detector-to-tracker-to-forecast end-to-end performance.,False,R17 image evaluation is detector/selective-filter robustness only; historical end-to-end limitation remains.
+BAMBI deer/human is elephant-specific validation.,False,BAMBI remains cross-species/cross-domain negative stress only.
+Threshold 0.25 was chosen from test performance.,False,0.25 is pre-locked before inference; test-dependent tuning is prohibited.

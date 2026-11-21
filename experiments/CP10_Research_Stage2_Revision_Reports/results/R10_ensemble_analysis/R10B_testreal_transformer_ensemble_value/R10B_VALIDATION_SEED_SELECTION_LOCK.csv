@@ -1,0 +1,7 @@
+task,seed,best_epoch,best_validation_track_macro_ADE,checkpoint_path,checkpoint_sha256
+2s_to_2s,42,73,0.020412125621740336,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_2s_Transformer_seed42.pt,8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f
+2s_to_2s,52,47,0.02168976038021516,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_2s_Transformer_seed52.pt,9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5
+2s_to_2s,62,117,0.01960675750291848,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_2s_Transformer_seed62.pt,0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2
+2s_to_5s,42,38,0.020996073679524472,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_5s_Transformer_seed42.pt,846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a
+2s_to_5s,52,49,0.020903319329111957,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_5s_Transformer_seed52.pt,e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958
+2s_to_5s,62,74,0.020255388847366513,E:\AIUB\Capstone Project\Journal Based Results\Main Result\transformer_results\2s_to_5s_Transformer_seed62.pt,44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a

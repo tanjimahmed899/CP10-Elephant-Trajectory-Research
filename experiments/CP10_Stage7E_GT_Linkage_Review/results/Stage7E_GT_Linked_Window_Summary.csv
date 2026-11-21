@@ -1,0 +1,5 @@
+model,horizon,potential,GT_linked_strict,GT_linked_80pct,candidates_with_any_GT,future_GT_complete,strict_fraction_of_potential,gate80_fraction_of_potential
+original,2s,2,0,0,2,2,0.0,0.0
+original,5s,0,0,0,0,0,0.0,0.0
+adapted,2s,371,187,264,353,350,0.5040431266846361,0.7115902964959568
+adapted,5s,191,124,164,187,185,0.6492146596858639,0.8586387434554974

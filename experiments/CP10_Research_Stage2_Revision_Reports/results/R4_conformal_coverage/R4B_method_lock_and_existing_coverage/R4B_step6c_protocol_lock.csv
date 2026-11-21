@@ -1,0 +1,3 @@
+task,trainval_windows,trainval_tracks,outer_folds,seeds_per_outer_fold,total_crossfit_models,all_windows_have_oof_prediction,all_tracks_single_outer_fold,max_abs_vs_scaled_canonical_error_diff,primary_calibration_unit,primary_score,track_unit_ok,score_looks_simultaneous_max_error
+2s_to_2s,531,62,3,3,9,True,True,3.171403262225425e-08,track,max canonical Euclidean error across all windows and future steps within track,True,True
+2s_to_5s,382,34,3,3,9,True,True,2.5132405490069232e-08,track,max canonical Euclidean error across all windows and future steps within track,True,True

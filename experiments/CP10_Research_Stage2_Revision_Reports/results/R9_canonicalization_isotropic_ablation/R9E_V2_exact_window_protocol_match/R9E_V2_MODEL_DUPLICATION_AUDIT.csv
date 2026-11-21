@@ -1,0 +1,3 @@
+task,raw_rows,unique_sample_keys,duplicate_factor,models,model_count,all_sample_keys_have_two_models,all_sample_keys_have_exactly_two_rows,matches_expected_unique_count
+2s_to_2s,2106,1053,2.0,"[""ConstantVelocity"", ""Stationary""]",2,True,True,True
+2s_to_5s,1652,826,2.0,"[""ConstantVelocity"", ""Stationary""]",2,True,True,True

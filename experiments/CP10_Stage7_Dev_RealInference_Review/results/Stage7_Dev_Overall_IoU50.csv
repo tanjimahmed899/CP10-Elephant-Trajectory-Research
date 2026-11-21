@@ -1,0 +1,5 @@
+config,images,GT,TP,FP,FN,precision,recall,F1,false_boxes_per_annotated_image,small_GT,small_matched,small_recall,mean_wall_sec_per_annotated_image
+baseline_640_conf010,120,521,10,9,511,0.526316,0.019194,0.037037,0.075,137,0,0.0,0.1557
+highres_960_conf010,120,521,14,45,507,0.237288,0.026871,0.048276,0.375,137,0,0.0,0.22705
+lowconf_640_conf003,120,521,18,24,503,0.428571,0.034549,0.063943,0.2,137,0,0.0,0.11832
+highres_960_conf003,120,521,32,72,489,0.307692,0.06142,0.1024,0.6,137,3,0.021898,0.19842

@@ -1,0 +1,7 @@
+dataset_root,split,image_count,label_file_count,labeled_images,empty_label_images,total_boxes,multi_object_images,multi_class_images,elephant_images,elephant_only_images,elephant_plus_other_images,non_elephant_only_images,malformed_label_rows
+E:\AIUB\Capstone Project\capstone\wildlife_project\V5,Train,790,370,370,0,464,61,0,110,110,0,260,0
+E:\AIUB\Capstone Project\capstone\wildlife_project\V5,Validation,150,75,75,0,100,14,3,17,17,0,58,0
+E:\AIUB\Capstone Project\capstone\wildlife_project\V5,Test,130,79,79,0,109,21,10,30,21,9,49,0
+E:\AIUB\Capstone Project\capstone\wildlife_project\exported_dataset\project-2-dataset-instance1786346684.783013-ultralytics-_yolo-_detection-10,Train,188,33,33,0,33,0,0,10,10,0,23,0
+E:\AIUB\Capstone Project\capstone\wildlife_project\exported_dataset\project-2-dataset-instance1786346684.783013-ultralytics-_yolo-_detection-10,Validation,42,15,15,0,18,3,3,2,2,0,13,0
+E:\AIUB\Capstone Project\capstone\wildlife_project\exported_dataset\project-2-dataset-instance1786346684.783013-ultralytics-_yolo-_detection-10,Test,23,13,13,0,27,10,10,10,2,8,3,0

@@ -1,0 +1,7 @@
+check,pass,value
+Required frame/object_id/x/y/w/h/cx/cy columns present,True,91419
+cx == x + w/2,True,1.0
+cy == y + h/2,True,1.0
+"w,h positive",True,1.0
+track IDs are temporally indexable by frame,True,130
+tracking-GT-compatible XYWH schema,True,True

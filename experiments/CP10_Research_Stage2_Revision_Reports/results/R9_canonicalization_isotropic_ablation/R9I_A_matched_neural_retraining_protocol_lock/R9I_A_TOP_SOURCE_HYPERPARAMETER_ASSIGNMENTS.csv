@@ -1,0 +1,521 @@
+file,path,name,start_line,end_line,source
+step4_clustered_bootstrap.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap.py,DEVICE,21,21,"21: DEVICE = torch.device(""cpu"")"
+step4_clustered_bootstrap.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap.py,SEEDS,22,22,"22: SEEDS = [42, 52, 62]"
+step4_clustered_bootstrap.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap.py,RNG_SEED,25,25,25: RNG_SEED = 20261026
+step4_clustered_bootstrap.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap.py,TASKS,28,31,"28: TASKS = {
+29:     ""2s_to_2s"": {""future_len"": 20, ""expected_n"": 865},
+30:     ""2s_to_5s"": {""future_len"": 50, ""expected_n"": 637},
+31: }"
+step4_clustered_bootstrap_v3.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v3.py,DEVICE,22,22,"22: DEVICE = torch.device(""cpu"")"
+step4_clustered_bootstrap_v3.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v3.py,SEEDS,23,23,"23: SEEDS = [42, 52, 62]"
+step4_clustered_bootstrap_v3.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v3.py,RNG_SEED,27,27,27: RNG_SEED = 20261026
+step4_clustered_bootstrap_v3.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v3.py,TASKS,33,36,"33: TASKS = {
+34:     ""2s_to_2s"": {""future_len"": 20, ""expected_n"": 865},
+35:     ""2s_to_5s"": {""future_len"": 50, ""expected_n"": 637},
+36: }"
+step4_clustered_bootstrap_v4.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v4.py,DEVICE,23,23,"23: DEVICE = torch.device(""cpu"")"
+step4_clustered_bootstrap_v4.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v4.py,SEEDS,24,24,"24: SEEDS = [42, 52, 62]"
+step4_clustered_bootstrap_v4.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v4.py,RNG_SEED,28,28,28: RNG_SEED = 20261026
+step4_clustered_bootstrap_v4.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v4.py,TASKS,34,37,"34: TASKS = {
+35:     ""2s_to_2s"": {""future_len"": 20, ""expected_n"": 865},
+36:     ""2s_to_5s"": {""future_len"": 50, ""expected_n"": 637},
+37: }"
+step4_clustered_bootstrap_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v2.py,DEVICE,22,22,"22: DEVICE = torch.device(""cpu"")"
+step4_clustered_bootstrap_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v2.py,SEEDS,23,23,"23: SEEDS = [42, 52, 62]"
+step4_clustered_bootstrap_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v2.py,RNG_SEED,27,27,27: RNG_SEED = 20261026
+step4_clustered_bootstrap_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step4_clustered_bootstrap_v2.py,TASKS,33,36,"33: TASKS = {
+34:     ""2s_to_2s"": {""future_len"": 20, ""expected_n"": 865},
+35:     ""2s_to_5s"": {""future_len"": 50, ""expected_n"": 637},
+36: }"
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,DEVICE,84,84,"84: DEVICE = torch.device(""cpu"")"
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,TASKS,86,104,"86: TASKS = {
+87:     ""2s_to_2s"": {
+88:         ""future_length"": 20,
+89:         ""expected_trainval"": 531,
+90:         ""expected_train"": 434,
+91:         ""expected_val"": 97,
+92:         ""expected_birdsai_test"": 1053,
+93:         ""expected_fresh"": 865,
+94:     },
+95: 
+96:     ""2s_to_5s"": {
+97:         ""future_length"": 50,
+98:         ""expected_trainval"": 382,
+99:         ""expected_train"": 294,
+100:         ""expected_val"": 88,
+101:         ""expected_birdsai_test"": 826,
+102:         ""expected_fresh"": 637,
+103:     }
+104: }"
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,SEEDS,106,110,"106: SEEDS = [
+107:     42,
+108:     52,
+109:     62
+110: ]"
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,BATCH_SIZE,112,112,112: BATCH_SIZE = 64
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,D_MODEL,114,114,114: D_MODEL = 64
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,NHEAD,115,115,115: NHEAD = 4
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,NUM_LAYERS,116,116,116: NUM_LAYERS = 2
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,DIM_FEEDFORWARD,117,117,117: DIM_FEEDFORWARD = 128
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,DROPOUT,118,118,118: DROPOUT = 0.1
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,LEARNING_RATE,120,120,120: LEARNING_RATE = 0.0005
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,WEIGHT_DECAY,121,121,121: WEIGHT_DECAY = 0.0001
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,MAX_EPOCHS,123,123,123: MAX_EPOCHS = 300
+step5_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step5_ablation.py,PATIENCE,124,124,124: PATIENCE = 30
+step3_fresh_wildbox_full_comparison.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step3_fresh_wildbox_full_comparison.py,DEVICE,43,43,"43: DEVICE = torch.device(""cpu"")"
+step3_fresh_wildbox_full_comparison.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step3_fresh_wildbox_full_comparison.py,SEEDS,48,52,"48: SEEDS = [
+49:     42,
+50:     52,
+51:     62
+52: ]"
+step3_fresh_wildbox_full_comparison.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step3_fresh_wildbox_full_comparison.py,TASKS,54,69,"54: TASKS = {
+55: 
+56:     ""2s_to_2s"": {
+57:         ""future_length"": 20,
+58:         ""q"": 0.1,
+59:         ""r"": 0.0001,
+60:         ""expected_samples"": 865
+61:     },
+62: 
+63:     ""2s_to_5s"": {
+64:         ""future_length"": 50,
+65:         ""q"": 0.1,
+66:         ""r"": 0.01,
+67:         ""expected_samples"": 637
+68:     }
+69: }"
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,DEVICE,109,109,"109: DEVICE = torch.device(""cpu"")"
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,TASKS,111,132,"111: TASKS = {
+112: 
+113:     ""2s_to_2s"": {
+114:         ""future_length"": 20,
+115:         ""expected_trainval_windows"": 531,
+116:         ""expected_trainval_tracks"": 62,
+117:         ""expected_test_windows"": 1053,
+118:         ""expected_test_tracks"": 89,
+119:         ""expected_fresh_windows"": 865,
+120:         ""expected_fresh_tracks"": 78
+121:     },
+122: 
+123:     ""2s_to_5s"": {
+124:         ""future_length"": 50,
+125:         ""expected_trainval_windows"": 382,
+126:         ""expected_trainval_tracks"": 34,
+127:         ""expected_test_windows"": 826,
+128:         ""expected_test_tracks"": 63,
+129:         ""expected_fresh_windows"": 637,
+130:         ""expected_fresh_tracks"": 71
+131:     }
+132: }"
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,SEEDS,134,138,"134: SEEDS = [
+135:     42,
+136:     52,
+137:     62
+138: ]"
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,BATCH_SIZE,144,144,144: BATCH_SIZE = 64
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,D_MODEL,146,146,146: D_MODEL = 64
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,NHEAD,147,147,147: NHEAD = 4
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,NUM_LAYERS,148,148,148: NUM_LAYERS = 2
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,DIM_FEEDFORWARD,149,149,149: DIM_FEEDFORWARD = 128
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,DROPOUT,150,150,150: DROPOUT = 0.1
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,LEARNING_RATE,152,152,152: LEARNING_RATE = 0.0005
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,WEIGHT_DECAY,153,153,153: WEIGHT_DECAY = 0.0001
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,MAX_EPOCHS,155,155,155: MAX_EPOCHS = 300
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,PATIENCE,156,156,156: PATIENCE = 30
+step6c_crossfit_conformal.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6c_crossfit_conformal.py,RNG_SEED,167,167,167: RNG_SEED = 20261026
+step6d_k3a1_lock_frozen_transformer_mapping.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_k3a1_lock_frozen_transformer_mapping.py,EXPECTED_SEEDS,64,68,"64: EXPECTED_SEEDS = [
+65:     42,
+66:     52,
+67:     62,
+68: ]"
+K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,SEEDS,69,73,"69: SEEDS = [
+70:     42,
+71:     52,
+72:     62,
+73: ]"
+K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,TASKS,75,141,"75: TASKS = {
+76:     ""2s_to_2s"": {
+77:         ""future_length"":
+78:             20,
+79: 
+80:         ""expected_checkpoint_hashes"": {
+81:             42:
+82:                 ""8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"",
+83: 
+84:             52:
+85:                 ""9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"",
+86: 
+87:             62:
+88:                 ""0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"",
+89:         },
+90: 
+91:         ""checkpoint_paths"": {
+92:             42:
+93:                 MAIN_RESULT
+94:                 / ""transformer_results""
+95:                 / ""2s_to_2s_Transformer_seed42.pt"",
+96: 
+97:             52:
+98:                 MAIN_RESULT
+99:                 / ""transformer_results""
+100:                 / ""2s_to_2s_Transformer_seed52.pt"",
+101: 
+102:             62:
+103:                 MAIN_RESULT
+104:                 / ""transformer_results""
+105:                 / ""2s_to_2s_Transformer_seed62.pt"",
+106:         },
+107:     },
+108: 
+109:     ""2s_to_5s"": {
+110:         ""future_length"":
+111:             50,
+112: 
+113:         ""expected_checkpoint_hashes"": {
+114:             42:
+115:                 ""846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"",
+116: 
+117:             52:
+118:                 ""e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"",
+119: 
+120:             62:
+121:                 ""44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"",
+122:         },
+123: 
+124:         ""checkpoint_paths"": {
+125:             42:
+126:                 MAIN_RESULT
+127:                 / ""transformer_results""
+128:                 / ""2s_to_5s_Transformer_seed42.pt"",
+129: 
+130:             52:
+131:                 MAIN_RESULT
+132:                 / ""transformer_results""
+133:                 / ""2s_to_5s_Transformer_seed52.pt"",
+134: 
+135:             62:
+136:                 MAIN_RESULT
+137:                 / ""transformer_results""
+138:                 / ""2s_to_5s_Transformer_seed62.pt"",
+139:         },
+140:     },
+141: }"
+K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V3_MODELROOT_FIX_FRESH_COPY.py,BATCH_SIZE,143,143,143: BATCH_SIZE = 128
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,DEVICE,36,36,"36: DEVICE = torch.device(""cpu"")"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,TASKS,38,41,"38: TASKS = [
+39:     ""2s_to_2s"",
+40:     ""2s_to_5s""
+41: ]"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,SEEDS,43,47,"43: SEEDS = [
+44:     42,
+45:     52,
+46:     62
+47: ]"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,BATCH_SIZE,49,49,49: BATCH_SIZE = 64
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,D_MODEL,51,51,51: D_MODEL = 64
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,NHEAD,53,53,53: NHEAD = 4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,NUM_LAYERS,55,55,55: NUM_LAYERS = 2
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,DIM_FEEDFORWARD,57,57,57: DIM_FEEDFORWARD = 128
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,DROPOUT,59,59,59: DROPOUT = 0.10
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,LEARNING_RATE,61,61,61: LEARNING_RATE = 5e-4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,WEIGHT_DECAY,63,63,63: WEIGHT_DECAY = 1e-4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,MAX_EPOCHS,65,65,65: MAX_EPOCHS = 300
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,PATIENCE,67,67,67: PATIENCE = 30
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,DEVICE,48,48,"48: DEVICE = torch.device(""cpu"")"
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,TASKS,50,53,"50: TASKS = [
+51:     ""2s_to_2s"",
+52:     ""2s_to_5s""
+53: ]"
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,SEEDS,55,59,"55: SEEDS = [
+56:     42,
+57:     52,
+58:     62
+59: ]"
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,BATCH_SIZE,63,63,63: BATCH_SIZE = 64
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,D_MODEL,65,65,65: D_MODEL = 64
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,NHEAD,66,66,66: NHEAD = 4
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,NUM_LAYERS,67,67,67: NUM_LAYERS = 2
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,DIM_FEEDFORWARD,68,68,68: DIM_FEEDFORWARD = 128
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,DROPOUT,69,69,69: DROPOUT = 0.10
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,LEARNING_RATE,71,71,71: LEARNING_RATE = 5e-4
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,WEIGHT_DECAY,72,72,72: WEIGHT_DECAY = 1e-4
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,MAX_EPOCHS,74,74,74: MAX_EPOCHS = 300
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,PATIENCE,75,75,75: PATIENCE = 30
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,comparison_seed_rows,2734,2734,2734: comparison_seed_rows = []
+train_mdtu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_mdtu.py,comparison_seed,2938,2940,"2938: comparison_seed = pd.DataFrame(
+2939:     comparison_seed_rows
+2940: )"
+evaluate_transformer_ensemble.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_transformer_ensemble.py,DEVICE,37,37,"37: DEVICE = torch.device(""cpu"")"
+evaluate_transformer_ensemble.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_transformer_ensemble.py,TASKS,39,42,"39: TASKS = [
+40:     ""2s_to_2s"",
+41:     ""2s_to_5s""
+42: ]"
+evaluate_transformer_ensemble.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_transformer_ensemble.py,SEEDS,44,48,"44: SEEDS = [
+45:     42,
+46:     52,
+47:     62
+48: ]"
+evaluate_transformer_ensemble.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_transformer_ensemble.py,all_seed_rows,980,980,980: all_seed_rows = []
+evaluate_transformer_ensemble.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_transformer_ensemble.py,seed_df,2060,2062,"2060: seed_df = pd.DataFrame(
+2061:     all_seed_rows
+2062: )"
+K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,SEEDS,69,73,"69: SEEDS = [
+70:     42,
+71:     52,
+72:     62,
+73: ]"
+K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,TASKS,75,141,"75: TASKS = {
+76:     ""2s_to_2s"": {
+77:         ""future_length"":
+78:             20,
+79: 
+80:         ""expected_checkpoint_hashes"": {
+81:             42:
+82:                 ""8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"",
+83: 
+84:             52:
+85:                 ""9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"",
+86: 
+87:             62:
+88:                 ""0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"",
+89:         },
+90: 
+91:         ""checkpoint_paths"": {
+92:             42:
+93:                 MAIN_RESULT
+94:                 / ""transformer_results""
+95:                 / ""2s_to_2s_Transformer_seed42.pt"",
+96: 
+97:             52:
+98:                 MAIN_RESULT
+99:                 / ""transformer_results""
+100:                 / ""2s_to_2s_Transformer_seed52.pt"",
+101: 
+102:             62:
+103:                 MAIN_RESULT
+104:                 / ""transformer_results""
+105:                 / ""2s_to_2s_Transformer_seed62.pt"",
+106:         },
+107:     },
+108: 
+109:     ""2s_to_5s"": {
+110:         ""future_length"":
+111:             50,
+112: 
+113:         ""expected_checkpoint_hashes"": {
+114:             42:
+115:                 ""846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"",
+116: 
+117:             52:
+118:                 ""e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"",
+119: 
+120:             62:
+121:                 ""44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"",
+122:         },
+123: 
+124:         ""checkpoint_paths"": {
+125:             42:
+126:                 MAIN_RESULT
+127:                 / ""transformer_results""
+128:                 / ""2s_to_5s_Transformer_seed42.pt"",
+129: 
+130:             52:
+131:                 MAIN_RESULT
+132:                 / ""transformer_results""
+133:                 / ""2s_to_5s_Transformer_seed52.pt"",
+134: 
+135:             62:
+136:                 MAIN_RESULT
+137:                 / ""transformer_results""
+138:                 / ""2s_to_5s_Transformer_seed62.pt"",
+139:         },
+140:     },
+141: }"
+K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py,BATCH_SIZE,143,143,143: BATCH_SIZE = 128
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,DEVICE,34,34,"34: DEVICE = torch.device(""cpu"")"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,SEEDS,36,36,"36: SEEDS = [42, 52, 62]"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,MODELS,38,41,"38: MODELS = [
+39:     ""LSTM"",
+40:     ""GRU""
+41: ]"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,TASKS,43,46,"43: TASKS = [
+44:     ""2s_to_2s"",
+45:     ""2s_to_5s""
+46: ]"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,BATCH_SIZE,48,48,48: BATCH_SIZE = 64
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,HIDDEN_SIZE,50,50,50: HIDDEN_SIZE = 64
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,NUM_LAYERS,52,52,52: NUM_LAYERS = 2
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,DROPOUT,54,54,54: DROPOUT = 0.10
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,LEARNING_RATE,56,56,56: LEARNING_RATE = 1e-3
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,WEIGHT_DECAY,58,58,58: WEIGHT_DECAY = 1e-4
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,MAX_EPOCHS,60,60,60: MAX_EPOCHS = 300
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,PATIENCE,62,62,62: PATIENCE = 30
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,DEVICE,51,51,"51: DEVICE = torch.device(""cpu"")"
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,TASKS,53,56,"53: TASKS = [
+54:     ""2s_to_2s"",
+55:     ""2s_to_5s""
+56: ]"
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,SEEDS,58,62,"58: SEEDS = [
+59:     42,
+60:     52,
+61:     62
+62: ]"
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,BATCH_SIZE,67,67,67: BATCH_SIZE = 64
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,HIDDEN_SIZE,69,69,69: HIDDEN_SIZE = 64
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,FEATURE_HIDDEN,70,70,70: FEATURE_HIDDEN = 16
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,NUM_LAYERS,73,73,73: NUM_LAYERS = 2
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,DROPOUT,74,74,74: DROPOUT = 0.10
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,LEARNING_RATE,76,76,76: LEARNING_RATE = 1e-3
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,WEIGHT_DECAY,77,77,77: WEIGHT_DECAY = 1e-4
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,MAX_EPOCHS,79,79,79: MAX_EPOCHS = 300
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,PATIENCE,80,80,80: PATIENCE = 30
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,comparison_seed_rows,3542,3542,3542: comparison_seed_rows = []
+train_rmpgu_v2_fixed.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2_fixed.py,comparison_seed,3807,3809,"3807: comparison_seed = pd.DataFrame(
+3808:     comparison_seed_rows
+3809: )"
+K3C15_secondary_frozen_3seed_transformer_inference.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_secondary_frozen_3seed_transformer_inference.py,SEEDS,68,72,"68: SEEDS = [
+69:     42,
+70:     52,
+71:     62,
+72: ]"
+K3C15_secondary_frozen_3seed_transformer_inference.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_secondary_frozen_3seed_transformer_inference.py,TASKS,74,140,"74: TASKS = {
+75:     ""2s_to_2s"": {
+76:         ""future_length"":
+77:             20,
+78: 
+79:         ""expected_checkpoint_hashes"": {
+80:             42:
+81:                 ""8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"",
+82: 
+83:             52:
+84:                 ""9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"",
+85: 
+86:             62:
+87:                 ""0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"",
+88:         },
+89: 
+90:         ""checkpoint_paths"": {
+91:             42:
+92:                 MAIN_RESULT
+93:                 / ""transformer_results""
+94:                 / ""2s_to_2s_Transformer_seed42.pt"",
+95: 
+96:             52:
+97:                 MAIN_RESULT
+98:                 / ""transformer_results""
+99:                 / ""2s_to_2s_Transformer_seed52.pt"",
+100: 
+101:             62:
+102:                 MAIN_RESULT
+103:                 / ""transformer_results""
+104:                 / ""2s_to_2s_Transformer_seed62.pt"",
+105:         },
+106:     },
+107: 
+108:     ""2s_to_5s"": {
+109:         ""future_length"":
+110:             50,
+111: 
+112:         ""expected_checkpoint_hashes"": {
+113:             42:
+114:                 ""846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"",
+115: 
+116:             52:
+117:                 ""e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"",
+118: 
+119:             62:
+120:                 ""44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"",
+121:         },
+122: 
+123:         ""checkpoint_paths"": {
+124:             42:
+125:                 MAIN_RESULT
+126:                 / ""transformer_results""
+127:                 / ""2s_to_5s_Transformer_seed42.pt"",
+128: 
+129:             52:
+130:                 MAIN_RESULT
+131:                 / ""transformer_results""
+132:                 / ""2s_to_5s_Transformer_seed52.pt"",
+133: 
+134:             62:
+135:                 MAIN_RESULT
+136:                 / ""transformer_results""
+137:                 / ""2s_to_5s_Transformer_seed62.pt"",
+138:         },
+139:     },
+140: }"
+K3C15_secondary_frozen_3seed_transformer_inference.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\K3C15_secondary_frozen_3seed_transformer_inference.py,BATCH_SIZE,142,142,142: BATCH_SIZE = 128
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,DEVICE,44,44,"44: DEVICE = torch.device(""cpu"")"
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,TASKS,46,49,"46: TASKS = [
+47:     ""2s_to_2s"",
+48:     ""2s_to_5s""
+49: ]"
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,SEEDS,51,55,"51: SEEDS = [
+52:     42,
+53:     52,
+54:     62
+55: ]"
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,BATCH_SIZE,60,60,60: BATCH_SIZE = 64
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,HIDDEN_SIZE,62,62,62: HIDDEN_SIZE = 64
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,NUM_LAYERS,63,63,63: NUM_LAYERS = 2
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,DROPOUT,64,64,64: DROPOUT = 0.10
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,LEARNING_RATE,66,66,66: LEARNING_RATE = 1e-3
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,WEIGHT_DECAY,67,67,67: WEIGHT_DECAY = 1e-4
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,MAX_EPOCHS,69,69,69: MAX_EPOCHS = 300
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,PATIENCE,70,70,70: PATIENCE = 30
+train_proposed_ampmu.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_proposed_ampmu.py,comparison_seed,2517,2525,"2517: comparison_seed = pd.concat(
+2518: 
+2519:     [
+2520:         baseline_validation,
+2521:         proposed_for_comparison
+2522:     ],
+2523: 
+2524:     ignore_index=True
+2525: )"
+step18a_lock_geofence_protocol.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18a_lock_geofence_protocol.py,DEVICE,49,49,"49: DEVICE = torch.device(""cpu"")"
+step18a_lock_geofence_protocol.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18a_lock_geofence_protocol.py,SEEDS,51,55,"51: SEEDS = [
+52:     42,
+53:     52,
+54:     62
+55: ]"
+step18a_lock_geofence_protocol.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18a_lock_geofence_protocol.py,TASKS,57,60,"57: TASKS = [
+58:     ""2s_to_2s"",
+59:     ""2s_to_5s""
+60: ]"
+step18b_evaluate_locked_geofence.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18b_evaluate_locked_geofence.py,DEVICE,124,124,"124: DEVICE = torch.device(""cpu"")"
+step18b_evaluate_locked_geofence.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18b_evaluate_locked_geofence.py,SEEDS,126,126,"126: SEEDS = protocol[""seeds""]"
+step18b_evaluate_locked_geofence.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18b_evaluate_locked_geofence.py,TASKS,154,164,"154: TASKS = {
+155: 
+156:     ""2s_to_2s"": {
+157:         ""future_frames"": 20,
+158:     },
+159: 
+160:     ""2s_to_5s"": {
+161:         ""future_frames"": 50,
+162:     },
+163: 
+164: }"
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,DEVICE,47,47,"47: DEVICE = torch.device(""cpu"")"
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,TASKS,49,52,"49: TASKS = [
+50:     ""2s_to_2s"",
+51:     ""2s_to_5s""
+52: ]"
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,SEEDS,54,58,"54: SEEDS = [
+55:     42,
+56:     52,
+57:     62
+58: ]"
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,BATCH_SIZE,63,63,63: BATCH_SIZE = 64
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,HIDDEN_SIZE,65,65,65: HIDDEN_SIZE = 64
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,FEATURE_HIDDEN,66,66,66: FEATURE_HIDDEN = 16
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,NUM_LAYERS,69,69,69: NUM_LAYERS = 2
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,DROPOUT,70,70,70: DROPOUT = 0.10
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,LEARNING_RATE,72,72,72: LEARNING_RATE = 1e-3
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,WEIGHT_DECAY,73,73,73: WEIGHT_DECAY = 1e-4
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,MAX_EPOCHS,75,75,75: MAX_EPOCHS = 300
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,PATIENCE,76,76,76: PATIENCE = 30
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,comparison_seed_rows,3265,3265,3265: comparison_seed_rows = []
+train_rmpgu_v2.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_rmpgu_v2.py,comparison_seed,3458,3460,"3458: comparison_seed = pd.DataFrame(
+3459:     comparison_seed_rows
+3460: )"

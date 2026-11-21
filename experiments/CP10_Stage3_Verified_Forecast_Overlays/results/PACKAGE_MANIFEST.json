@@ -1,0 +1,79 @@
+{
+  "source_files": {
+    "original_source_sample_zip": "CP10_Stage3_EXP3_Source_Samples.zip",
+    "frozen_predictions_zip": "EXP3_Output_Review.zip",
+    "r8_matched_zip": "CP10_Stage3_R8_Matched_Data.zip"
+  },
+  "results": [
+    {
+      "name": "Figure_Stage3_elep2_Matched_2s_vs_5s.png",
+      "bytes": 2348313,
+      "sha256": "70506745bd09163966a50d7de5feef0b676788f5a3683f5dcb27e53ee2c1f0d1"
+    },
+    {
+      "name": "R8_Corrected_to_Canonical_Exact_Pairing_Audit.csv",
+      "bytes": 390,
+      "sha256": "8676dae7d1a9b60d2eae62b2bbc9d91bcd84027c2ee528aa328578468cece904"
+    },
+    {
+      "name": "Figure_Stage3_elep1_Matched_2s_vs_5s.png",
+      "bytes": 2845109,
+      "sha256": "896c1c7beb2ecf15f13b5f353c995fa60886182fded304b01ee3d05b78baf8c2"
+    },
+    {
+      "name": "audit_r8_pairing.py",
+      "bytes": 1872,
+      "sha256": "7eb88b1687802a6b9e776b95ee0dddfea55fdc8b62478f79fdffb6c54acc561b"
+    },
+    {
+      "name": "Figure_Stage3_ThreeElephants_IndividualForecasts.png",
+      "bytes": 8116590,
+      "sha256": "d6608ee1cf4027b609c53db65d655efad3e458c4874387fdfdd75ba8df798d94"
+    },
+    {
+      "name": "Selected_Forecast_Examples_Geometry_Validation.csv",
+      "bytes": 824,
+      "sha256": "a3eeffd97b752eda46d1f65cc85ca28cea4159410007ac5d87d234fe50948522"
+    },
+    {
+      "name": "Figure_Stage3_elep3_Matched_2s_vs_5s.png",
+      "bytes": 2416824,
+      "sha256": "d3c22f1246b0086e9e628e3f18fdb33297b97dff9cde3f1d5cdddf210b3e08a4"
+    },
+    {
+      "name": "Figure_Stage3_Original_vs_ThreeElephant_GT.png",
+      "bytes": 3693626,
+      "sha256": "6d22804f37e611718ee8b581ee2d6cf3e965283c534c5c6dd9e5e5c4a26684e8"
+    },
+    {
+      "name": "README_Stage3_Results.md",
+      "bytes": 7061,
+      "sha256": "9337241a731b61c4730e1c67006b94746af97e24e54264c66d2a286c9289974b"
+    },
+    {
+      "name": "compare_horizons.py",
+      "bytes": 1531,
+      "sha256": "a8a1f727ae043ad53d4be43eec3d54ba39b2092618164765b4af8e089051a153"
+    },
+    {
+      "name": "EXP3_Anchor_Frame_Geometry_Audit.csv",
+      "bytes": 11445,
+      "sha256": "5c7a3d563b7bd57d5a4f73fd66793eaa57870fa5f90eef6313b3575e6e1f735e"
+    },
+    {
+      "name": "stage4_collect_raw_wsl.py",
+      "bytes": 4066,
+      "sha256": "e9ec8dc13b83715680157fb27ebbe12a807d9fcc9994174bb780ea597a6a2347"
+    },
+    {
+      "name": "Figure_Stage3_RealDrone_5s_Forecast_Examples.png",
+      "bytes": 9498808,
+      "sha256": "528ad756f4487e3dfa5b797206fccc375230435a6f85a0c846e8a5d4f9828638"
+    },
+    {
+      "name": "build_verified_overlays.py",
+      "bytes": 12209,
+      "sha256": "f2249aee42ff7edb3c475c16cd0656aa11b3611f584aaf5982792b312b187276"
+    }
+  ]
+}

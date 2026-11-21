@@ -1,0 +1,9 @@
+{
+  "scope": "Retrospective TestReal frozen detector comparison. Not independent, not prospective.",
+  "original_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "adapted_checkpoint_sha256": "71671b4175509e96bb6e4cd7e803b82c9c4b606061438a009d98d9f8b8e8d3d1",
+  "test_sequences": ["0000000055_0000000000", "0000000058_0000000000", "0000000349_0000000000", "0000000352_0000000000", "0000000353_0000000000", "0000000357_0000000000"],
+  "protocol": {"imgsz": 640,"conf": 0.10,"nms_iou": 0.7,"max_det": 300,"augment": false,"agnostic_nms": false,"detection_match_iou": 0.5,"gt_observed_only": true},
+  "historical_R13_baseline_counts": {"frames": 9085,"GT": 48055,"boxes": 4288,"TP": 2431,"FP": 1857,"FN": 45624},
+  "claim_boundary": "This is detector evaluation only. Do not claim improved tracking, forecasting, operational warning, or external generalization without additional evidence."
+}

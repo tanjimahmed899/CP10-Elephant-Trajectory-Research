@@ -1,0 +1,13 @@
+model,sequence,frames_with_any_matched_GT,pct_frames_with_any_matched_GT,longest_consecutive_any_GT_matched_frames,warning
+adapted,0000000055_0000000000,0,0.0,0,NOT object-specific continuity or a tracking window
+adapted,0000000058_0000000000,535,0.7821637426900585,51,NOT object-specific continuity or a tracking window
+adapted,0000000349_0000000000,563,0.3866758241758242,125,NOT object-specific continuity or a tracking window
+adapted,0000000352_0000000000,1750,0.5453412277968215,103,NOT object-specific continuity or a tracking window
+adapted,0000000353_0000000000,3034,0.9502035703100532,1316,NOT object-specific continuity or a tracking window
+adapted,0000000357_0000000000,154,0.56,29,NOT object-specific continuity or a tracking window
+original,0000000055_0000000000,0,0.0,0,NOT object-specific continuity or a tracking window
+original,0000000058_0000000000,0,0.0,0,NOT object-specific continuity or a tracking window
+original,0000000349_0000000000,0,0.0,0,NOT object-specific continuity or a tracking window
+original,0000000352_0000000000,221,0.06886880648177002,14,NOT object-specific continuity or a tracking window
+original,0000000353_0000000000,1058,0.3313498277481992,98,NOT object-specific continuity or a tracking window
+original,0000000357_0000000000,0,0.0,0,NOT object-specific continuity or a tracking window

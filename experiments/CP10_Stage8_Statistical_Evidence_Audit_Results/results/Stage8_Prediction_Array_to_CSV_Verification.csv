@@ -1,0 +1,9 @@
+horizon,input_arm,predictor,n,max_abs_ADE_difference,max_abs_FDE_difference
+2s,tracker,Transformer_ensemble_3seed,187,9.8879238130678e-17,9.71445146547012e-17
+2s,tracker,Stationary,187,9.84455572616838e-17,9.974659986866641e-17
+2s,oracle,Transformer_ensemble_3seed,187,9.8879238130678e-17,9.974659986866641e-17
+2s,oracle,Stationary,187,9.71445146547012e-17,9.454242944073599e-17
+5s,tracker,Transformer_ensemble_3seed,124,9.71445146547012e-17,9.71445146547012e-17
+5s,tracker,Stationary,124,9.71445146547012e-17,9.71445146547012e-17
+5s,oracle,Transformer_ensemble_3seed,124,9.8879238130678e-17,9.71445146547012e-17
+5s,oracle,Stationary,124,9.80118763926896e-17,9.8879238130678e-17

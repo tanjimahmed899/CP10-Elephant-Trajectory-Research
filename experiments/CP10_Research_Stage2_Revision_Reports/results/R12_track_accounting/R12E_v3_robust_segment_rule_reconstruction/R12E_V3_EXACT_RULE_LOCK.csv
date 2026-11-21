@@ -1,0 +1,2 @@
+builder_path,builder_record_source,locked_sha256,current_sha256,FPS,OBS_SEC,OBS_FRAMES,MAX_SMALL_GAP,split_condition,WINDOW_STRIDE,FUTURE_2S_FRAMES,FUTURE_5S_FRAMES
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_elephant_trajectory_dataset.py,R12D_RANKED_SEGMENT_BUILDER_SOURCE_CANDIDATES,3e2f61aad673a0a5e04dac470ee45d47f9c520dfc11a206017ef8bce128556f4,3e2f61aad673a0a5e04dac470ee45d47f9c520dfc11a206017ef8bce128556f4,30,2,60,3,missing > MAX_SMALL_GAP,30,60,150

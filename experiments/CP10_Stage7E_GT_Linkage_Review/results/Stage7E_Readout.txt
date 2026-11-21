@@ -1,0 +1,19 @@
+Stage 7E — GT-linked tracker-window audit (retrospective, annotation-assisted diagnostic)
+Training: NONE. New YOLO/ByteTrack/Transformer inference: NONE.
+GT identities used ONLY to verify candidate tracks; they are not available to deployed inference.
+Stage7D raw window totals include unmatched/false tracks and are NOT actual forecasting sample counts.
+
+   model horizon  potential  GT_linked_strict  GT_linked_80pct  candidates_with_any_GT  future_GT_complete  strict_fraction_of_potential  gate80_fraction_of_potential
+original      2s          2                 0                0                       2                   2                      0.000000                      0.000000
+original      5s          0                 0                0                       0                   0                      0.000000                      0.000000
+ adapted      2s        371               187              264                     353                 350                      0.504043                      0.711590
+ adapted      5s        191               124              164                     187                 185                      0.649215                      0.858639
+
+Source-level:
+   model horizon              sequence  potential  strict  gate80  future_GT_complete
+ adapted      2s 0000000058_0000000000          1       0       0                   0
+ adapted      2s 0000000352_0000000000         71       0       7                  55
+ adapted      2s 0000000353_0000000000        299     187     257                 295
+ adapted      5s 0000000352_0000000000         11       0       0                   7
+ adapted      5s 0000000353_0000000000        180     124     164                 178
+original      2s 0000000353_0000000000          2       0       0                   2

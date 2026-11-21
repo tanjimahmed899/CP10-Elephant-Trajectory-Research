@@ -1,0 +1,10 @@
+field,value
+rows_total_six_sequences,48422
+interpolated=0,48055
+interpolated=1,367
+noise=0.0,41710
+noise=1.0,6712
+occlusion=0.0,42642
+occlusion=1.0,5780
+primary_tracking_gt_rows_observed_only,48055
+primary_tracking_gt_unique_original_tracks,45

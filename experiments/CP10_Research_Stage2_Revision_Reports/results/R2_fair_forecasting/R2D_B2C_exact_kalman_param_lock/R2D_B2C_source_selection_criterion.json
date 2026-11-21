@@ -1,0 +1,8 @@
+{
+  "assignment_line": 752,
+  "assignment_source": "best = sorted(\n\n        candidate_records,\n\n        key=lambda x: (\n\n            x[\n                \"track_macro_ADE\"\n            ],\n\n            x[\n                \"track_macro_FDE\"\n            ]\n\n        )\n\n    )[0]",
+  "sort_keys": [
+    "track_macro_ADE",
+    "track_macro_FDE"
+  ]
+}

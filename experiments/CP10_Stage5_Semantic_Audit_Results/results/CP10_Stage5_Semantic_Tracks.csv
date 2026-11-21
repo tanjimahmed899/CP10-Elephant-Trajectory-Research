@@ -1,0 +1,12 @@
+video,segment,track_id,tracking_class,observed_frames,gt_elephant_matched_frames,elephant_match_fraction,matched_gt_classes,semantic_elephant,longest_tracking_run,longest_verified_elephant_run,observed_2s_windows,observed_5s_windows,strict_elephant_2s_windows,strict_elephant_5s_windows,mean_matched_iou
+DJI_20240119152552_0006_V,seg1,0,object,200,200,1.0,"{""elephant"": 200}",True,200,200,161,131,161,131,0.83153
+DJI_20240119152552_0006_V,seg2,0,object,200,200,1.0,"{""elephant"": 200}",True,200,200,161,131,161,131,0.82175
+DJI_20240119152552_0006_V,seg3,0,object,59,59,1.0,"{""elephant"": 59}",True,59,59,20,0,20,0,0.78965
+DJI_20240626143832_0004_V,seg1,0,object,89,86,0.9663,"{""elephant"": 86}",True,89,83,50,20,44,14,0.70885
+DJI_20240626143832_0004_V,seg1,1,object,89,88,0.9888,"{""elephant"": 88}",True,89,73,50,20,34,4,0.73497
+DJI_20260227084907_0004_V,seg1,0,object,147,144,0.9796,"{""elephant"": 144}",True,110,110,71,41,71,41,0.77194
+DJI_20260227084907_0004_V,seg1,1,object,65,65,1.0,"{""elephant"": 65}",True,65,65,26,0,26,0,0.91123
+DJI_20260227084907_0004_V,seg1,2,object,120,115,0.9583,"{""elephant"": 115}",True,73,64,36,4,27,0,0.85868
+DJI_20260227084907_0004_V,seg1,3,object,79,79,1.0,"{""elephant"": 79}",True,79,79,40,10,40,10,0.87071
+DJI_20260227084907_0004_V,seg1,4,object,131,126,0.9618,"{""elephant"": 126}",True,131,126,92,62,87,57,0.83769
+DJI_20260227084907_0004_V,seg2,0,object,200,200,1.0,"{""elephant"": 200}",True,200,200,161,131,161,131,0.80447

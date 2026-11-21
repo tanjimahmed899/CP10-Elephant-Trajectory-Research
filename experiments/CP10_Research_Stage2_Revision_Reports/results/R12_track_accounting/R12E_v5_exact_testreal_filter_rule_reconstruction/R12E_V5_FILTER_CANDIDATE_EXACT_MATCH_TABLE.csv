@@ -1,0 +1,15 @@
+task,candidate_filter,candidate_rows,final_rows,candidate_unique_physical_windows,final_unique_physical_windows,candidate_tracks,candidate_segments,only_candidate,only_final,exact_window_set_match
+2s_to_2s,testreal_all,1070,1053,1070,1053,37,89,17,0,False
+2s_to_2s,testreal_accepted_1,1068,1053,1068,1053,37,89,15,0,False
+2s_to_2s,testreal_quality_core,1053,1053,1053,1053,37,89,0,0,True
+2s_to_2s,testreal_accepted_1_and_core,1053,1053,1053,1053,37,89,0,0,True
+2s_to_2s,testreal_accepted_1_and_repaired_le_5,1046,1053,1046,1053,37,89,0,7,False
+2s_to_2s,testreal_accepted_1_and_repaired_le_10,1053,1053,1053,1053,37,89,0,0,True
+2s_to_2s,testreal_accepted_1_and_repaired_le_20,1068,1053,1068,1053,37,89,15,0,False
+2s_to_5s,testreal_all,827,826,827,826,32,64,1,0,False
+2s_to_5s,testreal_accepted_1,826,826,826,826,31,63,0,0,True
+2s_to_5s,testreal_quality_core,826,826,826,826,31,63,0,0,True
+2s_to_5s,testreal_accepted_1_and_core,826,826,826,826,31,63,0,0,True
+2s_to_5s,testreal_accepted_1_and_repaired_le_5,805,826,805,826,28,60,0,21,False
+2s_to_5s,testreal_accepted_1_and_repaired_le_10,826,826,826,826,31,63,0,0,True
+2s_to_5s,testreal_accepted_1_and_repaired_le_20,826,826,826,826,31,63,0,0,True

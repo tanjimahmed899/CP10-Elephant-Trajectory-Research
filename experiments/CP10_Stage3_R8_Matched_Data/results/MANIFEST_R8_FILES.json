@@ -1,0 +1,98 @@
+[
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/corrected_2s_to_2s.npz",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/corrected_2s_to_2s.npz",
+    "bytes": 1568082,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/corrected_2s_to_5s.npz",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/corrected_2s_to_5s.npz",
+    "bytes": 2099601,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/corrected_windows_2s_to_2s.csv",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/corrected_windows_2s_to_2s.csv",
+    "bytes": 240532,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/corrected_windows_2s_to_5s.csv",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/corrected_windows_2s_to_5s.csv",
+    "bytes": 183772,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/repaired_ego_motion.csv",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/repaired_ego_motion.csv",
+    "bytes": 3430316,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/corrected_trajectory_dataset/correction_summary.csv",
+    "output_member": "R8_inputs/Main Result/corrected_trajectory_dataset/correction_summary.csv",
+    "bytes": 296,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/ego_motion_full/all_ego_motion.csv",
+    "output_member": "R8_inputs/Main Result/ego_motion_full/all_ego_motion.csv",
+    "bytes": 3230534,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/ego_motion_full/ego_motion_full_summary.csv",
+    "output_member": "R8_inputs/Main Result/ego_motion_full/ego_motion_full_summary.csv",
+    "bytes": 1783,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_test_canonical.npz",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_test_canonical.npz",
+    "bytes": 625141,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_test_metadata.csv",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_test_metadata.csv",
+    "bytes": 206846,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_trainval_canonical.npz",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_trainval_canonical.npz",
+    "bytes": 317544,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_trainval_metadata.csv",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_2s_birdsai_trainval_metadata.csv",
+    "bytes": 121292,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_test_canonical.npz",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_test_canonical.npz",
+    "bytes": 848231,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_test_metadata.csv",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_test_metadata.csv",
+    "bytes": 162372,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_trainval_canonical.npz",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_trainval_canonical.npz",
+    "bytes": 394376,
+    "status": "COLLECTED"
+  },
+  {
+    "source": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_trainval_metadata.csv",
+    "output_member": "R8_inputs/Main Result/final_neural_trajectory_dataset/2s_to_5s_birdsai_trainval_metadata.csv",
+    "bytes": 87929,
+    "status": "COLLECTED"
+  }
+]

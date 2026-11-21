@@ -1,0 +1,17 @@
+{
+  "source_zip": "CP10_real_frames_labels_sample.zip",
+  "sha256": "0868f30d2a63973d37af3d560e4bd9fd6e72c63fb24aa413e50183e7bfc75b51",
+  "frames_checked": 75,
+  "camera_records_in_full_segment": 200,
+  "matched_image_camera_count": 75,
+  "matching_kitti_label_count": 75,
+  "max_relative_rotation_deg": 0.07141833112959878,
+  "max_relative_translation_in_source_units": 0.0004505509373176877,
+  "fx_min_px": 3436.8026061776063,
+  "fx_max_px": 3447.6076104005792,
+  "max_rotation_orthogonality_error": 9.812089376892227e-08,
+  "limits": [
+    "Relative camera pose and intrinsic metadata found for supplied frames; coordinate conventions, depth and metric scale remain unverified.",
+    "No full world-coordinate transformation, learned raw-versus-corrected evaluation, landmark reprojection error, or metre-valued claim is established."
+  ]
+}

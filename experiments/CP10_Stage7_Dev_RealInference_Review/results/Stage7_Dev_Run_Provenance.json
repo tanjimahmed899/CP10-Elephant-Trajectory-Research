@@ -1,0 +1,31 @@
+{
+  "role": "TRAINREAL_DEVELOPMENT_ONLY",
+  "checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "configurations": {
+    "baseline_640_conf010": {
+      "imgsz": 640,
+      "conf": 0.1,
+      "tile": false
+    },
+    "highres_960_conf010": {
+      "imgsz": 960,
+      "conf": 0.1,
+      "tile": false
+    },
+    "lowconf_640_conf003": {
+      "imgsz": 640,
+      "conf": 0.03,
+      "tile": false
+    },
+    "highres_960_conf003": {
+      "imgsz": 960,
+      "conf": 0.03,
+      "tile": false
+    }
+  },
+  "frames_per_configuration": 120,
+  "total_frame_config_runs": 480,
+  "testreal_used": false,
+  "model_training": false,
+  "pilot_complete": true
+}

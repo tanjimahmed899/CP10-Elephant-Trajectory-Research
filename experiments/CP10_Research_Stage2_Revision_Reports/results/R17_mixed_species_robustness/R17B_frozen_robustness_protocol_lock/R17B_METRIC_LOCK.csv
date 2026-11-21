@@ -1,0 +1,11 @@
+metric_id,metric,scope,primary
+M1,"Elephant object precision/recall/F1 @ IoU=0.50, conf=0.25",Primary COCO 453; report overall and by group,True
+M2,Elephant AP50 and AP50:95,Primary COCO 453,True
+M3,Negative-image false-elephant rate,151 no-elephant multi-animal images,True
+M4,Elephant-positive image sensitivity,151 elephant+animal images,True
+M5,Mixed-scene elephant recall minus elephant-only-control recall,151 positive mixed vs 151 elephant-only controls,True
+M6,Confuser-to-elephant overlap error rate @ IoU>=0.50,GT bird/cat/dog/horse/sheep/cow/bear/zebra/giraffe boxes,True
+M7,Per-confuser-pair elephant recall and false-elephant errors,9 COCO animal-pair categories,False
+M8,In-vocabulary elephant+lion selective-filter performance,9 unique existing elephant+lion images,False
+M9,Unfiltered-any-class alarm vs elephant-class-filtered alarm,4-class detector only; secondary operational ablation,False
+M10,Fixed confidence sensitivity at 0.10/0.25/0.50,No post-test operating-point selection,False

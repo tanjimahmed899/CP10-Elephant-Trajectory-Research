@@ -1,0 +1,5 @@
+item,status,note
+R13 end-to-end detector/tracker execution,COMPLETE,Frozen detector + ByteTrack + BoT-SORT executed on six TestReal sequences.
+R14 tracking metrics requirement,SATISFIED BY R13-E,"HOTA, IDF1, ID-switches, fragmentation, MOTA and per-sequence results already computed."
+R15 representative forecast error propagation,NOT ESTIMABLE REPRESENTATIVELY,Only 2 tracker-derived 2-s windows and 0 tracker-derived 5-s windows.
+Next strengthening target,READY,Proceed to latency analysis / mixed-species robustness while keeping detector-domain limitation explicit.

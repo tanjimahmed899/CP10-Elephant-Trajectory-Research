@@ -1,0 +1,1354 @@
+file,line_number,line
+build_corrected_trajectories.py,1,from pathlib import Path
+build_corrected_trajectories.py,2,import cv2
+build_corrected_trajectories.py,3,import numpy as np
+build_corrected_trajectories.py,4,import pandas as pd
+build_corrected_trajectories.py,5,import math
+build_corrected_trajectories.py,6,
+build_corrected_trajectories.py,7,
+build_corrected_trajectories.py,8,# ==========================================================
+build_corrected_trajectories.py,9,# PATHS
+build_corrected_trajectories.py,10,# ==========================================================
+build_corrected_trajectories.py,11,
+build_corrected_trajectories.py,12,MOTION_FILE = Path(
+build_corrected_trajectories.py,13,"    r""C:\Users\HP\Downloads\ego_motion_full\all_ego_motion.csv"""
+build_corrected_trajectories.py,14,)
+build_corrected_trajectories.py,15,
+build_corrected_trajectories.py,16,TRACK_FILE = Path(
+build_corrected_trajectories.py,17,"    r""C:\Users\HP\Downloads\trajectory_dataset\cleaned_track_points.csv"""
+build_corrected_trajectories.py,18,)
+build_corrected_trajectories.py,19,
+build_corrected_trajectories.py,20,WINDOW_2_FILE = Path(
+build_corrected_trajectories.py,21,"    r""C:\Users\HP\Downloads\trajectory_dataset\windows_2s_to_2s.csv"""
+build_corrected_trajectories.py,22,)
+build_corrected_trajectories.py,23,
+build_corrected_trajectories.py,24,WINDOW_5_FILE = Path(
+build_corrected_trajectories.py,25,"    r""C:\Users\HP\Downloads\trajectory_dataset\windows_2s_to_5s.csv"""
+build_corrected_trajectories.py,26,)
+build_corrected_trajectories.py,27,
+build_corrected_trajectories.py,28,TRAIN_IMAGES = Path(
+build_corrected_trajectories.py,29,"    r""C:\Users\HP\Downloads\conservation_drones_train_real\TrainReal\images"""
+build_corrected_trajectories.py,30,)
+build_corrected_trajectories.py,31,
+build_corrected_trajectories.py,32,TEST_IMAGES = Path(
+build_corrected_trajectories.py,33,"    r""C:\Users\HP\Downloads\conservation_drones_test_real\TestReal\images"""
+build_corrected_trajectories.py,34,)
+build_corrected_trajectories.py,35,
+build_corrected_trajectories.py,36,OUT = Path(
+build_corrected_trajectories.py,37,"    r""C:\Users\HP\Downloads\corrected_trajectory_dataset"""
+build_corrected_trajectories.py,38,)
+build_corrected_trajectories.py,39,
+build_corrected_trajectories.py,40,OUT.mkdir(exist_ok=True)
+build_corrected_trajectories.py,41,
+build_corrected_trajectories.py,42,
+build_corrected_trajectories.py,43,# ==========================================================
+build_corrected_trajectories.py,44,# SETTINGS
+build_corrected_trajectories.py,45,# ==========================================================
+build_corrected_trajectories.py,46,
+build_corrected_trajectories.py,47,FPS = 30
+build_corrected_trajectories.py,48,
+build_corrected_trajectories.py,49,OBS_FRAMES = 60
+build_corrected_trajectories.py,50,
+build_corrected_trajectories.py,51,MAX_REPAIR_RUN = 5
+build_corrected_trajectories.py,52,
+build_corrected_trajectories.py,53,# Core = cleaner samples
+build_corrected_trajectories.py,54,CORE_MAX_REPAIRED_PCT = 10
+build_corrected_trajectories.py,55,
+build_corrected_trajectories.py,56,# Extended = still usable
+build_corrected_trajectories.py,57,EXTENDED_MAX_REPAIRED_PCT = 20
+build_corrected_trajectories.py,58,
+build_corrected_trajectories.py,59,
+build_corrected_trajectories.py,60,# ==========================================================
+build_corrected_trajectories.py,61,# LOAD DATA
+build_corrected_trajectories.py,62,# ==========================================================
+build_corrected_trajectories.py,63,
+build_corrected_trajectories.py,64,motion = pd.read_csv(
+build_corrected_trajectories.py,65,"    MOTION_FILE,"
+build_corrected_trajectories.py,66,"    dtype={""sequence"": str}"
+build_corrected_trajectories.py,67,)
+build_corrected_trajectories.py,68,
+build_corrected_trajectories.py,69,tracks = pd.read_csv(
+build_corrected_trajectories.py,70,"    TRACK_FILE,"
+build_corrected_trajectories.py,71,    dtype={
+build_corrected_trajectories.py,72,"        ""sequence"": str,"
+build_corrected_trajectories.py,73,"        ""segment_id"": str"
+build_corrected_trajectories.py,74,    }
+build_corrected_trajectories.py,75,)
+build_corrected_trajectories.py,76,
+build_corrected_trajectories.py,77,windows2 = pd.read_csv(
+build_corrected_trajectories.py,78,"    WINDOW_2_FILE,"
+build_corrected_trajectories.py,79,    dtype={
+build_corrected_trajectories.py,80,"        ""sequence"": str,"
+build_corrected_trajectories.py,81,"        ""segment_id"": str"
+build_corrected_trajectories.py,82,    }
+build_corrected_trajectories.py,83,)
+build_corrected_trajectories.py,84,
+build_corrected_trajectories.py,85,windows5 = pd.read_csv(
+build_corrected_trajectories.py,86,"    WINDOW_5_FILE,"
+build_corrected_trajectories.py,87,    dtype={
+build_corrected_trajectories.py,88,"        ""sequence"": str,"
+build_corrected_trajectories.py,89,"        ""segment_id"": str"
+build_corrected_trajectories.py,90,    }
+build_corrected_trajectories.py,91,)
+build_corrected_trajectories.py,92,
+build_corrected_trajectories.py,93,
+build_corrected_trajectories.py,94,# motion file uses train/test
+build_corrected_trajectories.py,95,"motion[""split""] = motion[""split""].replace({"
+build_corrected_trajectories.py,96,"    ""train"": ""train_real"","
+build_corrected_trajectories.py,97,"    ""test"": ""test_real"""
+build_corrected_trajectories.py,98,})
+build_corrected_trajectories.py,99,
+build_corrected_trajectories.py,100,
+build_corrected_trajectories.py,101,# ==========================================================
+build_corrected_trajectories.py,102,# IMAGE SIZE
+build_corrected_trajectories.py,103,# ==========================================================
+build_corrected_trajectories.py,104,
+build_corrected_trajectories.py,105,size_cache = {}
+build_corrected_trajectories.py,106,
+build_corrected_trajectories.py,107,
+build_corrected_trajectories.py,108,"def get_image_size(split, sequence):"
+build_corrected_trajectories.py,109,
+build_corrected_trajectories.py,110,"    key = (split, sequence)"
+build_corrected_trajectories.py,111,
+build_corrected_trajectories.py,112,    if key in size_cache:
+build_corrected_trajectories.py,113,        return size_cache[key]
+build_corrected_trajectories.py,114,
+build_corrected_trajectories.py,115,"    if split == ""train_real"":"
+build_corrected_trajectories.py,116,
+build_corrected_trajectories.py,117,        folder = (
+build_corrected_trajectories.py,118,            TRAIN_IMAGES
+build_corrected_trajectories.py,119,            /
+build_corrected_trajectories.py,120,            sequence
+build_corrected_trajectories.py,121,        )
+build_corrected_trajectories.py,122,
+build_corrected_trajectories.py,123,    else:
+build_corrected_trajectories.py,124,
+build_corrected_trajectories.py,125,        folder = (
+build_corrected_trajectories.py,126,            TEST_IMAGES
+build_corrected_trajectories.py,127,            /
+build_corrected_trajectories.py,128,            sequence
+build_corrected_trajectories.py,129,        )
+build_corrected_trajectories.py,130,
+build_corrected_trajectories.py,131,    for file in sorted(folder.iterdir()):
+build_corrected_trajectories.py,132,
+build_corrected_trajectories.py,133,        if file.suffix.lower() in [
+build_corrected_trajectories.py,134,"            "".jpg"","
+build_corrected_trajectories.py,135,"            "".jpeg"","
+build_corrected_trajectories.py,136,"            "".png"""
+build_corrected_trajectories.py,137,        ]:
+build_corrected_trajectories.py,138,
+build_corrected_trajectories.py,139,            img = cv2.imread(str(file))
+build_corrected_trajectories.py,140,
+build_corrected_trajectories.py,141,            if img is not None:
+build_corrected_trajectories.py,142,
+build_corrected_trajectories.py,143,"                h, w = img.shape[:2]"
+build_corrected_trajectories.py,144,
+build_corrected_trajectories.py,145,                size_cache[key] = (
+build_corrected_trajectories.py,146,"                    w,"
+build_corrected_trajectories.py,147,                    h
+build_corrected_trajectories.py,148,                )
+build_corrected_trajectories.py,149,
+build_corrected_trajectories.py,150,"                return w, h"
+build_corrected_trajectories.py,151,
+build_corrected_trajectories.py,152,    raise RuntimeError(
+build_corrected_trajectories.py,153,"        f""Image size unavailable: """
+build_corrected_trajectories.py,154,"        f""{split} {sequence}"""
+build_corrected_trajectories.py,155,    )
+build_corrected_trajectories.py,156,
+build_corrected_trajectories.py,157,
+build_corrected_trajectories.py,158,# ==========================================================
+build_corrected_trajectories.py,159,# REPAIR SHORT MOTION FAILURES
+build_corrected_trajectories.py,160,# ==========================================================
+build_corrected_trajectories.py,161,
+build_corrected_trajectories.py,162,def repair_motion_group(group):
+build_corrected_trajectories.py,163,
+build_corrected_trajectories.py,164,    group = (
+build_corrected_trajectories.py,165,        group
+build_corrected_trajectories.py,166,"        .sort_values(""pair"")"
+build_corrected_trajectories.py,167,        .copy()
+build_corrected_trajectories.py,168,    )
+build_corrected_trajectories.py,169,
+build_corrected_trajectories.py,170,    first_pair = int(
+build_corrected_trajectories.py,171,"        group[""pair""].min()"
+build_corrected_trajectories.py,172,    )
+build_corrected_trajectories.py,173,
+build_corrected_trajectories.py,174,    last_pair = int(
+build_corrected_trajectories.py,175,"        group[""pair""].max()"
+build_corrected_trajectories.py,176,    )
+build_corrected_trajectories.py,177,
+build_corrected_trajectories.py,178,    group = (
+build_corrected_trajectories.py,179,        group
+build_corrected_trajectories.py,180,"        .set_index(""pair"")"
+build_corrected_trajectories.py,181,        .reindex(
+build_corrected_trajectories.py,182,            range(
+build_corrected_trajectories.py,183,"                first_pair,"
+build_corrected_trajectories.py,184,                last_pair + 1
+build_corrected_trajectories.py,185,            )
+build_corrected_trajectories.py,186,        )
+build_corrected_trajectories.py,187,    )
+build_corrected_trajectories.py,188,
+build_corrected_trajectories.py,189,"    group.index.name = ""pair"""
+build_corrected_trajectories.py,190,
+build_corrected_trajectories.py,191,
+build_corrected_trajectories.py,192,    params = [
+build_corrected_trajectories.py,193,
+build_corrected_trajectories.py,194,"        ""dx_pixels"","
+build_corrected_trajectories.py,195,
+build_corrected_trajectories.py,196,"        ""dy_pixels"","
+build_corrected_trajectories.py,197,
+build_corrected_trajectories.py,198,"        ""rotation_deg"","
+build_corrected_trajectories.py,199,
+build_corrected_trajectories.py,200,"        ""scale"""
+build_corrected_trajectories.py,201,    ]
+build_corrected_trajectories.py,202,
+build_corrected_trajectories.py,203,
+build_corrected_trajectories.py,204,    reliable = (
+build_corrected_trajectories.py,205,
+build_corrected_trajectories.py,206,"        group[""reliable""]"
+build_corrected_trajectories.py,207,        .fillna(0)
+build_corrected_trajectories.py,208,        .astype(int)
+build_corrected_trajectories.py,209,        ==
+build_corrected_trajectories.py,210,        1
+build_corrected_trajectories.py,211,    )
+build_corrected_trajectories.py,212,
+build_corrected_trajectories.py,213,
+build_corrected_trajectories.py,214,"    group[""motion_status""] = ("
+build_corrected_trajectories.py,215,"        ""invalid"""
+build_corrected_trajectories.py,216,    )
+build_corrected_trajectories.py,217,
+build_corrected_trajectories.py,218,
+build_corrected_trajectories.py,219,    group.loc[
+build_corrected_trajectories.py,220,"        reliable,"
+build_corrected_trajectories.py,221,"        ""motion_status"""
+build_corrected_trajectories.py,222,"    ] = ""original"""
+build_corrected_trajectories.py,223,
+build_corrected_trajectories.py,224,
+build_corrected_trajectories.py,225,    # --------------------------------------------
+build_corrected_trajectories.py,226,    # Find runs where transform is unreliable
+build_corrected_trajectories.py,227,    # --------------------------------------------
+build_corrected_trajectories.py,228,
+build_corrected_trajectories.py,229,    bad = ~reliable
+build_corrected_trajectories.py,230,
+build_corrected_trajectories.py,231,    indices = list(
+build_corrected_trajectories.py,232,        group.index
+build_corrected_trajectories.py,233,    )
+build_corrected_trajectories.py,234,
+build_corrected_trajectories.py,235,    i = 0
+build_corrected_trajectories.py,236,
+build_corrected_trajectories.py,237,
+build_corrected_trajectories.py,238,    while i < len(indices):
+build_corrected_trajectories.py,239,
+build_corrected_trajectories.py,240,        pair = indices[i]
+build_corrected_trajectories.py,241,
+build_corrected_trajectories.py,242,        if not bad.loc[pair]:
+build_corrected_trajectories.py,243,
+build_corrected_trajectories.py,244,            i += 1
+build_corrected_trajectories.py,245,
+build_corrected_trajectories.py,246,            continue
+build_corrected_trajectories.py,247,
+build_corrected_trajectories.py,248,
+build_corrected_trajectories.py,249,        start_i = i
+build_corrected_trajectories.py,250,
+build_corrected_trajectories.py,251,
+build_corrected_trajectories.py,252,        while (
+build_corrected_trajectories.py,253,
+build_corrected_trajectories.py,254,            i < len(indices)
+build_corrected_trajectories.py,255,
+build_corrected_trajectories.py,256,            and
+build_corrected_trajectories.py,257,
+build_corrected_trajectories.py,258,            bad.loc[
+build_corrected_trajectories.py,259,                indices[i]
+build_corrected_trajectories.py,260,            ]
+build_corrected_trajectories.py,261,
+build_corrected_trajectories.py,262,        ):
+build_corrected_trajectories.py,263,
+build_corrected_trajectories.py,264,            i += 1
+build_corrected_trajectories.py,265,
+build_corrected_trajectories.py,266,
+build_corrected_trajectories.py,267,        end_i = i - 1
+build_corrected_trajectories.py,268,
+build_corrected_trajectories.py,269,        run_pairs = indices[
+build_corrected_trajectories.py,270,            start_i:end_i + 1
+build_corrected_trajectories.py,271,        ]
+build_corrected_trajectories.py,272,
+build_corrected_trajectories.py,273,        run_length = len(
+build_corrected_trajectories.py,274,            run_pairs
+build_corrected_trajectories.py,275,        )
+build_corrected_trajectories.py,276,
+build_corrected_trajectories.py,277,
+build_corrected_trajectories.py,278,        if run_length > MAX_REPAIR_RUN:
+build_corrected_trajectories.py,279,
+build_corrected_trajectories.py,280,            continue
+build_corrected_trajectories.py,281,
+build_corrected_trajectories.py,282,
+build_corrected_trajectories.py,283,        # Need reliable transform
+build_corrected_trajectories.py,284,        # on both sides.
+build_corrected_trajectories.py,285,
+build_corrected_trajectories.py,286,        left_i = (
+build_corrected_trajectories.py,287,            start_i - 1
+build_corrected_trajectories.py,288,        )
+build_corrected_trajectories.py,289,
+build_corrected_trajectories.py,290,        right_i = i
+build_corrected_trajectories.py,291,
+build_corrected_trajectories.py,292,
+build_corrected_trajectories.py,293,        if (
+build_corrected_trajectories.py,294,
+build_corrected_trajectories.py,295,            left_i < 0
+build_corrected_trajectories.py,296,
+build_corrected_trajectories.py,297,            or
+build_corrected_trajectories.py,298,
+build_corrected_trajectories.py,299,            right_i >= len(indices)
+build_corrected_trajectories.py,300,
+build_corrected_trajectories.py,301,        ):
+build_corrected_trajectories.py,302,
+build_corrected_trajectories.py,303,            continue
+build_corrected_trajectories.py,304,
+build_corrected_trajectories.py,305,
+build_corrected_trajectories.py,306,        left_pair = indices[
+build_corrected_trajectories.py,307,            left_i
+build_corrected_trajectories.py,308,        ]
+build_corrected_trajectories.py,309,
+build_corrected_trajectories.py,310,        right_pair = indices[
+build_corrected_trajectories.py,311,            right_i
+build_corrected_trajectories.py,312,        ]
+build_corrected_trajectories.py,313,
+build_corrected_trajectories.py,314,
+build_corrected_trajectories.py,315,        if (
+build_corrected_trajectories.py,316,
+build_corrected_trajectories.py,317,            not reliable.loc[
+build_corrected_trajectories.py,318,                left_pair
+build_corrected_trajectories.py,319,            ]
+build_corrected_trajectories.py,320,
+build_corrected_trajectories.py,321,            or
+build_corrected_trajectories.py,322,
+build_corrected_trajectories.py,323,            not reliable.loc[
+build_corrected_trajectories.py,324,                right_pair
+build_corrected_trajectories.py,325,            ]
+build_corrected_trajectories.py,326,
+build_corrected_trajectories.py,327,        ):
+build_corrected_trajectories.py,328,
+build_corrected_trajectories.py,329,            continue
+build_corrected_trajectories.py,330,
+build_corrected_trajectories.py,331,
+build_corrected_trajectories.py,332,        # ------------------------------------------
+build_corrected_trajectories.py,333,        # Linear interpolation
+build_corrected_trajectories.py,334,        # ------------------------------------------
+build_corrected_trajectories.py,335,
+build_corrected_trajectories.py,336,        for pair_number in run_pairs:
+build_corrected_trajectories.py,337,
+build_corrected_trajectories.py,338,            alpha = (
+build_corrected_trajectories.py,339,
+build_corrected_trajectories.py,340,                pair_number
+build_corrected_trajectories.py,341,                -
+build_corrected_trajectories.py,342,                left_pair
+build_corrected_trajectories.py,343,
+build_corrected_trajectories.py,344,            ) / (
+build_corrected_trajectories.py,345,
+build_corrected_trajectories.py,346,                right_pair
+build_corrected_trajectories.py,347,                -
+build_corrected_trajectories.py,348,                left_pair
+build_corrected_trajectories.py,349,
+build_corrected_trajectories.py,350,            )
+build_corrected_trajectories.py,351,
+build_corrected_trajectories.py,352,
+build_corrected_trajectories.py,353,            for p in params:
+build_corrected_trajectories.py,354,
+build_corrected_trajectories.py,355,                left_value = group.loc[
+build_corrected_trajectories.py,356,"                    left_pair,"
+build_corrected_trajectories.py,357,                    p
+build_corrected_trajectories.py,358,                ]
+build_corrected_trajectories.py,359,
+build_corrected_trajectories.py,360,                right_value = group.loc[
+build_corrected_trajectories.py,361,"                    right_pair,"
+build_corrected_trajectories.py,362,                    p
+build_corrected_trajectories.py,363,                ]
+build_corrected_trajectories.py,364,
+build_corrected_trajectories.py,365,
+build_corrected_trajectories.py,366,                group.loc[
+build_corrected_trajectories.py,367,"                    pair_number,"
+build_corrected_trajectories.py,368,                    p
+build_corrected_trajectories.py,369,                ] = (
+build_corrected_trajectories.py,370,
+build_corrected_trajectories.py,371,                    left_value
+build_corrected_trajectories.py,372,
+build_corrected_trajectories.py,373,                    +
+build_corrected_trajectories.py,374,
+build_corrected_trajectories.py,375,                    alpha
+build_corrected_trajectories.py,376,                    *
+build_corrected_trajectories.py,377,                    (
+build_corrected_trajectories.py,378,                        right_value
+build_corrected_trajectories.py,379,                        -
+build_corrected_trajectories.py,380,                        left_value
+build_corrected_trajectories.py,381,                    )
+build_corrected_trajectories.py,382,
+build_corrected_trajectories.py,383,                )
+build_corrected_trajectories.py,384,
+build_corrected_trajectories.py,385,
+build_corrected_trajectories.py,386,            group.loc[
+build_corrected_trajectories.py,387,"                pair_number,"
+build_corrected_trajectories.py,388,"                ""motion_status"""
+build_corrected_trajectories.py,389,"            ] = ""repaired"""
+build_corrected_trajectories.py,390,
+build_corrected_trajectories.py,391,
+build_corrected_trajectories.py,392,    group = (
+build_corrected_trajectories.py,393,        group
+build_corrected_trajectories.py,394,        .reset_index()
+build_corrected_trajectories.py,395,    )
+build_corrected_trajectories.py,396,
+build_corrected_trajectories.py,397,
+build_corrected_trajectories.py,398,"    group[""usable_motion""] = ("
+build_corrected_trajectories.py,399,
+build_corrected_trajectories.py,400,"        group[""motion_status""]"
+build_corrected_trajectories.py,401,        .isin([
+build_corrected_trajectories.py,402,"            ""original"","
+build_corrected_trajectories.py,403,"            ""repaired"""
+build_corrected_trajectories.py,404,        ])
+build_corrected_trajectories.py,405,
+build_corrected_trajectories.py,406,    ).astype(int)
+build_corrected_trajectories.py,407,
+build_corrected_trajectories.py,408,
+build_corrected_trajectories.py,409,    return group
+build_corrected_trajectories.py,410,
+build_corrected_trajectories.py,411,
+build_corrected_trajectories.py,412,# ==========================================================
+build_corrected_trajectories.py,413,# BUILD REPAIRED MOTION DATABASE
+build_corrected_trajectories.py,414,# ==========================================================
+build_corrected_trajectories.py,415,
+build_corrected_trajectories.py,416,repaired_groups = []
+build_corrected_trajectories.py,417,
+build_corrected_trajectories.py,418,motion_lookup = {}
+build_corrected_trajectories.py,419,
+build_corrected_trajectories.py,420,
+build_corrected_trajectories.py,421,for (
+build_corrected_trajectories.py,422,"    split,"
+build_corrected_trajectories.py,423,    sequence
+build_corrected_trajectories.py,424,"), group in motion.groupby("
+build_corrected_trajectories.py,425,    [
+build_corrected_trajectories.py,426,"        ""split"","
+build_corrected_trajectories.py,427,"        ""sequence"""
+build_corrected_trajectories.py,428,    ]
+build_corrected_trajectories.py,429,):
+build_corrected_trajectories.py,430,
+build_corrected_trajectories.py,431,    repaired = (
+build_corrected_trajectories.py,432,        repair_motion_group(
+build_corrected_trajectories.py,433,            group
+build_corrected_trajectories.py,434,        )
+build_corrected_trajectories.py,435,    )
+build_corrected_trajectories.py,436,
+build_corrected_trajectories.py,437,"    repaired[""split""] = split"
+build_corrected_trajectories.py,438,
+build_corrected_trajectories.py,439,"    repaired[""sequence""] = sequence"
+build_corrected_trajectories.py,440,
+build_corrected_trajectories.py,441,
+build_corrected_trajectories.py,442,    repaired_groups.append(
+build_corrected_trajectories.py,443,        repaired
+build_corrected_trajectories.py,444,    )
+build_corrected_trajectories.py,445,
+build_corrected_trajectories.py,446,
+build_corrected_trajectories.py,447,    motion_lookup[
+build_corrected_trajectories.py,448,        (
+build_corrected_trajectories.py,449,"            split,"
+build_corrected_trajectories.py,450,            sequence
+build_corrected_trajectories.py,451,        )
+build_corrected_trajectories.py,452,    ] = (
+build_corrected_trajectories.py,453,        repaired
+build_corrected_trajectories.py,454,"        .set_index(""pair"")"
+build_corrected_trajectories.py,455,    )
+build_corrected_trajectories.py,456,
+build_corrected_trajectories.py,457,
+build_corrected_trajectories.py,458,repaired_motion = pd.concat(
+build_corrected_trajectories.py,459,"    repaired_groups,"
+build_corrected_trajectories.py,460,    ignore_index=True
+build_corrected_trajectories.py,461,)
+build_corrected_trajectories.py,462,
+build_corrected_trajectories.py,463,
+build_corrected_trajectories.py,464,repaired_motion.to_csv(
+build_corrected_trajectories.py,465,
+build_corrected_trajectories.py,466,    OUT
+build_corrected_trajectories.py,467,    /
+build_corrected_trajectories.py,468,"    ""repaired_ego_motion.csv"","
+build_corrected_trajectories.py,469,
+build_corrected_trajectories.py,470,    index=False
+build_corrected_trajectories.py,471,)
+build_corrected_trajectories.py,472,
+build_corrected_trajectories.py,473,
+build_corrected_trajectories.py,474,# ==========================================================
+build_corrected_trajectories.py,475,# TRACK LOOKUP
+build_corrected_trajectories.py,476,# ==========================================================
+build_corrected_trajectories.py,477,
+build_corrected_trajectories.py,478,track_lookup = {}
+build_corrected_trajectories.py,479,
+build_corrected_trajectories.py,480,
+build_corrected_trajectories.py,481,for (
+build_corrected_trajectories.py,482,"    split,"
+build_corrected_trajectories.py,483,"    sequence,"
+build_corrected_trajectories.py,484,    segment_id
+build_corrected_trajectories.py,485,"), group in tracks.groupby("
+build_corrected_trajectories.py,486,
+build_corrected_trajectories.py,487,    [
+build_corrected_trajectories.py,488,"        ""split"","
+build_corrected_trajectories.py,489,"        ""sequence"","
+build_corrected_trajectories.py,490,"        ""segment_id"""
+build_corrected_trajectories.py,491,    ]
+build_corrected_trajectories.py,492,
+build_corrected_trajectories.py,493,):
+build_corrected_trajectories.py,494,
+build_corrected_trajectories.py,495,    group = (
+build_corrected_trajectories.py,496,        group
+build_corrected_trajectories.py,497,"        .sort_values(""frame"")"
+build_corrected_trajectories.py,498,"        .set_index(""frame"")"
+build_corrected_trajectories.py,499,    )
+build_corrected_trajectories.py,500,
+build_corrected_trajectories.py,501,
+build_corrected_trajectories.py,502,    track_lookup[
+build_corrected_trajectories.py,503,        (
+build_corrected_trajectories.py,504,"            split,"
+build_corrected_trajectories.py,505,"            sequence,"
+build_corrected_trajectories.py,506,            segment_id
+build_corrected_trajectories.py,507,        )
+build_corrected_trajectories.py,508,    ] = group
+build_corrected_trajectories.py,509,
+build_corrected_trajectories.py,510,
+build_corrected_trajectories.py,511,# ==========================================================
+build_corrected_trajectories.py,512,# AFFINE MATRIX
+build_corrected_trajectories.py,513,# ==========================================================
+build_corrected_trajectories.py,514,
+build_corrected_trajectories.py,515,def motion_matrix(row):
+build_corrected_trajectories.py,516,
+build_corrected_trajectories.py,517,    theta = math.radians(
+build_corrected_trajectories.py,518,        float(
+build_corrected_trajectories.py,519,"            row[""rotation_deg""]"
+build_corrected_trajectories.py,520,        )
+build_corrected_trajectories.py,521,    )
+build_corrected_trajectories.py,522,
+build_corrected_trajectories.py,523,    scale = float(
+build_corrected_trajectories.py,524,"        row[""scale""]"
+build_corrected_trajectories.py,525,    )
+build_corrected_trajectories.py,526,
+build_corrected_trajectories.py,527,    dx = float(
+build_corrected_trajectories.py,528,"        row[""dx_pixels""]"
+build_corrected_trajectories.py,529,    )
+build_corrected_trajectories.py,530,
+build_corrected_trajectories.py,531,    dy = float(
+build_corrected_trajectories.py,532,"        row[""dy_pixels""]"
+build_corrected_trajectories.py,533,    )
+build_corrected_trajectories.py,534,
+build_corrected_trajectories.py,535,
+build_corrected_trajectories.py,536,    c = math.cos(
+build_corrected_trajectories.py,537,        theta
+build_corrected_trajectories.py,538,    )
+build_corrected_trajectories.py,539,
+build_corrected_trajectories.py,540,    s = math.sin(
+build_corrected_trajectories.py,541,        theta
+build_corrected_trajectories.py,542,    )
+build_corrected_trajectories.py,543,
+build_corrected_trajectories.py,544,
+build_corrected_trajectories.py,545,    M = np.array([
+build_corrected_trajectories.py,546,
+build_corrected_trajectories.py,547,        [
+build_corrected_trajectories.py,548,"            scale * c,"
+build_corrected_trajectories.py,549,"            -scale * s,"
+build_corrected_trajectories.py,550,            dx
+build_corrected_trajectories.py,551,"        ],"
+build_corrected_trajectories.py,552,
+build_corrected_trajectories.py,553,        [
+build_corrected_trajectories.py,554,"            scale * s,"
+build_corrected_trajectories.py,555,"            scale * c,"
+build_corrected_trajectories.py,556,            dy
+build_corrected_trajectories.py,557,"        ],"
+build_corrected_trajectories.py,558,
+build_corrected_trajectories.py,559,        [
+build_corrected_trajectories.py,560,"            0.0,"
+build_corrected_trajectories.py,561,"            0.0,"
+build_corrected_trajectories.py,562,            1.0
+build_corrected_trajectories.py,563,        ]
+build_corrected_trajectories.py,564,
+build_corrected_trajectories.py,565,"    ], dtype=np.float64)"
+build_corrected_trajectories.py,566,
+build_corrected_trajectories.py,567,
+build_corrected_trajectories.py,568,    return M
+build_corrected_trajectories.py,569,
+build_corrected_trajectories.py,570,
+build_corrected_trajectories.py,571,# ==========================================================
+build_corrected_trajectories.py,572,# CORRECT ONE WINDOW
+build_corrected_trajectories.py,573,# ==========================================================
+build_corrected_trajectories.py,574,
+build_corrected_trajectories.py,575,"def correct_window(row, horizon_frames):"
+build_corrected_trajectories.py,576,
+build_corrected_trajectories.py,577,"    split = row[""split""]"
+build_corrected_trajectories.py,578,
+build_corrected_trajectories.py,579,    sequence = str(
+build_corrected_trajectories.py,580,"        row[""sequence""]"
+build_corrected_trajectories.py,581,    )
+build_corrected_trajectories.py,582,
+build_corrected_trajectories.py,583,    segment_id = str(
+build_corrected_trajectories.py,584,"        row[""segment_id""]"
+build_corrected_trajectories.py,585,    )
+build_corrected_trajectories.py,586,
+build_corrected_trajectories.py,587,
+build_corrected_trajectories.py,588,    start_frame = int(
+build_corrected_trajectories.py,589,"        row[""obs_start_frame""]"
+build_corrected_trajectories.py,590,    )
+build_corrected_trajectories.py,591,
+build_corrected_trajectories.py,592,    obs_end = int(
+build_corrected_trajectories.py,593,"        row[""obs_end_frame""]"
+build_corrected_trajectories.py,594,    )
+build_corrected_trajectories.py,595,
+build_corrected_trajectories.py,596,    future_end = int(
+build_corrected_trajectories.py,597,"        row[""future_end_frame""]"
+build_corrected_trajectories.py,598,    )
+build_corrected_trajectories.py,599,
+build_corrected_trajectories.py,600,
+build_corrected_trajectories.py,601,    motion_key = (
+build_corrected_trajectories.py,602,"        split,"
+build_corrected_trajectories.py,603,        sequence
+build_corrected_trajectories.py,604,    )
+build_corrected_trajectories.py,605,
+build_corrected_trajectories.py,606,    track_key = (
+build_corrected_trajectories.py,607,"        split,"
+build_corrected_trajectories.py,608,"        sequence,"
+build_corrected_trajectories.py,609,        segment_id
+build_corrected_trajectories.py,610,    )
+build_corrected_trajectories.py,611,
+build_corrected_trajectories.py,612,
+build_corrected_trajectories.py,613,    if motion_key not in motion_lookup:
+build_corrected_trajectories.py,614,
+build_corrected_trajectories.py,615,        return None
+build_corrected_trajectories.py,616,
+build_corrected_trajectories.py,617,
+build_corrected_trajectories.py,618,    if track_key not in track_lookup:
+build_corrected_trajectories.py,619,
+build_corrected_trajectories.py,620,        return None
+build_corrected_trajectories.py,621,
+build_corrected_trajectories.py,622,
+build_corrected_trajectories.py,623,    mg = motion_lookup[
+build_corrected_trajectories.py,624,        motion_key
+build_corrected_trajectories.py,625,    ]
+build_corrected_trajectories.py,626,
+build_corrected_trajectories.py,627,    tg = track_lookup[
+build_corrected_trajectories.py,628,        track_key
+build_corrected_trajectories.py,629,    ]
+build_corrected_trajectories.py,630,
+build_corrected_trajectories.py,631,
+build_corrected_trajectories.py,632,    required_pairs = list(
+build_corrected_trajectories.py,633,        range(
+build_corrected_trajectories.py,634,"            start_frame,"
+build_corrected_trajectories.py,635,            future_end
+build_corrected_trajectories.py,636,        )
+build_corrected_trajectories.py,637,    )
+build_corrected_trajectories.py,638,
+build_corrected_trajectories.py,639,
+build_corrected_trajectories.py,640,    # Must have every transform
+build_corrected_trajectories.py,641,
+build_corrected_trajectories.py,642,    if not all(
+build_corrected_trajectories.py,643,        p in mg.index
+build_corrected_trajectories.py,644,        for p in required_pairs
+build_corrected_trajectories.py,645,    ):
+build_corrected_trajectories.py,646,
+build_corrected_trajectories.py,647,        return None
+build_corrected_trajectories.py,648,
+build_corrected_trajectories.py,649,
+build_corrected_trajectories.py,650,    motion_slice = mg.loc[
+build_corrected_trajectories.py,651,        required_pairs
+build_corrected_trajectories.py,652,    ]
+build_corrected_trajectories.py,653,
+build_corrected_trajectories.py,654,
+build_corrected_trajectories.py,655,    if (
+build_corrected_trajectories.py,656,        motion_slice[
+build_corrected_trajectories.py,657,"            ""usable_motion"""
+build_corrected_trajectories.py,658,        ]
+build_corrected_trajectories.py,659,        .min()
+build_corrected_trajectories.py,660,        !=
+build_corrected_trajectories.py,661,        1
+build_corrected_trajectories.py,662,    ):
+build_corrected_trajectories.py,663,
+build_corrected_trajectories.py,664,        return None
+build_corrected_trajectories.py,665,
+build_corrected_trajectories.py,666,
+build_corrected_trajectories.py,667,    repaired_pct = (
+build_corrected_trajectories.py,668,
+build_corrected_trajectories.py,669,        100
+build_corrected_trajectories.py,670,        *
+build_corrected_trajectories.py,671,        (
+build_corrected_trajectories.py,672,            motion_slice[
+build_corrected_trajectories.py,673,"                ""motion_status"""
+build_corrected_trajectories.py,674,            ]
+build_corrected_trajectories.py,675,            ==
+build_corrected_trajectories.py,676,"            ""repaired"""
+build_corrected_trajectories.py,677,        ).mean()
+build_corrected_trajectories.py,678,
+build_corrected_trajectories.py,679,    )
+build_corrected_trajectories.py,680,
+build_corrected_trajectories.py,681,
+build_corrected_trajectories.py,682,    if (
+build_corrected_trajectories.py,683,        repaired_pct
+build_corrected_trajectories.py,684,        <=
+build_corrected_trajectories.py,685,        CORE_MAX_REPAIRED_PCT
+build_corrected_trajectories.py,686,    ):
+build_corrected_trajectories.py,687,
+build_corrected_trajectories.py,688,"        tier = ""core"""
+build_corrected_trajectories.py,689,
+build_corrected_trajectories.py,690,
+build_corrected_trajectories.py,691,    elif (
+build_corrected_trajectories.py,692,        repaired_pct
+build_corrected_trajectories.py,693,        <=
+build_corrected_trajectories.py,694,        EXTENDED_MAX_REPAIRED_PCT
+build_corrected_trajectories.py,695,    ):
+build_corrected_trajectories.py,696,
+build_corrected_trajectories.py,697,"        tier = ""extended"""
+build_corrected_trajectories.py,698,
+build_corrected_trajectories.py,699,
+build_corrected_trajectories.py,700,    else:
+build_corrected_trajectories.py,701,
+build_corrected_trajectories.py,702,"        tier = ""reject_quality"""
+build_corrected_trajectories.py,703,
+build_corrected_trajectories.py,704,
+build_corrected_trajectories.py,705,"    if tier == ""reject_quality"":"
+build_corrected_trajectories.py,706,
+build_corrected_trajectories.py,707,        return {
+build_corrected_trajectories.py,708,"            ""accepted"": False,"
+build_corrected_trajectories.py,709,"            ""tier"": tier,"
+build_corrected_trajectories.py,710,"            ""repaired_pct"": repaired_pct"
+build_corrected_trajectories.py,711,        }
+build_corrected_trajectories.py,712,
+build_corrected_trajectories.py,713,
+build_corrected_trajectories.py,714,    required_frames = list(
+build_corrected_trajectories.py,715,        range(
+build_corrected_trajectories.py,716,"            start_frame,"
+build_corrected_trajectories.py,717,            future_end + 1
+build_corrected_trajectories.py,718,        )
+build_corrected_trajectories.py,719,    )
+build_corrected_trajectories.py,720,
+build_corrected_trajectories.py,721,
+build_corrected_trajectories.py,722,    if not all(
+build_corrected_trajectories.py,723,        f in tg.index
+build_corrected_trajectories.py,724,        for f in required_frames
+build_corrected_trajectories.py,725,    ):
+build_corrected_trajectories.py,726,
+build_corrected_trajectories.py,727,        return None
+build_corrected_trajectories.py,728,
+build_corrected_trajectories.py,729,
+build_corrected_trajectories.py,730,"    width, height = get_image_size("
+build_corrected_trajectories.py,731,"        split,"
+build_corrected_trajectories.py,732,        sequence
+build_corrected_trajectories.py,733,    )
+build_corrected_trajectories.py,734,
+build_corrected_trajectories.py,735,
+build_corrected_trajectories.py,736,    corrected = []
+build_corrected_trajectories.py,737,
+build_corrected_trajectories.py,738,
+build_corrected_trajectories.py,739,    # T maps current frame coordinates
+build_corrected_trajectories.py,740,    # back to observation-start frame.
+build_corrected_trajectories.py,741,
+build_corrected_trajectories.py,742,    T = np.eye(
+build_corrected_trajectories.py,743,"        3,"
+build_corrected_trajectories.py,744,        dtype=np.float64
+build_corrected_trajectories.py,745,    )
+build_corrected_trajectories.py,746,
+build_corrected_trajectories.py,747,
+build_corrected_trajectories.py,748,    for frame in required_frames:
+build_corrected_trajectories.py,749,
+build_corrected_trajectories.py,750,        point_row = tg.loc[
+build_corrected_trajectories.py,751,            frame
+build_corrected_trajectories.py,752,        ]
+build_corrected_trajectories.py,753,
+build_corrected_trajectories.py,754,
+build_corrected_trajectories.py,755,        point = np.array([
+build_corrected_trajectories.py,756,
+build_corrected_trajectories.py,757,            float(
+build_corrected_trajectories.py,758,"                point_row[""cx""]"
+build_corrected_trajectories.py,759,"            ),"
+build_corrected_trajectories.py,760,
+build_corrected_trajectories.py,761,            float(
+build_corrected_trajectories.py,762,"                point_row[""cy""]"
+build_corrected_trajectories.py,763,"            ),"
+build_corrected_trajectories.py,764,
+build_corrected_trajectories.py,765,            1.0
+build_corrected_trajectories.py,766,
+build_corrected_trajectories.py,767,        ])
+build_corrected_trajectories.py,768,
+build_corrected_trajectories.py,769,
+build_corrected_trajectories.py,770,        corrected_point = (
+build_corrected_trajectories.py,771,            T
+build_corrected_trajectories.py,772,            @
+build_corrected_trajectories.py,773,            point
+build_corrected_trajectories.py,774,        )
+build_corrected_trajectories.py,775,
+build_corrected_trajectories.py,776,
+build_corrected_trajectories.py,777,        corrected.append([
+build_corrected_trajectories.py,778,
+build_corrected_trajectories.py,779,            corrected_point[0]
+build_corrected_trajectories.py,780,            /
+build_corrected_trajectories.py,781,"            width,"
+build_corrected_trajectories.py,782,
+build_corrected_trajectories.py,783,            corrected_point[1]
+build_corrected_trajectories.py,784,            /
+build_corrected_trajectories.py,785,"            height,"
+build_corrected_trajectories.py,786,
+build_corrected_trajectories.py,787,            float(
+build_corrected_trajectories.py,788,"                point_row[""w_n""]"
+build_corrected_trajectories.py,789,"            ),"
+build_corrected_trajectories.py,790,
+build_corrected_trajectories.py,791,            float(
+build_corrected_trajectories.py,792,"                point_row[""h_n""]"
+build_corrected_trajectories.py,793,"            ),"
+build_corrected_trajectories.py,794,
+build_corrected_trajectories.py,795,            float(
+build_corrected_trajectories.py,796,"                point_row[""occlusion""]"
+build_corrected_trajectories.py,797,"            ),"
+build_corrected_trajectories.py,798,
+build_corrected_trajectories.py,799,            float(
+build_corrected_trajectories.py,800,"                point_row[""noise""]"
+build_corrected_trajectories.py,801,"            ),"
+build_corrected_trajectories.py,802,
+build_corrected_trajectories.py,803,            float(
+build_corrected_trajectories.py,804,"                point_row[""interpolated""]"
+build_corrected_trajectories.py,805,            )
+build_corrected_trajectories.py,806,        ])
+build_corrected_trajectories.py,807,
+build_corrected_trajectories.py,808,
+build_corrected_trajectories.py,809,        # transform from next frame
+build_corrected_trajectories.py,810,        # into this frame
+build_corrected_trajectories.py,811,
+build_corrected_trajectories.py,812,        if frame < future_end:
+build_corrected_trajectories.py,813,
+build_corrected_trajectories.py,814,            motion_row = mg.loc[
+build_corrected_trajectories.py,815,                frame
+build_corrected_trajectories.py,816,            ]
+build_corrected_trajectories.py,817,
+build_corrected_trajectories.py,818,            M = motion_matrix(
+build_corrected_trajectories.py,819,                motion_row
+build_corrected_trajectories.py,820,            )
+build_corrected_trajectories.py,821,
+build_corrected_trajectories.py,822,            T = (
+build_corrected_trajectories.py,823,                T
+build_corrected_trajectories.py,824,                @
+build_corrected_trajectories.py,825,                M
+build_corrected_trajectories.py,826,            )
+build_corrected_trajectories.py,827,
+build_corrected_trajectories.py,828,
+build_corrected_trajectories.py,829,    corrected = np.array(
+build_corrected_trajectories.py,830,"        corrected,"
+build_corrected_trajectories.py,831,        dtype=np.float32
+build_corrected_trajectories.py,832,    )
+build_corrected_trajectories.py,833,
+build_corrected_trajectories.py,834,
+build_corrected_trajectories.py,835,    # History includes 60 frames.
+build_corrected_trajectories.py,836,
+build_corrected_trajectories.py,837,    history = corrected[
+build_corrected_trajectories.py,838,        :OBS_FRAMES
+build_corrected_trajectories.py,839,    ]
+build_corrected_trajectories.py,840,
+build_corrected_trajectories.py,841,
+build_corrected_trajectories.py,842,    # Future starts immediately
+build_corrected_trajectories.py,843,    # after observation window.
+build_corrected_trajectories.py,844,
+build_corrected_trajectories.py,845,    future = corrected[
+build_corrected_trajectories.py,846,        OBS_FRAMES:
+build_corrected_trajectories.py,847,        OBS_FRAMES
+build_corrected_trajectories.py,848,        +
+build_corrected_trajectories.py,849,        horizon_frames
+build_corrected_trajectories.py,850,    ]
+build_corrected_trajectories.py,851,
+build_corrected_trajectories.py,852,
+build_corrected_trajectories.py,853,    if (
+build_corrected_trajectories.py,854,
+build_corrected_trajectories.py,855,        len(history)
+build_corrected_trajectories.py,856,        != OBS_FRAMES
+build_corrected_trajectories.py,857,
+build_corrected_trajectories.py,858,        or
+build_corrected_trajectories.py,859,
+build_corrected_trajectories.py,860,        len(future)
+build_corrected_trajectories.py,861,        != horizon_frames
+build_corrected_trajectories.py,862,
+build_corrected_trajectories.py,863,    ):
+build_corrected_trajectories.py,864,
+build_corrected_trajectories.py,865,        return None
+build_corrected_trajectories.py,866,
+build_corrected_trajectories.py,867,
+build_corrected_trajectories.py,868,    return {
+build_corrected_trajectories.py,869,
+build_corrected_trajectories.py,870,"        ""accepted"":"
+build_corrected_trajectories.py,871,"            True,"
+build_corrected_trajectories.py,872,
+build_corrected_trajectories.py,873,"        ""tier"":"
+build_corrected_trajectories.py,874,"            tier,"
+build_corrected_trajectories.py,875,
+build_corrected_trajectories.py,876,"        ""repaired_pct"":"
+build_corrected_trajectories.py,877,"            repaired_pct,"
+build_corrected_trajectories.py,878,
+build_corrected_trajectories.py,879,"        ""history"":"
+build_corrected_trajectories.py,880,"            history,"
+build_corrected_trajectories.py,881,
+build_corrected_trajectories.py,882,"        ""future"":"
+build_corrected_trajectories.py,883,            future
+build_corrected_trajectories.py,884,    }
+build_corrected_trajectories.py,885,
+build_corrected_trajectories.py,886,
+build_corrected_trajectories.py,887,# ==========================================================
+build_corrected_trajectories.py,888,# PROCESS WINDOWS
+build_corrected_trajectories.py,889,# ==========================================================
+build_corrected_trajectories.py,890,
+build_corrected_trajectories.py,891,def process_windows(
+build_corrected_trajectories.py,892,"    window_df,"
+build_corrected_trajectories.py,893,    horizon_sec
+build_corrected_trajectories.py,894,):
+build_corrected_trajectories.py,895,
+build_corrected_trajectories.py,896,    horizon_frames = (
+build_corrected_trajectories.py,897,        horizon_sec
+build_corrected_trajectories.py,898,        *
+build_corrected_trajectories.py,899,        FPS
+build_corrected_trajectories.py,900,    )
+build_corrected_trajectories.py,901,
+build_corrected_trajectories.py,902,
+build_corrected_trajectories.py,903,    histories = []
+build_corrected_trajectories.py,904,
+build_corrected_trajectories.py,905,    futures = []
+build_corrected_trajectories.py,906,
+build_corrected_trajectories.py,907,    metadata = []
+build_corrected_trajectories.py,908,
+build_corrected_trajectories.py,909,
+build_corrected_trajectories.py,910,"    for i, row in ("
+build_corrected_trajectories.py,911,        window_df.iterrows()
+build_corrected_trajectories.py,912,    ):
+build_corrected_trajectories.py,913,
+build_corrected_trajectories.py,914,
+build_corrected_trajectories.py,915,        result = correct_window(
+build_corrected_trajectories.py,916,"            row,"
+build_corrected_trajectories.py,917,            horizon_frames
+build_corrected_trajectories.py,918,        )
+build_corrected_trajectories.py,919,
+build_corrected_trajectories.py,920,
+build_corrected_trajectories.py,921,        if (
+build_corrected_trajectories.py,922,            result is None
+build_corrected_trajectories.py,923,        ):
+build_corrected_trajectories.py,924,
+build_corrected_trajectories.py,925,            accepted = False
+build_corrected_trajectories.py,926,
+build_corrected_trajectories.py,927,"            tier = ""invalid_motion"""
+build_corrected_trajectories.py,928,
+build_corrected_trajectories.py,929,            repaired_pct = np.nan
+build_corrected_trajectories.py,930,
+build_corrected_trajectories.py,931,
+build_corrected_trajectories.py,932,        else:
+build_corrected_trajectories.py,933,
+build_corrected_trajectories.py,934,            accepted = bool(
+build_corrected_trajectories.py,935,"                result[""accepted""]"
+build_corrected_trajectories.py,936,            )
+build_corrected_trajectories.py,937,
+build_corrected_trajectories.py,938,            tier = result[
+build_corrected_trajectories.py,939,"                ""tier"""
+build_corrected_trajectories.py,940,            ]
+build_corrected_trajectories.py,941,
+build_corrected_trajectories.py,942,            repaired_pct = result[
+build_corrected_trajectories.py,943,"                ""repaired_pct"""
+build_corrected_trajectories.py,944,            ]
+build_corrected_trajectories.py,945,
+build_corrected_trajectories.py,946,
+build_corrected_trajectories.py,947,        meta = {
+build_corrected_trajectories.py,948,
+build_corrected_trajectories.py,949,"            ""source_index"":"
+build_corrected_trajectories.py,950,"                i,"
+build_corrected_trajectories.py,951,
+build_corrected_trajectories.py,952,"            ""split"":"
+build_corrected_trajectories.py,953,"                row[""split""],"
+build_corrected_trajectories.py,954,
+build_corrected_trajectories.py,955,"            ""sequence"":"
+build_corrected_trajectories.py,956,"                row[""sequence""],"
+build_corrected_trajectories.py,957,
+build_corrected_trajectories.py,958,"            ""object_id"":"
+build_corrected_trajectories.py,959,"                row[""object_id""],"
+build_corrected_trajectories.py,960,
+build_corrected_trajectories.py,961,"            ""segment_id"":"
+build_corrected_trajectories.py,962,"                row[""segment_id""],"
+build_corrected_trajectories.py,963,
+build_corrected_trajectories.py,964,"            ""obs_start_frame"":"
+build_corrected_trajectories.py,965,                row[
+build_corrected_trajectories.py,966,"                    ""obs_start_frame"""
+build_corrected_trajectories.py,967,"                ],"
+build_corrected_trajectories.py,968,
+build_corrected_trajectories.py,969,"            ""obs_end_frame"":"
+build_corrected_trajectories.py,970,                row[
+build_corrected_trajectories.py,971,"                    ""obs_end_frame"""
+build_corrected_trajectories.py,972,"                ],"
+build_corrected_trajectories.py,973,
+build_corrected_trajectories.py,974,"            ""future_end_frame"":"
+build_corrected_trajectories.py,975,                row[
+build_corrected_trajectories.py,976,"                    ""future_end_frame"""
+build_corrected_trajectories.py,977,"                ],"
+build_corrected_trajectories.py,978,
+build_corrected_trajectories.py,979,"            ""horizon_sec"":"
+build_corrected_trajectories.py,980,"                horizon_sec,"
+build_corrected_trajectories.py,981,
+build_corrected_trajectories.py,982,"            ""accepted"":"
+build_corrected_trajectories.py,983,"                int(accepted),"
+build_corrected_trajectories.py,984,
+build_corrected_trajectories.py,985,"            ""quality_tier"":"
+build_corrected_trajectories.py,986,"                tier,"
+build_corrected_trajectories.py,987,
+build_corrected_trajectories.py,988,"            ""repaired_motion_pct"":"
+build_corrected_trajectories.py,989,                repaired_pct
+build_corrected_trajectories.py,990,        }
+build_corrected_trajectories.py,991,
+build_corrected_trajectories.py,992,
+build_corrected_trajectories.py,993,        if accepted:
+build_corrected_trajectories.py,994,
+build_corrected_trajectories.py,995,            sample_id = len(
+build_corrected_trajectories.py,996,                histories
+build_corrected_trajectories.py,997,            )
+build_corrected_trajectories.py,998,
+build_corrected_trajectories.py,999,            meta[
+build_corrected_trajectories.py,1000,"                ""sample_id"""
+build_corrected_trajectories.py,1001,            ] = sample_id
+build_corrected_trajectories.py,1002,
+build_corrected_trajectories.py,1003,
+build_corrected_trajectories.py,1004,            histories.append(
+build_corrected_trajectories.py,1005,"                result[""history""]"
+build_corrected_trajectories.py,1006,            )
+build_corrected_trajectories.py,1007,
+build_corrected_trajectories.py,1008,            futures.append(
+build_corrected_trajectories.py,1009,"                result[""future""]"
+build_corrected_trajectories.py,1010,            )
+build_corrected_trajectories.py,1011,
+build_corrected_trajectories.py,1012,
+build_corrected_trajectories.py,1013,        else:
+build_corrected_trajectories.py,1014,
+build_corrected_trajectories.py,1015,            meta[
+build_corrected_trajectories.py,1016,"                ""sample_id"""
+build_corrected_trajectories.py,1017,            ] = -1
+build_corrected_trajectories.py,1018,
+build_corrected_trajectories.py,1019,
+build_corrected_trajectories.py,1020,        metadata.append(
+build_corrected_trajectories.py,1021,            meta
+build_corrected_trajectories.py,1022,        )
+build_corrected_trajectories.py,1023,
+build_corrected_trajectories.py,1024,
+build_corrected_trajectories.py,1025,    meta_df = pd.DataFrame(
+build_corrected_trajectories.py,1026,        metadata
+build_corrected_trajectories.py,1027,    )
+build_corrected_trajectories.py,1028,
+build_corrected_trajectories.py,1029,
+build_corrected_trajectories.py,1030,    if len(histories) > 0:
+build_corrected_trajectories.py,1031,
+build_corrected_trajectories.py,1032,        history_array = np.stack(
+build_corrected_trajectories.py,1033,            histories
+build_corrected_trajectories.py,1034,        )
+build_corrected_trajectories.py,1035,
+build_corrected_trajectories.py,1036,        future_array = np.stack(
+build_corrected_trajectories.py,1037,            futures
+build_corrected_trajectories.py,1038,        )
+build_corrected_trajectories.py,1039,
+build_corrected_trajectories.py,1040,
+build_corrected_trajectories.py,1041,    else:
+build_corrected_trajectories.py,1042,
+build_corrected_trajectories.py,1043,        history_array = np.empty(
+build_corrected_trajectories.py,1044,            (
+build_corrected_trajectories.py,1045,"                0,"
+build_corrected_trajectories.py,1046,"                OBS_FRAMES,"
+build_corrected_trajectories.py,1047,                7
+build_corrected_trajectories.py,1048,"            ),"
+build_corrected_trajectories.py,1049,            dtype=np.float32
+build_corrected_trajectories.py,1050,        )
+build_corrected_trajectories.py,1051,
+build_corrected_trajectories.py,1052,        future_array = np.empty(
+build_corrected_trajectories.py,1053,            (
+build_corrected_trajectories.py,1054,"                0,"
+build_corrected_trajectories.py,1055,"                horizon_frames,"
+build_corrected_trajectories.py,1056,                7
+build_corrected_trajectories.py,1057,"            ),"
+build_corrected_trajectories.py,1058,            dtype=np.float32
+build_corrected_trajectories.py,1059,        )
+build_corrected_trajectories.py,1060,
+build_corrected_trajectories.py,1061,
+build_corrected_trajectories.py,1062,    return (
+build_corrected_trajectories.py,1063,"        meta_df,"
+build_corrected_trajectories.py,1064,"        history_array,"
+build_corrected_trajectories.py,1065,        future_array
+build_corrected_trajectories.py,1066,    )
+build_corrected_trajectories.py,1067,
+build_corrected_trajectories.py,1068,
+build_corrected_trajectories.py,1069,# ==========================================================
+build_corrected_trajectories.py,1070,# 2 SECOND FORECAST
+build_corrected_trajectories.py,1071,# ==========================================================
+build_corrected_trajectories.py,1072,
+build_corrected_trajectories.py,1073,"meta2, hist2, future2 = ("
+build_corrected_trajectories.py,1074,
+build_corrected_trajectories.py,1075,    process_windows(
+build_corrected_trajectories.py,1076,"        windows2,"
+build_corrected_trajectories.py,1077,        2
+build_corrected_trajectories.py,1078,    )
+build_corrected_trajectories.py,1079,
+build_corrected_trajectories.py,1080,)
+build_corrected_trajectories.py,1081,
+build_corrected_trajectories.py,1082,
+build_corrected_trajectories.py,1083,meta2.to_csv(
+build_corrected_trajectories.py,1084,
+build_corrected_trajectories.py,1085,    OUT
+build_corrected_trajectories.py,1086,    /
+build_corrected_trajectories.py,1087,"    ""corrected_windows_2s_to_2s.csv"","
+build_corrected_trajectories.py,1088,
+build_corrected_trajectories.py,1089,    index=False
+build_corrected_trajectories.py,1090,)
+build_corrected_trajectories.py,1091,
+build_corrected_trajectories.py,1092,
+build_corrected_trajectories.py,1093,np.savez_compressed(
+build_corrected_trajectories.py,1094,
+build_corrected_trajectories.py,1095,    OUT
+build_corrected_trajectories.py,1096,    /
+build_corrected_trajectories.py,1097,"    ""corrected_2s_to_2s.npz"","
+build_corrected_trajectories.py,1098,
+build_corrected_trajectories.py,1099,"    history=hist2,"
+build_corrected_trajectories.py,1100,
+build_corrected_trajectories.py,1101,    future=future2
+build_corrected_trajectories.py,1102,)
+build_corrected_trajectories.py,1103,
+build_corrected_trajectories.py,1104,
+build_corrected_trajectories.py,1105,# ==========================================================
+build_corrected_trajectories.py,1106,# 5 SECOND FORECAST
+build_corrected_trajectories.py,1107,# ==========================================================
+build_corrected_trajectories.py,1108,
+build_corrected_trajectories.py,1109,"meta5, hist5, future5 = ("
+build_corrected_trajectories.py,1110,
+build_corrected_trajectories.py,1111,    process_windows(
+build_corrected_trajectories.py,1112,"        windows5,"
+build_corrected_trajectories.py,1113,        5
+build_corrected_trajectories.py,1114,    )
+build_corrected_trajectories.py,1115,
+build_corrected_trajectories.py,1116,)
+build_corrected_trajectories.py,1117,
+build_corrected_trajectories.py,1118,
+build_corrected_trajectories.py,1119,meta5.to_csv(
+build_corrected_trajectories.py,1120,
+build_corrected_trajectories.py,1121,    OUT
+build_corrected_trajectories.py,1122,    /
+build_corrected_trajectories.py,1123,"    ""corrected_windows_2s_to_5s.csv"","
+build_corrected_trajectories.py,1124,
+build_corrected_trajectories.py,1125,    index=False
+build_corrected_trajectories.py,1126,)
+build_corrected_trajectories.py,1127,
+build_corrected_trajectories.py,1128,
+build_corrected_trajectories.py,1129,np.savez_compressed(
+build_corrected_trajectories.py,1130,
+build_corrected_trajectories.py,1131,    OUT
+build_corrected_trajectories.py,1132,    /
+build_corrected_trajectories.py,1133,"    ""corrected_2s_to_5s.npz"","
+build_corrected_trajectories.py,1134,
+build_corrected_trajectories.py,1135,"    history=hist5,"
+build_corrected_trajectories.py,1136,
+build_corrected_trajectories.py,1137,    future=future5
+build_corrected_trajectories.py,1138,)
+build_corrected_trajectories.py,1139,
+build_corrected_trajectories.py,1140,
+build_corrected_trajectories.py,1141,# ==========================================================
+build_corrected_trajectories.py,1142,# SUMMARY
+build_corrected_trajectories.py,1143,# ==========================================================
+build_corrected_trajectories.py,1144,
+build_corrected_trajectories.py,1145,summary_rows = []
+build_corrected_trajectories.py,1146,
+build_corrected_trajectories.py,1147,
+build_corrected_trajectories.py,1148,"for label, df in ["
+build_corrected_trajectories.py,1149,
+build_corrected_trajectories.py,1150,    (
+build_corrected_trajectories.py,1151,"        ""2s_to_2s"","
+build_corrected_trajectories.py,1152,        meta2
+build_corrected_trajectories.py,1153,"    ),"
+build_corrected_trajectories.py,1154,
+build_corrected_trajectories.py,1155,    (
+build_corrected_trajectories.py,1156,"        ""2s_to_5s"","
+build_corrected_trajectories.py,1157,        meta5
+build_corrected_trajectories.py,1158,    )
+build_corrected_trajectories.py,1159,
+build_corrected_trajectories.py,1160,]:
+build_corrected_trajectories.py,1161,
+build_corrected_trajectories.py,1162,    for split in [
+build_corrected_trajectories.py,1163,
+build_corrected_trajectories.py,1164,"        ""train_real"","
+build_corrected_trajectories.py,1165,"        ""test_real"""
+build_corrected_trajectories.py,1166,
+build_corrected_trajectories.py,1167,    ]:
+build_corrected_trajectories.py,1168,
+build_corrected_trajectories.py,1169,        temp = df[
+build_corrected_trajectories.py,1170,"            df[""split""]"
+build_corrected_trajectories.py,1171,            ==
+build_corrected_trajectories.py,1172,            split
+build_corrected_trajectories.py,1173,        ]
+build_corrected_trajectories.py,1174,
+build_corrected_trajectories.py,1175,
+build_corrected_trajectories.py,1176,        accepted = temp[
+build_corrected_trajectories.py,1177,"            temp[""accepted""]"
+build_corrected_trajectories.py,1178,            ==
+build_corrected_trajectories.py,1179,            1
+build_corrected_trajectories.py,1180,        ]
+build_corrected_trajectories.py,1181,
+build_corrected_trajectories.py,1182,
+build_corrected_trajectories.py,1183,        core = accepted[
+build_corrected_trajectories.py,1184,            accepted[
+build_corrected_trajectories.py,1185,"                ""quality_tier"""
+build_corrected_trajectories.py,1186,            ]
+build_corrected_trajectories.py,1187,            ==
+build_corrected_trajectories.py,1188,"            ""core"""
+build_corrected_trajectories.py,1189,        ]
+build_corrected_trajectories.py,1190,
+build_corrected_trajectories.py,1191,
+build_corrected_trajectories.py,1192,        extended = accepted[
+build_corrected_trajectories.py,1193,            accepted[
+build_corrected_trajectories.py,1194,"                ""quality_tier"""
+build_corrected_trajectories.py,1195,            ]
+build_corrected_trajectories.py,1196,            ==
+build_corrected_trajectories.py,1197,"            ""extended"""
+build_corrected_trajectories.py,1198,        ]
+build_corrected_trajectories.py,1199,
+build_corrected_trajectories.py,1200,
+build_corrected_trajectories.py,1201,        summary_rows.append({
+build_corrected_trajectories.py,1202,
+build_corrected_trajectories.py,1203,"            ""forecast"":"
+build_corrected_trajectories.py,1204,"                label,"
+build_corrected_trajectories.py,1205,
+build_corrected_trajectories.py,1206,"            ""split"":"
+build_corrected_trajectories.py,1207,"                split,"
+build_corrected_trajectories.py,1208,
+build_corrected_trajectories.py,1209,"            ""total"":"
+build_corrected_trajectories.py,1210,"                len(temp),"
+build_corrected_trajectories.py,1211,
+build_corrected_trajectories.py,1212,"            ""accepted"":"
+build_corrected_trajectories.py,1213,"                len(accepted),"
+build_corrected_trajectories.py,1214,
+build_corrected_trajectories.py,1215,"            ""accepted_pct"":"
+build_corrected_trajectories.py,1216,                (
+build_corrected_trajectories.py,1217,                    100
+build_corrected_trajectories.py,1218,                    *
+build_corrected_trajectories.py,1219,                    len(accepted)
+build_corrected_trajectories.py,1220,                    /
+build_corrected_trajectories.py,1221,                    len(temp)
+build_corrected_trajectories.py,1222,                )
+build_corrected_trajectories.py,1223,                if len(temp)
+build_corrected_trajectories.py,1224,"                else 0,"
+build_corrected_trajectories.py,1225,
+build_corrected_trajectories.py,1226,"            ""core"":"
+build_corrected_trajectories.py,1227,"                len(core),"
+build_corrected_trajectories.py,1228,
+build_corrected_trajectories.py,1229,"            ""extended"":"
+build_corrected_trajectories.py,1230,"                len(extended),"
+build_corrected_trajectories.py,1231,
+build_corrected_trajectories.py,1232,"            ""rejected"":"
+build_corrected_trajectories.py,1233,                (
+build_corrected_trajectories.py,1234,                    len(temp)
+build_corrected_trajectories.py,1235,                    -
+build_corrected_trajectories.py,1236,                    len(accepted)
+build_corrected_trajectories.py,1237,                )
+build_corrected_trajectories.py,1238,        })
+build_corrected_trajectories.py,1239,
+build_corrected_trajectories.py,1240,
+build_corrected_trajectories.py,1241,summary = pd.DataFrame(
+build_corrected_trajectories.py,1242,    summary_rows
+build_corrected_trajectories.py,1243,)
+build_corrected_trajectories.py,1244,
+build_corrected_trajectories.py,1245,
+build_corrected_trajectories.py,1246,summary.to_csv(
+build_corrected_trajectories.py,1247,
+build_corrected_trajectories.py,1248,    OUT
+build_corrected_trajectories.py,1249,    /
+build_corrected_trajectories.py,1250,"    ""correction_summary.csv"","
+build_corrected_trajectories.py,1251,
+build_corrected_trajectories.py,1252,    index=False
+build_corrected_trajectories.py,1253,)
+build_corrected_trajectories.py,1254,
+build_corrected_trajectories.py,1255,
+build_corrected_trajectories.py,1256,with open(
+build_corrected_trajectories.py,1257,
+build_corrected_trajectories.py,1258,    OUT
+build_corrected_trajectories.py,1259,    /
+build_corrected_trajectories.py,1260,"    ""SUMMARY.txt"","
+build_corrected_trajectories.py,1261,
+build_corrected_trajectories.py,1262,"    ""w"""
+build_corrected_trajectories.py,1263,
+build_corrected_trajectories.py,1264,) as f:
+build_corrected_trajectories.py,1265,
+build_corrected_trajectories.py,1266,
+build_corrected_trajectories.py,1267,    f.write(
+build_corrected_trajectories.py,1268,"        ""CAMERA-CORRECTED TRAJECTORY SUMMARY\n"""
+build_corrected_trajectories.py,1269,    )
+build_corrected_trajectories.py,1270,
+build_corrected_trajectories.py,1271,    f.write(
+build_corrected_trajectories.py,1272,"        ""="" * 70"
+build_corrected_trajectories.py,1273,        +
+build_corrected_trajectories.py,1274,"        ""\n\n"""
+build_corrected_trajectories.py,1275,    )
+build_corrected_trajectories.py,1276,
+build_corrected_trajectories.py,1277,
+build_corrected_trajectories.py,1278,    f.write(
+build_corrected_trajectories.py,1279,"        ""Correction strategy:\n"""
+build_corrected_trajectories.py,1280,    )
+build_corrected_trajectories.py,1281,
+build_corrected_trajectories.py,1282,    f.write(
+build_corrected_trajectories.py,1283,"        ""KLT+RANSAC reliable transforms retained.\n"""
+build_corrected_trajectories.py,1284,    )
+build_corrected_trajectories.py,1285,
+build_corrected_trajectories.py,1286,    f.write(
+build_corrected_trajectories.py,1287,"        ""Unreliable runs <=5 frames """
+build_corrected_trajectories.py,1288,"        ""interpolated between reliable transforms.\n"""
+build_corrected_trajectories.py,1289,    )
+build_corrected_trajectories.py,1290,
+build_corrected_trajectories.py,1291,    f.write(
+build_corrected_trajectories.py,1292,"        ""Longer/unresolved transform gaps rejected.\n"""
+build_corrected_trajectories.py,1293,    )
+build_corrected_trajectories.py,1294,
+build_corrected_trajectories.py,1295,    f.write(
+build_corrected_trajectories.py,1296,"        ""Each forecast window uses its own """
+build_corrected_trajectories.py,1297,"        ""observation-start frame as the local anchor.\n\n"""
+build_corrected_trajectories.py,1298,    )
+build_corrected_trajectories.py,1299,
+build_corrected_trajectories.py,1300,
+build_corrected_trajectories.py,1301,"    for _, row in ("
+build_corrected_trajectories.py,1302,        summary.iterrows()
+build_corrected_trajectories.py,1303,    ):
+build_corrected_trajectories.py,1304,
+build_corrected_trajectories.py,1305,        f.write(
+build_corrected_trajectories.py,1306,
+build_corrected_trajectories.py,1307,"            f""{row['forecast']} """
+build_corrected_trajectories.py,1308,"            f""{row['split']}\n"""
+build_corrected_trajectories.py,1309,        )
+build_corrected_trajectories.py,1310,
+build_corrected_trajectories.py,1311,        f.write(
+build_corrected_trajectories.py,1312,
+build_corrected_trajectories.py,1313,"            f""Total: """
+build_corrected_trajectories.py,1314,"            f""{int(row['total'])}\n"""
+build_corrected_trajectories.py,1315,        )
+build_corrected_trajectories.py,1316,
+build_corrected_trajectories.py,1317,        f.write(
+build_corrected_trajectories.py,1318,
+build_corrected_trajectories.py,1319,"            f""Accepted: """
+build_corrected_trajectories.py,1320,"            f""{int(row['accepted'])} """
+build_corrected_trajectories.py,1321,"            f""({row['accepted_pct']:.2f}%)\n"""
+build_corrected_trajectories.py,1322,        )
+build_corrected_trajectories.py,1323,
+build_corrected_trajectories.py,1324,        f.write(
+build_corrected_trajectories.py,1325,
+build_corrected_trajectories.py,1326,"            f""Core: """
+build_corrected_trajectories.py,1327,"            f""{int(row['core'])}\n"""
+build_corrected_trajectories.py,1328,        )
+build_corrected_trajectories.py,1329,
+build_corrected_trajectories.py,1330,        f.write(
+build_corrected_trajectories.py,1331,
+build_corrected_trajectories.py,1332,"            f""Extended: """
+build_corrected_trajectories.py,1333,"            f""{int(row['extended'])}\n"""
+build_corrected_trajectories.py,1334,        )
+build_corrected_trajectories.py,1335,
+build_corrected_trajectories.py,1336,        f.write(
+build_corrected_trajectories.py,1337,
+build_corrected_trajectories.py,1338,"            f""Rejected: """
+build_corrected_trajectories.py,1339,"            f""{int(row['rejected'])}\n\n"""
+build_corrected_trajectories.py,1340,        )
+build_corrected_trajectories.py,1341,
+build_corrected_trajectories.py,1342,
+build_corrected_trajectories.py,1343,print(
+build_corrected_trajectories.py,1344,"    ""\nCAMERA CORRECTION COMPLETE"""
+build_corrected_trajectories.py,1345,)
+build_corrected_trajectories.py,1346,
+build_corrected_trajectories.py,1347,print(summary)
+build_corrected_trajectories.py,1348,
+build_corrected_trajectories.py,1349,print(
+build_corrected_trajectories.py,1350,"    ""\nOutput folder:"""
+build_corrected_trajectories.py,1351,)
+build_corrected_trajectories.py,1352,
+build_corrected_trajectories.py,1353,print(OUT)

@@ -1,0 +1,359 @@
+{
+  "train_lstm_gru": {
+    "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_lstm_gru.py",
+    "sha256": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d",
+    "functions": [
+      {
+        "name": "set_seed",
+        "line": 73,
+        "args": "seed"
+      },
+      {
+        "name": "weighted_smooth_l1",
+        "line": 253,
+        "args": "prediction, target, weights"
+      },
+      {
+        "name": "inverse_transform_batch",
+        "line": 300,
+        "args": "canonical, origin, angle, scale"
+      },
+      {
+        "name": "sample_ade_fde",
+        "line": 381,
+        "args": "prediction, truth"
+      },
+      {
+        "name": "calculate_metrics",
+        "line": 414,
+        "args": "prediction, truth, metadata"
+      },
+      {
+        "name": "predict_model",
+        "line": 583,
+        "args": "model, history, batch_size=256"
+      },
+      {
+        "name": "validation_track_macro_ADE",
+        "line": 650,
+        "args": "model, val_history, val_future_abs, val_meta, val_origin, val_angle, val_scale"
+      },
+      {
+        "name": "train_one",
+        "line": 711,
+        "args": "task, model_type, seed"
+      },
+      {
+        "name": "evaluate_dataset",
+        "line": 1280,
+        "args": "model, task, dataset_name, role, npz_path, meta_path, model_type, seed, best_epoch"
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrajectoryDataset",
+        "line": 91,
+        "bases": [
+          "Dataset"
+        ]
+      },
+      {
+        "name": "RecurrentForecaster",
+        "line": 143,
+        "bases": [
+          "nn.Module"
+        ]
+      }
+    ],
+    "assignments": [
+      {
+        "line": 16,
+        "source": "ROOT = Path(\n    r\"C:\\Users\\HP\\Downloads\\final_neural_trajectory_dataset\"\n)"
+      },
+      {
+        "line": 20,
+        "source": "OUT = Path(\n    r\"C:\\Users\\HP\\Downloads\\lstm_gru_results\"\n)"
+      },
+      {
+        "line": 34,
+        "source": "DEVICE = torch.device(\"cpu\")"
+      },
+      {
+        "line": 38,
+        "source": "MODELS = [\n    \"LSTM\",\n    \"GRU\"\n]"
+      },
+      {
+        "line": 48,
+        "source": "BATCH_SIZE = 64"
+      },
+      {
+        "line": 50,
+        "source": "HIDDEN_SIZE = 64"
+      },
+      {
+        "line": 52,
+        "source": "NUM_LAYERS = 2"
+      },
+      {
+        "line": 54,
+        "source": "DROPOUT = 0.10"
+      },
+      {
+        "line": 56,
+        "source": "LEARNING_RATE = 1e-3"
+      },
+      {
+        "line": 66,
+        "source": "GRAD_CLIP = 5.0"
+      },
+      {
+        "line": 1524,
+        "source": "all_training_history = []"
+      },
+      {
+        "line": 1526,
+        "source": "all_results = []"
+      },
+      {
+        "line": 1528,
+        "source": "all_sample_results = []"
+      },
+      {
+        "line": 1662,
+        "source": "training_history_df = pd.concat(\n\n    all_training_history,\n\n    ignore_index=True\n\n)"
+      },
+      {
+        "line": 1684,
+        "source": "results_df = pd.DataFrame(\n    all_results\n)"
+      },
+      {
+        "line": 1702,
+        "source": "sample_results_df = pd.concat(\n\n    all_sample_results,\n\n    ignore_index=True\n\n)"
+      },
+      {
+        "line": 1724,
+        "source": "metric_columns = [\n\n    \"ADE_mean\",\n    \"FDE_mean\",\n    \"ADE_track_macro\",\n    \"FDE_track_macro\",\n    \"ADE_source_macro\",\n    \"FDE_source_macro\"\n\n]"
+      },
+      {
+        "line": 1736,
+        "source": "summary_rows = []"
+      },
+      {
+        "line": 1804,
+        "source": "summary_df = pd.DataFrame(\n    summary_rows\n)"
+      },
+      {
+        "line": 1822,
+        "source": "per_source = (\n\n    sample_results_df.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\",\n            \"seed\",\n            \"source_group\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        windows=(\n            \"ADE\",\n            \"size\"\n        ),\n\n        tracks=(\n            \"track_key\",\n            \"nunique\"\n        ),\n\n        ADE_mean=(\n            \"ADE\",\n            \"mean\"\n        ),\n\n        FDE_mean=(\n            \"FDE\",\n            \"mean\"\n        )\n\n    )\n\n)"
+      }
+    ],
+    "constructors": [
+      {
+        "line": 16,
+        "call_name": "Path",
+        "expression": "Path(\n    r\"C:\\Users\\HP\\Downloads\\final_neural_trajectory_dataset\"\n)"
+      },
+      {
+        "line": 20,
+        "call_name": "Path",
+        "expression": "Path(\n    r\"C:\\Users\\HP\\Downloads\\lstm_gru_results\"\n)"
+      },
+      {
+        "line": 1809,
+        "call_name": "to_csv",
+        "expression": "summary_df.to_csv(\n\n    OUT /\n    \"lstm_gru_summary.csv\",\n\n    index=False\n)"
+      },
+      {
+        "line": 1866,
+        "call_name": "to_csv",
+        "expression": "per_source.to_csv(\n\n    OUT /\n    \"lstm_gru_per_source.csv\",\n\n    index=False\n)"
+      },
+      {
+        "line": 2010,
+        "call_name": "print",
+        "expression": "print(\n    \"LSTM + GRU EXPERIMENT COMPLETE\"\n)"
+      },
+      {
+        "line": 662,
+        "call_name": "predict_model",
+        "expression": "predict_model(\n\n            model,\n\n            val_history\n\n        )"
+      },
+      {
+        "line": 877,
+        "call_name": "TrajectoryDataset",
+        "expression": "TrajectoryDataset(\n\n        X_train,\n\n        Y_train,\n\n        train_weights\n\n    )"
+      },
+      {
+        "line": 1334,
+        "call_name": "predict_model",
+        "expression": "predict_model(\n\n        model,\n\n        X\n\n    )"
+      },
+      {
+        "line": 1890,
+        "call_name": "write",
+        "expression": "f.write(\n        \"LSTM + GRU ELEPHANT TRAJECTORY FORECASTING\\n\"\n    )"
+      },
+      {
+        "line": 160,
+        "call_name": "LSTM",
+        "expression": "nn.LSTM(\n\n                input_size=2,\n\n                hidden_size=HIDDEN_SIZE,\n\n                num_layers=NUM_LAYERS,\n\n                batch_first=True,\n\n                dropout=DROPOUT\n            )"
+      },
+      {
+        "line": 624,
+        "call_name": "model",
+        "expression": "model(\n                x\n            )"
+      },
+      {
+        "line": 1008,
+        "call_name": "model",
+        "expression": "model(\n                X_batch\n            )"
+      },
+      {
+        "line": 176,
+        "call_name": "GRU",
+        "expression": "nn.GRU(\n\n                input_size=2,\n\n                hidden_size=HIDDEN_SIZE,\n\n                num_layers=NUM_LAYERS,\n\n                batch_first=True,\n\n                dropout=DROPOUT\n            )"
+      }
+    ],
+    "load_state_dict_calls": [
+      {
+        "line": 1214,
+        "expression": "model.load_state_dict(\n        best_state\n    )"
+      }
+    ]
+  },
+  "run_kalman_baseline": {
+    "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_kalman_baseline.py",
+    "sha256": "f54b1eaf3087d5004449786ab11f5dc709504f66db475be806a5ece6a655e013",
+    "functions": [
+      {
+        "name": "make_Q",
+        "line": 163,
+        "args": "q"
+      },
+      {
+        "name": "initial_velocity",
+        "line": 205,
+        "args": "history, n_frames=5"
+      },
+      {
+        "name": "kalman_forecast",
+        "line": 281,
+        "args": "history, future_length, q, r"
+      },
+      {
+        "name": "calculate_errors",
+        "line": 449,
+        "args": "prediction, truth"
+      },
+      {
+        "name": "load_dataset",
+        "line": 482,
+        "args": "npz_path, metadata_path"
+      }
+    ],
+    "classes": [],
+    "assignments": [
+      {
+        "line": 10,
+        "source": "ROOT = Path(\n    r\"C:\\Users\\HP\\Downloads\\unified_trajectory_10hz\"\n)"
+      },
+      {
+        "line": 14,
+        "source": "PREVIOUS = Path(\n    r\"C:\\Users\\HP\\Downloads\\baseline_constant_velocity\"\n)"
+      },
+      {
+        "line": 18,
+        "source": "OUT = Path(\n    r\"C:\\Users\\HP\\Downloads\\baseline_kalman\"\n)"
+      },
+      {
+        "line": 36,
+        "source": "DATASETS = {\n\n    \"2s_to_2s\": [\n\n        (\n            \"BIRDSAI_train\",\n            \"training\",\n            ROOT /\n            \"birdsai_train_real_core_2s_to_2s_10hz.npz\",\n            ROOT /\n            \"birdsai_train_real_core_2s_to_2s_10hz_metadata.csv\"\n        ),\n\n        (\n            \"BIRDSAI_test\",\n            \"in_domain_test\",\n            ROOT /\n            \"birdsai_test_real_core_2s_to_2s_10hz.npz\",\n            ROOT /\n            \"birdsai_test_real_core_2s_to_2s_10hz_metadata.csv\"\n        ),\n\n        (\n            \"WildBox_external\",\n            \"external_test\",\n            ROOT /\n            \"wildbox_external_2s_to_2s_10hz.npz\",\n            ROOT /\n            \"wildbox_external_2s_to_2s_10hz_metadata.csv\"\n        )\n    ],\n\n    \"2s_to_5s\": [\n\n        (\n            \"BIRDSAI_train\",\n            \"training\",\n            ROOT /\n            \"birdsai_train_real_core_2s_to_5s_10hz.npz\",\n            ROOT /\n            \"birdsai_train_real_core_2s_to_5s_10hz_metadata.csv\"\n        ),\n\n        (\n            \"BIRDSAI_test\",\n            \"in_domain_test\",\n            ROOT /\n            \"birdsai_test_real_core_2s_to_5s_10hz.npz\",\n            ROOT /\n            \"birdsai_test_real_core_2s_to_5s_10hz_metadata.csv\"\n        ),\n\n        (\n            \"WildBox_external\",\n            \"external_test\",\n            ROOT /\n            \"wildbox_external_2s_to_5s_10hz.npz\",\n            ROOT /\n            \"wildbox_external_2s_to_5s_10hz_metadata.csv\"\n        )\n    ]\n}"
+      },
+      {
+        "line": 107,
+        "source": "Q_GRID = [\n    1e-7,\n    1e-6,\n    1e-5,\n    1e-4,\n    1e-3,\n    1e-2,\n    1e-1\n]"
+      },
+      {
+        "line": 117,
+        "source": "R_GRID = [\n    1e-7,\n    1e-6,\n    1e-5,\n    1e-4,\n    1e-3,\n    1e-2\n]"
+      },
+      {
+        "line": 133,
+        "source": "F = np.array(\n    [\n        [1, 0, DT, 0],\n        [0, 1, 0, DT],\n        [0, 0, 1, 0],\n        [0, 0, 0, 1]\n    ],\n    dtype=np.float64\n)"
+      },
+      {
+        "line": 144,
+        "source": "H = np.array(\n    [\n        [1, 0, 0, 0],\n        [0, 1, 0, 0]\n    ],\n    dtype=np.float64\n)"
+      },
+      {
+        "line": 536,
+        "source": "tuning_rows = []"
+      },
+      {
+        "line": 538,
+        "source": "best_params = {}"
+      },
+      {
+        "line": 814,
+        "source": "sample_rows = []"
+      },
+      {
+        "line": 816,
+        "source": "curve_rows = []"
+      },
+      {
+        "line": 1022,
+        "source": "samples = pd.DataFrame(\n    sample_rows\n)"
+      },
+      {
+        "line": 1040,
+        "source": "overall = (\n\n    samples.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        samples=(\n            \"ADE\",\n            \"size\"\n        ),\n\n        tracks=(\n            \"track_key\",\n            \"nunique\"\n        ),\n\n        sources=(\n            \"source_group\",\n            \"nunique\"\n        ),\n\n        ADE_mean=(\n            \"ADE\",\n            \"mean\"\n        ),\n\n        ADE_median=(\n            \"ADE\",\n            \"median\"\n        ),\n\n        ADE_std=(\n            \"ADE\",\n            \"std\"\n        ),\n\n        FDE_mean=(\n            \"FDE\",\n            \"mean\"\n        ),\n\n        FDE_median=(\n            \"FDE\",\n            \"median\"\n        ),\n\n        FDE_std=(\n            \"FDE\",\n            \"std\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1110,
+        "source": "track_table = (\n\n    samples.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\",\n            \"source_group\",\n            \"track_key\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        windows=(\n            \"ADE\",\n            \"size\"\n        ),\n\n        ADE_mean=(\n            \"ADE\",\n            \"mean\"\n        ),\n\n        FDE_mean=(\n            \"FDE\",\n            \"mean\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1148,
+        "source": "track_macro = (\n\n    track_table.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        ADE_track_macro=(\n            \"ADE_mean\",\n            \"mean\"\n        ),\n\n        FDE_track_macro=(\n            \"FDE_mean\",\n            \"mean\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1183,
+        "source": "source_table = (\n\n    samples.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\",\n            \"source_group\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        windows=(\n            \"ADE\",\n            \"size\"\n        ),\n\n        tracks=(\n            \"track_key\",\n            \"nunique\"\n        ),\n\n        ADE_mean=(\n            \"ADE\",\n            \"mean\"\n        ),\n\n        FDE_mean=(\n            \"FDE\",\n            \"mean\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1234,
+        "source": "source_macro = (\n\n    source_table.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        ADE_source_macro=(\n            \"ADE_mean\",\n            \"mean\"\n        ),\n\n        FDE_source_macro=(\n            \"FDE_mean\",\n            \"mean\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1269,
+        "source": "kalman_summary = (\n\n    overall\n\n    .merge(\n\n        track_macro,\n\n        on=[\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\"\n        ]\n\n    )\n\n    .merge(\n\n        source_macro,\n\n        on=[\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\"\n        ]\n\n    )\n\n)"
+      },
+      {
+        "line": 1315,
+        "source": "curves = pd.DataFrame(\n    curve_rows\n)"
+      },
+      {
+        "line": 1320,
+        "source": "curve_summary = (\n\n    curves.groupby(\n\n        [\n            \"task\",\n            \"dataset\",\n            \"role\",\n            \"model\",\n            \"forecast_time_sec\"\n        ],\n\n        as_index=False\n\n    )\n\n    .agg(\n\n        mean_error=(\n            \"error\",\n            \"mean\"\n        ),\n\n        median_error=(\n            \"error\",\n            \"median\"\n        )\n    )\n\n)"
+      },
+      {
+        "line": 1365,
+        "source": "previous_file = (\n\n    PREVIOUS /\n    \"baseline_comparison.csv\"\n\n)"
+      }
+    ],
+    "constructors": [
+      {
+        "line": 10,
+        "call_name": "Path",
+        "expression": "Path(\n    r\"C:\\Users\\HP\\Downloads\\unified_trajectory_10hz\"\n)"
+      },
+      {
+        "line": 1455,
+        "call_name": "write",
+        "expression": "f.write(\n        \"ELEPHANT TRAJECTORY FORECASTING \u2014 \"\n        \"KALMAN BASELINE\\n\"\n    )"
+      }
+    ],
+    "load_state_dict_calls": []
+  }
+}

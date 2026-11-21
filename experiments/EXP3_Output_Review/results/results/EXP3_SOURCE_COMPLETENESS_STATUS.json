@@ -1,0 +1,13 @@
+{
+  "all_six_videos_with_windows_per_horizon": true,
+  "new_video_evaluation_ran": true,
+  "method": "frozen_forecast conditional on forecastable annotated trajectory windows",
+  "n_video_horizon_cells": 12,
+  "n_available_video_horizon_cells": 12,
+  "caveats": [
+    "Same capture groups as original holdout",
+    "Source-macro conditional on positive sample count",
+    "No original Step7H warning evaluation performed by this postprocessor",
+    "Any zero-window source explicitly retained as missing, never zero ADE"
+  ]
+}

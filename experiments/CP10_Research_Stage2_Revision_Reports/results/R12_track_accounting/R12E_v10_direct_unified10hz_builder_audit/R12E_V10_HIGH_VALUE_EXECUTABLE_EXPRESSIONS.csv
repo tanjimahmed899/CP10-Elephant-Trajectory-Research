@@ -1,0 +1,224 @@
+line,function,node_type,expression
+24,<module>,Assign,"OUT = (
+    ROOT /
+    ""unified_trajectory_10hz""
+)"
+41,<module>,Assign,"TASKS = {
+
+    ""2s_to_2s"": {
+        ""future_frames_10hz"": 20
+    },
+
+    ""2s_to_5s"": {
+        ""future_frames_10hz"": 50
+    }
+}"
+334,load_birdsai,Assign,"core = meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ].copy()"
+334,load_birdsai,Call,"meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ].copy()"
+334,load_birdsai,Subscript,"meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ]"
+337,load_birdsai,Compare,"meta[
+                ""accepted""
+            ]
+            ==
+            1"
+347,load_birdsai,Compare,"meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core"""
+640,<module>,Assign,"expected_future = (
+            config[
+                ""future_frames_10hz""
+            ]
+        )"
+674,<module>,Assign,"prefix = (
+
+            f""birdsai_""
+            f""{split}_core_""
+            f""{task}_10hz""
+
+        )"
+683,<module>,Call,"np.savez_compressed(
+
+            OUT /
+            f""{prefix}.npz"",
+
+            history_abs=
+                history,
+
+            future_abs=
+                future,
+
+            history_rel=
+                history_rel,
+
+            future_rel=
+                future_rel
+        )"
+702,<module>,Call,"meta.to_csv(
+
+            OUT /
+            f""{prefix}_metadata.csv"",
+
+            index=False
+        )"
+808,<module>,If,"if (
+        wild_future.shape[1]
+        !=
+        config[
+            ""future_frames_10hz""
+        ]
+    ):
+
+        raise RuntimeError(
+            f""{task} WildBox ""
+            f""future shape wrong ""
+            f""{wild_future.shape}""
+        )"
+809,<module>,Compare,"wild_future.shape[1]
+        !=
+        config[
+            ""future_frames_10hz""
+        ]"
+835,<module>,Assign,"prefix = (
+
+        f""wildbox_external_""
+        f""{task}_10hz""
+
+    )"
+843,<module>,Call,"np.savez_compressed(
+
+        OUT /
+        f""{prefix}.npz"",
+
+        history_abs=
+            wild_history,
+
+        future_abs=
+            wild_future,
+
+        history_rel=
+            wild_history_rel,
+
+        future_rel=
+            wild_future_rel
+
+    )"
+863,<module>,Call,"wild_meta.to_csv(
+
+        OUT /
+        f""{prefix}_metadata.csv"",
+
+        index=False
+    )"
+950,<module>,Call,"summary_df.to_csv(
+
+    OUT /
+    ""dataset_summary.csv"",
+
+    index=False
+)"
+968,<module>,Call,"audit_df.to_csv(
+
+    OUT /
+    ""trajectory_quality_audit.csv"",
+
+    index=False
+)"
+1061,<module>,Call,"quality_df.to_csv(
+
+    OUT /
+    ""trajectory_quality_summary.csv"",
+
+    index=False
+)"

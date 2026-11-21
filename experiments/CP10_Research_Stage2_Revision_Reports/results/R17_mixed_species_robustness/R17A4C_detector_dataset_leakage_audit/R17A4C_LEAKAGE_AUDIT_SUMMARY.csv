@@ -1,0 +1,2 @@
+frozen_coco_images,v5_reference_images_valid,exported_reference_images_valid,exact_sha256_overlap_pairs,perceptual_candidate_pairs,dhash_max,ahash_max,ready_for_r17b,status
+453,1070,253,0,0,4,4,True,R17A4C_NO_EXACT_OR_FLAGGED_NEAR_DUPLICATE_OVERLAP_READY_FOR_R17B_FROZEN_ROBUSTNESS_PROTOCOL_LOCK

@@ -1,0 +1,22 @@
+{
+  "status": "TWO_CHECKPOINTS_COMPLETE",
+  "torch": "2.15.0+cpu",
+  "ultralytics": "8.4.216",
+  "model_order": [
+    "original",
+    "adapted"
+  ],
+  "fixed_settings": {
+    "imgsz": 640,
+    "conf": 0.1,
+    "iou_nms": 0.7,
+    "max_det": 300,
+    "augment": false,
+    "agnostic_nms": false
+  },
+  "historical_baseline_exact_match": false,
+  "adapted_checkpoint_hash": "71671b4175509e96bb6e4cd7e803b82c9c4b606061438a009d98d9f8b8e8d3d1",
+  "original_checkpoint_hash": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "total_images": 9085,
+  "no_testreal_tuning": true
+}

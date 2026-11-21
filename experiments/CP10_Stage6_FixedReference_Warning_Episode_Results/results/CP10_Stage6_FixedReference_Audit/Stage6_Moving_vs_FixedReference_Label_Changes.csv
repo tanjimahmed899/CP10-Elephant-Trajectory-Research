@@ -1,0 +1,5 @@
+source,horizon,boundary_cases,orientation_changed,crossing_window_label_changed,nominal_warning_changed,original_positive_cases,fixed_positive_cases,original_nominal_cases,fixed_nominal_cases
+EXP3,2s,4524,310,299,207,314,279,175,156
+EXP3,5s,3432,218,327,134,488,469,128,104
+Stage5,2s,534,26,26,18,32,22,17,11
+Stage5,5s,336,18,18,11,26,16,13,8

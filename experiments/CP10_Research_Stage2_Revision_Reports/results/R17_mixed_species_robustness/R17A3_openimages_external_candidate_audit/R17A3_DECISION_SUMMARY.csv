@@ -1,0 +1,2 @@
+external_source,positive_mixed_elephant_images,positive_with_in_vocab_confuser,positive_with_ood_confuser,negative_multi_animal_no_elephant_images,main_external_pool_ready,in_vocab_specific_pool_ready,decision
+Open Images V7 validation + test bounding-box annotations,55,0,55,1968,True,False,OPENIMAGES_EXTERNAL_POOL_READY_FOR_FREEZE_AND_PIXEL_DOWNLOAD

@@ -1,0 +1,11 @@
+2s_to_2s n_dev 36 n_eval 53 dev_q 0.1933576740695039 frozen 2.158768 floor dev/eval 36 0
+2s_to_5s n_dev 28 n_eval 28 dev_q 0.3354850978507325 frozen 1.97513 floor dev/eval 28 0
+ horizon                                  method  covered  n  pathwise_coverage  relative_radius_to_original
+2s_to_2s                    Frozen TrainReal q90       53 53           1.000000                     1.000000
+2s_to_2s    Development-only split-conformal q90        3 53           0.056604                     0.089569
+2s_to_2s  Development maximum score (diagnostic)        4 53           0.075472                     0.097820
+2s_to_2s No-shrink safeguard max(q_frozen,q_dev)       53 53           1.000000                     1.000000
+2s_to_5s                    Frozen TrainReal q90       24 28           0.857143                     1.000000
+2s_to_5s    Development-only split-conformal q90        2 28           0.071429                     0.169855
+2s_to_5s  Development maximum score (diagnostic)        3 28           0.107143                     0.221519
+2s_to_5s No-shrink safeguard max(q_frozen,q_dev)       24 28           0.857143                     1.000000

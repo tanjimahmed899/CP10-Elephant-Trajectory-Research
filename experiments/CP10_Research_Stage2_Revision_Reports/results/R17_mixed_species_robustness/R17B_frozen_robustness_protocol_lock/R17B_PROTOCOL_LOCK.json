@@ -1,0 +1,85 @@
+{
+  "step": "R17B_FROZEN_MIXED_SPECIES_ROBUSTNESS_PROTOCOL_LOCK",
+  "created_utc": "2026-10-30T15:32:26.568162+00:00",
+  "status": "R17B_FROZEN_ROBUSTNESS_PROTOCOL_LOCKED_NO_TEST_TUNING_READY_FOR_R17C_FROZEN_DUAL_DETECTOR_INFERENCE",
+  "training": false,
+  "inference": false,
+  "tuning": false,
+  "primary_question": "Can the frozen 4-class detector selectively retain elephant detections in real mixed-animal scenes while reducing false-elephant errors relative to the original single-class elephant detector?",
+  "primary_dataset": {
+    "source": "COCO 2017 frozen external subset",
+    "total_images": 453,
+    "groups": {
+      "positive_elephant_plus_animal": 151,
+      "negative_multi_animal_no_elephant": 151,
+      "elephant_only_control": 151
+    },
+    "leakage_audit": "0 exact SHA256 overlaps; 0 flagged perceptual near-duplicate candidates against detector datasets"
+  },
+  "supplementary_dataset": {
+    "source": "existing project V5/exported test material",
+    "unique_images": 9,
+    "content": "elephant+lion",
+    "role": "small in-vocabulary challenge only"
+  },
+  "detectors": {
+    "primary_selective": {
+      "checkpoint": "E:\\AIUB\\Capstone Project\\capstone\\wildlife_project\\wildlife_training\\four_animals_v5_final_50\\weights\\best.pt",
+      "sha256": "fd2c52cc31deb7673faf56a7e52a9dd92699a6943297a17017cd85c998ef48d7",
+      "num_classes": 4,
+      "class_names": [
+        "tiger",
+        "lion",
+        "elephant",
+        "crocodile"
+      ]
+    },
+    "comparator_elephant_only": {
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Final 1.0\\Elephant Detection.v2-resized640.yolov8 (2)\\Elephant Detection.v2-resized640.yolov8\\runs\\detect\\elephant_final_clean\\weights\\best.pt",
+      "sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+      "num_classes": 1,
+      "class_names": [
+        "Elephant"
+      ]
+    }
+  },
+  "selective_operational_rule": "Run the 4-class detector without pre-filtering classes; preserve all predicted classes. Operational elephant output is obtained only by retaining predictions whose checkpoint class name is 'elephant'. Secondary ablation compares this elephant-filtered output with an intentionally unfiltered any-class alarm.",
+  "confidence_protocol": {
+    "inference_floor": 0.05,
+    "primary": 0.25,
+    "sensitivity": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "rule": "No threshold may be selected or changed based on R17 test outcomes."
+  },
+  "matching_protocol": {
+    "primary_iou": 0.5,
+    "assignment": "Greedy one-to-one confidence-descending matching within each image and target category; one GT box matched at most once.",
+    "confuser_error": "A predicted elephant box overlapping a non-elephant GT animal box at IoU>=0.50 without being matched to an elephant GT is counted as a confuser-to-elephant error."
+  },
+  "statistics": {
+    "paired_unit": "image",
+    "bootstrap_reps": 20000,
+    "seed": 20261030,
+    "ci": "95% percentile paired image-clustered bootstrap",
+    "comparison_direction": "For false-error metrics: elephant-only comparator minus selective detector; positive favors selective detector. For recall/sensitivity metrics: selective detector minus comparator; positive favors selective detector."
+  },
+  "frozen_hashes": {
+    "primary_453_csv": "555465c542bcc643af2a8a98822e58c987040fcb7fa4115b2d7dbaeb1e3105b6",
+    "supplement_9_csv": "caddb6ff1f4742475ab15f8c624c52aa3b60f963d129ee5d3bf65c768617685d",
+    "coco_gt_boxes_csv": "65a220d0f1fc927dabc548109ecf7f066a26a924936e350123685b182f471851",
+    "supplement_gt_boxes_csv": "55ad901cf332c98cc0c2e3e66bd69455a876dfd47f516d0db8c03e63d0b63d03",
+    "selective_checkpoint": "fd2c52cc31deb7673faf56a7e52a9dd92699a6943297a17017cd85c998ef48d7",
+    "elephant_only_checkpoint": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055"
+  },
+  "outputs": {
+    "detector_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_DETECTOR_LOCK.csv",
+    "settings_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_INFERENCE_EVALUATION_SETTINGS_LOCK.csv",
+    "metrics_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_METRIC_LOCK.csv",
+    "claim_boundary_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_CLAIM_BOUNDARY_LOCK.csv",
+    "coco_gt": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_FROZEN_COCO_GT_BOXES.csv",
+    "supplement_gt": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17B_frozen_robustness_protocol_lock\\R17B_FROZEN_SUPPLEMENT_ELEPHANT_LION_GT_BOXES.csv"
+  }
+}

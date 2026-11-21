@@ -1,0 +1,7 @@
+holdout_id,repo_path,basename,elephant_group,local_zip,size_mb
+exp3_01,elep1/DJI_20240119151437_0002_V.zip,DJI_20240119151437_0002_V.zip,elep1,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep1\DJI_20240119151437_0002_V.zip,300.8843002319336
+exp3_02,elep1/DJI_20240119151048_0001_V.zip,DJI_20240119151048_0001_V.zip,elep1,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep1\DJI_20240119151048_0001_V.zip,107.06453800201416
+exp3_03,elep2/DJI_20240626143443_0003_V.zip,DJI_20240626143443_0003_V.zip,elep2,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep2\DJI_20240626143443_0003_V.zip,722.7165060043335
+exp3_04,elep2/DJI_20240626143248_0002_V.zip,DJI_20240626143248_0002_V.zip,elep2,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep2\DJI_20240626143248_0002_V.zip,485.25278663635254
+exp3_05,elep3/DJI_20260227084724_0003_V.zip,DJI_20260227084724_0003_V.zip,elep3,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep3\DJI_20260227084724_0003_V.zip,318.9036407470703
+exp3_06,elep3/DJI_20260227082707_0003_V.zip,DJI_20260227082707_0003_V.zip,elep3,C:\Users\HP\Downloads\Q1_Research_Completion_Sprint\new_data\elep3\DJI_20260227082707_0003_V.zip,311.34865283966064

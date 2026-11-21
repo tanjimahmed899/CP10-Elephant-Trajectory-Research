@@ -1,0 +1,99 @@
+line_number,line,context
+235,"    segment[""cx_n""] = (","232:     )
+233: 
+234:     # Normalized coordinates
+235:     segment[""cx_n""] = (
+236:         segment[""cx""] / img_w
+237:     )
+238: "
+239,"    segment[""cy_n""] = (","236:         segment[""cx""] / img_w
+237:     )
+238: 
+239:     segment[""cy_n""] = (
+240:         segment[""cy""] / img_h
+241:     )
+242: "
+252,"    segment[""vx_n""] = (","249:     )
+250: 
+251:     # Velocity
+252:     segment[""vx_n""] = (
+253:         segment[""cx_n""]
+254:         .diff()
+255:         .fillna(0)"
+253,"        segment[""cx_n""]","250: 
+251:     # Velocity
+252:     segment[""vx_n""] = (
+253:         segment[""cx_n""]
+254:         .diff()
+255:         .fillna(0)
+256:     )"
+258,"    segment[""vy_n""] = (","255:         .fillna(0)
+256:     )
+257: 
+258:     segment[""vy_n""] = (
+259:         segment[""cy_n""]
+260:         .diff()
+261:         .fillna(0)"
+259,"        segment[""cy_n""]","256:     )
+257: 
+258:     segment[""vy_n""] = (
+259:         segment[""cy_n""]
+260:         .diff()
+261:         .fillna(0)
+262:     )"
+267,"        segment[""vx_n""] ** 2","264:     # Speed
+265:     segment[""speed_n""] = np.sqrt(
+266: 
+267:         segment[""vx_n""] ** 2
+268:         +
+269:         segment[""vy_n""] ** 2
+270:     )"
+269,"        segment[""vy_n""] ** 2","266: 
+267:         segment[""vx_n""] ** 2
+268:         +
+269:         segment[""vy_n""] ** 2
+270:     )
+271: 
+272:     # Heading angle"
+275,"        segment[""vy_n""],","272:     # Heading angle
+273:     segment[""heading_rad""] = np.arctan2(
+274: 
+275:         segment[""vy_n""],
+276:         segment[""vx_n""]
+277:     )
+278: "
+276,"        segment[""vx_n""]","273:     segment[""heading_rad""] = np.arctan2(
+274: 
+275:         segment[""vy_n""],
+276:         segment[""vx_n""]
+277:     )
+278: 
+279:     # Acceleration"
+389,"                current[""cx_n""],","386:                 horizon_sec,
+387: 
+388:             ""current_x"":
+389:                 current[""cx_n""],
+390: 
+391:             ""current_y"":
+392:                 current[""cy_n""],"
+392,"                current[""cy_n""],","389:                 current[""cx_n""],
+390: 
+391:             ""current_y"":
+392:                 current[""cy_n""],
+393: 
+394:             ""future_x"":
+395:                 future[""cx_n""],"
+395,"                future[""cx_n""],","392:                 current[""cy_n""],
+393: 
+394:             ""future_x"":
+395:                 future[""cx_n""],
+396: 
+397:             ""future_y"":
+398:                 future[""cy_n""],"
+398,"                future[""cy_n""],","395:                 future[""cx_n""],
+396: 
+397:             ""future_y"":
+398:                 future[""cy_n""],
+399: 
+400:             ""current_speed"":
+401:                 current[""speed_n""],"

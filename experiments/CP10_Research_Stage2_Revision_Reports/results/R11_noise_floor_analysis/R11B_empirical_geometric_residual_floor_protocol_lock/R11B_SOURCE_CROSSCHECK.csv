@@ -1,0 +1,4 @@
+metric,R8B_value,Main2_split_summary_value,abs_difference,match_within_1e_12
+median_raw_background_motion_px,0.7054814994335175,0.7054814994335175,0.0,True
+median_corrected_residual_px,0.2032955537988646,0.2032955537988646,0.0,True
+p95_corrected_residual_px,1.5533470192988588,1.5533470192988588,0.0,True

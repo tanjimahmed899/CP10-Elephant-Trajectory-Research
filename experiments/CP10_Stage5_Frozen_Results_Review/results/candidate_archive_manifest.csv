@@ -1,0 +1,4 @@
+holdout_id,repo_path,basename,elephant_group,analysis_role,local_zip,size_mb
+development_elep1,local,DJI_20240119152552_0006_V.zip,elep1,adaptation,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240119152552_0006_V.zip,220.8540735244751
+exploratory_elep2,local,DJI_20240626143832_0004_V.zip,elep2,evaluation,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240626143832_0004_V.zip,58.844194412231445
+exploratory_elep3,local,DJI_20260227084907_0004_V.zip,elep3,evaluation,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20260227084907_0004_V.zip,254.37290382385254

@@ -1,0 +1,2465 @@
+evidence_type,function,node_type,start_line,end_line,matched_terms,expression,context_start,context_end,context
+AST,<module>,Assign,24,27,10hz,"OUT = (
+    ROOT /
+    ""unified_trajectory_10hz""
+)",16,35,"16:     ""corrected_trajectory_dataset""
+17: )
+18: 
+19: WILD_DIR = (
+20:     ROOT /
+21:     ""wildbox_trajectory_dataset""
+22: )
+23: 
+24: OUT = (
+25:     ROOT /
+26:     ""unified_trajectory_10hz""
+27: )
+28: 
+29: OUT.mkdir(
+30:     parents=True,
+31:     exist_ok=True
+32: )
+33: 
+34: 
+35: # ============================================================"
+LEXICAL,,,26,26,10hz,"    ""unified_trajectory_10hz""",16,36,"16:     ""corrected_trajectory_dataset""
+17: )
+18: 
+19: WILD_DIR = (
+20:     ROOT /
+21:     ""wildbox_trajectory_dataset""
+22: )
+23: 
+24: OUT = (
+25:     ROOT /
+26:     ""unified_trajectory_10hz""
+27: )
+28: 
+29: OUT.mkdir(
+30:     parents=True,
+31:     exist_ok=True
+32: )
+33: 
+34: 
+35: # ============================================================
+36: # SETTINGS"
+AST,<module>,Assign,41,50,10hz,"TASKS = {
+
+    ""2s_to_2s"": {
+        ""future_frames_10hz"": 20
+    },
+
+    ""2s_to_5s"": {
+        ""future_frames_10hz"": 50
+    }
+}",33,58,"33: 
+34: 
+35: # ============================================================
+36: # SETTINGS
+37: # ============================================================
+38: 
+39: TARGET_FPS = 10
+40: 
+41: TASKS = {
+42: 
+43:     ""2s_to_2s"": {
+44:         ""future_frames_10hz"": 20
+45:     },
+46: 
+47:     ""2s_to_5s"": {
+48:         ""future_frames_10hz"": 50
+49:     }
+50: }
+51: 
+52: 
+53: # ============================================================
+54: # RELATIVE REPRESENTATION
+55: # ============================================================
+56: 
+57: def make_relative(
+58:     history,"
+LEXICAL,,,44,44,10hz,"        ""future_frames_10hz"": 20",34,54,"34: 
+35: # ============================================================
+36: # SETTINGS
+37: # ============================================================
+38: 
+39: TARGET_FPS = 10
+40: 
+41: TASKS = {
+42: 
+43:     ""2s_to_2s"": {
+44:         ""future_frames_10hz"": 20
+45:     },
+46: 
+47:     ""2s_to_5s"": {
+48:         ""future_frames_10hz"": 50
+49:     }
+50: }
+51: 
+52: 
+53: # ============================================================
+54: # RELATIVE REPRESENTATION"
+LEXICAL,,,48,48,10hz,"        ""future_frames_10hz"": 50",38,58,"38: 
+39: TARGET_FPS = 10
+40: 
+41: TASKS = {
+42: 
+43:     ""2s_to_2s"": {
+44:         ""future_frames_10hz"": 20
+45:     },
+46: 
+47:     ""2s_to_5s"": {
+48:         ""future_frames_10hz"": 50
+49:     }
+50: }
+51: 
+52: 
+53: # ============================================================
+54: # RELATIVE REPRESENTATION
+55: # ============================================================
+56: 
+57: def make_relative(
+58:     history,"
+LEXICAL,,,97,97,metadata,"    metadata,",87,107,"87:     )
+88: 
+89: 
+90: # ============================================================
+91: # SAMPLE-LEVEL QUALITY AUDIT
+92: # ============================================================
+93: 
+94: def audit_samples(
+95:     history,
+96:     future,
+97:     metadata,
+98:     dataset,
+99:     modality,
+100:     split_name
+101: ):
+102: 
+103:     rows = []
+104: 
+105: 
+106:     for i in range(
+107:         len(history)"
+AST,audit_samples,Assign,228,230,metadata,"meta_row = (
+            metadata.iloc[i]
+        )",220,238,"220:             )
+221: 
+222:         else:
+223: 
+224:             median_speed = np.nan
+225:             max_speed = np.nan
+226: 
+227: 
+228:         meta_row = (
+229:             metadata.iloc[i]
+230:         )
+231: 
+232: 
+233:         rows.append({
+234: 
+235:             ""dataset"":
+236:                 dataset,
+237: 
+238:             ""modality"":"
+AST,audit_samples,Subscript,229,229,metadata,metadata.iloc[i],221,237,"221: 
+222:         else:
+223: 
+224:             median_speed = np.nan
+225:             max_speed = np.nan
+226: 
+227: 
+228:         meta_row = (
+229:             metadata.iloc[i]
+230:         )
+231: 
+232: 
+233:         rows.append({
+234: 
+235:             ""dataset"":
+236:                 dataset,
+237: "
+LEXICAL,,,229,229,metadata,            metadata.iloc[i],219,239,"219:                 )
+220:             )
+221: 
+222:         else:
+223: 
+224:             median_speed = np.nan
+225:             max_speed = np.nan
+226: 
+227: 
+228:         meta_row = (
+229:             metadata.iloc[i]
+230:         )
+231: 
+232: 
+233:         rows.append({
+234: 
+235:             ""dataset"":
+236:                 dataset,
+237: 
+238:             ""modality"":
+239:                 modality,"
+LEXICAL,,,332,332,core,    # MAIN PAPER DATA = CORE ONLY,322,342,"322:     histories = arrays[
+323:         ""history""
+324:     ]
+325: 
+326: 
+327:     futures = arrays[
+328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )"
+AST,load_birdsai,Assign,334,364,quality_tier|accepted|core,"core = meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ].copy()",326,372,"326: 
+327:     futures = arrays[
+328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id""
+359:             ]
+360:             >=
+361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real"""
+AST,load_birdsai,Call,334,364,quality_tier|accepted|core,"meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ].copy()",326,372,"326: 
+327:     futures = arrays[
+328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id""
+359:             ]
+360:             >=
+361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real"""
+AST,load_birdsai,Subscript,334,364,quality_tier|accepted|core,"meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ]",326,372,"326: 
+327:     futures = arrays[
+328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id""
+359:             ]
+360:             >=
+361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real"""
+LEXICAL,,,334,334,core,    core = meta[,324,344,"324:     ]
+325: 
+326: 
+327:     futures = arrays[
+328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &"
+AST,load_birdsai,Compare,337,341,accepted,"meta[
+                ""accepted""
+            ]
+            ==
+            1",329,349,"329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]"
+AST,load_birdsai,Subscript,337,339,accepted,"meta[
+                ""accepted""
+            ]",329,347,"329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta["
+LEXICAL,,,338,338,accepted,"                ""accepted""",328,348,"328:         ""future""
+329:     ]
+330: 
+331: 
+332:     # MAIN PAPER DATA = CORE ONLY
+333: 
+334:     core = meta[
+335: 
+336:         (
+337:             meta[
+338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier"""
+AST,load_birdsai,Compare,347,351,quality_tier|core,"meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""",339,359,"339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id""
+359:             ]"
+AST,load_birdsai,Subscript,347,349,quality_tier,"meta[
+                ""quality_tier""
+            ]",339,357,"339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta["
+LEXICAL,,,348,348,quality_tier,"                ""quality_tier""",338,358,"338:                 ""accepted""
+339:             ]
+340:             ==
+341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id"""
+LEXICAL,,,351,351,core,"            ""core""",341,361,"341:             1
+342:         )
+343: 
+344:         &
+345: 
+346:         (
+347:             meta[
+348:                 ""quality_tier""
+349:             ]
+350:             ==
+351:             ""core""
+352:         )
+353: 
+354:         &
+355: 
+356:         (
+357:             meta[
+358:                 ""sample_id""
+359:             ]
+360:             >=
+361:             0"
+AST,load_birdsai,Assign,367,367,output,outputs = {},359,375,"359:             ]
+360:             >=
+361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: "
+LEXICAL,,,367,367,output,    outputs = {},357,377,"357:             meta[
+358:                 ""sample_id""
+359:             ]
+360:             >=
+361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: "
+LEXICAL,,,371,371,train_real,"        ""train_real"",",361,381,"361:             0
+362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             =="
+LEXICAL,,,372,372,test_real,"        ""test_real""",362,382,"362:         )
+363: 
+364:     ].copy()
+365: 
+366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split"
+AST,load_birdsai,Assign,376,384,core,"temp = core[
+
+            core[
+                ""split""
+            ]
+            ==
+            split
+
+        ].copy()",368,392,"368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp[
+389:                 ""sample_id""
+390:             ]
+391:             .astype(int)
+392:             .to_numpy()"
+AST,load_birdsai,Call,376,384,core,"core[
+
+            core[
+                ""split""
+            ]
+            ==
+            split
+
+        ].copy()",368,392,"368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp[
+389:                 ""sample_id""
+390:             ]
+391:             .astype(int)
+392:             .to_numpy()"
+AST,load_birdsai,Subscript,376,384,core,"core[
+
+            core[
+                ""split""
+            ]
+            ==
+            split
+
+        ]",368,392,"368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp[
+389:                 ""sample_id""
+390:             ]
+391:             .astype(int)
+392:             .to_numpy()"
+LEXICAL,,,376,376,core,        temp = core[,366,386,"366: 
+367:     outputs = {}
+368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: "
+AST,load_birdsai,Compare,378,382,core,"core[
+                ""split""
+            ]
+            ==
+            split",370,390,"370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp[
+389:                 ""sample_id""
+390:             ]"
+AST,load_birdsai,Subscript,378,380,core,"core[
+                ""split""
+            ]",370,388,"370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp["
+LEXICAL,,,378,378,core,            core[,368,388,"368: 
+369: 
+370:     for split in [
+371:         ""train_real"",
+372:         ""test_real""
+373:     ]:
+374: 
+375: 
+376:         temp = core[
+377: 
+378:             core[
+379:                 ""split""
+380:             ]
+381:             ==
+382:             split
+383: 
+384:         ].copy()
+385: 
+386: 
+387:         ids = (
+388:             temp["
+LEXICAL,,,411,411,10 hz|3,        # BIRDSAI 30 Hz -> 10 Hz,401,421,"401: 
+402: 
+403:         f = futures[
+404:             ids,
+405:             :,
+406:             :2
+407:         ]
+408: 
+409: 
+410:         # ----------------------------------------
+411:         # BIRDSAI 30 Hz -> 10 Hz
+412:         # ----------------------------------------
+413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f["
+AST,load_birdsai,Assign,414,418,3,"h = h[
+            :,
+            ::3,
+            :
+        ]",406,426,"406:             :2
+407:         ]
+408: 
+409: 
+410:         # ----------------------------------------
+411:         # BIRDSAI 30 Hz -> 10 Hz
+412:         # ----------------------------------------
+413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: "
+AST,load_birdsai,Subscript,414,418,3,"h[
+            :,
+            ::3,
+            :
+        ]",406,426,"406:             :2
+407:         ]
+408: 
+409: 
+410:         # ----------------------------------------
+411:         # BIRDSAI 30 Hz -> 10 Hz
+412:         # ----------------------------------------
+413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: "
+LEXICAL,,,416,416,3,"            ::3,",406,426,"406:             :2
+407:         ]
+408: 
+409: 
+410:         # ----------------------------------------
+411:         # BIRDSAI 30 Hz -> 10 Hz
+412:         # ----------------------------------------
+413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: "
+AST,load_birdsai,Assign,421,425,3,"f = f[
+            :,
+            ::3,
+            :
+        ]",413,433,"413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: 
+427: 
+428:         temp = (
+429:             temp
+430:             .reset_index(
+431:                 drop=True
+432:             )
+433:         )"
+AST,load_birdsai,Subscript,421,425,3,"f[
+            :,
+            ::3,
+            :
+        ]",413,433,"413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: 
+427: 
+428:         temp = (
+429:             temp
+430:             .reset_index(
+431:                 drop=True
+432:             )
+433:         )"
+LEXICAL,,,423,423,3,"            ::3,",413,433,"413: 
+414:         h = h[
+415:             :,
+416:             ::3,
+417:             :
+418:         ]
+419: 
+420: 
+421:         f = f[
+422:             :,
+423:             ::3,
+424:             :
+425:         ]
+426: 
+427: 
+428:         temp = (
+429:             temp
+430:             .reset_index(
+431:                 drop=True
+432:             )
+433:         )"
+AST,load_birdsai,Assign,460,470,3|output,"outputs[
+            split
+        ] = (
+            temp,
+            h.astype(
+                np.float32
+            ),
+            f.astype(
+                np.float32
+            )
+        )",452,478,"452: 
+453:         temp[
+454:             ""track_key""
+455:         ] = temp[
+456:             ""segment_id""
+457:         ]
+458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: 
+476: # ============================================================
+477: # LOAD WILDBOX
+478: # ============================================================"
+AST,load_birdsai,Subscript,460,462,output,"outputs[
+            split
+        ]",452,470,"452: 
+453:         temp[
+454:             ""track_key""
+455:         ] = temp[
+456:             ""segment_id""
+457:         ]
+458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )"
+LEXICAL,,,460,460,output,        outputs[,450,470,"450:         ]
+451: 
+452: 
+453:         temp[
+454:             ""track_key""
+455:         ] = temp[
+456:             ""segment_id""
+457:         ]
+458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )"
+AST,load_birdsai,Call,464,466,3,"h.astype(
+                np.float32
+            )",456,474,"456:             ""segment_id""
+457:         ]
+458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: "
+LEXICAL,,,465,465,3,                np.float32,455,475,"455:         ] = temp[
+456:             ""segment_id""
+457:         ]
+458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: "
+AST,load_birdsai,Call,467,469,3,"f.astype(
+                np.float32
+            )",459,477,"459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: 
+476: # ============================================================
+477: # LOAD WILDBOX"
+LEXICAL,,,468,468,3,                np.float32,458,478,"458: 
+459: 
+460:         outputs[
+461:             split
+462:         ] = (
+463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: 
+476: # ============================================================
+477: # LOAD WILDBOX
+478: # ============================================================"
+AST,load_birdsai,Return,473,473,output,return outputs,465,481,"465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: 
+476: # ============================================================
+477: # LOAD WILDBOX
+478: # ============================================================
+479: 
+480: def load_wildbox(
+481:     task"
+LEXICAL,,,473,473,output,    return outputs,463,483,"463:             temp,
+464:             h.astype(
+465:                 np.float32
+466:             ),
+467:             f.astype(
+468:                 np.float32
+469:             )
+470:         )
+471: 
+472: 
+473:     return outputs
+474: 
+475: 
+476: # ============================================================
+477: # LOAD WILDBOX
+478: # ============================================================
+479: 
+480: def load_wildbox(
+481:     task
+482: ):
+483: "
+AST,load_wildbox,Return,593,601,3,"return (
+        meta,
+        h.astype(
+            np.float32
+        ),
+        f.astype(
+            np.float32
+        )
+    )",585,609,"585:         +
+586:         meta[
+587:             ""track_id""
+588:         ].astype(str)
+589: 
+590:     )
+591: 
+592: 
+593:     return (
+594:         meta,
+595:         h.astype(
+596:             np.float32
+597:         ),
+598:         f.astype(
+599:             np.float32
+600:         )
+601:     )
+602: 
+603: 
+604: # ============================================================
+605: # PROCESS TASKS
+606: # ============================================================
+607: 
+608: all_summary = []
+609: "
+AST,load_wildbox,Call,595,597,3,"h.astype(
+            np.float32
+        )",587,605,"587:             ""track_id""
+588:         ].astype(str)
+589: 
+590:     )
+591: 
+592: 
+593:     return (
+594:         meta,
+595:         h.astype(
+596:             np.float32
+597:         ),
+598:         f.astype(
+599:             np.float32
+600:         )
+601:     )
+602: 
+603: 
+604: # ============================================================
+605: # PROCESS TASKS"
+LEXICAL,,,596,596,3,            np.float32,586,606,"586:         meta[
+587:             ""track_id""
+588:         ].astype(str)
+589: 
+590:     )
+591: 
+592: 
+593:     return (
+594:         meta,
+595:         h.astype(
+596:             np.float32
+597:         ),
+598:         f.astype(
+599:             np.float32
+600:         )
+601:     )
+602: 
+603: 
+604: # ============================================================
+605: # PROCESS TASKS
+606: # ============================================================"
+AST,load_wildbox,Call,598,600,3,"f.astype(
+            np.float32
+        )",590,608,"590:     )
+591: 
+592: 
+593:     return (
+594:         meta,
+595:         h.astype(
+596:             np.float32
+597:         ),
+598:         f.astype(
+599:             np.float32
+600:         )
+601:     )
+602: 
+603: 
+604: # ============================================================
+605: # PROCESS TASKS
+606: # ============================================================
+607: 
+608: all_summary = []"
+LEXICAL,,,599,599,3,            np.float32,589,609,"589: 
+590:     )
+591: 
+592: 
+593:     return (
+594:         meta,
+595:         h.astype(
+596:             np.float32
+597:         ),
+598:         f.astype(
+599:             np.float32
+600:         )
+601:     )
+602: 
+603: 
+604: # ============================================================
+605: # PROCESS TASKS
+606: # ============================================================
+607: 
+608: all_summary = []
+609: "
+AST,<module>,Assign,640,644,10hz,"expected_future = (
+            config[
+                ""future_frames_10hz""
+            ]
+        )",632,652,"632: 
+633:     for split, (
+634:         meta,
+635:         history,
+636:         future
+637:     ) in birds.items():
+638: 
+639: 
+640:         expected_future = (
+641:             config[
+642:                 ""future_frames_10hz""
+643:             ]
+644:         )
+645: 
+646: 
+647:         if history.shape[1] != 20:
+648: 
+649:             raise RuntimeError(
+650:                 f""{task} {split}: ""
+651:                 f""history shape wrong ""
+652:                 f""{history.shape}"""
+AST,<module>,Subscript,641,643,10hz,"config[
+                ""future_frames_10hz""
+            ]",633,651,"633:     for split, (
+634:         meta,
+635:         history,
+636:         future
+637:     ) in birds.items():
+638: 
+639: 
+640:         expected_future = (
+641:             config[
+642:                 ""future_frames_10hz""
+643:             ]
+644:         )
+645: 
+646: 
+647:         if history.shape[1] != 20:
+648: 
+649:             raise RuntimeError(
+650:                 f""{task} {split}: ""
+651:                 f""history shape wrong """
+LEXICAL,,,642,642,10hz,"                ""future_frames_10hz""",632,652,"632: 
+633:     for split, (
+634:         meta,
+635:         history,
+636:         future
+637:     ) in birds.items():
+638: 
+639: 
+640:         expected_future = (
+641:             config[
+642:                 ""future_frames_10hz""
+643:             ]
+644:         )
+645: 
+646: 
+647:         if history.shape[1] != 20:
+648: 
+649:             raise RuntimeError(
+650:                 f""{task} {split}: ""
+651:                 f""history shape wrong ""
+652:                 f""{history.shape}"""
+AST,<module>,Assign,674,680,core|10hz,"prefix = (
+
+            f""birdsai_""
+            f""{split}_core_""
+            f""{task}_10hz""
+
+        )",666,688,"666:             history_rel,
+667:             future_rel
+668:         ) = make_relative(
+669:             history,
+670:             future
+671:         )
+672: 
+673: 
+674:         prefix = (
+675: 
+676:             f""birdsai_""
+677:             f""{split}_core_""
+678:             f""{task}_10hz""
+679: 
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: 
+688:             history_abs="
+LEXICAL,,,677,677,core,"            f""{split}_core_""",667,687,"667:             future_rel
+668:         ) = make_relative(
+669:             history,
+670:             future
+671:         )
+672: 
+673: 
+674:         prefix = (
+675: 
+676:             f""birdsai_""
+677:             f""{split}_core_""
+678:             f""{task}_10hz""
+679: 
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: "
+LEXICAL,,,678,678,10hz,"            f""{task}_10hz""",668,688,"668:         ) = make_relative(
+669:             history,
+670:             future
+671:         )
+672: 
+673: 
+674:         prefix = (
+675: 
+676:             f""birdsai_""
+677:             f""{split}_core_""
+678:             f""{task}_10hz""
+679: 
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: 
+688:             history_abs="
+AST,<module>,Call,683,699,np.savez|np.savez_compressed,"np.savez_compressed(
+
+            OUT /
+            f""{prefix}.npz"",
+
+            history_abs=
+                history,
+
+            future_abs=
+                future,
+
+            history_rel=
+                history_rel,
+
+            future_rel=
+                future_rel
+        )",675,707,"675: 
+676:             f""birdsai_""
+677:             f""{split}_core_""
+678:             f""{task}_10hz""
+679: 
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: 
+688:             history_abs=
+689:                 history,
+690: 
+691:             future_abs=
+692:                 future,
+693: 
+694:             history_rel=
+695:                 history_rel,
+696: 
+697:             future_rel=
+698:                 future_rel
+699:         )
+700: 
+701: 
+702:         meta.to_csv(
+703: 
+704:             OUT /
+705:             f""{prefix}_metadata.csv"",
+706: 
+707:             index=False"
+LEXICAL,,,683,683,np.savez|np.savez_compressed,        np.savez_compressed(,673,693,"673: 
+674:         prefix = (
+675: 
+676:             f""birdsai_""
+677:             f""{split}_core_""
+678:             f""{task}_10hz""
+679: 
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: 
+688:             history_abs=
+689:                 history,
+690: 
+691:             future_abs=
+692:                 future,
+693: "
+AST,<module>,Call,702,708,to_csv|metadata,"meta.to_csv(
+
+            OUT /
+            f""{prefix}_metadata.csv"",
+
+            index=False
+        )",694,716,"694:             history_rel=
+695:                 history_rel,
+696: 
+697:             future_rel=
+698:                 future_rel
+699:         )
+700: 
+701: 
+702:         meta.to_csv(
+703: 
+704:             OUT /
+705:             f""{prefix}_metadata.csv"",
+706: 
+707:             index=False
+708:         )
+709: 
+710: 
+711:         audit = audit_samples(
+712: 
+713:             history,
+714:             future,
+715:             meta,
+716: "
+LEXICAL,,,702,702,to_csv,        meta.to_csv(,692,712,"692:                 future,
+693: 
+694:             history_rel=
+695:                 history_rel,
+696: 
+697:             future_rel=
+698:                 future_rel
+699:         )
+700: 
+701: 
+702:         meta.to_csv(
+703: 
+704:             OUT /
+705:             f""{prefix}_metadata.csv"",
+706: 
+707:             index=False
+708:         )
+709: 
+710: 
+711:         audit = audit_samples(
+712: "
+LEXICAL,,,705,705,metadata,"            f""{prefix}_metadata.csv"",",695,715,"695:                 history_rel,
+696: 
+697:             future_rel=
+698:                 future_rel
+699:         )
+700: 
+701: 
+702:         meta.to_csv(
+703: 
+704:             OUT /
+705:             f""{prefix}_metadata.csv"",
+706: 
+707:             index=False
+708:         )
+709: 
+710: 
+711:         audit = audit_samples(
+712: 
+713:             history,
+714:             future,
+715:             meta,"
+AST,<module>,Call,738,783,train_real,"all_summary.append({
+
+            ""task"":
+                task,
+
+            ""dataset"":
+                ""BIRDSAI"",
+
+            ""modality"":
+                ""thermal"",
+
+            ""role"":
+                (
+                    ""training""
+                    if split
+                    ==
+                    ""train_real""
+                    else
+                    ""in_domain_test""
+                ),
+
+            ""samples"":
+                len(
+                    history
+                ),
+
+            ""source_groups"":
+                meta[
+                    ""source_group""
+                ].nunique(),
+
+            ""tracks"":
+                meta[
+                    ""track_key""
+                ].nunique(),
+
+            ""history_shape"":
+                str(
+                    history.shape
+                ),
+
+            ""future_shape"":
+                str(
+                    future.shape
+                )
+        })",730,791,"730:         ] = task
+731: 
+732: 
+733:         all_audits.append(
+734:             audit
+735:         )
+736: 
+737: 
+738:         all_summary.append({
+739: 
+740:             ""task"":
+741:                 task,
+742: 
+743:             ""dataset"":
+744:                 ""BIRDSAI"",
+745: 
+746:             ""modality"":
+747:                 ""thermal"",
+748: 
+749:             ""role"":
+750:                 (
+751:                     ""training""
+752:                     if split
+753:                     ==
+754:                     ""train_real""
+755:                     else
+756:                     ""in_domain_test""
+757:                 ),
+758: 
+759:             ""samples"":
+760:                 len(
+761:                     history
+762:                 ),
+763: 
+764:             ""source_groups"":
+765:                 meta[
+766:                     ""source_group""
+767:                 ].nunique(),
+768: 
+769:             ""tracks"":
+770:                 meta[
+771:                     ""track_key""
+772:                 ].nunique(),
+773: 
+774:             ""history_shape"":
+775:                 str(
+776:                     history.shape
+777:                 ),
+778: 
+779:             ""future_shape"":
+780:                 str(
+781:                     future.shape
+782:                 )
+783:         })
+784: 
+785: 
+786:     # ========================================================
+787:     # WILDBOX
+788:     # ========================================================
+789: 
+790:     (
+791:         wild_meta,"
+AST,<module>,Compare,752,754,train_real,"split
+                    ==
+                    ""train_real""",744,762,"744:                 ""BIRDSAI"",
+745: 
+746:             ""modality"":
+747:                 ""thermal"",
+748: 
+749:             ""role"":
+750:                 (
+751:                     ""training""
+752:                     if split
+753:                     ==
+754:                     ""train_real""
+755:                     else
+756:                     ""in_domain_test""
+757:                 ),
+758: 
+759:             ""samples"":
+760:                 len(
+761:                     history
+762:                 ),"
+LEXICAL,,,754,754,train_real,"                    ""train_real""",744,764,"744:                 ""BIRDSAI"",
+745: 
+746:             ""modality"":
+747:                 ""thermal"",
+748: 
+749:             ""role"":
+750:                 (
+751:                     ""training""
+752:                     if split
+753:                     ==
+754:                     ""train_real""
+755:                     else
+756:                     ""in_domain_test""
+757:                 ),
+758: 
+759:             ""samples"":
+760:                 len(
+761:                     history
+762:                 ),
+763: 
+764:             ""source_groups"":"
+AST,<module>,If,808,820,10hz,"if (
+        wild_future.shape[1]
+        !=
+        config[
+            ""future_frames_10hz""
+        ]
+    ):
+
+        raise RuntimeError(
+            f""{task} WildBox ""
+            f""future shape wrong ""
+            f""{wild_future.shape}""
+        )",800,828,"800: 
+801:         raise RuntimeError(
+802:             f""{task} WildBox ""
+803:             f""history shape wrong ""
+804:             f""{wild_history.shape}""
+805:         )
+806: 
+807: 
+808:     if (
+809:         wild_future.shape[1]
+810:         !=
+811:         config[
+812:             ""future_frames_10hz""
+813:         ]
+814:     ):
+815: 
+816:         raise RuntimeError(
+817:             f""{task} WildBox ""
+818:             f""future shape wrong ""
+819:             f""{wild_future.shape}""
+820:         )
+821: 
+822: 
+823:     (
+824:         wild_history_rel,
+825:         wild_future_rel
+826:     ) = make_relative(
+827: 
+828:         wild_history,"
+AST,<module>,Compare,809,813,10hz,"wild_future.shape[1]
+        !=
+        config[
+            ""future_frames_10hz""
+        ]",801,821,"801:         raise RuntimeError(
+802:             f""{task} WildBox ""
+803:             f""history shape wrong ""
+804:             f""{wild_history.shape}""
+805:         )
+806: 
+807: 
+808:     if (
+809:         wild_future.shape[1]
+810:         !=
+811:         config[
+812:             ""future_frames_10hz""
+813:         ]
+814:     ):
+815: 
+816:         raise RuntimeError(
+817:             f""{task} WildBox ""
+818:             f""future shape wrong ""
+819:             f""{wild_future.shape}""
+820:         )
+821: "
+AST,<module>,Subscript,811,813,10hz,"config[
+            ""future_frames_10hz""
+        ]",803,821,"803:             f""history shape wrong ""
+804:             f""{wild_history.shape}""
+805:         )
+806: 
+807: 
+808:     if (
+809:         wild_future.shape[1]
+810:         !=
+811:         config[
+812:             ""future_frames_10hz""
+813:         ]
+814:     ):
+815: 
+816:         raise RuntimeError(
+817:             f""{task} WildBox ""
+818:             f""future shape wrong ""
+819:             f""{wild_future.shape}""
+820:         )
+821: "
+LEXICAL,,,812,812,10hz,"            ""future_frames_10hz""",802,822,"802:             f""{task} WildBox ""
+803:             f""history shape wrong ""
+804:             f""{wild_history.shape}""
+805:         )
+806: 
+807: 
+808:     if (
+809:         wild_future.shape[1]
+810:         !=
+811:         config[
+812:             ""future_frames_10hz""
+813:         ]
+814:     ):
+815: 
+816:         raise RuntimeError(
+817:             f""{task} WildBox ""
+818:             f""future shape wrong ""
+819:             f""{wild_future.shape}""
+820:         )
+821: 
+822: "
+AST,<module>,Assign,835,840,10hz,"prefix = (
+
+        f""wildbox_external_""
+        f""{task}_10hz""
+
+    )",827,848,"827: 
+828:         wild_history,
+829: 
+830:         wild_future
+831: 
+832:     )
+833: 
+834: 
+835:     prefix = (
+836: 
+837:         f""wildbox_external_""
+838:         f""{task}_10hz""
+839: 
+840:     )
+841: 
+842: 
+843:     np.savez_compressed(
+844: 
+845:         OUT /
+846:         f""{prefix}.npz"",
+847: 
+848:         history_abs="
+LEXICAL,,,838,838,10hz,"        f""{task}_10hz""",828,848,"828:         wild_history,
+829: 
+830:         wild_future
+831: 
+832:     )
+833: 
+834: 
+835:     prefix = (
+836: 
+837:         f""wildbox_external_""
+838:         f""{task}_10hz""
+839: 
+840:     )
+841: 
+842: 
+843:     np.savez_compressed(
+844: 
+845:         OUT /
+846:         f""{prefix}.npz"",
+847: 
+848:         history_abs="
+AST,<module>,Call,843,860,np.savez|np.savez_compressed,"np.savez_compressed(
+
+        OUT /
+        f""{prefix}.npz"",
+
+        history_abs=
+            wild_history,
+
+        future_abs=
+            wild_future,
+
+        history_rel=
+            wild_history_rel,
+
+        future_rel=
+            wild_future_rel
+
+    )",835,868,"835:     prefix = (
+836: 
+837:         f""wildbox_external_""
+838:         f""{task}_10hz""
+839: 
+840:     )
+841: 
+842: 
+843:     np.savez_compressed(
+844: 
+845:         OUT /
+846:         f""{prefix}.npz"",
+847: 
+848:         history_abs=
+849:             wild_history,
+850: 
+851:         future_abs=
+852:             wild_future,
+853: 
+854:         history_rel=
+855:             wild_history_rel,
+856: 
+857:         future_rel=
+858:             wild_future_rel
+859: 
+860:     )
+861: 
+862: 
+863:     wild_meta.to_csv(
+864: 
+865:         OUT /
+866:         f""{prefix}_metadata.csv"",
+867: 
+868:         index=False"
+LEXICAL,,,843,843,np.savez|np.savez_compressed,    np.savez_compressed(,833,853,"833: 
+834: 
+835:     prefix = (
+836: 
+837:         f""wildbox_external_""
+838:         f""{task}_10hz""
+839: 
+840:     )
+841: 
+842: 
+843:     np.savez_compressed(
+844: 
+845:         OUT /
+846:         f""{prefix}.npz"",
+847: 
+848:         history_abs=
+849:             wild_history,
+850: 
+851:         future_abs=
+852:             wild_future,
+853: "
+AST,<module>,Call,863,869,to_csv|metadata,"wild_meta.to_csv(
+
+        OUT /
+        f""{prefix}_metadata.csv"",
+
+        index=False
+    )",855,877,"855:             wild_history_rel,
+856: 
+857:         future_rel=
+858:             wild_future_rel
+859: 
+860:     )
+861: 
+862: 
+863:     wild_meta.to_csv(
+864: 
+865:         OUT /
+866:         f""{prefix}_metadata.csv"",
+867: 
+868:         index=False
+869:     )
+870: 
+871: 
+872:     audit = audit_samples(
+873: 
+874:         wild_history,
+875:         wild_future,
+876:         wild_meta,
+877: "
+LEXICAL,,,863,863,to_csv,    wild_meta.to_csv(,853,873,"853: 
+854:         history_rel=
+855:             wild_history_rel,
+856: 
+857:         future_rel=
+858:             wild_future_rel
+859: 
+860:     )
+861: 
+862: 
+863:     wild_meta.to_csv(
+864: 
+865:         OUT /
+866:         f""{prefix}_metadata.csv"",
+867: 
+868:         index=False
+869:     )
+870: 
+871: 
+872:     audit = audit_samples(
+873: "
+LEXICAL,,,866,866,metadata,"        f""{prefix}_metadata.csv"",",856,876,"856: 
+857:         future_rel=
+858:             wild_future_rel
+859: 
+860:     )
+861: 
+862: 
+863:     wild_meta.to_csv(
+864: 
+865:         OUT /
+866:         f""{prefix}_metadata.csv"",
+867: 
+868:         index=False
+869:     )
+870: 
+871: 
+872:     audit = audit_samples(
+873: 
+874:         wild_history,
+875:         wild_future,
+876:         wild_meta,"
+AST,<module>,Call,950,956,to_csv,"summary_df.to_csv(
+
+    OUT /
+    ""dataset_summary.csv"",
+
+    index=False
+)",942,964,"942: # SAVE AUDIT
+943: # ============================================================
+944: 
+945: summary_df = pd.DataFrame(
+946:     all_summary
+947: )
+948: 
+949: 
+950: summary_df.to_csv(
+951: 
+952:     OUT /
+953:     ""dataset_summary.csv"",
+954: 
+955:     index=False
+956: )
+957: 
+958: 
+959: audit_df = pd.concat(
+960: 
+961:     all_audits,
+962: 
+963:     ignore_index=True
+964: "
+LEXICAL,,,950,950,to_csv,summary_df.to_csv(,940,960,"940: 
+941: # ============================================================
+942: # SAVE AUDIT
+943: # ============================================================
+944: 
+945: summary_df = pd.DataFrame(
+946:     all_summary
+947: )
+948: 
+949: 
+950: summary_df.to_csv(
+951: 
+952:     OUT /
+953:     ""dataset_summary.csv"",
+954: 
+955:     index=False
+956: )
+957: 
+958: 
+959: audit_df = pd.concat(
+960: "
+AST,<module>,Call,968,974,to_csv,"audit_df.to_csv(
+
+    OUT /
+    ""trajectory_quality_audit.csv"",
+
+    index=False
+)",960,982,"960: 
+961:     all_audits,
+962: 
+963:     ignore_index=True
+964: 
+965: )
+966: 
+967: 
+968: audit_df.to_csv(
+969: 
+970:     OUT /
+971:     ""trajectory_quality_audit.csv"",
+972: 
+973:     index=False
+974: )
+975: 
+976: 
+977: # ============================================================
+978: # AGGREGATE QUALITY
+979: # ============================================================
+980: 
+981: quality_rows = []
+982: "
+LEXICAL,,,968,968,to_csv,audit_df.to_csv(,958,978,"958: 
+959: audit_df = pd.concat(
+960: 
+961:     all_audits,
+962: 
+963:     ignore_index=True
+964: 
+965: )
+966: 
+967: 
+968: audit_df.to_csv(
+969: 
+970:     OUT /
+971:     ""trajectory_quality_audit.csv"",
+972: 
+973:     index=False
+974: )
+975: 
+976: 
+977: # ============================================================
+978: # AGGREGATE QUALITY"
+AST,<module>,Call,1061,1067,to_csv,"quality_df.to_csv(
+
+    OUT /
+    ""trajectory_quality_summary.csv"",
+
+    index=False
+)",1053,1075,"1053:     })
+1054: 
+1055: 
+1056: quality_df = pd.DataFrame(
+1057:     quality_rows
+1058: )
+1059: 
+1060: 
+1061: quality_df.to_csv(
+1062: 
+1063:     OUT /
+1064:     ""trajectory_quality_summary.csv"",
+1065: 
+1066:     index=False
+1067: )
+1068: 
+1069: 
+1070: # ============================================================
+1071: # TEXT SUMMARY
+1072: # ============================================================
+1073: 
+1074: with open(
+1075: "
+LEXICAL,,,1061,1061,to_csv,quality_df.to_csv(,1051,1071,"1051:                 0.95
+1052:             )
+1053:     })
+1054: 
+1055: 
+1056: quality_df = pd.DataFrame(
+1057:     quality_rows
+1058: )
+1059: 
+1060: 
+1061: quality_df.to_csv(
+1062: 
+1063:     OUT /
+1064:     ""trajectory_quality_summary.csv"",
+1065: 
+1066:     index=False
+1067: )
+1068: 
+1069: 
+1070: # ============================================================
+1071: # TEXT SUMMARY"
+AST,<module>,Call,1085,1087,10 hz,"f.write(
+        ""UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ\n""
+    )",1077,1095,"1077:     ""SUMMARY.txt"",
+1078: 
+1079:     ""w"",
+1080:     encoding=""utf-8""
+1081: 
+1082: ) as f:
+1083: 
+1084: 
+1085:     f.write(
+1086:         ""UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ\n""
+1087:     )
+1088: 
+1089:     f.write(
+1090:         ""="" * 72
+1091:         +
+1092:         ""\n\n""
+1093:     )
+1094: 
+1095: "
+LEXICAL,,,1086,1086,10 hz,"        ""UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ\n""",1076,1096,"1076:     OUT /
+1077:     ""SUMMARY.txt"",
+1078: 
+1079:     ""w"",
+1080:     encoding=""utf-8""
+1081: 
+1082: ) as f:
+1083: 
+1084: 
+1085:     f.write(
+1086:         ""UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ\n""
+1087:     )
+1088: 
+1089:     f.write(
+1090:         ""="" * 72
+1091:         +
+1092:         ""\n\n""
+1093:     )
+1094: 
+1095: 
+1096:     f.write("
+AST,<module>,Call,1100,1102,10 hz,"f.write(
+        ""- Sampling frequency: 10 Hz\n""
+    )",1092,1110,"1092:         ""\n\n""
+1093:     )
+1094: 
+1095: 
+1096:     f.write(
+1097:         ""Common representation:\n""
+1098:     )
+1099: 
+1100:     f.write(
+1101:         ""- Sampling frequency: 10 Hz\n""
+1102:     )
+1103: 
+1104:     f.write(
+1105:         ""- Observation: 2 s / 20 frames\n""
+1106:     )
+1107: 
+1108:     f.write(
+1109:         ""- Forecast: 2 s / 20 frames ""
+1110:         ""or 5 s / 50 frames\n"""
+LEXICAL,,,1101,1101,10 hz,"        ""- Sampling frequency: 10 Hz\n""",1091,1111,"1091:         +
+1092:         ""\n\n""
+1093:     )
+1094: 
+1095: 
+1096:     f.write(
+1097:         ""Common representation:\n""
+1098:     )
+1099: 
+1100:     f.write(
+1101:         ""- Sampling frequency: 10 Hz\n""
+1102:     )
+1103: 
+1104:     f.write(
+1105:         ""- Observation: 2 s / 20 frames\n""
+1106:     )
+1107: 
+1108:     f.write(
+1109:         ""- Forecast: 2 s / 20 frames ""
+1110:         ""or 5 s / 50 frames\n""
+1111:     )"
+AST,<module>,Call,1128,1130,core,"f.write(
+        ""- BIRDSAI TrainReal CORE = training\n""
+    )",1120,1138,"1120:         ""coordinates are saved.\n\n""
+1121:     )
+1122: 
+1123: 
+1124:     f.write(
+1125:         ""Experimental roles:\n""
+1126:     )
+1127: 
+1128:     f.write(
+1129:         ""- BIRDSAI TrainReal CORE = training\n""
+1130:     )
+1131: 
+1132:     f.write(
+1133:         ""- BIRDSAI TestReal CORE = untouched in-domain test\n""
+1134:     )
+1135: 
+1136:     f.write(
+1137:         ""- WildBox RGB = untouched external cross-modal test\n\n""
+1138:     )"
+LEXICAL,,,1129,1129,core,"        ""- BIRDSAI TrainReal CORE = training\n""",1119,1139,"1119:         ""- Both absolute and relative-to-last-observation ""
+1120:         ""coordinates are saved.\n\n""
+1121:     )
+1122: 
+1123: 
+1124:     f.write(
+1125:         ""Experimental roles:\n""
+1126:     )
+1127: 
+1128:     f.write(
+1129:         ""- BIRDSAI TrainReal CORE = training\n""
+1130:     )
+1131: 
+1132:     f.write(
+1133:         ""- BIRDSAI TestReal CORE = untouched in-domain test\n""
+1134:     )
+1135: 
+1136:     f.write(
+1137:         ""- WildBox RGB = untouched external cross-modal test\n\n""
+1138:     )
+1139: "
+AST,<module>,Call,1132,1134,core,"f.write(
+        ""- BIRDSAI TestReal CORE = untouched in-domain test\n""
+    )",1124,1142,"1124:     f.write(
+1125:         ""Experimental roles:\n""
+1126:     )
+1127: 
+1128:     f.write(
+1129:         ""- BIRDSAI TrainReal CORE = training\n""
+1130:     )
+1131: 
+1132:     f.write(
+1133:         ""- BIRDSAI TestReal CORE = untouched in-domain test\n""
+1134:     )
+1135: 
+1136:     f.write(
+1137:         ""- WildBox RGB = untouched external cross-modal test\n\n""
+1138:     )
+1139: 
+1140: 
+1141:     for _, row in (
+1142:         summary_df.iterrows()"
+LEXICAL,,,1133,1133,core,"        ""- BIRDSAI TestReal CORE = untouched in-domain test\n""",1123,1143,"1123: 
+1124:     f.write(
+1125:         ""Experimental roles:\n""
+1126:     )
+1127: 
+1128:     f.write(
+1129:         ""- BIRDSAI TrainReal CORE = training\n""
+1130:     )
+1131: 
+1132:     f.write(
+1133:         ""- BIRDSAI TestReal CORE = untouched in-domain test\n""
+1134:     )
+1135: 
+1136:     f.write(
+1137:         ""- WildBox RGB = untouched external cross-modal test\n\n""
+1138:     )
+1139: 
+1140: 
+1141:     for _, row in (
+1142:         summary_df.iterrows()
+1143:     ):"
+AST,<module>,Call,1199,1201,10 hz,"print(
+    ""UNIFIED 10 HZ DATASET BUILD COMPLETE""
+)",1191,1209,"1191: 
+1192:         )
+1193: 
+1194: 
+1195: print(
+1196:     ""\n========================================""
+1197: )
+1198: 
+1199: print(
+1200:     ""UNIFIED 10 HZ DATASET BUILD COMPLETE""
+1201: )
+1202: 
+1203: print(
+1204:     ""========================================""
+1205: )
+1206: 
+1207: print(
+1208:     ""\nDataset summary:""
+1209: )"
+LEXICAL,,,1200,1200,10 hz,"    ""UNIFIED 10 HZ DATASET BUILD COMPLETE""",1190,1210,"1190:             f""{row['future_shape']}\n\n""
+1191: 
+1192:         )
+1193: 
+1194: 
+1195: print(
+1196:     ""\n========================================""
+1197: )
+1198: 
+1199: print(
+1200:     ""UNIFIED 10 HZ DATASET BUILD COMPLETE""
+1201: )
+1202: 
+1203: print(
+1204:     ""========================================""
+1205: )
+1206: 
+1207: print(
+1208:     ""\nDataset summary:""
+1209: )
+1210: "

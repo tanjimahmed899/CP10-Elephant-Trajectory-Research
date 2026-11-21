@@ -1,0 +1,3 @@
+task,expected_samples,expected_future_length,npz_keys,arrays_with_expected_sample_axis,arrays_matching_expected_future_length,metadata_rows,metadata_sample_id_unique
+2s_to_2s,865,20,history_canonical|future_canonical|history_abs|future_abs|origin|heading_angle|scale,history_canonical|future_canonical|history_abs|future_abs|origin|heading_angle|scale,history_canonical|future_canonical|history_abs|future_abs,865,True
+2s_to_5s,637,50,history_canonical|future_canonical|history_abs|future_abs|origin|heading_angle|scale,history_canonical|future_canonical|history_abs|future_abs|origin|heading_angle|scale,future_canonical|future_abs,637,True

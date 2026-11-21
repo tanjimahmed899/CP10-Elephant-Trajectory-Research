@@ -1,0 +1,12 @@
+field_group,columns,available
+frame,frame,True
+object/track id,object_id|segment_id,True
+center x,cx|cx_n,True
+center y,cy|cy_n,True
+bbox width,,False
+bbox height,,False
+x1,,False
+y1,,False
+x2,,False
+y2,,False
+track-GT compatible schema,,False

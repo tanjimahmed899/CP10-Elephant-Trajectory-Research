@@ -1,0 +1,66 @@
+path,rows,source_col,candidate_sources,evaluation_source_overlap_count,overlap_sources_json,split_col,split_values_json,no_evaluation_source_overlap
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18a_validation_geofence_instances.csv,1110,source_group,3,0,[],,[],True
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_all_geofence_instances.csv,20286,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_all_geofence_instance_alarms.csv,214956,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7h_final_response_aware_instances.csv,107478,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7f_all_persistence_instances.csv,81144,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\multigeofence_audit\multigeofence_train_core_instances.csv,5478,sequence,3,0,[],,[],True
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18a_validation_by_boundary.csv,24,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18a_validation_audit.csv,2,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18a_validation_by_source.csv,5,source_group,3,0,[],,[],True
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18a_validation_summary.csv,2,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7h_final_metrics_per_boundary.csv,264,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_track_macro_metrics.csv,44,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7h_final_response_aware_metrics.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7c_threshold_sweep_metrics.csv,198,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7c_current_rule_saturation.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7f_sequence_runlength_audit.csv,2123,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_per_boundary_alarm_metrics.csv,264,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_response_time_sensitivity_metrics.csv,88,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7b_v2_primary_90pct_response_sensitivity.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7b_v2_secondary_95pct_response_sensitivity.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7d_boundary_macro_summary.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7e_incremental_uncertainty_value_overall.csv,8,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_sample_level_max_alarm.csv,35826,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7e_incremental_uncertainty_value_per_boundary.csv,96,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_by_boundary.csv,48,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_data_audit.csv,4,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_overall_metrics.csv,4,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7c_sample_level_threshold_sweep.csv,161217,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7f_sequence_ordering_gap_audit.csv,2123,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7c_multiboundary_union_saturation.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7h_boundary_macro_metrics.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_by_source.csv,17,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_diag_ranked_scale_candidates.csv,72,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7f_persistence_tradeoff.csv,16,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7g_persistence_pareto_frontier.csv,16,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7g_selected_N_transfer_summary.csv,4,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_sample_alerting_boundary_counts.csv,17913,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7f_persistence_tradeoff_by_source.csv,68,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7e_incremental_uncertainty_value_per_source.csv,34,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\multigeofence_audit\per_geofence_balance.csv,24,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\multigeofence_audit\overall_balance.csv,2,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_alerting_boundary_count_distribution.csv,282,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7e_distance_stratified_diagnostic.csv,20,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\step18_geofence\step18b_evaluation\step18b_seed_vote_diagnostic.csv,16,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_diag_geofence_group_index_ranges.csv,4,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_exact_scale_mapping_audit.csv,4,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_diag_all_scale_csvs.csv,18,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_boundary_definitions.csv,12,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_v2_exact_sample_scale_map.csv,3381,source_group,9,9,"[""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000"", ""DJI_20240119152335_0005_V"", ""DJI_20240626142859_0001_V"", ""DJI_20260227084135_0002_V""]",,[],False
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_array_table_audit.csv,171,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_diag_step18_mapping_excerpts.csv,96,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_ranked_data_candidates.csv,40,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7b_step18_formula_excerpts.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\multigeofence_audit\per_sequence_positive_balance.csv,5,sequence,3,0,[],,[],True
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_boundary_count_audit.csv,22,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7d_k_of_n_aggregation_diagnostic.csv,132,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7c_BIRDSAI_operating_point_candidates.csv,33,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7c_fixed_threshold_WildBox_diagnostic.csv,33,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7e_response_setting_audit.csv,8,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7g_selection_criterion_audit.csv,2,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_candidate_files.csv,22081,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_geofence_source_files.csv,26,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_text_definition_audit.csv,23,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\TABLE_step7f_BIRDSAI_WildBox_transfer_view.csv,10,,0,0,[],,[],
+E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\step7a_step6c_source_scripts.csv,1,,0,0,[],,[],

@@ -1,0 +1,7 @@
+sequence,image_dir,image_count,parsed_frame_count,gt_row_count,gt_unique_frame_count,gt_frames_missing_image,image_frames_without_gt,frame_mapping_complete_for_gt,first_missing_gt_frames
+0000000055_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000055_0000000000,268,268,264,264,0,4,True,
+0000000058_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000058_0000000000,684,684,3019,669,0,15,True,
+0000000349_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000349_0000000000,1456,1456,3292,1278,0,178,True,
+0000000352_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000352_0000000000,3209,3209,19347,2417,0,792,True,
+0000000353_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000353_0000000000,3193,3193,21477,3126,0,67,True,
+0000000357_0000000000,E:\AIUB\Capstone Project\Journal Based Results\Main Result\conservation_drones_test_real\TestReal\images\0000000357_0000000000,275,275,1023,271,0,4,True,

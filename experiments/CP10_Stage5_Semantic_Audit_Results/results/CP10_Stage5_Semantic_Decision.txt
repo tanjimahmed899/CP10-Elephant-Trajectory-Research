@@ -1,0 +1,12 @@
+Stage 5 semantic track-box reconciliation | 6 candidate segments
+IoU threshold=0.5; minimum elephant matching fraction=0.8
+Prior-use mentions found: 15 (mentions do not prove previous evaluation)
+elep1 DJI_20240119152552_0006_V seg1: 200/200 GT elephant boxes matched, resolved tracks=1/1; observed potential windows 2s/5s=161/131; strict GT verified=161/131; internal bbox size=512x288
+elep1 DJI_20240119152552_0006_V seg2: 200/200 GT elephant boxes matched, resolved tracks=1/1; observed potential windows 2s/5s=161/131; strict GT verified=161/131; internal bbox size=512x288
+elep1 DJI_20240119152552_0006_V seg3: 59/59 GT elephant boxes matched, resolved tracks=1/1; observed potential windows 2s/5s=20/0; strict GT verified=20/0; internal bbox size=512x288
+elep2 DJI_20240626143832_0004_V seg1: 174/178 GT elephant boxes matched, resolved tracks=2/2; observed potential windows 2s/5s=100/40; strict GT verified=78/18; internal bbox size=512x288
+elep3 DJI_20260227084907_0004_V seg1: 529/542 GT elephant boxes matched, resolved tracks=5/5; observed potential windows 2s/5s=265/117; strict GT verified=251/108; internal bbox size=512x288
+elep3 DJI_20260227084907_0004_V seg2: 200/200 GT elephant boxes matched, resolved tracks=1/1; observed potential windows 2s/5s=161/131; strict GT verified=161/131; internal bbox size=512x288
+
+Interpretation: preliminary sample feasibility only, NOT independent confirmatory calibration.
+Next: audit source overlap and retain candidate 0004 videos as retrospective same-group exploratory material; confirmatory results require a new recording group.

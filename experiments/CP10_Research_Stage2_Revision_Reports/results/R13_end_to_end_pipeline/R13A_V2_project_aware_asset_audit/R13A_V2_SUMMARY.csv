@@ -1,0 +1,7 @@
+component,found,count
+Detector checkpoint,True,16
+Project-relevant videos,True,4
+Project image-sequence directories,True,64
+BIRDSAI image-sequence directory,False,0
+Genuine tracker implementation source,False,0
+BIRDSAI annotation/GT candidates,False,0

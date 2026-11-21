@@ -1,0 +1,3 @@
+task,locked_scale_floor,explicit_authoritative_sources,all_explicit_sources_match,final_metadata_matches,exact_source_tolerance,metadata_tolerance
+2s_to_2s,0.06820264416877736,4,True,True,1e-15,1e-08
+2s_to_5s,0.06732638773715147,4,True,True,1e-15,1e-08

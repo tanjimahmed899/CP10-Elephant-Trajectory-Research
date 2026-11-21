@@ -1,0 +1,11 @@
+claim,status,basis
+The 2-s forecast horizon is equivalent to a 2-s operational response time.,REJECTED,Prediction horizon and total operational response latency are different quantities.
+The 5-s forecast horizon is equivalent to a 5-s operational response time.,REJECTED,Prediction horizon and total operational response latency are different quantities.
+ByteTrack compute alone fits inside a 2-s horizon.,SUPPORTED,Measured CPU compute=114.487 ms; remaining non-compute budget=1885.513 ms.
+ByteTrack compute alone fits inside a 5-s horizon.,SUPPORTED,Measured CPU compute=114.487 ms; remaining non-compute budget=4885.513 ms.
+BoT-SORT compute alone fits inside a 2-s horizon.,SUPPORTED,Measured CPU compute=128.798 ms; remaining non-compute budget=1871.202 ms.
+BoT-SORT compute alone fits inside a 5-s horizon.,SUPPORTED,Measured CPU compute=128.798 ms; remaining non-compute budget=4871.202 ms.
+The current experiment proves that a human team can respond within the 2-s horizon.,REJECTED,Human-response latency was not measured.
+The current experiment proves that a human team can respond within the 5-s horizon.,REJECTED,Human-response latency was not measured.
+The current experiment proves that a drone can be dispatched and intervene within 2 s or 5 s.,REJECTED,"Drone availability, dispatch, travel, intervention, and communication latencies were not measured."
+The current CPU implementation is real-time at the standardized 10-Hz trajectory rate.,REJECTED,"R16-A measured 8.735 FPS for detector+ByteTrack and 7.764 FPS for detector+BoT-SORT, both below 10 FPS."

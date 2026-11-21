@@ -1,0 +1,5 @@
+question,prelocked_decision_rule,result_supported,point_delta,ci95_low,ci95_high
+Does selective 4-class filtering reduce false-elephant negative-image alarms vs elephant-only comparator?,paired bootstrap delta = comparator - selective; support only if 95% CI lower bound > 0,True,0.3642384105960266,0.2781456953642384,0.45033112582781454
+Does selective detector improve/maintain positive-image sensitivity vs comparator?,paired bootstrap delta = selective - comparator; descriptive support only if CI lower bound >= 0; no formal non-inferiority margin was pre-specified,False,-0.5165562913907285,-0.5960264900662251,-0.4370860927152318
+Overall F1 comparison,paired bootstrap delta = selective - comparator; CI reported,False,-0.4402250711667246,-0.4854321910947665,-0.3963375045866295
+AP50 / AP50:95 descriptive comparison,report both detectors; no bootstrap significance rule pre-locked for AP,,-0.4804312899517832,,

@@ -1,0 +1,36 @@
+# Environment / credentials
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secrets*
+# Data & private videos / protected locations
+data/raw/
+data/local/
+media/raw/
+source_videos/
+private_metadata/
+# Model weights / large raw artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.mp4
+*.mov
+*.avi
+*.zip
+*.7z
+*.rar
+# Unnecessary generated files
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+logs/local/

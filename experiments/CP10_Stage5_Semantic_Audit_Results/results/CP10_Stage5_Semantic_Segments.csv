@@ -1,0 +1,7 @@
+group,video,segment,paired_frame_labels,GT_elephant_boxes,GT_elephant_matched,track_count,resolved_elephant_tracks,assumed_tracker_input_width,assumed_tracker_input_height,matched_box_pairs_at_iou_threshold,mean_max_iou_over_tracker_frames,unmatched_tracking_boxes,possible_2s_windows_resolved,possible_5s_windows_resolved,strict_GT_matched_2s_windows,strict_GT_matched_5s_windows,source_zip
+elep1,DJI_20240119152552_0006_V,seg1,200,200,200,1,1,512,288,200,0.83153,0,161,131,161,131,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240119152552_0006_V.zip
+elep1,DJI_20240119152552_0006_V,seg2,200,200,200,1,1,512,288,200,0.82175,0,161,131,161,131,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240119152552_0006_V.zip
+elep1,DJI_20240119152552_0006_V,seg3,59,59,59,1,1,512,288,59,0.78965,0,20,0,20,0,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240119152552_0006_V.zip
+elep2,DJI_20240626143832_0004_V,seg1,89,178,174,2,2,512,288,174,0.71602,4,100,40,78,18,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240626143832_0004_V.zip
+elep3,DJI_20260227084907_0004_V,seg1,170,542,529,5,5,512,288,529,0.82578,13,265,117,251,108,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20260227084907_0004_V.zip
+elep3,DJI_20260227084907_0004_V,seg2,200,200,200,1,1,512,288,200,0.80447,0,161,131,161,131,/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20260227084907_0004_V.zip

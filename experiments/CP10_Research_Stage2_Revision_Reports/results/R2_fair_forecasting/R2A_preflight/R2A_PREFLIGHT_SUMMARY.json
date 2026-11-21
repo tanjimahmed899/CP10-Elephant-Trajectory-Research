@@ -1,0 +1,12 @@
+{
+  "step": "R2A_FAIR_FORECASTING_BENCHMARK_PREFLIGHT",
+  "created_utc": "2026-10-29T05:20:22.873664+00:00",
+  "status": "R2A_PREFLIGHT_COMPLETE_TARGETED_SOURCE_MAPPING_PATCH_REQUIRED",
+  "r1_protocol_sha256": "4af15bd17f57d4c9932f482dcc047f3b344be4b810d0a4c7b48942f8d17406a8",
+  "new_test_metrics_generated": false,
+  "scripts_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight\\R2A_selected_source_scripts.csv",
+  "candidate_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight\\R2A_data_model_candidate_inventory.csv",
+  "fresh_source_presence_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight\\R2A_fresh_holdout_source_presence.csv",
+  "readiness_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight\\R2A_readiness_checks.csv",
+  "source_ast_inventory_json": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight\\R2A_source_ast_inventory.json"
+}

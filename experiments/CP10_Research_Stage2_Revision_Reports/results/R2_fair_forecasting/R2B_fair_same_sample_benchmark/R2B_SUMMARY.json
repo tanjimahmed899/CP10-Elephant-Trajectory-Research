@@ -1,0 +1,26 @@
+{
+  "step": "R2B_FAIR_SAME_SAMPLE_FORECASTING_BENCHMARK",
+  "created_utc": "2026-10-29T05:37:03.171597+00:00",
+  "status": "R2B_EXISTING_OUTPUTS_AUDITED_TARGETED_RECOMPUTATION_REQUIRED_FOR_MISSING_MODEL_SAMPLE_ROWS",
+  "r1_protocol_sha256": "4af15bd17f57d4c9932f482dcc047f3b344be4b810d0a4c7b48942f8d17406a8",
+  "r2a_status": "R2A_V2_PREFLIGHT_COMPLETE_READY_FOR_R2B_FAIR_BENCHMARK",
+  "retraining": false,
+  "post_test_model_selection": false,
+  "primary_models": [
+    "Stationary",
+    "ConstantVelocity",
+    "KalmanCV",
+    "GRU",
+    "LSTM",
+    "TransformerEnsemble"
+  ],
+  "important_note": "GRU and LSTM primary rows are 3-seed mean metrics when seed-level sample metrics were recovered. They are not trajectory ensembles. TransformerEnsemble refers to the frozen arithmetic-mean trajectory ensemble.",
+  "outputs": {
+    "sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_recovered_sample_metrics_long.csv",
+    "source_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_source_csv_audit.csv",
+    "coverage": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_model_sample_coverage.csv",
+    "alignment": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_same_sample_alignment.csv",
+    "aligned_primary_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_aligned_primary_model_sample_metrics.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2B_fair_same_sample_benchmark\\R2B_fair_primary_model_summary.csv"
+  }
+}

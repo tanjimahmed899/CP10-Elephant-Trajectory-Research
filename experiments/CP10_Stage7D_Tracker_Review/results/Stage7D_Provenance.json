@@ -1,0 +1,20 @@
+{
+  "status": "TRACKER_METRICS_COMPLETE",
+  "source_stage7c_sha256": "6e3b5e691d814da5a636f828c2c7520e8b71d2513cea1891e31e80a08ddd1176",
+  "tracker_yaml_sha256": "eaefad899964d7a12a13090d5da32bcdae8f0109968ffca982fdba2c60ad3c38",
+  "original_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "adapted_checkpoint_sha256": "71671b4175509e96bb6e4cd7e803b82c9c4b606061438a009d98d9f8b8e8d3d1",
+  "ultralytics_version": "8.4.216",
+  "tracker_api": "offline direct BYTETracker.update(Boxes) replay",
+  "frozen_tracker_from_historical_R13": true,
+  "tracker_frame_rate": 30,
+  "source_frames": 9085,
+  "source_GT_rows": 48055,
+  "old_R13_original_tracker_boxes": 1863,
+  "historical_R13_expected_IDF1": 0.02460034456508674,
+  "historical_R13_expected_HOTA": 0.029722219051547955,
+  "TestReal_used_to_tune": false,
+  "not_exact_original_R13_replication": "Ultralytics version 8.4.216 vs historical 8.3.75; original Stage7C TP differs 22",
+  "downstream_forecast_windows_are_construction_feasibility_only": true,
+  "elapsed_wall_sec": 102.90363387800016
+}

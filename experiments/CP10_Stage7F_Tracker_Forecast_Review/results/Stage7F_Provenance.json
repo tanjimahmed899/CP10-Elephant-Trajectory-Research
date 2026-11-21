@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_TRACKER_TRANSFORMER_COMPLETE",
+  "stage7d_sha256": "38d54ed01c44ab637e1f63061c5100b622c7cf2ed50180caa5c03dc8b8fb8a98",
+  "stage7e_sha256": "f8f0be77658e746a4edfbbfe2e7d2651f6d13c76bd0e42e6f18f6007aaa9d7ba",
+  "source_gt_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "motion_csv_sha256": "2721d290bea33e137f1c7e8df37ee33fe30996afaea3b86f379fe19c04dc5b63",
+  "input_checkpoint_sha256": {
+    "2s_to_2s_Transformer_seed42.pt": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+    "2s_to_2s_Transformer_seed52.pt": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+    "2s_to_2s_Transformer_seed62.pt": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+    "2s_to_5s_Transformer_seed42.pt": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+    "2s_to_5s_Transformer_seed52.pt": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+    "2s_to_5s_Transformer_seed62.pt": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+  },
+  "source_sequence": "0000000353_0000000000",
+  "source_resolution": [
+    582,
+    377
+  ],
+  "input_tracker": "Stage7D tracked bounding-box centers, unaltered",
+  "model": "Original Main Result/transformer_results frozen three-seed Transformer",
+  "GT_identity": "Used only to define retrospective strict population and evaluate oracle-history diagnostic",
+  "GT_future": "Used only as evaluation target, not inference input",
+  "image_motion": "Original R8 repaired 2D affine transforms; window-start reference frame",
+  "selection": "Strict 20/20 GT-associated history, full future GT; not online-available oracle gate",
+  "no_new_model_training": true,
+  "no_test_tuning": true,
+  "not_independent_holdout": true,
+  "limits": [
+    "One TestReal sequence only",
+    "Overlapping 10Hz windows clustered by GT identity",
+    "This is annotation-conditioned retrospective downstream forecasting, not a deployable full end-to-end score",
+    "Model paths & affine geometry locked to original verified checkpoint/data conventions"
+  ],
+  "n_horizon": {
+    "2s": 187,
+    "5s": 124
+  }
+}

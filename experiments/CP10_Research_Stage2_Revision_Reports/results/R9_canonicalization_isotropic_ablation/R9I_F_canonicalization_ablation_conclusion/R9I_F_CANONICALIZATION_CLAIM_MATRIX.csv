@@ -1,0 +1,9 @@
+analysis_scope,task,model,ADE_delta_px,ADE_CI95,ADE_interpretation,FDE_delta_px,FDE_CI95,FDE_interpretation,overall_interpretation
+single_model_3seed_mean_effect,2s_to_2s,GRU,-0.0731058722781426,"[-0.406029, 0.223491]",inconclusive,-0.469331202644044,"[-1.359041, 0.316965]",inconclusive,mixed_or_inconclusive
+single_model_3seed_mean_effect,2s_to_2s,LSTM,-0.0202991358573544,"[-0.161904, 0.115768]",inconclusive,-0.3926085994010054,"[-0.838725, 0.036776]",inconclusive,mixed_or_inconclusive
+single_model_3seed_mean_effect,2s_to_2s,Transformer,-0.1532511547699043,"[-0.879205, 0.431792]",inconclusive,0.1439614235376332,"[-1.060314, 1.221818]",inconclusive,mixed_or_inconclusive
+single_model_3seed_mean_effect,2s_to_5s,GRU,0.8643113696829635,"[-0.129326, 1.958850]",inconclusive,4.201555070142929,"[1.114304, 7.549912]",isotropic_worse,mixed_or_inconclusive
+single_model_3seed_mean_effect,2s_to_5s,LSTM,0.337897740217444,"[-0.643344, 1.395779]",inconclusive,3.090187647023332,"[0.636372, 5.816389]",isotropic_worse,mixed_or_inconclusive
+single_model_3seed_mean_effect,2s_to_5s,Transformer,-1.3670958342595572,"[-2.367163, -0.546165]",isotropic_better,0.0707476395216244,"[-1.314843, 1.483846]",inconclusive,mixed_or_inconclusive
+transformer_3seed_prediction_ensemble,2s_to_2s,Transformer_3Seed_Prediction_Ensemble,-0.5976462558456471,"[-1.303003, -0.064478]",isotropic_better,-1.0985871208016065,"[-2.343036, -0.017003]",isotropic_better,supports_isotropic_better_for_both_metrics
+transformer_3seed_prediction_ensemble,2s_to_5s,Transformer_3Seed_Prediction_Ensemble,-0.6833880077700216,"[-1.611347, 0.094465]",inconclusive,0.7321763907036071,"[-0.651660, 2.206053]",inconclusive,mixed_or_inconclusive

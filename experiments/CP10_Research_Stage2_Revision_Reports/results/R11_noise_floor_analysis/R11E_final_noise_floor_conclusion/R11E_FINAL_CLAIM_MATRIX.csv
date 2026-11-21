@@ -1,0 +1,6 @@
+question,answer,evidence,claim_strength
+Are absolute TestReal forecast errors dominated by the measured post-correction residual scale?,No,"Mean ensemble ADE/FDE are multiple times larger than F95, and most future-point/sample errors exceed F95.",SUPPORTED
+Are ensemble gains over mean individual-seed error statistically reproducible?,Yes,All 2s/5s ADE/FDE segment-cluster 95% CIs for comparator-minus-ensemble gain exclude zero.,SUPPORTED
+Are the primary ensemble gains over mean seed larger than the conservative F95 residual envelope?,No,All primary mean-seed ADE/FDE gains are below F95.,SUPPORTED
+Are the primary ensemble gains over mean seed larger than the central F50 residual reference?,"Yes at the overall segment-macro estimate, but not under every leave-one-sequence-out deletion.","All overall primary gains exceed F50, but some leave-one-sequence-out gains fall below F50.",SUPPORTED_WITH_SENSITIVITY_CAVEAT
+Does the 5s validation-selected-seed comparison exceed the conservative F95 envelope?,Yes for both ADE and FDE,The 5s ensemble gains versus the validation-selected seed exceed F95 for both metrics.,SUPPORTED

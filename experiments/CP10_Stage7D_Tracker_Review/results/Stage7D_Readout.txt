@@ -1,0 +1,12 @@
+Stage 7D — Offline frozen ByteTrack replay of saved Stage7C detections
+NO new detector inference. Same six BIRDSAI TestReal sequences.
+Historical R13 parity NOT guaranteed (Ultralytics 8.3.75 vs current 8.4.216).
+The forecastable-window counts measure trajectory availability, NOT actual forecasting performance.
+
+ tracker     HOTA    IDF1  IDSW  Frag     MOTA  num_tracker_dets
+original 0.025220 0.02139    43   145 0.011945              1595
+ adapted 0.204086 0.19331  1307  3597 0.147643             38914
+
+   model  tracked_box_rows  total_segments  windows_2s  windows_5s  forecastable_segments_2s  forecastable_segments_5s  window_yield_vs_GT_2s  window_yield_vs_GT_5s
+original              1595             131           2           0                         1                         0               0.001899               0.000000
+ adapted             38914            2182         371         191                        83                        30               0.352327               0.231235

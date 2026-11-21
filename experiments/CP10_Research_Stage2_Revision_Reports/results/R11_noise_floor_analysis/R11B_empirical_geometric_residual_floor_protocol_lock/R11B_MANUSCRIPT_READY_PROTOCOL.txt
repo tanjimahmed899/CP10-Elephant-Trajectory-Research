@@ -1,0 +1,19 @@
+R11 empirical geometric residual reference
+
+Protocol definition
+-------------------
+The noise-floor analysis uses held-out BIRDSAI TestReal stationary-landmark residual motion after ego-motion correction as an empirical geometric reference. It does not use forecast error to define the reference.
+
+Primary central reference:
+F50 = 0.203296 px
+Definition: median corrected stationary-landmark residual on held-out BIRDSAI TestReal.
+
+Conservative residual envelope:
+F95 = 1.553347 px
+Definition: 95th-percentile corrected stationary-landmark residual on held-out BIRDSAI TestReal.
+
+For context, the held-out TestReal median raw background motion was 0.705481 px and the corrected median residual was reduced by 71.183% relative to that raw median.
+
+Interpretation guardrail
+------------------------
+F50 and F95 quantify residual geometric motion remaining after the ego-motion correction procedure in the held-out BIRDSAI camera setting. They are not claimed to be universal annotation noise, an irreducible forecasting error bound, or a transferable uncertainty threshold for Fresh WildBox or BAMBI. Their purpose is to place BIRDSAI TestReal pixel-space forecasting errors on an empirically measured residual-motion scale.

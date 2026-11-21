@@ -1,0 +1,12 @@
+Same physical target input-only contrast:
+    task  seed  raw_input_ADE  corrected_input_ADE  raw_input_FDE  corrected_input_FDE  ADE_reduction_pct  FDE_reduction_pct
+2s_to_2s    42       0.058270             0.019473       0.071816             0.034457          66.580544          52.020722
+2s_to_2s    52       0.058074             0.019115       0.072675             0.032459          67.085616          55.336119
+2s_to_2s    62       0.058306             0.019912       0.071291             0.033975          65.849081          52.342603
+2s_to_5s    42       0.082727             0.035988       0.111811             0.068024          56.498036          39.161952
+2s_to_5s    52       0.074409             0.035720       0.102849             0.066941          51.994432          34.912944
+2s_to_5s    62       0.078350             0.037312       0.109136             0.068751          52.377617          37.004221
+          seed  raw_input_ADE  corrected_input_ADE  raw_input_FDE  corrected_input_FDE  ADE_reduction_pct  FDE_reduction_pct
+task                                                                                                                        
+2s_to_2s  52.0       0.058217              0.01950       0.071927             0.033630          66.505080          53.233148
+2s_to_5s  52.0       0.078495              0.03634       0.107932             0.067905          53.623362          37.026372

@@ -1,0 +1,14 @@
+{
+  "step": "R2C_MISSING_SAMPLE_ROW_RECOVERY_AUDIT",
+  "created_utc": "2026-10-29T05:41:50.183853+00:00",
+  "status": "R2C_AUDIT_COMPLETE_SOME_TARGETED_RECOMPUTATION_CONFIRMED_REQUIRED",
+  "r2b_status": "R2B_EXISTING_OUTPUTS_AUDITED_TARGETED_RECOMPUTATION_REQUIRED_FOR_MISSING_MODEL_SAMPLE_ROWS",
+  "new_metrics_generated": false,
+  "retraining": false,
+  "missing_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_missing_matrix.csv",
+  "artifact_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_result_artifact_inventory.csv",
+  "metric_format_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_csv_metric_format_evidence.csv",
+  "source_scripts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_source_script_inventory.csv",
+  "source_calls": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_source_call_inventory.csv",
+  "existing_support": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2C_missing_row_audit\\R2C_missing_row_existing_support.csv"
+}

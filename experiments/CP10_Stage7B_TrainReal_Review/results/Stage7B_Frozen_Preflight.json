@@ -1,0 +1,61 @@
+{
+  "status": "READY_FOR_TRAINREAL_DOMAIN_ADAPTATION",
+  "source_gt": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/trajectory_dataset/cleaned_track_points.csv",
+  "original_checkpoint": "/mnt/e/AIUB/Capstone Project/Final 1.0/Elephant Detection.v2-resized640.yolov8 (2)/Elephant Detection.v2-resized640.yolov8/runs/detect/elephant_final_clean/weights/best.pt",
+  "original_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "train_sequences": [
+    "0000000367_0000000000",
+    "0000000351_0000000000",
+    "0000000056_0000000000"
+  ],
+  "validation_sequences": [
+    "0000000010_0000000000",
+    "0000000054_0000000000"
+  ],
+  "sequence_overlap": [],
+  "selected": {
+    "0000000367_0000000000": {
+      "role": "train",
+      "available_annotated_images": 5094,
+      "sampled_images": 1200
+    },
+    "0000000351_0000000000": {
+      "role": "train",
+      "available_annotated_images": 141,
+      "sampled_images": 141
+    },
+    "0000000056_0000000000": {
+      "role": "train",
+      "available_annotated_images": 133,
+      "sampled_images": 133
+    },
+    "0000000010_0000000000": {
+      "role": "val",
+      "available_annotated_images": 342,
+      "sampled_images": 150
+    },
+    "0000000054_0000000000": {
+      "role": "val",
+      "available_annotated_images": 234,
+      "sampled_images": 150
+    }
+  },
+  "included_images_by_sequence": {
+    "train/0000000367_0000000000": 1200,
+    "train/0000000351_0000000000": 141,
+    "train/0000000056_0000000000": 133,
+    "val/0000000010_0000000000": 150,
+    "val/0000000054_0000000000": 150
+  },
+  "images_total": 1774,
+  "elephant_gt_total": 11461,
+  "excluded_raw_rows": {
+    "interpolated": 24
+  },
+  "box_adjustments": {},
+  "data_yaml": "/home/student/CP10_Stage7B_TrainReal_Adaptation/dataset/data.yaml",
+  "trainreal_only": true,
+  "testreal_accessed": false,
+  "no_negative_only_images": "This is a positive-frame-only pilot; FP metrics do not estimate true negative-image false alarm rates",
+  "note": "This is an exploratory pilot. Both source and target domains were previously analyzed; TestReal evaluation would be retrospective."
+}

@@ -1,0 +1,6 @@
+Retrospective same-recording-group candidate assessment, not a locked independent holdout.
+Model weights frozen before inference; overlapping windows are not independent. Candidate 0006=adaptation/development; the other 0004 videos=retrospective evaluation.
+Only semantically verified track/frame positions meeting GT IoU>=0.50 are eligible.
+GT annotations are used for evaluation and eligibility, never as detector predictions.
+Prediction arrays in .npz support subsequent calibration analyses; none are calibrated here.
+No formal distribution-shift coverage guarantee is claimed.

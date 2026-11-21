@@ -1,0 +1,65 @@
+[
+  {
+    "horizon": "2s",
+    "n_samples": 754,
+    "n_videos": 6,
+    "n_recording_groups": 3,
+    "n_track_keys": 59,
+    "baseline_q90_coverage": 0.9655172413793104,
+    "prior_reported_coverage_rounded": 0.9655,
+    "original_rule_N2": {
+      "recall": 0.8662420382165605,
+      "fwr": 0.47624703087885983
+    },
+    "previous_paper_N2": {
+      "recall": 0.8662,
+      "fwr": 0.4762
+    },
+    "nominal_replay": {
+      "recall": 0.33121019108280253,
+      "fwr": 0.0168646080760095
+    },
+    "prior_nominal": {
+      "recall": 0.3312,
+      "fwr": 0.0169
+    }
+  },
+  {
+    "horizon": "5s",
+    "n_samples": 572,
+    "n_videos": 6,
+    "n_recording_groups": 3,
+    "n_track_keys": 50,
+    "baseline_q90_coverage": 0.6975524475524476,
+    "prior_reported_coverage_rounded": 0.6976,
+    "original_rule_N2": {
+      "recall": 0.7950819672131147,
+      "fwr": 0.4093070652173913
+    },
+    "previous_paper_N2": {
+      "recall": 0.7951,
+      "fwr": 0.4093
+    },
+    "nominal_replay": {
+      "recall": 0.19467213114754098,
+      "fwr": 0.011209239130434782
+    },
+    "prior_nominal": {
+      "recall": 0.1947,
+      "fwr": 0.0112
+    }
+  }
+]
+horizon                 method  n_windows  pooled_coverage  group_macro_coverage  worst_group_coverage  weighted_mean_radius  relative_region_expansion_vs_frozen
+     2s   frozen_trainreal_q90        754         0.965517              0.977168              0.952164              0.408253                             1.000000
+     2s      target_window_p90        754         0.881963              0.898455              0.851936              0.244894                             0.599857
+     2s video_equal_weight_p90        754         0.889920              0.903011              0.865604              0.249087                             0.610127
+     2s track_equal_weight_p90        754         0.884615              0.899973              0.856492              0.241775                             0.592218
+     2s        group_worst_p90        754         0.885942              0.901351              0.856492              0.250356                             0.613237
+     2s         speed_2bin_p90        754         0.887268              0.896449              0.867882              0.227561                             0.557402
+     5s   frozen_trainreal_q90        572         0.697552              0.732226              0.683891              0.355039                             1.000000
+     5s      target_window_p90        572         0.889860              0.925922              0.851064              0.628348                             1.769801
+     5s video_equal_weight_p90        572         0.888112              0.905057              0.872340              0.625787                             1.762589
+     5s track_equal_weight_p90        572         0.893357              0.924288              0.872340              0.630887                             1.776954
+     5s        group_worst_p90        572         0.902098              0.934478              0.866261              0.660659                             1.860808
+     5s         speed_2bin_p90        572         0.842657              0.858677              0.795812              0.472655                             1.331277

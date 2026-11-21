@@ -1,0 +1,296 @@
+{
+  "generated_utc": "2026-11-20T15:23:42.093585+00:00",
+  "root": "/mnt/e/AIUB/Capstone Project/Journal Based Results",
+  "purpose": "candidate archive feasibility only, not forecasting inference or validation",
+  "previous_EXP3_videos": [
+    "DJI_20240119151048_0001_V",
+    "DJI_20240119151437_0002_V",
+    "DJI_20240626143248_0002_V",
+    "DJI_20240626143443_0003_V",
+    "DJI_20260227082707_0003_V",
+    "DJI_20260227084724_0003_V"
+  ],
+  "previous_R10_fresh_videos": [
+    "DJI_20240119152335_0005_V",
+    "DJI_20240626142859_0001_V",
+    "DJI_20260227084135_0002_V"
+  ],
+  "candidate_archives": [
+    {
+      "group": "elep1",
+      "video": "DJI_20240119152552_0006_V",
+      "prior_evidence_status": "previously_inspected_qualitative_frames",
+      "source_zip": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240119152552_0006_V.zip",
+      "source_bytes": 231582281,
+      "status": "INSPECTED",
+      "segments": 3
+    },
+    {
+      "group": "elep2",
+      "video": "DJI_20240626143832_0004_V",
+      "prior_evidence_status": "prior_use_not_yet_verified",
+      "source_zip": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20240626143832_0004_V.zip",
+      "source_bytes": 61702610,
+      "status": "INSPECTED",
+      "segments": 1
+    },
+    {
+      "group": "elep3",
+      "video": "DJI_20260227084907_0004_V",
+      "prior_evidence_status": "prior_use_not_yet_verified",
+      "source_zip": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/DJI_20260227084907_0004_V.zip",
+      "source_bytes": 266729322,
+      "status": "INSPECTED",
+      "segments": 2
+    }
+  ],
+  "segments": [
+    {
+      "group": "elep1",
+      "video": "DJI_20240119152552_0006_V",
+      "segment": "seg1",
+      "frames": 200,
+      "labels": 200,
+      "paired_frames": 200,
+      "labels_with_any_object": 200,
+      "elephant_gt_frames": 200,
+      "multi_elephant_gt_frames": 0,
+      "class_counts": {
+        "elephant": 200
+      },
+      "camera_records": 200,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 1,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 1,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 161,
+      "potential_5s_ambiguous_windows": 131,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 200,
+          "possible_2s_windows": 161,
+          "possible_5s_windows": 131
+        }
+      ]
+    },
+    {
+      "group": "elep1",
+      "video": "DJI_20240119152552_0006_V",
+      "segment": "seg2",
+      "frames": 200,
+      "labels": 200,
+      "paired_frames": 200,
+      "labels_with_any_object": 200,
+      "elephant_gt_frames": 200,
+      "multi_elephant_gt_frames": 0,
+      "class_counts": {
+        "elephant": 200
+      },
+      "camera_records": 200,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 1,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 1,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 161,
+      "potential_5s_ambiguous_windows": 131,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 200,
+          "possible_2s_windows": 161,
+          "possible_5s_windows": 131
+        }
+      ]
+    },
+    {
+      "group": "elep1",
+      "video": "DJI_20240119152552_0006_V",
+      "segment": "seg3",
+      "frames": 59,
+      "labels": 59,
+      "paired_frames": 59,
+      "labels_with_any_object": 59,
+      "elephant_gt_frames": 59,
+      "multi_elephant_gt_frames": 0,
+      "class_counts": {
+        "elephant": 59
+      },
+      "camera_records": 59,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 1,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 1,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 20,
+      "potential_5s_ambiguous_windows": 0,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 59,
+          "possible_2s_windows": 20,
+          "possible_5s_windows": 0
+        }
+      ]
+    },
+    {
+      "group": "elep2",
+      "video": "DJI_20240626143832_0004_V",
+      "segment": "seg1",
+      "frames": 89,
+      "labels": 89,
+      "paired_frames": 89,
+      "labels_with_any_object": 89,
+      "elephant_gt_frames": 89,
+      "multi_elephant_gt_frames": 89,
+      "class_counts": {
+        "elephant": 178
+      },
+      "camera_records": 89,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 2,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 2,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 100,
+      "potential_5s_ambiguous_windows": 40,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 89,
+          "possible_2s_windows": 50,
+          "possible_5s_windows": 20
+        },
+        {
+          "track": "1",
+          "class": "object",
+          "longest_consecutive": 89,
+          "possible_2s_windows": 50,
+          "possible_5s_windows": 20
+        }
+      ]
+    },
+    {
+      "group": "elep3",
+      "video": "DJI_20260227084907_0004_V",
+      "segment": "seg1",
+      "frames": 170,
+      "labels": 170,
+      "paired_frames": 170,
+      "labels_with_any_object": 170,
+      "elephant_gt_frames": 170,
+      "multi_elephant_gt_frames": 170,
+      "class_counts": {
+        "elephant": 542
+      },
+      "camera_records": 170,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 5,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 5,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 263,
+      "potential_5s_ambiguous_windows": 117,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 110,
+          "possible_2s_windows": 71,
+          "possible_5s_windows": 41
+        },
+        {
+          "track": "1",
+          "class": "object",
+          "longest_consecutive": 65,
+          "possible_2s_windows": 26,
+          "possible_5s_windows": 0
+        },
+        {
+          "track": "2",
+          "class": "object",
+          "longest_consecutive": 73,
+          "possible_2s_windows": 34,
+          "possible_5s_windows": 4
+        },
+        {
+          "track": "3",
+          "class": "object",
+          "longest_consecutive": 79,
+          "possible_2s_windows": 40,
+          "possible_5s_windows": 10
+        },
+        {
+          "track": "4",
+          "class": "object",
+          "longest_consecutive": 131,
+          "possible_2s_windows": 92,
+          "possible_5s_windows": 62
+        }
+      ]
+    },
+    {
+      "group": "elep3",
+      "video": "DJI_20260227084907_0004_V",
+      "segment": "seg2",
+      "frames": 200,
+      "labels": 200,
+      "paired_frames": 200,
+      "labels_with_any_object": 200,
+      "elephant_gt_frames": 200,
+      "multi_elephant_gt_frames": 0,
+      "class_counts": {
+        "elephant": 200
+      },
+      "camera_records": 200,
+      "has_cameras_json": true,
+      "has_tracking_summary": true,
+      "tracks": 1,
+      "elephant_tracks": 0,
+      "ambiguous_object_tracks": 1,
+      "longest_elephant_run": 0,
+      "potential_2s_elephant_windows": 0,
+      "potential_5s_elephant_windows": 0,
+      "potential_2s_ambiguous_windows": 161,
+      "potential_5s_ambiguous_windows": 131,
+      "track_details": [
+        {
+          "track": "0",
+          "class": "object",
+          "longest_consecutive": 200,
+          "possible_2s_windows": 161,
+          "possible_5s_windows": 131
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "All three candidate archives are from the already-inspected elep1/elep2/elep3 recording groups.",
+    "0006_V was used for qualitative annotation and appears in previous source inventories.",
+    "No candidate should be called a locked independent holdout without checking all earlier analyses and ensuring non-overlap.",
+    "An object-class KITTI label is not independently established as elephant.",
+    "Potential window counts assume 10-Hz contiguous track indices; they are not actual tested forecast samples.",
+    "ZIP files were inspected without modifying the source tree; no new model was run."
+  ]
+}

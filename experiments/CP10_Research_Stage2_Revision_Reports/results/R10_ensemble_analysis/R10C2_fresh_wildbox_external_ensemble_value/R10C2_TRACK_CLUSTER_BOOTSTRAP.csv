@@ -1,0 +1,9 @@
+task,comparator,metric,dependency_unit,within_track_reduction,tracks,delta,ci95_low,ci95_high,direction
+2s_to_2s,ensemble_vs_mean_individual_seed,ADE,track_key,median paired difference,78,-0.0002559809488950322,-0.0003372910122894619,-0.00018720498713746444,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_2s,ensemble_vs_mean_individual_seed,FDE,track_key,median paired difference,78,-0.0002990012554246241,-0.00041469294613940026,-0.00020246716958985546,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_2s,ensemble_vs_validation_selected_seed,ADE,track_key,median paired difference,78,-0.0012389022397639078,-0.0018398768178408097,-0.0007570626832553077,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_2s,ensemble_vs_validation_selected_seed,FDE,track_key,median paired difference,78,-0.002095188389574443,-0.0032033210994897856,-0.0011717318618447027,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_5s,ensemble_vs_mean_individual_seed,ADE,track_key,median paired difference,71,-0.00036273733578071353,-0.00041804860500084474,-0.00031396593477349183,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_5s,ensemble_vs_mean_individual_seed,FDE,track_key,median paired difference,71,-0.00021607619761920523,-0.000257293120851479,-0.00018107330425255646,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_5s,ensemble_vs_validation_selected_seed,ADE,track_key,median paired difference,71,-0.002333434961604316,-0.0030199811917119533,-0.0016978190311791668,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO
+2s_to_5s,ensemble_vs_validation_selected_seed,FDE,track_key,median paired difference,71,-0.002198026562263015,-0.003089030479336214,-0.0013141207348921847,ENSEMBLE_BETTER_CI_EXCLUDES_ZERO

@@ -1,0 +1,9 @@
+check,passed,detail
+row_count_unchanged,True,91419 -> 91419
+sequence_count_unchanged,True,11 -> 11
+track_count_unchanged,True,130 -> 130
+original_row_order_recoverable,True,original row index must be exactly 0..N-1 after restore
+cx_iso_range,True,"min=0.011168384879725086, max=0.9928366762177651"
+cy_iso_range,True,"min=0.009285714285714286, max=0.7163323782234957"
+same_scale_used_per_row,True,"cx_iso and cy_iso both use iso_scale_px=max(img_w_locked,img_h_locked)"
+dynamics_finite,True,all recomputed isotropic dynamics finite

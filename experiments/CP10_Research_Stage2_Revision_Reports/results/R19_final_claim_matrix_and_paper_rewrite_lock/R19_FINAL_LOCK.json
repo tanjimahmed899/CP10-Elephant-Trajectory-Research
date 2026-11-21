@@ -1,0 +1,35 @@
+{
+  "step": "R19_FINAL_CLAIM_MATRIX_AND_PAPER_REWRITE_LOCK",
+  "created_utc": "2026-10-30T17:20:45.414259+00:00",
+  "status": "R19_FINAL_CLAIM_MATRIX_AND_PAPER_REWRITE_RULES_LOCKED_R1_TO_R18_STRENGTHENING_COMPLETE_READY_FOR_MANUSCRIPT_REVISION",
+  "new_experiment_performed": false,
+  "model_rerun_performed": false,
+  "post_test_tuning": false,
+  "r17_status": "R17_MIXED_SPECIES_ROBUSTNESS_FULLY_ASSESSED_FALSE_ALARM_REDUCTION_SUPPORTED_BUT_MAJOR_SENSITIVITY_LOSS_LOCKED_CURRENT_4CLASS_NOT_SUPPORTED_AS_REPLACEMENT_READY_FOR_R18_METER_SPACE_WILDBOX",
+  "r18_status": "R18_WILDBOX_METER_SPACE_NOT_DEFENSIBLE_WITH_AVAILABLE_METADATA_LIMITATION_LOCKED_NORMALIZED_IMAGE_SPACE_RESULTS_RETAINED_READY_FOR_R19_CLAIM_MATRIX_AND_PAPER_REWRITE",
+  "final_manuscript_position": "Evidence-supported trajectory forecasting, uncertainty and virtual-geofence warning results may be reported with explicit separation from detector/tracker feasibility stress tests and with all locked limitations retained.",
+  "critical_prohibitions": [
+    "Do not claim the historical forecasting pipeline is fully end-to-end.",
+    "Do not claim 2 s or 5 s forecasting horizon equals operational response time.",
+    "Do not claim Transformer is universally best.",
+    "Do not call 89/63 original dataset tracks.",
+    "Do not call BAMBI elephant-specific validation.",
+    "Do not claim current 4-class detector is a suitable replacement.",
+    "Do not convert WildBox errors to meters without a verified metric-scale anchor.",
+    "Do not claim field effectiveness."
+  ],
+  "outputs": {
+    "revision_status_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R19_final_claim_matrix_and_paper_rewrite_lock\\R19_REVISION_STATUS_INVENTORY.csv",
+    "roadmap_final_status": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R19_final_claim_matrix_and_paper_rewrite_lock\\R19_ROADMAP_FINAL_STATUS.csv",
+    "final_claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R19_final_claim_matrix_and_paper_rewrite_lock\\R19_FINAL_CLAIM_MATRIX.csv",
+    "paper_rewrite_rules": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R19_final_claim_matrix_and_paper_rewrite_lock\\R19_PAPER_REWRITE_RULES.csv",
+    "final_manuscript_position": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R19_final_claim_matrix_and_paper_rewrite_lock\\R19_FINAL_MANUSCRIPT_POSITION.md"
+  },
+  "output_hashes": {
+    "roadmap_final_status": "d5252f6f247cf1ea90f1b9efda7a675e92cefcbc466569dd752a1be13efa7a54",
+    "final_claim_matrix": "e5461b65e730b347d92c15dbb8220fd9bbd08b5ab4c40f716126d9d051d27055",
+    "paper_rewrite_rules": "d273d860bbc2ac2abd1545c786469ab30f33e6a32a3cc2f22f798bdc84f9b8ca",
+    "final_manuscript_position": "9fffb481ae4c6dc8d4b85d21f22342c5bbedf8d47a144d901698cadd00abebbd"
+  },
+  "next_action": "Apply the locked R19 rules to the actual manuscript section-by-section without changing the frozen experimental results."
+}

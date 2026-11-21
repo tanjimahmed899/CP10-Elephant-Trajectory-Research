@@ -1,0 +1,92 @@
+{
+  "protocol_name": "R13C_FROZEN_NEW_REVISION_END_TO_END_PROTOCOL",
+  "frozen_utc": "2026-10-30T11:08:13.125699+00:00",
+  "claim_boundary": {
+    "historical_forecasting_pipeline_end_to_end": false,
+    "new_revision_experiment_end_to_end_candidate": true,
+    "field_effectiveness_claim": false,
+    "detector_checkpoint_metric_identity_claim": false,
+    "detector_checkpoint_provenance_claim": true
+  },
+  "detector": {
+    "checkpoint": "E:\\AIUB\\Capstone Project\\Final 1.0\\Elephant Detection.v2-resized640.yolov8 (2)\\Elephant Detection.v2-resized640.yolov8\\runs\\detect\\elephant_final_clean\\weights\\best.pt",
+    "checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+    "provenance_note": "Full elephant-detector checkpoint provenance lock. Its run metrics are close to, but not asserted identical with, the authoritative held-out detector metrics.",
+    "settings": {
+      "imgsz": 640,
+      "conf": 0.1,
+      "iou": 0.7,
+      "max_det": 300,
+      "agnostic_nms": false,
+      "augment": false,
+      "classes": null,
+      "reason_for_conf_0_10": "Preserve detections down to ByteTrack's low-confidence association range; not tuned on TestReal."
+    }
+  },
+  "data": {
+    "dataset_role": "BIRDSAI TestReal / conservation_drones TestReal frame sequences",
+    "sequences": [
+      "0000000055_0000000000",
+      "0000000058_0000000000",
+      "0000000349_0000000000",
+      "0000000352_0000000000",
+      "0000000353_0000000000",
+      "0000000357_0000000000"
+    ],
+    "sequence_count": 6,
+    "frame_root": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\conservation_drones_test_real\\TestReal\\images",
+    "split_use": "test-only; no parameter tuning"
+  },
+  "tracking": {
+    "primary_tracker": "ByteTrack",
+    "primary_tracker_yaml": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\bytetrack_FROZEN.yaml",
+    "primary_tracker_yaml_sha256": "eaefad899964d7a12a13090d5da32bcdae8f0109968ffca982fdba2c60ad3c38",
+    "sensitivity_tracker": "BoT-SORT",
+    "sensitivity_tracker_yaml": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\botsort_FROZEN.yaml",
+    "sensitivity_tracker_yaml_sha256": "0fd76813919051ee87ac0173afb39f4052063c593433fbc9d01fe7ed58f11fa4",
+    "ultralytics_version": "8.3.75",
+    "tracker_state_reset": "reset at the start of every sequence",
+    "parameter_tuning_on_testreal": false,
+    "comparison_rule": "Use frozen default tracker YAMLs. Do not alter tracker thresholds after viewing results."
+  },
+  "tracking_ground_truth": {
+    "source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\trajectory_dataset\\cleaned_track_points.csv",
+    "box_format": "XYWH where cx == x+w/2 and cy == y+h/2",
+    "identity": "object_id within sequence",
+    "primary_metric_gt": "observed rows only; exclude interpolated==1 rows",
+    "occlusion_policy": "retain; do not tune by occlusion state",
+    "noise_policy": "Do not introduce a new noise-based exclusion unless source semantics are separately locked."
+  },
+  "metrics": {
+    "detection": [
+      "precision",
+      "recall",
+      "AP50"
+    ],
+    "tracking_primary": [
+      "HOTA",
+      "IDF1",
+      "ID-switches",
+      "fragmentation"
+    ],
+    "tracking_supporting": [
+      "MOTA",
+      "mostly-tracked / mostly-lost if evaluator supports"
+    ],
+    "downstream": [
+      "forecast ADE/FDE from tracker-derived trajectories",
+      "geofence warning precision/recall/F1",
+      "false-warning rate",
+      "TTE_MAE"
+    ]
+  },
+  "evaluation_design": {
+    "primary_tracker": "ByteTrack",
+    "secondary_tracker": "BoT-SORT sensitivity only",
+    "testreal_tuning": false,
+    "sequence_level_outputs": true,
+    "aggregate_outputs": true,
+    "detector_tracker_outputs_saved_before_forecasting": true,
+    "error_propagation_comparison_required": "GT trajectory forecast versus tracker-derived trajectory forecast"
+  }
+}

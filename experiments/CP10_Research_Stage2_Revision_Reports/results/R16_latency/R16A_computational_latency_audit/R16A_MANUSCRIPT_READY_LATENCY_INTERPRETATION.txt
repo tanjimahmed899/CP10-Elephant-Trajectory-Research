@@ -1,0 +1,18 @@
+R16-A computational latency — locked interpretation
+
+The frozen end-to-end detector/tracker stress test was executed on CPU. Sequence-level wall-clock timing was recovered from the frozen R13-D manifests. These timings represent the per-frame loop and include image loading, Python overhead, detector inference, and tracker execution for model.track() runs, while excluding model construction and final CSV serialization.
+
+Detector+ByteTrack:
+- weighted wall-clock latency: 114.487 ms/frame
+- effective throughput: 8.735 FPS
+- 30-Hz budget met: False
+- 10-Hz budget met: False
+
+Detector+BoT-SORT:
+- weighted wall-clock latency: 128.798 ms/frame
+- effective throughput: 7.764 FPS
+- 30-Hz budget met: False
+- 10-Hz budget met: False
+
+Reviewer-safe interpretation:
+These measurements quantify computational throughput only. They must not be interpreted as evidence that a 2-s or 5-s warning horizon provides adequate operational response time. End-to-end field response would also include communication delay, decision logic, drone availability/dispatch, intervention latency, and human response time, none of which were measured in this experiment.

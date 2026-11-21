@@ -1,0 +1,1750 @@
+source_file,source_sha256,anchor_line,matched_terms,anchor_text,context_start,context_end,context
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,246,continue,            continue,241,251,"241: 
+242:         if not bad.loc[pair]:
+243: 
+244:             i += 1
+245: 
+246:             continue
+247: 
+248: 
+249:         start_i = i
+250: 
+251: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,280,continue,            continue,275,285,"275:         )
+276: 
+277: 
+278:         if run_length > MAX_REPAIR_RUN:
+279: 
+280:             continue
+281: 
+282: 
+283:         # Need reliable transform
+284:         # on both sides.
+285: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,303,continue,            continue,298,308,"298: 
+299:             right_i >= len(indices)
+300: 
+301:         ):
+302: 
+303:             continue
+304: 
+305: 
+306:         left_pair = indices[
+307:             left_i
+308:         ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,329,continue,            continue,324,334,"324:                 right_pair
+325:             ]
+326: 
+327:         ):
+328: 
+329:             continue
+330: 
+331: 
+332:         # ------------------------------------------
+333:         # Linear interpolation
+334:         # ------------------------------------------"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,398,usable_motion,"    group[""usable_motion""] = (",393,403,"393:         group
+394:         .reset_index()
+395:     )
+396: 
+397: 
+398:     group[""usable_motion""] = (
+399: 
+400:         group[""motion_status""]
+401:         .isin([
+402:             ""original"",
+403:             ""repaired"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,596,future,    future_end = int(,591,601,"591: 
+592:     obs_end = int(
+593:         row[""obs_end_frame""]
+594:     )
+595: 
+596:     future_end = int(
+597:         row[""future_end_frame""]
+598:     )
+599: 
+600: 
+601:     motion_key = ("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,597,future,"        row[""future_end_frame""]",592,602,"592:     obs_end = int(
+593:         row[""obs_end_frame""]
+594:     )
+595: 
+596:     future_end = int(
+597:         row[""future_end_frame""]
+598:     )
+599: 
+600: 
+601:     motion_key = (
+602:         split,"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,615,return None,        return None,610,620,"610:     )
+611: 
+612: 
+613:     if motion_key not in motion_lookup:
+614: 
+615:         return None
+616: 
+617: 
+618:     if track_key not in track_lookup:
+619: 
+620:         return None"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,620,return None,        return None,615,625,"615:         return None
+616: 
+617: 
+618:     if track_key not in track_lookup:
+619: 
+620:         return None
+621: 
+622: 
+623:     mg = motion_lookup[
+624:         motion_key
+625:     ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,635,future,            future_end,630,640,"630: 
+631: 
+632:     required_pairs = list(
+633:         range(
+634:             start_frame,
+635:             future_end
+636:         )
+637:     )
+638: 
+639: 
+640:     # Must have every transform"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,647,return None,        return None,642,652,"642:     if not all(
+643:         p in mg.index
+644:         for p in required_pairs
+645:     ):
+646: 
+647:         return None
+648: 
+649: 
+650:     motion_slice = mg.loc[
+651:         required_pairs
+652:     ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,657,usable_motion,"            ""usable_motion""",652,662,"652:     ]
+653: 
+654: 
+655:     if (
+656:         motion_slice[
+657:             ""usable_motion""
+658:         ]
+659:         .min()
+660:         !=
+661:         1
+662:     ):"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,664,return None,        return None,659,669,"659:         .min()
+660:         !=
+661:         1
+662:     ):
+663: 
+664:         return None
+665: 
+666: 
+667:     repaired_pct = (
+668: 
+669:         100"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,702,reject,"        tier = ""reject_quality""",697,707,"697:         tier = ""extended""
+698: 
+699: 
+700:     else:
+701: 
+702:         tier = ""reject_quality""
+703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,705,reject,"    if tier == ""reject_quality"":",700,710,"700:     else:
+701: 
+702:         tier = ""reject_quality""
+703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {
+708:             ""accepted"": False,
+709:             ""tier"": tier,
+710:             ""repaired_pct"": repaired_pct"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,708,accepted,"            ""accepted"": False,",703,713,"703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {
+708:             ""accepted"": False,
+709:             ""tier"": tier,
+710:             ""repaired_pct"": repaired_pct
+711:         }
+712: 
+713: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,717,future,            future_end + 1,712,722,"712: 
+713: 
+714:     required_frames = list(
+715:         range(
+716:             start_frame,
+717:             future_end + 1
+718:         )
+719:     )
+720: 
+721: 
+722:     if not all("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,727,return None,        return None,722,732,"722:     if not all(
+723:         f in tg.index
+724:         for f in required_frames
+725:     ):
+726: 
+727:         return None
+728: 
+729: 
+730:     width, height = get_image_size(
+731:         split,
+732:         sequence"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,812,future,        if frame < future_end:,807,817,"807: 
+808: 
+809:         # transform from next frame
+810:         # into this frame
+811: 
+812:         if frame < future_end:
+813: 
+814:             motion_row = mg.loc[
+815:                 frame
+816:             ]
+817: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,835,history,    # History includes 60 frames.,830,840,"830:         corrected,
+831:         dtype=np.float32
+832:     )
+833: 
+834: 
+835:     # History includes 60 frames.
+836: 
+837:     history = corrected[
+838:         :OBS_FRAMES
+839:     ]
+840: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,837,history,    history = corrected[,832,842,"832:     )
+833: 
+834: 
+835:     # History includes 60 frames.
+836: 
+837:     history = corrected[
+838:         :OBS_FRAMES
+839:     ]
+840: 
+841: 
+842:     # Future starts immediately"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,842,future,    # Future starts immediately,837,847,"837:     history = corrected[
+838:         :OBS_FRAMES
+839:     ]
+840: 
+841: 
+842:     # Future starts immediately
+843:     # after observation window.
+844: 
+845:     future = corrected[
+846:         OBS_FRAMES:
+847:         OBS_FRAMES"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,845,future,    future = corrected[,840,850,"840: 
+841: 
+842:     # Future starts immediately
+843:     # after observation window.
+844: 
+845:     future = corrected[
+846:         OBS_FRAMES:
+847:         OBS_FRAMES
+848:         +
+849:         horizon_frames
+850:     ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,855,history,        len(history),850,860,"850:     ]
+851: 
+852: 
+853:     if (
+854: 
+855:         len(history)
+856:         != OBS_FRAMES
+857: 
+858:         or
+859: 
+860:         len(future)"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,860,future,        len(future),855,865,"855:         len(history)
+856:         != OBS_FRAMES
+857: 
+858:         or
+859: 
+860:         len(future)
+861:         != horizon_frames
+862: 
+863:     ):
+864: 
+865:         return None"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,865,return None,        return None,860,870,"860:         len(future)
+861:         != horizon_frames
+862: 
+863:     ):
+864: 
+865:         return None
+866: 
+867: 
+868:     return {
+869: 
+870:         ""accepted"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,870,accepted,"        ""accepted"":",865,875,"865:         return None
+866: 
+867: 
+868:     return {
+869: 
+870:         ""accepted"":
+871:             True,
+872: 
+873:         ""tier"":
+874:             tier,
+875: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,879,history,"        ""history"":",874,884,"874:             tier,
+875: 
+876:         ""repaired_pct"":
+877:             repaired_pct,
+878: 
+879:         ""history"":
+880:             history,
+881: 
+882:         ""future"":
+883:             future
+884:     }"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,880,history,"            history,",875,885,"875: 
+876:         ""repaired_pct"":
+877:             repaired_pct,
+878: 
+879:         ""history"":
+880:             history,
+881: 
+882:         ""future"":
+883:             future
+884:     }
+885: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,882,future,"        ""future"":",877,887,"877:             repaired_pct,
+878: 
+879:         ""history"":
+880:             history,
+881: 
+882:         ""future"":
+883:             future
+884:     }
+885: 
+886: 
+887: # =========================================================="
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,883,future,            future,878,888,"878: 
+879:         ""history"":
+880:             history,
+881: 
+882:         ""future"":
+883:             future
+884:     }
+885: 
+886: 
+887: # ==========================================================
+888: # PROCESS WINDOWS"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,905,future,    futures = [],900,910,"900:     )
+901: 
+902: 
+903:     histories = []
+904: 
+905:     futures = []
+906: 
+907:     metadata = []
+908: 
+909: 
+910:     for i, row in ("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,925,accepted,            accepted = False,920,930,"920: 
+921:         if (
+922:             result is None
+923:         ):
+924: 
+925:             accepted = False
+926: 
+927:             tier = ""invalid_motion""
+928: 
+929:             repaired_pct = np.nan
+930: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,934,accepted,            accepted = bool(,929,939,"929:             repaired_pct = np.nan
+930: 
+931: 
+932:         else:
+933: 
+934:             accepted = bool(
+935:                 result[""accepted""]
+936:             )
+937: 
+938:             tier = result[
+939:                 ""tier"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,935,accepted,"                result[""accepted""]",930,940,"930: 
+931: 
+932:         else:
+933: 
+934:             accepted = bool(
+935:                 result[""accepted""]
+936:             )
+937: 
+938:             tier = result[
+939:                 ""tier""
+940:             ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,974,future,"            ""future_end_frame"":",969,979,"969:             ""obs_end_frame"":
+970:                 row[
+971:                     ""obs_end_frame""
+972:                 ],
+973: 
+974:             ""future_end_frame"":
+975:                 row[
+976:                     ""future_end_frame""
+977:                 ],
+978: 
+979:             ""horizon_sec"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,976,future,"                    ""future_end_frame""",971,981,"971:                     ""obs_end_frame""
+972:                 ],
+973: 
+974:             ""future_end_frame"":
+975:                 row[
+976:                     ""future_end_frame""
+977:                 ],
+978: 
+979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,982,accepted,"            ""accepted"":",977,987,"977:                 ],
+978: 
+979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,983,accepted,"                int(accepted),",978,988,"978: 
+979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,985,quality_tier,"            ""quality_tier"":",980,990,"980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,988,repaired_motion_pct,"            ""repaired_motion_pct"":",983,993,"983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }
+991: 
+992: 
+993:         if accepted:"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,993,accepted,        if accepted:,988,998,"988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }
+991: 
+992: 
+993:         if accepted:
+994: 
+995:             sample_id = len(
+996:                 histories
+997:             )
+998: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1005,history,"                result[""history""]",1000,1010,"1000:                 ""sample_id""
+1001:             ] = sample_id
+1002: 
+1003: 
+1004:             histories.append(
+1005:                 result[""history""]
+1006:             )
+1007: 
+1008:             futures.append(
+1009:                 result[""future""]
+1010:             )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1008,future,            futures.append(,1003,1013,"1003: 
+1004:             histories.append(
+1005:                 result[""history""]
+1006:             )
+1007: 
+1008:             futures.append(
+1009:                 result[""future""]
+1010:             )
+1011: 
+1012: 
+1013:         else:"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1009,future,"                result[""future""]",1004,1014,"1004:             histories.append(
+1005:                 result[""history""]
+1006:             )
+1007: 
+1008:             futures.append(
+1009:                 result[""future""]
+1010:             )
+1011: 
+1012: 
+1013:         else:
+1014: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1032,history,        history_array = np.stack(,1027,1037,"1027:     )
+1028: 
+1029: 
+1030:     if len(histories) > 0:
+1031: 
+1032:         history_array = np.stack(
+1033:             histories
+1034:         )
+1035: 
+1036:         future_array = np.stack(
+1037:             futures"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1036,future,        future_array = np.stack(,1031,1041,"1031: 
+1032:         history_array = np.stack(
+1033:             histories
+1034:         )
+1035: 
+1036:         future_array = np.stack(
+1037:             futures
+1038:         )
+1039: 
+1040: 
+1041:     else:"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1037,future,            futures,1032,1042,"1032:         history_array = np.stack(
+1033:             histories
+1034:         )
+1035: 
+1036:         future_array = np.stack(
+1037:             futures
+1038:         )
+1039: 
+1040: 
+1041:     else:
+1042: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1043,history,        history_array = np.empty(,1038,1048,"1038:         )
+1039: 
+1040: 
+1041:     else:
+1042: 
+1043:         history_array = np.empty(
+1044:             (
+1045:                 0,
+1046:                 OBS_FRAMES,
+1047:                 7
+1048:             ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1052,future,        future_array = np.empty(,1047,1057,"1047:                 7
+1048:             ),
+1049:             dtype=np.float32
+1050:         )
+1051: 
+1052:         future_array = np.empty(
+1053:             (
+1054:                 0,
+1055:                 horizon_frames,
+1056:                 7
+1057:             ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1064,history,"        history_array,",1059,1069,"1059:         )
+1060: 
+1061: 
+1062:     return (
+1063:         meta_df,
+1064:         history_array,
+1065:         future_array
+1066:     )
+1067: 
+1068: 
+1069: # =========================================================="
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1065,future,        future_array,1060,1070,"1060: 
+1061: 
+1062:     return (
+1063:         meta_df,
+1064:         history_array,
+1065:         future_array
+1066:     )
+1067: 
+1068: 
+1069: # ==========================================================
+1070: # 2 SECOND FORECAST"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1073,future,"meta2, hist2, future2 = (",1068,1078,"1068: 
+1069: # ==========================================================
+1070: # 2 SECOND FORECAST
+1071: # ==========================================================
+1072: 
+1073: meta2, hist2, future2 = (
+1074: 
+1075:     process_windows(
+1076:         windows2,
+1077:         2
+1078:     )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1099,history,"    history=hist2,",1094,1104,"1094: 
+1095:     OUT
+1096:     /
+1097:     ""corrected_2s_to_2s.npz"",
+1098: 
+1099:     history=hist2,
+1100: 
+1101:     future=future2
+1102: )
+1103: 
+1104: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1101,future,    future=future2,1096,1106,"1096:     /
+1097:     ""corrected_2s_to_2s.npz"",
+1098: 
+1099:     history=hist2,
+1100: 
+1101:     future=future2
+1102: )
+1103: 
+1104: 
+1105: # ==========================================================
+1106: # 5 SECOND FORECAST"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1109,future,"meta5, hist5, future5 = (",1104,1114,"1104: 
+1105: # ==========================================================
+1106: # 5 SECOND FORECAST
+1107: # ==========================================================
+1108: 
+1109: meta5, hist5, future5 = (
+1110: 
+1111:     process_windows(
+1112:         windows5,
+1113:         5
+1114:     )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1135,history,"    history=hist5,",1130,1140,"1130: 
+1131:     OUT
+1132:     /
+1133:     ""corrected_2s_to_5s.npz"",
+1134: 
+1135:     history=hist5,
+1136: 
+1137:     future=future5
+1138: )
+1139: 
+1140: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1137,future,    future=future5,1132,1142,"1132:     /
+1133:     ""corrected_2s_to_5s.npz"",
+1134: 
+1135:     history=hist5,
+1136: 
+1137:     future=future5
+1138: )
+1139: 
+1140: 
+1141: # ==========================================================
+1142: # SUMMARY"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1176,accepted,        accepted = temp[,1171,1181,"1171:             ==
+1172:             split
+1173:         ]
+1174: 
+1175: 
+1176:         accepted = temp[
+1177:             temp[""accepted""]
+1178:             ==
+1179:             1
+1180:         ]
+1181: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1177,accepted,"            temp[""accepted""]",1172,1182,"1172:             split
+1173:         ]
+1174: 
+1175: 
+1176:         accepted = temp[
+1177:             temp[""accepted""]
+1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1183,accepted,        core = accepted[,1178,1188,"1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1184,accepted,            accepted[,1179,1189,"1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1185,quality_tier,"                ""quality_tier""",1180,1190,"1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]
+1190: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1192,accepted,        extended = accepted[,1187,1197,"1187:             ==
+1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1193,accepted,            accepted[,1188,1198,"1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1194,quality_tier,"                ""quality_tier""",1189,1199,"1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]
+1199: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1212,accepted,"            ""accepted"":",1207,1217,"1207:                 split,
+1208: 
+1209:             ""total"":
+1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1213,accepted,"                len(accepted),",1208,1218,"1208: 
+1209:             ""total"":
+1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1215,accepted,"            ""accepted_pct"":",1210,1220,"1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)
+1220:                     /"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1219,accepted,                    len(accepted),1214,1224,"1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)
+1220:                     /
+1221:                     len(temp)
+1222:                 )
+1223:                 if len(temp)
+1224:                 else 0,"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1232,reject,"            ""rejected"":",1227,1237,"1227:                 len(core),
+1228: 
+1229:             ""extended"":
+1230:                 len(extended),
+1231: 
+1232:             ""rejected"":
+1233:                 (
+1234:                     len(temp)
+1235:                     -
+1236:                     len(accepted)
+1237:                 )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1236,accepted,                    len(accepted),1231,1241,"1231: 
+1232:             ""rejected"":
+1233:                 (
+1234:                     len(temp)
+1235:                     -
+1236:                     len(accepted)
+1237:                 )
+1238:         })
+1239: 
+1240: 
+1241: summary = pd.DataFrame("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1292,reject,"        ""Longer/unresolved transform gaps rejected.\n""",1287,1297,"1287:         ""Unreliable runs <=5 frames ""
+1288:         ""interpolated between reliable transforms.\n""
+1289:     )
+1290: 
+1291:     f.write(
+1292:         ""Longer/unresolved transform gaps rejected.\n""
+1293:     )
+1294: 
+1295:     f.write(
+1296:         ""Each forecast window uses its own ""
+1297:         ""observation-start frame as the local anchor.\n\n"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1319,accepted,"            f""Accepted: """,1314,1324,"1314:             f""{int(row['total'])}\n""
+1315:         )
+1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1320,accepted,"            f""{int(row['accepted'])} """,1315,1325,"1315:         )
+1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1321,accepted,"            f""({row['accepted_pct']:.2f}%)\n""",1316,1326,"1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: 
+1326:             f""Core: """
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1338,reject,"            f""Rejected: """,1333,1343,"1333:             f""{int(row['extended'])}\n""
+1334:         )
+1335: 
+1336:         f.write(
+1337: 
+1338:             f""Rejected: ""
+1339:             f""{int(row['rejected'])}\n\n""
+1340:         )
+1341: 
+1342: 
+1343: print("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1339,reject,"            f""{int(row['rejected'])}\n\n""",1334,1344,"1334:         )
+1335: 
+1336:         f.write(
+1337: 
+1338:             f""Rejected: ""
+1339:             f""{int(row['rejected'])}\n\n""
+1340:         )
+1341: 
+1342: 
+1343: print(
+1344:     ""\nCAMERA CORRECTION COMPLETE"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,11,10hz,"    r""C:\Users\HP\Downloads\unified_trajectory_10hz""",6,16,"6: # ============================================================
+7: # PATHS
+8: # ============================================================
+9: 
+10: ROOT = Path(
+11:     r""C:\Users\HP\Downloads\unified_trajectory_10hz""
+12: )
+13: 
+14: OUT = Path(
+15:     r""C:\Users\HP\Downloads\final_neural_trajectory_dataset""
+16: )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,43,10hz,"            ""birdsai_train_real_core_2s_to_2s_10hz.npz"",",38,48,"38: 
+39:     ""2s_to_2s"": {
+40: 
+41:         ""train_npz"":
+42:             ROOT /
+43:             ""birdsai_train_real_core_2s_to_2s_10hz.npz"",
+44: 
+45:         ""train_meta"":
+46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,47,10hz,"            ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",",42,52,"42:             ROOT /
+43:             ""birdsai_train_real_core_2s_to_2s_10hz.npz"",
+44: 
+45:         ""train_meta"":
+46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: 
+49:         ""test_npz"":
+50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,51,10hz,"            ""birdsai_test_real_core_2s_to_2s_10hz.npz"",",46,56,"46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: 
+49:         ""test_npz"":
+50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: 
+53:         ""test_meta"":
+54:             ROOT /
+55:             ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",
+56: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,55,10hz,"            ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",",50,60,"50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: 
+53:         ""test_meta"":
+54:             ROOT /
+55:             ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",
+56: 
+57:         ""wild_npz"":
+58:             ROOT /
+59:             ""wildbox_external_2s_to_2s_10hz.npz"",
+60: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,59,10hz,"            ""wildbox_external_2s_to_2s_10hz.npz"",",54,64,"54:             ROOT /
+55:             ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",
+56: 
+57:         ""wild_npz"":
+58:             ROOT /
+59:             ""wildbox_external_2s_to_2s_10hz.npz"",
+60: 
+61:         ""wild_meta"":
+62:             ROOT /
+63:             ""wildbox_external_2s_to_2s_10hz_metadata.csv""
+64:     },"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,63,10hz,"            ""wildbox_external_2s_to_2s_10hz_metadata.csv""",58,68,"58:             ROOT /
+59:             ""wildbox_external_2s_to_2s_10hz.npz"",
+60: 
+61:         ""wild_meta"":
+62:             ROOT /
+63:             ""wildbox_external_2s_to_2s_10hz_metadata.csv""
+64:     },
+65: 
+66: 
+67:     ""2s_to_5s"": {
+68: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,71,10hz,"            ""birdsai_train_real_core_2s_to_5s_10hz.npz"",",66,76,"66: 
+67:     ""2s_to_5s"": {
+68: 
+69:         ""train_npz"":
+70:             ROOT /
+71:             ""birdsai_train_real_core_2s_to_5s_10hz.npz"",
+72: 
+73:         ""train_meta"":
+74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,75,10hz,"            ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",",70,80,"70:             ROOT /
+71:             ""birdsai_train_real_core_2s_to_5s_10hz.npz"",
+72: 
+73:         ""train_meta"":
+74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: 
+77:         ""test_npz"":
+78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,79,10hz,"            ""birdsai_test_real_core_2s_to_5s_10hz.npz"",",74,84,"74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: 
+77:         ""test_npz"":
+78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: 
+81:         ""test_meta"":
+82:             ROOT /
+83:             ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",
+84: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,83,10hz,"            ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",",78,88,"78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: 
+81:         ""test_meta"":
+82:             ROOT /
+83:             ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",
+84: 
+85:         ""wild_npz"":
+86:             ROOT /
+87:             ""wildbox_external_2s_to_5s_10hz.npz"",
+88: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,87,10hz,"            ""wildbox_external_2s_to_5s_10hz.npz"",",82,92,"82:             ROOT /
+83:             ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",
+84: 
+85:         ""wild_npz"":
+86:             ROOT /
+87:             ""wildbox_external_2s_to_5s_10hz.npz"",
+88: 
+89:         ""wild_meta"":
+90:             ROOT /
+91:             ""wildbox_external_2s_to_5s_10hz_metadata.csv""
+92:     }"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,91,10hz,"            ""wildbox_external_2s_to_5s_10hz_metadata.csv""",86,96,"86:             ROOT /
+87:             ""wildbox_external_2s_to_5s_10hz.npz"",
+88: 
+89:         ""wild_meta"":
+90:             ROOT /
+91:             ""wildbox_external_2s_to_5s_10hz_metadata.csv""
+92:     }
+93: }
+94: 
+95: 
+96: # ============================================================"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,100,history,def history_path_length(,95,105,"95: 
+96: # ============================================================
+97: # BASIC FUNCTIONS
+98: # ============================================================
+99: 
+100: def history_path_length(
+101:     history
+102: ):
+103: 
+104:     return float(
+105: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,101,history,    history,96,106,"96: # ============================================================
+97: # BASIC FUNCTIONS
+98: # ============================================================
+99: 
+100: def history_path_length(
+101:     history
+102: ):
+103: 
+104:     return float(
+105: 
+106:         np.linalg.norm("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,109,history,"                history,",104,114,"104:     return float(
+105: 
+106:         np.linalg.norm(
+107: 
+108:             np.diff(
+109:                 history,
+110:                 axis=0
+111:             ),
+112: 
+113:             axis=1
+114: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,121,history,    history,116,126,"116: 
+117:     )
+118: 
+119: 
+120: def estimate_heading(
+121:     history
+122: ):
+123: 
+124:     """"""
+125:     Linear regression over the most recent
+126:     observation frames."
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,131,history,    recent = history[,126,136,"126:     observation frames.
+127: 
+128:     Returns angle in radians.
+129:     """"""
+130: 
+131:     recent = history[
+132:         -RECENT_HEADING_FRAMES:
+133:     ]
+134: 
+135: 
+136:     t = np.arange("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,232,history,"    history,",227,237,"227: # ============================================================
+228: # CANONICAL TRANSFORM
+229: # ============================================================
+230: 
+231: def canonicalize_sample(
+232:     history,
+233:     future,
+234:     scale_floor
+235: ):
+236: 
+237:     origin = history["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,233,future,"    future,",228,238,"228: # CANONICAL TRANSFORM
+229: # ============================================================
+230: 
+231: def canonicalize_sample(
+232:     history,
+233:     future,
+234:     scale_floor
+235: ):
+236: 
+237:     origin = history[
+238:         -1"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,237,history,    origin = history[,232,242,"232:     history,
+233:     future,
+234:     scale_floor
+235: ):
+236: 
+237:     origin = history[
+238:         -1
+239:     ].copy()
+240: 
+241: 
+242:     angle = estimate_heading("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,243,history,        history,238,248,"238:         -1
+239:     ].copy()
+240: 
+241: 
+242:     angle = estimate_heading(
+243:         history
+244:     )
+245: 
+246: 
+247:     R = rotation_to_heading(
+248:         angle"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,252,history,    path_length = history_path_length(,247,257,"247:     R = rotation_to_heading(
+248:         angle
+249:     )
+250: 
+251: 
+252:     path_length = history_path_length(
+253:         history
+254:     )
+255: 
+256: 
+257:     scale = max("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,253,history,        history,248,258,"248:         angle
+249:     )
+250: 
+251: 
+252:     path_length = history_path_length(
+253:         history
+254:     )
+255: 
+256: 
+257:     scale = max(
+258:         path_length,"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,264,history,        history,259,269,"259:         scale_floor
+260:     )
+261: 
+262: 
+263:     h_local = (
+264:         history
+265:         -
+266:         origin
+267:     )
+268: 
+269: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,271,future,        future,266,276,"266:         origin
+267:     )
+268: 
+269: 
+270:     f_local = (
+271:         future
+272:         -
+273:         origin
+274:     )
+275: 
+276: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,307,history,"        ""history_canonical"":",302,312,"302:     )
+303: 
+304: 
+305:     return {
+306: 
+307:         ""history_canonical"":
+308:             h_can.astype(
+309:                 np.float32
+310:             ),
+311: 
+312:         ""future_canonical"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,312,future,"        ""future_canonical"":",307,317,"307:         ""history_canonical"":
+308:             h_can.astype(
+309:                 np.float32
+310:             ),
+311: 
+312:         ""future_canonical"":
+313:             f_can.astype(
+314:                 np.float32
+315:             ),
+316: 
+317:         ""origin"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,353,history,    history = arrays[,348,358,"348:     arrays = np.load(
+349:         npz_path
+350:     )
+351: 
+352: 
+353:     history = arrays[
+354:         ""history_abs""
+355:     ].astype(
+356:         np.float64
+357:     )
+358: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,354,history,"        ""history_abs""",349,359,"349:         npz_path
+350:     )
+351: 
+352: 
+353:     history = arrays[
+354:         ""history_abs""
+355:     ].astype(
+356:         np.float64
+357:     )
+358: 
+359: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,360,future,    future = arrays[,355,365,"355:     ].astype(
+356:         np.float64
+357:     )
+358: 
+359: 
+360:     future = arrays[
+361:         ""future_abs""
+362:     ].astype(
+363:         np.float64
+364:     )
+365: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,361,future,"        ""future_abs""",356,366,"356:         np.float64
+357:     )
+358: 
+359: 
+360:     future = arrays[
+361:         ""future_abs""
+362:     ].astype(
+363:         np.float64
+364:     )
+365: 
+366: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,371,track_key,"            ""track_key"": str",366,376,"366: 
+367:     metadata = pd.read_csv(
+368:         meta_path,
+369:         dtype={
+370:             ""source_group"": str,
+371:             ""track_key"": str
+372:         }
+373:     )
+374: 
+375: 
+376:     if len(history) != len("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,376,history,    if len(history) != len(,371,381,"371:             ""track_key"": str
+372:         }
+373:     )
+374: 
+375: 
+376:     if len(history) != len(
+377:         metadata
+378:     ):
+379: 
+380:         raise RuntimeError(
+381:             ""Metadata/data length mismatch"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,386,history,"        history,",381,391,"381:             ""Metadata/data length mismatch""
+382:         )
+383: 
+384: 
+385:     return (
+386:         history,
+387:         future,
+388:         metadata
+389:     )
+390: 
+391: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,387,future,"        future,",382,392,"382:         )
+383: 
+384: 
+385:     return (
+386:         history,
+387:         future,
+388:         metadata
+389:     )
+390: 
+391: 
+392: # ============================================================"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,397,history,"    history,",392,402,"392: # ============================================================
+393: # TRANSFORM ENTIRE DATASET
+394: # ============================================================
+395: 
+396: def transform_dataset(
+397:     history,
+398:     future,
+399:     scale_floor
+400: ):
+401: 
+402:     hc = []"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,398,future,"    future,",393,403,"393: # TRANSFORM ENTIRE DATASET
+394: # ============================================================
+395: 
+396: def transform_dataset(
+397:     history,
+398:     future,
+399:     scale_floor
+400: ):
+401: 
+402:     hc = []
+403:     fc = []"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,412,history,        len(history),407,417,"407:     scales = []
+408:     raw_paths = []
+409: 
+410: 
+411:     for i in range(
+412:         len(history)
+413:     ):
+414: 
+415: 
+416:         result = canonicalize_sample(
+417: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,418,history,"            history[i],",413,423,"413:     ):
+414: 
+415: 
+416:         result = canonicalize_sample(
+417: 
+418:             history[i],
+419: 
+420:             future[i],
+421: 
+422:             scale_floor
+423: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,420,future,"            future[i],",415,425,"415: 
+416:         result = canonicalize_sample(
+417: 
+418:             history[i],
+419: 
+420:             future[i],
+421: 
+422:             scale_floor
+423: 
+424:         )
+425: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,429,history,"                ""history_canonical""",424,434,"424:         )
+425: 
+426: 
+427:         hc.append(
+428:             result[
+429:                 ""history_canonical""
+430:             ]
+431:         )
+432: 
+433: 
+434:         fc.append("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,436,future,"                ""future_canonical""",431,441,"431:         )
+432: 
+433: 
+434:         fc.append(
+435:             result[
+436:                 ""future_canonical""
+437:             ]
+438:         )
+439: 
+440: 
+441:         origins.append("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,471,history,"        ""history_canonical"":",466,476,"466:         )
+467: 
+468: 
+469:     return {
+470: 
+471:         ""history_canonical"":
+472:             np.stack(
+473:                 hc
+474:             ),
+475: 
+476:         ""future_canonical"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,476,future,"        ""future_canonical"":",471,481,"471:         ""history_canonical"":
+472:             np.stack(
+473:                 hc
+474:             ),
+475: 
+476:         ""future_canonical"":
+477:             np.stack(
+478:                 fc
+479:             ),
+480: 
+481:         ""history_abs"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,481,history,"        ""history_abs"":",476,486,"476:         ""future_canonical"":
+477:             np.stack(
+478:                 fc
+479:             ),
+480: 
+481:         ""history_abs"":
+482:             history.astype(
+483:                 np.float32
+484:             ),
+485: 
+486:         ""future_abs"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,482,history,            history.astype(,477,487,"477:             np.stack(
+478:                 fc
+479:             ),
+480: 
+481:         ""history_abs"":
+482:             history.astype(
+483:                 np.float32
+484:             ),
+485: 
+486:         ""future_abs"":
+487:             future.astype("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,486,future,"        ""future_abs"":",481,491,"481:         ""history_abs"":
+482:             history.astype(
+483:                 np.float32
+484:             ),
+485: 
+486:         ""future_abs"":
+487:             future.astype(
+488:                 np.float32
+489:             ),
+490: 
+491:         ""origin"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,487,future,            future.astype(,482,492,"482:             history.astype(
+483:                 np.float32
+484:             ),
+485: 
+486:         ""future_abs"":
+487:             future.astype(
+488:                 np.float32
+489:             ),
+490: 
+491:         ""origin"":
+492:             np.stack("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,550,track_key,"                    ""track_key""",545,555,"545: 
+546: 
+547:         tracks = np.asarray(
+548:             sorted(
+549:                 source_df[
+550:                     ""track_key""
+551:                 ].astype(
+552:                     str
+553:                 ).unique()
+554:             )
+555:         )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,620,track_key,"                ""track_key""",615,625,"615:         )
+616: 
+617: 
+618:         source_train = source_df[
+619:             source_df[
+620:                 ""track_key""
+621:             ].astype(str).isin(
+622:                 train_tracks
+623:             )
+624:         ].index.tolist()
+625: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,629,track_key,"                ""track_key""",624,634,"624:         ].index.tolist()
+625: 
+626: 
+627:         source_val = source_df[
+628:             source_df[
+629:                 ""track_key""
+630:             ].astype(str).isin(
+631:                 val_tracks
+632:             )
+633:         ].index.tolist()
+634: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,703,track_key,"            ""track_key""",698,708,"698:     train_tracks = set(
+699: 
+700:         metadata.iloc[
+701:             train_indices
+702:         ][
+703:             ""track_key""
+704:         ].astype(str)
+705: 
+706:     )
+707: 
+708: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,714,track_key,"            ""track_key""",709,719,"709:     val_tracks = set(
+710: 
+711:         metadata.iloc[
+712:             val_indices
+713:         ][
+714:             ""track_key""
+715:         ].astype(str)
+716: 
+717:     )
+718: 
+719: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,770,track_key,"            ""track_key""",765,775,"765: 
+766: 
+767:     counts = (
+768: 
+769:         train_meta[
+770:             ""track_key""
+771:         ]
+772: 
+773:         .astype(str)
+774: 
+775:         .value_counts()"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,791,track_key,"                ""track_key""",786,796,"786:         track = str(
+787: 
+788:             metadata.iloc[
+789:                 idx
+790:             ][
+791:                 ""track_key""
+792:             ]
+793: 
+794:         )
+795: 
+796: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,872,history,"        train_history,",867,877,"867:     # --------------------------------------------------------
+868:     # LOAD BIRDSAI TRAIN
+869:     # --------------------------------------------------------
+870: 
+871:     (
+872:         train_history,
+873:         train_future,
+874:         train_meta
+875: 
+876:     ) = load_data(
+877: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,873,future,"        train_future,",868,878,"868:     # LOAD BIRDSAI TRAIN
+869:     # --------------------------------------------------------
+870: 
+871:     (
+872:         train_history,
+873:         train_future,
+874:         train_meta
+875: 
+876:     ) = load_data(
+877: 
+878:         paths["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,895,history,        history_path_length(,890,900,"890:     # SCALE FLOOR FROM TRAINREAL ONLY
+891:     # --------------------------------------------------------
+892: 
+893:     train_path_lengths = np.asarray([
+894: 
+895:         history_path_length(
+896:             h
+897:         )
+898: 
+899:         for h
+900:         in train_history"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,900,history,        in train_history,895,905,"895:         history_path_length(
+896:             h
+897:         )
+898: 
+899:         for h
+900:         in train_history
+901: 
+902:     ])
+903: 
+904: 
+905:     scale_floor = float("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,930,history,"        train_history,",925,935,"925:     # CANONICALIZE TRAIN
+926:     # --------------------------------------------------------
+927: 
+928:     train_data = transform_dataset(
+929: 
+930:         train_history,
+931: 
+932:         train_future,
+933: 
+934:         scale_floor
+935: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,932,future,"        train_future,",927,937,"927: 
+928:     train_data = transform_dataset(
+929: 
+930:         train_history,
+931: 
+932:         train_future,
+933: 
+934:         scale_floor
+935: 
+936:     )
+937: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1043,history,"        test_history,",1038,1048,"1038:     # --------------------------------------------------------
+1039:     # TESTREAL
+1040:     # --------------------------------------------------------
+1041: 
+1042:     (
+1043:         test_history,
+1044:         test_future,
+1045:         test_meta
+1046: 
+1047:     ) = load_data(
+1048: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1044,future,"        test_future,",1039,1049,"1039:     # TESTREAL
+1040:     # --------------------------------------------------------
+1041: 
+1042:     (
+1043:         test_history,
+1044:         test_future,
+1045:         test_meta
+1046: 
+1047:     ) = load_data(
+1048: 
+1049:         paths["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1062,history,"        test_history,",1057,1067,"1057:     )
+1058: 
+1059: 
+1060:     test_data = transform_dataset(
+1061: 
+1062:         test_history,
+1063: 
+1064:         test_future,
+1065: 
+1066:         scale_floor
+1067: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1064,future,"        test_future,",1059,1069,"1059: 
+1060:     test_data = transform_dataset(
+1061: 
+1062:         test_history,
+1063: 
+1064:         test_future,
+1065: 
+1066:         scale_floor
+1067: 
+1068:     )
+1069: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1094,history,"        wild_history,",1089,1099,"1089:     # --------------------------------------------------------
+1090:     # WILDBOX EXTERNAL
+1091:     # --------------------------------------------------------
+1092: 
+1093:     (
+1094:         wild_history,
+1095:         wild_future,
+1096:         wild_meta
+1097: 
+1098:     ) = load_data(
+1099: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1095,future,"        wild_future,",1090,1100,"1090:     # WILDBOX EXTERNAL
+1091:     # --------------------------------------------------------
+1092: 
+1093:     (
+1094:         wild_history,
+1095:         wild_future,
+1096:         wild_meta
+1097: 
+1098:     ) = load_data(
+1099: 
+1100:         paths["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1113,history,"        wild_history,",1108,1118,"1108:     )
+1109: 
+1110: 
+1111:     wild_data = transform_dataset(
+1112: 
+1113:         wild_history,
+1114: 
+1115:         wild_future,
+1116: 
+1117:         scale_floor
+1118: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1115,future,"        wild_future,",1110,1120,"1110: 
+1111:     wild_data = transform_dataset(
+1112: 
+1113:         wild_history,
+1114: 
+1115:         wild_future,
+1116: 
+1117:         scale_floor
+1118: 
+1119:     )
+1120: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1149,track_key,"            ""track_key""",1144,1154,"1144:     tr_tracks = set(
+1145: 
+1146:         train_meta.iloc[
+1147:             train_idx
+1148:         ][
+1149:             ""track_key""
+1150:         ].astype(str)
+1151: 
+1152:     )
+1153: 
+1154: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1160,track_key,"            ""track_key""",1155,1165,"1155:     va_tracks = set(
+1156: 
+1157:         train_meta.iloc[
+1158:             val_idx
+1159:         ][
+1160:             ""track_key""
+1161:         ].astype(str)
+1162: 
+1163:     )
+1164: 
+1165: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1199,track_key,"                    ""track_key""",1194,1204,"1194: 
+1195:             ""tracks"":
+1196:                 train_meta.iloc[
+1197:                     train_idx
+1198:                 ][
+1199:                     ""track_key""
+1200:                 ].nunique(),
+1201: 
+1202:             ""sources"":
+1203:                 train_meta.iloc[
+1204:                     train_idx"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1236,track_key,"                    ""track_key""",1231,1241,"1231: 
+1232:             ""tracks"":
+1233:                 train_meta.iloc[
+1234:                     val_idx
+1235:                 ][
+1236:                     ""track_key""
+1237:                 ].nunique(),
+1238: 
+1239:             ""sources"":
+1240:                 train_meta.iloc[
+1241:                     val_idx"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1266,history,                    test_history,1261,1271,"1261:             ""split"":
+1262:                 ""untouched_test"",
+1263: 
+1264:             ""samples"":
+1265:                 len(
+1266:                     test_history
+1267:                 ),
+1268: 
+1269:             ""tracks"":
+1270:                 test_meta[
+1271:                     ""track_key"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1271,track_key,"                    ""track_key""",1266,1276,"1266:                     test_history
+1267:                 ),
+1268: 
+1269:             ""tracks"":
+1270:                 test_meta[
+1271:                     ""track_key""
+1272:                 ].nunique(),
+1273: 
+1274:             ""sources"":
+1275:                 test_meta[
+1276:                     ""source_group"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1299,history,                    wild_history,1294,1304,"1294:             ""split"":
+1295:                 ""external_test"",
+1296: 
+1297:             ""samples"":
+1298:                 len(
+1299:                     wild_history
+1300:                 ),
+1301: 
+1302:             ""tracks"":
+1303:                 wild_meta[
+1304:                     ""track_key"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1304,track_key,"                    ""track_key""",1299,1309,"1299:                     wild_history
+1300:                 ),
+1301: 
+1302:             ""tracks"":
+1303:                 wild_meta[
+1304:                     ""track_key""
+1305:                 ].nunique(),
+1306: 
+1307:             ""sources"":
+1308:                 wild_meta[
+1309:                     ""source_group"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1392,10 hz,"        ""2. 10 Hz sampling\n""",1387,1397,"1387:     f.write(
+1388:         ""1. Camera-motion corrected normalized x,y\n""
+1389:     )
+1390: 
+1391:     f.write(
+1392:         ""2. 10 Hz sampling\n""
+1393:     )
+1394: 
+1395:     f.write(
+1396:         ""3. Last observed point translated to origin\n""
+1397:     )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1404,history,"        ""5. Divided by observed history path length\n""",1399,1409,"1399:     f.write(
+1400:         ""4. Recent heading aligned to +X\n""
+1401:     )
+1402: 
+1403:     f.write(
+1404:         ""5. Divided by observed history path length\n""
+1405:     )
+1406: 
+1407:     f.write(
+1408:         ""6. Scale floor = TrainReal 5th percentile ""
+1409:         ""of history path length\n\n"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1409,history,"        ""of history path length\n\n""",1404,1414,"1404:         ""5. Divided by observed history path length\n""
+1405:     )
+1406: 
+1407:     f.write(
+1408:         ""6. Scale floor = TrainReal 5th percentile ""
+1409:         ""of history path length\n\n""
+1410:     )
+1411: 
+1412: 
+1413:     f.write(
+1414:         ""Important:\n"""

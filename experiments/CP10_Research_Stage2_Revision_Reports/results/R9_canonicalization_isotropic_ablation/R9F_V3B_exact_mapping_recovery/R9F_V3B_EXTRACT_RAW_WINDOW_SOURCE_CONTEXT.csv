@@ -1,0 +1,212 @@
+line_number,line
+360,            str(
+361,                split
+362,"            ),"
+363,
+364,            str(
+365,                sequence
+366,"            ),"
+367,
+368,            str(
+369,                segment_id
+370,            )
+371,        )
+372,
+373,
+374,        lookup[
+375,            key
+376,        ] = (
+377,
+378,            group
+379,            .set_index(
+380,"                ""frame"""
+381,            )
+382,        )
+383,
+384,
+385,    return lookup
+386,
+387,
+388,# ============================================================
+389,# EXTRACT RAW WINDOW
+390,# ============================================================
+391,
+392,def extract_raw_window(
+393,"    track_lookup,"
+394,"    row,"
+395,    future_raw
+396,):
+397,
+398,    key = (
+399,
+400,        str(
+401,            row[
+402,"                ""split"""
+403,            ]
+404,"        ),"
+405,
+406,        str(
+407,            row[
+408,"                ""sequence"""
+409,            ]
+410,"        ),"
+411,
+412,        str(
+413,            row[
+414,"                ""segment_id"""
+415,            ]
+416,        )
+417,    )
+418,
+419,
+420,    if key not in track_lookup:
+421,
+422,        raise KeyError(
+423,"            f""Track not found: {key}"""
+424,        )
+425,
+426,
+427,    track = (
+428,        track_lookup[
+429,            key
+430,        ]
+431,    )
+432,
+433,
+434,    start_frame = int(
+435,        row[
+436,"            ""obs_start_frame"""
+437,        ]
+438,    )
+439,
+440,
+441,    future_end = int(
+442,        row[
+443,"            ""future_end_frame"""
+444,        ]
+445,    )
+446,
+447,
+448,    needed_frames = list(
+449,
+450,        range(
+451,"            start_frame,"
+452,            future_end + 1
+453,        )
+454,    )
+455,
+456,
+457,    missing = [
+458,
+459,        frame
+460,
+461,        for frame
+462,        in needed_frames
+463,
+464,        if frame
+465,        not in track.index
+466,    ]
+467,
+468,
+469,    if missing:
+470,
+471,        raise ValueError(
+472,
+473,"            f""Missing raw frames for {key}: """
+474,"            f""first missing={missing[0]}"""
+475,        )
+476,
+477,
+478,    raw = (
+479,
+480,        track.loc[
+481,
+482,"            needed_frames,"
+483,
+484,            [
+485,"                ""cx_n"","
+486,"                ""cy_n"""
+487,            ]
+488,        ]
+489,
+490,        .to_numpy(
+491,            dtype=np.float64
+492,        )
+493,    )
+494,
+495,
+496,    expected_length = (
+497,
+498,        OBS_RAW
+499,
+500,        +
+501,
+502,        future_raw
+503,    )
+504,
+505,
+506,    if len(
+507,        raw
+508,    ) != expected_length:
+509,
+510,        raise ValueError(
+511,
+512,"            f""Unexpected raw length """
+513,"            f""{len(raw)} != """
+514,"            f""{expected_length} """
+515,"            f""for {key}"""
+516,        )
+517,
+518,
+519,    history_raw = (
+520,        raw[
+521,            :OBS_RAW
+522,        ]
+523,    )
+524,
+525,
+526,    future_raw_array = (
+527,        raw[
+528,            OBS_RAW:
+529,        ]
+530,    )
+531,
+532,
+533,    # --------------------------------------------
+534,    # 30 Hz -> 10 Hz
+535,    # every third frame
+536,    # --------------------------------------------
+537,
+538,    history_10hz = (
+539,
+540,        history_raw[
+541,            ::DOWNSAMPLE
+542,        ]
+543,    )
+544,
+545,
+546,    future_10hz = (
+547,
+548,        future_raw_array[
+549,            ::DOWNSAMPLE
+550,        ]
+551,    )
+552,
+553,
+554,    return (
+555,"        history_10hz,"
+556,        future_10hz
+557,    )
+558,
+559,
+560,# ============================================================
+561,# EVALUATE ONE REPRESENTATION
+562,# ============================================================
+563,
+564,def evaluate_representation(
+565,"    history,"
+566,"    future,"
+567,    model_name
+568,):
+569,
+570,"    if model_name == ""Stationary"":"

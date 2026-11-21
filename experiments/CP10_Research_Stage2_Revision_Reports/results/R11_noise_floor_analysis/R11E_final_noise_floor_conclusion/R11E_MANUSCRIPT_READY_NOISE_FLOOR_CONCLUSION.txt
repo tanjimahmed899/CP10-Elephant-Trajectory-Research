@@ -1,0 +1,43 @@
+R11 — Empirical geometric residual / noise-floor analysis
+
+Locked residual references
+---------------------------
+Using held-out BIRDSAI TestReal stationary-landmark residual motion after ego-motion correction:
+
+F50 = 0.203296 px
+F95 = 1.553347 px
+
+These are empirical post-correction geometric residual references in the BIRDSAI TestReal camera setting. They are not claimed to be universal annotation noise, an irreducible forecasting-error bound, or a transferable threshold for Fresh WildBox or BAMBI.
+
+Absolute forecast error
+-----------------------
+The frozen three-seed Transformer ensemble operates well above the measured residual envelope. At 2 s, mean pixel-space ADE is 8.978771 px (5.78× F95) and mean FDE is 15.401864 px (9.92× F95). At 5 s, mean ADE is 17.952171 px (11.56× F95) and mean FDE is 33.791878 px (21.75× F95).
+
+Thus, the dominant forecasting errors are much larger than the measured residual geometric motion remaining after correction. This supports the interpretation that the reported forecasting error cannot be explained by ego-motion residual alone.
+
+Magnitude of ensemble gains
+---------------------------
+The statistically supported ensemble gains over the mean individual-seed error are smaller than the conservative F95 residual envelope:
+
+2 s ADE gain = 0.260643 px
+2 s FDE gain = 0.364529 px
+5 s ADE gain = 0.701180 px
+5 s FDE gain = 0.529773 px
+
+All four overall gains exceed the central F50 reference, but leave-one-sequence-out sensitivity shows that this F50 magnitude relation is not invariant to every sequence deletion. The correct interpretation is therefore that the ensemble benefit is statistically consistent, while its absolute magnitude is modest relative to the conservative residual envelope.
+
+Validation-selected seed comparison
+-----------------------------------
+The comparison against the seed selected only by validation performance shows larger gains. In the 5 s task, both ADE and FDE gains exceed F95. This comparison is valid because seed selection was based on validation performance rather than TestReal performance, but the mean-seed comparison remains the cleaner primary ensemble-value reference.
+
+Manuscript-safe conclusion
+--------------------------
+Post-correction geometric residual motion is substantially smaller than the absolute BIRDSAI TestReal forecasting error, so residual camera-motion noise does not account for the overall error magnitude. The frozen three-seed Transformer ensemble provides statistically reproducible improvements over individual-seed performance, but its primary gain over the mean seed remains below the conservative F95 residual envelope. Accordingly, the ensemble should be described as providing a small but consistent improvement rather than a large error reduction beyond all measurement-scale effects.
+
+Prohibited claims
+-----------------
+- Do not call F50 or F95 universal irreducible annotation-noise bounds.
+- Do not subtract F50/F95 from forecast error and label the remainder 'true model error'.
+- Do not claim that every ensemble gain exceeds the residual envelope.
+- Do not transfer BIRDSAI pixel residual references directly to Fresh WildBox or BAMBI.
+- Do not infer end-to-end field effectiveness from this analysis.

@@ -1,0 +1,638 @@
+source_file,source_sha256,anchor_line,matched_terms,anchor_text,context_start,context_end,context
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,53,core,# Core = cleaner samples,47,59,"47: FPS = 30
+48: 
+49: OBS_FRAMES = 60
+50: 
+51: MAX_REPAIR_RUN = 5
+52: 
+53: # Core = cleaner samples
+54: CORE_MAX_REPAIRED_PCT = 10
+55: 
+56: # Extended = still usable
+57: EXTENDED_MAX_REPAIRED_PCT = 20
+58: 
+59: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,54,core|10,CORE_MAX_REPAIRED_PCT = 10,48,60,"48: 
+49: OBS_FRAMES = 60
+50: 
+51: MAX_REPAIR_RUN = 5
+52: 
+53: # Core = cleaner samples
+54: CORE_MAX_REPAIRED_PCT = 10
+55: 
+56: # Extended = still usable
+57: EXTENDED_MAX_REPAIRED_PCT = 20
+58: 
+59: 
+60: # =========================================================="
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,56,extended,# Extended = still usable,50,62,"50: 
+51: MAX_REPAIR_RUN = 5
+52: 
+53: # Core = cleaner samples
+54: CORE_MAX_REPAIRED_PCT = 10
+55: 
+56: # Extended = still usable
+57: EXTENDED_MAX_REPAIRED_PCT = 20
+58: 
+59: 
+60: # ==========================================================
+61: # LOAD DATA
+62: # =========================================================="
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,57,extended|20,EXTENDED_MAX_REPAIRED_PCT = 20,51,63,"51: MAX_REPAIR_RUN = 5
+52: 
+53: # Core = cleaner samples
+54: CORE_MAX_REPAIRED_PCT = 10
+55: 
+56: # Extended = still usable
+57: EXTENDED_MAX_REPAIRED_PCT = 20
+58: 
+59: 
+60: # ==========================================================
+61: # LOAD DATA
+62: # ==========================================================
+63: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,669,10,        100,663,675,"663: 
+664:         return None
+665: 
+666: 
+667:     repaired_pct = (
+668: 
+669:         100
+670:         *
+671:         (
+672:             motion_slice[
+673:                 ""motion_status""
+674:             ]
+675:             =="
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,685,core,        CORE_MAX_REPAIRED_PCT,679,691,"679:     )
+680: 
+681: 
+682:     if (
+683:         repaired_pct
+684:         <=
+685:         CORE_MAX_REPAIRED_PCT
+686:     ):
+687: 
+688:         tier = ""core""
+689: 
+690: 
+691:     elif ("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,688,core,"        tier = ""core""",682,694,"682:     if (
+683:         repaired_pct
+684:         <=
+685:         CORE_MAX_REPAIRED_PCT
+686:     ):
+687: 
+688:         tier = ""core""
+689: 
+690: 
+691:     elif (
+692:         repaired_pct
+693:         <=
+694:         EXTENDED_MAX_REPAIRED_PCT"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,694,extended,        EXTENDED_MAX_REPAIRED_PCT,688,700,"688:         tier = ""core""
+689: 
+690: 
+691:     elif (
+692:         repaired_pct
+693:         <=
+694:         EXTENDED_MAX_REPAIRED_PCT
+695:     ):
+696: 
+697:         tier = ""extended""
+698: 
+699: 
+700:     else:"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,697,extended,"        tier = ""extended""",691,703,"691:     elif (
+692:         repaired_pct
+693:         <=
+694:         EXTENDED_MAX_REPAIRED_PCT
+695:     ):
+696: 
+697:         tier = ""extended""
+698: 
+699: 
+700:     else:
+701: 
+702:         tier = ""reject_quality""
+703: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,702,reject_quality,"        tier = ""reject_quality""",696,708,"696: 
+697:         tier = ""extended""
+698: 
+699: 
+700:     else:
+701: 
+702:         tier = ""reject_quality""
+703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {
+708:             ""accepted"": False,"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,705,reject_quality,"    if tier == ""reject_quality"":",699,711,"699: 
+700:     else:
+701: 
+702:         tier = ""reject_quality""
+703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {
+708:             ""accepted"": False,
+709:             ""tier"": tier,
+710:             ""repaired_pct"": repaired_pct
+711:         }"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,708,accepted,"            ""accepted"": False,",702,714,"702:         tier = ""reject_quality""
+703: 
+704: 
+705:     if tier == ""reject_quality"":
+706: 
+707:         return {
+708:             ""accepted"": False,
+709:             ""tier"": tier,
+710:             ""repaired_pct"": repaired_pct
+711:         }
+712: 
+713: 
+714:     required_frames = list("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,870,accepted,"        ""accepted"":",864,876,"864: 
+865:         return None
+866: 
+867: 
+868:     return {
+869: 
+870:         ""accepted"":
+871:             True,
+872: 
+873:         ""tier"":
+874:             tier,
+875: 
+876:         ""repaired_pct"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,925,accepted,            accepted = False,919,931,"919: 
+920: 
+921:         if (
+922:             result is None
+923:         ):
+924: 
+925:             accepted = False
+926: 
+927:             tier = ""invalid_motion""
+928: 
+929:             repaired_pct = np.nan
+930: 
+931: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,927,invalid_motion,"            tier = ""invalid_motion""",921,933,"921:         if (
+922:             result is None
+923:         ):
+924: 
+925:             accepted = False
+926: 
+927:             tier = ""invalid_motion""
+928: 
+929:             repaired_pct = np.nan
+930: 
+931: 
+932:         else:
+933: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,934,accepted,            accepted = bool(,928,940,"928: 
+929:             repaired_pct = np.nan
+930: 
+931: 
+932:         else:
+933: 
+934:             accepted = bool(
+935:                 result[""accepted""]
+936:             )
+937: 
+938:             tier = result[
+939:                 ""tier""
+940:             ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,935,accepted,"                result[""accepted""]",929,941,"929:             repaired_pct = np.nan
+930: 
+931: 
+932:         else:
+933: 
+934:             accepted = bool(
+935:                 result[""accepted""]
+936:             )
+937: 
+938:             tier = result[
+939:                 ""tier""
+940:             ]
+941: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,982,accepted,"            ""accepted"":",976,988,"976:                     ""future_end_frame""
+977:                 ],
+978: 
+979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,983,accepted,"                int(accepted),",977,989,"977:                 ],
+978: 
+979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,985,quality_tier,"            ""quality_tier"":",979,991,"979:             ""horizon_sec"":
+980:                 horizon_sec,
+981: 
+982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }
+991: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,988,repaired_motion_pct,"            ""repaired_motion_pct"":",982,994,"982:             ""accepted"":
+983:                 int(accepted),
+984: 
+985:             ""quality_tier"":
+986:                 tier,
+987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }
+991: 
+992: 
+993:         if accepted:
+994: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,993,accepted,        if accepted:,987,999,"987: 
+988:             ""repaired_motion_pct"":
+989:                 repaired_pct
+990:         }
+991: 
+992: 
+993:         if accepted:
+994: 
+995:             sample_id = len(
+996:                 histories
+997:             )
+998: 
+999:             meta["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1176,accepted,        accepted = temp[,1170,1182,"1170:             df[""split""]
+1171:             ==
+1172:             split
+1173:         ]
+1174: 
+1175: 
+1176:         accepted = temp[
+1177:             temp[""accepted""]
+1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1177,accepted,"            temp[""accepted""]",1171,1183,"1171:             ==
+1172:             split
+1173:         ]
+1174: 
+1175: 
+1176:         accepted = temp[
+1177:             temp[""accepted""]
+1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted["
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1183,accepted|core,        core = accepted[,1177,1189,"1177:             temp[""accepted""]
+1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1184,accepted,            accepted[,1178,1190,"1178:             ==
+1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]
+1190: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1185,quality_tier,"                ""quality_tier""",1179,1191,"1179:             1
+1180:         ]
+1181: 
+1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]
+1190: 
+1191: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1188,core,"            ""core""",1182,1194,"1182: 
+1183:         core = accepted[
+1184:             accepted[
+1185:                 ""quality_tier""
+1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1192,accepted|extended,        extended = accepted[,1186,1198,"1186:             ]
+1187:             ==
+1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1193,accepted,            accepted[,1187,1199,"1187:             ==
+1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]
+1199: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1194,quality_tier,"                ""quality_tier""",1188,1200,"1188:             ""core""
+1189:         ]
+1190: 
+1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]
+1199: 
+1200: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1197,extended,"            ""extended""",1191,1203,"1191: 
+1192:         extended = accepted[
+1193:             accepted[
+1194:                 ""quality_tier""
+1195:             ]
+1196:             ==
+1197:             ""extended""
+1198:         ]
+1199: 
+1200: 
+1201:         summary_rows.append({
+1202: 
+1203:             ""forecast"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1212,accepted,"            ""accepted"":",1206,1218,"1206:             ""split"":
+1207:                 split,
+1208: 
+1209:             ""total"":
+1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1213,accepted,"                len(accepted),",1207,1219,"1207:                 split,
+1208: 
+1209:             ""total"":
+1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1215,accepted,"            ""accepted_pct"":",1209,1221,"1209:             ""total"":
+1210:                 len(temp),
+1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)
+1220:                     /
+1221:                     len(temp)"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1217,10,                    100,1211,1223,"1211: 
+1212:             ""accepted"":
+1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)
+1220:                     /
+1221:                     len(temp)
+1222:                 )
+1223:                 if len(temp)"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1219,accepted,                    len(accepted),1213,1225,"1213:                 len(accepted),
+1214: 
+1215:             ""accepted_pct"":
+1216:                 (
+1217:                     100
+1218:                     *
+1219:                     len(accepted)
+1220:                     /
+1221:                     len(temp)
+1222:                 )
+1223:                 if len(temp)
+1224:                 else 0,
+1225: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1226,core,"            ""core"":",1220,1232,"1220:                     /
+1221:                     len(temp)
+1222:                 )
+1223:                 if len(temp)
+1224:                 else 0,
+1225: 
+1226:             ""core"":
+1227:                 len(core),
+1228: 
+1229:             ""extended"":
+1230:                 len(extended),
+1231: 
+1232:             ""rejected"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1227,core,"                len(core),",1221,1233,"1221:                     len(temp)
+1222:                 )
+1223:                 if len(temp)
+1224:                 else 0,
+1225: 
+1226:             ""core"":
+1227:                 len(core),
+1228: 
+1229:             ""extended"":
+1230:                 len(extended),
+1231: 
+1232:             ""rejected"":
+1233:                 ("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1229,extended,"            ""extended"":",1223,1235,"1223:                 if len(temp)
+1224:                 else 0,
+1225: 
+1226:             ""core"":
+1227:                 len(core),
+1228: 
+1229:             ""extended"":
+1230:                 len(extended),
+1231: 
+1232:             ""rejected"":
+1233:                 (
+1234:                     len(temp)
+1235:                     -"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1230,extended,"                len(extended),",1224,1236,"1224:                 else 0,
+1225: 
+1226:             ""core"":
+1227:                 len(core),
+1228: 
+1229:             ""extended"":
+1230:                 len(extended),
+1231: 
+1232:             ""rejected"":
+1233:                 (
+1234:                     len(temp)
+1235:                     -
+1236:                     len(accepted)"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1236,accepted,                    len(accepted),1230,1242,"1230:                 len(extended),
+1231: 
+1232:             ""rejected"":
+1233:                 (
+1234:                     len(temp)
+1235:                     -
+1236:                     len(accepted)
+1237:                 )
+1238:         })
+1239: 
+1240: 
+1241: summary = pd.DataFrame(
+1242:     summary_rows"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1319,accepted,"            f""Accepted: """,1313,1325,"1313:             f""Total: ""
+1314:             f""{int(row['total'])}\n""
+1315:         )
+1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1320,accepted,"            f""{int(row['accepted'])} """,1314,1326,"1314:             f""{int(row['total'])}\n""
+1315:         )
+1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: 
+1326:             f""Core: """
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1321,accepted,"            f""({row['accepted_pct']:.2f}%)\n""",1315,1327,"1315:         )
+1316: 
+1317:         f.write(
+1318: 
+1319:             f""Accepted: ""
+1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: 
+1326:             f""Core: ""
+1327:             f""{int(row['core'])}\n"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1326,core,"            f""Core: """,1320,1332,"1320:             f""{int(row['accepted'])} ""
+1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: 
+1326:             f""Core: ""
+1327:             f""{int(row['core'])}\n""
+1328:         )
+1329: 
+1330:         f.write(
+1331: 
+1332:             f""Extended: """
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1327,core,"            f""{int(row['core'])}\n""",1321,1333,"1321:             f""({row['accepted_pct']:.2f}%)\n""
+1322:         )
+1323: 
+1324:         f.write(
+1325: 
+1326:             f""Core: ""
+1327:             f""{int(row['core'])}\n""
+1328:         )
+1329: 
+1330:         f.write(
+1331: 
+1332:             f""Extended: ""
+1333:             f""{int(row['extended'])}\n"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1332,extended,"            f""Extended: """,1326,1338,"1326:             f""Core: ""
+1327:             f""{int(row['core'])}\n""
+1328:         )
+1329: 
+1330:         f.write(
+1331: 
+1332:             f""Extended: ""
+1333:             f""{int(row['extended'])}\n""
+1334:         )
+1335: 
+1336:         f.write(
+1337: 
+1338:             f""Rejected: """
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,1333,extended,"            f""{int(row['extended'])}\n""",1327,1339,"1327:             f""{int(row['core'])}\n""
+1328:         )
+1329: 
+1330:         f.write(
+1331: 
+1332:             f""Extended: ""
+1333:             f""{int(row['extended'])}\n""
+1334:         )
+1335: 
+1336:         f.write(
+1337: 
+1338:             f""Rejected: ""
+1339:             f""{int(row['rejected'])}\n\n"""

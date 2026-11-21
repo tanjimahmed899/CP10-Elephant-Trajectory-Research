@@ -1,0 +1,32 @@
+line,end_line,expression,accepted_eq_1,quality_tier_eq_core,sample_id_ge_0
+334,364,"core = meta[
+
+        (
+            meta[
+                ""accepted""
+            ]
+            ==
+            1
+        )
+
+        &
+
+        (
+            meta[
+                ""quality_tier""
+            ]
+            ==
+            ""core""
+        )
+
+        &
+
+        (
+            meta[
+                ""sample_id""
+            ]
+            >=
+            0
+        )
+
+    ].copy()",True,True,True

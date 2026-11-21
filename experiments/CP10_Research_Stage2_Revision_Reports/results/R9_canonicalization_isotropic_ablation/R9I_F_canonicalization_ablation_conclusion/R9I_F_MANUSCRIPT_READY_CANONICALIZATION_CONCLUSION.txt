@@ -1,0 +1,50 @@
+R9 canonicalization / isotropic-coordinate ablation — final interpretation
+
+Primary conclusion
+------------------
+The aspect-ratio audit showed that the original x/W, y/H normalization materially changes heading, path length, scale-floor activation, and canonical tensors when image width and height differ. A matched isotropic representation x/S, y/S with S=max(W,H) was therefore retrained and evaluated using the same TrainReal/TestReal sample identities, the same train-validation split, the same sample weights, the same model architectures, the same hyperparameters, and the same three seeds. Cross-representation performance was compared only in pixel space.
+
+The matched paired results do NOT support a universal forecasting-superiority claim for isotropic normalization. Effects are model- and horizon-dependent.
+
+Strong positive result
+----------------------
+For the frozen 3-seed Transformer prediction ensemble at 2 s, isotropic normalization improved both pixel-space metrics:
+- ADE difference (isotropic - anisotropic) = -0.597646 px, 95% cluster-bootstrap CI [-1.303003, -0.064478].
+- FDE difference (isotropic - anisotropic) = -1.098587 px, 95% cluster-bootstrap CI [-2.343036, -0.017003].
+Both confidence intervals exclude zero in the direction favoring isotropic normalization.
+
+Five-second horizon
+-------------------
+At 5 s, the evidence is mixed:
+- GRU FDE difference = 4.201555 px, 95% CI [1.114304, 7.549912], indicating significantly worse isotropic FDE.
+- LSTM FDE difference = 3.090188 px, 95% CI [0.636372, 5.816389], also indicating significantly worse isotropic FDE.
+- Transformer ADE difference = -1.367096 px, 95% CI [-2.367163, -0.546165], favoring isotropic normalization, but Transformer FDE remained inconclusive.
+- The 5 s Transformer 3-seed prediction ensemble was inconclusive for both ADE and FDE: ADE difference = -0.683388 px with CI [-1.611347, 0.094465], and FDE difference = 0.732176 px with CI [-0.651660, 2.206053].
+
+Two-second single-model results
+-------------------------------
+For GRU, LSTM, and Transformer considered individually at 2 s, the paired segment-cluster confidence intervals included zero for both ADE and FDE. Therefore, the 2 s ensemble improvement must not be generalized to all individual models or seeds.
+
+Seed sensitivity
+----------------
+Per-seed effects change direction in several model/horizon combinations. This reinforces the need to avoid claiming universal isotropic superiority from one seed or one model.
+
+Manuscript-safe claim
+---------------------
+Aspect-preserving isotropic normalization removes a real geometric distortion introduced by separate x/W and y/H scaling, but its forecasting effect is not uniformly beneficial. The matched ablation therefore supports isotropic normalization as a geometrically principled alternative whose performance impact is model- and horizon-dependent. The clearest benefit was observed for the 2 s frozen three-seed Transformer prediction ensemble, whereas 5 s recurrent-model endpoint error worsened and several other comparisons remained statistically inconclusive.
+
+Protocol decision
+-----------------
+Keep the original anisotropic pipeline/results as the frozen primary historical experiment. Report isotropic normalization as a matched canonicalization ablation/sensitivity analysis. Do not replace all frozen primary results with isotropic results and do not claim general superiority. If an operational 2 s Transformer ensemble is highlighted, the isotropic representation can be reported as beneficial for that specific configuration, with the paired clustered confidence intervals stated explicitly.
+
+Important preprocessing limitation
+----------------------------------
+For strict methodological fidelity, the isotropic retraining preserved the original historical scale-floor derivation protocol: the 5th-percentile path-length scale floor was estimated from the full BIRDSAI TrainReal pool before the track-disjoint neural train/validation split. Validation rows therefore contributed to this preprocessing statistic. TestReal and WildBox were not used. This should be disclosed as a minor preprocessing-protocol limitation; a strict-train-only sensitivity analysis may be added later if desired, but it should not replace the primary matched comparison.
+
+Do not claim
+------------
+- Do not claim isotropic normalization universally improves trajectory forecasting.
+- Do not compare anisotropic and isotropic native normalized ADE/FDE as if they were directly commensurate.
+- Do not claim the 2 s ensemble benefit automatically extends to 5 s.
+- Do not claim all three neural architectures improve under isotropic normalization.
+- Do not hide the 5 s GRU/LSTM FDE degradation.

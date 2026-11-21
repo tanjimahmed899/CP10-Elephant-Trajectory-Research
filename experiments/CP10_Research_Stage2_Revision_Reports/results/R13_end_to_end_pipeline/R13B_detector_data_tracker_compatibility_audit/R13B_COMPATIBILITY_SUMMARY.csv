@@ -1,0 +1,5 @@
+check,pass,detail
+Unique historical full-dataset detector lock,True,E:\AIUB\Capstone Project\Final 1.0\Elephant Detection.v2-resized640.yolov8 (2)\Elephant Detection.v2-resized640.yolov8\runs\detect\elephant_final_clean\weights\best.pt
+All final TestReal sequences have frame directories,True,6/6 final sequences present
+Tracking GT-compatible schema in cleaned_track_points,False,frame|object_id|x|y|w|h|class|species|occlusion|noise|interpolated|cx|cy|cx_n|cy_n|w_n|h_n|vx_n|vy_n|speed_n|heading_rad|accel_n|split|sequence|segment_id
+Ultralytics tracker available for NEW revision experiment,True,"{""ultralytics_installed"":true,""ultralytics_version"":""8.3.75"",""package_root"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics"",""bytetrack_yaml"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics\\cfg\\trackers\\bytetrack.yaml"",""bytetrack_exists"":true,""botsort_yaml"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics\\cfg\\trackers\\botsort.yaml"",""botsort_exists"":true}"

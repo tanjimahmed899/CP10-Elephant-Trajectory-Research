@@ -1,0 +1,6 @@
+component,found,count,detail
+Mixed-species detector checkpoint with elephant + confuser classes,True,4,E:\AIUB\Capstone Project\capstone\wildlife_project\wildlife_training\four_animals_v5_final_50\weights\best.pt
+Dataset/config provenance candidates,True,470,
+Mixed-species / wildlife media directories,True,202,
+BAMBI-specific assets,True,289,
+Thermal/night asset hint,True,1,

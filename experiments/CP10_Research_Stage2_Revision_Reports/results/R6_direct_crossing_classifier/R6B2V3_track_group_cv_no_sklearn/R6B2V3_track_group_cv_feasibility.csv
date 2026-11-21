@@ -1,0 +1,9 @@
+task,n_splits,unique_tracks,scheme_constructed,all_train_folds_have_both_classes,all_val_folds_track_disjoint,all_rows_receive_oof_prediction,all_tracks_heldout_exactly_once,feasible,error
+2s_to_2s,5,13,True,True,True,True,True,True,
+2s_to_2s,4,13,True,True,True,True,True,True,
+2s_to_2s,3,13,True,True,True,True,True,True,
+2s_to_2s,2,13,True,True,True,True,True,True,
+2s_to_5s,5,7,True,True,True,True,True,True,
+2s_to_5s,4,7,True,True,True,True,True,True,
+2s_to_5s,3,7,True,True,True,True,True,True,
+2s_to_5s,2,7,True,True,True,True,True,True,

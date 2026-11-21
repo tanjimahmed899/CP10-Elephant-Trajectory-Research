@@ -1,0 +1,7 @@
+source,horizon,role,n_boundary_cases,n_depth_assumption_flips,fraction_depth_assumption_flips,p90_depth_relative_change
+EXP3,2s,EXP3_six_video,4524,7,0.0015473032714412025,0.04139878596462654
+EXP3,5s,EXP3_six_video,3432,15,0.004370629370629371,0.08650161216617192
+Stage5,2s,adaptation,216,0,0.0,0.006262031166947013
+Stage5,2s,evaluation,318,0,0.0,0.15092380228827218
+Stage5,5s,adaptation,168,0,0.0,0.007209930995870084
+Stage5,5s,evaluation,168,1,0.005952380952380952,0.21982057960832224

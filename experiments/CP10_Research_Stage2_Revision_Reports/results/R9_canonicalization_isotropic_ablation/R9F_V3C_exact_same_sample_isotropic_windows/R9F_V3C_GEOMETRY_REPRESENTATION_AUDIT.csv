@@ -1,0 +1,3 @@
+task,same_history_shape,same_future_shape,isotropic_history_all_finite,isotropic_future_all_finite,median_history_representation_delta,max_history_representation_delta,median_future_representation_delta,max_future_representation_delta,iso_history_min,iso_history_max,iso_future_min,iso_future_max
+2s_to_2s,True,True,True,True,0.144444387368105,0.5519829316224357,0.1603240910654709,0.6293534852777195,0.0189003436426116,0.9928366762177652,0.0223367697594501,0.9802405498281788
+2s_to_5s,True,True,True,True,0.15192222491171267,0.5519829316224357,0.16652433758032092,0.6722711307907269,0.0189003436426116,0.979381443298969,0.0223367697594501,0.979381443298969

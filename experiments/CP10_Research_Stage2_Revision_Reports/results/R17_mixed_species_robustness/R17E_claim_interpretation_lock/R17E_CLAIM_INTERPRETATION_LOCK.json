@@ -1,0 +1,25 @@
+{
+  "step": "R17E_MIXED_SPECIES_CLAIM_INTERPRETATION_LOCK",
+  "created_utc": "2026-10-30T15:56:47.254141+00:00",
+  "status": "R17_MIXED_SPECIES_ROBUSTNESS_FULLY_ASSESSED_FALSE_ALARM_REDUCTION_SUPPORTED_BUT_MAJOR_SENSITIVITY_LOSS_LOCKED_CURRENT_4CLASS_NOT_SUPPORTED_AS_REPLACEMENT_READY_FOR_R18_METER_SPACE_WILDBOX",
+  "r17_complete": true,
+  "current_4class_replacement_supported": false,
+  "supported_positive_finding": "The frozen 4-class detector significantly reduces false-elephant image alarms on external no-elephant multi-animal scenes relative to the original elephant-only detector.",
+  "dominant_negative_finding": "The false-alarm reduction is accompanied by a large statistically supported loss of elephant sensitivity/recall/F1, so the current 4-class model is not supported as a replacement detector.",
+  "confuser_error_finding": "A significant improvement in animal-confuser-to-elephant overlap error rate was not demonstrated.",
+  "supplementary_lion_finding": "The 9-image elephant+lion challenge is small and does not establish broad in-vocabulary robustness.",
+  "future_model_rule": "If a new mixed-species detector is trained or tuned after R17, the current frozen COCO 453 evaluation set must be treated as seen/evaluated and must not be described as a pristine untouched external test for that new model. A fresh untouched external test set is required for confirmatory claims.",
+  "manuscript_claim_rule": "Report R17 as a robustness stress test showing a selectivity-vs-sensitivity trade-off and a current detector limitation. Do not claim universal mixed-species robustness, unseen-species robustness, or end-to-end operational validation.",
+  "input_hashes": {
+    "R17D_manifest": "a7e13305fec12f1a9fdee6fb5718e72876b8ea3622fb1ed695de38a6484f35c4",
+    "primary_metrics": "71e84664bfcc7139f85efba0e288b628a8e6b41f889070a1f13f621667b7980d",
+    "bootstrap": "e02263ee93d5def54e2848804f7891082353a76144a3bc2df9f0f32a2e7913fa",
+    "supplementary": "d5710f5c0137062d5d492ef0986537df3ffa10dcde67bb952116874536e2c6c4",
+    "filter_ablation": "89ccbfca561c5b3b602629d7804a9e4cfa7685e7404d64881f8340a8041f6d34"
+  },
+  "output_hashes": {
+    "claim_matrix": "a175f92261ed967ece6880df6fc60d81d030afaa8c9fa0527c1d135cfd2e7841",
+    "key_result_lock": "f24b96f12e1fef9664a0cc1ea1e57cf43276dd20c8bc6d86f548dcc5e6843f8f"
+  },
+  "next_roadmap_step": "R18_METER_SPACE_WILDBOX"
+}

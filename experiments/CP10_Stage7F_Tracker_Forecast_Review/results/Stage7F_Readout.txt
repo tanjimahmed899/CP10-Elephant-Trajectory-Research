@@ -1,0 +1,25 @@
+Stage7F real frozen forecasting, conditional on GT-verified TRACKER histories
+No retraining or test-set model selection. GT future not used for model input.
+This is NOT a fully GT-blind pipeline metric: GT eligibility gate applied offline.
+
+horizon input_arm                  predictor   n  ADE_mean  ADE_median  FDE_mean  FDE_median  source_groups  GT_identities  tracker_ids
+     2s    oracle                 Stationary 187  0.014351    0.013527  0.024084    0.021598              1             13           30
+     2s    oracle Transformer_ensemble_3seed 187  0.011099    0.009822  0.017786    0.015720              1             13           30
+     2s    oracle         Transformer_seed42 187  0.011148    0.010105  0.017786    0.015255              1             13           30
+     2s    oracle         Transformer_seed52 187  0.011256    0.009882  0.017865    0.015116              1             13           30
+     2s    oracle         Transformer_seed62 187  0.011576    0.010432  0.018927    0.016071              1             13           30
+     2s   tracker                 Stationary 187  0.013623    0.012163  0.022686    0.020055              1             13           30
+     2s   tracker Transformer_ensemble_3seed 187  0.010664    0.009432  0.016606    0.013776              1             13           30
+     2s   tracker         Transformer_seed42 187  0.010937    0.009429  0.017181    0.013642              1             13           30
+     2s   tracker         Transformer_seed52 187  0.010683    0.009192  0.016286    0.014245              1             13           30
+     2s   tracker         Transformer_seed62 187  0.010949    0.009659  0.017307    0.014390              1             13           30
+     5s    oracle                 Stationary 124  0.029796    0.025271  0.052715    0.044430              1             10           19
+     5s    oracle Transformer_ensemble_3seed 124  0.024602    0.022222  0.044849    0.037311              1             10           19
+     5s    oracle         Transformer_seed42 124  0.025246    0.022914  0.046004    0.040051              1             10           19
+     5s    oracle         Transformer_seed52 124  0.025039    0.022850  0.044887    0.038931              1             10           19
+     5s    oracle         Transformer_seed62 124  0.024849    0.021569  0.044831    0.037075              1             10           19
+     5s   tracker                 Stationary 124  0.028285    0.023793  0.050985    0.040706              1             10           19
+     5s   tracker Transformer_ensemble_3seed 124  0.023050    0.019751  0.042877    0.032802              1             10           19
+     5s   tracker         Transformer_seed42 124  0.023376    0.020390  0.043949    0.034827              1             10           19
+     5s   tracker         Transformer_seed52 124  0.023374    0.020423  0.042888    0.032595              1             10           19
+     5s   tracker         Transformer_seed62 124  0.023371    0.022176  0.042591    0.035442              1             10           19

@@ -1,0 +1,528 @@
+script,line,call,expression
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_constant_velocity_baseline.py,342,load,"np.load(
+            npz_path
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_constant_velocity_baseline.py,410,predict_stationary,"predict_stationary(
+                    h,
+                    len(f)
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_constant_velocity_baseline.py,433,predict_constant_velocity,"predict_constant_velocity(
+
+                    h,
+
+                    len(f),
+
+                    FPS
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_kalman_baseline.py,488,load,"np.load(
+        npz_path
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_kalman_baseline.py,569,load_dataset,"load_dataset(
+            npz_path,
+            metadata_path
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_kalman_baseline.py,849,load_dataset,"load_dataset(
+
+                npz_path,
+
+                metadata_path
+
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_kalman_baseline.py,867,kalman_forecast,"kalman_forecast(
+
+                history[i],
+
+                len(
+                    future[i]
+                ),
+
+                q,
+                r
+
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\run_kalman_baseline.py,613,kalman_forecast,"kalman_forecast(
+
+                    history[i],
+
+                    len(
+                        future[i]
+                    ),
+
+                    q,
+                    r
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,662,predict_model,"predict_model(
+
+            model,
+
+            val_history
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,758,load,"np.load(
+        trainval_file
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,895,DataLoader,"DataLoader(
+
+        train_dataset,
+
+        batch_size=BATCH_SIZE,
+
+        shuffle=True,
+
+        generator=generator,
+
+        num_workers=0
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1214,load_state_dict,"model.load_state_dict(
+        best_state
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1293,load,"np.load(
+        npz_path
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1334,predict_model,"predict_model(
+
+        model,
+
+        X
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,160,LSTM,"nn.LSTM(
+
+                input_size=2,
+
+                hidden_size=HIDDEN_SIZE,
+
+                num_layers=NUM_LAYERS,
+
+                batch_first=True,
+
+                dropout=DROPOUT
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1567,evaluate_dataset,"evaluate_dataset(
+
+                    model=model,
+
+                    task=task,
+
+                    dataset_name=
+                        ""BIRDSAI_test"",
+
+                    role=
+                        ""in_domain_test"",
+
+                    npz_path=
+                        ROOT /
+                        f""{task}_birdsai_test_canonical.npz"",
+
+                    meta_path=
+                        ROOT /
+                        f""{task}_birdsai_test_metadata.csv"",
+
+                    model_type=
+                        model_type,
+
+                    seed=
+                        seed,
+
+                    best_epoch=
+                        best_epoch
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1615,evaluate_dataset,"evaluate_dataset(
+
+                    model=model,
+
+                    task=task,
+
+                    dataset_name=
+                        ""WildBox_external"",
+
+                    role=
+                        ""external_test"",
+
+                    npz_path=
+                        ROOT /
+                        f""{task}_wildbox_external_canonical.npz"",
+
+                    meta_path=
+                        ROOT /
+                        f""{task}_wildbox_external_metadata.csv"",
+
+                    model_type=
+                        model_type,
+
+                    seed=
+                        seed,
+
+                    best_epoch=
+                        best_epoch
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,176,GRU,"nn.GRU(
+
+                input_size=2,
+
+                hidden_size=HIDDEN_SIZE,
+
+                num_layers=NUM_LAYERS,
+
+                batch_first=True,
+
+                dropout=DROPOUT
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,607,load,"torch.load(
+
+        checkpoint_file,
+
+        map_location=DEVICE
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,700,load_state_dict,"model.load_state_dict(
+
+        state_dict,
+
+        strict=False
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,1377,load,"np.load(
+
+        npz_file,
+
+        allow_pickle=False
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,476,TransformerEncoderLayer,"nn.TransformerEncoderLayer(
+
+                d_model=d_model,
+
+                nhead=nhead,
+
+                dim_feedforward=dim_feedforward,
+
+                dropout=dropout,
+
+                activation=""gelu"",
+
+                batch_first=True,
+
+                norm_first=True
+
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,496,TransformerEncoder,"nn.TransformerEncoder(
+
+            encoder_layer,
+
+            num_layers=num_layers
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,1552,load_transformer,"load_transformer(
+
+            task,
+
+            seed,
+
+            config[
+                ""future_frames""
+            ]
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,1565,predict_model,"predict_model(
+
+            model,
+
+            history_can
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,124,load,"np.load(
+                path,
+                allow_pickle=False
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,635,TrajectoryTransformer,"TrajectoryTransformer(
+
+        future_length=
+            future_length,
+
+        d_model=
+            int(
+                checkpoint.get(
+                    ""d_model"",
+                    64
+                )
+            ),
+
+        nhead=
+            int(
+                checkpoint.get(
+                    ""nhead"",
+                    4
+                )
+            ),
+
+        num_layers=
+            int(
+                checkpoint.get(
+                    ""num_layers"",
+                    2
+                )
+            ),
+
+        dim_feedforward=
+            int(
+                checkpoint.get(
+                    ""dim_feedforward"",
+                    128
+                )
+            ),
+
+        dropout=
+            float(
+                checkpoint.get(
+                    ""dropout"",
+                    0.10
+                )
+            ),
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,1742,stationary_prediction,"stationary_prediction(
+
+            h,
+
+            config[
+                ""future_frames""
+            ]
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_birdsai_testreal_frozen_ensemble.py,1759,constant_velocity_prediction,"constant_velocity_prediction(
+
+            h,
+
+            config[
+                ""future_frames""
+            ]
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,176,hf_hub_download,"hf_hub_download(
+
+        repo_id=REPO_ID,
+
+        filename=row[
+            ""repo_path""
+        ],
+
+        repo_type=REPO_TYPE,
+
+        local_dir=str(
+            DOWNLOAD_ROOT
+        ),
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1871,load,"torch.load(
+
+        checkpoint_file,
+
+        map_location=DEVICE
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1962,load_state_dict,"model.load_state_dict(
+
+        state_dict,
+
+        strict=False
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2822,evaluate_metrics,"evaluate_metrics(
+
+        ensemble_prediction,
+
+        truth_abs,
+
+        metadata
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,252,load,"json.load(
+            f
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1745,TransformerEncoderLayer,"nn.TransformerEncoderLayer(
+
+            d_model=d_model,
+
+            nhead=nhead,
+
+            dim_feedforward=dim_feedforward,
+
+            dropout=dropout,
+
+            activation=""gelu"",
+
+            batch_first=True,
+
+            norm_first=True
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1764,TransformerEncoder,"nn.TransformerEncoder(
+
+            encoder_layer,
+
+            num_layers=num_layers
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2704,load_transformer,"load_transformer(
+
+            task,
+
+            seed,
+
+            future_length
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2715,predict,"predict(
+
+            model,
+
+            histories_can
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2748,evaluate_metrics,"evaluate_metrics(
+
+            pred_abs,
+
+            truth_abs,
+
+            metadata
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2938,evaluate_metrics,"evaluate_metrics(
+
+            prediction,
+
+            truth_abs,
+
+            metadata
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,3022,evaluate_metrics,"evaluate_metrics(
+
+            ensemble_prediction[
+                mask
+            ],
+
+            truth_abs[
+                mask
+            ],
+
+            source_meta
+
+        )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1899,TrajectoryTransformer,"TrajectoryTransformer(
+
+        future_length=
+            future_length,
+
+        d_model=
+            int(
+                checkpoint.get(
+                    ""d_model"",
+                    64
+                )
+            ),
+
+        nhead=
+            int(
+                checkpoint.get(
+                    ""nhead"",
+                    4
+                )
+            ),
+
+        num_layers=
+            int(
+                checkpoint.get(
+                    ""num_layers"",
+                    2
+                )
+            ),
+
+        dim_feedforward=
+            int(
+                checkpoint.get(
+                    ""dim_feedforward"",
+                    128
+                )
+            ),
+
+        dropout=
+            float(
+                checkpoint.get(
+                    ""dropout"",
+                    0.10
+                )
+            ),
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2889,stationary_prediction,"stationary_prediction(
+
+                history,
+
+                future_length
+
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,2902,constant_velocity_prediction,"constant_velocity_prediction(
+
+                history,
+
+                future_length
+
+            )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1216,load_json_member,"load_json_member(
+
+                    archive,
+
+                    tracking_member
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\evaluate_fresh_wildbox_holdout.py,1225,load_json_member,"load_json_member(
+
+                    archive,
+
+                    camera_member
+
+                )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,348,load,"np.load(
+        npz_path
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,876,load_data,"load_data(
+
+        paths[
+            ""train_npz""
+        ],
+
+        paths[
+            ""train_meta""
+        ]
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,1047,load_data,"load_data(
+
+        paths[
+            ""test_npz""
+        ],
+
+        paths[
+            ""test_meta""
+        ]
+
+    )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,1098,load_data,"load_data(
+
+        paths[
+            ""wild_npz""
+        ],
+
+        paths[
+            ""wild_meta""
+        ]
+
+    )"

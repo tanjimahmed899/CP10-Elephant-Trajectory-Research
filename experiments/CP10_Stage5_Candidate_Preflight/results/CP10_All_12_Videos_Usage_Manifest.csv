@@ -1,0 +1,13 @@
+video,group,status,basis
+DJI_20240119151048_0001_V,elep1,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20240119151437_0002_V,elep1,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20240119152335_0005_V,elep1,prior_R10_frozen_transformer_evaluated,R10C1 actual sample_metrics video IDs
+DJI_20240119152552_0006_V,elep1,candidate_not_locked,Previously inspected for qualitative frames; appears in earlier source inventories
+DJI_20240626142859_0001_V,elep2,prior_R10_frozen_transformer_evaluated,R10C1 actual sample_metrics video IDs
+DJI_20240626143248_0002_V,elep2,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20240626143443_0003_V,elep2,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20240626143832_0004_V,elep2,candidate_not_locked,Previous quantitative use not established; audit required
+DJI_20260227082707_0003_V,elep3,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20260227084135_0002_V,elep3,prior_R10_frozen_transformer_evaluated,R10C1 actual sample_metrics video IDs
+DJI_20260227084724_0003_V,elep3,prior_EXP3_evaluated,EXP3 six-video holdout
+DJI_20260227084907_0004_V,elep3,candidate_not_locked,Previous quantitative use not established; audit required

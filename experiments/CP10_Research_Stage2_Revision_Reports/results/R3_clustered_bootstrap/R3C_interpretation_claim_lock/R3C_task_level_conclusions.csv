@@ -1,0 +1,5 @@
+dataset,task,Transformer_vs_Stationary_ADE,Transformer_vs_CV_ADE,Transformer_vs_Kalman_ADE,Transformer_vs_GRU_ADE,Transformer_vs_LSTM_ADE,Transformer_vs_Stationary_FDE,Transformer_vs_CV_FDE,Transformer_vs_Kalman_FDE,Transformer_vs_GRU_FDE,Transformer_vs_LSTM_FDE
+BIRDSAI_TestReal,2s_to_2s,uncertain,A_better,uncertain,A_worse,A_worse,uncertain,A_better,uncertain,A_worse,A_worse
+BIRDSAI_TestReal,2s_to_5s,uncertain,A_better,A_better,A_worse,uncertain,uncertain,A_better,A_better,A_worse,uncertain
+Fresh_WildBox,2s_to_2s,A_better,A_better,A_better,uncertain,uncertain,A_better,uncertain,A_better,uncertain,uncertain
+Fresh_WildBox,2s_to_5s,A_better,uncertain,uncertain,uncertain,uncertain,A_better,uncertain,uncertain,A_better,A_better

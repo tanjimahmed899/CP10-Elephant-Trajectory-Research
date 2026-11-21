@@ -1,0 +1,37 @@
+R10 — Frozen three-seed Transformer ensemble analysis
+
+Final conclusion
+----------------
+Across both the BIRDSAI TestReal evaluation and the fresh matched WildBox external evaluation, averaging the predictions from the three frozen Transformer seeds (42, 52, and 62) consistently reduced forecasting error relative to the mean individual-seed error. The paired clustered confidence intervals excluded zero in favor of the ensemble for both ADE and FDE at both 2 s and 5 s horizons.
+
+BIRDSAI TestReal
+----------------
+At 2 s, the ensemble improved ADE by 2.419% relative to the mean individual-seed error. The paired segment-cluster effect was -0.260643 px with 95% CI [-0.352512, -0.187103]. FDE improved by 2.455%, with a paired effect of -0.364529 px and 95% CI [-0.540660, -0.220736].
+
+At 5 s, the ensemble improved ADE by 1.986% relative to the mean individual-seed error, with a paired effect of -0.701180 px and 95% CI [-0.975728, -0.475114]. FDE improved by 0.918%, with a paired effect of -0.529773 px and 95% CI [-0.928194, -0.231091].
+
+Fresh WildBox external evaluation
+---------------------------------
+On the fresh matched WildBox set, the ensemble again improved both horizons. At 2 s, ADE improved by 1.021% and FDE by 0.955% relative to the mean individual-seed error. The track-cluster paired effects were -0.000256 for ADE, 95% CI [-0.000337, -0.000187], and -0.000299 for FDE, 95% CI [-0.000415, -0.000202].
+
+At 5 s, ADE improved by 1.036% and FDE by 0.395% relative to the mean individual-seed error. The track-cluster paired effects were -0.000363 for ADE, 95% CI [-0.000418, -0.000314], and -0.000216 for FDE, 95% CI [-0.000257, -0.000181].
+
+Robustness
+----------
+The ensemble was also significantly better than the single seed selected only from validation performance in all tested dataset/horizon/metric combinations. On fresh WildBox, leave-one-source-out analysis preserved a negative ensemble-minus-comparator effect for every held-out source, indicating that the direction of benefit was not driven by any one of the three fresh videos.
+
+Seed diversity
+--------------
+Across both TestReal and fresh WildBox, the association between seed disagreement and ensemble gain was consistently negative: samples with greater inter-seed disagreement tended to show larger ensemble benefit. This is supportive evidence that averaging complementary seed-specific predictions, rather than simply reporting one seed, contributes useful variance reduction.
+
+Manuscript-safe claim
+---------------------
+A frozen three-seed Transformer prediction ensemble provides a small but statistically consistent forecasting benefit over individual-seed performance on BIRDSAI TestReal and on the fresh matched WildBox external holdout, for both 2 s and 5 s horizons. This supports using the frozen ensemble as the primary Transformer forecasting output in downstream uncertainty and warning analyses.
+
+Limitations and prohibited claims
+---------------------------------
+- The ensemble benefit is specific to the evaluated Transformer architecture and three frozen seeds; it should not be generalized automatically to GRU, LSTM, or arbitrary ensemble sizes.
+- The fresh external result covers three WildBox videos and should not be described as broad ecological or species-level generalization.
+- WildBox remains an elephant-domain external evaluation; it does not replace the separate BAMBI deer/human cross-species stress test.
+- The association between diversity and gain is descriptive, not proof that diversity causally improves forecasting.
+- The ensemble does not establish end-to-end field effectiveness, because detector/tracker uncertainty and operational response latency are separate system components.

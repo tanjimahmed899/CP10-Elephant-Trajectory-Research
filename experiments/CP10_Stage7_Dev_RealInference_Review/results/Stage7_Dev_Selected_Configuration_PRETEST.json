@@ -1,0 +1,14 @@
+{
+  "decision": "NO_DEV_CANDIDATE_PASSED_GATES_RETAIN_BASELINE",
+  "selected_config": "baseline_640_conf010",
+  "selected_settings": {
+    "imgsz": 640,
+    "conf": 0.1,
+    "tile": false
+  },
+  "scope": "development-only / annotated TrainReal frames, not TestReal",
+  "selection_rule": "Recall gain >=3 percentage points; precision >=max(0.10,baseline_precision-0.10); false boxes/annotated image <= baseline+0.5; maximize recall, tie FP then latency.",
+  "testreal_tuning": false,
+  "testreal_evaluation_complete": false,
+  "experimental_claim": "No end-to-end benefit established from dev-only inference"
+}

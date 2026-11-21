@@ -1,0 +1,5 @@
+check,pass,detail
+Detector checkpoint provenance lock,True,E:\AIUB\Capstone Project\Final 1.0\Elephant Detection.v2-resized640.yolov8 (2)\Elephant Detection.v2-resized640.yolov8\runs\detect\elephant_final_clean\weights\best.pt
+All frozen final TestReal sequences have frame directories,True,6/6
+cleaned_track_points supports tracking GT as frame+ID+XYWH,True,"{""rows_audited"": 91419, ""cx_match_rate"": 1.0, ""cy_match_rate"": 1.0, ""positive_wh_rate"": 1.0, ""unique_tracks"": 130, ""gt_compatible"": true}"
+Ultralytics ByteTrack/BoT-SORT available for NEW revision experiment,True,"{""ultralytics_installed"":true,""ultralytics_version"":""8.3.75"",""package_root"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics"",""bytetrack_yaml"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics\\cfg\\trackers\\bytetrack.yaml"",""bytetrack_exists"":true,""botsort_yaml"":""C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\ultralytics\\cfg\\trackers\\botsort.yaml"",""botsort_exists"":true}"

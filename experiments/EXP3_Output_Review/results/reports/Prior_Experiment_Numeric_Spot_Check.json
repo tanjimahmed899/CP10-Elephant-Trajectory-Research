@@ -1,0 +1,8 @@
+{
+  "R8_archived_same_target_tables": "PASS",
+  "R8_archived_binary_warning_F1": "PASS",
+  "EXP2_archived_Fresh2s_nominal_and_N2": "PASS",
+  "EXP3_six_new_videos_present": false,
+  "EXP3_independent_metrics_generated": false,
+  "Note": "This is a metric snapshot check, not a complete recomputation of past model training."
+}

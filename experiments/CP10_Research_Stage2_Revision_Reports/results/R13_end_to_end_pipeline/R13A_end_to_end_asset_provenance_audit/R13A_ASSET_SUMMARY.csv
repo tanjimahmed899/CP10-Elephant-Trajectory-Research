@@ -1,0 +1,9 @@
+asset_class,count
+YOLO likely checkpoints,0
+Video files,7
+Detector source files,3
+Tracker source files,4
+Tracker-related files,222
+Trajectory-related files,395
+Detection dataset configs,0
+YOLO run artifacts,0

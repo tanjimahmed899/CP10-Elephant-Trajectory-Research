@@ -1,0 +1,21 @@
+{
+  "step": "R2A_V2_FAIR_FORECASTING_PREFLIGHT",
+  "created_utc": "2026-10-29T05:25:54.842557+00:00",
+  "status": "R2A_V2_PREFLIGHT_COMPLETE_READY_FOR_R2B_FAIR_BENCHMARK",
+  "r1_protocol_sha256": "4af15bd17f57d4c9932f482dcc047f3b344be4b810d0a4c7b48942f8d17406a8",
+  "new_test_metrics_generated": false,
+  "fixes": [
+    "accept build_final_neural_dataset.py as the exact dataset builder",
+    "classify LSTM/GRU checkpoints from filename before parent folder",
+    "prove fresh holdout source IDs from file contents rather than path names"
+  ],
+  "outputs": {
+    "scripts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_source_scripts.csv",
+    "models": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_model_checkpoint_inventory.csv",
+    "model_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_model_checkpoint_counts.csv",
+    "datasets": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_dataset_artifact_inventory.csv",
+    "fresh_content_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_fresh_source_content_evidence.csv",
+    "fresh_source_proof": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_fresh_source_proof.csv",
+    "readiness": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2A_preflight_v2\\R2A_V2_readiness_checks.csv"
+  }
+}

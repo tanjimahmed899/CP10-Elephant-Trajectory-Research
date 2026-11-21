@@ -1,0 +1,3 @@
+tracker,2s_windows,5s_windows,2s_coverage_vs_gt_final,5s_coverage_vs_gt_final,interpretation
+ByteTrack,2,0,0.001899335232668566,0.0,"Only sparse tracker-derived forecasting coverage; downstream forecasting can be exploratory only, not a representative end-to-end performance estimate."
+BoT-SORT,2,0,0.001899335232668566,0.0,"Only sparse tracker-derived forecasting coverage; downstream forecasting can be exploratory only, not a representative end-to-end performance estimate."

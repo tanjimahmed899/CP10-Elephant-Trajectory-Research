@@ -1,0 +1,35 @@
+{
+  "step": "R18B_WILDBOX_METER_SPACE_LIMITATION_LOCK",
+  "created_utc": "2026-10-30T17:06:18.446999+00:00",
+  "status": "R18_WILDBOX_METER_SPACE_NOT_DEFENSIBLE_WITH_AVAILABLE_METADATA_LIMITATION_LOCKED_NORMALIZED_IMAGE_SPACE_RESULTS_RETAINED_READY_FOR_R19_CLAIM_MATRIX_AND_PAPER_REWRITE",
+  "r18_complete": true,
+  "coordinate_conversion_performed": false,
+  "forecast_rerun_performed": false,
+  "sources_expected": 3,
+  "sources_found": 3,
+  "sources_with_verified_metric_scale_anchor": 0,
+  "sources_with_intrinsics": 3,
+  "sources_with_extrinsics": 3,
+  "sources_direct_meter_ready": 0,
+  "meter_space_claim_allowed": false,
+  "normalized_image_space_results_retained": true,
+  "locked_interpretation": "WildBox camera geometry is available, but no independently verified metric-scale anchor exists for the three frozen sources. Therefore, no defensible meter-space conversion is performed. Existing normalized/image-space forecasting results remain valid and must be reported in their original coordinate representation.",
+  "prohibited_shortcuts": [
+    "Do not insert an assumed drone altitude.",
+    "Do not infer meters from extrinsic translation magnitude alone.",
+    "Do not infer meters from focal length/intrinsics alone.",
+    "Do not call reconstructed camera coordinates world-ground-truth meters.",
+    "Do not convert normalized ADE/FDE to meters without external scale calibration."
+  ],
+  "future_resolution": "A future metric-space extension would require source-specific measured altitude, known ground distance/GCPs, calibrated GSD/meters-per-pixel, or another independently validated physical-scale reference.",
+  "input_hashes": {
+    "R18A2_manifest": "d0aef510987a4d0d4b71cba0be71b21e12a9c6070796b17bf18d55d6b5d02df5",
+    "R18A2_summary": "01a2be2a6e4080d18eef3940ae84eb1affe375ea778887e600cb3996c627d9bc",
+    "R18A2_per_source": "ef8fb3f3597360592b8f20512d9439931a475949c146123423f0ee8a61f33f38"
+  },
+  "output_hashes": {
+    "claim_matrix": "cf1073d2305797afc7385c4dd7b31356a914f513455b737c2b7589d7a5403125",
+    "manuscript_wording": "64231267161e9cc9b7a751dbbb717f390262cec435c9959c386b94d643c0a14b"
+  },
+  "next_roadmap_step": "R19_CLAIM_MATRIX_AND_PAPER_REWRITE"
+}

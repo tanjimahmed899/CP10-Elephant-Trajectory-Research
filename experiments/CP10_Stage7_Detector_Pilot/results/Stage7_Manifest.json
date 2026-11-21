@@ -1,0 +1,22 @@
+{
+  "project": "CP10",
+  "stage": 7,
+  "status": "DEVELOPMENT_ONLY_PILOT_PREPARED_NOT_YET_RUN_ON_REAL_TRAINREAL_IMAGES",
+  "sources": [
+    "CP10_Research_Stage2_Revision_Reports.zip / R13F_A and R13E",
+    "CP10_Research_Stage2_Revision_Reports.zip / R17D"
+  ],
+  "smoke_tests": {
+    "preflight": "synthetic_fixture_pass",
+    "scorer": "synthetic_fixture_pass",
+    "runner": "mocked_YOLO_fixture_pass",
+    "full_real_model_run": false
+  },
+  "warning": "Do not use synthetic software tests as research numbers",
+  "predeclared_settings": [
+    "baseline_640_conf010",
+    "highres_960_conf010",
+    "lowconf_640_conf003",
+    "highres_960_conf003"
+  ]
+}

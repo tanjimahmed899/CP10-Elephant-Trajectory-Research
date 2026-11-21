@@ -1,0 +1,5 @@
+forecast,split,total,accepted,accepted_pct,core,extended,rejected
+2s_to_2s,train_real,913,636,69.6604600219058,531,105,277
+2s_to_2s,test_real,1070,1068,99.81308411214954,1053,15,2
+2s_to_5s,train_real,684,493,72.07602339181287,382,111,191
+2s_to_5s,test_real,827,826,99.87908101571946,826,0,1

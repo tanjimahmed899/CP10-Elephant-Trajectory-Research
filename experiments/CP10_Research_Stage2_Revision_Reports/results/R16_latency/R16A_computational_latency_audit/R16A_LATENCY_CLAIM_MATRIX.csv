@@ -1,0 +1,7 @@
+claim,status,basis
+The frozen CPU detector+ByteTrack pipeline meets 30 Hz real-time processing.,REJECTED,"weighted wall-clock=114.487 ms/frame, effective FPS=8.735; 30-Hz budget=33.333 ms."
+The frozen CPU detector+ByteTrack pipeline meets 10 Hz processing.,REJECTED,weighted wall-clock=114.487 ms/frame; 10-Hz budget=100.000 ms.
+The frozen CPU detector+BoT-SORT pipeline meets 30 Hz real-time processing.,REJECTED,"weighted wall-clock=128.798 ms/frame, effective FPS=7.764; 30-Hz budget=33.333 ms."
+The frozen CPU detector+BoT-SORT pipeline meets 10 Hz processing.,REJECTED,weighted wall-clock=128.798 ms/frame; 10-Hz budget=100.000 ms.
+Computational latency alone proves that a 2-s or 5-s warning horizon is operationally sufficient.,REJECTED,"Compute time is only one component of total response latency; communications, drone dispatch/intervention, and human response are not measured here."
+This timing experiment measures GPU deployment performance.,REJECTED,R13-D was executed on CPU.

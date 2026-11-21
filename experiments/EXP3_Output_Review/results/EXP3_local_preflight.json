@@ -1,0 +1,103 @@
+{
+  "status": "READY_TO_RUN",
+  "data_and_model_files": [
+    {
+      "kind": "source",
+      "id": "exp3_01",
+      "file": "new_data\\elep1\\DJI_20240119151437_0002_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "58dd9898a24ec1475557978cb32ffeb54bbf09c900343164afd639965b5bbdff"
+    },
+    {
+      "kind": "source",
+      "id": "exp3_02",
+      "file": "new_data\\elep1\\DJI_20240119151048_0001_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "a9df1fce74b4a9d8092ceda7ae3e324b3c3afc0d39dbabb21b305e589c5cd20f"
+    },
+    {
+      "kind": "source",
+      "id": "exp3_03",
+      "file": "new_data\\elep2\\DJI_20240626143443_0003_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "29321e407f8c371e148d77b21572bc6791fe3c3955f4a47be697ec14959504a5"
+    },
+    {
+      "kind": "source",
+      "id": "exp3_04",
+      "file": "new_data\\elep2\\DJI_20240626143248_0002_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "1aecf2ae18b7bf8fecaf2e253c4d0d4bc898e93e92d14971e9a884da4cce6f5d"
+    },
+    {
+      "kind": "source",
+      "id": "exp3_05",
+      "file": "new_data\\elep3\\DJI_20260227084724_0003_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "dbc6716792e347e355ce506ff131b7987fcc3e13f5f20cb5dcb32af84b643125"
+    },
+    {
+      "kind": "source",
+      "id": "exp3_06",
+      "file": "new_data\\elep3\\DJI_20260227082707_0003_V.zip",
+      "exists": true,
+      "valid_zip": true,
+      "sha256": "c06f229bb74265418552c0c70dc88787646b72e037a6b4da5245c61f9d40fc84"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_2s-seed42",
+      "file": "checkpoints\\2s_to_2s_Transformer_seed42.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_2s-seed52",
+      "file": "checkpoints\\2s_to_2s_Transformer_seed52.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_2s-seed62",
+      "file": "checkpoints\\2s_to_2s_Transformer_seed62.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_5s-seed42",
+      "file": "checkpoints\\2s_to_5s_Transformer_seed42.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_5s-seed52",
+      "file": "checkpoints\\2s_to_5s_Transformer_seed52.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"
+    },
+    {
+      "kind": "checkpoint",
+      "id": "2s_to_5s-seed62",
+      "file": "checkpoints\\2s_to_5s_Transformer_seed62.pt",
+      "exists": true,
+      "valid_zip": null,
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+    }
+  ],
+  "model_checkpoint_hashes_must_match_original_historical_checkpoint_manifest": true,
+  "no_new_results_generated": true
+}

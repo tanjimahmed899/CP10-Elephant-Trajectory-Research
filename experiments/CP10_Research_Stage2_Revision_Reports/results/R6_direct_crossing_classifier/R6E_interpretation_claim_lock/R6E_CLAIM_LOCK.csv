@@ -1,0 +1,11 @@
+claim_id,status,claim,basis
+R6E_CLAIM_01,SUPPORTED,Direct-classifier thresholds were selected only from track-disjoint validation OOF predictions; frozen evaluation was not used for threshold reselection.,R6B3/R6C protocol lock.
+R6E_CLAIM_02,SUPPORTED,The direct classifier improves balanced accuracy across TestReal and Fresh WildBox at both horizons.,All four track-cluster 95% CIs for balanced-accuracy delta are above zero.
+R6E_CLAIM_03,SUPPORTED,The direct classifier substantially improves crossing sensitivity across all four evaluation conditions.,All four sensitivity-delta 95% CIs are above zero.
+R6E_CLAIM_04,SUPPORTED,The sensitivity gain has a false-positive cost: false-positive rate increases across all four conditions.,All four FPR-delta 95% CIs are above zero.
+R6E_CLAIM_05,SUPPORTED,The direct classifier is less precise than the nominal crossing rule in all four conditions.,All four precision-delta 95% CIs are below zero.
+R6E_CLAIM_06,SUPPORTED_WITH_LIMITATION,"F1 improves on both TestReal horizons and Fresh WildBox 5s, but Fresh WildBox 2s F1 improvement is uncertain.",Fresh 2s F1 CI crosses zero; the other three exclude zero.
+R6E_CLAIM_07,SUPPORTED_WITH_LIMITATION,The direct classifier provides a useful higher-sensitivity operating point for virtual-geofence crossing detection.,"Balanced accuracy/sensitivity rise, but FPR rises and precision falls."
+R6E_CLAIM_08,NOT_SUPPORTED,The direct classifier is universally better than the nominal crossing rule.,Trade-offs remain: higher FPR and lower precision in every condition.
+R6E_CLAIM_09,NOT_SUPPORTED,The direct classifier reduces false alarms relative to the nominal rule.,Observed FPR deltas are positive with CIs above zero.
+R6E_CLAIM_10,METHOD_NOTE,"Report the direct classifier as a secondary decision-layer benchmark/ablation, not a replacement for primary Step7H RED/YELLOW/GREEN logic.",Step7H remains the locked primary operational protocol.

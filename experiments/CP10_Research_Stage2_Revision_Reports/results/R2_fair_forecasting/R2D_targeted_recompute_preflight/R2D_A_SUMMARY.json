@@ -1,0 +1,15 @@
+{
+  "step": "R2D_A_TARGETED_RECOMPUTATION_PREFLIGHT",
+  "created_utc": "2026-10-29T05:44:04.281058+00:00",
+  "status": "R2D_A_PREFLIGHT_COMPLETE_EXACT_ADAPTER_PATCH_REQUIRED",
+  "r2c_status": "R2C_AUDIT_COMPLETE_SOME_TARGETED_RECOMPUTATION_CONFIRMED_REQUIRED",
+  "new_metrics_generated": false,
+  "outputs": {
+    "npz_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_npz_candidate_scores.csv",
+    "selected_npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_selected_npz.csv",
+    "metadata_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_metadata_candidates.csv",
+    "script_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_script_function_inventory.json",
+    "loader_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_loader_function_candidates.csv",
+    "readiness": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_targeted_recompute_preflight\\R2D_A_readiness_checks.csv"
+  }
+}

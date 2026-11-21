@@ -1,0 +1,9 @@
+claim,status,basis
+BIRDSAI TestReal contains 45 original dataset-level tracks.,SUPPORTED,R12C-V2 + R12E-V11 exact reconstruction
+Original tracks are segmented when more than 3 consecutive frames are missing.,SUPPORTED,build_elephant_trajectory_dataset.py source lock
+Smaller gaps are retained within a segment and interpolated.,SUPPORTED,historical trajectory-builder interpolation rule
+The unified 10-Hz core rule is accepted=1 AND quality_tier='core' AND sample_id>=0.,SUPPORTED,build_unified_10hz_dataset.py exact source expression
+"Final 2-s set: 1,053 windows, 37 original tracks, 89 forecastable segments.",SUPPORTED,zero-mismatch physical-window reconstruction
+"Final 5-s set: 826 windows, 31 original tracks, 63 forecastable segments.",SUPPORTED,zero-mismatch physical-window reconstruction
+89 and 63 are original dataset-level track counts.,REJECTED,They are forecastable segment/tracklet counts.
+45 vs 89 reflects contradictory counting.,REJECTED,45 counts original tracks; 89 counts final 2-s segments.

@@ -1,0 +1,5 @@
+task,split,canonical_samples,corrected_accepted_samples,matched_samples,unmatched_samples,max_abs_history_coordinate_difference,max_abs_future_coordinate_difference,outcome
+2s_to_2s,train_real,531,636,531,0,0.0,0.0,EXACT_MATCH
+2s_to_2s,test_real,1053,1068,1053,0,0.0,0.0,EXACT_MATCH
+2s_to_5s,train_real,382,493,382,0,0.0,0.0,EXACT_MATCH
+2s_to_5s,test_real,826,826,826,0,0.0,0.0,EXACT_MATCH

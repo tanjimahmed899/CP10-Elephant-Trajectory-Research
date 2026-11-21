@@ -1,0 +1,27 @@
+{
+  "coordinate_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\trajectory_dataset\\cleaned_track_points.csv",
+  "coordinate_source_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "required_columns": [
+    "cx",
+    "cy",
+    "cx_n",
+    "cy_n"
+  ],
+  "implied_denominator_summary": {
+    "implied_width_count": 91419,
+    "implied_width_median": 698.0,
+    "implied_width_q01": 582.0,
+    "implied_width_q99": 840.0,
+    "implied_height_count": 91419,
+    "implied_height_median": 377.0,
+    "implied_height_q01": 321.0,
+    "implied_height_q99": 518.0000000000002
+  },
+  "representation_assessment": {
+    "empirical_representation_assessment": "EMPIRICALLY_CONSISTENT_WITH_SEPARATE_X_Y_DENOMINATORS",
+    "implied_x_y_scale_relative_difference": 0.45988538681948427,
+    "script_contains_cx_n_and_cy_n_references": true
+  },
+  "isotropic_ablation_allowed_yet": false,
+  "reason": "R9B is a source-definition lock only. R9C must explicitly verify the exact formula and define a non-destructive isotropic transform before any model/baseline comparison."
+}

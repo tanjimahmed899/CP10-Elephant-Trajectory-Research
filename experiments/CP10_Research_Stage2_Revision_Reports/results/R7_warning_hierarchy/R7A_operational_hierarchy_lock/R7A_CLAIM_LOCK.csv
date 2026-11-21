@@ -1,0 +1,8 @@
+claim_id,status,claim,basis
+R7A_CLAIM_01,METHOD_LOCK,Step7H is the primary operational warning protocol for the paper.,"It uniquely implements the frozen response-aware RED/YELLOW/GREEN logic with nominal crossing, q90 uncertainty and persistence."
+R7A_CLAIM_02,METHOD_LOCK,Step18 is secondary binary-crossing benchmark/ablation evidence.,It lacks the full response-aware uncertainty/persistence hierarchy used by Step7H.
+R7A_CLAIM_03,METHOD_LOCK,R6 direct logistic crossing classifier is a secondary decision-layer benchmark.,It was added to answer the reviewer-style direct classifier comparison and has a different sensitivity/false-positive operating point.
+R7A_CLAIM_04,SUPPORTED,RED should be described as the selective/actionable channel; YELLOW as a watch/uncertainty flag.,Frozen Step7H definitions and R5 trivial-baseline interpretation.
+R7A_CLAIM_05,NOT_SUPPORTED,Step18 and Step7H are interchangeable operational protocols.,They answer different decision questions and use different logic.
+R7A_CLAIM_06,NOT_SUPPORTED,The direct classifier should replace Step7H because it improves balanced accuracy.,"R6E shows a clear cost in false-positive rate and precision, while Step7H remains the frozen primary operational protocol."
+R7A_CLAIM_07,NOT_SUPPORTED,Any of these warning experiments establish real-world field effectiveness.,The geofence is normalized/synthetic and the response thresholds are simulated.

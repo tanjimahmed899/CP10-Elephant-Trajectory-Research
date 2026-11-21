@@ -1,0 +1,29 @@
+{
+  "input_sha256": {
+    "EXP3_Output_Review.zip": "eb718346da8344798b27d3175376b4bd9f739e5d32f1969da95fb0375e785d3e",
+    "CP10_Stage5_Frozen_Results_Review.zip": "8574452256653cc2c0483443d337aa582312af4ff456e3198bce35b801f6e3c4"
+  },
+  "fixed_trainreal_q90": {
+    "2s": 2.158768,
+    "5s": 1.97513
+  },
+  "fps_assumed_for_window_TTE": 10,
+  "boundary_positions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "boundary_axes": [
+    "x",
+    "y"
+  ],
+  "critical_limitation": "Boundary values are defined in each window observation-start camera coordinate system. A repeated alert run is NOT an episode at one physical geofence. Ground-truth future availability is a retrospective label, not deployment evidence.",
+  "not_done": [
+    "R6 per-window classifier reconstruction",
+    "real fixed-geofence episode matching",
+    "operational warning lead time",
+    "independent recording-group testing",
+    "prospective risk control"
+  ],
+  "R6_limitation": "Only published aggregate metrics available from R6, no per-window classifier decisions in the selected artifact."
+}

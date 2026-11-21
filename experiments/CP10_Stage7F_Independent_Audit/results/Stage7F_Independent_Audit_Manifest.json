@@ -1,0 +1,26 @@
+{
+  "source_file": "CP10_Stage7F_Tracker_Forecast_Review.zip",
+  "source_sha256": "145fd1a01fee23efee5978cbfc8ab7c2c333ee2e4b5723fb90096627917d5838",
+  "input_n_windows": 311,
+  "source_sequence": [
+    "0000000353_0000000000"
+  ],
+  "predictions_frozen_seed_ensemble": true,
+  "per_seed_outputs_available_in_uploaded_zip": false,
+  "metric_protocol": "ADE=mean_t Euclidean(pred_future-GT_future); FDE=Euclidean final prediction-GT",
+  "coordinate_units": "normalized image-coordinate units in observation-start affine-reference plane",
+  "cautions": [
+    "Only GT-linked strict windows, NOT blind end-to-end",
+    "All windows in one test sequence",
+    "Overlapping windows correlated by GT identity",
+    "GT-history is an offline oracle diagnostic",
+    "No direct original-detector forecasting comparison (0 strict windows)",
+    "Models not retrained in this report"
+  ],
+  "log_checks": [
+    "Original ZIP sha256 145fd1a01fee23efee5978cbfc8ab7c2c333ee2e4b5723fb90096627917d5838",
+    "Console reported provenance gate passed: True",
+    "Console reported all 6 seed+horizon evaluations: True",
+    "Console reported final pandas DataFrame(rows) error: True"
+  ]
+}

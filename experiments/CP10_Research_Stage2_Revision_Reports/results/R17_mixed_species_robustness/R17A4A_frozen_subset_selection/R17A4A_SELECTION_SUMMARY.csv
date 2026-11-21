@@ -1,0 +1,5 @@
+group,n_images,source,policy
+PRIMARY_POSITIVE_ELEPHANT_PLUS_ANIMAL,151,COCO 2017 train+val,all unique available positives
+PRIMARY_NEGATIVE_MULTI_ANIMAL_NO_ELEPHANT,151,COCO 2017 train+val,deterministic SHA256 sample
+PRIMARY_CONTROL_ELEPHANT_ONLY,151,COCO 2017 train+val,person-absent priority + deterministic SHA256 sample
+SUPPLEMENTARY_IN_VOCAB_ELEPHANT_PLUS_LION,9,existing project V5/exported datasets,all unique files deduplicated by SHA256

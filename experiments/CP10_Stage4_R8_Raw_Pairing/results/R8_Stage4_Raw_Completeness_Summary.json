@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-20T14:35:18.154722+00:00",
+  "raw_input": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/trajectory_dataset/cleaned_track_points.csv",
+  "raw_size": 24361120,
+  "source_rows_examined": 91419,
+  "raw_rows_collected": 63750,
+  "unique_tracks": 151,
+  "core_windows": 2792,
+  "complete_windows": 2792,
+  "incomplete_windows": 0,
+  "notes": "Original raw positions (cx_n/cy_n) in each source image frame; MUST be explicitly registered to corrected reference frame before comparing prediction errors."
+}

@@ -1,0 +1,8 @@
+quantity,locked_term,definition,allowed_claim,forbidden_claim
+45,original dataset-level tracks,"unique (sequence, object_id) in BIRDSAI TestReal",The TestReal split contains 45 original tracks.,Do not call 89 or 63 original tracks.
+37,original tracks represented in final 2-s evaluation set,"unique (sequence, object_id) after exact source-implemented filtering",37 original tracks are represented in the final 2-s set.,Do not call 37 total TestReal tracks.
+31,original tracks represented in final 5-s evaluation set,"unique (sequence, object_id) after exact source-implemented filtering",31 original tracks are represented in the final 5-s set.,Do not call 31 total TestReal tracks.
+89,forecastable segments / tracklets for 2-s task,"unique (sequence, object_id, segment_id)",The final 2-s set contains 89 forecastable segments.,Never report 89 as dataset-level tracks.
+63,forecastable segments / tracklets for 5-s task,"unique (sequence, object_id, segment_id)",The final 5-s set contains 63 forecastable segments.,Never report 63 as dataset-level tracks.
+1053,final 2-s evaluation windows,physical windows after source filter,"The final 2-s evaluation set contains 1,053 windows.",
+826,final 5-s evaluation windows,physical windows after source filter,The final 5-s evaluation set contains 826 windows.,

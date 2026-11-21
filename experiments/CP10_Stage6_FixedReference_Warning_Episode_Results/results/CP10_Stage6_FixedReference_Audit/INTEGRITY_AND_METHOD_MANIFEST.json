@@ -1,0 +1,154 @@
+{
+  "study": "CP10 Stage 6 fixed-segment-reference virtual-line retrospective analysis",
+  "evidence_class": "retrospective geometry replay + conditional synthetic warning episode simulation",
+  "input_sources": [
+    "CP10_Stage6_StaticFence_Metadata.zip",
+    "EXP3_Output_Review.zip",
+    "CP10_Stage5_Frozen_Results_Review.zip",
+    "Stage6_Coordinate_Shift_Summary.csv"
+  ],
+  "verified_forecast_windows": 1471,
+  "virtual_boundary_cases": 8826,
+  "estimated_camera_poses_not_surveyed": true,
+  "prediction_registration_uses_last_observed_depth": true,
+  "gt_only_controls_use_future_3d_depth": true,
+  "independent_group_validation": false,
+  "operational_geofence_validation": false,
+  "new_model_training": false,
+  "source_group_holdout_available": false,
+  "configuration": {
+    "fixed_reference": "first camera pose within each video segment",
+    "virtual_lines": "x,y=0.25,0.50,0.75 in reference normalized pixels",
+    "fps_assumed": 10,
+    "episode_persistence_k_reported": 3,
+    "anchor_stride_for_N2_N3": 10,
+    "q_original_TrainReal_2s": 2.158768,
+    "q_original_TrainReal_5s": 1.97513
+  },
+  "files": {
+    "Figure_Stage6_Conditional_Event_Tradeoff.png": {
+      "size_bytes": 122216,
+      "sha256": "110665a2251ba2d6114bf8ab5add3b49a9f0b1eb39b9c82bb12e29255f02eb3f"
+    },
+    "Figure_Stage6_Conditional_FixedReference_EventRecall.png": {
+      "size_bytes": 74879,
+      "sha256": "c13b09f51cb2bf1109369a5eb107c900680df907e40826155e2d7d0abf3e2fab"
+    },
+    "Figure_Stage6_Depth_Assumption_Sensitivity.png": {
+      "size_bytes": 56048,
+      "sha256": "c3840d6547841c950039cf978fb039969d1d14bd685299ae33d6cd10e4be0e82"
+    },
+    "Figure_Stage6_Moving_vs_Fixed_Reference_Consistency.png": {
+      "size_bytes": 90688,
+      "sha256": "0984d277b8dc2f2caf5ba50703b133d84d2e7a6ee27af28a3991f9c8f076af53"
+    },
+    "README_RUN.md": {
+      "size_bytes": 1103,
+      "sha256": "54bfb0c0e705a052d5f8acc728058b1fd9a31fa054ebd98ad88f25245ff1becf"
+    },
+    "STAGE6_FIXED_REFERENCE_RESULTS.md": {
+      "size_bytes": 10179,
+      "sha256": "7ca72f1c2d5e4053a44640b2f7712baa0f2b9e6082f6497f7eb522122c44dbdc"
+    },
+    "Stage6_FixedReference_AdjacentAnchor_GT_Consistency.csv": {
+      "size_bytes": 123425,
+      "sha256": "ff27459d94df06ffaa5916cdeb91d2289967a7ea534844ad6e037ef47fb0a3e9"
+    },
+    "Stage6_FixedReference_AdjacentAnchor_GT_Consistency_Summary.csv": {
+      "size_bytes": 472,
+      "sha256": "20e35713b2c6d5c57f502a89c203af00b316b435800875ddb43fa2d6a006e6fc"
+    },
+    "Stage6_FixedReference_Alert_Episode_Detail.csv": {
+      "size_bytes": 565331,
+      "sha256": "497d7c263a163374e02c8c2d71e575a876fd6df10d863a981429649ab2a3dc97"
+    },
+    "Stage6_FixedReference_AllTracks_TrueCrossing_Events.csv": {
+      "size_bytes": 30545,
+      "sha256": "6156c0e7707073ff346ab0d5d260a1953d191561a1312b168ec3db8679c4b4f7"
+    },
+    "Stage6_FixedReference_Depth_Sensitivity_Summary.csv": {
+      "size_bytes": 487,
+      "sha256": "3a8134589f20949bc50fd3bbd1b182e0e06ca2bc9499679ccb971bf06f126b37"
+    },
+    "Stage6_FixedReference_Event_Matching_Detail.csv": {
+      "size_bytes": 265646,
+      "sha256": "83807ac4d812620afde29ae168dc7c0981abefc597d024b4d4ee1d58e1e2a057"
+    },
+    "Stage6_FixedReference_Exploratory_Episode_Metrics.csv": {
+      "size_bytes": 4938,
+      "sha256": "706f99c9963650994da12369a02ad74169d8db3322008751c39bc4b2cd88d286"
+    },
+    "Stage6_FixedReference_Geometry_Replay.csv": {
+      "size_bytes": 361821,
+      "sha256": "a876cb6ac782003f0ee525726b3ba0174069fb36b25b2dd4ce544520ab5a536d"
+    },
+    "Stage6_FixedReference_OracleDepth_Sensitivity_DIAGNOSTIC_ONLY.csv": {
+      "size_bytes": 976933,
+      "sha256": "047921fff5c6c2a84b63f3beddaad0c130a8d1ed96605b97783114db76a9b352"
+    },
+    "Stage6_FixedReference_Projected_Warning_Cases.csv": {
+      "size_bytes": 1726637,
+      "sha256": "54ce79f91d3f94e0a3a60e127168398f441c8e296639fd17e05cf85c0a39e9af"
+    },
+    "Stage6_FixedReference_Projection_Error_Summary.csv": {
+      "size_bytes": 782,
+      "sha256": "cbbeb9fccd7a44a21ea19f15cc77bec184884e1911d321a044ad8888ec7d0497"
+    },
+    "Stage6_FixedReference_TrueCrossing_Episodes_K1_K3.csv": {
+      "size_bytes": 23356,
+      "sha256": "dd88c1a64db8aba40d902363e0de051fb91372b736e244dc6a96f22a94069093"
+    },
+    "Stage6_FixedReference_Window_Simulation_Summary.csv": {
+      "size_bytes": 1965,
+      "sha256": "f606cd28a6196210ef50f954e191bc625d6a1c921172f36905bc0f38c60f2f50"
+    },
+    "Stage6_Moving_vs_FixedReference_Label_Changes.csv": {
+      "size_bytes": 343,
+      "sha256": "460dfda5914dee614ff648ddf07502a5b612aeb86c4a35eb80ea4b58719887c7"
+    },
+    "create_figures.py": {
+      "size_bytes": 2431,
+      "sha256": "a076011d8b21333a4c92a6718cd7544b6be6eae14b1ea13eebe7cd827e80c154"
+    },
+    "inputs/CP10_Stage5_Frozen_Results_Review.zip": {
+      "size_bytes": 590771,
+      "sha256": "8574452256653cc2c0483443d337aa582312af4ff456e3198bce35b801f6e3c4"
+    },
+    "inputs/CP10_Stage6_StaticFence_Metadata.zip": {
+      "size_bytes": 2498687,
+      "sha256": "89f53431107ab8262c841f0c2099e04d3541ce8e30f9da205d1a8a0b66e143c6"
+    },
+    "inputs/EXP3_Output_Review.zip": {
+      "size_bytes": 2489136,
+      "sha256": "eb718346da8344798b27d3175376b4bd9f739e5d32f1969da95fb0375e785d3e"
+    },
+    "inputs/Stage6_Coordinate_Shift_Summary.csv": {
+      "size_bytes": 742,
+      "sha256": "e4b8b285e988b1c58bb580f449db4ae1d80c5947f281f5b9c1b31326bc8683ec"
+    },
+    "reproduction_run1.log": {
+      "size_bytes": 3137,
+      "sha256": "26f656ad2ce4d05515e44322f6257b9d992684b74dbfd792ce3c3fa02a77646e"
+    },
+    "reproduction_run2.log": {
+      "size_bytes": 5824,
+      "sha256": "f68697ffe8acb6d29b6ad63529e76d3cce8f30089c1d8f77b7cb7d8310676cbb"
+    },
+    "reproduction_run3.log": {
+      "size_bytes": 470,
+      "sha256": "e789355a63dca500d53f7abca1dceecfc40b46df4b7c1f55a2fe1efc13810b89"
+    },
+    "stage6_episode_sensitivity.py": {
+      "size_bytes": 12569,
+      "sha256": "7b7d2a487678698dd43458f37616ff6fe0e1e622637d956ac5159e035bf0288d"
+    },
+    "stage6_fixed_overlap_verify.py": {
+      "size_bytes": 3197,
+      "sha256": "2823d12b7626a864eca52fafa8e1b6280b642a230da82b56ceec66f84a9c6752"
+    },
+    "stage6_fixed_reference_study.py": {
+      "size_bytes": 13619,
+      "sha256": "12a82ee5f2727375f721787d60272ab8eb2cfcde1165aacdedfe8ed162b76366"
+    }
+  }
+}

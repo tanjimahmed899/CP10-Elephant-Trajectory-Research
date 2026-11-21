@@ -1,0 +1,78 @@
+{
+  "source_zip": "CP10_Stage5_Frozen_Results_Review.zip",
+  "sha256": "8574452256653cc2c0483443d337aa582312af4ff456e3198bce35b801f6e3c4",
+  "threshold_source": "Stage1 reproduced EXP3 TrainReal q90",
+  "original_q": {
+    "2s_to_2s": 2.158768,
+    "2s_to_5s": 1.97513
+  },
+  "method": "per-window pathwise maximum Euclidean error / scale; q_dev=sorted(scores)[ceil((n+1)*0.9)-1]",
+  "data_roles": "development 0006_V only; evaluation two 0004_V videos only",
+  "limitations": [
+    "previously inspected same recording groups",
+    "window overlap; nominal 90% guarantee not established across shift",
+    "sample eligibility uses GT matching",
+    "no confirmatory independent holdout",
+    "segment counts are not independent samples"
+  ],
+  "diagnostics": [
+    {
+      "horizon": "2s_to_2s",
+      "n_dev": 36,
+      "n_eval": 53,
+      "n_dev_videos": 1,
+      "n_eval_videos": 2,
+      "n_dev_tracks": 3,
+      "n_eval_tracks": 8,
+      "dev_q": 0.1933576740695039,
+      "frozen_q": 2.158768,
+      "dev_q_ratio_to_frozen": 0.08956852893386595,
+      "dev_max_score": 0.21117136623223165,
+      "eval_min_score": 0.11912420023419583,
+      "floor_scale": 0.06820264416877736,
+      "floor_count_dev": 36,
+      "floor_count_eval": 0,
+      "scale_dev_range": [
+        0.06820264416877736,
+        0.06820264416877736
+      ],
+      "scale_eval_range": [
+        0.11110766427452658,
+        1.7881910443585982
+      ],
+      "dev_score_p90": 0.17715213268483088,
+      "eval_score_p90": 0.9479044449815461,
+      "mean_ADE_dev": 0.004273501408944299,
+      "mean_ADE_eval": 0.08015035878024133
+    },
+    {
+      "horizon": "2s_to_5s",
+      "n_dev": 28,
+      "n_eval": 28,
+      "n_dev_videos": 1,
+      "n_eval_videos": 2,
+      "n_dev_tracks": 2,
+      "n_eval_tracks": 6,
+      "dev_q": 0.3354850978507325,
+      "frozen_q": 1.97513,
+      "dev_q_ratio_to_frozen": 0.16985469202064293,
+      "dev_max_score": 0.4375284695910454,
+      "eval_min_score": 0.27101658888046065,
+      "floor_scale": 0.06732638773715147,
+      "floor_count_dev": 28,
+      "floor_count_eval": 0,
+      "scale_dev_range": [
+        0.06732638773715147,
+        0.06732638773715147
+      ],
+      "scale_eval_range": [
+        0.13432896970085884,
+        1.7881910443585982
+      ],
+      "dev_score_p90": 0.3134889151152221,
+      "eval_score_p90": 1.997810478071026,
+      "mean_ADE_dev": 0.009378488977549181,
+      "mean_ADE_eval": 0.17437024442548105
+    }
+  ]
+}

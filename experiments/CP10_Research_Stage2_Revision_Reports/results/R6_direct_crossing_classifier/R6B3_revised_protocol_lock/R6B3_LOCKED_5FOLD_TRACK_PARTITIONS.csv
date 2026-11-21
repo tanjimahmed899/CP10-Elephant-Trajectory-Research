@@ -1,0 +1,11 @@
+task,fold,val_track_keys_json,train_rows,val_rows,train_positives,train_negatives,val_positives,val_negatives,track_overlap_count,train_has_both_classes
+2s_to_2s,1,"[""train_real_0000000351_0000000000_obj10_seg1"", ""train_real_0000000367_0000000000_obj5_seg1""]",318,264,13,305,10,254,0,True
+2s_to_2s,2,"[""train_real_0000000010_0000000000_obj2_seg3"", ""train_real_0000000351_0000000000_obj5_seg1"", ""train_real_0000000367_0000000000_obj42_seg2"", ""train_real_0000000367_0000000000_obj44_seg3"", ""train_real_0000000367_0000000000_obj53_seg5"", ""train_real_0000000367_0000000000_obj9_seg1""]",432,150,19,413,4,146,0,True
+2s_to_2s,3,"[""train_real_0000000367_0000000000_obj37_seg1"", ""train_real_0000000367_0000000000_obj41_seg3"", ""train_real_0000000367_0000000000_obj46_seg3""]",468,114,16,452,7,107,0,True
+2s_to_2s,4,"[""train_real_0000000367_0000000000_obj45_seg4""]",564,18,22,542,1,17,0,True
+2s_to_2s,5,"[""train_real_0000000367_0000000000_obj36_seg3""]",546,36,22,524,1,35,0,True
+2s_to_5s,1,"[""train_real_0000000010_0000000000_obj1_seg3"", ""train_real_0000000367_0000000000_obj42_seg2"", ""train_real_0000000367_0000000000_obj45_seg3""]",486,42,21,465,5,37,0,True
+2s_to_5s,2,"[""train_real_0000000367_0000000000_obj7_seg1""]",336,192,22,314,4,188,0,True
+2s_to_5s,3,"[""train_real_0000000367_0000000000_obj45_seg2""]",498,30,25,473,1,29,0,True
+2s_to_5s,4,"[""train_real_0000000367_0000000000_obj11_seg1""]",300,228,12,288,14,214,0,True
+2s_to_5s,5,"[""train_real_0000000367_0000000000_obj2_seg1""]",492,36,24,468,2,34,0,True

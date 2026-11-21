@@ -1,0 +1,781 @@
+line_number,line,context
+21,"    ""corrected_trajectory_dataset""","19: CORR_DIR = (
+20:     ROOT /
+21:     ""corrected_trajectory_dataset""
+22: )
+23: "
+25,"    r""C:\Users\HP\Downloads\step2b_raw_vs_corrected_baseline""","23: 
+24: OUT = Path(
+25:     r""C:\Users\HP\Downloads\step2b_raw_vs_corrected_baseline""
+26: )
+27: "
+55,"        ""future_raw"":","53:     ""2s_to_2s"": {
+54: 
+55:         ""future_raw"":
+56:             60,
+57: "
+58,"        ""future_10hz"":","56:             60,
+57: 
+58:         ""future_10hz"":
+59:             20
+60:     },"
+59,            20,"57: 
+58:         ""future_10hz"":
+59:             20
+60:     },
+61: "
+64,"        ""future_raw"":","62:     ""2s_to_5s"": {
+63: 
+64:         ""future_raw"":
+65:             150,
+66: "
+65,"            150,","63: 
+64:         ""future_raw"":
+65:             150,
+66: 
+67:         ""future_10hz"":"
+67,"        ""future_10hz"":","65:             150,
+66: 
+67:         ""future_10hz"":
+68:             50
+69:     }"
+68,            50,"66: 
+67:         ""future_10hz"":
+68:             50
+69:     }
+70: }"
+78,"    history,","76: 
+77: def estimate_velocity_linear_regression(
+78:     history,
+79:     fps=10
+80: ):"
+82,    history = np.asarray(,"80: ):
+81: 
+82:     history = np.asarray(
+83:         history,
+84:         dtype=np.float64"
+83,"        history,","81: 
+82:     history = np.asarray(
+83:         history,
+84:         dtype=np.float64
+85:     )"
+88,        history,"86: 
+87:     T = len(
+88:         history
+89:     )
+90: "
+117,        history,"115:     positions_centered = (
+116: 
+117:         history
+118: 
+119:         -"
+121,        history.mean(,"119:         -
+120: 
+121:         history.mean(
+122:             axis=0,
+123:             keepdims=True"
+145,"    history,","143: 
+144: def predict_constant_velocity(
+145:     history,
+146:     future_length,
+147:     fps=10"
+146,"    future_length,","144: def predict_constant_velocity(
+145:     history,
+146:     future_length,
+147:     fps=10
+148: ):"
+152,"            history,","150:     velocity = (
+151:         estimate_velocity_linear_regression(
+152:             history,
+153:             fps
+154:         )"
+158,    future_times = (,"156: 
+157: 
+158:     future_times = (
+159: 
+160:         np.arange("
+162,"            future_length + 1,","160:         np.arange(
+161:             1,
+162:             future_length + 1,
+163:             dtype=np.float64
+164:         )"
+176,"        history[-1][None, :]","174:     prediction = (
+175: 
+176:         history[-1][None, :]
+177: 
+178:         +"
+180,"        future_times[:, None]","178:         +
+179: 
+180:         future_times[:, None]
+181:         *
+182:         velocity[None, :]"
+190,# STATIONARY BASELINE,"188: 
+189: # ============================================================
+190: # STATIONARY BASELINE
+191: # ============================================================
+192: "
+193,def predict_stationary(,"191: # ============================================================
+192: 
+193: def predict_stationary(
+194:     history,
+195:     future_length"
+194,"    history,","192: 
+193: def predict_stationary(
+194:     history,
+195:     future_length
+196: ):"
+195,    future_length,"193: def predict_stationary(
+194:     history,
+195:     future_length
+196: ):
+197: "
+200,"        history[-1:, :],","198:     return np.repeat(
+199: 
+200:         history[-1:, :],
+201: 
+202:         future_length,"
+202,"        future_length,","200:         history[-1:, :],
+201: 
+202:         future_length,
+203: 
+204:         axis=0"
+254,    corrected_value,"252: def safe_improvement(
+253:     raw_value,
+254:     corrected_value
+255: ):
+256: "
+279,            corrected_value,"277:             raw_value
+278:             -
+279:             corrected_value
+280:         )
+281: "
+395,    future_raw,"393:     track_lookup,
+394:     row,
+395:     future_raw
+396: ):
+397: "
+441,    future_end = int(,"439: 
+440: 
+441:     future_end = int(
+442:         row[
+443:             ""future_end_frame"""
+443,"            ""future_end_frame""","441:     future_end = int(
+442:         row[
+443:             ""future_end_frame""
+444:         ]
+445:     )"
+452,            future_end + 1,"450:         range(
+451:             start_frame,
+452:             future_end + 1
+453:         )
+454:     )"
+485,"                ""cx_n"",","483: 
+484:             [
+485:                 ""cx_n"",
+486:                 ""cy_n""
+487:             ]"
+486,"                ""cy_n""","484:             [
+485:                 ""cx_n"",
+486:                 ""cy_n""
+487:             ]
+488:         ]"
+502,        future_raw,"500:         +
+501: 
+502:         future_raw
+503:     )
+504: "
+519,    history_raw = (,"517: 
+518: 
+519:     history_raw = (
+520:         raw[
+521:             :OBS_RAW"
+526,    future_raw_array = (,"524: 
+525: 
+526:     future_raw_array = (
+527:         raw[
+528:             OBS_RAW:"
+538,    history_10hz = (,"536:     # --------------------------------------------
+537: 
+538:     history_10hz = (
+539: 
+540:         history_raw["
+540,        history_raw[,"538:     history_10hz = (
+539: 
+540:         history_raw[
+541:             ::DOWNSAMPLE
+542:         ]"
+546,    future_10hz = (,"544: 
+545: 
+546:     future_10hz = (
+547: 
+548:         future_raw_array["
+548,        future_raw_array[,"546:     future_10hz = (
+547: 
+548:         future_raw_array[
+549:             ::DOWNSAMPLE
+550:         ]"
+555,"        history_10hz,","553: 
+554:     return (
+555:         history_10hz,
+556:         future_10hz
+557:     )"
+556,        future_10hz,"554:     return (
+555:         history_10hz,
+556:         future_10hz
+557:     )
+558: "
+565,"    history,","563: 
+564: def evaluate_representation(
+565:     history,
+566:     future,
+567:     model_name"
+566,"    future,","564: def evaluate_representation(
+565:     history,
+566:     future,
+567:     model_name
+568: ):"
+570,"    if model_name == ""Stationary"":","568: ):
+569: 
+570:     if model_name == ""Stationary"":
+571: 
+572:         prediction = ("
+573,            predict_stationary(,"571: 
+572:         prediction = (
+573:             predict_stationary(
+574:                 history,
+575:                 len("
+574,"                history,","572:         prediction = (
+573:             predict_stationary(
+574:                 history,
+575:                 len(
+576:                     future"
+576,                    future,"574:                 history,
+575:                 len(
+576:                     future
+577:                 )
+578:             )"
+582,"    elif model_name == ""ConstantVelocity"":","580: 
+581: 
+582:     elif model_name == ""ConstantVelocity"":
+583: 
+584:         prediction = ("
+587,"                history,","585:             predict_constant_velocity(
+586: 
+587:                 history,
+588: 
+589:                 len("
+590,                    future,"588: 
+589:                 len(
+590:                     future
+591:                 ),
+592: "
+607,        future,"605:     return metrics(
+606:         prediction,
+607:         future
+608:     )
+609: "
+636,"            ""raw uncorrected trajectories.""","634:             f""{cleaned_path}\n\n""
+635:             ""This file is required for ""
+636:             ""raw uncorrected trajectories.""
+637:         )
+638: "
+718,"            f""corrected_windows_{task}.csv""","716: 
+717:             CORR_DIR /
+718:             f""corrected_windows_{task}.csv""
+719:         )
+720: "
+722,        corrected_npz_path = (,"720: 
+721: 
+722:         corrected_npz_path = (
+723: 
+724:             CORR_DIR /"
+725,"            f""corrected_{task}.npz""","723: 
+724:             CORR_DIR /
+725:             f""corrected_{task}.npz""
+726:         )
+727: "
+736,        if not corrected_npz_path.exists():,"734: 
+735: 
+736:         if not corrected_npz_path.exists():
+737: 
+738:             raise FileNotFoundError("
+739,                corrected_npz_path,"737: 
+738:             raise FileNotFoundError(
+739:                 corrected_npz_path
+740:             )
+741: "
+744,        # LOAD CORRECTED METADATA,"742: 
+743:         # ----------------------------------------------------
+744:         # LOAD CORRECTED METADATA
+745:         # ----------------------------------------------------
+746: "
+766,        # LOAD CORRECTED TRAJECTORY ARRAYS,"764: 
+765:         # ----------------------------------------------------
+766:         # LOAD CORRECTED TRAJECTORY ARRAYS
+767:         # ----------------------------------------------------
+768: "
+770,            corrected_npz_path,"768: 
+769:         arrays = np.load(
+770:             corrected_npz_path
+771:         )
+772: "
+774,        corrected_history_all = (,"772: 
+773: 
+774:         corrected_history_all = (
+775: 
+776:             arrays["
+777,"                ""history""","775: 
+776:             arrays[
+777:                 ""history""
+778:             ]
+779:         )"
+782,        corrected_future_all = (,"780: 
+781: 
+782:         corrected_future_all = (
+783: 
+784:             arrays["
+785,"                ""future""","783: 
+784:             arrays[
+785:                 ""future""
+786:             ]
+787:         )"
+901,                    corrected_history_all,"899:                 >=
+900:                 len(
+901:                     corrected_history_all
+902:                 )
+903:             ):"
+918,"                raw_history,","916: 
+917:             (
+918:                 raw_history,
+919:                 raw_future
+920:             ) = extract_raw_window("
+919,                raw_future,"917:             (
+918:                 raw_history,
+919:                 raw_future
+920:             ) = extract_raw_window(
+921: "
+927,"                    ""future_raw""","925: 
+926:                 config[
+927:                     ""future_raw""
+928:                 ]
+929:             )"
+933,            # CORRECTED TRAJECTORY,"931: 
+932:             # ------------------------------------------------
+933:             # CORRECTED TRAJECTORY
+934:             # ------------------------------------------------
+935: "
+936,            corrected_history = (,"934:             # ------------------------------------------------
+935: 
+936:             corrected_history = (
+937: 
+938:                 np.asarray("
+940,                    corrected_history_all[,"938:                 np.asarray(
+939: 
+940:                     corrected_history_all[
+941:                         sample_id,
+942:                         :,"
+955,            corrected_future = (,"953: 
+954: 
+955:             corrected_future = (
+956: 
+957:                 np.asarray("
+959,                    corrected_future_all[,"957:                 np.asarray(
+958: 
+959:                     corrected_future_all[
+960:                         sample_id,
+961:                         :,"
+978,            if raw_history.shape != (,"976:             # ------------------------------------------------
+977: 
+978:             if raw_history.shape != (
+979:                 20,
+980:                 2"
+979,"                20,","977: 
+978:             if raw_history.shape != (
+979:                 20,
+980:                 2
+981:             ):"
+985,"                    f""Raw history shape ""","983:                 raise ValueError(
+984: 
+985:                     f""Raw history shape ""
+986:                     f""{raw_history.shape} ""
+987:                     f""for {task}"""
+986,"                    f""{raw_history.shape} ""","984: 
+985:                     f""Raw history shape ""
+986:                     f""{raw_history.shape} ""
+987:                     f""for {task}""
+988:                 )"
+991,            if corrected_history.shape != (,"989: 
+990: 
+991:             if corrected_history.shape != (
+992:                 20,
+993:                 2"
+992,"                20,","990: 
+991:             if corrected_history.shape != (
+992:                 20,
+993:                 2
+994:             ):"
+998,"                    f""Corrected history shape ""","996:                 raise ValueError(
+997: 
+998:                     f""Corrected history shape ""
+999:                     f""{corrected_history.shape}""
+1000:                 )"
+999,"                    f""{corrected_history.shape}""","997: 
+998:                     f""Corrected history shape ""
+999:                     f""{corrected_history.shape}""
+1000:                 )
+1001: "
+1003,            expected_future_shape = (,"1001: 
+1002: 
+1003:             expected_future_shape = (
+1004: 
+1005:                 config["
+1006,"                    ""future_10hz""","1004: 
+1005:                 config[
+1006:                     ""future_10hz""
+1007:                 ],
+1008: "
+1013,            if raw_future.shape != (,"1011: 
+1012: 
+1013:             if raw_future.shape != (
+1014:                 expected_future_shape
+1015:             ):"
+1014,                expected_future_shape,"1012: 
+1013:             if raw_future.shape != (
+1014:                 expected_future_shape
+1015:             ):
+1016: "
+1019,"                    f""Raw future shape ""","1017:                 raise ValueError(
+1018: 
+1019:                     f""Raw future shape ""
+1020:                     f""{raw_future.shape} ""
+1021:                     f""expected """
+1020,"                    f""{raw_future.shape} ""","1018: 
+1019:                     f""Raw future shape ""
+1020:                     f""{raw_future.shape} ""
+1021:                     f""expected ""
+1022:                     f""{expected_future_shape}"""
+1022,"                    f""{expected_future_shape}""","1020:                     f""{raw_future.shape} ""
+1021:                     f""expected ""
+1022:                     f""{expected_future_shape}""
+1023:                 )
+1024: "
+1026,            if corrected_future.shape != (,"1024: 
+1025: 
+1026:             if corrected_future.shape != (
+1027:                 expected_future_shape
+1028:             ):"
+1027,                expected_future_shape,"1025: 
+1026:             if corrected_future.shape != (
+1027:                 expected_future_shape
+1028:             ):
+1029: "
+1032,"                    f""Corrected future shape ""","1030:                 raise ValueError(
+1031: 
+1032:                     f""Corrected future shape ""
+1033:                     f""{corrected_future.shape} ""
+1034:                     f""expected """
+1033,"                    f""{corrected_future.shape} ""","1031: 
+1032:                     f""Corrected future shape ""
+1033:                     f""{corrected_future.shape} ""
+1034:                     f""expected ""
+1035:                     f""{expected_future_shape}"""
+1035,"                    f""{expected_future_shape}""","1033:                     f""{corrected_future.shape} ""
+1034:                     f""expected ""
+1035:                     f""{expected_future_shape}""
+1036:                 )
+1037: "
+1058,"                ""track_key"":","1056:                     ),
+1057: 
+1058:                 ""track_key"":
+1059:                     str(
+1060:                         row["
+1085,"                ""future_end_frame"":","1083:                     ),
+1084: 
+1085:                 ""future_end_frame"":
+1086:                     int(
+1087:                         row["
+1088,"                            ""future_end_frame""","1086:                     int(
+1087:                         row[
+1088:                             ""future_end_frame""
+1089:                         ]
+1090:                     ),"
+1107,"                ""Stationary"",","1105:             for model_name in [
+1106: 
+1107:                 ""Stationary"",
+1108:                 ""ConstantVelocity""
+1109: "
+1108,"                ""ConstantVelocity""","1106: 
+1107:                 ""Stationary"",
+1108:                 ""ConstantVelocity""
+1109: 
+1110:             ]:"
+1118,"                    raw_history,","1116:                 ) = evaluate_representation(
+1117: 
+1118:                     raw_history,
+1119: 
+1120:                     raw_future,"
+1120,"                    raw_future,","1118:                     raw_history,
+1119: 
+1120:                     raw_future,
+1121: 
+1122:                     model_name"
+1127,"                    corrected_ADE,","1125: 
+1126:                 (
+1127:                     corrected_ADE,
+1128:                     corrected_FDE
+1129:                 ) = evaluate_representation("
+1128,                    corrected_FDE,"1126:                 (
+1127:                     corrected_ADE,
+1128:                     corrected_FDE
+1129:                 ) = evaluate_representation(
+1130: "
+1131,"                    corrected_history,","1129:                 ) = evaluate_representation(
+1130: 
+1131:                     corrected_history,
+1132: 
+1133:                     corrected_future,"
+1133,"                    corrected_future,","1131:                     corrected_history,
+1132: 
+1133:                     corrected_future,
+1134: 
+1135:                     model_name"
+1157,"                    ""corrected_ADE"":","1155:                         raw_FDE,
+1156: 
+1157:                     ""corrected_ADE"":
+1158:                         corrected_ADE,
+1159: "
+1158,"                        corrected_ADE,","1156: 
+1157:                     ""corrected_ADE"":
+1158:                         corrected_ADE,
+1159: 
+1160:                     ""corrected_FDE"":"
+1160,"                    ""corrected_FDE"":","1158:                         corrected_ADE,
+1159: 
+1160:                     ""corrected_FDE"":
+1161:                         corrected_FDE,
+1162: "
+1161,"                        corrected_FDE,","1159: 
+1160:                     ""corrected_FDE"":
+1161:                         corrected_FDE,
+1162: 
+1163:                     ""ADE_improvement_pct"":"
+1168,                            corrected_ADE,"1166:                             raw_ADE,
+1167: 
+1168:                             corrected_ADE
+1169:                         ),
+1170: "
+1176,                            corrected_FDE,"1174:                             raw_FDE,
+1175: 
+1176:                             corrected_FDE
+1177:                         )
+1178:                 })"
+1198,"        ""raw_vs_corrected_sample_metrics.csv"",","1196: 
+1197:         OUT /
+1198:         ""raw_vs_corrected_sample_metrics.csv"",
+1199: 
+1200:         index=False"
+1237,"                    ""track_key""","1235:             ""tracks"":
+1236:                 group[
+1237:                     ""track_key""
+1238:                 ]
+1239:                 .nunique(),"
+1260,"            ""corrected_mean_ADE"":","1258:                 ),
+1259: 
+1260:             ""corrected_mean_ADE"":
+1261:                 float(
+1262:                     group["
+1263,"                        ""corrected_ADE""","1261:                 float(
+1262:                     group[
+1263:                         ""corrected_ADE""
+1264:                     ]
+1265:                     .mean()"
+1276,"            ""corrected_mean_FDE"":","1274:                 ),
+1275: 
+1276:             ""corrected_mean_FDE"":
+1277:                 float(
+1278:                     group["
+1279,"                        ""corrected_FDE""","1277:                 float(
+1278:                     group[
+1279:                         ""corrected_FDE""
+1280:                     ]
+1281:                     .mean()"
+1294,"                    ""track_key"",","1292:                     group,
+1293: 
+1294:                     ""track_key"",
+1295: 
+1296:                     ""raw_ADE"""
+1299,"            ""corrected_track_macro_ADE"":","1297:                 ),
+1298: 
+1299:             ""corrected_track_macro_ADE"":
+1300:                 macro_average(
+1301: "
+1304,"                    ""track_key"",","1302:                     group,
+1303: 
+1304:                     ""track_key"",
+1305: 
+1306:                     ""corrected_ADE"""
+1306,"                    ""corrected_ADE""","1304:                     ""track_key"",
+1305: 
+1306:                     ""corrected_ADE""
+1307:                 ),
+1308: "
+1314,"                    ""track_key"",","1312:                     group,
+1313: 
+1314:                     ""track_key"",
+1315: 
+1316:                     ""raw_FDE"""
+1319,"            ""corrected_track_macro_FDE"":","1317:                 ),
+1318: 
+1319:             ""corrected_track_macro_FDE"":
+1320:                 macro_average(
+1321: "
+1324,"                    ""track_key"",","1322:                     group,
+1323: 
+1324:                     ""track_key"",
+1325: 
+1326:                     ""corrected_FDE"""
+1326,"                    ""corrected_FDE""","1324:                     ""track_key"",
+1325: 
+1326:                     ""corrected_FDE""
+1327:                 ),
+1328: "
+1344,"            ""corrected_source_macro_ADE"":","1342:                 ),
+1343: 
+1344:             ""corrected_source_macro_ADE"":
+1345:                 macro_average(
+1346: "
+1351,"                    ""corrected_ADE""","1349:                     ""sequence"",
+1350: 
+1351:                     ""corrected_ADE""
+1352:                 ),
+1353: "
+1364,"            ""corrected_source_macro_FDE"":","1362:                 ),
+1363: 
+1364:             ""corrected_source_macro_FDE"":
+1365:                 macro_average(
+1366: "
+1371,"                    ""corrected_FDE""","1369:                     ""sequence"",
+1370: 
+1371:                     ""corrected_FDE""
+1372:                 ),
+1373: "
+1410,"                ""corrected_mean_ADE""","1408: 
+1409:             summary_row[
+1410:                 ""corrected_mean_ADE""
+1411:             ]
+1412:         )"
+1424,"                ""corrected_mean_FDE""","1422: 
+1423:             summary_row[
+1424:                 ""corrected_mean_FDE""
+1425:             ]
+1426:         )"
+1438,"                ""corrected_track_macro_ADE""","1436: 
+1437:             summary_row[
+1438:                 ""corrected_track_macro_ADE""
+1439:             ]
+1440:         )"
+1452,"                ""corrected_track_macro_FDE""","1450: 
+1451:             summary_row[
+1452:                 ""corrected_track_macro_FDE""
+1453:             ]
+1454:         )"
+1466,"                ""corrected_source_macro_ADE""","1464: 
+1465:             summary_row[
+1466:                 ""corrected_source_macro_ADE""
+1467:             ]
+1468:         )"
+1480,"                ""corrected_source_macro_FDE""","1478: 
+1479:             summary_row[
+1480:                 ""corrected_source_macro_FDE""
+1481:             ]
+1482:         )"
+1523,"                        ""track_key""","1521:                 ""tracks"":
+1522:                     seq_group[
+1523:                         ""track_key""
+1524:                     ]
+1525:                     .nunique(),"
+1535,"                ""corrected_ADE"":","1533:                     ),
+1534: 
+1535:                 ""corrected_ADE"":
+1536:                     float(
+1537:                         seq_group["
+1538,"                            ""corrected_ADE""","1536:                     float(
+1537:                         seq_group[
+1538:                             ""corrected_ADE""
+1539:                         ]
+1540:                         .mean()"
+1551,"                ""corrected_FDE"":","1549:                     ),
+1550: 
+1551:                 ""corrected_FDE"":
+1552:                     float(
+1553:                         seq_group["
+1554,"                            ""corrected_FDE""","1552:                     float(
+1553:                         seq_group[
+1554:                             ""corrected_FDE""
+1555:                         ]
+1556:                         .mean()"
+1570,"                    ""corrected_ADE""","1568: 
+1569:                 seq_row[
+1570:                     ""corrected_ADE""
+1571:                 ]
+1572:             )"
+1584,"                    ""corrected_FDE""","1582: 
+1583:                 seq_row[
+1584:                     ""corrected_FDE""
+1585:                 ]
+1586:             )"
+1611,"        ""raw_vs_corrected_summary.csv"",","1609: 
+1610:         OUT /
+1611:         ""raw_vs_corrected_summary.csv"",
+1612: 
+1613:         index=False"
+1620,"        ""raw_vs_corrected_per_sequence.csv"",","1618: 
+1619:         OUT /
+1620:         ""raw_vs_corrected_per_sequence.csv"",
+1621: 
+1622:         index=False"
+1644,"            ""STEP 2B: RAW VS EGO-MOTION-CORRECTED ""","1642:         file.write(
+1643: 
+1644:             ""STEP 2B: RAW VS EGO-MOTION-CORRECTED ""
+1645:             ""FORECASTING ABLATION\n""
+1646:         )"
+1664,"            ""in raw and corrected representations.\n""","1662: 
+1663:             ""- Same BIRDSAI TestReal core windows ""
+1664:             ""in raw and corrected representations.\n""
+1665:         )
+1666: "
+1678,"            ""- Corrected tracks come from ""","1676:         file.write(
+1677: 
+1678:             ""- Corrected tracks come from ""
+1679:             ""corrected_*.npz after ""
+1680:             ""ego-motion compensation.\n"""
+1679,"            ""corrected_*.npz after ""","1677: 
+1678:             ""- Corrected tracks come from ""
+1679:             ""corrected_*.npz after ""
+1680:             ""ego-motion compensation.\n""
+1681:         )"
+1693,"            ""- Stationary and Constant-Velocity ""","1691:         file.write(
+1692: 
+1693:             ""- Stationary and Constant-Velocity ""
+1694:             ""require no retraining, so this is a ""
+1695:             ""clean representation-level ablation.\n"""
+1702,"            ""corrected trajectory has lower ""","1700: 
+1701:             ""- Positive improvement means ""
+1702:             ""corrected trajectory has lower ""
+1703:             ""forecasting error.\n\n""
+1704:         )"
+1763,"        ""corrected_mean_ADE"",","1761:         ""raw_mean_ADE"",
+1762: 
+1763:         ""corrected_mean_ADE"",
+1764: 
+1765:         ""ADE_improvement_pct"","
+1769,"        ""corrected_mean_FDE"",","1767:         ""raw_mean_FDE"",
+1768: 
+1769:         ""corrected_mean_FDE"",
+1770: 
+1771:         ""FDE_improvement_pct"","
+1775,"        ""corrected_track_macro_ADE"",","1773:         ""raw_track_macro_ADE"",
+1774: 
+1775:         ""corrected_track_macro_ADE"",
+1776: 
+1777:         ""track_macro_ADE_improvement_pct"""

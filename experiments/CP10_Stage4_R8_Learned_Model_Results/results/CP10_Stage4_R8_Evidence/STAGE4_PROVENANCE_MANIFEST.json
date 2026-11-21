@@ -1,0 +1,112 @@
+{
+  "input_zip_hashes": [
+    {
+      "source_basename": "CP10_Stage4_R8_Raw_Pairing.zip",
+      "size": 1290867,
+      "sha256": "a4379dfadf8b8804d1d1d41fc60ab2b17aeaad1f8559f5d4ab5d65905973e2c0"
+    },
+    {
+      "source_basename": "CP10_Stage3_R8_Matched_Data.zip",
+      "size": 7815448,
+      "sha256": "1718ca714eb1a5492c4b2ea1911f7d83cc54cd588ef97a6ae3e147018e723f59"
+    },
+    {
+      "source_basename": "All Python Code.zip",
+      "size": 1456126,
+      "sha256": "d802d819ddf757849acffe4241dfb5144bdf45d054f095dff4c247581db2071d"
+    }
+  ],
+  "python": "3.13.5",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "torch": "2.10.0+cpu",
+    "numba": "0.65.1",
+    "matplotlib": "3.10.8"
+  },
+  "paired_provenance": {
+    "method": "Original window-start affine correction; raw future predictions projected to same corrected target with per-future-frame maps; evaluation only",
+    "pairs": [
+      {
+        "task": "2s_to_2s",
+        "partition": "trainval",
+        "n": 531,
+        "rebuild_max": 5.955471293894732e-08,
+        "raw_to_corrected_max": 1.7881393432617188e-07,
+        "sources": 3,
+        "tracks": 62
+      },
+      {
+        "task": "2s_to_2s",
+        "partition": "test",
+        "n": 1053,
+        "rebuild_max": 5.959189319781899e-08,
+        "raw_to_corrected_max": 1.1920928955078125e-07,
+        "sources": 6,
+        "tracks": 89
+      },
+      {
+        "task": "2s_to_5s",
+        "partition": "trainval",
+        "n": 382,
+        "rebuild_max": 2.9801507706039843e-08,
+        "raw_to_corrected_max": 2.384185791015625e-07,
+        "sources": 2,
+        "tracks": 34
+      },
+      {
+        "task": "2s_to_5s",
+        "partition": "test",
+        "n": 826,
+        "rebuild_max": 5.959189319781899e-08,
+        "raw_to_corrected_max": 1.1920928955078125e-07,
+        "sources": 5,
+        "tracks": 63
+      }
+    ],
+    "width_height_by_sequence": {
+      "test_real/0000000055_0000000000": [
+        697,
+        517
+      ],
+      "test_real/0000000058_0000000000": [
+        698,
+        518
+      ],
+      "test_real/0000000349_0000000000": [
+        637,
+        420
+      ],
+      "test_real/0000000352_0000000000": [
+        582,
+        378
+      ],
+      "test_real/0000000353_0000000000": [
+        582,
+        377
+      ],
+      "test_real/0000000357_0000000000": [
+        698,
+        333
+      ],
+      "train_real/0000000010_0000000000": [
+        698,
+        519
+      ],
+      "train_real/0000000351_0000000000": [
+        840,
+        398
+      ],
+      "train_real/0000000367_0000000000": [
+        700,
+        321
+      ]
+    },
+    "future_transform_use": "For retrospective evaluation only; raw model does not receive future camera transforms",
+    "note": "This is an affine-motion model reconstructed from originally saved estimates, not exact 3D camera-pose geometry."
+  },
+  "analysis": {
+    "input_only": "matched corrected future target, raw vs corrected history, three seeds",
+    "full_representation": "raw to raw vs corrected to corrected, mapped to common frame only for retrospective evaluation"
+  }
+}

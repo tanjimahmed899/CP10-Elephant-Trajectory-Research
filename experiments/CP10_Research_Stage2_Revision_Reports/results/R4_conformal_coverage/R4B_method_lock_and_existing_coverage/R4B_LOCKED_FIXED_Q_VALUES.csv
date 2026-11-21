@@ -1,0 +1,5 @@
+task,alpha,target_coverage,calibration_tracks,q_fixed_step6c,order_statistic_k,calibration_track_simultaneous_coverage,q_match_expected
+2s_to_2s,0.1,0.9,62,2.158767888280567,57,0.9193548387096774,True
+2s_to_2s,0.05,0.95,62,2.560772554862189,60,0.967741935483871,True
+2s_to_5s,0.1,0.9,34,1.975129668255982,32,0.9411764705882352,True
+2s_to_5s,0.05,0.95,34,2.950976253259077,34,1.0,True

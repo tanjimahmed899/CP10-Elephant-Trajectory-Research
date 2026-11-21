@@ -1,0 +1,6 @@
+task,heldout_source,train_rows,train_positives,train_negatives,train_has_both_classes
+2s_to_2s,0000000010_0000000000,558,23,535,True
+2s_to_2s,0000000351_0000000000,570,22,548,True
+2s_to_2s,0000000367_0000000000,36,1,35,True
+2s_to_5s,0000000010_0000000000,522,26,496,True
+2s_to_5s,0000000367_0000000000,6,0,6,False

@@ -1,0 +1,309 @@
+file,path,line_number,category,line
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,51,architecture,D_MODEL = 64
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,53,architecture,NHEAD = 4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,55,architecture,NUM_LAYERS = 2
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,57,architecture,DIM_FEEDFORWARD = 128
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,59,architecture,DROPOUT = 0.10
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,61,optimizer_scheduler,LEARNING_RATE = 5e-4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,63,optimizer_scheduler,WEIGHT_DECAY = 1e-4
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,67,validation_selection,PATIENCE = 30
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,78,seeding,def set_seed(seed):
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,80,seeding,    random.seed(seed)
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,82,seeding,    np.random.seed(seed)
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,84,seeding,    torch.manual_seed(seed)
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,102,loss_and_weighting,        weights
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,115,loss_and_weighting,        self.weights = torch.tensor(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,116,loss_and_weighting,"            weights,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,133,loss_and_weighting,            self.weights[index]
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,145,architecture,"        d_model,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,154,architecture,            d_model
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,170,architecture,"                d_model,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,179,architecture,                d_model
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,224,architecture,class TrajectoryTransformer(nn.Module):
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,236,architecture,            D_MODEL
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,241,architecture,"            D_MODEL,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,249,architecture,"                d_model=D_MODEL,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,251,architecture,"                nhead=NHEAD,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,253,architecture,"                dim_feedforward=DIM_FEEDFORWARD,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,255,architecture,"                dropout=DROPOUT,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,270,architecture,            num_layers=NUM_LAYERS
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,275,architecture,            D_MODEL
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,282,architecture,"                D_MODEL,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,283,architecture,                D_MODEL
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,288,architecture,            nn.Dropout(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,289,architecture,                DROPOUT
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,293,architecture,"                D_MODEL,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,352,loss_and_weighting,def weighted_smooth_l1(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,355,loss_and_weighting,    weights
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,359,loss_and_weighting,    element_loss = (
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,372,loss_and_weighting,    sample_loss = element_loss.mean(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,382,loss_and_weighting,            weights
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,386,loss_and_weighting,        weights.sum()
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,559,dataset_and_split,"            ""track_key"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,574,dataset_and_split,"                ""track_key"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,633,validation_selection,"        ""ADE_track_macro"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,640,validation_selection,"        ""FDE_track_macro"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,670,validation_selection,# VALIDATION
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,673,validation_selection,def validation_metric(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,719,validation_selection,"            ""ADE_track_macro"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,727,seeding,# TRAIN ONE SEED
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,732,seeding,    seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,737,seeding,        seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,747,seeding,"        ""| Transformer | seed"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,748,seeding,        seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,759,dataset_and_split,"        f""{task}_birdsai_trainval_canonical.npz"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,767,dataset_and_split,"        f""{task}_birdsai_trainval_metadata.csv"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,783,dataset_and_split,"            ""track_key"": str"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,794,validation_selection,"        ""validation_indices"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,798,loss_and_weighting,    weights = arrays[
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,799,loss_and_weighting,"        ""train_sample_weights"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,889,loss_and_weighting,            weights
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,896,seeding,    generator.manual_seed(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,897,seeding,        seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,920,architecture,    model = TrajectoryTransformer(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,929,optimizer_scheduler,    optimizer = torch.optim.AdamW(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,933,optimizer_scheduler,"        lr=LEARNING_RATE,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,935,optimizer_scheduler,        weight_decay=WEIGHT_DECAY
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,939,optimizer_scheduler,    scheduler = (
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,941,optimizer_scheduler,        torch.optim.lr_scheduler
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,942,optimizer_scheduler,        .ReduceLROnPlateau(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,950,validation_selection,"            patience=10,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,957,validation_selection,    best_metric = float(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,962,validation_selection,    best_epoch = 0
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,966,validation_selection,    no_improvement = 0
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1013,loss_and_weighting,            loss = weighted_smooth_l1(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1044,loss_and_weighting,        train_loss = float(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1052,validation_selection,            validation_metric(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1071,optimizer_scheduler,        scheduler.step(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1084,seeding,"            ""seed"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1085,seeding,"                seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1093,validation_selection,"            ""validation_ADE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1098,validation_selection,"            ""validation_FDE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1103,validation_selection,"            ""validation_track_macro_ADE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1105,validation_selection,"                    ""ADE_track_macro"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1108,validation_selection,"            ""validation_track_macro_FDE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1110,validation_selection,"                    ""FDE_track_macro"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1113,optimizer_scheduler,"            ""learning_rate"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1127,validation_selection,            best_metric
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1134,validation_selection,            best_metric = (
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1139,validation_selection,            best_epoch = (
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1145,checkpoint,                model.state_dict()
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1149,validation_selection,            no_improvement = 0
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1155,validation_selection,            no_improvement += 1
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1172,loss_and_weighting,"                f""loss={train_loss:.6f} | """
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1174,validation_selection,"                f""best={best_metric:.6f}"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1179,validation_selection,        if no_improvement >= PATIENCE:
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1184,validation_selection,"                ""Early stopping at epoch"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1192,checkpoint,    model.load_state_dict(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1197,checkpoint,    torch.save(
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1200,checkpoint,"            ""state_dict"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1206,seeding,"            ""seed"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1207,seeding,"                seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1209,validation_selection,"            ""best_epoch"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1210,validation_selection,"                best_epoch,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1212,validation_selection,"            ""best_validation_track_macro_ADE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1212,checkpoint,"            ""best_validation_track_macro_ADE"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1213,validation_selection,"                best_metric,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1215,architecture,"            ""d_model"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1216,architecture,"                D_MODEL,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1218,architecture,"            ""nhead"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1219,architecture,"                NHEAD,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1221,architecture,"            ""num_layers"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1222,architecture,"                NUM_LAYERS,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1224,architecture,"            ""dim_feedforward"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1225,architecture,"                DIM_FEEDFORWARD,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1227,architecture,"            ""dropout"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1228,architecture,                DROPOUT
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1232,seeding,"        f""{task}_Transformer_seed{seed}.pt"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1232,checkpoint,"        f""{task}_Transformer_seed{seed}.pt"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1244,validation_selection,        best_epoch
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1259,seeding,"    seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1260,validation_selection,    best_epoch
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1275,dataset_and_split,"            ""track_key"": str"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1340,seeding,"            f""Transformer_seed{seed}_predictions.npz"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1363,dataset_and_split,"            ""track_key"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1403,seeding,"        ""seed"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1404,seeding,    ] = seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1421,seeding,"        ""seed"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1422,seeding,"            seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1424,validation_selection,"        ""best_epoch"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1425,validation_selection,"            best_epoch,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1434,dataset_and_split,"                ""track_key"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1452,validation_selection,"        ""ADE_track_macro"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1454,validation_selection,"                ""ADE_track_macro"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1457,validation_selection,"        ""FDE_track_macro"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1459,validation_selection,"                ""FDE_track_macro"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1494,seeding,    for seed in SEEDS:
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1500,validation_selection,            best_epoch
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1505,seeding,            seed
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1537,seeding,"            seed=seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1539,validation_selection,            best_epoch=
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1540,validation_selection,                best_epoch
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1576,seeding,"            seed=seed,"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1578,validation_selection,            best_epoch=
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1579,validation_selection,                best_epoch
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1594,seeding,# SAVE SEED RESULTS
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1652,seeding,# MULTI-SEED SUMMARY
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1659,validation_selection,"    ""ADE_track_macro"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1660,validation_selection,"    ""FDE_track_macro"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1705,validation_selection,"        ""mean_best_epoch"":"
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1707,validation_selection,"                ""best_epoch"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1763,seeding,"            ""seed"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1779,dataset_and_split,"            ""track_key"","
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1836,validation_selection,"        ""Validation: fixed track-disjoint TrainReal validation\n"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1840,validation_selection,"        ""Model selection: validation track-macro ADE\n"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1853,architecture,"        ""d_model=64, 4 heads, FFN=128.\n"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1904,validation_selection,"            f""{row['ADE_track_macro_mean']:.6f} ± """
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1905,validation_selection,"            f""{row['ADE_track_macro_std']:.6f}\n"""
+train_transformer.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,1922,validation_selection,"            f""{row['mean_best_epoch']:.1f}\n\n"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,50,architecture,HIDDEN_SIZE = 64
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,52,architecture,NUM_LAYERS = 2
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,54,architecture,DROPOUT = 0.10
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,56,optimizer_scheduler,LEARNING_RATE = 1e-3
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,58,optimizer_scheduler,WEIGHT_DECAY = 1e-4
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,62,validation_selection,PATIENCE = 30
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,73,seeding,def set_seed(seed):
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,75,seeding,    random.seed(seed)
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,77,seeding,    np.random.seed(seed)
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,79,seeding,    torch.manual_seed(seed)
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,97,loss_and_weighting,        weights=None
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,110,loss_and_weighting,        if weights is None:
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,112,loss_and_weighting,            weights = np.ones(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,117,loss_and_weighting,        self.weights = torch.tensor(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,118,loss_and_weighting,"            weights,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,135,loss_and_weighting,            self.weights[index]
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,160,architecture,            self.encoder = nn.LSTM(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,164,architecture,"                hidden_size=HIDDEN_SIZE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,166,architecture,"                num_layers=NUM_LAYERS,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,170,architecture,                dropout=DROPOUT
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,176,architecture,            self.encoder = nn.GRU(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,180,architecture,"                hidden_size=HIDDEN_SIZE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,182,architecture,"                num_layers=NUM_LAYERS,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,186,architecture,                dropout=DROPOUT
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,200,architecture,"                HIDDEN_SIZE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,201,architecture,                HIDDEN_SIZE
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,207,architecture,"                HIDDEN_SIZE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,253,loss_and_weighting,def weighted_smooth_l1(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,256,loss_and_weighting,    weights
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,260,loss_and_weighting,    element_loss = nn.functional.smooth_l1_loss(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,272,loss_and_weighting,    sample_loss = element_loss.mean(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,281,loss_and_weighting,        weights
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,291,loss_and_weighting,        weights.sum()
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,432,dataset_and_split,"            ""track_key"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,470,dataset_and_split,"                ""track_key"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,559,validation_selection,"        ""ADE_track_macro"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,562,validation_selection,"        ""FDE_track_macro"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,647,validation_selection,# VALIDATION METRIC
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,650,validation_selection,def validation_track_macro_ADE(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,700,validation_selection,"            ""ADE_track_macro"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,714,seeding,    seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,718,seeding,        seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,729,seeding,"        ""seed"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,730,seeding,        seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,739,validation_selection,    # LOAD TRAIN / VALIDATION
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,745,dataset_and_split,"        f""{task}_birdsai_trainval_canonical.npz"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,753,dataset_and_split,"        f""{task}_birdsai_trainval_metadata.csv"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,769,dataset_and_split,"            ""track_key"": str"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,782,validation_selection,"        ""validation_indices"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,788,loss_and_weighting,    train_weights = arrays[
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,789,loss_and_weighting,"        ""train_sample_weights"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,883,loss_and_weighting,        train_weights
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,890,seeding,    generator.manual_seed(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,891,seeding,        seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,926,optimizer_scheduler,    optimizer = torch.optim.AdamW(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,930,optimizer_scheduler,"        lr=LEARNING_RATE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,932,optimizer_scheduler,        weight_decay=WEIGHT_DECAY
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,937,optimizer_scheduler,    scheduler = (
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,938,optimizer_scheduler,        torch.optim.lr_scheduler.ReduceLROnPlateau(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,946,validation_selection,"            patience=10,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,954,validation_selection,    best_metric = float(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,958,validation_selection,    best_epoch = 0
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,962,validation_selection,    patience_counter = 0
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1013,loss_and_weighting,            loss = weighted_smooth_l1(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1046,loss_and_weighting,        train_loss = float(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1054,validation_selection,        # TRACK-MACRO VALIDATION ADE
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1058,validation_selection,            validation_track_macro_ADE(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1078,optimizer_scheduler,        scheduler.step(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1083,optimizer_scheduler,        learning_rate = (
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1100,seeding,"            ""seed"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1101,seeding,"                seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1109,validation_selection,"            ""validation_ADE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1114,validation_selection,"            ""validation_FDE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1119,validation_selection,"            ""validation_track_macro_ADE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1121,validation_selection,"                    ""ADE_track_macro"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1124,validation_selection,"            ""validation_track_macro_FDE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1126,validation_selection,"                    ""FDE_track_macro"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1129,optimizer_scheduler,"            ""learning_rate"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1130,optimizer_scheduler,                learning_rate
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1139,validation_selection,            best_metric
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1146,validation_selection,            best_metric = (
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1151,validation_selection,            best_epoch = epoch
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1155,checkpoint,                model.state_dict()
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1159,validation_selection,            patience_counter = 0
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1165,validation_selection,            patience_counter += 1
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1182,loss_and_weighting,"                f""loss={train_loss:.6f} | """
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1186,validation_selection,"                f""{best_metric:.6f}"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1193,validation_selection,            patience_counter
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1195,validation_selection,            PATIENCE
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1202,validation_selection,"                ""Early stopping at epoch"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1214,checkpoint,    model.load_state_dict(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1222,seeding,"        f""{task}_{model_type}_seed{seed}.pt"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1222,checkpoint,"        f""{task}_{model_type}_seed{seed}.pt"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1227,checkpoint,    torch.save(
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1230,checkpoint,"            ""state_dict"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1239,seeding,"            ""seed"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1240,seeding,"                seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1242,validation_selection,"            ""best_epoch"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1243,validation_selection,"                best_epoch,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1245,validation_selection,"            ""best_validation_track_macro_ADE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1245,checkpoint,"            ""best_validation_track_macro_ADE"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1246,validation_selection,"                best_metric,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1248,architecture,"            ""hidden_size"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1249,architecture,"                HIDDEN_SIZE,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1251,architecture,"            ""num_layers"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1252,architecture,"                NUM_LAYERS,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1254,architecture,"            ""dropout"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1255,architecture,                DROPOUT
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1271,validation_selection,"        best_epoch,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1272,validation_selection,        best_metric
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1288,seeding,"    seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1289,validation_selection,    best_epoch
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1304,dataset_and_split,"            ""track_key"": str"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1374,dataset_and_split,"            ""track_key"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1414,seeding,"        ""seed"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1415,seeding,    ] = seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1427,seeding,"            f""{model_type}_seed{seed}_predictions.npz"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1461,seeding,"        ""seed"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1462,seeding,"            seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1464,validation_selection,"        ""best_epoch"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1465,validation_selection,"            best_epoch,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1474,dataset_and_split,"                ""track_key"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1492,validation_selection,"        ""ADE_track_macro"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1494,validation_selection,"                ""ADE_track_macro"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1497,validation_selection,"        ""FDE_track_macro"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1499,validation_selection,"                ""FDE_track_macro"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1537,seeding,        for seed in SEEDS:
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1543,validation_selection,"                best_epoch,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1544,validation_selection,                best_val
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1552,seeding,                seed
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1590,seeding,                    seed=
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1591,seeding,"                        seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1593,validation_selection,                    best_epoch=
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1594,validation_selection,                        best_epoch
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1638,seeding,                    seed=
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1639,seeding,"                        seed,"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1641,validation_selection,                    best_epoch=
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1642,validation_selection,                        best_epoch
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1681,seeding,# SAVE SEED-LEVEL RESULTS
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1728,validation_selection,"    ""ADE_track_macro"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1729,validation_selection,"    ""FDE_track_macro"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1773,validation_selection,"        ""mean_best_epoch"":"
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1775,validation_selection,"                ""best_epoch"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1831,seeding,"            ""seed"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1847,dataset_and_split,"            ""track_key"","
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1906,validation_selection,"        ""Validation: track-disjoint BIRDSAI """
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1907,validation_selection,"        ""TrainReal validation\n"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1911,validation_selection,"        ""Model selection metric: validation """
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1981,validation_selection,"            f""{row['ADE_track_macro_mean']:.6f} """
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,1983,validation_selection,"            f""{row['ADE_track_macro_std']:.6f}\n"""
+train_lstm_gru.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,2001,validation_selection,"            f""{row['mean_best_epoch']:.1f}\n\n"""

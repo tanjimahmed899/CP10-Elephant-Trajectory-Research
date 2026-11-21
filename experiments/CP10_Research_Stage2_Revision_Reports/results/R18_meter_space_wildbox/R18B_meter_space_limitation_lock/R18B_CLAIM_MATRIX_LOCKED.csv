@@ -1,0 +1,7 @@
+claim_id,claim,status,reason
+R18_C1,WildBox trajectories/results can be reported directly in meters.,REJECTED,No verified source-specific metric-scale anchor was found in any of the three WildBox sources.
+R18_C2,WildBox camera intrinsics/extrinsics alone establish metric distance.,REJECTED,"Camera geometry exists, but the reconstruction scale is not independently verified in physical units."
+R18_C3,Normalized/image-plane WildBox ADE/FDE may be converted to meters using an assumed altitude.,REJECTED,No measured or source-verified altitude/metric anchor was available; adding an assumed scale would create unsupported physical-error claims.
+R18_C4,WildBox supports external trajectory-forecasting evaluation in normalized/image space.,SUPPORTED,The existing frozen WildBox forecasting results remain valid in their original reported coordinate representation; R18 does not invalidate those results.
+R18_C5,Meter-space evaluation is a current limitation that should be disclosed in the paper.,SUPPORTED,All three sources contain camera geometry but zero verified metric-scale anchors.
+R18_C6,The available WildBox camera matrices may be described as world-ground-truth metric poses.,REJECTED,Available intrinsics/extrinsics do not prove metric world coordinates or a known physical scale.

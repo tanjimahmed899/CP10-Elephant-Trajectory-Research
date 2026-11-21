@@ -1,0 +1,67 @@
+{
+  "pass_count": 0,
+  "expected_count": 6,
+  "integrity_pass": false,
+  "records": [
+    {
+      "id": "exp3_01",
+      "repo_path": "elep1/DJI_20240119151437_0002_V.zip",
+      "exists": false,
+      "expected_sha256": "58dd9898a24ec1475557978cb32ffeb54bbf09c900343164afd639965b5bbdff",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    },
+    {
+      "id": "exp3_02",
+      "repo_path": "elep1/DJI_20240119151048_0001_V.zip",
+      "exists": false,
+      "expected_sha256": "a9df1fce74b4a9d8092ceda7ae3e324b3c3afc0d39dbabb21b305e589c5cd20f",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    },
+    {
+      "id": "exp3_03",
+      "repo_path": "elep2/DJI_20240626143443_0003_V.zip",
+      "exists": false,
+      "expected_sha256": "29321e407f8c371e148d77b21572bc6791fe3c3955f4a47be697ec14959504a5",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    },
+    {
+      "id": "exp3_04",
+      "repo_path": "elep2/DJI_20240626143248_0002_V.zip",
+      "exists": false,
+      "expected_sha256": "1aecf2ae18b7bf8fecaf2e253c4d0d4bc898e93e92d14971e9a884da4cce6f5d",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    },
+    {
+      "id": "exp3_05",
+      "repo_path": "elep3/DJI_20260227084724_0003_V.zip",
+      "exists": false,
+      "expected_sha256": "dbc6716792e347e355ce506ff131b7987fcc3e13f5f20cb5dcb32af84b643125",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    },
+    {
+      "id": "exp3_06",
+      "repo_path": "elep3/DJI_20260227082707_0003_V.zip",
+      "exists": false,
+      "expected_sha256": "c06f229bb74265418552c0c70dc88787646b72e037a6b4da5245c61f9d40fc84",
+      "size_match": false,
+      "hash_match": false,
+      "is_zip": false,
+      "pass": false
+    }
+  ]
+}

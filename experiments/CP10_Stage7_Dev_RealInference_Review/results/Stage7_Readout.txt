@@ -1,0 +1,26 @@
+STAGE 7 — Frozen detector development-only preflight
+Status: READY_TRAINREAL_DEV_ONLY
+Original R13 checkpoint match: True
+GT raw TrainReal sequences: 5; matching TrainReal frames: 120; GT boxes: 521
+TestReal images located: True (PROVENANCE ONLY; not read for tuning)
+TrainReal candidates:
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/annotations
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/images
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/annotations
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/annotations/tracking
+  /mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/annotations/tracking
+
+Matched TrainReal sequences:
+  0000000367_0000000000: 5094 matched GT frames
+  0000000010_0000000000: 342 matched GT frames
+  0000000054_0000000000: 234 matched GT frames
+  0000000351_0000000000: 141 matched GT frames
+  0000000056_0000000000: 133 matched GT frames
+
+If blocked: obtain/locate actual TrainReal image sequence directories and rerun preflight.
+Do not substitute R13 TestReal for development/tuning. Pilot makes no prediction yet.

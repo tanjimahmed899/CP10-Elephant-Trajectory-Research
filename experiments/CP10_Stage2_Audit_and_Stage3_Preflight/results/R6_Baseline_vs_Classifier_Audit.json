@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "BIRDSAI_TestReal",
+    "horizon": "2 s",
+    "nominal_recall_%": 30.2,
+    "classifier_recall_%": 77.25,
+    "nominal_FPR_%": 0.76,
+    "classifier_FPR_%": 5.05,
+    "nominal_F1": 0.407,
+    "classifier_F1": 0.52
+  },
+  {
+    "dataset": "BIRDSAI_TestReal",
+    "horizon": "5 s",
+    "nominal_recall_%": 24.74,
+    "classifier_recall_%": 60.68,
+    "nominal_FPR_%": 0.68,
+    "classifier_FPR_%": 7.39,
+    "nominal_F1": 0.373,
+    "classifier_F1": 0.488
+  },
+  {
+    "dataset": "WildBox_Fresh",
+    "horizon": "2 s",
+    "nominal_recall_%": 28.47,
+    "classifier_recall_%": 64.24,
+    "nominal_FPR_%": 0.51,
+    "classifier_FPR_%": 6.83,
+    "nominal_F1": 0.415,
+    "classifier_F1": 0.458
+  },
+  {
+    "dataset": "WildBox_Fresh",
+    "horizon": "5 s",
+    "nominal_recall_%": 19.36,
+    "classifier_recall_%": 52.52,
+    "nominal_FPR_%": 0.29,
+    "classifier_FPR_%": 9.46,
+    "nominal_F1": 0.317,
+    "classifier_F1": 0.44
+  }
+]

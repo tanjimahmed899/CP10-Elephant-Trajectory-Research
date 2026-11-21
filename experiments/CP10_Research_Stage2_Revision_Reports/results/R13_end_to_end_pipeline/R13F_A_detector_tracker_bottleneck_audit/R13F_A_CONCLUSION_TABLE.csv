@@ -1,0 +1,5 @@
+question,answer,evidence
+Raw detector count-only maximum recall,0.089231,4288 boxes vs 48055 GT
+Actual raw detector recall @ IoU=0.50,0.050588,"TP=2431, FN=45624"
+ByteTrack ID-assigned recall @ IoU=0.50,0.025929,1863 ID-assigned boxes
+BoT-SORT ID-assigned recall @ IoU=0.50,0.028030,1998 ID-assigned boxes

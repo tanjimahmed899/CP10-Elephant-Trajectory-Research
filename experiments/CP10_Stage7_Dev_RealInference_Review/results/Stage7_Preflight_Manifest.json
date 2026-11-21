@@ -1,0 +1,82 @@
+{
+  "status": "READY_TRAINREAL_DEV_ONLY",
+  "root": "/mnt/e/AIUB/Capstone Project/Journal Based Results",
+  "gt_csv": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/trajectory_dataset/cleaned_track_points.csv",
+  "gt_exists": true,
+  "checkpoint": {
+    "path": "/mnt/e/AIUB/Capstone Project/Final 1.0/Elephant Detection.v2-resized640.yolov8 (2)/Elephant Detection.v2-resized640.yolov8/runs/detect/elephant_final_clean/weights/best.pt",
+    "bytes": 6245610,
+    "sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+    "original_r13_checkpoint_match": true
+  },
+  "testreal_root_for_provenance_ONLY": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/images",
+  "testreal_exists": true,
+  "trainreal_candidate_roots": [
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/annotations",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/images",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/annotations",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_test_real/TestReal/annotations/tracking",
+    "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/annotations/tracking"
+  ],
+  "source_split_counts": {
+    "train_real": 42997,
+    "test_real": 48422
+  },
+  "GT_trainreal_sequence_count": 5,
+  "image_availability": [
+    {
+      "sequence": "0000000367_0000000000",
+      "raw_gt_frames": 5094,
+      "image_dir": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images/0000000367_0000000000",
+      "image_frames": 5448,
+      "paired_annotated_frames": 5094
+    },
+    {
+      "sequence": "0000000010_0000000000",
+      "raw_gt_frames": 342,
+      "image_dir": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images/0000000010_0000000000",
+      "image_frames": 354,
+      "paired_annotated_frames": 342
+    },
+    {
+      "sequence": "0000000054_0000000000",
+      "raw_gt_frames": 234,
+      "image_dir": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images/0000000054_0000000000",
+      "image_frames": 309,
+      "paired_annotated_frames": 234
+    },
+    {
+      "sequence": "0000000351_0000000000",
+      "raw_gt_frames": 141,
+      "image_dir": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images/0000000351_0000000000",
+      "image_frames": 142,
+      "paired_annotated_frames": 141
+    },
+    {
+      "sequence": "0000000056_0000000000",
+      "raw_gt_frames": 133,
+      "image_dir": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/conservation_drones_train_real/TrainReal/images/0000000056_0000000000",
+      "image_frames": 163,
+      "paired_annotated_frames": 133
+    }
+  ],
+  "dev_sequences": [
+    "0000000010_0000000000",
+    "0000000054_0000000000",
+    "0000000056_0000000000",
+    "0000000351_0000000000",
+    "0000000367_0000000000"
+  ],
+  "dev_frames": 120,
+  "dev_GT_boxes": 521,
+  "max_sequences": 6,
+  "frames_per_sequence": 24,
+  "selection_seed": 20261121,
+  "no_testreal_tuning": true,
+  "original_files_modified": false
+}

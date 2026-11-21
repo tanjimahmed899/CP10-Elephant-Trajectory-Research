@@ -1,0 +1,8 @@
+claim,status
+Historical forecasting results are end-to-end detector-to-warning results.,REJECTED
+The new R13 experiment may evaluate detector -> tracker -> forecasting -> warning propagation.,ALLOWED AFTER EXECUTION
+ByteTrack is the frozen primary tracker.,LOCKED
+BoT-SORT is a frozen sensitivity tracker.,LOCKED
+Tracker parameters may be tuned after viewing TestReal results.,REJECTED
+Interpolated trajectory points are used as primary tracking GT.,REJECTED
+"Tracking metrics must include HOTA, IDF1, ID-switches, and fragmentation.",LOCKED

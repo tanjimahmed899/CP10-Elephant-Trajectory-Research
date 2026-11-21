@@ -1,0 +1,3 @@
+detector_id,images_inferred,raw_predictions_at_conf_floor,images_with_at_least_one_prediction,wall_elapsed_seconds,mean_wall_ms_per_image,mean_ultralytics_inference_ms
+SELECTIVE_4CLASS_V5,462,660,196,64.46081929999491,139.52558290042188,101.9721774891523
+ELEPHANT_ONLY_ORIGINAL,462,1396,406,55.97753830000147,121.163502813856,103.11185800863123

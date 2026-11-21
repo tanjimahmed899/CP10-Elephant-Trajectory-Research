@@ -1,0 +1,7 @@
+component,component_label,warning_horizon_seconds,weighted_wall_ms_per_frame,compute_fraction_of_horizon,remaining_horizon_after_one_frame_compute_ms,interpretation
+detections,Detector-only,2.0,133.41258573348404,0.06670629286674201,1866.587414266516,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."
+detections,Detector-only,5.0,133.41258573348404,0.026682517146696807,4866.587414266516,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."
+bytetrack,Detector+ByteTrack,2.0,114.48651808726636,0.05724325904363318,1885.5134819127336,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."
+bytetrack,Detector+ByteTrack,5.0,114.48651808726636,0.022897303617453273,4885.513481912733,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."
+botsort,Detector+BoT-SORT,2.0,128.7975620423035,0.06439878102115175,1871.2024379576965,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."
+botsort,Detector+BoT-SORT,5.0,128.7975620423035,0.0257595124084607,4871.202437957697,"Computational processing is below the warning horizon, but this does NOT establish adequate operational or human response time."

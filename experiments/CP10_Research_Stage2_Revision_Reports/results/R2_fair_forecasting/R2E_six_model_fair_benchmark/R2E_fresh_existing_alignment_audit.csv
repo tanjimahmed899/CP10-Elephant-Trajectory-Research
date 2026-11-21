@@ -1,0 +1,7 @@
+dataset,task,model,expected_samples,aligned_samples,alignment_method
+Fresh_WildBox,2s_to_2s,KalmanCV,865,865,exact_sample_id
+Fresh_WildBox,2s_to_2s,GRU,865,865,exact_sample_id
+Fresh_WildBox,2s_to_2s,LSTM,865,865,exact_sample_id
+Fresh_WildBox,2s_to_5s,KalmanCV,637,637,exact_sample_id
+Fresh_WildBox,2s_to_5s,GRU,637,637,exact_sample_id
+Fresh_WildBox,2s_to_5s,LSTM,637,637,exact_sample_id

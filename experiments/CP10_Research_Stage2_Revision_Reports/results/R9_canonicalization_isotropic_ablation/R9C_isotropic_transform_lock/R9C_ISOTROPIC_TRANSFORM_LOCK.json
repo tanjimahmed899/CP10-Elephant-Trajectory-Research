@@ -1,0 +1,37 @@
+{
+  "source_points": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\trajectory_dataset\\cleaned_track_points.csv",
+  "source_points_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "source_builder_script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_elephant_trajectory_dataset.py",
+  "source_builder_script_sha256": "3e2f61aad673a0a5e04dac470ee45d47f9c520dfc11a206017ef8bce128556f4",
+  "existing_representation": {
+    "x": "cx_n uses an X-specific image-scale denominator W_i",
+    "y": "cy_n uses a Y-specific image-scale denominator H_i",
+    "geometry_implication": "When W_i != H_i, Euclidean distances/angles in (cx_n, cy_n) are anisotropically scaled relative to pixel geometry."
+  },
+  "denominator_reconstruction": {
+    "width": "W_i = round(cx_i / cx_n_i)",
+    "height": "H_i = round(cy_i / cy_n_i)",
+    "max_cx_n_reconstruction_error": 1.1102230246251565e-16,
+    "max_cy_n_reconstruction_error": 1.1102230246251565e-16,
+    "tolerance": 0.0005
+  },
+  "new_isotropic_branch": {
+    "status": "LOCKED_NON_DESTRUCTIVE_ABLATION_BRANCH",
+    "common_scale": "s_i = max(W_i, H_i)",
+    "x_iso": "cx_iso_i = cx_i / s_i",
+    "y_iso": "cy_iso_i = cy_i / s_i",
+    "why_max_dimension": "A single denominator preserves equal x/y metric scaling, preserves image aspect ratio, and keeps both coordinates within [0,1] without clipping.",
+    "velocity_rule": "Recompute velocities/displacements from isotropic coordinates; do not reuse vx_n/vy_n.",
+    "canonicalization_rule": "Recompute all translation/rotation/path-length canonicalization from isotropic coordinates.",
+    "frozen_branch_rule": "Existing cx_n/cy_n datasets, checkpoints, predictions, conformal q, warning results and manuscript locks remain unchanged."
+  },
+  "geometry_validation": {
+    "same_scale_applied_to_x_and_y": true,
+    "all_isotropic_coordinates_within_0_1": true,
+    "scale_definition": "s_i = max(W_i, H_i)",
+    "x_definition": "cx_iso_i = cx_i / s_i",
+    "y_definition": "cy_iso_i = cy_i / s_i",
+    "velocity_rule": "Do NOT rescale frozen vx_n/vy_n independently. Recompute velocity/displacement from cx_iso/cy_iso after transformation.",
+    "canonicalization_rule": "Any translation/rotation/path-length canonicalization in the R9 branch must be recomputed from isotropic coordinates; do not reuse anisotropic canonical tensors."
+  }
+}

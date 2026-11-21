@@ -1,0 +1,4 @@
+check,passed,detail
+all_reference_sequences_present_in_isotropic_points,True,"{""missing_sequences"": []}"
+reference_sequences_are_testreal_only,True,"{""reference_sequences"": [""0000000055_0000000000"", ""0000000058_0000000000"", ""0000000349_0000000000"", ""0000000352_0000000000"", ""0000000353_0000000000"", ""0000000357_0000000000""]}"
+isotropic_source_contains_all_six_testreal_sequences,True,"{""missing"": []}"

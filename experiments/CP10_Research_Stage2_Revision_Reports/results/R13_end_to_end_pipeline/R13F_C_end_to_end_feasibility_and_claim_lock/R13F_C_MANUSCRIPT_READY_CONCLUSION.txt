@@ -1,0 +1,16 @@
+R13 end-to-end feasibility conclusion — locked wording
+
+A frozen revision experiment was conducted to assess whether the historical trajectory-forecasting pipeline could be extended to a detector-to-tracker-to-forecast workflow on BIRDSAI TestReal without test-set tuning. The locked elephant detector was applied to all six TestReal sequences, followed by ByteTrack as the primary tracker and BoT-SORT as a sensitivity tracker.
+
+The detector/tracker stage showed severe domain-transfer limitations. The raw detector achieved a recall of 0.0506 at IoU >= 0.50 against the observed TestReal annotations, while the total number of detector boxes implied a count-only recall ceiling of 0.0892. After identity assignment, observation recall was 0.0259 for ByteTrack and 0.0280 for BoT-SORT. Tracking performance was correspondingly low: ByteTrack achieved HOTA=0.0297 and IDF1=0.0246, while BoT-SORT achieved HOTA=0.0337 and IDF1=0.0292.
+
+This lack of temporal coverage prevented a representative downstream forecasting evaluation. Each tracker produced only 2 valid 2-s forecasting windows, corresponding to approximately 0.19% of the 1,053-window historical 2-s evaluation set, and neither tracker produced any valid 5-s forecasting windows. Therefore, detector/tracker-derived ADE/FDE and warning metrics are not reported as representative end-to-end performance.
+
+Reviewer-safe interpretation:
+The historical forecasting results remain trajectory-level evaluations based on curated GT-derived trajectories. The new frozen end-to-end stress test does not validate operational detector-to-warning performance; instead, it identifies detector domain transfer as the dominant bottleneck and shows that the present detector/tracker combination does not provide sufficient temporal coverage for representative downstream forecasting on BIRDSAI TestReal.
+
+Forbidden overclaims:
+- Do not call the historical results end-to-end.
+- Do not report two 2-s windows as representative forecast performance.
+- Do not infer 5-s end-to-end forecasting performance because zero valid 5-s tracker-derived windows exist.
+- Do not attribute the failure solely to tracker association; detector coverage is the primary observed bottleneck.

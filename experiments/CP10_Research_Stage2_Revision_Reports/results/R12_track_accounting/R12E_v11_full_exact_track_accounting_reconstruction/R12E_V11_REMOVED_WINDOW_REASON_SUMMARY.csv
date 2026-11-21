@@ -1,0 +1,9 @@
+task,column,value,count,min,median,max
+2s_to_2s,accepted,1,15,,,
+2s_to_2s,accepted,0,2,,,
+2s_to_2s,quality_tier,extended,15,,,
+2s_to_2s,quality_tier,invalid_motion,2,,,
+2s_to_2s,repaired_motion_pct,numeric_summary,15,10.084033613445378,11.76470588235294,15.126050420168069
+2s_to_5s,accepted,0,1,,,
+2s_to_5s,quality_tier,invalid_motion,1,,,
+2s_to_5s,repaired_motion_pct,numeric_summary,0,,,

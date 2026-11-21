@@ -1,0 +1,74 @@
+{
+  "label": "true_crossing",
+  "raw_features": [
+    "distance_to_boundary",
+    "predicted_crossing",
+    "predicted_tte_sec"
+  ],
+  "derived_features_in_order": [
+    "distance_to_boundary",
+    "predicted_crossing_bool",
+    "predicted_tte_norm",
+    "predicted_tte_available"
+  ],
+  "task_horizon_seconds": {
+    "2s_to_2s": 2.0,
+    "2s_to_5s": 5.0
+  },
+  "feature_transformations": {
+    "distance_to_boundary": "numeric raw value",
+    "predicted_crossing_bool": "binary parse of predicted_crossing",
+    "predicted_tte_norm": "predicted_tte_sec / task horizon; clip to [0,1.25]; missing -> 1.25",
+    "predicted_tte_available": "1 if predicted_tte_sec is finite, else 0"
+  },
+  "ground_truth_features_forbidden": [
+    "true_tte_sec",
+    "tte_error_sec",
+    "tte_abs_error_sec"
+  ],
+  "identity_or_geometry_features_forbidden": [
+    "source_group",
+    "track_key",
+    "sample_index",
+    "boundary",
+    "boundary_id",
+    "current_coordinate"
+  ],
+  "model_protocol": {
+    "model_family": "binary logistic regression implemented with numpy only",
+    "separate_model_per_task": true,
+    "objective": "weighted binary cross-entropy + L2 penalty",
+    "class_weight": "balanced within each training fold",
+    "l2_lambda": 1.0,
+    "optimizer": "deterministic Newton/IRLS with numerical damping",
+    "max_iter": 200,
+    "convergence_tolerance": 1e-09,
+    "feature_scaling": "Fit mean/std on training fold only for all four numeric features; apply the same fold scaler to held-out fold. For final frozen evaluation, fit scaler on full validation/development set.",
+    "hyperparameter_tuning": false,
+    "external_ml_dependency": false
+  },
+  "threshold_protocol": {
+    "development_only": true,
+    "oof_grouping_unit": "track_key",
+    "oof_scheme": "exact deterministic 5-fold track-disjoint partition locked by R6B2-V3",
+    "selection_metric": "balanced_accuracy",
+    "primary_rule": "Pool all out-of-fold validation probabilities within each task and choose the threshold that maximizes balanced accuracy.",
+    "candidate_thresholds": "sorted unique OOF probabilities plus 0.5 and endpoints 0/1; selection uses development OOF predictions only",
+    "tie_break_1": "lower false-positive rate",
+    "tie_break_2": "higher sensitivity",
+    "tie_break_3": "threshold closest to 0.5",
+    "evaluation_threshold_reselection": false,
+    "evaluation_recalibration": false
+  },
+  "locked_cv_partition_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6B3_revised_protocol_lock\\R6B3_LOCKED_5FOLD_TRACK_PARTITIONS.csv",
+  "validation_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_geofence_instances.csv",
+  "validation_source_sha256": "65dd1b2b5f64802c144e64ce9e722c8765486e4a725a5feb17cc51a6b8af07c5",
+  "evaluation_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_all_geofence_instances.csv",
+  "evaluation_source_sha256": "08d75da57a9f2ff42a30b6a70a42382a784628aa933882528f0a55c3b28ce024",
+  "validation_evaluation_source_overlap": {
+    "validation_source_count": 3,
+    "evaluation_source_count": 9,
+    "overlap_count": 0,
+    "overlap_sources": []
+  }
+}

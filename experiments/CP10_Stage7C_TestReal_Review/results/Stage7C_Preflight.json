@@ -1,0 +1,62 @@
+{
+  "status": "TESTREAL_MATCHED_R13_PROTOCOL",
+  "source_root": "/mnt/e/AIUB/Capstone Project/Journal Based Results",
+  "original_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "adapted_sha256": "71671b4175509e96bb6e4cd7e803b82c9c4b606061438a009d98d9f8b8e8d3d1",
+  "source_GT": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result/trajectory_dataset/cleaned_track_points.csv",
+  "sequences": {
+    "0000000055_0000000000": {
+      "images": 268,
+      "GT": 264,
+      "expected_images": 268,
+      "expected_GT": 264
+    },
+    "0000000058_0000000000": {
+      "images": 684,
+      "GT": 2666,
+      "expected_images": 684,
+      "expected_GT": 2666
+    },
+    "0000000349_0000000000": {
+      "images": 1456,
+      "GT": 3292,
+      "expected_images": 1456,
+      "expected_GT": 3292
+    },
+    "0000000352_0000000000": {
+      "images": 3209,
+      "GT": 19343,
+      "expected_images": 3209,
+      "expected_GT": 19343
+    },
+    "0000000353_0000000000": {
+      "images": 3193,
+      "GT": 21467,
+      "expected_images": 3193,
+      "expected_GT": 21467
+    },
+    "0000000357_0000000000": {
+      "images": 275,
+      "GT": 1023,
+      "expected_images": 275,
+      "expected_GT": 1023
+    }
+  },
+  "GT_total": 48055,
+  "images_total": 9085,
+  "excluded_GT_rows": {
+    "interpolated": 367
+  },
+  "comparison": {
+    "imgsz": 640,
+    "conf": 0.1,
+    "iou_nms": 0.7,
+    "max_det": 300,
+    "augment": false,
+    "agnostic_nms": false
+  },
+  "test_is_retrospective": true,
+  "training_or_test_tuning": false,
+  "tracker_run": false,
+  "experiment_note": "IoU50 greedy one-to-one detected bounding boxes; counts may differ from historical R13 due to library/environment revisions"
+}

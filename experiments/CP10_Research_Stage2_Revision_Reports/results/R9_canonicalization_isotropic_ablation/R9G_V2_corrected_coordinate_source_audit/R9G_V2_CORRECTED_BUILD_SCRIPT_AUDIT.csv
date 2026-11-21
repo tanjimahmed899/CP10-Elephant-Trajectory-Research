@@ -1,0 +1,786 @@
+root,filename,path,score,term_hits,sha256,snippets
+Main Result 2.0,STEP6D_K3C4_SOURCE_BUNDLE.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\k3_operational_warning\coordinate_compatibility_audit\STEP6D_K3C4_SOURCE_BUNDLE.txt,114,corrected_windows_:1 | history:42 | future:58 | width:13,4b5078885c8128bc7a565aae05a87b4316ae6271b15e0952c6af4c2ff775fc5c,"1061:     )
+1062: 
+1063: 
+1064:     history = npz[
+1065:         ""history""
+1066:     ]
+1067: 
+1068:     future = npz[
+1069:         ""future""
+---
+1065:         ""history""
+1066:     ]
+1067: 
+1068:     future = npz[
+1069:         ""future""
+1070:     ]
+1071: 
+1072: 
+1073:     # ==========================================
+---
+1438:     meta_file = (
+1439:         BIRD_DIR
+1440:         /
+1441:         f""corrected_windows_{task}.csv""
+1442:     )
+1443: 
+1444: 
+1445:     npz_file = (
+1446:         BIRD_DIR
+---
+1943:         ]
+1944: 
+1945: 
+1946:         true_future = truth_abs[
+1947:             sample_index
+1948:         ]
+1949: 
+1950: 
+1951:         pred_future = ensemble_prediction[
+---
+1948:         ]
+1949: 
+1950: 
+1951:         pred_future = ensemble_prediction[
+1952:             sample_index
+1953:         ]
+1954: 
+1955: 
+1956:         source_group = str(
+---
+2160:                 ):
+2161: 
+2162: 
+2163:                     seed_future = seed_predictions[
+2164:                         seed_index,
+2165:                         sample_index
+2166:                     ]
+2167: 
+2168: 
+---
+2562:         ]
+2563: 
+2564: 
+2565:         true_future = truth_abs[
+2566:             sample_index
+2567:         ]
+2568: 
+2569: 
+2570:         predicted_future = ensemble_prediction[
+---
+2567:         ]
+2568: 
+2569: 
+2570:         predicted_future = ensemble_prediction[
+2571:             sample_index
+2572:         ]
+2573: 
+2574: 
+2575:         source_group = str(
+---
+2742:                     seed_predictions.shape[0]
+2743:                 ):
+2744: 
+2745:                     seed_future = (
+2746:                         seed_predictions[
+2747:                             seed_index,
+2748:                             sample_index
+2749:                         ]
+2750:                     )"
+Main Result,build_unified_10hz_dataset.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_unified_10hz_dataset.py,106,corrected_trajectory_dataset:1 | corrected_windows_:1 | np.savez:2 | savez_compressed:2 | history:51 | future:49,fd7b34868b877ef76e69acffed5010ca9ae2233af4b0851998a1dffe7c05b119,"13: 
+14: BIRD_DIR = (
+15:     ROOT /
+16:     ""corrected_trajectory_dataset""
+17: )
+18: 
+19: WILD_DIR = (
+20:     ROOT /
+21:     ""wildbox_trajectory_dataset""
+---
+294:     meta_file = (
+295:         BIRD_DIR
+296:         /
+297:         f""corrected_windows_{task}.csv""
+298:     )
+299: 
+300: 
+301:     npz_file = (
+302:         BIRD_DIR
+---
+637:     ) in birds.items():
+638: 
+639: 
+640:         expected_future = (
+641:             config[
+642:                 ""future_frames_10hz""
+643:             ]
+644:         )
+645: 
+---
+680:         )
+681: 
+682: 
+683:         np.savez_compressed(
+684: 
+685:             OUT /
+686:             f""{prefix}.npz"",
+687: 
+688:             history_abs=
+---
+840:     )
+841: 
+842: 
+843:     np.savez_compressed(
+844: 
+845:         OUT /
+846:         f""{prefix}.npz"",
+847: 
+848:         history_abs="
+Main Result 2.0,step2b_raw_vs_corrected_forecasting.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step2b_raw_vs_corrected_forecasting.py,81,corrected_trajectory_dataset:1 | corrected_windows_:1 | history:32 | future:45 | cx_n:1 | cy_n:1,4da7ed8e5106998236f916b796e0fc8317ff7e1acf58a19fe7ef7d165e45510b,"18: 
+19: CORR_DIR = (
+20:     ROOT /
+21:     ""corrected_trajectory_dataset""
+22: )
+23: 
+24: OUT = Path(
+25:     r""C:\Users\HP\Downloads\step2b_raw_vs_corrected_baseline""
+26: )
+---
+79:     fps=10
+80: ):
+81: 
+82:     history = np.asarray(
+83:         history,
+84:         dtype=np.float64
+85:     )
+86: 
+87:     T = len(
+---
+482:             needed_frames,
+483: 
+484:             [
+485:                 ""cx_n"",
+486:                 ""cy_n""
+487:             ]
+488:         ]
+489: 
+490:         .to_numpy(
+---
+483: 
+484:             [
+485:                 ""cx_n"",
+486:                 ""cy_n""
+487:             ]
+488:         ]
+489: 
+490:         .to_numpy(
+491:             dtype=np.float64
+---
+715:         metadata_path = (
+716: 
+717:             CORR_DIR /
+718:             f""corrected_windows_{task}.csv""
+719:         )
+720: 
+721: 
+722:         corrected_npz_path = (
+723: 
+---
+933:             # CORRECTED TRAJECTORY
+934:             # ------------------------------------------------
+935: 
+936:             corrected_history = (
+937: 
+938:                 np.asarray(
+939: 
+940:                     corrected_history_all[
+941:                         sample_id,
+---
+952:             )
+953: 
+954: 
+955:             corrected_future = (
+956: 
+957:                 np.asarray(
+958: 
+959:                     corrected_future_all[
+960:                         sample_id,"
+Main Result 2.0,step2c_ego_motion_geofence_ablation.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step2c_ego_motion_geofence_ablation.py,76,corrected_trajectory_dataset:1 | corrected_windows_:1 | history:27 | future:43 | ego_motion:2 | cx_n:1 | cy_n:1,8ab5fd5f4cc3a885a5431db374b9bcaf105df61ecfbf0fd0e59ee1051f865170,"15: 
+16: TRAJ_DIR = ROOT / ""trajectory_dataset""
+17: 
+18: CORR_DIR = ROOT / ""corrected_trajectory_dataset""
+19: 
+20: OUT = Path(
+21:     r""C:\Users\HP\Downloads\step2c_ego_motion_geofence_ablation""
+22: )
+23: 
+---
+18: CORR_DIR = ROOT / ""corrected_trajectory_dataset""
+19: 
+20: OUT = Path(
+21:     r""C:\Users\HP\Downloads\step2c_ego_motion_geofence_ablation""
+22: )
+23: 
+24: OUT.mkdir(
+25:     parents=True,
+26:     exist_ok=True
+---
+75: 
+76: def estimate_velocity(history, fps=10):
+77: 
+78:     history = np.asarray(
+79:         history,
+80:         dtype=np.float64
+81:     )
+82: 
+83:     n = len(history)
+---
+302: 
+303:         track.loc[
+304:             required_frames,
+305:             [""cx_n"", ""cy_n""]
+306:         ]
+307: 
+308:         .to_numpy(
+309:             dtype=np.float64
+310:         )
+---
+323:             f""{len(xy)} != {expected}""
+324:         )
+325: 
+326:     history = (
+327:         xy[:OBS_RAW]
+328:         [::DOWNSAMPLE]
+329:     )
+330: 
+331:     future = (
+---
+328:         [::DOWNSAMPLE]
+329:     )
+330: 
+331:     future = (
+332:         xy[OBS_RAW:]
+333:         [::DOWNSAMPLE]
+334:     )
+335: 
+336:     return history, future
+---
+1261:         metadata_file = (
+1262: 
+1263:             CORR_DIR /
+1264:             f""corrected_windows_{task}.csv""
+1265:         )
+1266: 
+1267:         npz_file = (
+1268: 
+1269:             CORR_DIR /
+---
+1399:             # CORRECTED 10-Hz
+1400:             # -----------------------------------------------
+1401: 
+1402:             corrected_history = (
+1403: 
+1404:                 np.asarray(
+1405: 
+1406:                     corrected_history_all[
+1407:                         sample_id,
+---
+1416:             )
+1417: 
+1418: 
+1419:             corrected_future = (
+1420: 
+1421:                 np.asarray(
+1422: 
+1423:                     corrected_future_all[
+1424:                         sample_id,
+---
+1949:     comparison.to_csv(
+1950: 
+1951:         OUT /
+1952:         ""ego_motion_warning_impact_summary.csv"",
+1953: 
+1954:         index=False
+1955:     )
+1956: 
+1957: "
+Main Result,build_corrected_trajectories.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_corrected_trajectories.py,52,corrected_trajectory_dataset:1 | corrected_windows_:2 | corrected_2s_to_2s:1 | corrected_2s_to_5s:1 | np.savez:2 | savez_compressed:2 | history:11 | future:25 | ego_motion:3 | width:2 | height:2,3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51,"10: # ==========================================================
+11: 
+12: MOTION_FILE = Path(
+13:     r""C:\Users\HP\Downloads\ego_motion_full\all_ego_motion.csv""
+14: )
+15: 
+16: TRACK_FILE = Path(
+17:     r""C:\Users\HP\Downloads\trajectory_dataset\cleaned_track_points.csv""
+18: )
+---
+34: )
+35: 
+36: OUT = Path(
+37:     r""C:\Users\HP\Downloads\corrected_trajectory_dataset""
+38: )
+39: 
+40: OUT.mkdir(exist_ok=True)
+41: 
+42: 
+---
+465: 
+466:     OUT
+467:     /
+468:     ""repaired_ego_motion.csv"",
+469: 
+470:     index=False
+471: )
+472: 
+473: 
+---
+834: 
+835:     # History includes 60 frames.
+836: 
+837:     history = corrected[
+838:         :OBS_FRAMES
+839:     ]
+840: 
+841: 
+842:     # Future starts immediately
+---
+842:     # Future starts immediately
+843:     # after observation window.
+844: 
+845:     future = corrected[
+846:         OBS_FRAMES:
+847:         OBS_FRAMES
+848:         +
+849:         horizon_frames
+850:     ]
+---
+1084: 
+1085:     OUT
+1086:     /
+1087:     ""corrected_windows_2s_to_2s.csv"",
+1088: 
+1089:     index=False
+1090: )
+1091: 
+1092: 
+---
+1090: )
+1091: 
+1092: 
+1093: np.savez_compressed(
+1094: 
+1095:     OUT
+1096:     /
+1097:     ""corrected_2s_to_2s.npz"",
+1098: 
+---
+1120: 
+1121:     OUT
+1122:     /
+1123:     ""corrected_windows_2s_to_5s.csv"",
+1124: 
+1125:     index=False
+1126: )
+1127: 
+1128: 
+---
+1126: )
+1127: 
+1128: 
+1129: np.savez_compressed(
+1130: 
+1131:     OUT
+1132:     /
+1133:     ""corrected_2s_to_5s.npz"",
+1134: "
+Main Result 2.0,STEP7B_SCALE_DIAGNOSTIC_SUMMARY.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step7_response_aware_warning\STEP7B_SCALE_DIAGNOSTIC_SUMMARY.txt,50,corrected_trajectory_dataset:4 | future:2 | ego_motion:44,e5a8cd2761fe0b666db7509257a2cd7f8cf30d290a78686da4db9a6fb5f61456,"17:   668                                                                                                                 ensemble_prediction, || seed_predictions, || metadata || ): || 
+18:   674                                                                                                                   ||  || for sample_index in range( || len(histories_abs) || ):
+19:   679                                                                                                                         || current = histories_abs[ || sample_index, || -1 || ]
+20:   685                                                                                                                            || true_future = truth_abs[ || sample_index || ] || 
+21:   690                                                                                                             || predicted_future = ensemble_prediction[ || sample_index || ] || 
+22:   694                                                                                                                    ||  || source_group = str( || metadata.iloc[ || sample_index
+23:   695                                                                                                                  || source_group = str( || metadata.iloc[ || sample_index || ][
+24:   696                                                                                                   source_group = str( || metadata.iloc[ || sample_index || ][ || ""source_group""
+25:   698                                                                                                                                  sample_index || ][ || ""source_group"" || ] || )
+---
+18:   674                                                                                                                   ||  || for sample_index in range( || len(histories_abs) || ):
+19:   679                                                                                                                         || current = histories_abs[ || sample_index, || -1 || ]
+20:   685                                                                                                                            || true_future = truth_abs[ || sample_index || ] || 
+21:   690                                                                                                             || predicted_future = ensemble_prediction[ || sample_index || ] || 
+22:   694                                                                                                                    ||  || source_group = str( || metadata.iloc[ || sample_index
+23:   695                                                                                                                  || source_group = str( || metadata.iloc[ || sample_index || ][
+24:   696                                                                                                   source_group = str( || metadata.iloc[ || sample_index || ][ || ""source_group""
+25:   698                                                                                                                                  sample_index || ][ || ""source_group"" || ] || )
+26:   703                                                                                                                       ||  || track_key = str( || metadata.iloc[ || sample_index
+---
+109: 
+110: TOP SCALE CANDIDATES
+111:          dataset     task                                                                                                                      path  rows  expected_samples  sample_index_min  sample_index_max  row_count_exact  row_index_compatible  track_set_overlap  source_set_overlap  direct_index_track_agreement  direct_index_source_agreement  sequential_track_agreement  sequential_source_agreement  finite_positive_scale_fraction  filename_score
+112: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000055_0000000000_motion.csv   267              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+113: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+---
+110: TOP SCALE CANDIDATES
+111:          dataset     task                                                                                                                      path  rows  expected_samples  sample_index_min  sample_index_max  row_count_exact  row_index_compatible  track_set_overlap  source_set_overlap  direct_index_track_agreement  direct_index_source_agreement  sequential_track_agreement  sequential_source_agreement  finite_positive_scale_fraction  filename_score
+112: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000055_0000000000_motion.csv   267              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+113: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+---
+111:          dataset     task                                                                                                                      path  rows  expected_samples  sample_index_min  sample_index_max  row_count_exact  row_index_compatible  track_set_overlap  source_set_overlap  direct_index_track_agreement  direct_index_source_agreement  sequential_track_agreement  sequential_source_agreement  finite_positive_scale_fraction  filename_score
+112: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000055_0000000000_motion.csv   267              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+113: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+---
+112: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000055_0000000000_motion.csv   267              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+113: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+120: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000352_0000000000_motion.csv  3208              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999377        4.998753
+---
+113: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+120: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000352_0000000000_motion.csv  3208              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999377        4.998753
+121: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_5s_fresh_metadata.csv   637              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        2.000000
+---
+114: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000349_0000000000_motion.csv  1455              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+120: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000352_0000000000_motion.csv  3208              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999377        4.998753
+121: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_5s_fresh_metadata.csv   637              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        2.000000
+122: BIRDSAI_TestReal 2s_to_2s           E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999935        1.999871
+---
+115: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000353_0000000000_motion.csv  3192              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+116: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000357_0000000000_motion.csv   274              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+120: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000352_0000000000_motion.csv  3208              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999377        4.998753
+121: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_5s_fresh_metadata.csv   637              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        2.000000
+122: BIRDSAI_TestReal 2s_to_2s           E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999935        1.999871
+123: BIRDSAI_TestReal 2s_to_2s                             E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\all_ego_motion.csv 15490              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999806        1.999613
+---
+117: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0352_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+118: BIRDSAI_TestReal 2s_to_2s                          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_pilot\test_0353_motion.csv   300              1053                 0              1052            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+119: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_2s_fresh_metadata.csv   865              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+120: BIRDSAI_TestReal 2s_to_2s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000352_0000000000_motion.csv  3208              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999377        4.998753
+121: BIRDSAI_TestReal 2s_to_2s E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_fresh_confirmatory_results\2s_to_5s_fresh_metadata.csv   637              1053                 0              1052            False                 False           0.000000                 0.0                           NaN                            NaN                         NaN                          NaN                        1.000000        2.000000
+122: BIRDSAI_TestReal 2s_to_2s           E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999935        1.999871
+123: BIRDSAI_TestReal 2s_to_2s                             E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\all_ego_motion.csv 15490              1053                 0              1052            False                  True                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        0.999806        1.999613
+124: BIRDSAI_TestReal 2s_to_5s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000055_0000000000_motion.csv   267               826                 0               825            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000
+125: BIRDSAI_TestReal 2s_to_5s          E:\AIUB\Capstone Project\Journal Based Results\Main Result\ego_motion_full\test_0000000058_0000000000_motion.csv   683               826                 0               825            False                 False                NaN                 NaN                           NaN                            NaN                         NaN                          NaN                        1.000000        5.000000"
+Main Result,audit_virtual_geofences.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\audit_virtual_geofences.py,48,corrected_trajectory_dataset:1 | corrected_windows_:2 | corrected_2s_to_2s:1 | corrected_2s_to_5s:1 | history:4 | future:13 | width:26,579b6745cfa7ee08c5fc8a9804a4203f4bc07fa8611d241699d699b852a169d3,"8: # ============================================================
+9: 
+10: ROOT = Path(
+11:     r""C:\Users\HP\Downloads\corrected_trajectory_dataset""
+12: )
+13: 
+14: OUT = Path(
+15:     r""C:\Users\HP\Downloads\virtual_zone_audit""
+16: )
+---
+24: 
+25:         ""meta"":
+26:             ROOT /
+27:             ""corrected_windows_2s_to_2s.csv"",
+28: 
+29:         ""npz"":
+30:             ROOT /
+31:             ""corrected_2s_to_2s.npz"",
+32: 
+---
+38: 
+39:         ""meta"":
+40:             ROOT /
+41:             ""corrected_windows_2s_to_5s.csv"",
+42: 
+43:         ""npz"":
+44:             ROOT /
+45:             ""corrected_2s_to_5s.npz"",
+46: 
+---
+123:     )
+124: 
+125: 
+126:     history = npz[
+127:         ""history""
+128:     ]
+129: 
+130:     future = npz[
+131:         ""future""
+---
+127:         ""history""
+128:     ]
+129: 
+130:     future = npz[
+131:         ""future""
+132:     ]
+133: 
+134: 
+135:     # =========================================="
+Main Result 2.0,STEP6D_K3C5_TARGET_FUNCTION_SOURCES.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\k3_operational_warning\coordinate_mapping_provenance\STEP6D_K3C5_TARGET_FUNCTION_SOURCES.txt,37,corrected_windows_:1 | history:20 | future:16,8d10b975ce2358b45b19770ca4b58c422d459be3a1f35da8643e0d7ae497fb1c,"10:     meta_file = (
+11:         BIRD_DIR
+12:         /
+13:         f""corrected_windows_{task}.csv""
+14:     )
+15: 
+16: 
+17:     npz_file = (
+18:         BIRD_DIR"
+Main Result 2.0,STEP6D_G_SUMMARY.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_uncertainty_holdout\STEP6D_G_SUMMARY.txt,33,corrected_trajectory_dataset:14 | corrected_windows_:2 | corrected_2s_to_2s:1 | corrected_2s_to_5s:1 | history:2 | future:10 | ego_motion:1 | cx_n:1 | cy_n:1,37b5c61cf5bcbbaf2bd5dcb18e6e98bc504be0876dde29ff9e0ad45c409aa478,"9: FILE STRUCTURE AUDIT
+10: --------------------
+11:                candidate_dir                                                                                                                   path    rows                                                                                                                                                                                                     columns source_columns track_columns frame_columns  xy_pairs                                                                                                                                                                                                                            unique_sources_preview  unique_tracks parse_error
+12:           trajectory_dataset                 E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\cleaned_track_points.csv 91419.0                                                  frame;object_id;x;y;w;h;class;species;occlusion;noise;interpolated;cx;cy;cx_n;cy_n;w_n;h_n;vx_n;vy_n;speed_n;heading_rad;accel_n;split;sequence;segment_id       sequence     object_id         frame x+y;cx+cy 0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           70.0            
+13:           trajectory_dataset              E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\per_sequence_statistics.csv    11.0                                                                                                                                    split;sequence;elephant_boxes;segments;windows_2s_to_2s;windows_2s_to_5s       sequence                                       0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000            NaN            
+14:           trajectory_dataset                              E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+15:           trajectory_dataset                       E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\track_segments.csv   481.0                                                                                                            split;sequence;object_id;segment_id;frames;duration_sec;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                         0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           70.0            
+16:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_2s.csv  1983.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+17:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_5s.csv  1511.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+---
+15:           trajectory_dataset                       E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\track_segments.csv   481.0                                                                                                            split;sequence;object_id;segment_id;frames;duration_sec;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                         0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           70.0            
+16:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_2s.csv  1983.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+17:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_5s.csv  1511.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+18: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_2s.npz  1704.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+19: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_5s.npz  1319.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+---
+16:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_2s.csv  1983.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+17:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_5s.csv  1511.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+18: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_2s.npz  1704.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+19: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_5s.npz  1319.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+---
+17:           trajectory_dataset                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\windows_2s_to_5s.csv  1511.0 split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;current_x;current_y;future_x;future_y;current_speed;current_heading;occlusion_pct;noise_pct;interpolated_pct       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+18: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_2s.npz  1704.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+19: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_5s.npz  1319.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+25: 
+---
+18: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_2s.npz  1704.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+19: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_5s.npz  1319.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+25: 
+26: SOURCE OVERLAP SUMMARY
+---
+19: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_2s_to_5s.npz  1319.0                                                                                                                                                                                              history;future                                                                                                                                                                                                                                                                                                                   NaN            
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+25: 
+26: SOURCE OVERLAP SUMMARY
+27: ----------------------
+---
+20: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_2s.csv  1983.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                     0000000010_0000000000;0000000351_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           53.0            
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+25: 
+26: SOURCE OVERLAP SUMMARY
+27: ----------------------
+28:          source_token  used_overlap_files  eligible_as_untouched_by_exact_token
+---
+21: corrected_trajectory_dataset E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\corrected_windows_2s_to_5s.csv  1511.0                                             source_index;split;sequence;object_id;segment_id;obs_start_frame;obs_end_frame;future_end_frame;horizon_sec;accepted;quality_tier;repaired_motion_pct;sample_id       sequence     object_id                                                                                           0000000010_0000000000;0000000367_0000000000;0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000           36.0            
+22: corrected_trajectory_dataset         E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\correction_summary.csv     4.0                                                                                                                                           forecast;split;total;accepted;accepted_pct;core;extended;rejected                                                                                                                                                                                                                                                                                                                   NaN            
+23: corrected_trajectory_dataset        E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 15490.0                                                             pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion       sequence                                       0000000055_0000000000;0000000058_0000000000;0000000349_0000000000;0000000352_0000000000;0000000353_0000000000;0000000357_0000000000;0000000010_0000000000;0000000054_0000000000;0000000056_0000000000;0000000351_0000000000;0000000367_0000000000            NaN            
+24: corrected_trajectory_dataset                    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\SUMMARY.txt     NaN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               NaN            
+25: 
+26: SOURCE OVERLAP SUMMARY
+27: ----------------------
+28:          source_token  used_overlap_files  eligible_as_untouched_by_exact_token
+29: 0000000010_0000000000                  11                                 False"
+Main Result 2.0,step6d_k3c5_recover_exact_normalized_image_mapping.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_k3c5_recover_exact_normalized_image_mapping.py,19,corrected_trajectory_dataset:1 | width:9 | height:9,d866efc423b8776ed6cdf0defbde44fdf479067531ad58bb39bca95358b2d8ad,"13: BUILD_10HZ = ROOT / ""build_unified_10hz_dataset.py""
+14: BUILD_FINAL = ROOT / ""build_final_neural_dataset.py""
+15: 
+16: CORRECTED_ROOT = ROOT / ""corrected_trajectory_dataset""
+17: 
+18: OUT = (
+19:     Path(r""C:\Users\HP\Downloads"")
+20:     / ""step6d_uncertainty_holdout""
+21:     / ""bambi_flight6"""
+Main Result,audit_multigeofence.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result\audit_multigeofence.py,12,corrected_trajectory_dataset:1 | corrected_windows_:2 | corrected_2s_to_2s:1 | corrected_2s_to_5s:1 | history:4 | future:3,abda60686e9362539399473478f7aecc0ff6a383d5f9fc6f5491fcb9e2761246,"8: # ============================================================
+9: 
+10: ROOT = Path(
+11:     r""C:\Users\HP\Downloads\corrected_trajectory_dataset""
+12: )
+13: 
+14: OUT = Path(
+15:     r""C:\Users\HP\Downloads\multigeofence_audit""
+16: )
+---
+24: 
+25:         ""meta"":
+26:             ROOT /
+27:             ""corrected_windows_2s_to_2s.csv"",
+28: 
+29:         ""npz"":
+30:             ROOT /
+31:             ""corrected_2s_to_2s.npz"",
+32: 
+---
+38: 
+39:         ""meta"":
+40:             ROOT /
+41:             ""corrected_windows_2s_to_5s.csv"",
+42: 
+43:         ""npz"":
+44:             ROOT /
+45:             ""corrected_2s_to_5s.npz"",
+46: 
+---
+186:     )
+187: 
+188: 
+189:     history = arrays[
+190:         ""history""
+191:     ]
+192: 
+193: 
+194:     future = arrays[
+---
+191:     ]
+192: 
+193: 
+194:     future = arrays[
+195:         ""future""
+196:     ]
+197: 
+198: 
+199:     # ============================================="
+Main Result 2.0,step6d_h_unused_birdsai_viability_and_lock.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_h_unused_birdsai_viability_and_lock.py,10,corrected_trajectory_dataset:2 | corrected_windows_:1 | history:2 | future:2 | ego_motion:3,9b7fb521bb4b5ea331cf96c83679303cd7b59de3c178596a24e8a16028174094,"33: EGO = (
+34:     ROOT
+35:     /
+36:     ""corrected_trajectory_dataset""
+37:     /
+38:     ""repaired_ego_motion.csv""
+39: )
+40: 
+41: CORR_DIR = (
+---
+35:     /
+36:     ""corrected_trajectory_dataset""
+37:     /
+38:     ""repaired_ego_motion.csv""
+39: )
+40: 
+41: CORR_DIR = (
+42:     ROOT
+43:     /
+---
+41: CORR_DIR = (
+42:     ROOT
+43:     /
+44:     ""corrected_trajectory_dataset""
+45: )
+46: 
+47: USED_DIR_TERMS = [
+48:     ""final_neural_trajectory_dataset"",
+49:     ""unified_trajectory_10hz"",
+---
+359:         csv_path = (
+360:             CORR_DIR
+361:             /
+362:             f""corrected_windows_{task}.csv""
+363:         )
+364: 
+365:         if csv_path.exists():
+366:             df = pd.read_csv(
+367:                 csv_path,
+---
+657:                 RAW_POINTS
+658:             ),
+659: 
+660:         ""ego_motion_path"":
+661:             str(
+662:                 EGO
+663:             ),
+664: 
+665:         ""ego_motion_sha256"":
+---
+662:                 EGO
+663:             ),
+664: 
+665:         ""ego_motion_sha256"":
+666:             (
+667:                 sha256_file(
+668:                     EGO
+669:                 )
+670:                 if EGO.exists()"
+Main Result 2.0,step6d_g_trajectory_provenance_audit.py,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_g_trajectory_provenance_audit.py,3,corrected_trajectory_dataset:1 | history:1 | future:1,5c3eeb3899ccccac8522207aef59026e27d4d79faf86e56c40b29ea88a3ba465,"25: 
+26: CANDIDATE_DIRS = [
+27:     ROOT / ""trajectory_dataset"",
+28:     ROOT / ""corrected_trajectory_dataset"",
+29: ]
+30: 
+31: # Places that prove a source/track has already been used in model development/evaluation.
+32: USED_DIRS = [
+33:     ROOT / ""final_neural_trajectory_dataset"","
+Main Result 2.0,STEP6D_F_SUMMARY.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_uncertainty_holdout\STEP6D_F_SUMMARY.txt,2,corrected_trajectory_dataset:2,51709e3647fa1527fb1bf8cfe3f4ecec59d1dd92ae25f445f8c70a53e75d0b32,"19:            E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildlive_quick_scout      2                      2            0              0          0.003               True              False                 False
+20:               E:\AIUB\Capstone Project\Journal Based Results\Main Result\Elephant\Elephant      2                      0            2              0        127.115              False               True                 False
+21:              E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset      6                      6            0              0         23.986              False              False                 False
+22:    E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset      7                      7            0              0          7.173              False              False                 False
+23:                              C:\Users\HP\Downloads\Main Result 1.0\Copy1\wildbox_zip_audit     13                     13            0              0          0.766              False              False                 False
+24:               E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_zip_audit     13                     13            0              0          0.766              False              False                 False
+25:                             C:\Users\HP\Downloads\Main Result 1.0\Copy1\trajectory_dataset      5                      5            0              0          0.753              False              False                 False
+26:                   C:\Users\HP\Downloads\Main Result 1.0\Copy1\corrected_trajectory_dataset      4                      4            0              0          0.405              False              False                 False
+27:                            C:\Users\HP\Downloads\Main Result 1.0\Copy1\wildbox_batch_audit      7                      7            0              0          0.140              False              False                 False
+---
+23:                              C:\Users\HP\Downloads\Main Result 1.0\Copy1\wildbox_zip_audit     13                     13            0              0          0.766              False              False                 False
+24:               E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_zip_audit     13                     13            0              0          0.766              False              False                 False
+25:                             C:\Users\HP\Downloads\Main Result 1.0\Copy1\trajectory_dataset      5                      5            0              0          0.753              False              False                 False
+26:                   C:\Users\HP\Downloads\Main Result 1.0\Copy1\corrected_trajectory_dataset      4                      4            0              0          0.405              False              False                 False
+27:                            C:\Users\HP\Downloads\Main Result 1.0\Copy1\wildbox_batch_audit      7                      7            0              0          0.140              False              False                 False
+28:             E:\AIUB\Capstone Project\Journal Based Results\Main Result\wildbox_batch_audit      7                      7            0              0          0.140              False              False                 False
+29:                     E:\AIUB\Capstone Project\Journal Based Results\Main Result\__pycache__      1                      0            0              0          0.039              False              False                 False
+30:                          C:\Users\HP\Downloads\Main Result 1.0\Copy1\dataset_audit_results      3                      3            0              0          0.011              False               True                 False
+31:           E:\AIUB\Capstone Project\Journal Based Results\Main Result\dataset_audit_results      3                      3            0              0          0.011              False               True                 False"
+Main Result 2.0,STEP6D_K3B0_V2_SUMMARY.txt,E:\AIUB\Capstone Project\Journal Based Results\Main Result 2.0\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\k3_fixed_conformal\source_audit_v2\STEP6D_K3B0_V2_SUMMARY.txt,2,corrected_trajectory_dataset:1 | ego_motion:1,c1e445d3d8ab074524a2bb40c894c624ef77943bfedc3dfa89c33b348ca09479,"78: C:\Users\HP\Downloads\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\preprocessing_lock\step6dk1s_world_trajectory_with_locked_global_segments.csv   757  2s_to_2s_primary_q90      2.158768                                                                                                                                                                                                                                                                                                                                                                           907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118,0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   00754: 902,117,586943.0604023437,5338711.777317047,291.60341787627414,586944.933083058,5338714.206243663,292.1228906646434,1.0,30,0.5,True,586943.9967427009,5338712.991780356,291.8631542704588,30.667927742004395,0\n00755: 904,117,586942.9429600019,5338712.117959404,291.62569384395704,586944.8153514933,5338714.544519763,292.142383199336,1.0,30,0.5,True,586943.8791557476,5338713.331239584,291.8840385216465,30.73592758178711,0\n00756: 906,117,586942.7324268885,5338712.450832962,291.6228467879416,586944.6071703029,5338714.878388448,292.1493480185412,1.0,30,0.5,True,586943.6697985957,5338713.664610704,291.88609740324137,30.803927421569824,0\n00757: 907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118,0\n00758: 908,117,586942.5134547178,5338712.888319016,291.6311783752849,586944.3903448327,5338715.315662132,292.16892711789217,1.0,30,0.5,True,586943.4518997753,5338714.101990573,291.9000527465885,30.87192726135254,0\n00759: 910,117,586942.3419454886,5338713.230811426,291.6439086894657,586944.2203113248,5338715.658489632,292.19230767625226,1.0,30,0.5,True,586943.2811284068,5338714.444650529,291.918108182859,30.93992710113525,0\n00760: 912,117,586942.1773277206,5338713.611134598,291.6673525384384,586944.0567496236,5338716.038038787,292.22512831642166,1.0,30,0.5,True,586943.1170386721,5338714.824586693,291.94624042743004,31.00792694091797,0
+79:                                   C:\Users\HP\Downloads\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\step6dk_all_georeferenced_red_deer_rows.csv   272  2s_to_2s_primary_q90      2.158768                                                                                                                                                                                                                                                                                                                                                                             907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      00269: 907,114,586942.1524621048,5338711.896579273,291.4952175620841,586944.8907555222,5338713.719469967,292.06157954529095,1.0,6,1.0,True,586943.5216088134,5338712.808024621,291.77839855368757,30.83792734146118\n00270: 907,115,586940.6025703994,5338709.994018893,291.16323687222945,586942.7492609723,5338712.644742695,291.64102942355703,1.0,6,1.0,True,586941.6759156858,5338711.319380794,291.4021331478932,30.83792734146118\n00271: 907,116,586940.9636687374,5338703.445801223,290.60650203776316,586942.9136132476,5338705.446586798,290.9238479007264,1.0,33,1.0,True,586941.9386409925,5338704.44619401,290.76517496924475,30.83792734146118\n00272: 907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118\n00273: 907,118,586945.76412881,5338714.706437304,292.2962004108041,586947.7212364707,5338716.554837582,292.73444814980724,1.0,31,0.5,True,586946.7426826404,5338715.630637443,292.51532428030566,30.83792734146118\n00274: 907,119,586944.4181257999,5338714.195340498,292.0465694189995,586946.259114929,5338716.396876838,292.54808655304305,1.0,31,0.5,True,586945.3386203644,5338715.296108669,292.2973279860213,30.83792734146118\n00275: 907,120,586936.7995875722,5338708.3579243515,290.60186239124346,586938.985661218,5338710.4987238,291.012373772682,1.0,32,1.0,True,586937.8926243951,5338709.428324075,290.8071180819627,30.83792734146118
+80:                                       C:\Users\HP\Downloads\step6d_uncertainty_holdout\bambi_flight6\step6dk_georef\step6dk_valid_world_trajectory_rows.csv   757  2s_to_2s_primary_q90      2.158768                                                                                                                                                                                                                                                                                                                                                                             907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            00754: 902,117,586943.0604023437,5338711.777317047,291.60341787627414,586944.933083058,5338714.206243663,292.1228906646434,1.0,30,0.5,True,586943.9967427009,5338712.991780356,291.8631542704588,30.667927742004395\n00755: 904,117,586942.9429600019,5338712.117959404,291.62569384395704,586944.8153514933,5338714.544519763,292.142383199336,1.0,30,0.5,True,586943.8791557476,5338713.331239584,291.8840385216465,30.73592758178711\n00756: 906,117,586942.7324268885,5338712.450832962,291.62284678794157,586944.6071703029,5338714.878388448,292.14934801854116,1.0,30,0.5,True,586943.6697985957,5338713.664610704,291.88609740324137,30.803927421569824\n00757: 907,117,586942.6041403392,5338712.6899985215,291.6240700622307,586944.4804501698,5338715.1177893365,292.15889831585355,1.0,30,0.5,True,586943.5422952545,5338713.903893929,291.8914841890421,30.83792734146118\n00758: 908,117,586942.5134547178,5338712.8883190155,291.6311783752849,586944.3903448327,5338715.315662132,292.16892711789217,1.0,30,0.5,True,586943.4518997753,5338714.101990573,291.9000527465885,30.87192726135254\n00759: 910,117,586942.3419454886,5338713.230811426,291.6439086894657,586944.2203113248,5338715.6584896315,292.19230767625226,1.0,30,0.5,True,586943.2811284068,5338714.444650529,291.918108182859,30.939927101135254\n00760: 912,117,586942.1773277206,5338713.611134598,291.6673525384384,586944.0567496236,5338716.038038787,292.22512831642166,1.0,30,0.5,True,586943.1170386721,5338714.824586693,291.94624042743004,31.00792694091797
+81:                                             E:\AIUB\Capstone Project\Journal Based Results\Main Result\corrected_trajectory_dataset\repaired_ego_motion.csv 12748  2s_to_2s_primary_q90      2.158768                                                                                                                                                                                                                                                                                                                                                      2703,train_real,0000000367_0000000000,0000000367_0000000000_0000002703.jpg,0000000367_0000000000_0000002704.jpg,1,348.0,0.2270114942528735,-0.22670288969696686,-2.158809497468676,0.0959347949321204,1.0009290946819327,0,repaired,1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       12745: 2700,train_real,0000000367_0000000000,0000000367_0000000000_0000002700.jpg,0000000367_0000000000_0000002701.jpg,1,376.0,0.9813829787234044,-0.0306519382567474,-0.0316160209911009,0.0031770568149597,1.000180318415885,1,original,1\n12746: 2701,train_real,0000000367_0000000000,0000000367_0000000000_0000002701.jpg,0000000367_0000000000_0000002702.jpg,1,378.0,0.7433862433862434,-0.4082613165508082,-4.296005969983421,0.1926809397557924,1.0016509629648542,1,original,1\n12747: 2702,train_real,0000000367_0000000000,0000000367_0000000000_0000002702.jpg,0000000367_0000000000_0000002703.jpg,1,344.0,0.2616279069767442,-0.3174821031238875,-3.2274077337260483,0.1443078673439564,1.0012900288233935,0,repaired,1\n12748: 2703,train_real,0000000367_0000000000,0000000367_0000000000_0000002703.jpg,0000000367_0000000000_0000002704.jpg,1,348.0,0.2270114942528735,-0.22670288969696686,-2.158809497468676,0.0959347949321204,1.0009290946819327,0,repaired,1\n12749: 2704,train_real,0000000367_0000000000,0000000367_0000000000_0000002704.jpg,0000000367_0000000000_0000002705.jpg,1,346.0,0.2976878612716763,-0.1359236762700462,-1.0902112612113033,0.0475617225202844,1.0005681605404722,0,repaired,1\n12750: 2705,train_real,0000000367_0000000000,0000000367_0000000000_0000002705.jpg,0000000367_0000000000_0000002706.jpg,1,358.0,0.9748603351955308,-0.0451444628431255,-0.0216130249539305,-0.0008113498915516,1.0002072263990114,1,original,1\n12751: 2706,train_real,0000000367_0000000000,0000000367_0000000000_0000002706.jpg,0000000367_0000000000_0000002707.jpg,1,361.0,0.6177285318559557,-2.745602277978773,-8.376766087248644,0.4992819569922294,1.0073170228053976,1,original,1
+82:                                                                                                 C:\Users\HP\Downloads\step6c_crossfit_conformal\SUMMARY.txt    27  2s_to_2s_primary_q95      2.560773                                                                                                                                                                                                                                                                                                                                                           2s_to_2s   0.05             0.95                  62                              2.560773                 60                                 0.967742                           1.179196                               2.446776                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            00024: ---------------------------\n00025:     task  alpha  target_coverage  calibration_tracks  normalized_track_simultaneous_radius  order_statistic_k  calibration_track_simultaneous_coverage  mean_normalized_track_step_radius  endpoint_normalized_track_step_radius\n00026: 2s_to_2s   0.10             0.90                  62                              2.158768                 57                                 0.919355                           0.877027                               2.076248\n00027: 2s_to_2s   0.05             0.95                  62                              2.560773                 60                                 0.967742                           1.179196                               2.446776\n00028: 2s_to_5s   0.10             0.90                  34                              1.975130                 32                                 0.941176                           0.840190                               1.975130\n00029: 2s_to_5s   0.05             0.95                  34                              2.950976                 34                                 1.000000                           1.242523                               2.950976\n00030: 
+83:                                                                                                 C:\Users\HP\Downloads\step6c_crossfit_conformal\SUMMARY.txt    35  2s_to_2s_primary_q95      2.560773 2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95     1053      89        6                              2.560773              0.271585                0.205389             0.601650                      0.987654                3.765432       0.978009        0.994511                     0.969751            0.949482             0.986836                      0.876404                    0.808989                     0.943820                  0.985375  0.019076  0.032890                    0.003508                            3.024081e-08                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      00032: -------------------------------------\n00033:     task          dataset      dataset_role_for_uncertainty  alpha  target_coverage  samples  tracks  sources  normalized_track_simultaneous_radius  mean_absolute_radius  median_absolute_radius  p95_absolute_radius  window_simultaneous_coverage  window_coverage_gap_pp  window_CI_low  window_CI_high  track_macro_window_coverage  track_macro_CI_low  track_macro_CI_high  fully_covered_track_fraction  fully_covered_track_CI_low  fully_covered_track_CI_high  stepwise_window_coverage  mean_ADE  mean_FDE  mean_ensemble_disagreement  max_abs_vs_scaled_canonical_error_diff\n00034: 2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90     1053      89        6                              2.158768              0.228950                0.173146             0.507200                      0.984805                8.480532       0.974306        0.992565                     0.965345            0.943985             0.983609                      0.853933                    0.775281                     0.921348                  0.975499  0.019076  0.032890                    0.003508                            3.024081e-08\n00035: 2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95     1053      89        6                              2.560773              0.271585                0.205389             0.601650                      0.987654                3.765432       0.978009        0.994511                     0.969751            0.949482             0.986836                      0.876404                    0.808989                     0.943820                  0.985375  0.019076  0.032890                    0.003508                            3.024081e-08\n00036: 2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.10             0.90      865      78        3                              2.158768              0.235813                0.183652             0.412322                      0.983815                8.381503       0.972820        0.993549                     0.989395            0.981806             0.996136                      0.897436                    0.820513                     0.961538                  0.930809  0.028814  0.053920                    0.003555                            5.958041e-08\n00037: 2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.05             0.95      865      78        3                              2.560773              0.279725                0.217851             0.489104                      0.988439                3.843931       0.978750        0.996564                     0.992459            0.985671             0.997738                      0.923077                    0.858974                     0.974359                  0.969653  0.028814  0.053920                    0.003555                            5.958041e-08\n00038: 2s_to_5s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90      826      63        5                              1.975130              0.207422                0.152795             0.465234                      0.940678                4.067797       0.900699        0.970733                     0.902051            0.847047             0.949819                      0.730159                    0.619048                     0.841270                  0.926247  0.035590  0.067247                    0.006072                            3.442883e-08
+84:                                                                                                 C:\Users\HP\Downloads\step6c_crossfit_conformal\SUMMARY.txt    37  2s_to_2s_primary_q95      2.560773 2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.05             0.95      865      78        3                              2.560773              0.279725                0.217851             0.489104                      0.988439                3.843931       0.978750        0.996564                     0.992459            0.985671             0.997738                      0.923077                    0.858974                     0.974359                  0.969653  0.028814  0.053920                    0.003555                            5.958041e-08 00034: 2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90     1053      89        6                              2.158768              0.228950                0.173146             0.507200                      0.984805                8.480532       0.974306        0.992565                     0.965345            0.943985             0.983609                      0.853933                    0.775281                     0.921348                  0.975499  0.019076  0.032890                    0.003508                            3.024081e-08\n00035: 2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95     1053      89        6                              2.560773              0.271585                0.205389             0.601650                      0.987654                3.765432       0.978009        0.994511                     0.969751            0.949482             0.986836                      0.876404                    0.808989                     0.943820                  0.985375  0.019076  0.032890                    0.003508                            3.024081e-08\n00036: 2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.10             0.90      865      78        3                              2.158768              0.235813                0.183652             0.412322                      0.983815                8.381503       0.972820        0.993549                     0.989395            0.981806             0.996136                      0.897436                    0.820513                     0.961538                  0.930809  0.028814  0.053920                    0.003555                            5.958041e-08\n00037: 2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.05             0.95      865      78        3                              2.560773              0.279725                0.217851             0.489104                      0.988439                3.843931       0.978750        0.996564                     0.992459            0.985671             0.997738                      0.923077                    0.858974                     0.974359                  0.969653  0.028814  0.053920                    0.003555                            5.958041e-08\n00038: 2s_to_5s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90      826      63        5                              1.975130              0.207422                0.152795             0.465234                      0.940678                4.067797       0.900699        0.970733                     0.902051            0.847047             0.949819                      0.730159                    0.619048                     0.841270                  0.926247  0.035590  0.067247                    0.006072                            3.442883e-08\n00039: 2s_to_5s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95      826      63        5                              2.950976              0.309902                0.228285             0.695091                      0.980630                3.062954       0.963114        0.993363                     0.962024            0.926609             0.989593                      0.873016                    0.777778                     0.952381                  0.964189  0.035590  0.067247                    0.006072                            3.442883e-08\n00040: 2s_to_5s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.10             0.90      637      71        3                              1.975130              0.186199                0.163691             0.317192                      0.860283               -3.971743       0.810376        0.905450                     0.791729            0.710240             0.865186                      0.549296                    0.436620                     0.661972                  0.836264  0.050132  0.105339                    0.006103                            4.460434e-08
+85:                                                                              C:\Users\HP\Downloads\step6c_crossfit_conformal\crossfit_oof_sample_scores.csv   419  2s_to_2s_primary_q95      2.560773                                                                                                                                                                                                                                                                                                                                                                                                                             485,0000000367_0000000000,train_real_0000000367_0000000000_obj39_seg2,2s_to_2s,0,0.09794135391712189,2.560772554862189,0.07631369967258424,0.23964052204413255                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   00416: 482,0000000367_0000000000,train_real_0000000367_0000000000_obj39_seg2,2s_to_2s,0,0.17684316635131836,0.15883195872610503,0.013003636721601042,0.028088345455182313\n00417: 483,0000000367_0000000000,train_real_0000000367_0000000000_obj39_seg2,2s_to_2s,0,0.18927079439163208,0.10624869816197977,0.009670307171294499,0.02010977637013864\n00418: 484,0000000367_0000000000,train_real_0000000367_0000000000_obj39_seg2,2s_to_2s,0,0.09330390393733978,0.2930519320688872,0.015928144403224105,0.027306801978436948\n00419: 485,0000000367_0000000000,train_real_0000000367_0000000000_obj39_seg2,2s_to_2s,0,0.09794135391712189,2.560772554862189,0.07631369967258424,0.23964052204413255\n00420: 486,0000000367_0000000000,train_real_0000000367_0000000000_obj40_seg2,2s_to_2s,1,0.08861570805311203,0.5718041720373167,0.026446794218399454,0.04159346995528535\n00421: 487,0000000367_0000000000,train_real_0000000367_0000000000_obj40_seg2,2s_to_2s,1,0.13255387544631958,0.19310523479133562,0.014187163765837982,0.01170435291381059\n00422: 488,0000000367_0000000000,train_real_0000000367_0000000000_obj40_seg2,2s_to_2s,1,0.16510461270809174,0.20792008206140725,0.014335273735592114,0.03432856450803084
+86:                                                                          C:\Users\HP\Downloads\step6c_crossfit_conformal\crossfit_stepwise_track_scores.csv  1015  2s_to_2s_primary_q95      2.560773                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              train_real_0000000367_0000000000_obj39_seg2,2.560772554862189,2s_to_2s,17,1.7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       01012: train_real_0000000367_0000000000_obj37_seg1,1.1419755805135703,2s_to_2s,17,1.7\n01013: train_real_0000000367_0000000000_obj37_seg2,0.2530204527401094,2s_to_2s,17,1.7\n01014: train_real_0000000367_0000000000_obj38_seg1,2.5817937833828752,2s_to_2s,17,1.7\n01015: train_real_0000000367_0000000000_obj39_seg2,2.560772554862189,2s_to_2s,17,1.7\n01016: train_real_0000000367_0000000000_obj3_seg1,0.21009184698407624,2s_to_2s,17,1.7\n01017: train_real_0000000367_0000000000_obj3_seg2,3.1745157462860694,2s_to_2s,17,1.7\n01018: train_real_0000000367_0000000000_obj40_seg2,1.0281619996076468,2s_to_2s,17,1.7"

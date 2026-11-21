@@ -1,0 +1,15 @@
+STAGE 7 — TRAINREAL DEVELOPMENT-ONLY DETECTOR PILOT
+This is NOT a BIRDSAI TestReal performance result and not a tracker/forecast evaluation.
+
+Annotated images: 120; original R13 checkpoint hash verified.
+Small elephant defined as GT bounding-box area <0.5% of full image area.
+Precision/false boxes are CONDITIONAL ON annotated positive frames; these are not fully negative-image alarms.
+
+baseline_640_conf010: recall=0.0192, precision=0.5263, F1=0.0370, FP/annotated image=0.0750, wall=0.156s
+highres_960_conf010: recall=0.0269, precision=0.2373, F1=0.0483, FP/annotated image=0.3750, wall=0.227s
+lowconf_640_conf003: recall=0.0345, precision=0.4286, F1=0.0639, FP/annotated image=0.2000, wall=0.118s
+highres_960_conf003: recall=0.0614, precision=0.3077, F1=0.1024, FP/annotated image=0.6000, wall=0.198s
+
+Decision: NO_DEV_CANDIDATE_PASSED_GATES_RETAIN_BASELINE; candidate=baseline_640_conf010
+Next: freeze this decision; run on original R13 TestReal ONCE; measure detection, tracking IDF1/HOTA, 2s/5s track-derived windows.
+Do not claim improvement from pilot alone.

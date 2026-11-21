@@ -1,0 +1,79 @@
+{
+  "repo": "wildbox-anon-2026/wildbox-review",
+  "revision_used": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+  "records": [
+    {
+      "holdout_id": "exp3_01",
+      "repo_path": "elep1/DJI_20240119151437_0002_V.zip",
+      "basename": "DJI_20240119151437_0002_V.zip",
+      "elephant_group": "elep1",
+      "selection_hash": "bd34acd2c401b7ba27bf99c5af9167d97b4f99cc32ee26626b8e4eb55bcda919",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 315500056,
+      "archive_sha256": "58dd9898a24ec1475557978cb32ffeb54bbf09c900343164afd639965b5bbdff",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    },
+    {
+      "holdout_id": "exp3_02",
+      "repo_path": "elep1/DJI_20240119151048_0001_V.zip",
+      "basename": "DJI_20240119151048_0001_V.zip",
+      "elephant_group": "elep1",
+      "selection_hash": "c4a9d0524f6177cf3a5a8f823ce17a9f3919ec7b37bb012ac02d5c7ee3b2ba86",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 112265305,
+      "archive_sha256": "a9df1fce74b4a9d8092ceda7ae3e324b3c3afc0d39dbabb21b305e589c5cd20f",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    },
+    {
+      "holdout_id": "exp3_03",
+      "repo_path": "elep2/DJI_20240626143443_0003_V.zip",
+      "basename": "DJI_20240626143443_0003_V.zip",
+      "elephant_group": "elep2",
+      "selection_hash": "411bce7f9c83c104937d0db23eb82594af9d74f28fa07bd25a878d1e7203770a",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 757823183,
+      "archive_sha256": "29321e407f8c371e148d77b21572bc6791fe3c3955f4a47be697ec14959504a5",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    },
+    {
+      "holdout_id": "exp3_04",
+      "repo_path": "elep2/DJI_20240626143248_0002_V.zip",
+      "basename": "DJI_20240626143248_0002_V.zip",
+      "elephant_group": "elep2",
+      "selection_hash": "655c352e9f82aa78917ea836e62fd56a21a605a69f9974946e5404bc05f31a07",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 508824426,
+      "archive_sha256": "1aecf2ae18b7bf8fecaf2e253c4d0d4bc898e93e92d14971e9a884da4cce6f5d",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    },
+    {
+      "holdout_id": "exp3_05",
+      "repo_path": "elep3/DJI_20260227084724_0003_V.zip",
+      "basename": "DJI_20260227084724_0003_V.zip",
+      "elephant_group": "elep3",
+      "selection_hash": "1bd0cb6830562992848041838e6c156d54a5050511e9a9c4a6e638728ecb9813",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 334394704,
+      "archive_sha256": "dbc6716792e347e355ce506ff131b7987fcc3e13f5f20cb5dcb32af84b643125",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    },
+    {
+      "holdout_id": "exp3_06",
+      "repo_path": "elep3/DJI_20260227082707_0003_V.zip",
+      "basename": "DJI_20260227082707_0003_V.zip",
+      "elephant_group": "elep3",
+      "selection_hash": "4fee8becefc01014a6aadfff0fc24be9d5146a1c3e27202f18c6dd3c7039e7cf",
+      "repo_id": "wildbox-anon-2026/wildbox-review",
+      "download_revision": "93487b2428d903d418b22ece37e8b69fa03e8cf5",
+      "archive_bytes": 326472725,
+      "archive_sha256": "c06f229bb74265418552c0c70dc88787646b72e037a6b4da5245c61f9d40fc84",
+      "zip_status": "FULL_ZIP_CRC_PASS"
+    }
+  ],
+  "new_metrics_produced": false
+}

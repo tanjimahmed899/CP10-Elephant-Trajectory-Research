@@ -1,0 +1,5 @@
+metric,max,median
+pixel_reconstruction_x_abs_error,5.684341886080802e-14,0.0
+pixel_reconstruction_y_abs_error,5.684341886080802e-14,0.0
+aspect_ratio_x_scale_to_y_scale_anisotropic,2.1806853582554515,1.5437665782493368
+isotropic_x_y_scale_ratio,1.0,1.0

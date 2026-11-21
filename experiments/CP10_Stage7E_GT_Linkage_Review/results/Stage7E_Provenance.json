@@ -1,0 +1,24 @@
+{
+  "status": "GT_LINKAGE_AUDIT_COMPLETE",
+  "stage7d_zip_sha256": "38d54ed01c44ab637e1f63061c5100b622c7cf2ed50180caa5c03dc8b8fb8a98",
+  "source_gt_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "source_gt_rows": 48055,
+  "source_tracker_rows": 40509,
+  "frame_groups_with_tracker_boxes": 7181,
+  "source_sequences": [
+    "0000000055_0000000000",
+    "0000000058_0000000000",
+    "0000000349_0000000000",
+    "0000000352_0000000000",
+    "0000000353_0000000000",
+    "0000000357_0000000000"
+  ],
+  "matching_rule": "per-frame one-to-one Hungarian IoU >=0.50; GT identity used only for offline audit",
+  "strict_gate": "20/20 10-Hz history tracker boxes matched same GT id, future GT all present",
+  "diagnostic_gate80": "at least 16/20 10-Hz history boxes matched same GT id, zero conflict, full future GT",
+  "oracle_labels_not_deployable": true,
+  "actual_transformer_predictions_run": false,
+  "not_independent_holdout": true,
+  "sampling": "Segment start frame plus 3-frame 30Hz steps; stride=10 samples",
+  "selection_note": "strict and diagnostic 80% gates are preregistered in code and not tuned on TestReal"
+}

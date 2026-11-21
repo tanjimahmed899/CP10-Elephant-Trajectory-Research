@@ -1,0 +1,4 @@
+section,locked_text
+Methods / Evaluation,"WildBox evaluation is reported in the original normalized/image-coordinate representation. Although per-frame camera intrinsics and extrinsics were available, no source-specific metric-scale anchor such as measured altitude, known distance, ground-sample distance, or calibrated meters-per-pixel factor was verified for the three evaluated WildBox sources."
+Limitations,"Accordingly, WildBox ADE/FDE values were not converted to meters. The camera geometry is sufficient for geometric consistency analysis but, without an independently verified physical scale, does not justify metric-distance claims."
+Claims,"No claim is made that WildBox forecast errors, geofence distances, or camera translations correspond directly to meters."

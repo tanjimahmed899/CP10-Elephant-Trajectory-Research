@@ -1,0 +1,1311 @@
+{
+  "root": "/mnt/e/AIUB/Capstone Project/Journal Based Results/Main Result 3.0/paper_strengthening_revision",
+  "included_count": 326,
+  "included_bytes": 26203427,
+  "files": [
+    {
+      "path": "R10_ensemble_analysis/R10A_frozen_transformer_ensemble_evidence_audit/R10A_FROZEN_TRANSFORMER_PREDICTION_INVENTORY.csv",
+      "size": 5772
+    },
+    {
+      "path": "R10_ensemble_analysis/R10B_testreal_transformer_ensemble_value/R10B_PAIRED_SEGMENT_CLUSTER_BOOTSTRAP.csv",
+      "size": 3755
+    },
+    {
+      "path": "R10_ensemble_analysis/R10B_testreal_transformer_ensemble_value/R10B_TESTREAL_ENSEMBLE_SAMPLE_METRICS.csv",
+      "size": 1247653
+    },
+    {
+      "path": "R10_ensemble_analysis/R10B_testreal_transformer_ensemble_value/R10B_TESTREAL_ENSEMBLE_SUMMARY.csv",
+      "size": 861
+    },
+    {
+      "path": "R10_ensemble_analysis/R10B_testreal_transformer_ensemble_value/R10B_TESTREAL_INDIVIDUAL_SEED_METRICS.csv",
+      "size": 346
+    },
+    {
+      "path": "R10_ensemble_analysis/R10B_testreal_transformer_ensemble_value/R10B_VALIDATION_SEED_SELECTION_LOCK.csv",
+      "size": 1359
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C0B_fresh_wildbox_schema_and_loader_audit/R10C0B_DATASET_LEVEL_SCHEMA_SUMMARY.csv",
+      "size": 645
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C0B_fresh_wildbox_schema_and_loader_audit/R10C0B_EXACT_FRESH_FILE_SOURCE_REFERENCES.csv",
+      "size": 64199
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C0B_fresh_wildbox_schema_and_loader_audit/R10C0B_METADATA_IDENTITY_SUMMARY.csv",
+      "size": 864
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C0B_fresh_wildbox_schema_and_loader_audit/R10C0B_R2_FRESH_METRIC_ARTIFACT_SUMMARY.csv",
+      "size": 1326
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/R10C1_FRESH_INPUT_LOCK.csv",
+      "size": 873
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/R10C1_FRESH_WILDBOX_SEED_LEVEL_METRICS.csv",
+      "size": 5425
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/R10C1_FRESH_WILDBOX_TRANSFORMER_ENSEMBLE_METRICS.csv",
+      "size": 998
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_2s_TransformerEnsemble_sample_metrics.csv",
+      "size": 199886
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_2s_Transformer_seed42_sample_metrics.csv",
+      "size": 185164
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_2s_Transformer_seed52_sample_metrics.csv",
+      "size": 185179
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_2s_Transformer_seed62_sample_metrics.csv",
+      "size": 185153
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_5s_TransformerEnsemble_sample_metrics.csv",
+      "size": 146772
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_5s_Transformer_seed42_sample_metrics.csv",
+      "size": 135958
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_5s_Transformer_seed52_sample_metrics.csv",
+      "size": 135959
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C1_fresh_wildbox_frozen_transformer_reinference/sample_metrics/2s_to_5s_Transformer_seed62_sample_metrics.csv",
+      "size": 135915
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C2_fresh_wildbox_external_ensemble_value/R10C2_EXTERNAL_ENSEMBLE_SUMMARY.csv",
+      "size": 1181
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C2_fresh_wildbox_external_ensemble_value/R10C2_FRESH_WILDBOX_ENSEMBLE_SAMPLE_METRICS.csv",
+      "size": 870083
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C2_fresh_wildbox_external_ensemble_value/R10C2_LEAVE_ONE_SOURCE_OUT_SENSITIVITY.csv",
+      "size": 2510
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C2_fresh_wildbox_external_ensemble_value/R10C2_TRACK_CLUSTER_BOOTSTRAP.csv",
+      "size": 1620
+    },
+    {
+      "path": "R10_ensemble_analysis/R10C2_fresh_wildbox_external_ensemble_value/R10C2_VALIDATION_SELECTED_SEED_LOCK.csv",
+      "size": 265
+    },
+    {
+      "path": "R10_ensemble_analysis/R10D_cross_domain_ensemble_conclusion/R10D_CROSS_DOMAIN_ENSEMBLE_CLAIM_MATRIX.csv",
+      "size": 3611
+    },
+    {
+      "path": "R10_ensemble_analysis/R10D_cross_domain_ensemble_conclusion/R10D_EXTERNAL_LEAVE_ONE_SOURCE_OUT_CONSISTENCY.csv",
+      "size": 1254
+    },
+    {
+      "path": "R10_ensemble_analysis/R10D_cross_domain_ensemble_conclusion/R10D_MANUSCRIPT_READY_ENSEMBLE_CONCLUSION.txt",
+      "size": 3754
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11A_empirical_noise_floor_source_audit/R11A_CANDIDATE_METRIC_SUMMARY.csv",
+      "size": 16193
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11A_empirical_noise_floor_source_audit/R11A_RANKED_EMPIRICAL_NOISE_SOURCES.csv",
+      "size": 18668
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11B_empirical_geometric_residual_floor_protocol_lock/R11B_EMPIRICAL_GEOMETRIC_RESIDUAL_PROTOCOL.csv",
+      "size": 967
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11B_empirical_geometric_residual_floor_protocol_lock/R11B_MANUSCRIPT_READY_PROTOCOL.txt",
+      "size": 1242
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11B_empirical_geometric_residual_floor_protocol_lock/R11B_SOURCE_CROSSCHECK.csv",
+      "size": 309
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11B_empirical_geometric_residual_floor_protocol_lock/R11B_TESTREAL_RESIDUAL_ROW_LOCK.csv",
+      "size": 896
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11C_testreal_forecast_error_vs_geometric_residual_floor/R11C_SEGMENT_CLUSTER_BOOTSTRAP.csv",
+      "size": 2444
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11C_testreal_forecast_error_vs_geometric_residual_floor/R11C_TESTREAL_NOISE_FLOOR_SUMMARY.csv",
+      "size": 1286
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11D_ensemble_gain_vs_residual_scale/R11D_ENSEMBLE_GAIN_VS_RESIDUAL_SCALE_SUMMARY.csv",
+      "size": 1999
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11D_ensemble_gain_vs_residual_scale/R11D_SEGMENT_CLUSTER_BOOTSTRAP_GAIN_SCALE.csv",
+      "size": 2090
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11E_final_noise_floor_conclusion/R11E_FINAL_CLAIM_MATRIX.csv",
+      "size": 1137
+    },
+    {
+      "path": "R11_noise_floor_analysis/R11E_final_noise_floor_conclusion/R11E_MANUSCRIPT_READY_NOISE_FLOOR_CONCLUSION.txt",
+      "size": 3285
+    },
+    {
+      "path": "R12_track_accounting/R12A_track_segment_provenance_audit/R12A_CANDIDATE_SOURCE_TRACK_PAIR_COUNTS.csv",
+      "size": 405
+    },
+    {
+      "path": "R12_track_accounting/R12A_track_segment_provenance_audit/R12A_FORECAST_UNITS_PER_SOURCE.csv",
+      "size": 448
+    },
+    {
+      "path": "R12_track_accounting/R12A_track_segment_provenance_audit/R12A_RANKED_ORIGINAL_TRACK_SOURCE_CANDIDATES.csv",
+      "size": 1662
+    },
+    {
+      "path": "R12_track_accounting/R12B_exact_original_track_to_forecast_segment_mapping/R12B_FORECAST_SEGMENT_TABLE.csv",
+      "size": 34413
+    },
+    {
+      "path": "R12_track_accounting/R12B_exact_original_track_to_forecast_segment_mapping/R12B_METADATA_IDENTITY_LOCK.csv",
+      "size": 558
+    },
+    {
+      "path": "R12_track_accounting/R12B_exact_original_track_to_forecast_segment_mapping/R12B_PER_SOURCE_ORIGINAL_TRACK_VS_SEGMENT_COUNTS.csv",
+      "size": 493
+    },
+    {
+      "path": "R12_track_accounting/R12B_exact_original_track_to_forecast_segment_mapping/R12B_SEGMENT_MULTIPLICITY_SUMMARY.csv",
+      "size": 314
+    },
+    {
+      "path": "R12_track_accounting/R12C_resolve_45_total_tracks_and_forecast_eligibility/R12C_CHOSEN_AUTHORITATIVE_45_TRACK_SOURCE.csv",
+      "size": 676
+    },
+    {
+      "path": "R12_track_accounting/R12C_resolve_45_total_tracks_and_forecast_eligibility/R12C_ELIGIBILITY_CLASS_SUMMARY.csv",
+      "size": 59
+    },
+    {
+      "path": "R12_track_accounting/R12C_resolve_45_total_tracks_and_forecast_eligibility/R12C_EXACT_45_TRACK_SOURCE_CANDIDATES.csv",
+      "size": 1475
+    },
+    {
+      "path": "R12_track_accounting/R12C_resolve_45_total_tracks_and_forecast_eligibility/R12C_FORECAST_REPRESENTATION_LOCK.csv",
+      "size": 510
+    },
+    {
+      "path": "R12_track_accounting/R12C_resolve_45_total_tracks_and_forecast_eligibility/R12C_UPSTREAM_TRACK_SOURCE_CANDIDATES.csv",
+      "size": 21840
+    },
+    {
+      "path": "R12_track_accounting/R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping/R12C_V2_AUTHORITATIVE_45_TRACK_SOURCE_LOCK.csv",
+      "size": 364
+    },
+    {
+      "path": "R12_track_accounting/R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping/R12C_V2_ELIGIBILITY_CLASS_SUMMARY.csv",
+      "size": 101
+    },
+    {
+      "path": "R12_track_accounting/R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping/R12C_V2_FORECAST_REPRESENTATION_LOCK.csv",
+      "size": 513
+    },
+    {
+      "path": "R12_track_accounting/R12D_segment_build_rule_source_provenance_audit/R12D_RANKED_SEGMENT_BUILDER_SOURCE_CANDIDATES.csv",
+      "size": 72120
+    },
+    {
+      "path": "R12_track_accounting/R12E_v10_direct_unified10hz_builder_audit/R12E_V10_FULL_SOURCE_EVIDENCE.csv",
+      "size": 52877
+    },
+    {
+      "path": "R12_track_accounting/R12E_v10_direct_unified10hz_builder_audit/R12E_V10_HIGH_VALUE_EXECUTABLE_EXPRESSIONS.csv",
+      "size": 3643
+    },
+    {
+      "path": "R12_track_accounting/R12E_v11_full_exact_track_accounting_reconstruction/R12E_V11_EXACT_SOURCE_FILTER_EXPRESSION.csv",
+      "size": 496
+    },
+    {
+      "path": "R12_track_accounting/R12E_v11_full_exact_track_accounting_reconstruction/R12E_V11_FILTERED_VS_FROZEN_PHYSICAL_WINDOW_MATCH.csv",
+      "size": 293
+    },
+    {
+      "path": "R12_track_accounting/R12E_v11_full_exact_track_accounting_reconstruction/R12E_V11_REMOVED_WINDOW_REASON_SUMMARY.csv",
+      "size": 399
+    },
+    {
+      "path": "R12_track_accounting/R12E_v3_robust_segment_rule_reconstruction/R12E_V3_EXACT_RULE_LOCK.csv",
+      "size": 483
+    },
+    {
+      "path": "R12_track_accounting/R12E_v3_robust_segment_rule_reconstruction/R12E_V3_RECONSTRUCTED_VS_FROZEN_TRACK_SETS.csv",
+      "size": 185
+    },
+    {
+      "path": "R12_track_accounting/R12E_v3_robust_segment_rule_reconstruction/R12E_V3_RECONSTRUCTION_VS_FROZEN_COUNTS.csv",
+      "size": 215
+    },
+    {
+      "path": "R12_track_accounting/R12E_v4_post_segmentation_filter_audit/R12E_V4_FILTER_SOURCE_CODE_EVIDENCE.csv",
+      "size": 70841
+    },
+    {
+      "path": "R12_track_accounting/R12E_v4_post_segmentation_filter_audit/R12E_V4_REMOVED_WINDOW_REASON_SUMMARY.csv",
+      "size": 14919
+    },
+    {
+      "path": "R12_track_accounting/R12E_v5_exact_testreal_filter_rule_reconstruction/R12E_V5_CORRECTOR_QUALITY_RULE_SOURCE_EVIDENCE.csv",
+      "size": 24531
+    },
+    {
+      "path": "R12_track_accounting/R12E_v5_exact_testreal_filter_rule_reconstruction/R12E_V5_EXACT_FILTER_REMOVED_REASON_SUMMARY.csv",
+      "size": 2
+    },
+    {
+      "path": "R12_track_accounting/R12E_v5_exact_testreal_filter_rule_reconstruction/R12E_V5_FILTER_CANDIDATE_EXACT_MATCH_TABLE.csv",
+      "size": 1210
+    },
+    {
+      "path": "R12_track_accounting/R12E_v5_exact_testreal_filter_rule_reconstruction/R12E_V5_FINAL_BUILDER_FILTER_SOURCE_EVIDENCE.csv",
+      "size": 19422
+    },
+    {
+      "path": "R12_track_accounting/R12E_v6_exact_final_filter_source_provenance/R12E_V6_TOP_EXECUTABLE_FILTER_LINES.csv",
+      "size": 6617
+    },
+    {
+      "path": "R12_track_accounting/R12E_v8_trace_core_10hz_dataset_generator/R12E_V8_RANKED_CORE_10HZ_PROVENANCE_SOURCES.csv",
+      "size": 3198
+    },
+    {
+      "path": "R12_track_accounting/R12E_v8_trace_core_10hz_dataset_generator/R12E_V8_TOP_WRITER_LOCK.csv",
+      "size": 598
+    },
+    {
+      "path": "R12_track_accounting/R12E_v9_exact_core10hz_read_write_dataflow_provenance/R12E_V9_SOURCE_READ_WRITE_CLASSIFICATION.csv",
+      "size": 2253
+    },
+    {
+      "path": "R12_track_accounting/R12F_final_track_accounting_lock/R12F_CLAIM_MATRIX.csv",
+      "size": 1023
+    },
+    {
+      "path": "R12_track_accounting/R12F_final_track_accounting_lock/R12F_EVIDENCE_HASH_LOCK.csv",
+      "size": 1053
+    },
+    {
+      "path": "R12_track_accounting/R12F_final_track_accounting_lock/R12F_TERMINOLOGY_LOCK.csv",
+      "size": 1315
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13A_V2_project_aware_asset_audit/R13A_V2_GENUINE_TRACKER_SOURCE_AUDIT.csv",
+      "size": 2
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13A_V2_project_aware_asset_audit/R13A_V2_SUMMARY.csv",
+      "size": 259
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13A_end_to_end_asset_provenance_audit/R13A_ASSET_SUMMARY.csv",
+      "size": 218
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13A_end_to_end_asset_provenance_audit/R13A_TRACKER_SOURCE_CANDIDATES.csv",
+      "size": 1501
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_V2_bbox_gt_and_detector_provenance_fix/R13B_V2_BBOX_GT_SEMANTICS_AUDIT.csv",
+      "size": 258
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_V2_bbox_gt_and_detector_provenance_fix/R13B_V2_COMPATIBILITY_SUMMARY.csv",
+      "size": 1111
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_V2_bbox_gt_and_detector_provenance_fix/R13B_V2_DETECTOR_PROVENANCE_AUDIT.csv",
+      "size": 3801
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_detector_data_tracker_compatibility_audit/R13B_COMPATIBILITY_SUMMARY.csv",
+      "size": 1125
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_detector_data_tracker_compatibility_audit/R13B_DETECTOR_CANDIDATE_METRIC_AUDIT.csv",
+      "size": 5142
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13B_detector_data_tracker_compatibility_audit/R13B_TRACKING_GT_SCHEMA_AUDIT.csv",
+      "size": 256
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13C_frozen_end_to_end_protocol_lock/R13C_CLAIM_AND_PROTOCOL_MATRIX.csv",
+      "size": 550
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13C_frozen_end_to_end_protocol_lock/R13C_FROZEN_PROTOCOL.json",
+      "size": 4139
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13C_frozen_end_to_end_protocol_lock/R13C_SEQUENCE_FRAME_MAPPING_LOCK.csv",
+      "size": 1266
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13C_frozen_end_to_end_protocol_lock/R13C_TRACKING_GT_POLICY_AUDIT.csv",
+      "size": 254
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13D_frozen_detector_tracker_execution/R13D_EXECUTION_SUMMARY.csv",
+      "size": 1462
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13E_tracking_metrics/R13E_AGGREGATE_TRACKING_METRICS.csv",
+      "size": 995
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13E_tracking_metrics/R13E_PER_SEQUENCE_TRACKING_METRICS.csv",
+      "size": 2845
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13E_tracking_metrics/R13E_TRACKER_CLASS_FILTER_AUDIT.csv",
+      "size": 226
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_A_detector_tracker_bottleneck_audit/R13F_A_AGGREGATE_STAGE_DETECTION_METRICS.csv",
+      "size": 2670
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_A_detector_tracker_bottleneck_audit/R13F_A_CONCLUSION_TABLE.csv",
+      "size": 311
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_A_detector_tracker_bottleneck_audit/R13F_A_GT_TRACK_OBSERVATION_COVERAGE_IOU050.csv",
+      "size": 14029
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_A_detector_tracker_bottleneck_audit/R13F_A_PER_SEQUENCE_STAGE_DETECTION_METRICS.csv",
+      "size": 10987
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_B_tracker_forecastability_audit/R13F_B_CONCLUSION.csv",
+      "size": 481
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_C_end_to_end_feasibility_and_claim_lock/R13F_C_CLAIM_MATRIX.csv",
+      "size": 1651
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_C_end_to_end_feasibility_and_claim_lock/R13F_C_EVIDENCE_HASH_LOCK.csv",
+      "size": 865
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_C_end_to_end_feasibility_and_claim_lock/R13F_C_MANUSCRIPT_READY_CONCLUSION.txt",
+      "size": 2234
+    },
+    {
+      "path": "R13_end_to_end_pipeline/R13F_C_end_to_end_feasibility_and_claim_lock/R13F_C_ROADMAP_LOCK.csv",
+      "size": 575
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_AGGREGATE_WALLCLOCK_LATENCY.csv",
+      "size": 822
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_LATENCY_CLAIM_MATRIX.csv",
+      "size": 998
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_MANUSCRIPT_READY_LATENCY_INTERPRETATION.txt",
+      "size": 1167
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_PER_SEQUENCE_WALLCLOCK_LATENCY.csv",
+      "size": 3152
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_ULTRALYTICS_REPORTED_MODEL_TIMES.csv",
+      "size": 1330
+    },
+    {
+      "path": "R16_latency/R16A_computational_latency_audit/R16A_WARNING_HORIZON_COMPUTE_CONTEXT.csv",
+      "size": 1479
+    },
+    {
+      "path": "R16_latency/R16B_operational_response_latency_context/R16B_OPERATIONAL_LATENCY_CLAIM_MATRIX.csv",
+      "size": 1582
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A2_existing_dataset_cooccurrence_audit/R17A2_DECISION_SUMMARY.csv",
+      "size": 358
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A2_existing_dataset_cooccurrence_audit/R17A2_IMAGE_LEVEL_COOCCURRENCE_AUDIT.csv",
+      "size": 389120
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A2_existing_dataset_cooccurrence_audit/R17A2_SPLIT_LEVEL_COOCCURRENCE_SUMMARY.csv",
+      "size": 1088
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A3B_coco_animal_cooccurrence_audit/R17A3B_DECISION_SUMMARY.csv",
+      "size": 335
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A3_openimages_external_candidate_audit/R17A3_DECISION_SUMMARY.csv",
+      "size": 355
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A4A_frozen_subset_selection/R17A4A_SELECTION_SUMMARY.csv",
+      "size": 450
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A4B_frozen_pixel_download/R17A4B_DOWNLOAD_SUMMARY.csv",
+      "size": 210
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A4B_frozen_pixel_download/R17A4B_PIXEL_DOWNLOAD_AUDIT.csv",
+      "size": 191471
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A4C_detector_dataset_leakage_audit/R17A4C_FROZEN_COCO_IMAGE_HASHES.csv",
+      "size": 161366
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A4C_detector_dataset_leakage_audit/R17A4C_LEAKAGE_AUDIT_SUMMARY.csv",
+      "size": 298
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A_mixed_species_asset_provenance_audit/R17A_BAMBI_ASSET_AUDIT.csv",
+      "size": 66830
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17A_mixed_species_asset_provenance_audit/R17A_SUMMARY.csv",
+      "size": 384
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_CLAIM_BOUNDARY_LOCK.csv",
+      "size": 1203
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_DETECTOR_LOCK.csv",
+      "size": 594
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_FROZEN_COCO_GT_BOXES.csv",
+      "size": 788986
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_FROZEN_SUPPLEMENT_ELEPHANT_LION_GT_BOXES.csv",
+      "size": 7861
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_INFERENCE_EVALUATION_SETTINGS_LOCK.csv",
+      "size": 635
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_METRIC_LOCK.csv",
+      "size": 1017
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17B_frozen_robustness_protocol_lock/R17B_PROTOCOL_LOCK.json",
+      "size": 5040
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17C_frozen_dual_detector_inference/R17C_IMAGE_INFERENCE_AUDIT.csv",
+      "size": 386775
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17C_frozen_dual_detector_inference/R17C_INFERENCE_SUMMARY.csv",
+      "size": 348
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_AP_METRICS.csv",
+      "size": 1280
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_DECISION_SUMMARY.csv",
+      "size": 923
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_GROUP_METRICS.csv",
+      "size": 4517
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_IMAGE_LEVEL_METRICS.csv",
+      "size": 286789
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_PAIRED_BOOTSTRAP_CI.csv",
+      "size": 1681
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_PER_CONFUSER_PAIR_METRICS.csv",
+      "size": 2749
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_PRIMARY_CONF025_METRICS.csv",
+      "size": 1667
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17D_locked_metric_evaluation/R17D_SUPPLEMENTARY_IN_VOCAB_METRICS.csv",
+      "size": 516
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17E_claim_interpretation_lock/R17E_CLAIM_INTERPRETATION_LOCK.json",
+      "size": 2417
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17E_claim_interpretation_lock/R17E_CLAIM_MATRIX_LOCKED.csv",
+      "size": 2016
+    },
+    {
+      "path": "R17_mixed_species_robustness/R17E_claim_interpretation_lock/R17E_KEY_RESULT_LOCK.csv",
+      "size": 352
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18A2_wildbox_only_metric_scale_audit/R18A2_PER_SOURCE_SCALE_READINESS.csv",
+      "size": 1177
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18A2_wildbox_only_metric_scale_audit/R18A2_SCALE_READINESS_SUMMARY.csv",
+      "size": 413
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18A_physical_scale_provenance_audit/R18A_EXISTING_WILDBOX_RESULT_FILE_INVENTORY.csv",
+      "size": 169396
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18A_physical_scale_provenance_audit/R18A_PHYSICAL_SCALE_READINESS_SUMMARY.csv",
+      "size": 429
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18B_meter_space_limitation_lock/R18B_CLAIM_MATRIX_LOCKED.csv",
+      "size": 1299
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18B_meter_space_limitation_lock/R18B_MANUSCRIPT_WORDING_LOCK.csv",
+      "size": 779
+    },
+    {
+      "path": "R18_meter_space_wildbox/R18B_meter_space_limitation_lock/R18B_METER_SPACE_LIMITATION_LOCK.json",
+      "size": 2234
+    },
+    {
+      "path": "R19_final_claim_matrix_and_paper_rewrite_lock/R19_FINAL_CLAIM_MATRIX.csv",
+      "size": 3987
+    },
+    {
+      "path": "R19_final_claim_matrix_and_paper_rewrite_lock/R19_FINAL_LOCK.json",
+      "size": 2980
+    },
+    {
+      "path": "R1_protocol_lock_v3/R1_V3_REVISION_PROTOCOL_LOCK.json",
+      "size": 4963
+    },
+    {
+      "path": "R1_protocol_lock_v3/R1_V3_REVISION_PROTOCOL_RECEIPT.json",
+      "size": 646
+    },
+    {
+      "path": "R1_protocol_lock_v3/R1_V3_existing_frozen_snapshot_integrity.csv",
+      "size": 2388
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight/R2A_PREFLIGHT_SUMMARY.json",
+      "size": 1094
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight/R2A_fresh_holdout_source_presence.csv",
+      "size": 129
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight/R2A_selected_source_scripts.csv",
+      "size": 1405
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight/R2A_source_ast_inventory.json",
+      "size": 30138
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight_v2/R2A_V2_PREFLIGHT_SUMMARY.json",
+      "size": 1644
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight_v2/R2A_V2_fresh_source_content_evidence.csv",
+      "size": 127866
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight_v2/R2A_V2_fresh_source_proof.csv",
+      "size": 4638
+    },
+    {
+      "path": "R2_fair_forecasting/R2A_preflight_v2/R2A_V2_source_scripts.csv",
+      "size": 2002
+    },
+    {
+      "path": "R2_fair_forecasting/R2B_fair_same_sample_benchmark/R2B_SUMMARY.json",
+      "size": 1851
+    },
+    {
+      "path": "R2_fair_forecasting/R2B_fair_same_sample_benchmark/R2B_aligned_primary_model_sample_metrics.csv",
+      "size": 2
+    },
+    {
+      "path": "R2_fair_forecasting/R2B_fair_same_sample_benchmark/R2B_fair_primary_model_summary.csv",
+      "size": 2
+    },
+    {
+      "path": "R2_fair_forecasting/R2B_fair_same_sample_benchmark/R2B_model_sample_coverage.csv",
+      "size": 1388
+    },
+    {
+      "path": "R2_fair_forecasting/R2B_fair_same_sample_benchmark/R2B_source_csv_audit.csv",
+      "size": 13658
+    },
+    {
+      "path": "R2_fair_forecasting/R2C_missing_row_audit/R2C_SUMMARY.json",
+      "size": 1308
+    },
+    {
+      "path": "R2_fair_forecasting/R2C_missing_row_audit/R2C_csv_metric_format_evidence.csv",
+      "size": 13616
+    },
+    {
+      "path": "R2_fair_forecasting/R2C_missing_row_audit/R2C_result_artifact_inventory.csv",
+      "size": 92386
+    },
+    {
+      "path": "R2_fair_forecasting/R2C_missing_row_audit/R2C_source_call_inventory.csv",
+      "size": 13760
+    },
+    {
+      "path": "R2_fair_forecasting/R2C_missing_row_audit/R2C_source_script_inventory.csv",
+      "size": 2429
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B1_stationary_cv_transformer/R2D_B1_sample_metrics.csv",
+      "size": 1136285
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B1_stationary_cv_transformer/R2D_B1_summary_metrics.csv",
+      "size": 1070
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2B_kalman_param_recovery_audit/R2D_B2B_SUMMARY.json",
+      "size": 1360
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2B_kalman_param_recovery_audit/R2D_B2B_kalman_source_context.csv",
+      "size": 23955
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2C_exact_kalman_param_lock/R2D_B2C_LOCKED_KALMAN_PARAMS.csv",
+      "size": 382
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2C_exact_kalman_param_lock/R2D_B2C_source_selected_qr.csv",
+      "size": 198
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2C_exact_kalman_param_lock/R2D_B2C_source_selection_criterion.json",
+      "size": 366
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2C_exact_kalman_param_lock/R2D_B2C_summary_text_evidence.csv",
+      "size": 78
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2C_exact_kalman_param_lock/R2D_B2C_tuning_grid_audit.csv",
+      "size": 105
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_preflight/R2D_B2A_SUMMARY.json",
+      "size": 1390
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_preflight/R2D_B2A_source_inventory.json",
+      "size": 15845
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_testreal_kalman_gru_lstm/R2D_B2_GRU_LSTM_seed_level_sample_metrics.csv",
+      "size": 1622647
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_testreal_kalman_gru_lstm/R2D_B2_locked_frozen_kalman_params_used.csv",
+      "size": 50
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_testreal_kalman_gru_lstm/R2D_B2_model_loading_audit.csv",
+      "size": 3378
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_testreal_kalman_gru_lstm/R2D_B2_sample_metrics.csv",
+      "size": 802595
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_B2_testreal_kalman_gru_lstm/R2D_B2_summary_metrics.csv",
+      "size": 505
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_targeted_recompute_preflight/R2D_A_SUMMARY.json",
+      "size": 1332
+    },
+    {
+      "path": "R2_fair_forecasting/R2D_targeted_recompute_preflight_v3/R2D_A3_SUMMARY.json",
+      "size": 746
+    },
+    {
+      "path": "R2_fair_forecasting/R2E_six_model_fair_benchmark/R2E_fresh_existing_alignment_audit.csv",
+      "size": 394
+    },
+    {
+      "path": "R2_fair_forecasting/R2E_six_model_fair_benchmark/R2E_six_model_fair_summary.csv",
+      "size": 3657
+    },
+    {
+      "path": "R2_fair_forecasting/R2E_six_model_fair_benchmark/R2E_six_model_same_sample_metrics.csv",
+      "size": 2133706
+    },
+    {
+      "path": "R2_fair_forecasting/R2E_six_model_fair_benchmark/R2E_testreal_B1_B2_alignment_audit.csv",
+      "size": 1654
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3A_track_cluster_recovery/R3A_cluster_ready_summary.csv",
+      "size": 4123
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3A_track_cluster_recovery/R3A_six_model_same_sample_metrics_with_clusters.csv",
+      "size": 2593193
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3A_track_cluster_recovery/R3A_testreal_track_recovery_audit.csv",
+      "size": 3376
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3B_paired_clustered_bootstrap_CI/R3B_interpretation.csv",
+      "size": 19527
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3B_paired_clustered_bootstrap_CI/R3B_paired_cluster_bootstrap_results.csv",
+      "size": 20834
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3B_paired_clustered_bootstrap_CI/R3B_pairing_audit.csv",
+      "size": 1423
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3C_interpretation_claim_lock/R3C_CLAIM_LOCK.csv",
+      "size": 2060
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3C_interpretation_claim_lock/R3C_manuscript_comparison_table.csv",
+      "size": 6699
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3C_interpretation_claim_lock/R3C_task_level_conclusions.csv",
+      "size": 739
+    },
+    {
+      "path": "R3_clustered_bootstrap/R3C_interpretation_claim_lock/R3C_transformer_primary_track_interpretation.csv",
+      "size": 11673
+    },
+    {
+      "path": "R4_conformal_coverage/R4A_frozen_conformal_method_audit/R4A_csv_q_coverage_evidence.csv",
+      "size": 199754
+    },
+    {
+      "path": "R4_conformal_coverage/R4B_method_lock_and_existing_coverage/R4B_EXISTING_TESTREAL_FRESH_FIXED_COVERAGE.csv",
+      "size": 3979
+    },
+    {
+      "path": "R4_conformal_coverage/R4B_method_lock_and_existing_coverage/R4B_LOCKED_FIXED_Q_VALUES.csv",
+      "size": 389
+    },
+    {
+      "path": "R4_conformal_coverage/R4B_method_lock_and_existing_coverage/R4B_calibration_track_audit.csv",
+      "size": 311
+    },
+    {
+      "path": "R4_conformal_coverage/R4B_method_lock_and_existing_coverage/R4B_dataset_role_audit.csv",
+      "size": 196
+    },
+    {
+      "path": "R4_conformal_coverage/R4B_method_lock_and_existing_coverage/R4B_step6c_protocol_lock.csv",
+      "size": 583
+    },
+    {
+      "path": "R4_conformal_coverage/R4C_interpretation_claim_lock/R4C_CLAIM_LOCK.csv",
+      "size": 2238
+    },
+    {
+      "path": "R4_conformal_coverage/R4C_interpretation_claim_lock/R4C_coverage_interpretation.csv",
+      "size": 5075
+    },
+    {
+      "path": "R4_conformal_coverage/R4C_interpretation_claim_lock/R4C_manuscript_uncertainty_table.csv",
+      "size": 3028
+    },
+    {
+      "path": "R5_geofence_baselines/R5B_trivial_always_red_always_green/R5B_grouping_audit.csv",
+      "size": 45
+    },
+    {
+      "path": "R5_geofence_baselines/R5B_trivial_always_red_always_green/R5B_trivial_baseline_metrics.csv",
+      "size": 7199
+    },
+    {
+      "path": "R5_geofence_baselines/R5C_interpretation_claim_lock/R5C_CLAIM_LOCK.csv",
+      "size": 2117
+    },
+    {
+      "path": "R5_geofence_baselines/R5C_interpretation_claim_lock/R5C_dataset_task_summary.csv",
+      "size": 2018
+    },
+    {
+      "path": "R5_geofence_baselines/R5C_interpretation_claim_lock/R5C_trivial_baseline_detailed_interpretation.csv",
+      "size": 6902
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6A_validation_only_preflight/R6A_candidate_source_overlap_audit.csv",
+      "size": 13213
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6A_validation_only_preflight/R6A_frozen_evaluation_source_sets.csv",
+      "size": 370
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B2V3_track_group_cv_no_sklearn/R6B2V3_source_LOSO_failure_audit.csv",
+      "size": 320
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B2V3_track_group_cv_no_sklearn/R6B2V3_source_class_distribution.csv",
+      "size": 372
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B2V3_track_group_cv_no_sklearn/R6B2V3_track_group_cv_feasibility.csv",
+      "size": 554
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B3_revised_protocol_lock/R6B3_FEATURE_LEAKAGE_LOCK.csv",
+      "size": 878
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B3_revised_protocol_lock/R6B3_LOCKED_5FOLD_TRACK_PARTITIONS.csv",
+      "size": 1549
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6B3_revised_protocol_lock/R6B3_LOCKED_DIRECT_CLASSIFIER_PROTOCOL.json",
+      "size": 3332
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6C_oof_threshold_lock_and_frozen_evaluation/R6C_FROZEN_EVALUATION_METRICS.csv",
+      "size": 2135
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6C_oof_threshold_lock_and_frozen_evaluation/R6C_LOCKED_VALIDATION_ONLY_THRESHOLDS.csv",
+      "size": 634
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6C_oof_threshold_lock_and_frozen_evaluation/R6C_fold_model_audit.csv",
+      "size": 3431
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6D_paired_track_cluster_bootstrap/R6D_TRACK_CLUSTER_BOOTSTRAP_RESULTS.csv",
+      "size": 3380
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6E_interpretation_claim_lock/R6E_CLAIM_LOCK.csv",
+      "size": 1943
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6E_interpretation_claim_lock/R6E_condition_interpretation.csv",
+      "size": 1773
+    },
+    {
+      "path": "R6_direct_crossing_classifier/R6E_interpretation_claim_lock/R6E_manuscript_direct_classifier_table.csv",
+      "size": 1773
+    },
+    {
+      "path": "R7_warning_hierarchy/R7A_operational_hierarchy_lock/R7A_CLAIM_LOCK.csv",
+      "size": 1427
+    },
+    {
+      "path": "R7_warning_hierarchy/R7A_operational_hierarchy_lock/R7A_WARNING_HIERARCHY_LOCK.csv",
+      "size": 1564
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8A_existing_artifact_audit/R8A_INTERESTING_TABLE_PREVIEWS.csv",
+      "size": 45229
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8A_existing_artifact_audit/R8A_LIKELY_EGO_MOTION_RESULT_TABLES.csv",
+      "size": 7881
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8B_exact_result_extraction/R8B_raw_vs_corrected_forecasting_results.csv",
+      "size": 1930
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8B_exact_result_extraction/R8B_raw_vs_corrected_warning_results.csv",
+      "size": 1557
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8B_exact_result_extraction/R8B_stationary_landmark_residual_results.csv",
+      "size": 308
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8C_interpretation_claim_lock/R8C_CLAIM_LOCK.csv",
+      "size": 2489
+    },
+    {
+      "path": "R8_ego_motion_ablation/R8C_interpretation_claim_lock/R8C_EGO_MOTION_EVIDENCE_SUMMARY.csv",
+      "size": 3235
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9A_representation_preflight_audit/R9A_COORDINATE_SOURCE_CANDIDATES.csv",
+      "size": 128254
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9B_exact_normalization_source_lock/R9B_CLEANED_TRACK_POINT_RANGE_AUDIT.csv",
+      "size": 700
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9B_exact_normalization_source_lock/R9B_SOURCE_LOCK.json",
+      "size": 1139
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9C_isotropic_transform_lock/R9C_ISOTROPIC_TRANSFORM_LOCK.json",
+      "size": 2442
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9C_isotropic_transform_lock/R9C_SOURCE_CODE_NORMALIZATION_CONTEXT.csv",
+      "size": 2797
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9D_isotropic_point_dataset_build/R9D_row_integrity_audit.csv",
+      "size": 540
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9D_isotropic_point_dataset_build/R9D_sequence_geometry_audit.csv",
+      "size": 779
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9D_isotropic_point_dataset_build/R9D_transform_consistency_audit.csv",
+      "size": 257
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9E_V2_exact_window_protocol_match/R9E_V2_EXISTING_WINDOW_SOURCE_CANDIDATES.csv",
+      "size": 48241
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9E_V2_exact_window_protocol_match/R9E_V2_FROZEN_REFERENCE_SAMPLE_KEY_LOCK.csv",
+      "size": 197205
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9E_V2_exact_window_protocol_match/R9E_V2_ISOTROPIC_SOURCE_COVERAGE_AUDIT.csv",
+      "size": 424
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9E_V2_exact_window_protocol_match/R9E_V2_MODEL_DUPLICATION_AUDIT.csv",
+      "size": 333
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9E_V2_exact_window_protocol_match/R9E_V2_STEP2B_WINDOW_PROTOCOL_CODE_CONTEXT.csv",
+      "size": 26259
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3A_exact_corrected_source_mapping_audit/R9F_V3A_METADATA_NPZ_PAIR_AUDIT.csv",
+      "size": 2012
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3B_exact_mapping_recovery/R9F_V3B_EXACT_CORE_SAMPLE_FRAME_LOCK.csv",
+      "size": 174498
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3B_exact_mapping_recovery/R9F_V3B_EXTRACT_RAW_WINDOW_SOURCE_CONTEXT.csv",
+      "size": 4026
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3B_exact_mapping_recovery/R9F_V3B_MAPPING_SUMMARY.csv",
+      "size": 1576
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3C_exact_same_sample_isotropic_windows/R9F_V3C_GEOMETRY_REPRESENTATION_AUDIT.csv",
+      "size": 661
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9F_V3C_exact_same_sample_isotropic_windows/R9F_V3C_WINDOW_BUILD_SUMMARY.csv",
+      "size": 1248
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V2_corrected_coordinate_source_audit/R9G_V2_CORRECTED_BUILD_SCRIPT_AUDIT.csv",
+      "size": 137214
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V2_corrected_coordinate_source_audit/R9G_V2_CORRECTED_NPZ_FEATURE_AUDIT.csv",
+      "size": 4934
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V2_corrected_coordinate_source_audit/R9G_V2_CORRECTED_POINT_TABLE_CANDIDATES.csv",
+      "size": 821
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3A_corrected_builder_formula_lock/R9G_V3A_BUILDER_FULL_SOURCE_LINES.csv",
+      "size": 70839
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3A_corrected_builder_formula_lock/R9G_V3A_UNIFIED_FULL_SOURCE_LINES.csv",
+      "size": 61734
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3B_corrected_isotropic_rebuild/R9G_V3B_REBUILD_SUMMARY.csv",
+      "size": 1560
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3B_corrected_isotropic_rebuild/R9G_V3B_ROUNDTRIP_AUDIT.csv",
+      "size": 252305
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3B_corrected_isotropic_rebuild/R9G_V3B_SEQUENCE_GEOMETRY_LOCK.csv",
+      "size": 518
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_V3C_clean_baseline_comparison/R9G_V3C_CLEAN_BASELINE_SUMMARY.csv",
+      "size": 1821
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_same_sample_baseline_comparison/R9G_COMMON_GEOMETRY_AUDIT.csv",
+      "size": 386
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_same_sample_baseline_comparison/R9G_SAME_SAMPLE_BASELINE_SUMMARY.csv",
+      "size": 1597
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9G_same_sample_baseline_comparison/R9G_SAME_SAMPLE_PER_SAMPLE_METRICS.csv",
+      "size": 976931
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_A_V2_focused_python_canonicalizer_audit/R9H_A_V2_PYTHON_SOURCE_INVENTORY.csv",
+      "size": 1624
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_A_canonicalization_source_lock/R9H_A_CANONICALIZATION_SOURCE_CANDIDATES.csv",
+      "size": 1708534
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_B_exact_geometry_formula_lock/R9H_B_BUILD_FINAL_SOURCE_CANDIDATES.csv",
+      "size": 190
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_B_exact_geometry_formula_lock/R9H_B_EXACT_CANONICALIZER_SOURCE_BUNDLE.txt",
+      "size": 5577
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_B_exact_geometry_formula_lock/R9H_B_EXACT_FORMULA_LOCK_SUMMARY.csv",
+      "size": 598
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_C0_V3_authoritative_scale_floor_lock/R9H_C0_V3_LOCKED_TASK_SCALE_FLOORS.csv",
+      "size": 256
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_C1_anisotropy_geometry_distortion/R9H_C1_SEQUENCE_SUMMARY.csv",
+      "size": 1820
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_C1_anisotropy_geometry_distortion/R9H_C1_TASK_SUMMARY.csv",
+      "size": 1594
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_C2_clustered_ci_and_representation_decision/R9H_C2_SEGMENT_CLUSTER_BOOTSTRAP_CI.csv",
+      "size": 2097
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9H_C2_clustered_ci_and_representation_decision/R9H_C2_SEGMENT_MACRO_TABLE.csv",
+      "size": 30004
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_A_matched_neural_retraining_protocol_lock/R9I_A_EXACT_TRAIN_VAL_SPLIT_LOCK.csv",
+      "size": 138583
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_A_matched_neural_retraining_protocol_lock/R9I_A_NEURAL_TRAINING_SOURCE_INVENTORY.csv",
+      "size": 18120
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_A_matched_neural_retraining_protocol_lock/R9I_A_SPLIT_SUMMARY.csv",
+      "size": 658
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_A_matched_neural_retraining_protocol_lock/R9I_A_TOP_SOURCE_HYPERPARAMETER_ASSIGNMENTS.csv",
+      "size": 32238
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_A_matched_neural_retraining_protocol_lock/R9I_A_TOP_SOURCE_RELEVANT_LINES.csv",
+      "size": 366272
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_B_exact_model_hyperparameter_and_split_lock/R9I_B_EXACT_TRAINING_SOURCE_BUNDLE.txt",
+      "size": 83325
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_B_exact_model_hyperparameter_and_split_lock/R9I_B_MODEL_PROTOCOL_TABLE.csv",
+      "size": 593
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_B_exact_model_hyperparameter_and_split_lock/R9I_B_PROTOCOL_CONTEXT.csv",
+      "size": 212923
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_B_exact_model_hyperparameter_and_split_lock/R9I_B_PROTOCOL_LINES.csv",
+      "size": 46120
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_B_exact_model_hyperparameter_and_split_lock/R9I_B_SPLIT_SUMMARY_LOCK.csv",
+      "size": 555
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_C0_exact_scale_floor_population_audit/R9I_C0_BUILD_FINAL_SCALE_FLOOR_SOURCE_CONTEXT.csv",
+      "size": 12476
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_C0_exact_scale_floor_population_audit/R9I_C0_POPULATION_QUANTILE_AUDIT.csv",
+      "size": 15429
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_C_V2_matched_isotropic_trainreal_dataset/R9I_C_V2_TASK_SUMMARY.csv",
+      "size": 1883
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_D0_training_runtime_dependency_audit/R9I_D0_MAIN_BLOCK_CALLS.csv",
+      "size": 2
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_D0_training_runtime_dependency_audit/R9I_D0_TARGET_FUNCTION_SOURCES.csv",
+      "size": 30434
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_D1_matched_isotropic_training_only/R9I_D1_TRAINING_RUN_SUMMARY.csv",
+      "size": 2240
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E0_matched_testreal_isotropic_dataset/R9I_E0_TESTREAL_ISOTROPIC_DATASET_SUMMARY.csv",
+      "size": 1355
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1A_model_reconstruction_and_evaluation_audit/R9I_E1A_EVALUATION_FUNCTION_SOURCES.csv",
+      "size": 17369
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/R9I_E1B_3SEED_MODEL_SUMMARY.csv",
+      "size": 3684
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/R9I_E1B_SEED_LEVEL_TESTREAL_METRICS.csv",
+      "size": 25743
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_GRU_seed42_sample_metrics.csv",
+      "size": 418766
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_GRU_seed52_sample_metrics.csv",
+      "size": 418670
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_GRU_seed62_sample_metrics.csv",
+      "size": 418750
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_LSTM_seed42_sample_metrics.csv",
+      "size": 419802
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_LSTM_seed52_sample_metrics.csv",
+      "size": 419812
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_LSTM_seed62_sample_metrics.csv",
+      "size": 419876
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_Transformer_seed42_sample_metrics.csv",
+      "size": 427143
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_Transformer_seed52_sample_metrics.csv",
+      "size": 427076
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_2s_Transformer_seed62_sample_metrics.csv",
+      "size": 427125
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_GRU_seed42_sample_metrics.csv",
+      "size": 329117
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_GRU_seed52_sample_metrics.csv",
+      "size": 329106
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_GRU_seed62_sample_metrics.csv",
+      "size": 329139
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_LSTM_seed42_sample_metrics.csv",
+      "size": 329894
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_LSTM_seed52_sample_metrics.csv",
+      "size": 329930
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E1B_frozen_18_checkpoint_testreal_inference/sample_metrics/2s_to_5s_LSTM_seed62_sample_metrics.csv",
+      "size": 329935
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E2A_old_anisotropic_checkpoint_and_testreal_lock/R9I_E2A_OLD_ANISOTROPIC_TESTREAL_LOCK.csv",
+      "size": 876
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E2B_frozen_old_anisotropic_reinference/R9I_E2B_3SEED_OLD_ANISOTROPIC_MODEL_SUMMARY.csv",
+      "size": 1789
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic/R9I_E2C_PRIMARY_SEGMENT_CLUSTER_BOOTSTRAP_RESULTS.csv",
+      "size": 3165
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic/R9I_E2C_REPRESENTATION_DECISION_TABLE.csv",
+      "size": 423
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_F_canonicalization_ablation_conclusion/R9I_F_CANONICALIZATION_CLAIM_MATRIX.csv",
+      "size": 1709
+    },
+    {
+      "path": "R9_canonicalization_isotropic_ablation/R9I_F_canonicalization_ablation_conclusion/R9I_F_MANUSCRIPT_READY_CANONICALIZATION_CONCLUSION.txt",
+      "size": 4760
+    }
+  ]
+}

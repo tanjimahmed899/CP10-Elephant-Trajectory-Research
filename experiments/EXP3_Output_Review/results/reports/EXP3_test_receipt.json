@@ -1,0 +1,6 @@
+{
+  "test": "source completeness postprocessing",
+  "result": "PASS",
+  "uses_synthetic_data_only": true,
+  "stdout": "Processed 12 source\u00d7horizon cells; forecastable: 10\nWARNING: No new Step7H warning metrics produced. Inspect all outputs before publication.\nPASS synthetic zero-window accounting test. THESE ARE NOT RESEARCH RESULTS.\n"
+}

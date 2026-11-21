@@ -1,0 +1,9 @@
+claim,status,basis
+The historical GT-trajectory forecasting pipeline was an end-to-end detector-to-warning evaluation.,REJECTED,Historical forecasting used GT-derived trajectories rather than detector/tracker-derived trajectories.
+A new frozen detector+tracker revision experiment was executed on all six TestReal sequences.,SUPPORTED,"R13-D processed 9,085 frames with the locked detector, ByteTrack, and BoT-SORT."
+Tracking quality is strong enough to support representative downstream forecasting.,REJECTED,"ByteTrack HOTA=0.029722, IDF1=0.024600; BoT-SORT HOTA=0.033736, IDF1=0.029169."
+The main end-to-end bottleneck is detector coverage on BIRDSAI TestReal.,SUPPORTED,Raw detector recall@IoU0.50=0.050588; count-only upper-bound recall=0.089231; ByteTrack ID-assigned recall=0.025929; BoT-SORT ID-assigned recall=0.028030.
+Representative 2-s downstream forecast evaluation is supported by tracker-derived windows.,REJECTED,"At most 2 2→2 windows, only 0.190% of the historical 1,053-window reference."
+Representative 5-s downstream forecast evaluation is supported by tracker-derived windows.,REJECTED,"At most 0 2→5 windows, 0.000% of the historical 826-window reference."
+Running ADE/FDE or warning metrics on the two available 2-s tracker windows would establish end-to-end performance.,REJECTED,Two windows are exploratory only and are not a representative evaluation population.
+The new R13 experiment validly demonstrates detector/tracker error propagation feasibility limits.,SUPPORTED,"Frozen detector/tracker outputs, tracking metrics, bottleneck decomposition, and forecastability were evaluated without TestReal tuning."

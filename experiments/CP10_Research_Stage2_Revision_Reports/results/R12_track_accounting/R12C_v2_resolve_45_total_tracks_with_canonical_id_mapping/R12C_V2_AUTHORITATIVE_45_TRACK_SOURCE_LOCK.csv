@@ -1,0 +1,2 @@
+authoritative_source,sha256,testreal_rows,canonical_id_rule,total_original_tracks
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\trajectory_dataset\cleaned_track_points.csv,bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b,48422,"numeric object_id values are normalized to integer strings (e.g., 1.0 -> 1) before identity matching",45

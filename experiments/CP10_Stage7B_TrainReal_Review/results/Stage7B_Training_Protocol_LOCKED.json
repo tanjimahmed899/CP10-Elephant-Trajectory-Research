@@ -1,0 +1,46 @@
+{
+  "params": {
+    "epochs": 8,
+    "imgsz": 640,
+    "batch": 8,
+    "patience": 8,
+    "seed": 20261121,
+    "deterministic": true,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "workers": 0,
+    "device": "cpu",
+    "amp": false,
+    "project": "/home/student/CP10_Stage7B_TrainReal_Adaptation/training_runs",
+    "name": "domain_adapt",
+    "exist_ok": false,
+    "plots": false,
+    "verbose": true,
+    "save": true,
+    "cache": false,
+    "pretrained": true,
+    "close_mosaic": 0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "fliplr": 0.0,
+    "flipud": 0.0
+  },
+  "baseline_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "split": {
+    "train": [
+      "0000000367_0000000000",
+      "0000000351_0000000000",
+      "0000000056_0000000000"
+    ],
+    "val": [
+      "0000000010_0000000000",
+      "0000000054_0000000000"
+    ]
+  },
+  "selection": "Ultralytics default validation-fitness best.pt from exactly eight epochs; no TestReal",
+  "comparison_conf": 0.1,
+  "eval_scope": "TrainReal validation sequences only; TestReal not touched"
+}

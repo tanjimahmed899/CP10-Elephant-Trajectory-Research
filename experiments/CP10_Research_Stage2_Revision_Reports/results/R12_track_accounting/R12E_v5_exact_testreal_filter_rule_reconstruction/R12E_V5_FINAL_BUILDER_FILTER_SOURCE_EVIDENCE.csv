@@ -1,0 +1,495 @@
+source_file,source_sha256,anchor_line,matched_terms,anchor_text,context_start,context_end,context
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,43,core,"            ""birdsai_train_real_core_2s_to_2s_10hz.npz"",",37,49,"37: TASKS = {
+38: 
+39:     ""2s_to_2s"": {
+40: 
+41:         ""train_npz"":
+42:             ROOT /
+43:             ""birdsai_train_real_core_2s_to_2s_10hz.npz"",
+44: 
+45:         ""train_meta"":
+46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: 
+49:         ""test_npz"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,47,core,"            ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",",41,53,"41:         ""train_npz"":
+42:             ROOT /
+43:             ""birdsai_train_real_core_2s_to_2s_10hz.npz"",
+44: 
+45:         ""train_meta"":
+46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: 
+49:         ""test_npz"":
+50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: 
+53:         ""test_meta"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,51,core|test_real,"            ""birdsai_test_real_core_2s_to_2s_10hz.npz"",",45,57,"45:         ""train_meta"":
+46:             ROOT /
+47:             ""birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"",
+48: 
+49:         ""test_npz"":
+50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: 
+53:         ""test_meta"":
+54:             ROOT /
+55:             ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",
+56: 
+57:         ""wild_npz"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,55,core|test_real,"            ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",",49,61,"49:         ""test_npz"":
+50:             ROOT /
+51:             ""birdsai_test_real_core_2s_to_2s_10hz.npz"",
+52: 
+53:         ""test_meta"":
+54:             ROOT /
+55:             ""birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"",
+56: 
+57:         ""wild_npz"":
+58:             ROOT /
+59:             ""wildbox_external_2s_to_2s_10hz.npz"",
+60: 
+61:         ""wild_meta"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,71,core,"            ""birdsai_train_real_core_2s_to_5s_10hz.npz"",",65,77,"65: 
+66: 
+67:     ""2s_to_5s"": {
+68: 
+69:         ""train_npz"":
+70:             ROOT /
+71:             ""birdsai_train_real_core_2s_to_5s_10hz.npz"",
+72: 
+73:         ""train_meta"":
+74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: 
+77:         ""test_npz"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,75,core,"            ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",",69,81,"69:         ""train_npz"":
+70:             ROOT /
+71:             ""birdsai_train_real_core_2s_to_5s_10hz.npz"",
+72: 
+73:         ""train_meta"":
+74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: 
+77:         ""test_npz"":
+78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: 
+81:         ""test_meta"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,79,core|test_real,"            ""birdsai_test_real_core_2s_to_5s_10hz.npz"",",73,85,"73:         ""train_meta"":
+74:             ROOT /
+75:             ""birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"",
+76: 
+77:         ""test_npz"":
+78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: 
+81:         ""test_meta"":
+82:             ROOT /
+83:             ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",
+84: 
+85:         ""wild_npz"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,83,core|test_real,"            ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",",77,89,"77:         ""test_npz"":
+78:             ROOT /
+79:             ""birdsai_test_real_core_2s_to_5s_10hz.npz"",
+80: 
+81:         ""test_meta"":
+82:             ROOT /
+83:             ""birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"",
+84: 
+85:         ""wild_npz"":
+86:             ROOT /
+87:             ""wildbox_external_2s_to_5s_10hz.npz"",
+88: 
+89:         ""wild_meta"":"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,517,split,# TRACK-DISJOINT VALIDATION SPLIT,511,523,"511:                 dtype=np.float32
+512:             )
+513:     }
+514: 
+515: 
+516: # ============================================================
+517: # TRACK-DISJOINT VALIDATION SPLIT
+518: # ============================================================
+519: 
+520: def create_track_split(
+521:     metadata,
+522:     seed
+523: ):"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,520,split,def create_track_split(,514,526,"514: 
+515: 
+516: # ============================================================
+517: # TRACK-DISJOINT VALIDATION SPLIT
+518: # ============================================================
+519: 
+520: def create_track_split(
+521:     metadata,
+522:     seed
+523: ):
+524: 
+525:     rng = np.random.default_rng(
+526:         seed"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,534,split,    split_records = [],528,540,"528: 
+529: 
+530:     train_indices = []
+531:     val_indices = []
+532: 
+533: 
+534:     split_records = []
+535: 
+536: 
+537:     # Split tracks separately within each source.
+538:     # This preserves every possible TrainReal source
+539:     # in training while preventing track overlap.
+540: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,537,split,    # Split tracks separately within each source.,531,543,"531:     val_indices = []
+532: 
+533: 
+534:     split_records = []
+535: 
+536: 
+537:     # Split tracks separately within each source.
+538:     # This preserves every possible TrainReal source
+539:     # in training while preventing track overlap.
+540: 
+541: 
+542:     for source, source_df in metadata.groupby(
+543:         ""source_group"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,646,split,        split_records.append({,640,652,"640: 
+641:         val_indices.extend(
+642:             source_val
+643:         )
+644: 
+645: 
+646:         split_records.append({
+647: 
+648:             ""source_group"":
+649:                 source,
+650: 
+651:             ""total_tracks"":
+652:                 len("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,744,split,            split_records,738,750,"738: 
+739: 
+740:     return (
+741:         train_indices,
+742:         val_indices,
+743:         pd.DataFrame(
+744:             split_records
+745:         )
+746:     )
+747: 
+748: 
+749: # ============================================================
+750: # TRAIN SAMPLE WEIGHTS"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,843,split,split_rows = [],837,849,"837: # ============================================================
+838: # MAIN
+839: # ============================================================
+840: 
+841: summary_rows = []
+842: 
+843: split_rows = []
+844: 
+845: 
+846: for task_index, (
+847:     task,
+848:     paths
+849: ) in enumerate("
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,946,split,        split_table,940,952,"940:     # TRACK-DISJOINT TRAIN / VAL
+941:     # --------------------------------------------------------
+942: 
+943:     (
+944:         train_idx,
+945:         val_idx,
+946:         split_table
+947: 
+948:     ) = create_track_split(
+949: 
+950:         train_meta,
+951: 
+952:         SEED"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,948,split,    ) = create_track_split(,942,954,"942: 
+943:     (
+944:         train_idx,
+945:         val_idx,
+946:         split_table
+947: 
+948:     ) = create_track_split(
+949: 
+950:         train_meta,
+951: 
+952:         SEED
+953:         +
+954:         task_index"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,968,split,    # Save split labels in metadata,962,974,"962: 
+963:         train_idx
+964: 
+965:     )
+966: 
+967: 
+968:     # Save split labels in metadata
+969: 
+970:     train_meta = (
+971:         train_meta.copy()
+972:     )
+973: 
+974: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,976,split,"        ""neural_split""",970,982,"970:     train_meta = (
+971:         train_meta.copy()
+972:     )
+973: 
+974: 
+975:     train_meta[
+976:         ""neural_split""
+977:     ] = ""unused""
+978: 
+979: 
+980:     train_meta.loc[
+981:         train_idx,
+982:         ""neural_split"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,982,split,"        ""neural_split""",976,988,"976:         ""neural_split""
+977:     ] = ""unused""
+978: 
+979: 
+980:     train_meta.loc[
+981:         train_idx,
+982:         ""neural_split""
+983:     ] = ""train""
+984: 
+985: 
+986:     train_meta.loc[
+987:         val_idx,
+988:         ""neural_split"""
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,988,split,"        ""neural_split""",982,994,"982:         ""neural_split""
+983:     ] = ""train""
+984: 
+985: 
+986:     train_meta.loc[
+987:         val_idx,
+988:         ""neural_split""
+989:     ] = ""validation""
+990: 
+991: 
+992:     train_meta[
+993:         ""scale_floor""
+994:     ] = scale_floor"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1028,split,    split_table[,1022,1034,"1022:         f""{task}_birdsai_trainval_metadata.csv"",
+1023: 
+1024:         index=False
+1025:     )
+1026: 
+1027: 
+1028:     split_table[
+1029:         ""task""
+1030:     ] = task
+1031: 
+1032: 
+1033:     split_rows.append(
+1034:         split_table"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1033,split,    split_rows.append(,1027,1039,"1027: 
+1028:     split_table[
+1029:         ""task""
+1030:     ] = task
+1031: 
+1032: 
+1033:     split_rows.append(
+1034:         split_table
+1035:     )
+1036: 
+1037: 
+1038:     # --------------------------------------------------------
+1039:     # TESTREAL"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1034,split,        split_table,1028,1040,"1028:     split_table[
+1029:         ""task""
+1030:     ] = task
+1031: 
+1032: 
+1033:     split_rows.append(
+1034:         split_table
+1035:     )
+1036: 
+1037: 
+1038:     # --------------------------------------------------------
+1039:     # TESTREAL
+1040:     # --------------------------------------------------------"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1039,testreal,    # TESTREAL,1033,1045,"1033:     split_rows.append(
+1034:         split_table
+1035:     )
+1036: 
+1037: 
+1038:     # --------------------------------------------------------
+1039:     # TESTREAL
+1040:     # --------------------------------------------------------
+1041: 
+1042:     (
+1043:         test_history,
+1044:         test_future,
+1045:         test_meta"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1187,split,"            ""split"":",1181,1193,"1181:             ""task"":
+1182:                 task,
+1183: 
+1184:             ""dataset"":
+1185:                 ""BIRDSAI"",
+1186: 
+1187:             ""split"":
+1188:                 ""neural_train"",
+1189: 
+1190:             ""samples"":
+1191:                 len(
+1192:                     train_idx
+1193:                 ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1224,split,"            ""split"":",1218,1230,"1218:             ""task"":
+1219:                 task,
+1220: 
+1221:             ""dataset"":
+1222:                 ""BIRDSAI"",
+1223: 
+1224:             ""split"":
+1225:                 ""neural_validation"",
+1226: 
+1227:             ""samples"":
+1228:                 len(
+1229:                     val_idx
+1230:                 ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1261,split,"            ""split"":",1255,1267,"1255:             ""task"":
+1256:                 task,
+1257: 
+1258:             ""dataset"":
+1259:                 ""BIRDSAI"",
+1260: 
+1261:             ""split"":
+1262:                 ""untouched_test"",
+1263: 
+1264:             ""samples"":
+1265:                 len(
+1266:                     test_history
+1267:                 ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1294,split,"            ""split"":",1288,1300,"1288:             ""task"":
+1289:                 task,
+1290: 
+1291:             ""dataset"":
+1292:                 ""WildBox"",
+1293: 
+1294:             ""split"":
+1295:                 ""external_test"",
+1296: 
+1297:             ""samples"":
+1298:                 len(
+1299:                     wild_history
+1300:                 ),"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1339,split,split_df = pd.concat(,1333,1345,"1333:     ""neural_dataset_summary.csv"",
+1334: 
+1335:     index=False
+1336: )
+1337: 
+1338: 
+1339: split_df = pd.concat(
+1340: 
+1341:     split_rows,
+1342: 
+1343:     ignore_index=True
+1344: 
+1345: )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1341,split,"    split_rows,",1335,1347,"1335:     index=False
+1336: )
+1337: 
+1338: 
+1339: split_df = pd.concat(
+1340: 
+1341:     split_rows,
+1342: 
+1343:     ignore_index=True
+1344: 
+1345: )
+1346: 
+1347: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1348,split,split_df.to_csv(,1342,1354,"1342: 
+1343:     ignore_index=True
+1344: 
+1345: )
+1346: 
+1347: 
+1348: split_df.to_csv(
+1349: 
+1350:     OUT /
+1351:     ""train_validation_split_summary.csv"",
+1352: 
+1353:     index=False
+1354: )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1351,split,"    ""train_validation_split_summary.csv"",",1345,1357,"1345: )
+1346: 
+1347: 
+1348: split_df.to_csv(
+1349: 
+1350:     OUT /
+1351:     ""train_validation_split_summary.csv"",
+1352: 
+1353:     index=False
+1354: )
+1355: 
+1356: 
+1357: # ============================================================"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1422,split,"        ""- Validation split is TRACK-DISJOINT.\n""",1416,1428,"1416: 
+1417:     f.write(
+1418:         ""- Scale floor derived from BIRDSAI TrainReal ONLY.\n""
+1419:     )
+1420: 
+1421:     f.write(
+1422:         ""- Validation split is TRACK-DISJOINT.\n""
+1423:     )
+1424: 
+1425:     f.write(
+1426:         ""- BIRDSAI TestReal remains untouched.\n""
+1427:     )
+1428: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1426,testreal,"        ""- BIRDSAI TestReal remains untouched.\n""",1420,1432,"1420: 
+1421:     f.write(
+1422:         ""- Validation split is TRACK-DISJOINT.\n""
+1423:     )
+1424: 
+1425:     f.write(
+1426:         ""- BIRDSAI TestReal remains untouched.\n""
+1427:     )
+1428: 
+1429:     f.write(
+1430:         ""- WildBox remains untouched external test.\n""
+1431:     )
+1432: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1480,split,"                f""{row['split']} | """,1474,1486,"1474:         ):
+1475: 
+1476: 
+1477:             f.write(
+1478: 
+1479:                 f""  {row['dataset']} | ""
+1480:                 f""{row['split']} | ""
+1481:                 f""samples={int(row['samples'])}, ""
+1482:                 f""tracks={int(row['tracks'])}, ""
+1483:                 f""sources={int(row['sources'])}\n""
+1484: 
+1485:             )
+1486: "
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1516,split,"    ""\nPer-source split:""",1510,1522,"1510:     summary_df.to_string(
+1511:         index=False
+1512:     )
+1513: )
+1514: 
+1515: print(
+1516:     ""\nPer-source split:""
+1517: )
+1518: 
+1519: print(
+1520:     split_df.to_string(
+1521:         index=False
+1522:     )"
+E:\AIUB\Capstone Project\Journal Based Results\Main Result\build_final_neural_dataset.py,7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4,1520,split,    split_df.to_string(,1514,1526,"1514: 
+1515: print(
+1516:     ""\nPer-source split:""
+1517: )
+1518: 
+1519: print(
+1520:     split_df.to_string(
+1521:         index=False
+1522:     )
+1523: )
+1524: 
+1525: print(
+1526:     ""\nSaved to:"""

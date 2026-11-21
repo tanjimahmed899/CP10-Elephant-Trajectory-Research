@@ -1,0 +1,14 @@
+{
+  "step": "R2D_B2B_FROZEN_KALMAN_PARAMETER_RECOVERY_AUDIT",
+  "created_utc": "2026-10-29T06:21:30.937038+00:00",
+  "status": "R2D_B2B_AUDIT_COMPLETE_QR_CANDIDATE_ARTIFACTS_FOUND",
+  "new_metrics_generated": false,
+  "testreal_tuning": false,
+  "kalman_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_kalman_baseline.py",
+  "kalman_source_sha256": "f54b1eaf3087d5004449786ab11f5dc709504f66db475be806a5ece6a655e013",
+  "source_context_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2B_kalman_param_recovery_audit\\R2D_B2B_kalman_source_context.csv",
+  "selection_ast_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2B_kalman_param_recovery_audit\\R2D_B2B_kalman_selection_ast_evidence.csv",
+  "artifact_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2B_kalman_param_recovery_audit\\R2D_B2B_kalman_artifact_inventory.csv",
+  "qr_candidate_artifacts_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2B_kalman_param_recovery_audit\\R2D_B2B_qr_candidate_artifacts.csv",
+  "named_output_files_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2B_kalman_param_recovery_audit\\R2D_B2B_named_output_files.csv"
+}

@@ -1,0 +1,3 @@
+model_family,source,source_sha256,seeds,batch_size,architecture,learning_rate,weight_decay,max_epochs,patience
+Transformer,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_transformer.py,da4041611d36f37de0fc6a8716e190bba465786813a4c1ee536594a66528baa9,42|52|62,64,d_model=64;nhead=4;num_layers=2;dim_feedforward=128;dropout=0.10,0.0005,0.0001,300,30
+GRU/LSTM,E:\AIUB\Capstone Project\Journal Based Results\Main Result\train_lstm_gru.py,769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d,42|52|62,64,hidden_size=64;num_layers=2;dropout=0.10,0.001,0.0001,300,30

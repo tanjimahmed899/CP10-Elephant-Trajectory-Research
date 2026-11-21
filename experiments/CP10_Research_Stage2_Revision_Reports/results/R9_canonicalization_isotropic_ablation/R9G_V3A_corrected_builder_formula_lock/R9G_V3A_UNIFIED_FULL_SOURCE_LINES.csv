@@ -1,0 +1,1230 @@
+file,line_number,line
+build_unified_10hz_dataset.py,1,from pathlib import Path
+build_unified_10hz_dataset.py,2,import numpy as np
+build_unified_10hz_dataset.py,3,import pandas as pd
+build_unified_10hz_dataset.py,4,
+build_unified_10hz_dataset.py,5,
+build_unified_10hz_dataset.py,6,# ============================================================
+build_unified_10hz_dataset.py,7,# PATHS
+build_unified_10hz_dataset.py,8,# ============================================================
+build_unified_10hz_dataset.py,9,
+build_unified_10hz_dataset.py,10,ROOT = Path(
+build_unified_10hz_dataset.py,11,"    r""C:\Users\HP\Downloads"""
+build_unified_10hz_dataset.py,12,)
+build_unified_10hz_dataset.py,13,
+build_unified_10hz_dataset.py,14,BIRD_DIR = (
+build_unified_10hz_dataset.py,15,    ROOT /
+build_unified_10hz_dataset.py,16,"    ""corrected_trajectory_dataset"""
+build_unified_10hz_dataset.py,17,)
+build_unified_10hz_dataset.py,18,
+build_unified_10hz_dataset.py,19,WILD_DIR = (
+build_unified_10hz_dataset.py,20,    ROOT /
+build_unified_10hz_dataset.py,21,"    ""wildbox_trajectory_dataset"""
+build_unified_10hz_dataset.py,22,)
+build_unified_10hz_dataset.py,23,
+build_unified_10hz_dataset.py,24,OUT = (
+build_unified_10hz_dataset.py,25,    ROOT /
+build_unified_10hz_dataset.py,26,"    ""unified_trajectory_10hz"""
+build_unified_10hz_dataset.py,27,)
+build_unified_10hz_dataset.py,28,
+build_unified_10hz_dataset.py,29,OUT.mkdir(
+build_unified_10hz_dataset.py,30,"    parents=True,"
+build_unified_10hz_dataset.py,31,    exist_ok=True
+build_unified_10hz_dataset.py,32,)
+build_unified_10hz_dataset.py,33,
+build_unified_10hz_dataset.py,34,
+build_unified_10hz_dataset.py,35,# ============================================================
+build_unified_10hz_dataset.py,36,# SETTINGS
+build_unified_10hz_dataset.py,37,# ============================================================
+build_unified_10hz_dataset.py,38,
+build_unified_10hz_dataset.py,39,TARGET_FPS = 10
+build_unified_10hz_dataset.py,40,
+build_unified_10hz_dataset.py,41,TASKS = {
+build_unified_10hz_dataset.py,42,
+build_unified_10hz_dataset.py,43,"    ""2s_to_2s"": {"
+build_unified_10hz_dataset.py,44,"        ""future_frames_10hz"": 20"
+build_unified_10hz_dataset.py,45,"    },"
+build_unified_10hz_dataset.py,46,
+build_unified_10hz_dataset.py,47,"    ""2s_to_5s"": {"
+build_unified_10hz_dataset.py,48,"        ""future_frames_10hz"": 50"
+build_unified_10hz_dataset.py,49,    }
+build_unified_10hz_dataset.py,50,}
+build_unified_10hz_dataset.py,51,
+build_unified_10hz_dataset.py,52,
+build_unified_10hz_dataset.py,53,# ============================================================
+build_unified_10hz_dataset.py,54,# RELATIVE REPRESENTATION
+build_unified_10hz_dataset.py,55,# ============================================================
+build_unified_10hz_dataset.py,56,
+build_unified_10hz_dataset.py,57,def make_relative(
+build_unified_10hz_dataset.py,58,"    history,"
+build_unified_10hz_dataset.py,59,    future
+build_unified_10hz_dataset.py,60,):
+build_unified_10hz_dataset.py,61,
+build_unified_10hz_dataset.py,62,    # Last observed point = local origin
+build_unified_10hz_dataset.py,63,    origin = history[
+build_unified_10hz_dataset.py,64,"        :,"
+build_unified_10hz_dataset.py,65,"        -1:,"
+build_unified_10hz_dataset.py,66,        :
+build_unified_10hz_dataset.py,67,    ]
+build_unified_10hz_dataset.py,68,
+build_unified_10hz_dataset.py,69,
+build_unified_10hz_dataset.py,70,    history_rel = (
+build_unified_10hz_dataset.py,71,        history
+build_unified_10hz_dataset.py,72,        -
+build_unified_10hz_dataset.py,73,        origin
+build_unified_10hz_dataset.py,74,    )
+build_unified_10hz_dataset.py,75,
+build_unified_10hz_dataset.py,76,
+build_unified_10hz_dataset.py,77,    future_rel = (
+build_unified_10hz_dataset.py,78,        future
+build_unified_10hz_dataset.py,79,        -
+build_unified_10hz_dataset.py,80,        origin
+build_unified_10hz_dataset.py,81,    )
+build_unified_10hz_dataset.py,82,
+build_unified_10hz_dataset.py,83,
+build_unified_10hz_dataset.py,84,    return (
+build_unified_10hz_dataset.py,85,"        history_rel,"
+build_unified_10hz_dataset.py,86,        future_rel
+build_unified_10hz_dataset.py,87,    )
+build_unified_10hz_dataset.py,88,
+build_unified_10hz_dataset.py,89,
+build_unified_10hz_dataset.py,90,# ============================================================
+build_unified_10hz_dataset.py,91,# SAMPLE-LEVEL QUALITY AUDIT
+build_unified_10hz_dataset.py,92,# ============================================================
+build_unified_10hz_dataset.py,93,
+build_unified_10hz_dataset.py,94,def audit_samples(
+build_unified_10hz_dataset.py,95,"    history,"
+build_unified_10hz_dataset.py,96,"    future,"
+build_unified_10hz_dataset.py,97,"    metadata,"
+build_unified_10hz_dataset.py,98,"    dataset,"
+build_unified_10hz_dataset.py,99,"    modality,"
+build_unified_10hz_dataset.py,100,    split_name
+build_unified_10hz_dataset.py,101,):
+build_unified_10hz_dataset.py,102,
+build_unified_10hz_dataset.py,103,    rows = []
+build_unified_10hz_dataset.py,104,
+build_unified_10hz_dataset.py,105,
+build_unified_10hz_dataset.py,106,    for i in range(
+build_unified_10hz_dataset.py,107,        len(history)
+build_unified_10hz_dataset.py,108,    ):
+build_unified_10hz_dataset.py,109,
+build_unified_10hz_dataset.py,110,
+build_unified_10hz_dataset.py,111,        h = history[i]
+build_unified_10hz_dataset.py,112,
+build_unified_10hz_dataset.py,113,        f = future[i]
+build_unified_10hz_dataset.py,114,
+build_unified_10hz_dataset.py,115,
+build_unified_10hz_dataset.py,116,        all_points = np.concatenate(
+build_unified_10hz_dataset.py,117,            [
+build_unified_10hz_dataset.py,118,"                h,"
+build_unified_10hz_dataset.py,119,                f
+build_unified_10hz_dataset.py,120,"            ],"
+build_unified_10hz_dataset.py,121,            axis=0
+build_unified_10hz_dataset.py,122,        )
+build_unified_10hz_dataset.py,123,
+build_unified_10hz_dataset.py,124,
+build_unified_10hz_dataset.py,125,        finite = bool(
+build_unified_10hz_dataset.py,126,            np.isfinite(
+build_unified_10hz_dataset.py,127,                all_points
+build_unified_10hz_dataset.py,128,            ).all()
+build_unified_10hz_dataset.py,129,        )
+build_unified_10hz_dataset.py,130,
+build_unified_10hz_dataset.py,131,
+build_unified_10hz_dataset.py,132,        outside = (
+build_unified_10hz_dataset.py,133,
+build_unified_10hz_dataset.py,134,"            (all_points[:, 0] < 0)"
+build_unified_10hz_dataset.py,135,            |
+build_unified_10hz_dataset.py,136,"            (all_points[:, 0] > 1)"
+build_unified_10hz_dataset.py,137,            |
+build_unified_10hz_dataset.py,138,"            (all_points[:, 1] < 0)"
+build_unified_10hz_dataset.py,139,            |
+build_unified_10hz_dataset.py,140,"            (all_points[:, 1] > 1)"
+build_unified_10hz_dataset.py,141,
+build_unified_10hz_dataset.py,142,        )
+build_unified_10hz_dataset.py,143,
+build_unified_10hz_dataset.py,144,
+build_unified_10hz_dataset.py,145,        extreme = (
+build_unified_10hz_dataset.py,146,
+build_unified_10hz_dataset.py,147,            (np.abs(
+build_unified_10hz_dataset.py,148,"                all_points[:, 0]"
+build_unified_10hz_dataset.py,149,            ) > 2)
+build_unified_10hz_dataset.py,150,
+build_unified_10hz_dataset.py,151,            |
+build_unified_10hz_dataset.py,152,
+build_unified_10hz_dataset.py,153,            (np.abs(
+build_unified_10hz_dataset.py,154,"                all_points[:, 1]"
+build_unified_10hz_dataset.py,155,            ) > 2)
+build_unified_10hz_dataset.py,156,
+build_unified_10hz_dataset.py,157,        )
+build_unified_10hz_dataset.py,158,
+build_unified_10hz_dataset.py,159,
+build_unified_10hz_dataset.py,160,        history_disp = float(
+build_unified_10hz_dataset.py,161,
+build_unified_10hz_dataset.py,162,            np.linalg.norm(
+build_unified_10hz_dataset.py,163,
+build_unified_10hz_dataset.py,164,                h[-1]
+build_unified_10hz_dataset.py,165,                -
+build_unified_10hz_dataset.py,166,                h[0]
+build_unified_10hz_dataset.py,167,
+build_unified_10hz_dataset.py,168,            )
+build_unified_10hz_dataset.py,169,
+build_unified_10hz_dataset.py,170,        )
+build_unified_10hz_dataset.py,171,
+build_unified_10hz_dataset.py,172,
+build_unified_10hz_dataset.py,173,        future_disp = float(
+build_unified_10hz_dataset.py,174,
+build_unified_10hz_dataset.py,175,            np.linalg.norm(
+build_unified_10hz_dataset.py,176,
+build_unified_10hz_dataset.py,177,                f[-1]
+build_unified_10hz_dataset.py,178,                -
+build_unified_10hz_dataset.py,179,                h[-1]
+build_unified_10hz_dataset.py,180,
+build_unified_10hz_dataset.py,181,            )
+build_unified_10hz_dataset.py,182,
+build_unified_10hz_dataset.py,183,        )
+build_unified_10hz_dataset.py,184,
+build_unified_10hz_dataset.py,185,
+build_unified_10hz_dataset.py,186,        # displacement per 0.1 sec -> normalized units/sec
+build_unified_10hz_dataset.py,187,
+build_unified_10hz_dataset.py,188,        if len(h) > 1:
+build_unified_10hz_dataset.py,189,
+build_unified_10hz_dataset.py,190,            speeds = (
+build_unified_10hz_dataset.py,191,
+build_unified_10hz_dataset.py,192,                np.linalg.norm(
+build_unified_10hz_dataset.py,193,
+build_unified_10hz_dataset.py,194,                    np.diff(
+build_unified_10hz_dataset.py,195,"                        h,"
+build_unified_10hz_dataset.py,196,                        axis=0
+build_unified_10hz_dataset.py,197,"                    ),"
+build_unified_10hz_dataset.py,198,
+build_unified_10hz_dataset.py,199,                    axis=1
+build_unified_10hz_dataset.py,200,
+build_unified_10hz_dataset.py,201,                )
+build_unified_10hz_dataset.py,202,
+build_unified_10hz_dataset.py,203,                *
+build_unified_10hz_dataset.py,204,                TARGET_FPS
+build_unified_10hz_dataset.py,205,
+build_unified_10hz_dataset.py,206,            )
+build_unified_10hz_dataset.py,207,
+build_unified_10hz_dataset.py,208,
+build_unified_10hz_dataset.py,209,            median_speed = float(
+build_unified_10hz_dataset.py,210,                np.median(
+build_unified_10hz_dataset.py,211,                    speeds
+build_unified_10hz_dataset.py,212,                )
+build_unified_10hz_dataset.py,213,            )
+build_unified_10hz_dataset.py,214,
+build_unified_10hz_dataset.py,215,
+build_unified_10hz_dataset.py,216,            max_speed = float(
+build_unified_10hz_dataset.py,217,                np.max(
+build_unified_10hz_dataset.py,218,                    speeds
+build_unified_10hz_dataset.py,219,                )
+build_unified_10hz_dataset.py,220,            )
+build_unified_10hz_dataset.py,221,
+build_unified_10hz_dataset.py,222,        else:
+build_unified_10hz_dataset.py,223,
+build_unified_10hz_dataset.py,224,            median_speed = np.nan
+build_unified_10hz_dataset.py,225,            max_speed = np.nan
+build_unified_10hz_dataset.py,226,
+build_unified_10hz_dataset.py,227,
+build_unified_10hz_dataset.py,228,        meta_row = (
+build_unified_10hz_dataset.py,229,            metadata.iloc[i]
+build_unified_10hz_dataset.py,230,        )
+build_unified_10hz_dataset.py,231,
+build_unified_10hz_dataset.py,232,
+build_unified_10hz_dataset.py,233,        rows.append({
+build_unified_10hz_dataset.py,234,
+build_unified_10hz_dataset.py,235,"            ""dataset"":"
+build_unified_10hz_dataset.py,236,"                dataset,"
+build_unified_10hz_dataset.py,237,
+build_unified_10hz_dataset.py,238,"            ""modality"":"
+build_unified_10hz_dataset.py,239,"                modality,"
+build_unified_10hz_dataset.py,240,
+build_unified_10hz_dataset.py,241,"            ""split"":"
+build_unified_10hz_dataset.py,242,"                split_name,"
+build_unified_10hz_dataset.py,243,
+build_unified_10hz_dataset.py,244,"            ""source_group"":"
+build_unified_10hz_dataset.py,245,                meta_row[
+build_unified_10hz_dataset.py,246,"                    ""source_group"""
+build_unified_10hz_dataset.py,247,"                ],"
+build_unified_10hz_dataset.py,248,
+build_unified_10hz_dataset.py,249,"            ""track_key"":"
+build_unified_10hz_dataset.py,250,                meta_row[
+build_unified_10hz_dataset.py,251,"                    ""track_key"""
+build_unified_10hz_dataset.py,252,"                ],"
+build_unified_10hz_dataset.py,253,
+build_unified_10hz_dataset.py,254,"            ""finite"":"
+build_unified_10hz_dataset.py,255,"                int(finite),"
+build_unified_10hz_dataset.py,256,
+build_unified_10hz_dataset.py,257,"            ""outside_01_pct"":"
+build_unified_10hz_dataset.py,258,                100
+build_unified_10hz_dataset.py,259,                *
+build_unified_10hz_dataset.py,260,"                outside.mean(),"
+build_unified_10hz_dataset.py,261,
+build_unified_10hz_dataset.py,262,"            ""extreme_pct"":"
+build_unified_10hz_dataset.py,263,                100
+build_unified_10hz_dataset.py,264,                *
+build_unified_10hz_dataset.py,265,"                extreme.mean(),"
+build_unified_10hz_dataset.py,266,
+build_unified_10hz_dataset.py,267,"            ""history_displacement"":"
+build_unified_10hz_dataset.py,268,"                history_disp,"
+build_unified_10hz_dataset.py,269,
+build_unified_10hz_dataset.py,270,"            ""future_displacement"":"
+build_unified_10hz_dataset.py,271,"                future_disp,"
+build_unified_10hz_dataset.py,272,
+build_unified_10hz_dataset.py,273,"            ""median_history_speed"":"
+build_unified_10hz_dataset.py,274,"                median_speed,"
+build_unified_10hz_dataset.py,275,
+build_unified_10hz_dataset.py,276,"            ""max_history_speed"":"
+build_unified_10hz_dataset.py,277,                max_speed
+build_unified_10hz_dataset.py,278,        })
+build_unified_10hz_dataset.py,279,
+build_unified_10hz_dataset.py,280,
+build_unified_10hz_dataset.py,281,    return pd.DataFrame(
+build_unified_10hz_dataset.py,282,        rows
+build_unified_10hz_dataset.py,283,    )
+build_unified_10hz_dataset.py,284,
+build_unified_10hz_dataset.py,285,
+build_unified_10hz_dataset.py,286,# ============================================================
+build_unified_10hz_dataset.py,287,# LOAD BIRDSAI
+build_unified_10hz_dataset.py,288,# ============================================================
+build_unified_10hz_dataset.py,289,
+build_unified_10hz_dataset.py,290,def load_birdsai(
+build_unified_10hz_dataset.py,291,    task
+build_unified_10hz_dataset.py,292,):
+build_unified_10hz_dataset.py,293,
+build_unified_10hz_dataset.py,294,    meta_file = (
+build_unified_10hz_dataset.py,295,        BIRD_DIR
+build_unified_10hz_dataset.py,296,        /
+build_unified_10hz_dataset.py,297,"        f""corrected_windows_{task}.csv"""
+build_unified_10hz_dataset.py,298,    )
+build_unified_10hz_dataset.py,299,
+build_unified_10hz_dataset.py,300,
+build_unified_10hz_dataset.py,301,    npz_file = (
+build_unified_10hz_dataset.py,302,        BIRD_DIR
+build_unified_10hz_dataset.py,303,        /
+build_unified_10hz_dataset.py,304,"        f""corrected_{task}.npz"""
+build_unified_10hz_dataset.py,305,    )
+build_unified_10hz_dataset.py,306,
+build_unified_10hz_dataset.py,307,
+build_unified_10hz_dataset.py,308,    meta = pd.read_csv(
+build_unified_10hz_dataset.py,309,"        meta_file,"
+build_unified_10hz_dataset.py,310,        dtype={
+build_unified_10hz_dataset.py,311,"            ""sequence"": str,"
+build_unified_10hz_dataset.py,312,"            ""segment_id"": str"
+build_unified_10hz_dataset.py,313,        }
+build_unified_10hz_dataset.py,314,    )
+build_unified_10hz_dataset.py,315,
+build_unified_10hz_dataset.py,316,
+build_unified_10hz_dataset.py,317,    arrays = np.load(
+build_unified_10hz_dataset.py,318,        npz_file
+build_unified_10hz_dataset.py,319,    )
+build_unified_10hz_dataset.py,320,
+build_unified_10hz_dataset.py,321,
+build_unified_10hz_dataset.py,322,    histories = arrays[
+build_unified_10hz_dataset.py,323,"        ""history"""
+build_unified_10hz_dataset.py,324,    ]
+build_unified_10hz_dataset.py,325,
+build_unified_10hz_dataset.py,326,
+build_unified_10hz_dataset.py,327,    futures = arrays[
+build_unified_10hz_dataset.py,328,"        ""future"""
+build_unified_10hz_dataset.py,329,    ]
+build_unified_10hz_dataset.py,330,
+build_unified_10hz_dataset.py,331,
+build_unified_10hz_dataset.py,332,    # MAIN PAPER DATA = CORE ONLY
+build_unified_10hz_dataset.py,333,
+build_unified_10hz_dataset.py,334,    core = meta[
+build_unified_10hz_dataset.py,335,
+build_unified_10hz_dataset.py,336,        (
+build_unified_10hz_dataset.py,337,            meta[
+build_unified_10hz_dataset.py,338,"                ""accepted"""
+build_unified_10hz_dataset.py,339,            ]
+build_unified_10hz_dataset.py,340,            ==
+build_unified_10hz_dataset.py,341,            1
+build_unified_10hz_dataset.py,342,        )
+build_unified_10hz_dataset.py,343,
+build_unified_10hz_dataset.py,344,        &
+build_unified_10hz_dataset.py,345,
+build_unified_10hz_dataset.py,346,        (
+build_unified_10hz_dataset.py,347,            meta[
+build_unified_10hz_dataset.py,348,"                ""quality_tier"""
+build_unified_10hz_dataset.py,349,            ]
+build_unified_10hz_dataset.py,350,            ==
+build_unified_10hz_dataset.py,351,"            ""core"""
+build_unified_10hz_dataset.py,352,        )
+build_unified_10hz_dataset.py,353,
+build_unified_10hz_dataset.py,354,        &
+build_unified_10hz_dataset.py,355,
+build_unified_10hz_dataset.py,356,        (
+build_unified_10hz_dataset.py,357,            meta[
+build_unified_10hz_dataset.py,358,"                ""sample_id"""
+build_unified_10hz_dataset.py,359,            ]
+build_unified_10hz_dataset.py,360,            >=
+build_unified_10hz_dataset.py,361,            0
+build_unified_10hz_dataset.py,362,        )
+build_unified_10hz_dataset.py,363,
+build_unified_10hz_dataset.py,364,    ].copy()
+build_unified_10hz_dataset.py,365,
+build_unified_10hz_dataset.py,366,
+build_unified_10hz_dataset.py,367,    outputs = {}
+build_unified_10hz_dataset.py,368,
+build_unified_10hz_dataset.py,369,
+build_unified_10hz_dataset.py,370,    for split in [
+build_unified_10hz_dataset.py,371,"        ""train_real"","
+build_unified_10hz_dataset.py,372,"        ""test_real"""
+build_unified_10hz_dataset.py,373,    ]:
+build_unified_10hz_dataset.py,374,
+build_unified_10hz_dataset.py,375,
+build_unified_10hz_dataset.py,376,        temp = core[
+build_unified_10hz_dataset.py,377,
+build_unified_10hz_dataset.py,378,            core[
+build_unified_10hz_dataset.py,379,"                ""split"""
+build_unified_10hz_dataset.py,380,            ]
+build_unified_10hz_dataset.py,381,            ==
+build_unified_10hz_dataset.py,382,            split
+build_unified_10hz_dataset.py,383,
+build_unified_10hz_dataset.py,384,        ].copy()
+build_unified_10hz_dataset.py,385,
+build_unified_10hz_dataset.py,386,
+build_unified_10hz_dataset.py,387,        ids = (
+build_unified_10hz_dataset.py,388,            temp[
+build_unified_10hz_dataset.py,389,"                ""sample_id"""
+build_unified_10hz_dataset.py,390,            ]
+build_unified_10hz_dataset.py,391,            .astype(int)
+build_unified_10hz_dataset.py,392,            .to_numpy()
+build_unified_10hz_dataset.py,393,        )
+build_unified_10hz_dataset.py,394,
+build_unified_10hz_dataset.py,395,
+build_unified_10hz_dataset.py,396,        h = histories[
+build_unified_10hz_dataset.py,397,"            ids,"
+build_unified_10hz_dataset.py,398,"            :,"
+build_unified_10hz_dataset.py,399,            :2
+build_unified_10hz_dataset.py,400,        ]
+build_unified_10hz_dataset.py,401,
+build_unified_10hz_dataset.py,402,
+build_unified_10hz_dataset.py,403,        f = futures[
+build_unified_10hz_dataset.py,404,"            ids,"
+build_unified_10hz_dataset.py,405,"            :,"
+build_unified_10hz_dataset.py,406,            :2
+build_unified_10hz_dataset.py,407,        ]
+build_unified_10hz_dataset.py,408,
+build_unified_10hz_dataset.py,409,
+build_unified_10hz_dataset.py,410,        # ----------------------------------------
+build_unified_10hz_dataset.py,411,        # BIRDSAI 30 Hz -> 10 Hz
+build_unified_10hz_dataset.py,412,        # ----------------------------------------
+build_unified_10hz_dataset.py,413,
+build_unified_10hz_dataset.py,414,        h = h[
+build_unified_10hz_dataset.py,415,"            :,"
+build_unified_10hz_dataset.py,416,"            ::3,"
+build_unified_10hz_dataset.py,417,            :
+build_unified_10hz_dataset.py,418,        ]
+build_unified_10hz_dataset.py,419,
+build_unified_10hz_dataset.py,420,
+build_unified_10hz_dataset.py,421,        f = f[
+build_unified_10hz_dataset.py,422,"            :,"
+build_unified_10hz_dataset.py,423,"            ::3,"
+build_unified_10hz_dataset.py,424,            :
+build_unified_10hz_dataset.py,425,        ]
+build_unified_10hz_dataset.py,426,
+build_unified_10hz_dataset.py,427,
+build_unified_10hz_dataset.py,428,        temp = (
+build_unified_10hz_dataset.py,429,            temp
+build_unified_10hz_dataset.py,430,            .reset_index(
+build_unified_10hz_dataset.py,431,                drop=True
+build_unified_10hz_dataset.py,432,            )
+build_unified_10hz_dataset.py,433,        )
+build_unified_10hz_dataset.py,434,
+build_unified_10hz_dataset.py,435,
+build_unified_10hz_dataset.py,436,        temp[
+build_unified_10hz_dataset.py,437,"            ""dataset"""
+build_unified_10hz_dataset.py,438,"        ] = ""BIRDSAI"""
+build_unified_10hz_dataset.py,439,
+build_unified_10hz_dataset.py,440,
+build_unified_10hz_dataset.py,441,        temp[
+build_unified_10hz_dataset.py,442,"            ""modality"""
+build_unified_10hz_dataset.py,443,"        ] = ""thermal"""
+build_unified_10hz_dataset.py,444,
+build_unified_10hz_dataset.py,445,
+build_unified_10hz_dataset.py,446,        temp[
+build_unified_10hz_dataset.py,447,"            ""source_group"""
+build_unified_10hz_dataset.py,448,        ] = temp[
+build_unified_10hz_dataset.py,449,"            ""sequence"""
+build_unified_10hz_dataset.py,450,        ]
+build_unified_10hz_dataset.py,451,
+build_unified_10hz_dataset.py,452,
+build_unified_10hz_dataset.py,453,        temp[
+build_unified_10hz_dataset.py,454,"            ""track_key"""
+build_unified_10hz_dataset.py,455,        ] = temp[
+build_unified_10hz_dataset.py,456,"            ""segment_id"""
+build_unified_10hz_dataset.py,457,        ]
+build_unified_10hz_dataset.py,458,
+build_unified_10hz_dataset.py,459,
+build_unified_10hz_dataset.py,460,        outputs[
+build_unified_10hz_dataset.py,461,            split
+build_unified_10hz_dataset.py,462,        ] = (
+build_unified_10hz_dataset.py,463,"            temp,"
+build_unified_10hz_dataset.py,464,            h.astype(
+build_unified_10hz_dataset.py,465,                np.float32
+build_unified_10hz_dataset.py,466,"            ),"
+build_unified_10hz_dataset.py,467,            f.astype(
+build_unified_10hz_dataset.py,468,                np.float32
+build_unified_10hz_dataset.py,469,            )
+build_unified_10hz_dataset.py,470,        )
+build_unified_10hz_dataset.py,471,
+build_unified_10hz_dataset.py,472,
+build_unified_10hz_dataset.py,473,    return outputs
+build_unified_10hz_dataset.py,474,
+build_unified_10hz_dataset.py,475,
+build_unified_10hz_dataset.py,476,# ============================================================
+build_unified_10hz_dataset.py,477,# LOAD WILDBOX
+build_unified_10hz_dataset.py,478,# ============================================================
+build_unified_10hz_dataset.py,479,
+build_unified_10hz_dataset.py,480,def load_wildbox(
+build_unified_10hz_dataset.py,481,    task
+build_unified_10hz_dataset.py,482,):
+build_unified_10hz_dataset.py,483,
+build_unified_10hz_dataset.py,484,
+build_unified_10hz_dataset.py,485,    meta_file = (
+build_unified_10hz_dataset.py,486,
+build_unified_10hz_dataset.py,487,        WILD_DIR
+build_unified_10hz_dataset.py,488,        /
+build_unified_10hz_dataset.py,489,"        f""wildbox_windows_{task}.csv"""
+build_unified_10hz_dataset.py,490,
+build_unified_10hz_dataset.py,491,    )
+build_unified_10hz_dataset.py,492,
+build_unified_10hz_dataset.py,493,
+build_unified_10hz_dataset.py,494,    npz_file = (
+build_unified_10hz_dataset.py,495,
+build_unified_10hz_dataset.py,496,        WILD_DIR
+build_unified_10hz_dataset.py,497,        /
+build_unified_10hz_dataset.py,498,"        f""wildbox_corrected_{task}.npz"""
+build_unified_10hz_dataset.py,499,
+build_unified_10hz_dataset.py,500,    )
+build_unified_10hz_dataset.py,501,
+build_unified_10hz_dataset.py,502,
+build_unified_10hz_dataset.py,503,    meta = pd.read_csv(
+build_unified_10hz_dataset.py,504,"        meta_file,"
+build_unified_10hz_dataset.py,505,        dtype={
+build_unified_10hz_dataset.py,506,"            ""video"": str,"
+build_unified_10hz_dataset.py,507,"            ""segment"": str,"
+build_unified_10hz_dataset.py,508,"            ""track_id"": str"
+build_unified_10hz_dataset.py,509,        }
+build_unified_10hz_dataset.py,510,    )
+build_unified_10hz_dataset.py,511,
+build_unified_10hz_dataset.py,512,
+build_unified_10hz_dataset.py,513,    arrays = np.load(
+build_unified_10hz_dataset.py,514,        npz_file
+build_unified_10hz_dataset.py,515,    )
+build_unified_10hz_dataset.py,516,
+build_unified_10hz_dataset.py,517,
+build_unified_10hz_dataset.py,518,"    # use common x,y only"
+build_unified_10hz_dataset.py,519,
+build_unified_10hz_dataset.py,520,    h = arrays[
+build_unified_10hz_dataset.py,521,"        ""history"""
+build_unified_10hz_dataset.py,522,    ][
+build_unified_10hz_dataset.py,523,"        :,"
+build_unified_10hz_dataset.py,524,"        :,"
+build_unified_10hz_dataset.py,525,        :2
+build_unified_10hz_dataset.py,526,    ]
+build_unified_10hz_dataset.py,527,
+build_unified_10hz_dataset.py,528,
+build_unified_10hz_dataset.py,529,    f = arrays[
+build_unified_10hz_dataset.py,530,"        ""future"""
+build_unified_10hz_dataset.py,531,    ][
+build_unified_10hz_dataset.py,532,"        :,"
+build_unified_10hz_dataset.py,533,"        :,"
+build_unified_10hz_dataset.py,534,        :2
+build_unified_10hz_dataset.py,535,    ]
+build_unified_10hz_dataset.py,536,
+build_unified_10hz_dataset.py,537,
+build_unified_10hz_dataset.py,538,    meta = (
+build_unified_10hz_dataset.py,539,        meta
+build_unified_10hz_dataset.py,540,        .sort_values(
+build_unified_10hz_dataset.py,541,"            ""sample_id"""
+build_unified_10hz_dataset.py,542,        )
+build_unified_10hz_dataset.py,543,        .reset_index(
+build_unified_10hz_dataset.py,544,            drop=True
+build_unified_10hz_dataset.py,545,        )
+build_unified_10hz_dataset.py,546,    )
+build_unified_10hz_dataset.py,547,
+build_unified_10hz_dataset.py,548,
+build_unified_10hz_dataset.py,549,    meta[
+build_unified_10hz_dataset.py,550,"        ""dataset"""
+build_unified_10hz_dataset.py,551,"    ] = ""WildBox"""
+build_unified_10hz_dataset.py,552,
+build_unified_10hz_dataset.py,553,
+build_unified_10hz_dataset.py,554,    meta[
+build_unified_10hz_dataset.py,555,"        ""modality"""
+build_unified_10hz_dataset.py,556,"    ] = ""RGB"""
+build_unified_10hz_dataset.py,557,
+build_unified_10hz_dataset.py,558,
+build_unified_10hz_dataset.py,559,    meta[
+build_unified_10hz_dataset.py,560,"        ""source_group"""
+build_unified_10hz_dataset.py,561,    ] = meta[
+build_unified_10hz_dataset.py,562,"        ""video"""
+build_unified_10hz_dataset.py,563,    ]
+build_unified_10hz_dataset.py,564,
+build_unified_10hz_dataset.py,565,
+build_unified_10hz_dataset.py,566,    meta[
+build_unified_10hz_dataset.py,567,"        ""track_key"""
+build_unified_10hz_dataset.py,568,    ] = (
+build_unified_10hz_dataset.py,569,
+build_unified_10hz_dataset.py,570,        meta[
+build_unified_10hz_dataset.py,571,"            ""video"""
+build_unified_10hz_dataset.py,572,        ].astype(str)
+build_unified_10hz_dataset.py,573,
+build_unified_10hz_dataset.py,574,        +
+build_unified_10hz_dataset.py,575,"        ""__"""
+build_unified_10hz_dataset.py,576,
+build_unified_10hz_dataset.py,577,        +
+build_unified_10hz_dataset.py,578,        meta[
+build_unified_10hz_dataset.py,579,"            ""segment"""
+build_unified_10hz_dataset.py,580,        ].astype(str)
+build_unified_10hz_dataset.py,581,
+build_unified_10hz_dataset.py,582,        +
+build_unified_10hz_dataset.py,583,"        ""__track"""
+build_unified_10hz_dataset.py,584,
+build_unified_10hz_dataset.py,585,        +
+build_unified_10hz_dataset.py,586,        meta[
+build_unified_10hz_dataset.py,587,"            ""track_id"""
+build_unified_10hz_dataset.py,588,        ].astype(str)
+build_unified_10hz_dataset.py,589,
+build_unified_10hz_dataset.py,590,    )
+build_unified_10hz_dataset.py,591,
+build_unified_10hz_dataset.py,592,
+build_unified_10hz_dataset.py,593,    return (
+build_unified_10hz_dataset.py,594,"        meta,"
+build_unified_10hz_dataset.py,595,        h.astype(
+build_unified_10hz_dataset.py,596,            np.float32
+build_unified_10hz_dataset.py,597,"        ),"
+build_unified_10hz_dataset.py,598,        f.astype(
+build_unified_10hz_dataset.py,599,            np.float32
+build_unified_10hz_dataset.py,600,        )
+build_unified_10hz_dataset.py,601,    )
+build_unified_10hz_dataset.py,602,
+build_unified_10hz_dataset.py,603,
+build_unified_10hz_dataset.py,604,# ============================================================
+build_unified_10hz_dataset.py,605,# PROCESS TASKS
+build_unified_10hz_dataset.py,606,# ============================================================
+build_unified_10hz_dataset.py,607,
+build_unified_10hz_dataset.py,608,all_summary = []
+build_unified_10hz_dataset.py,609,
+build_unified_10hz_dataset.py,610,all_audits = []
+build_unified_10hz_dataset.py,611,
+build_unified_10hz_dataset.py,612,
+build_unified_10hz_dataset.py,613,"for task, config in ("
+build_unified_10hz_dataset.py,614,    TASKS.items()
+build_unified_10hz_dataset.py,615,):
+build_unified_10hz_dataset.py,616,
+build_unified_10hz_dataset.py,617,
+build_unified_10hz_dataset.py,618,    print(
+build_unified_10hz_dataset.py,619,"        ""\nProcessing:"","
+build_unified_10hz_dataset.py,620,        task
+build_unified_10hz_dataset.py,621,    )
+build_unified_10hz_dataset.py,622,
+build_unified_10hz_dataset.py,623,
+build_unified_10hz_dataset.py,624,    # ========================================================
+build_unified_10hz_dataset.py,625,    # BIRDSAI
+build_unified_10hz_dataset.py,626,    # ========================================================
+build_unified_10hz_dataset.py,627,
+build_unified_10hz_dataset.py,628,    birds = load_birdsai(
+build_unified_10hz_dataset.py,629,        task
+build_unified_10hz_dataset.py,630,    )
+build_unified_10hz_dataset.py,631,
+build_unified_10hz_dataset.py,632,
+build_unified_10hz_dataset.py,633,"    for split, ("
+build_unified_10hz_dataset.py,634,"        meta,"
+build_unified_10hz_dataset.py,635,"        history,"
+build_unified_10hz_dataset.py,636,        future
+build_unified_10hz_dataset.py,637,    ) in birds.items():
+build_unified_10hz_dataset.py,638,
+build_unified_10hz_dataset.py,639,
+build_unified_10hz_dataset.py,640,        expected_future = (
+build_unified_10hz_dataset.py,641,            config[
+build_unified_10hz_dataset.py,642,"                ""future_frames_10hz"""
+build_unified_10hz_dataset.py,643,            ]
+build_unified_10hz_dataset.py,644,        )
+build_unified_10hz_dataset.py,645,
+build_unified_10hz_dataset.py,646,
+build_unified_10hz_dataset.py,647,        if history.shape[1] != 20:
+build_unified_10hz_dataset.py,648,
+build_unified_10hz_dataset.py,649,            raise RuntimeError(
+build_unified_10hz_dataset.py,650,"                f""{task} {split}: """
+build_unified_10hz_dataset.py,651,"                f""history shape wrong """
+build_unified_10hz_dataset.py,652,"                f""{history.shape}"""
+build_unified_10hz_dataset.py,653,            )
+build_unified_10hz_dataset.py,654,
+build_unified_10hz_dataset.py,655,
+build_unified_10hz_dataset.py,656,        if future.shape[1] != expected_future:
+build_unified_10hz_dataset.py,657,
+build_unified_10hz_dataset.py,658,            raise RuntimeError(
+build_unified_10hz_dataset.py,659,"                f""{task} {split}: """
+build_unified_10hz_dataset.py,660,"                f""future shape wrong """
+build_unified_10hz_dataset.py,661,"                f""{future.shape}"""
+build_unified_10hz_dataset.py,662,            )
+build_unified_10hz_dataset.py,663,
+build_unified_10hz_dataset.py,664,
+build_unified_10hz_dataset.py,665,        (
+build_unified_10hz_dataset.py,666,"            history_rel,"
+build_unified_10hz_dataset.py,667,            future_rel
+build_unified_10hz_dataset.py,668,        ) = make_relative(
+build_unified_10hz_dataset.py,669,"            history,"
+build_unified_10hz_dataset.py,670,            future
+build_unified_10hz_dataset.py,671,        )
+build_unified_10hz_dataset.py,672,
+build_unified_10hz_dataset.py,673,
+build_unified_10hz_dataset.py,674,        prefix = (
+build_unified_10hz_dataset.py,675,
+build_unified_10hz_dataset.py,676,"            f""birdsai_"""
+build_unified_10hz_dataset.py,677,"            f""{split}_core_"""
+build_unified_10hz_dataset.py,678,"            f""{task}_10hz"""
+build_unified_10hz_dataset.py,679,
+build_unified_10hz_dataset.py,680,        )
+build_unified_10hz_dataset.py,681,
+build_unified_10hz_dataset.py,682,
+build_unified_10hz_dataset.py,683,        np.savez_compressed(
+build_unified_10hz_dataset.py,684,
+build_unified_10hz_dataset.py,685,            OUT /
+build_unified_10hz_dataset.py,686,"            f""{prefix}.npz"","
+build_unified_10hz_dataset.py,687,
+build_unified_10hz_dataset.py,688,            history_abs=
+build_unified_10hz_dataset.py,689,"                history,"
+build_unified_10hz_dataset.py,690,
+build_unified_10hz_dataset.py,691,            future_abs=
+build_unified_10hz_dataset.py,692,"                future,"
+build_unified_10hz_dataset.py,693,
+build_unified_10hz_dataset.py,694,            history_rel=
+build_unified_10hz_dataset.py,695,"                history_rel,"
+build_unified_10hz_dataset.py,696,
+build_unified_10hz_dataset.py,697,            future_rel=
+build_unified_10hz_dataset.py,698,                future_rel
+build_unified_10hz_dataset.py,699,        )
+build_unified_10hz_dataset.py,700,
+build_unified_10hz_dataset.py,701,
+build_unified_10hz_dataset.py,702,        meta.to_csv(
+build_unified_10hz_dataset.py,703,
+build_unified_10hz_dataset.py,704,            OUT /
+build_unified_10hz_dataset.py,705,"            f""{prefix}_metadata.csv"","
+build_unified_10hz_dataset.py,706,
+build_unified_10hz_dataset.py,707,            index=False
+build_unified_10hz_dataset.py,708,        )
+build_unified_10hz_dataset.py,709,
+build_unified_10hz_dataset.py,710,
+build_unified_10hz_dataset.py,711,        audit = audit_samples(
+build_unified_10hz_dataset.py,712,
+build_unified_10hz_dataset.py,713,"            history,"
+build_unified_10hz_dataset.py,714,"            future,"
+build_unified_10hz_dataset.py,715,"            meta,"
+build_unified_10hz_dataset.py,716,
+build_unified_10hz_dataset.py,717,            dataset=
+build_unified_10hz_dataset.py,718,"                ""BIRDSAI"","
+build_unified_10hz_dataset.py,719,
+build_unified_10hz_dataset.py,720,            modality=
+build_unified_10hz_dataset.py,721,"                ""thermal"","
+build_unified_10hz_dataset.py,722,
+build_unified_10hz_dataset.py,723,            split_name=
+build_unified_10hz_dataset.py,724,                split
+build_unified_10hz_dataset.py,725,        )
+build_unified_10hz_dataset.py,726,
+build_unified_10hz_dataset.py,727,
+build_unified_10hz_dataset.py,728,        audit[
+build_unified_10hz_dataset.py,729,"            ""task"""
+build_unified_10hz_dataset.py,730,        ] = task
+build_unified_10hz_dataset.py,731,
+build_unified_10hz_dataset.py,732,
+build_unified_10hz_dataset.py,733,        all_audits.append(
+build_unified_10hz_dataset.py,734,            audit
+build_unified_10hz_dataset.py,735,        )
+build_unified_10hz_dataset.py,736,
+build_unified_10hz_dataset.py,737,
+build_unified_10hz_dataset.py,738,        all_summary.append({
+build_unified_10hz_dataset.py,739,
+build_unified_10hz_dataset.py,740,"            ""task"":"
+build_unified_10hz_dataset.py,741,"                task,"
+build_unified_10hz_dataset.py,742,
+build_unified_10hz_dataset.py,743,"            ""dataset"":"
+build_unified_10hz_dataset.py,744,"                ""BIRDSAI"","
+build_unified_10hz_dataset.py,745,
+build_unified_10hz_dataset.py,746,"            ""modality"":"
+build_unified_10hz_dataset.py,747,"                ""thermal"","
+build_unified_10hz_dataset.py,748,
+build_unified_10hz_dataset.py,749,"            ""role"":"
+build_unified_10hz_dataset.py,750,                (
+build_unified_10hz_dataset.py,751,"                    ""training"""
+build_unified_10hz_dataset.py,752,                    if split
+build_unified_10hz_dataset.py,753,                    ==
+build_unified_10hz_dataset.py,754,"                    ""train_real"""
+build_unified_10hz_dataset.py,755,                    else
+build_unified_10hz_dataset.py,756,"                    ""in_domain_test"""
+build_unified_10hz_dataset.py,757,"                ),"
+build_unified_10hz_dataset.py,758,
+build_unified_10hz_dataset.py,759,"            ""samples"":"
+build_unified_10hz_dataset.py,760,                len(
+build_unified_10hz_dataset.py,761,                    history
+build_unified_10hz_dataset.py,762,"                ),"
+build_unified_10hz_dataset.py,763,
+build_unified_10hz_dataset.py,764,"            ""source_groups"":"
+build_unified_10hz_dataset.py,765,                meta[
+build_unified_10hz_dataset.py,766,"                    ""source_group"""
+build_unified_10hz_dataset.py,767,"                ].nunique(),"
+build_unified_10hz_dataset.py,768,
+build_unified_10hz_dataset.py,769,"            ""tracks"":"
+build_unified_10hz_dataset.py,770,                meta[
+build_unified_10hz_dataset.py,771,"                    ""track_key"""
+build_unified_10hz_dataset.py,772,"                ].nunique(),"
+build_unified_10hz_dataset.py,773,
+build_unified_10hz_dataset.py,774,"            ""history_shape"":"
+build_unified_10hz_dataset.py,775,                str(
+build_unified_10hz_dataset.py,776,                    history.shape
+build_unified_10hz_dataset.py,777,"                ),"
+build_unified_10hz_dataset.py,778,
+build_unified_10hz_dataset.py,779,"            ""future_shape"":"
+build_unified_10hz_dataset.py,780,                str(
+build_unified_10hz_dataset.py,781,                    future.shape
+build_unified_10hz_dataset.py,782,                )
+build_unified_10hz_dataset.py,783,        })
+build_unified_10hz_dataset.py,784,
+build_unified_10hz_dataset.py,785,
+build_unified_10hz_dataset.py,786,    # ========================================================
+build_unified_10hz_dataset.py,787,    # WILDBOX
+build_unified_10hz_dataset.py,788,    # ========================================================
+build_unified_10hz_dataset.py,789,
+build_unified_10hz_dataset.py,790,    (
+build_unified_10hz_dataset.py,791,"        wild_meta,"
+build_unified_10hz_dataset.py,792,"        wild_history,"
+build_unified_10hz_dataset.py,793,        wild_future
+build_unified_10hz_dataset.py,794,    ) = load_wildbox(
+build_unified_10hz_dataset.py,795,        task
+build_unified_10hz_dataset.py,796,    )
+build_unified_10hz_dataset.py,797,
+build_unified_10hz_dataset.py,798,
+build_unified_10hz_dataset.py,799,    if wild_history.shape[1] != 20:
+build_unified_10hz_dataset.py,800,
+build_unified_10hz_dataset.py,801,        raise RuntimeError(
+build_unified_10hz_dataset.py,802,"            f""{task} WildBox """
+build_unified_10hz_dataset.py,803,"            f""history shape wrong """
+build_unified_10hz_dataset.py,804,"            f""{wild_history.shape}"""
+build_unified_10hz_dataset.py,805,        )
+build_unified_10hz_dataset.py,806,
+build_unified_10hz_dataset.py,807,
+build_unified_10hz_dataset.py,808,    if (
+build_unified_10hz_dataset.py,809,        wild_future.shape[1]
+build_unified_10hz_dataset.py,810,        !=
+build_unified_10hz_dataset.py,811,        config[
+build_unified_10hz_dataset.py,812,"            ""future_frames_10hz"""
+build_unified_10hz_dataset.py,813,        ]
+build_unified_10hz_dataset.py,814,    ):
+build_unified_10hz_dataset.py,815,
+build_unified_10hz_dataset.py,816,        raise RuntimeError(
+build_unified_10hz_dataset.py,817,"            f""{task} WildBox """
+build_unified_10hz_dataset.py,818,"            f""future shape wrong """
+build_unified_10hz_dataset.py,819,"            f""{wild_future.shape}"""
+build_unified_10hz_dataset.py,820,        )
+build_unified_10hz_dataset.py,821,
+build_unified_10hz_dataset.py,822,
+build_unified_10hz_dataset.py,823,    (
+build_unified_10hz_dataset.py,824,"        wild_history_rel,"
+build_unified_10hz_dataset.py,825,        wild_future_rel
+build_unified_10hz_dataset.py,826,    ) = make_relative(
+build_unified_10hz_dataset.py,827,
+build_unified_10hz_dataset.py,828,"        wild_history,"
+build_unified_10hz_dataset.py,829,
+build_unified_10hz_dataset.py,830,        wild_future
+build_unified_10hz_dataset.py,831,
+build_unified_10hz_dataset.py,832,    )
+build_unified_10hz_dataset.py,833,
+build_unified_10hz_dataset.py,834,
+build_unified_10hz_dataset.py,835,    prefix = (
+build_unified_10hz_dataset.py,836,
+build_unified_10hz_dataset.py,837,"        f""wildbox_external_"""
+build_unified_10hz_dataset.py,838,"        f""{task}_10hz"""
+build_unified_10hz_dataset.py,839,
+build_unified_10hz_dataset.py,840,    )
+build_unified_10hz_dataset.py,841,
+build_unified_10hz_dataset.py,842,
+build_unified_10hz_dataset.py,843,    np.savez_compressed(
+build_unified_10hz_dataset.py,844,
+build_unified_10hz_dataset.py,845,        OUT /
+build_unified_10hz_dataset.py,846,"        f""{prefix}.npz"","
+build_unified_10hz_dataset.py,847,
+build_unified_10hz_dataset.py,848,        history_abs=
+build_unified_10hz_dataset.py,849,"            wild_history,"
+build_unified_10hz_dataset.py,850,
+build_unified_10hz_dataset.py,851,        future_abs=
+build_unified_10hz_dataset.py,852,"            wild_future,"
+build_unified_10hz_dataset.py,853,
+build_unified_10hz_dataset.py,854,        history_rel=
+build_unified_10hz_dataset.py,855,"            wild_history_rel,"
+build_unified_10hz_dataset.py,856,
+build_unified_10hz_dataset.py,857,        future_rel=
+build_unified_10hz_dataset.py,858,            wild_future_rel
+build_unified_10hz_dataset.py,859,
+build_unified_10hz_dataset.py,860,    )
+build_unified_10hz_dataset.py,861,
+build_unified_10hz_dataset.py,862,
+build_unified_10hz_dataset.py,863,    wild_meta.to_csv(
+build_unified_10hz_dataset.py,864,
+build_unified_10hz_dataset.py,865,        OUT /
+build_unified_10hz_dataset.py,866,"        f""{prefix}_metadata.csv"","
+build_unified_10hz_dataset.py,867,
+build_unified_10hz_dataset.py,868,        index=False
+build_unified_10hz_dataset.py,869,    )
+build_unified_10hz_dataset.py,870,
+build_unified_10hz_dataset.py,871,
+build_unified_10hz_dataset.py,872,    audit = audit_samples(
+build_unified_10hz_dataset.py,873,
+build_unified_10hz_dataset.py,874,"        wild_history,"
+build_unified_10hz_dataset.py,875,"        wild_future,"
+build_unified_10hz_dataset.py,876,"        wild_meta,"
+build_unified_10hz_dataset.py,877,
+build_unified_10hz_dataset.py,878,        dataset=
+build_unified_10hz_dataset.py,879,"            ""WildBox"","
+build_unified_10hz_dataset.py,880,
+build_unified_10hz_dataset.py,881,        modality=
+build_unified_10hz_dataset.py,882,"            ""RGB"","
+build_unified_10hz_dataset.py,883,
+build_unified_10hz_dataset.py,884,        split_name=
+build_unified_10hz_dataset.py,885,"            ""external_test"""
+build_unified_10hz_dataset.py,886,
+build_unified_10hz_dataset.py,887,    )
+build_unified_10hz_dataset.py,888,
+build_unified_10hz_dataset.py,889,
+build_unified_10hz_dataset.py,890,    audit[
+build_unified_10hz_dataset.py,891,"        ""task"""
+build_unified_10hz_dataset.py,892,    ] = task
+build_unified_10hz_dataset.py,893,
+build_unified_10hz_dataset.py,894,
+build_unified_10hz_dataset.py,895,    all_audits.append(
+build_unified_10hz_dataset.py,896,        audit
+build_unified_10hz_dataset.py,897,    )
+build_unified_10hz_dataset.py,898,
+build_unified_10hz_dataset.py,899,
+build_unified_10hz_dataset.py,900,    all_summary.append({
+build_unified_10hz_dataset.py,901,
+build_unified_10hz_dataset.py,902,"        ""task"":"
+build_unified_10hz_dataset.py,903,"            task,"
+build_unified_10hz_dataset.py,904,
+build_unified_10hz_dataset.py,905,"        ""dataset"":"
+build_unified_10hz_dataset.py,906,"            ""WildBox"","
+build_unified_10hz_dataset.py,907,
+build_unified_10hz_dataset.py,908,"        ""modality"":"
+build_unified_10hz_dataset.py,909,"            ""RGB"","
+build_unified_10hz_dataset.py,910,
+build_unified_10hz_dataset.py,911,"        ""role"":"
+build_unified_10hz_dataset.py,912,"            ""external_test"","
+build_unified_10hz_dataset.py,913,
+build_unified_10hz_dataset.py,914,"        ""samples"":"
+build_unified_10hz_dataset.py,915,            len(
+build_unified_10hz_dataset.py,916,                wild_history
+build_unified_10hz_dataset.py,917,"            ),"
+build_unified_10hz_dataset.py,918,
+build_unified_10hz_dataset.py,919,"        ""source_groups"":"
+build_unified_10hz_dataset.py,920,            wild_meta[
+build_unified_10hz_dataset.py,921,"                ""source_group"""
+build_unified_10hz_dataset.py,922,"            ].nunique(),"
+build_unified_10hz_dataset.py,923,
+build_unified_10hz_dataset.py,924,"        ""tracks"":"
+build_unified_10hz_dataset.py,925,            wild_meta[
+build_unified_10hz_dataset.py,926,"                ""track_key"""
+build_unified_10hz_dataset.py,927,"            ].nunique(),"
+build_unified_10hz_dataset.py,928,
+build_unified_10hz_dataset.py,929,"        ""history_shape"":"
+build_unified_10hz_dataset.py,930,            str(
+build_unified_10hz_dataset.py,931,                wild_history.shape
+build_unified_10hz_dataset.py,932,"            ),"
+build_unified_10hz_dataset.py,933,
+build_unified_10hz_dataset.py,934,"        ""future_shape"":"
+build_unified_10hz_dataset.py,935,            str(
+build_unified_10hz_dataset.py,936,                wild_future.shape
+build_unified_10hz_dataset.py,937,            )
+build_unified_10hz_dataset.py,938,    })
+build_unified_10hz_dataset.py,939,
+build_unified_10hz_dataset.py,940,
+build_unified_10hz_dataset.py,941,# ============================================================
+build_unified_10hz_dataset.py,942,# SAVE AUDIT
+build_unified_10hz_dataset.py,943,# ============================================================
+build_unified_10hz_dataset.py,944,
+build_unified_10hz_dataset.py,945,summary_df = pd.DataFrame(
+build_unified_10hz_dataset.py,946,    all_summary
+build_unified_10hz_dataset.py,947,)
+build_unified_10hz_dataset.py,948,
+build_unified_10hz_dataset.py,949,
+build_unified_10hz_dataset.py,950,summary_df.to_csv(
+build_unified_10hz_dataset.py,951,
+build_unified_10hz_dataset.py,952,    OUT /
+build_unified_10hz_dataset.py,953,"    ""dataset_summary.csv"","
+build_unified_10hz_dataset.py,954,
+build_unified_10hz_dataset.py,955,    index=False
+build_unified_10hz_dataset.py,956,)
+build_unified_10hz_dataset.py,957,
+build_unified_10hz_dataset.py,958,
+build_unified_10hz_dataset.py,959,audit_df = pd.concat(
+build_unified_10hz_dataset.py,960,
+build_unified_10hz_dataset.py,961,"    all_audits,"
+build_unified_10hz_dataset.py,962,
+build_unified_10hz_dataset.py,963,    ignore_index=True
+build_unified_10hz_dataset.py,964,
+build_unified_10hz_dataset.py,965,)
+build_unified_10hz_dataset.py,966,
+build_unified_10hz_dataset.py,967,
+build_unified_10hz_dataset.py,968,audit_df.to_csv(
+build_unified_10hz_dataset.py,969,
+build_unified_10hz_dataset.py,970,    OUT /
+build_unified_10hz_dataset.py,971,"    ""trajectory_quality_audit.csv"","
+build_unified_10hz_dataset.py,972,
+build_unified_10hz_dataset.py,973,    index=False
+build_unified_10hz_dataset.py,974,)
+build_unified_10hz_dataset.py,975,
+build_unified_10hz_dataset.py,976,
+build_unified_10hz_dataset.py,977,# ============================================================
+build_unified_10hz_dataset.py,978,# AGGREGATE QUALITY
+build_unified_10hz_dataset.py,979,# ============================================================
+build_unified_10hz_dataset.py,980,
+build_unified_10hz_dataset.py,981,quality_rows = []
+build_unified_10hz_dataset.py,982,
+build_unified_10hz_dataset.py,983,
+build_unified_10hz_dataset.py,984,for (
+build_unified_10hz_dataset.py,985,"    task,"
+build_unified_10hz_dataset.py,986,"    dataset,"
+build_unified_10hz_dataset.py,987,    split
+build_unified_10hz_dataset.py,988,"), group in audit_df.groupby("
+build_unified_10hz_dataset.py,989,
+build_unified_10hz_dataset.py,990,    [
+build_unified_10hz_dataset.py,991,"        ""task"","
+build_unified_10hz_dataset.py,992,"        ""dataset"","
+build_unified_10hz_dataset.py,993,"        ""split"""
+build_unified_10hz_dataset.py,994,    ]
+build_unified_10hz_dataset.py,995,
+build_unified_10hz_dataset.py,996,):
+build_unified_10hz_dataset.py,997,
+build_unified_10hz_dataset.py,998,
+build_unified_10hz_dataset.py,999,    quality_rows.append({
+build_unified_10hz_dataset.py,1000,
+build_unified_10hz_dataset.py,1001,"        ""task"":"
+build_unified_10hz_dataset.py,1002,"            task,"
+build_unified_10hz_dataset.py,1003,
+build_unified_10hz_dataset.py,1004,"        ""dataset"":"
+build_unified_10hz_dataset.py,1005,"            dataset,"
+build_unified_10hz_dataset.py,1006,
+build_unified_10hz_dataset.py,1007,"        ""split"":"
+build_unified_10hz_dataset.py,1008,"            split,"
+build_unified_10hz_dataset.py,1009,
+build_unified_10hz_dataset.py,1010,"        ""samples"":"
+build_unified_10hz_dataset.py,1011,            len(
+build_unified_10hz_dataset.py,1012,                group
+build_unified_10hz_dataset.py,1013,"            ),"
+build_unified_10hz_dataset.py,1014,
+build_unified_10hz_dataset.py,1015,"        ""finite_pct"":"
+build_unified_10hz_dataset.py,1016,            100
+build_unified_10hz_dataset.py,1017,            *
+build_unified_10hz_dataset.py,1018,            group[
+build_unified_10hz_dataset.py,1019,"                ""finite"""
+build_unified_10hz_dataset.py,1020,"            ].mean(),"
+build_unified_10hz_dataset.py,1021,
+build_unified_10hz_dataset.py,1022,"        ""mean_outside_01_pct"":"
+build_unified_10hz_dataset.py,1023,            group[
+build_unified_10hz_dataset.py,1024,"                ""outside_01_pct"""
+build_unified_10hz_dataset.py,1025,"            ].mean(),"
+build_unified_10hz_dataset.py,1026,
+build_unified_10hz_dataset.py,1027,"        ""max_extreme_pct"":"
+build_unified_10hz_dataset.py,1028,            group[
+build_unified_10hz_dataset.py,1029,"                ""extreme_pct"""
+build_unified_10hz_dataset.py,1030,"            ].max(),"
+build_unified_10hz_dataset.py,1031,
+build_unified_10hz_dataset.py,1032,"        ""median_history_displacement"":"
+build_unified_10hz_dataset.py,1033,            group[
+build_unified_10hz_dataset.py,1034,"                ""history_displacement"""
+build_unified_10hz_dataset.py,1035,"            ].median(),"
+build_unified_10hz_dataset.py,1036,
+build_unified_10hz_dataset.py,1037,"        ""median_future_displacement"":"
+build_unified_10hz_dataset.py,1038,            group[
+build_unified_10hz_dataset.py,1039,"                ""future_displacement"""
+build_unified_10hz_dataset.py,1040,"            ].median(),"
+build_unified_10hz_dataset.py,1041,
+build_unified_10hz_dataset.py,1042,"        ""median_history_speed"":"
+build_unified_10hz_dataset.py,1043,            group[
+build_unified_10hz_dataset.py,1044,"                ""median_history_speed"""
+build_unified_10hz_dataset.py,1045,"            ].median(),"
+build_unified_10hz_dataset.py,1046,
+build_unified_10hz_dataset.py,1047,"        ""p95_max_history_speed"":"
+build_unified_10hz_dataset.py,1048,            group[
+build_unified_10hz_dataset.py,1049,"                ""max_history_speed"""
+build_unified_10hz_dataset.py,1050,            ].quantile(
+build_unified_10hz_dataset.py,1051,                0.95
+build_unified_10hz_dataset.py,1052,            )
+build_unified_10hz_dataset.py,1053,    })
+build_unified_10hz_dataset.py,1054,
+build_unified_10hz_dataset.py,1055,
+build_unified_10hz_dataset.py,1056,quality_df = pd.DataFrame(
+build_unified_10hz_dataset.py,1057,    quality_rows
+build_unified_10hz_dataset.py,1058,)
+build_unified_10hz_dataset.py,1059,
+build_unified_10hz_dataset.py,1060,
+build_unified_10hz_dataset.py,1061,quality_df.to_csv(
+build_unified_10hz_dataset.py,1062,
+build_unified_10hz_dataset.py,1063,    OUT /
+build_unified_10hz_dataset.py,1064,"    ""trajectory_quality_summary.csv"","
+build_unified_10hz_dataset.py,1065,
+build_unified_10hz_dataset.py,1066,    index=False
+build_unified_10hz_dataset.py,1067,)
+build_unified_10hz_dataset.py,1068,
+build_unified_10hz_dataset.py,1069,
+build_unified_10hz_dataset.py,1070,# ============================================================
+build_unified_10hz_dataset.py,1071,# TEXT SUMMARY
+build_unified_10hz_dataset.py,1072,# ============================================================
+build_unified_10hz_dataset.py,1073,
+build_unified_10hz_dataset.py,1074,with open(
+build_unified_10hz_dataset.py,1075,
+build_unified_10hz_dataset.py,1076,    OUT /
+build_unified_10hz_dataset.py,1077,"    ""SUMMARY.txt"","
+build_unified_10hz_dataset.py,1078,
+build_unified_10hz_dataset.py,1079,"    ""w"","
+build_unified_10hz_dataset.py,1080,"    encoding=""utf-8"""
+build_unified_10hz_dataset.py,1081,
+build_unified_10hz_dataset.py,1082,) as f:
+build_unified_10hz_dataset.py,1083,
+build_unified_10hz_dataset.py,1084,
+build_unified_10hz_dataset.py,1085,    f.write(
+build_unified_10hz_dataset.py,1086,"        ""UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ\n"""
+build_unified_10hz_dataset.py,1087,    )
+build_unified_10hz_dataset.py,1088,
+build_unified_10hz_dataset.py,1089,    f.write(
+build_unified_10hz_dataset.py,1090,"        ""="" * 72"
+build_unified_10hz_dataset.py,1091,        +
+build_unified_10hz_dataset.py,1092,"        ""\n\n"""
+build_unified_10hz_dataset.py,1093,    )
+build_unified_10hz_dataset.py,1094,
+build_unified_10hz_dataset.py,1095,
+build_unified_10hz_dataset.py,1096,    f.write(
+build_unified_10hz_dataset.py,1097,"        ""Common representation:\n"""
+build_unified_10hz_dataset.py,1098,    )
+build_unified_10hz_dataset.py,1099,
+build_unified_10hz_dataset.py,1100,    f.write(
+build_unified_10hz_dataset.py,1101,"        ""- Sampling frequency: 10 Hz\n"""
+build_unified_10hz_dataset.py,1102,    )
+build_unified_10hz_dataset.py,1103,
+build_unified_10hz_dataset.py,1104,    f.write(
+build_unified_10hz_dataset.py,1105,"        ""- Observation: 2 s / 20 frames\n"""
+build_unified_10hz_dataset.py,1106,    )
+build_unified_10hz_dataset.py,1107,
+build_unified_10hz_dataset.py,1108,    f.write(
+build_unified_10hz_dataset.py,1109,"        ""- Forecast: 2 s / 20 frames """
+build_unified_10hz_dataset.py,1110,"        ""or 5 s / 50 frames\n"""
+build_unified_10hz_dataset.py,1111,    )
+build_unified_10hz_dataset.py,1112,
+build_unified_10hz_dataset.py,1113,    f.write(
+build_unified_10hz_dataset.py,1114,"        ""- Features used for common model: """
+build_unified_10hz_dataset.py,1115,"        ""camera-corrected normalized x,y\n"""
+build_unified_10hz_dataset.py,1116,    )
+build_unified_10hz_dataset.py,1117,
+build_unified_10hz_dataset.py,1118,    f.write(
+build_unified_10hz_dataset.py,1119,"        ""- Both absolute and relative-to-last-observation """
+build_unified_10hz_dataset.py,1120,"        ""coordinates are saved.\n\n"""
+build_unified_10hz_dataset.py,1121,    )
+build_unified_10hz_dataset.py,1122,
+build_unified_10hz_dataset.py,1123,
+build_unified_10hz_dataset.py,1124,    f.write(
+build_unified_10hz_dataset.py,1125,"        ""Experimental roles:\n"""
+build_unified_10hz_dataset.py,1126,    )
+build_unified_10hz_dataset.py,1127,
+build_unified_10hz_dataset.py,1128,    f.write(
+build_unified_10hz_dataset.py,1129,"        ""- BIRDSAI TrainReal CORE = training\n"""
+build_unified_10hz_dataset.py,1130,    )
+build_unified_10hz_dataset.py,1131,
+build_unified_10hz_dataset.py,1132,    f.write(
+build_unified_10hz_dataset.py,1133,"        ""- BIRDSAI TestReal CORE = untouched in-domain test\n"""
+build_unified_10hz_dataset.py,1134,    )
+build_unified_10hz_dataset.py,1135,
+build_unified_10hz_dataset.py,1136,    f.write(
+build_unified_10hz_dataset.py,1137,"        ""- WildBox RGB = untouched external cross-modal test\n\n"""
+build_unified_10hz_dataset.py,1138,    )
+build_unified_10hz_dataset.py,1139,
+build_unified_10hz_dataset.py,1140,
+build_unified_10hz_dataset.py,1141,"    for _, row in ("
+build_unified_10hz_dataset.py,1142,        summary_df.iterrows()
+build_unified_10hz_dataset.py,1143,    ):
+build_unified_10hz_dataset.py,1144,
+build_unified_10hz_dataset.py,1145,
+build_unified_10hz_dataset.py,1146,        f.write(
+build_unified_10hz_dataset.py,1147,
+build_unified_10hz_dataset.py,1148,"            f""{row['task']} | """
+build_unified_10hz_dataset.py,1149,"            f""{row['dataset']} | """
+build_unified_10hz_dataset.py,1150,"            f""{row['role']}\n"""
+build_unified_10hz_dataset.py,1151,
+build_unified_10hz_dataset.py,1152,        )
+build_unified_10hz_dataset.py,1153,
+build_unified_10hz_dataset.py,1154,
+build_unified_10hz_dataset.py,1155,        f.write(
+build_unified_10hz_dataset.py,1156,
+build_unified_10hz_dataset.py,1157,"            f""Samples: """
+build_unified_10hz_dataset.py,1158,"            f""{int(row['samples'])}\n"""
+build_unified_10hz_dataset.py,1159,
+build_unified_10hz_dataset.py,1160,        )
+build_unified_10hz_dataset.py,1161,
+build_unified_10hz_dataset.py,1162,
+build_unified_10hz_dataset.py,1163,        f.write(
+build_unified_10hz_dataset.py,1164,
+build_unified_10hz_dataset.py,1165,"            f""Source groups: """
+build_unified_10hz_dataset.py,1166,"            f""{int(row['source_groups'])}\n"""
+build_unified_10hz_dataset.py,1167,
+build_unified_10hz_dataset.py,1168,        )
+build_unified_10hz_dataset.py,1169,
+build_unified_10hz_dataset.py,1170,
+build_unified_10hz_dataset.py,1171,        f.write(
+build_unified_10hz_dataset.py,1172,
+build_unified_10hz_dataset.py,1173,"            f""Tracks: """
+build_unified_10hz_dataset.py,1174,"            f""{int(row['tracks'])}\n"""
+build_unified_10hz_dataset.py,1175,
+build_unified_10hz_dataset.py,1176,        )
+build_unified_10hz_dataset.py,1177,
+build_unified_10hz_dataset.py,1178,
+build_unified_10hz_dataset.py,1179,        f.write(
+build_unified_10hz_dataset.py,1180,
+build_unified_10hz_dataset.py,1181,"            f""History: """
+build_unified_10hz_dataset.py,1182,"            f""{row['history_shape']}\n"""
+build_unified_10hz_dataset.py,1183,
+build_unified_10hz_dataset.py,1184,        )
+build_unified_10hz_dataset.py,1185,
+build_unified_10hz_dataset.py,1186,
+build_unified_10hz_dataset.py,1187,        f.write(
+build_unified_10hz_dataset.py,1188,
+build_unified_10hz_dataset.py,1189,"            f""Future: """
+build_unified_10hz_dataset.py,1190,"            f""{row['future_shape']}\n\n"""
+build_unified_10hz_dataset.py,1191,
+build_unified_10hz_dataset.py,1192,        )
+build_unified_10hz_dataset.py,1193,
+build_unified_10hz_dataset.py,1194,
+build_unified_10hz_dataset.py,1195,print(
+build_unified_10hz_dataset.py,1196,"    ""\n========================================"""
+build_unified_10hz_dataset.py,1197,)
+build_unified_10hz_dataset.py,1198,
+build_unified_10hz_dataset.py,1199,print(
+build_unified_10hz_dataset.py,1200,"    ""UNIFIED 10 HZ DATASET BUILD COMPLETE"""
+build_unified_10hz_dataset.py,1201,)
+build_unified_10hz_dataset.py,1202,
+build_unified_10hz_dataset.py,1203,print(
+build_unified_10hz_dataset.py,1204,"    ""========================================"""
+build_unified_10hz_dataset.py,1205,)
+build_unified_10hz_dataset.py,1206,
+build_unified_10hz_dataset.py,1207,print(
+build_unified_10hz_dataset.py,1208,"    ""\nDataset summary:"""
+build_unified_10hz_dataset.py,1209,)
+build_unified_10hz_dataset.py,1210,
+build_unified_10hz_dataset.py,1211,print(
+build_unified_10hz_dataset.py,1212,    summary_df
+build_unified_10hz_dataset.py,1213,)
+build_unified_10hz_dataset.py,1214,
+build_unified_10hz_dataset.py,1215,print(
+build_unified_10hz_dataset.py,1216,"    ""\nQuality summary:"""
+build_unified_10hz_dataset.py,1217,)
+build_unified_10hz_dataset.py,1218,
+build_unified_10hz_dataset.py,1219,print(
+build_unified_10hz_dataset.py,1220,    quality_df
+build_unified_10hz_dataset.py,1221,)
+build_unified_10hz_dataset.py,1222,
+build_unified_10hz_dataset.py,1223,print(
+build_unified_10hz_dataset.py,1224,"    ""\nSaved to:"""
+build_unified_10hz_dataset.py,1225,)
+build_unified_10hz_dataset.py,1226,
+build_unified_10hz_dataset.py,1227,print(
+build_unified_10hz_dataset.py,1228,    OUT
+build_unified_10hz_dataset.py,1229,)

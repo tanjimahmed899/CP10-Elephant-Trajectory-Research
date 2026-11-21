@@ -1,0 +1,1287 @@
+[
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_constant_velocity_baseline.py",
+    "sha256": "524e8c276f11059a9fceefcc9ebee9f965eb58b0a1161b228893ed3d65a11d25",
+    "functions": [
+      {
+        "name": "estimate_velocity_linear_regression",
+        "line": 100,
+        "args": "history, fps"
+      },
+      {
+        "name": "predict_constant_velocity",
+        "line": 170,
+        "args": "history, future_length, fps"
+      },
+      {
+        "name": "predict_stationary",
+        "line": 216,
+        "args": "history, future_length"
+      },
+      {
+        "name": "trajectory_metrics",
+        "line": 238,
+        "args": "prediction, truth"
+      }
+    ],
+    "classes": [],
+    "interesting_literals": [
+      {
+        "line": 11,
+        "value": "C:\\Users\\HP\\Downloads\\unified_trajectory_10hz"
+      },
+      {
+        "line": 15,
+        "value": "C:\\Users\\HP\\Downloads\\baseline_constant_velocity"
+      },
+      {
+        "line": 696,
+        "value": "sample_metrics.csv"
+      },
+      {
+        "line": 718,
+        "value": "dataset"
+      },
+      {
+        "line": 793,
+        "value": "overall_metrics.csv"
+      },
+      {
+        "line": 845,
+        "value": "per_track_metrics.csv"
+      },
+      {
+        "line": 895,
+        "value": "track_macro_metrics.csv"
+      },
+      {
+        "line": 951,
+        "value": "per_source_metrics.csv"
+      },
+      {
+        "line": 1001,
+        "value": "source_macro_metrics.csv"
+      },
+      {
+        "line": 1052,
+        "value": "forecast_error_curve.csv"
+      },
+      {
+        "line": 1094,
+        "value": "baseline_comparison.csv"
+      },
+      {
+        "line": 1116,
+        "value": "ELEPHANT TRAJECTORY FORECASTING \u2014 NON-LEARNING BASELINES\n"
+      },
+      {
+        "line": 54,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 85,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 731,
+        "value": "dataset"
+      },
+      {
+        "line": 1081,
+        "value": "dataset"
+      },
+      {
+        "line": 39,
+        "value": "birdsai_train_real_core_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 41,
+        "value": "birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 48,
+        "value": "birdsai_test_real_core_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 50,
+        "value": "birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 57,
+        "value": "wildbox_external_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 59,
+        "value": "wildbox_external_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 70,
+        "value": "birdsai_train_real_core_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 72,
+        "value": "birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 79,
+        "value": "birdsai_test_real_core_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 81,
+        "value": "birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 88,
+        "value": "wildbox_external_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 90,
+        "value": "wildbox_external_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 809,
+        "value": "dataset"
+      },
+      {
+        "line": 861,
+        "value": "dataset"
+      },
+      {
+        "line": 911,
+        "value": "dataset"
+      },
+      {
+        "line": 967,
+        "value": "dataset"
+      },
+      {
+        "line": 1022,
+        "value": "dataset"
+      },
+      {
+        "line": 495,
+        "value": "Stationary"
+      },
+      {
+        "line": 588,
+        "value": "Stationary"
+      },
+      {
+        "line": 665,
+        "value": "_predictions.npz"
+      },
+      {
+        "line": 1068,
+        "value": "dataset"
+      },
+      {
+        "line": 1157,
+        "value": "dataset"
+      },
+      {
+        "line": 1250,
+        "value": "dataset"
+      },
+      {
+        "line": 512,
+        "value": "dataset"
+      },
+      {
+        "line": 1167,
+        "value": "dataset"
+      },
+      {
+        "line": 625,
+        "value": "dataset"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_kalman_baseline.py",
+    "sha256": "f54b1eaf3087d5004449786ab11f5dc709504f66db475be806a5ece6a655e013",
+    "functions": [
+      {
+        "name": "make_Q",
+        "line": 163,
+        "args": "q"
+      },
+      {
+        "name": "initial_velocity",
+        "line": 205,
+        "args": "history, n_frames=5"
+      },
+      {
+        "name": "kalman_forecast",
+        "line": 281,
+        "args": "history, future_length, q, r"
+      },
+      {
+        "name": "calculate_errors",
+        "line": 449,
+        "args": "prediction, truth"
+      },
+      {
+        "name": "load_dataset",
+        "line": 482,
+        "args": "npz_path, metadata_path"
+      }
+    ],
+    "classes": [],
+    "interesting_literals": [
+      {
+        "line": 11,
+        "value": "C:\\Users\\HP\\Downloads\\unified_trajectory_10hz"
+      },
+      {
+        "line": 15,
+        "value": "C:\\Users\\HP\\Downloads\\baseline_constant_velocity"
+      },
+      {
+        "line": 19,
+        "value": "C:\\Users\\HP\\Downloads\\baseline_kalman"
+      },
+      {
+        "line": 1368,
+        "value": "baseline_comparison.csv"
+      },
+      {
+        "line": 1579,
+        "value": "KALMAN BASELINE COMPLETE"
+      },
+      {
+        "line": 804,
+        "value": "kalman_tuning.csv"
+      },
+      {
+        "line": 1030,
+        "value": "kalman_sample_metrics.csv"
+      },
+      {
+        "line": 1228,
+        "value": "kalman_per_source_metrics.csv"
+      },
+      {
+        "line": 1305,
+        "value": "kalman_metrics.csv"
+      },
+      {
+        "line": 1355,
+        "value": "kalman_forecast_error_curve.csv"
+      },
+      {
+        "line": 1386,
+        "value": "dataset"
+      },
+      {
+        "line": 1434,
+        "value": "combined_baseline_comparison.csv"
+      },
+      {
+        "line": 1456,
+        "value": "ELEPHANT TRAJECTORY FORECASTING \u2014 KALMAN BASELINE\n"
+      },
+      {
+        "line": 1468,
+        "value": "Kalman state: [x, y, vx, vy]\n"
+      },
+      {
+        "line": 1492,
+        "value": "BIRDSAI TestReal and WildBox were NOT used for tuning.\n\n"
+      },
+      {
+        "line": 59,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 89,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 1292,
+        "value": "dataset"
+      },
+      {
+        "line": 44,
+        "value": "birdsai_train_real_core_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 46,
+        "value": "birdsai_train_real_core_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 53,
+        "value": "birdsai_test_real_core_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 55,
+        "value": "birdsai_test_real_core_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 62,
+        "value": "wildbox_external_2s_to_2s_10hz.npz"
+      },
+      {
+        "line": 64,
+        "value": "wildbox_external_2s_to_2s_10hz_metadata.csv"
+      },
+      {
+        "line": 74,
+        "value": "birdsai_train_real_core_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 76,
+        "value": "birdsai_train_real_core_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 83,
+        "value": "birdsai_test_real_core_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 85,
+        "value": "birdsai_test_real_core_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 92,
+        "value": "wildbox_external_2s_to_5s_10hz.npz"
+      },
+      {
+        "line": 94,
+        "value": "wildbox_external_2s_to_5s_10hz_metadata.csv"
+      },
+      {
+        "line": 1046,
+        "value": "dataset"
+      },
+      {
+        "line": 1116,
+        "value": "dataset"
+      },
+      {
+        "line": 1154,
+        "value": "dataset"
+      },
+      {
+        "line": 1189,
+        "value": "dataset"
+      },
+      {
+        "line": 1240,
+        "value": "dataset"
+      },
+      {
+        "line": 1326,
+        "value": "dataset"
+      },
+      {
+        "line": 925,
+        "value": "dataset"
+      },
+      {
+        "line": 932,
+        "value": "KalmanCV"
+      },
+      {
+        "line": 1004,
+        "value": "_kalman_predictions.npz"
+      },
+      {
+        "line": 1279,
+        "value": "dataset"
+      },
+      {
+        "line": 1527,
+        "value": "dataset"
+      },
+      {
+        "line": 1626,
+        "value": "dataset"
+      },
+      {
+        "line": 971,
+        "value": "dataset"
+      },
+      {
+        "line": 978,
+        "value": "KalmanCV"
+      },
+      {
+        "line": 1538,
+        "value": "dataset"
+      },
+      {
+        "line": 1612,
+        "value": "dataset"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_lstm_gru.py",
+    "sha256": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d",
+    "functions": [
+      {
+        "name": "set_seed",
+        "line": 73,
+        "args": "seed"
+      },
+      {
+        "name": "weighted_smooth_l1",
+        "line": 253,
+        "args": "prediction, target, weights"
+      },
+      {
+        "name": "inverse_transform_batch",
+        "line": 300,
+        "args": "canonical, origin, angle, scale"
+      },
+      {
+        "name": "sample_ade_fde",
+        "line": 381,
+        "args": "prediction, truth"
+      },
+      {
+        "name": "calculate_metrics",
+        "line": 414,
+        "args": "prediction, truth, metadata"
+      },
+      {
+        "name": "predict_model",
+        "line": 583,
+        "args": "model, history, batch_size=256"
+      },
+      {
+        "name": "validation_track_macro_ADE",
+        "line": 650,
+        "args": "model, val_history, val_future_abs, val_meta, val_origin, val_angle, val_scale"
+      },
+      {
+        "name": "train_one",
+        "line": 711,
+        "args": "task, model_type, seed"
+      },
+      {
+        "name": "evaluate_dataset",
+        "line": 1280,
+        "args": "model, task, dataset_name, role, npz_path, meta_path, model_type, seed, best_epoch"
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrajectoryDataset",
+        "line": 91
+      },
+      {
+        "name": "RecurrentForecaster",
+        "line": 143
+      }
+    ],
+    "interesting_literals": [
+      {
+        "line": 17,
+        "value": "C:\\Users\\HP\\Downloads\\final_neural_trajectory_dataset"
+      },
+      {
+        "line": 21,
+        "value": "C:\\Users\\HP\\Downloads\\lstm_gru_results"
+      },
+      {
+        "line": 39,
+        "value": "LSTM"
+      },
+      {
+        "line": 40,
+        "value": "GRU"
+      },
+      {
+        "line": 2011,
+        "value": "LSTM + GRU EXPERIMENT COMPLETE"
+      },
+      {
+        "line": 1399,
+        "value": "dataset"
+      },
+      {
+        "line": 1452,
+        "value": "dataset"
+      },
+      {
+        "line": 1674,
+        "value": "training_history.csv"
+      },
+      {
+        "line": 1692,
+        "value": "seed_level_results.csv"
+      },
+      {
+        "line": 1714,
+        "value": "sample_results.csv"
+      },
+      {
+        "line": 1748,
+        "value": "dataset"
+      },
+      {
+        "line": 1761,
+        "value": "dataset"
+      },
+      {
+        "line": 1812,
+        "value": "lstm_gru_summary.csv"
+      },
+      {
+        "line": 1869,
+        "value": "lstm_gru_per_source.csv"
+      },
+      {
+        "line": 1891,
+        "value": "LSTM + GRU ELEPHANT TRAJECTORY FORECASTING\n"
+      },
+      {
+        "line": 1916,
+        "value": "Evaluation: untouched BIRDSAI TestReal + untouched WildBox external RGB\n"
+      },
+      {
+        "line": 158,
+        "value": "LSTM"
+      },
+      {
+        "line": 216,
+        "value": "LSTM"
+      },
+      {
+        "line": 745,
+        "value": "_birdsai_trainval_canonical.npz"
+      },
+      {
+        "line": 753,
+        "value": "_birdsai_trainval_metadata.csv"
+      },
+      {
+        "line": 1222,
+        "value": ".pt"
+      },
+      {
+        "line": 174,
+        "value": "GRU"
+      },
+      {
+        "line": 1427,
+        "value": "_predictions.npz"
+      },
+      {
+        "line": 1828,
+        "value": "dataset"
+      },
+      {
+        "line": 1622,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 1941,
+        "value": "dataset"
+      },
+      {
+        "line": 1952,
+        "value": "dataset"
+      },
+      {
+        "line": 1581,
+        "value": "_birdsai_test_canonical.npz"
+      },
+      {
+        "line": 1585,
+        "value": "_birdsai_test_metadata.csv"
+      },
+      {
+        "line": 1629,
+        "value": "_wildbox_external_canonical.npz"
+      },
+      {
+        "line": 1633,
+        "value": "_wildbox_external_metadata.csv"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_transformer.py",
+    "sha256": "da4041611d36f37de0fc6a8716e190bba465786813a4c1ee536594a66528baa9",
+    "functions": [
+      {
+        "name": "set_seed",
+        "line": 78,
+        "args": "seed"
+      },
+      {
+        "name": "weighted_smooth_l1",
+        "line": 352,
+        "args": "prediction, target, weights"
+      },
+      {
+        "name": "inverse_transform_batch",
+        "line": 395,
+        "args": "canonical, origin, angle, scale"
+      },
+      {
+        "name": "predict_model",
+        "line": 467,
+        "args": "model, history, batch_size=256"
+      },
+      {
+        "name": "calculate_metrics",
+        "line": 528,
+        "args": "prediction, truth, metadata"
+      },
+      {
+        "name": "validation_metric",
+        "line": 673,
+        "args": "model, history, truth_abs, metadata, origin, angle, scale"
+      },
+      {
+        "name": "train_one",
+        "line": 730,
+        "args": "task, seed"
+      },
+      {
+        "name": "evaluate",
+        "line": 1252,
+        "args": "model, task, dataset_name, role, npz_path, metadata_path, seed, best_epoch"
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrajectoryDataset",
+        "line": 96
+      },
+      {
+        "name": "PositionalEncoding",
+        "line": 141
+      },
+      {
+        "name": "TrajectoryTransformer",
+        "line": 224
+      }
+    ],
+    "interesting_literals": [
+      {
+        "line": 19,
+        "value": "C:\\Users\\HP\\Downloads\\final_neural_trajectory_dataset"
+      },
+      {
+        "line": 23,
+        "value": "C:\\Users\\HP\\Downloads\\transformer_results"
+      },
+      {
+        "line": 1399,
+        "value": "Transformer"
+      },
+      {
+        "line": 1932,
+        "value": "TRANSFORMER EXPERIMENT COMPLETE"
+      },
+      {
+        "line": 747,
+        "value": "| Transformer | seed"
+      },
+      {
+        "line": 1388,
+        "value": "dataset"
+      },
+      {
+        "line": 1412,
+        "value": "dataset"
+      },
+      {
+        "line": 1419,
+        "value": "Transformer"
+      },
+      {
+        "line": 1605,
+        "value": "transformer_seed_results.csv"
+      },
+      {
+        "line": 1624,
+        "value": "transformer_training_history.csv"
+      },
+      {
+        "line": 1645,
+        "value": "transformer_sample_results.csv"
+      },
+      {
+        "line": 1678,
+        "value": "dataset"
+      },
+      {
+        "line": 1691,
+        "value": "dataset"
+      },
+      {
+        "line": 1744,
+        "value": "transformer_summary.csv"
+      },
+      {
+        "line": 1799,
+        "value": "transformer_per_source.csv"
+      },
+      {
+        "line": 1821,
+        "value": "TEMPORAL TRANSFORMER ELEPHANT TRAJECTORY FORECASTING\n"
+      },
+      {
+        "line": 1844,
+        "value": "TestReal and WildBox never used for model selection.\n"
+      },
+      {
+        "line": 1852,
+        "value": "Architecture: 2-layer compact Transformer encoder, d_model=64, 4 heads, FFN=128.\n"
+      },
+      {
+        "line": 759,
+        "value": "_birdsai_trainval_canonical.npz"
+      },
+      {
+        "line": 767,
+        "value": "_birdsai_trainval_metadata.csv"
+      },
+      {
+        "line": 1082,
+        "value": "Transformer"
+      },
+      {
+        "line": 1232,
+        "value": "_Transformer_seed"
+      },
+      {
+        "line": 1232,
+        "value": ".pt"
+      },
+      {
+        "line": 1339,
+        "value": "_Transformer_seed"
+      },
+      {
+        "line": 1340,
+        "value": "_predictions.npz"
+      },
+      {
+        "line": 1563,
+        "value": "WildBox_external"
+      },
+      {
+        "line": 1760,
+        "value": "dataset"
+      },
+      {
+        "line": 1867,
+        "value": "dataset"
+      },
+      {
+        "line": 1531,
+        "value": "_birdsai_test_canonical.npz"
+      },
+      {
+        "line": 1535,
+        "value": "_birdsai_test_metadata.csv"
+      },
+      {
+        "line": 1570,
+        "value": "_wildbox_external_canonical.npz"
+      },
+      {
+        "line": 1574,
+        "value": "_wildbox_external_metadata.csv"
+      },
+      {
+        "line": 1878,
+        "value": "dataset"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_birdsai_testreal_frozen_ensemble.py",
+    "sha256": "b3002766925305adb2fd54339cda44188223aa85351c3c8299e2bbf1bab7ee66",
+    "functions": [
+      {
+        "name": "locate_test_npz",
+        "line": 95,
+        "args": "task, expected_samples, expected_future"
+      },
+      {
+        "name": "locate_test_metadata",
+        "line": 204,
+        "args": "task, expected_samples, expected_tracks, expected_sources"
+      },
+      {
+        "name": "load_transformer",
+        "line": 581,
+        "args": "task, seed, future_length"
+      },
+      {
+        "name": "predict_model",
+        "line": 749,
+        "args": "model, history, batch_size=256"
+      },
+      {
+        "name": "inverse_transform_batch",
+        "line": 812,
+        "args": "canonical, origin, angle, scale"
+      },
+      {
+        "name": "calculate_metrics",
+        "line": 889,
+        "args": "prediction, truth, metadata"
+      },
+      {
+        "name": "stationary_prediction",
+        "line": 1049,
+        "args": "history, future_length"
+      },
+      {
+        "name": "constant_velocity_prediction",
+        "line": 1067,
+        "args": "history, future_length"
+      },
+      {
+        "name": "safe_pearson",
+        "line": 1161,
+        "args": "x, y"
+      },
+      {
+        "name": "safe_spearman",
+        "line": 1232,
+        "args": "x, y"
+      }
+    ],
+    "classes": [
+      {
+        "name": "PositionalEncoding",
+        "line": 328
+      },
+      {
+        "name": "TrajectoryTransformer",
+        "line": 437
+      }
+    ],
+    "interesting_literals": [
+      {
+        "line": 73,
+        "value": "Frozen in-domain BIRDSAI TestReal benchmark. TestReal was previously inspected during exploratory development and is therefore NOT described as an untouched confirmatory test set."
+      },
+      {
+        "line": 16,
+        "value": "C:\\Users\\HP\\Downloads\\final_neural_trajectory_dataset"
+      },
+      {
+        "line": 20,
+        "value": "C:\\Users\\HP\\Downloads\\transformer_results"
+      },
+      {
+        "line": 24,
+        "value": "C:\\Users\\HP\\Downloads\\birdsai_testreal_frozen_ensemble"
+      },
+      {
+        "line": 104,
+        "value": "*.npz"
+      },
+      {
+        "line": 214,
+        "value": "*.csv"
+      },
+      {
+        "line": 1312,
+        "value": "FROZEN BIRDSAI TESTREAL BENCHMARK:"
+      },
+      {
+        "line": 2113,
+        "value": "testreal_seed_metrics.csv"
+      },
+      {
+        "line": 2123,
+        "value": "testreal_ensemble_metrics.csv"
+      },
+      {
+        "line": 2133,
+        "value": "testreal_classical_baselines.csv"
+      },
+      {
+        "line": 2143,
+        "value": "testreal_per_source_metrics.csv"
+      },
+      {
+        "line": 2153,
+        "value": "testreal_uncertainty_diagnostic.csv"
+      },
+      {
+        "line": 2163,
+        "value": "testreal_data_audit.csv"
+      },
+      {
+        "line": 2206,
+        "value": "testreal_model_comparison.csv"
+      },
+      {
+        "line": 2230,
+        "value": "BIRDSAI TESTREAL \u2014 FROZEN IN-DOMAIN BENCHMARK\n"
+      },
+      {
+        "line": 2249,
+        "value": "- BIRDSAI TestReal was previously inspected during exploratory development.\n"
+      },
+      {
+        "line": 2264,
+        "value": "- The genuinely preregistered confirmatory external evaluation remains the fresh WildBox holdout.\n\n"
+      },
+      {
+        "line": 2274,
+        "value": "- Compact Temporal Transformer.\n"
+      },
+      {
+        "line": 592,
+        "value": "_Transformer_seed"
+      },
+      {
+        "line": 592,
+        "value": ".pt"
+      },
+      {
+        "line": 1692,
+        "value": "Frozen_Transformer_3Seed_Ensemble"
+      },
+      {
+        "line": 1777,
+        "value": "Stationary"
+      },
+      {
+        "line": 194,
+        "value": "\nExpected exactly ONE BIRDSAI TestReal NPZ for "
+      },
+      {
+        "line": 314,
+        "value": "\nExpected exactly ONE BIRDSAI TestReal metadata CSV for "
+      },
+      {
+        "line": 114,
+        "value": "wildbox"
+      },
+      {
+        "line": 223,
+        "value": "wildbox"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_fresh_wildbox_holdout.py",
+    "sha256": "c95b8be1280d1129be31669f2c372a44115844bba0603971561b0692b0cf2d79",
+    "functions": [
+      {
+        "name": "load_json_member",
+        "line": 243,
+        "args": "archive, member_name"
+      },
+      {
+        "name": "find_json_members",
+        "line": 257,
+        "args": "archive"
+      },
+      {
+        "name": "member_parent",
+        "line": 292,
+        "args": "member"
+      },
+      {
+        "name": "split_extrinsic",
+        "line": 310,
+        "args": "extrinsic"
+      },
+      {
+        "name": "camera_to_world",
+        "line": 348,
+        "args": "point_camera, extrinsic"
+      },
+      {
+        "name": "world_to_camera",
+        "line": 383,
+        "args": "point_world, extrinsic"
+      },
+      {
+        "name": "project_point",
+        "line": 405,
+        "args": "point_camera, intrinsic, width, height"
+      },
+      {
+        "name": "build_camera_lookup",
+        "line": 521,
+        "args": "camera_json"
+      },
+      {
+        "name": "contiguous_runs",
+        "line": 554,
+        "args": "frames"
+      },
+      {
+        "name": "build_anchor_window",
+        "line": 646,
+        "args": "track, selected_indices, camera_lookup"
+      },
+      {
+        "name": "heading_angle_from_history",
+        "line": 821,
+        "args": "history"
+      },
+      {
+        "name": "canonicalize_window",
+        "line": 924,
+        "args": "history_abs, future_abs, scale_floor"
+      },
+      {
+        "name": "build_task_windows",
+        "line": 1057,
+        "args": "task, config"
+      },
+      {
+        "name": "load_transformer",
+        "line": 1848,
+        "args": "task, seed, future_length"
+      },
+      {
+        "name": "predict",
+        "line": 2003,
+        "args": "model, histories, batch_size=256"
+      },
+      {
+        "name": "inverse_transform_batch",
+        "line": 2063,
+        "args": "canonical, origin, angle, scale"
+      },
+      {
+        "name": "stationary_prediction",
+        "line": 2144,
+        "args": "history, future_length"
+      },
+      {
+        "name": "constant_velocity_prediction",
+        "line": 2162,
+        "args": "history, future_length"
+      },
+      {
+        "name": "evaluate_metrics",
+        "line": 2253,
+        "args": "prediction, truth, metadata"
+      },
+      {
+        "name": "safe_corr",
+        "line": 2412,
+        "args": "x, y"
+      },
+      {
+        "name": "safe_spearman",
+        "line": 2484,
+        "args": "x, y"
+      }
+    ],
+    "classes": [
+      {
+        "name": "PositionalEncoding",
+        "line": 1606
+      },
+      {
+        "name": "TrajectoryTransformer",
+        "line": 1713
+      }
+    ],
+    "interesting_literals": [
+      {
+        "line": 51,
+        "value": "wildbox-anon-2026/wildbox-review"
+      },
+      {
+        "line": 52,
+        "value": "dataset"
+      },
+      {
+        "line": 20,
+        "value": "C:\\Users\\HP\\Downloads\\wildbox_fresh_holdout_selection\\FRESH_HOLDOUT_LOCKED.csv"
+      },
+      {
+        "line": 25,
+        "value": "C:\\Users\\HP\\Downloads\\transformer_results"
+      },
+      {
+        "line": 29,
+        "value": "C:\\Users\\HP\\Downloads\\wildbox_fresh_holdout_zips"
+      },
+      {
+        "line": 33,
+        "value": "C:\\Users\\HP\\Downloads\\wildbox_fresh_confirmatory_results"
+      },
+      {
+        "line": 142,
+        "value": "\nLOCKED FRESH HOLDOUT"
+      },
+      {
+        "line": 3518,
+        "value": "\nDataset summary:"
+      },
+      {
+        "line": 3540,
+        "value": "\nFresh external ensemble per source:"
+      },
+      {
+        "line": 137,
+        "value": "Fresh holdout must contain exactly 3 locked videos."
+      },
+      {
+        "line": 233,
+        "value": "fresh_holdout_download_manifest.csv"
+      },
+      {
+        "line": 2550,
+        "value": "BUILDING LOCKED FRESH HOLDOUT:"
+      },
+      {
+        "line": 3240,
+        "value": "fresh_holdout_build_audit.csv"
+      },
+      {
+        "line": 3258,
+        "value": "fresh_holdout_dataset_summary.csv"
+      },
+      {
+        "line": 3276,
+        "value": "fresh_holdout_model_metrics.csv"
+      },
+      {
+        "line": 3294,
+        "value": "fresh_holdout_per_source.csv"
+      },
+      {
+        "line": 3312,
+        "value": "fresh_holdout_uncertainty.csv"
+      },
+      {
+        "line": 3335,
+        "value": "FRESH WILDBOX CONFIRMATORY EXTERNAL HOLDOUT\n"
+      },
+      {
+        "line": 3350,
+        "value": "- Three WildBox source videos were locked before download or inspection.\n"
+      },
+      {
+        "line": 3364,
+        "value": "- Frozen Compact Temporal Transformer checkpoints were used.\n"
+      },
+      {
+        "line": 3373,
+        "value": "- Camera-motion compensation used WildBox camera metadata and observation-start common anchor frame.\n"
+      },
+      {
+        "line": 3414,
+        "value": "\n\nDATASET SUMMARY\n"
+      },
+      {
+        "line": 1858,
+        "value": "_Transformer_seed"
+      },
+      {
+        "line": 1858,
+        "value": ".pt"
+      },
+      {
+        "line": 2839,
+        "value": "Transformer_3Seed_Ensemble"
+      },
+      {
+        "line": 2926,
+        "value": "Stationary"
+      },
+      {
+        "line": 2591,
+        "value": "_fresh_metadata.csv"
+      },
+      {
+        "line": 2601,
+        "value": "_fresh_dataset.npz"
+      },
+      {
+        "line": 269,
+        "value": "/tracking_summary.json"
+      },
+      {
+        "line": 280,
+        "value": "/cameras.json"
+      },
+      {
+        "line": 2765,
+        "value": "Transformer_seed"
+      }
+    ]
+  },
+  {
+    "script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\select_fresh_wildbox_holdout.py",
+    "sha256": "fa937ac94b47112e395efecd57726e388ade4d200b63c4cd71d920cbf79fbc11",
+    "functions": [
+      {
+        "name": "deterministic_hash",
+        "line": 158,
+        "args": "text"
+      }
+    ],
+    "classes": [],
+    "interesting_literals": [
+      {
+        "line": 13,
+        "value": "wildbox-anon-2026/wildbox-review"
+      },
+      {
+        "line": 14,
+        "value": "dataset"
+      },
+      {
+        "line": 17,
+        "value": "C:\\Users\\HP\\Downloads\\wildbox_fresh_holdout_selection"
+      },
+      {
+        "line": 379,
+        "value": "FRESH HOLDOUt SELECTION COMPLETE"
+      },
+      {
+        "line": 382,
+        "value": "\nSelected fresh source videos:\n"
+      },
+      {
+        "line": 123,
+        "value": "all_elephant_zip_candidates.csv"
+      },
+      {
+        "line": 300,
+        "value": "FRESH_HOLDOUT_LOCKED.csv"
+      },
+      {
+        "line": 312,
+        "value": "WILDBOX FRESH EXTERNAL HOLDOUT \u2014 PREREGISTERED SELECTION\n"
+      },
+      {
+        "line": 324,
+        "value": "- Final confirmatory RGB external evaluation of the already-frozen Transformer ensemble.\n\n"
+      },
+      {
+        "line": 338,
+        "value": "- Previously inspected WildBox source videos were excluded.\n"
+      },
+      {
+        "line": 352,
+        "value": "- Selection did NOT use model performance, track quality, video content, trajectory statistics, or difficulty.\n\n"
+      },
+      {
+        "line": 367,
+        "value": "\nLOCKED FRESH HOLDOUT\n"
+      },
+      {
+        "line": 276,
+        "value": "fresh_"
+      },
+      {
+        "line": 306,
+        "value": "FRESH_HOLDOUT_PROTOCOL.txt"
+      }
+    ]
+  }
+]

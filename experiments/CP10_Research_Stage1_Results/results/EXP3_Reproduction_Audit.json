@@ -1,0 +1,56 @@
+{
+  "input_sha256": "eb718346da8344798b27d3175376b4bd9f739e5d32f1969da95fb0375e785d3e",
+  "source_zip": "EXP3_Output_Review.zip",
+  "audits": [
+    {
+      "horizon": "2s",
+      "n_samples": 754,
+      "n_videos": 6,
+      "n_recording_groups": 3,
+      "n_track_keys": 59,
+      "baseline_q90_coverage": 0.9655172413793104,
+      "prior_reported_coverage_rounded": 0.9655,
+      "original_rule_N2": {
+        "recall": 0.8662420382165605,
+        "fwr": 0.47624703087885983
+      },
+      "previous_paper_N2": {
+        "recall": 0.8662,
+        "fwr": 0.4762
+      },
+      "nominal_replay": {
+        "recall": 0.33121019108280253,
+        "fwr": 0.0168646080760095
+      },
+      "prior_nominal": {
+        "recall": 0.3312,
+        "fwr": 0.0169
+      }
+    },
+    {
+      "horizon": "5s",
+      "n_samples": 572,
+      "n_videos": 6,
+      "n_recording_groups": 3,
+      "n_track_keys": 50,
+      "baseline_q90_coverage": 0.6975524475524476,
+      "prior_reported_coverage_rounded": 0.6976,
+      "original_rule_N2": {
+        "recall": 0.7950819672131147,
+        "fwr": 0.4093070652173913
+      },
+      "previous_paper_N2": {
+        "recall": 0.7951,
+        "fwr": 0.4093
+      },
+      "nominal_replay": {
+        "recall": 0.19467213114754098,
+        "fwr": 0.011209239130434782
+      },
+      "prior_nominal": {
+        "recall": 0.1947,
+        "fwr": 0.0112
+      }
+    }
+  ]
+}

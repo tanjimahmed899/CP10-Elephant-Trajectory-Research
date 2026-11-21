@@ -1,0 +1,17 @@
+task,metric,segments,estimate,ci95_low,ci95_high,dependency_unit,within_segment_reduction
+2s_to_2s,fraction_of_samples_ADE_above_F50,89,1.0,1.0,1.0,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,fraction_of_samples_ADE_above_F95,89,0.9891431876256379,0.9807621191404499,0.9956760727498325,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,fraction_of_samples_FDE_above_F50,89,1.0,1.0,1.0,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,fraction_of_samples_FDE_above_F95,89,0.985286985802638,0.9762523971429264,0.992730509643849,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,mean_sample_fraction_future_points_above_F50,89,0.9983141336504111,0.9969087914802802,0.9993142624434384,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,mean_sample_fraction_future_points_above_F95,89,0.916075020173296,0.9012917046459484,0.9298226131341468,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,ADE_over_F95_ratio,89,8.379280605932141,7.15751941117293,9.716717307759843,"(sequence, segment_id)",mean across overlapping windows
+2s_to_2s,FDE_over_F95_ratio,89,15.69388429271052,13.268072768038076,18.26946088836976,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,fraction_of_samples_ADE_above_F50,63,1.0,1.0,1.0,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,fraction_of_samples_ADE_above_F95,63,1.0,1.0,1.0,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,fraction_of_samples_FDE_above_F50,63,0.9996220710506425,0.9988662131519274,1.0,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,fraction_of_samples_FDE_above_F95,63,0.9945834193379287,0.9893897057030697,0.9984703095330273,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,mean_sample_fraction_future_points_above_F50,63,0.9993962684605577,0.9990803363204239,0.9996784294232812,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,mean_sample_fraction_future_points_above_F95,63,0.9706576595721002,0.9616942615400077,0.9786611967041632,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,ADE_over_F95_ratio,63,16.656307923385743,13.876509066362877,19.769942741358758,"(sequence, segment_id)",mean across overlapping windows
+2s_to_5s,FDE_over_F95_ratio,63,34.209095284084825,27.5112356142907,41.70203253081982,"(sequence, segment_id)",mean across overlapping windows

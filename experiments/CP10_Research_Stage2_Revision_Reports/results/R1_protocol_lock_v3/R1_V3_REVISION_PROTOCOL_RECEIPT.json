@@ -1,0 +1,9 @@
+{
+  "status": "R1_REVISION_PROTOCOL_LOCKED_READY_FOR_R2",
+  "protocol_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R1_protocol_lock_v3\\R1_V3_REVISION_PROTOCOL_LOCK.json",
+  "protocol_sha256": "4af15bd17f57d4c9932f482dcc047f3b344be4b810d0a4c7b48942f8d17406a8",
+  "integrity_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R1_protocol_lock_v3\\R1_V3_existing_frozen_snapshot_integrity.csv",
+  "roadmap_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R1_protocol_lock_v3\\R1_V3_revision_execution_order.csv",
+  "existing_snapshot_verified_by_sha256": true,
+  "new_results_generated": false
+}

@@ -1,0 +1,3 @@
+task,metadata_path,metadata_sha256,rows,represented_original_tracks,forecast_segments
+2s_to_2s,E:\AIUB\Capstone Project\Journal Based Results\Main Result\final_neural_trajectory_dataset\2s_to_2s_birdsai_test_metadata.csv,06327381b239fe81417b21e0d6925008e5f648012379af9d1d10284ed4af98ac,1053,37,89
+2s_to_5s,E:\AIUB\Capstone Project\Journal Based Results\Main Result\final_neural_trajectory_dataset\2s_to_5s_birdsai_test_metadata.csv,807b9ad7e1e0a5e56900990dab13319ab423b05703cf5dde58ddbb5d2871c435,826,31,63

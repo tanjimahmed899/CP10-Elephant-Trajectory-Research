@@ -1,0 +1,97 @@
+dataset,task,cluster_level,metric,model_A,model_B,difference_A_minus_B,ci95_low,ci95_high,conclusion,inferential_role,small_cluster_warning
+BIRDSAI_TestReal,2s_to_2s,track,ADE,TransformerEnsemble,Stationary,0.0025040025940199512,-0.0004983214667363884,0.005940248131011366,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,ADE,TransformerEnsemble,ConstantVelocity,-0.004168925302170425,-0.007039608047011988,-0.0013836311423441553,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,ADE,TransformerEnsemble,KalmanCV,-0.002685340546993278,-0.006027786143388484,0.0009258634265658551,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,ADE,TransformerEnsemble,GRU,0.0043761020112107725,0.0020548299315439915,0.007293804827088958,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,ADE,TransformerEnsemble,LSTM,0.0053406501500264485,0.002804239400271593,0.008475665722587372,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,ADE,LSTM,GRU,-0.0009645481388156765,-0.0017235827086058214,-0.00023957411098060878,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,TransformerEnsemble,Stationary,0.004565705618937157,-0.0012284585402062708,0.010798236694794123,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,TransformerEnsemble,ConstantVelocity,-0.00782215703806927,-0.012983511774791812,-0.0028325096487486524,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,TransformerEnsemble,KalmanCV,-0.005864420219130205,-0.012206056857845494,0.0006987430777457138,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,TransformerEnsemble,GRU,0.007947617074415183,0.0037836668706546814,0.013176561025238707,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,TransformerEnsemble,LSTM,0.009991740320933593,0.00524571481600686,0.015730026213143535,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,track,FDE,LSTM,GRU,-0.0020441232465184095,-0.0037704441163028896,-0.0003686240419611309,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_2s,source,ADE,TransformerEnsemble,Stationary,-0.0017538219152684218,-0.012975154760801653,0.008649945842921593,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,ADE,TransformerEnsemble,ConstantVelocity,-0.0008554876393355119,-0.003481384746857366,0.001353692775116578,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,ADE,TransformerEnsemble,KalmanCV,0.0015961120784103887,-0.006247705299020825,0.013033170039087284,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,ADE,TransformerEnsemble,GRU,0.0014216057588872187,-7.871449887348243e-05,0.003208439739908274,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,ADE,TransformerEnsemble,LSTM,0.003811078098083648,-0.001212061336645581,0.00993540493686338,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,ADE,LSTM,GRU,-0.002389472339196429,-0.007845828257169986,0.0012546594767105896,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,TransformerEnsemble,Stationary,-0.0019313053387158472,-0.02342119070518839,0.019013051472094655,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,TransformerEnsemble,ConstantVelocity,0.00016893453736826236,-0.0046867943976338184,0.005357113857237933,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,TransformerEnsemble,KalmanCV,0.0030592074764880374,-0.01153358977208277,0.022907141721045826,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,TransformerEnsemble,GRU,0.002612467184604547,-0.000601050277739254,0.006175608662943214,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,TransformerEnsemble,LSTM,0.00787559495485865,-0.0007045609199586479,0.018872321426723664,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_2s,source,FDE,LSTM,GRU,-0.005263127770254103,-0.014532524780152246,0.00045216782649087325,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,track,ADE,TransformerEnsemble,Stationary,0.0029057734475408403,-0.0029564937351971273,0.009447664106033912,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,ADE,TransformerEnsemble,ConstantVelocity,-0.02818702034394227,-0.043060456664925334,-0.014656407804097117,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,ADE,TransformerEnsemble,KalmanCV,-0.019984290509570686,-0.030206903251808543,-0.009914806814950975,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,ADE,TransformerEnsemble,GRU,0.002481985612687953,0.0004258288588650684,0.004862109949043591,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,ADE,TransformerEnsemble,LSTM,0.0014204419626208072,-0.00014207739941401944,0.0031420819551412063,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,ADE,LSTM,GRU,0.0010615436500671454,-0.00028764313721595265,0.0026853651001076425,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,TransformerEnsemble,Stationary,0.007921640804310428,-0.003341606262573584,0.01973549615598886,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,TransformerEnsemble,ConstantVelocity,-0.06894974418558088,-0.09941852513191056,-0.04112938606353467,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,TransformerEnsemble,KalmanCV,-0.04584036288572323,-0.06669361892912545,-0.025724154203843556,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,TransformerEnsemble,GRU,0.00442238656336441,0.0007657973901896243,0.00846546728164282,A higher than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,TransformerEnsemble,LSTM,0.0023763410444645923,-0.00031590322994553237,0.0053438565817062605,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,track,FDE,LSTM,GRU,0.002046045518899817,-8.390081187856704e-05,0.0045717492341601565,Difference uncertain at 95% level; CI includes zero,primary,False
+BIRDSAI_TestReal,2s_to_5s,source,ADE,TransformerEnsemble,Stationary,-0.005589682527999416,-0.010899073055437799,-0.0011425007816964427,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,ADE,TransformerEnsemble,ConstantVelocity,-0.003865278804113867,-0.04007892242831183,0.032397767412106475,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,ADE,TransformerEnsemble,KalmanCV,-0.005692619050721141,-0.04692819357367168,0.03302059622691854,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,ADE,TransformerEnsemble,GRU,-0.0005613855106350659,-0.0009327297724296246,-0.00015228928535757845,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,ADE,TransformerEnsemble,LSTM,-0.0006438534175900477,-0.0009510518972023783,-0.00014095886655333956,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,ADE,LSTM,GRU,8.246790695498191e-05,-0.00016467614113386332,0.00032961195504382717,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,TransformerEnsemble,Stationary,-0.008874366283957364,-0.017605543947062742,-0.0018660244199350362,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,TransformerEnsemble,ConstantVelocity,-0.013249831855284258,-0.08338866154072073,0.05398743756685505,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,TransformerEnsemble,KalmanCV,-0.014527399543840075,-0.09275334179813897,0.05551431113305514,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,TransformerEnsemble,GRU,-0.0010966405691413676,-0.0018663683948395224,-0.0004365549293748161,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,TransformerEnsemble,LSTM,-0.0014545221686422,-0.002210814775961728,-0.000989801102979429,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+BIRDSAI_TestReal,2s_to_5s,source,FDE,LSTM,GRU,0.0003578815995008325,-9.026720232496316e-05,0.0007333726529449927,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,track,ADE,TransformerEnsemble,Stationary,-0.006143562359299636,-0.011029641050848053,-0.002933973394074049,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,ADE,TransformerEnsemble,ConstantVelocity,-0.001176215270835784,-0.00200794355259545,-0.0003513709453501001,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,ADE,TransformerEnsemble,KalmanCV,-0.007086232076729508,-0.01083847144653727,-0.003923815449805203,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,ADE,TransformerEnsemble,GRU,0.0001861360019645944,-0.0006398558364988679,0.0015753465396280998,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,ADE,TransformerEnsemble,LSTM,0.0001422388146410502,-0.0006428613756775791,0.0008098170196983608,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,ADE,LSTM,GRU,4.389718732354421e-05,-0.001044869777080737,0.001483065875339932,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,TransformerEnsemble,Stationary,-0.0115808222628517,-0.02133495679478898,-0.005189977576926297,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,TransformerEnsemble,ConstantVelocity,-0.0013035457560939094,-0.003001334247782511,0.0005179860115349302,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,TransformerEnsemble,KalmanCV,-0.017870005630558992,-0.02460515371892467,-0.012389518745700556,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,TransformerEnsemble,GRU,0.0008112842887891304,-0.0015703991186229588,0.0047565512188063735,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,TransformerEnsemble,LSTM,-0.0003762939725694345,-0.0019285608188823334,0.0010199315012918726,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,track,FDE,LSTM,GRU,0.001187578261358565,-0.0016352915593512013,0.005703832994944896,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_2s,source,ADE,TransformerEnsemble,Stationary,-0.0015511191667219079,-0.004722398555183693,0.00025751006939111164,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,ADE,TransformerEnsemble,ConstantVelocity,-0.001543248979719888,-0.0019397111032154642,-0.0011603282235778459,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,ADE,TransformerEnsemble,KalmanCV,-0.004847372130271861,-0.007871289882951528,-0.0012450785776637815,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,ADE,TransformerEnsemble,GRU,-8.133852600123992e-05,-0.0004764938167385324,0.000299469133748273,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,ADE,TransformerEnsemble,LSTM,0.0004774959658426445,-0.00010631822644020447,0.0013887439468931381,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,ADE,LSTM,GRU,-0.0005588344918438844,-0.0010892748131448651,3.932733142674415e-05,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,TransformerEnsemble,Stationary,-0.0022985661529496613,-0.008878978241737029,0.0010792982402075477,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,TransformerEnsemble,ConstantVelocity,-0.0026951191066576907,-0.004017737355848374,-0.001307569018925439,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,TransformerEnsemble,KalmanCV,-0.010806196271611728,-0.01870502623993034,-0.0015744152741481235,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,TransformerEnsemble,GRU,8.960172479441943e-05,-0.0011573521582958352,0.0013303602528083047,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,TransformerEnsemble,LSTM,0.001246082077934102,-0.00025854828011744047,0.003919618961326178,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_2s,source,FDE,LSTM,GRU,-0.0011564803531396827,-0.0025892587085178734,1.8621527277220065e-05,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,track,ADE,TransformerEnsemble,Stationary,-0.005244079721655382,-0.009026970161812888,-0.00268005158027284,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,ADE,TransformerEnsemble,ConstantVelocity,0.007557882396612753,-0.005934942328643053,0.0312832646413633,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,ADE,TransformerEnsemble,KalmanCV,0.006248074655187823,-0.007321112110056524,0.030128775806960925,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,ADE,TransformerEnsemble,GRU,-0.00014034674026677172,-0.000599540131526133,0.00047693948078176245,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,ADE,TransformerEnsemble,LSTM,3.9648196211132523e-05,-0.00040458562918250303,0.0005851977501084676,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,ADE,LSTM,GRU,-0.00017999493647790423,-0.000560013534873544,0.00011105522258346255,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,TransformerEnsemble,Stationary,-0.010310774524876545,-0.017284481004769932,-0.005689175436619327,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,TransformerEnsemble,ConstantVelocity,0.02035472315371268,-0.012544675118442728,0.07858946783748243,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,TransformerEnsemble,KalmanCV,0.018847330975410997,-0.014459838543253408,0.07805746358817288,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,TransformerEnsemble,GRU,-0.0017101101518397666,-0.002442148925440358,-0.0009508806564719211,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,TransformerEnsemble,LSTM,-0.0016765068318491672,-0.002498828524495852,-0.0009221087576977306,A lower than B; 95% paired cluster-bootstrap CI excludes zero,primary,False
+Fresh_WildBox,2s_to_5s,track,FDE,LSTM,GRU,-3.36033199905994e-05,-0.0007636982269424442,0.0005672275061570182,Difference uncertain at 95% level; CI includes zero,primary,False
+Fresh_WildBox,2s_to_5s,source,ADE,TransformerEnsemble,Stationary,-0.00016801507362065928,-0.004478025319860669,0.003053101768405125,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,ADE,TransformerEnsemble,ConstantVelocity,-0.004628534901880265,-0.006520884738927486,-0.0032257081375574245,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,ADE,TransformerEnsemble,KalmanCV,-0.0054059321638365914,-0.0070416489172027835,-0.0045000763699233025,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,ADE,TransformerEnsemble,GRU,0.00024274287879092783,-0.0005531130619305519,0.000849977677387273,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,ADE,TransformerEnsemble,LSTM,-0.00017995134705661603,-0.0006708722722949291,0.00033627599150912874,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,ADE,LSTM,GRU,0.0004226942258475439,-0.0003478553015465041,0.0011022362932109914,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,TransformerEnsemble,Stationary,-0.0011368267352852128,-0.00920586209722593,0.004391644629140372,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,TransformerEnsemble,ConstantVelocity,-0.010746546466463433,-0.016441239243505962,-0.005868090251992336,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,TransformerEnsemble,KalmanCV,-0.011542895626892433,-0.016380631502636106,-0.00782071735086548,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,TransformerEnsemble,GRU,0.0002010318734909563,-0.002144554380986846,0.001726670225011561,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,TransformerEnsemble,LSTM,-0.0006864965336393936,-0.001665953218468269,-6.045626061018661e-05,A lower than B; 95% paired cluster-bootstrap CI excludes zero,sensitivity_only,True
+Fresh_WildBox,2s_to_5s,source,FDE,LSTM,GRU,0.00088752840713035,-0.0004786011625185771,0.0020597503468512864,Difference uncertain at 95% level; CI includes zero,sensitivity_only,True
