@@ -1,0 +1,27 @@
+{
+  "step": "R12C_RESOLVE_45_TOTAL_TESTREAL_TRACKS_AND_FORECAST_ELIGIBILITY",
+  "created_utc": "2026-10-30T05:49:57.460991+00:00",
+  "status": "R12C_45_SOURCE_FOUND_BUT_ELIGIBILITY_COUNTS_DO_NOT_MATCH_EXPECTATION_REVIEW",
+  "training": false,
+  "inference": false,
+  "authoritative_45_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\trajectory_dataset\\cleaned_track_points.csv",
+  "authoritative_45_source_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "total_testreal_original_tracks": 45,
+  "represented_original_tracks_2s": 0,
+  "represented_original_tracks_5s": 0,
+  "tracks_both_2s_and_5s": 0,
+  "tracks_2s_only": 0,
+  "tracks_no_valid_2s_window": 45,
+  "remaining_requirement": "R12-D must lock the exact continuity/gap/segment construction rule.",
+  "outputs": {
+    "forecast_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_FORECAST_REPRESENTATION_LOCK.csv",
+    "candidate_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_UPSTREAM_TRACK_SOURCE_CANDIDATES.csv",
+    "exact_45_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_EXACT_45_TRACK_SOURCE_CANDIDATES.csv",
+    "chosen_45_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_CHOSEN_AUTHORITATIVE_45_TRACK_SOURCE.csv",
+    "total_45_tracks": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_TOTAL_TESTREAL_45_TRACKS.csv",
+    "track_eligibility": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_TRACK_FORECAST_ELIGIBILITY.csv",
+    "track_eligibility_with_length": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_TRACK_FORECAST_ELIGIBILITY_WITH_LENGTH_EVIDENCE.csv",
+    "eligibility_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_ELIGIBILITY_CLASS_SUMMARY.csv",
+    "manuscript_ready_resolution": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_resolve_45_total_tracks_and_forecast_eligibility\\R12C_MANUSCRIPT_READY_45_TO_37_TO_31_TRACK_RESOLUTION.txt"
+  }
+}

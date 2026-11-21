@@ -1,0 +1,15 @@
+{
+  "step": "R6E_DIRECT_CROSSING_CLASSIFIER_INTERPRETATION_CLAIM_LOCK",
+  "created_utc": "2026-10-29T08:30:00.229681+00:00",
+  "status": "R6E_DIRECT_CROSSING_CLASSIFIER_INTERPRETATION_AND_CLAIM_LOCK_COMPLETE_READY_FOR_R7_WARNING_HIERARCHY",
+  "retraining": false,
+  "threshold_reselection": false,
+  "new_statistical_test": false,
+  "source_r6c": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6C_oof_threshold_lock_and_frozen_evaluation\\R6C_DIRECT_CLASSIFIER_VS_NOMINAL_BASELINE.csv",
+  "source_r6c_sha256": "0f429c1afc5035d023b4904dab0db1658f590552ee15f994408a6a1994b1bdd5",
+  "source_r6d": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6D_paired_track_cluster_bootstrap\\R6D_TRACK_CLUSTER_BOOTSTRAP_RESULTS.csv",
+  "source_r6d_sha256": "a24acd26468c73b520dd7ad2646d1f1285b8781bd86817b9bcb85459f445e128",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6E_interpretation_claim_lock\\R6E_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "fa2c6744a955564555d30c2fde4c70fcd7c0149250de2a5ec6bd5d4adc30fba4",
+  "manuscript_table_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6E_interpretation_claim_lock\\R6E_manuscript_direct_classifier_table.csv"
+}

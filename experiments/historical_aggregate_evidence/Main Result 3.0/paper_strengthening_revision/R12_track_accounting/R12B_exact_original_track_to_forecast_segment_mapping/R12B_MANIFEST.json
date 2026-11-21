@@ -1,0 +1,30 @@
+{
+  "step": "R12B_EXACT_ORIGINAL_TRACK_TO_FORECAST_SEGMENT_MAPPING",
+  "created_utc": "2026-10-30T05:45:57.833024+00:00",
+  "status": "R12B_TRACK_ACCOUNTING_NOT_FULLY_RESOLVED_REVIEW_MAPPING_BEFORE_R12C",
+  "training": false,
+  "inference": false,
+  "original_track_identity": "(sequence, object_id)",
+  "forecast_segment_identity": "(sequence, object_id, segment_id)",
+  "track_key_is_segment_alias_bijection": true,
+  "resolved_2s_original_tracks": 37,
+  "resolved_2s_forecast_segments": 89,
+  "resolved_5s_original_tracks": 31,
+  "resolved_5s_forecast_segments": 63,
+  "count_45_resolved": false,
+  "count_89_resolved": true,
+  "count_63_resolved": true,
+  "all_5s_original_tracks_subset_of_2s": true,
+  "provisional_manuscript_wording": "45 original TestReal tracks produced 89 forecastable 2-s segments/tracklets and 63 forecastable 5-s segments/tracklets.",
+  "remaining_requirement": "R12-C must identify and lock the dataset-build continuity/gap rule that creates segment_id from original object tracks.",
+  "outputs": {
+    "metadata_identity_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_METADATA_IDENTITY_LOCK.csv",
+    "track_key_segment_bijection": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_TRACK_KEY_SEGMENT_BIJECTION.csv",
+    "original_track_to_segment_mapping": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_ORIGINAL_TRACK_TO_FORECAST_SEGMENT_MAPPING.csv",
+    "forecast_segment_table": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_FORECAST_SEGMENT_TABLE.csv",
+    "per_source_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_PER_SOURCE_ORIGINAL_TRACK_VS_SEGMENT_COUNTS.csv",
+    "segment_multiplicity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_SEGMENT_MULTIPLICITY_SUMMARY.csv",
+    "2s_vs_5s_original_track_overlap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_2S_VS_5S_ORIGINAL_TRACK_OVERLAP.csv",
+    "manuscript_ready_resolution": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12B_exact_original_track_to_forecast_segment_mapping\\R12B_MANUSCRIPT_READY_TRACK_ACCOUNTING_RESOLUTION.txt"
+  }
+}

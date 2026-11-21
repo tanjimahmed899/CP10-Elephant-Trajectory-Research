@@ -1,0 +1,23 @@
+{
+  "step": "R9H_C0_V3_AUTHORITATIVE_TASK_SCALE_FLOOR_LOCK",
+  "created_utc": "2026-10-29T11:25:37.394222+00:00",
+  "status": "R9H_C0_V3_AUTHORITATIVE_TASK_SCALE_FLOORS_LOCKED_READY_FOR_R9H_C1_ANISOTROPY_GEOMETRY_DISTORTION_AUDIT",
+  "locked_scale_floors": {
+    "2s_to_2s": 0.06820264416877736,
+    "2s_to_5s": 0.06732638773715147
+  },
+  "parser_fix": "Supports direct task->numeric dictionaries in addition to nested task->{scale_floor:value} dictionaries.",
+  "new_training": false,
+  "model_inference": false,
+  "geometry_distortion_metrics_run": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "evidence_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_V3_authoritative_scale_floor_lock\\R9H_C0_V3_SCALE_FLOOR_EVIDENCE.csv",
+  "lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_V3_authoritative_scale_floor_lock\\R9H_C0_V3_LOCKED_TASK_SCALE_FLOORS.csv",
+  "source_hashes": {
+    "fresh_holdout_evaluator": "c95b8be1280d1129be31669f2c372a44115844bba0603971561b0692b0cf2d79",
+    "k2b2_v3_equivalence_audit": "82ac39d2716a760086b7f8205321ad4862a011ec7190dabc90c17c23f61c9f06",
+    "k2b3_final_builder": "d1ee6fc460089b1d40cc03212ad79adaa88b49adb215fddbc94fdfe65488b9ac",
+    "k2b3_lock_json": "86f8b5f6a37a9b3837c871c312c42feca220f6b1288c8555ca456261df77683a"
+  }
+}

@@ -1,0 +1,42 @@
+CANONICAL MOTION AUDIT
+========================================================================
+
+No samples were removed.
+This stage only evaluates whether translation + heading rotation + history-path normalization is suitable.
+
+2s_to_2s | BIRDSAI_test
+samples=1053
+path median=0.080206, q05=0.042992
+straightness median=0.3088
+canonical future median=0.3031, q95=0.8939, max=3.6263
+
+2s_to_2s | BIRDSAI_train
+samples=531
+path median=0.098935, q05=0.068203
+straightness median=0.2196
+canonical future median=0.2251, q95=0.5765, max=3.2169
+
+2s_to_2s | WildBox_external
+samples=93
+path median=0.168596, q05=0.020656
+straightness median=0.2965
+canonical future median=0.3318, q95=1.2178, max=1.9294
+
+2s_to_5s | BIRDSAI_test
+samples=826
+path median=0.077359, q05=0.040808
+straightness median=0.3123
+canonical future median=0.6231, q95=2.1790, max=4.0603
+
+2s_to_5s | BIRDSAI_train
+samples=382
+path median=0.095166, q05=0.067326
+straightness median=0.2106
+canonical future median=0.5065, q95=0.9964, max=2.9377
+
+2s_to_5s | WildBox_external
+samples=60
+path median=0.161504, q05=0.020983
+straightness median=0.2575
+canonical future median=0.5906, q95=2.1397, max=2.2236
+

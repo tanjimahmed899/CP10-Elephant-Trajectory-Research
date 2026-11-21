@@ -1,0 +1,20 @@
+{
+  "step": "R12E_V4_POST_SEGMENTATION_CORRECTION_QUALITY_FILTER_AUDIT",
+  "created_utc": "2026-10-30T06:36:19.796216+00:00",
+  "status": "R12E_V4_POST_SEGMENTATION_FILTER_STAGE_AND_REMOVED_WINDOWS_IDENTIFIED_READY_FOR_R12E_V5_EXACT_FILTER_RULE_RECONSTRUCTION",
+  "training": false,
+  "inference": false,
+  "raw_to_corrected_removed_2s": 0,
+  "corrected_to_final_removed_2s": 652,
+  "raw_to_corrected_removed_5s": 0,
+  "corrected_to_final_removed_5s": 494,
+  "outputs": {
+    "stage_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_STAGE_COUNTS.csv",
+    "acceptance_quality_value_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_ACCEPTANCE_QUALITY_VALUE_COUNTS.csv",
+    "stage_window_set_comparison": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_STAGE_WINDOW_SET_COMPARISON.csv",
+    "removed_windows": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_REMOVED_WINDOWS.csv",
+    "added_windows": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_ADDED_WINDOWS_UNEXPECTED.csv",
+    "removed_reason_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_REMOVED_WINDOW_REASON_SUMMARY.csv",
+    "source_code_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v4_post_segmentation_filter_audit\\R12E_V4_FILTER_SOURCE_CODE_EVIDENCE.csv"
+  }
+}

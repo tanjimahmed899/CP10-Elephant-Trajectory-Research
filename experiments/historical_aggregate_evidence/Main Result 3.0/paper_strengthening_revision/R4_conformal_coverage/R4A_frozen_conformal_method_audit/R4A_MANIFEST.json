@@ -1,0 +1,21 @@
+{
+  "step": "R4A_FROZEN_CONFORMAL_METHOD_AUDIT",
+  "created_utc": "2026-10-29T06:41:45.295212+00:00",
+  "status": "R4A_CONFORMAL_AUDIT_COMPLETE_EXACT_FROZEN_Q_EVIDENCE_FOUND_READY_FOR_METHOD_LOCK",
+  "recalibration": false,
+  "new_coverage_generated": false,
+  "expected_frozen_q": {
+    "2s_to_2s": {
+      "q90": 2.158767888280567,
+      "q95": 2.560772554862189
+    },
+    "2s_to_5s": {
+      "q90": 1.975129668255982,
+      "q95": 2.950976253259077
+    }
+  },
+  "artifact_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4A_frozen_conformal_method_audit\\R4A_conformal_artifact_inventory.csv",
+  "text_method_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4A_frozen_conformal_method_audit\\R4A_text_method_evidence.csv",
+  "csv_q_coverage_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4A_frozen_conformal_method_audit\\R4A_csv_q_coverage_evidence.csv",
+  "exact_q_value_locations": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4A_frozen_conformal_method_audit\\R4A_exact_q_value_locations.csv"
+}

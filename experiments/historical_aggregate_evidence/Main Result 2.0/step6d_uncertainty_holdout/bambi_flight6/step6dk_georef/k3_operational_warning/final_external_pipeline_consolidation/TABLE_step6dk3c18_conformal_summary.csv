@@ -1,0 +1,5 @@
+task,alpha,target_coverage,q_fixed_step6c,window_coverage,track_macro_window_coverage,fully_covered_track_fraction,recalibrated_on_bambi
+2s_to_2s,0.1,0.9,2.158767888280567,1.0,1.0,1.0,False
+2s_to_2s,0.05,0.95,2.560772554862189,1.0,1.0,1.0,False
+2s_to_5s,0.1,0.9,1.975129668255982,0.0256821829855537,0.0332392245435723,0.0,False
+2s_to_5s,0.05,0.95,2.950976253259077,0.7287319422150883,0.8086848769730544,0.6071428571428571,False

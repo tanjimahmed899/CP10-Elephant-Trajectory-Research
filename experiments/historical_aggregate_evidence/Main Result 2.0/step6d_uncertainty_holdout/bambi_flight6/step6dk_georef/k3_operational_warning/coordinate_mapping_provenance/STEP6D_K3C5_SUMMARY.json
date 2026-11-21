@@ -1,0 +1,36 @@
+{
+  "step": "STEP_6D_K3C5_TARGETED_NORMALIZED_IMAGE_PLANE_MAPPING_PROVENANCE_RECOVERY",
+  "build_unified_10hz_sha256": "fd7b34868b877ef76e69acffed5010ca9ae2233af4b0851998a1dffe7c05b119",
+  "build_final_neural_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+  "target_functions_recovered": [
+    {
+      "file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_unified_10hz_dataset.py",
+      "function": "load_birdsai",
+      "line_start": 290,
+      "line_end": 473
+    },
+    {
+      "file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_unified_10hz_dataset.py",
+      "function": "make_relative",
+      "line_start": 57,
+      "line_end": 87
+    },
+    {
+      "file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+      "function": "canonicalize_sample",
+      "line_start": 231,
+      "line_end": 336
+    },
+    {
+      "file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+      "function": "transform_dataset",
+      "line_start": 396,
+      "line_end": 513
+    }
+  ],
+  "corrected_csv_files": 4,
+  "strong_python_mapping_hits": 10,
+  "exact_source_formula_evidence": true,
+  "status": "EXACT_NORMALIZED_IMAGE_MAPPING_CANDIDATE_FOUND_PENDING_FORMULA_CONFIRMATION",
+  "decision_rule": "If the exact frozen normalized image-plane mapping cannot be proven from source/data provenance, do not convert BAMBI UTM coordinates ad hoc and do not claim BAMBI Step7 operational confirmation."
+}

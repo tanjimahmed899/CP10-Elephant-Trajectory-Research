@@ -1,0 +1,58 @@
+{
+  "step": "R17A3_OPENIMAGES_EXTERNAL_MIXED_SPECIES_CANDIDATE_AUDIT",
+  "created_utc": "2026-10-30T14:01:59.209148+00:00",
+  "status": "R17A3_OPENIMAGES_EXTERNAL_MIXED_SPECIES_POOL_VERIFIED_READY_FOR_R17A4_FROZEN_SUBSET_SELECTION_AND_DOWNLOAD",
+  "training": false,
+  "model_inference": false,
+  "image_pixels_downloaded": false,
+  "source": "Open Images V7",
+  "source_urls": {
+    "classes": "https://storage.googleapis.com/openimages/v7/oidv7-class-descriptions-boxable.csv",
+    "validation_boxes": "https://storage.googleapis.com/openimages/v5/validation-annotations-bbox.csv",
+    "test_boxes": "https://storage.googleapis.com/openimages/v5/test-annotations-bbox.csv"
+  },
+  "metadata_sha256": {
+    "classes": "1839e0e7e84130ae281f7f67413768601b031581c0c42e7fc17527b8e2a99aa9",
+    "validation_boxes": "d8bbd59410af14835d7733165a7bb8a3f0213981b22dd5077b0b9f7878991ff2",
+    "test_boxes": "fe22e579b9453875601576859d14ef3304058165de139c66b725e599202bd7b1"
+  },
+  "elephant_class": "Elephant",
+  "in_vocab_confusers": [
+    "Lion",
+    "Tiger",
+    "Crocodile"
+  ],
+  "ood_confusers": [
+    "Cattle",
+    "Deer",
+    "Horse",
+    "Zebra",
+    "Giraffe",
+    "Goat",
+    "Sheep",
+    "Pig",
+    "Dog",
+    "Person",
+    "Rhinoceros",
+    "Hippopotamus",
+    "Leopard",
+    "Cheetah",
+    "Bear"
+  ],
+  "positive_mixed_elephant_images": 55,
+  "positive_with_in_vocab_confuser": 0,
+  "positive_with_ood_confuser": 55,
+  "negative_multi_animal_no_elephant_images": 1968,
+  "main_external_pool_ready": true,
+  "in_vocab_specific_pool_ready": false,
+  "outputs": {
+    "class_map": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_TARGET_CLASS_MID_MAP.csv",
+    "all_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_ALL_TARGET_CLASS_CANDIDATES.csv",
+    "positive_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_POSITIVE_ELEPHANT_MIXED_CANDIDATES.csv",
+    "negative_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_NEGATIVE_MULTI_ANIMAL_CANDIDATES.csv",
+    "pair_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_ELEPHANT_PAIR_COUNTS.csv",
+    "category_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_CATEGORY_COUNTS.csv",
+    "split_stats": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_SPLIT_SCAN_STATS.csv",
+    "decision_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3_openimages_external_candidate_audit\\R17A3_DECISION_SUMMARY.csv"
+  }
+}

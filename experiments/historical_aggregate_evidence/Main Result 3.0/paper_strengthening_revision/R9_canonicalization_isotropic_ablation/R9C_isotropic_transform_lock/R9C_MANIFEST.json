@@ -1,0 +1,14 @@
+{
+  "step": "R9C_ISOTROPIC_TRANSFORM_LOCK",
+  "created_utc": "2026-10-29T09:04:02.470949+00:00",
+  "status": "R9C_ISOTROPIC_TRANSFORM_FORMALLY_LOCKED_READY_FOR_R9D_NONDESTRUCTIVE_ABLATION_BUILD",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "reconstruction_tolerance": 0.0005,
+  "max_cx_n_reconstruction_error": 1.1102230246251565e-16,
+  "max_cy_n_reconstruction_error": 1.1102230246251565e-16,
+  "transform_lock_json": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9C_isotropic_transform_lock\\R9C_ISOTROPIC_TRANSFORM_LOCK.json",
+  "transform_lock_sha256": "58f4447ff5d0985d381dcdd4fe444a1ef767fa0a4a435a9a32fab1d2e2199d9c",
+  "source_context_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9C_isotropic_transform_lock\\R9C_SOURCE_CODE_NORMALIZATION_CONTEXT.csv",
+  "width_height_pairs_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9C_isotropic_transform_lock\\R9C_WIDTH_HEIGHT_PAIR_COUNTS.csv"
+}

@@ -1,0 +1,13 @@
+{
+  "step": "R5C_TRIVIAL_BASELINE_INTERPRETATION_CLAIM_LOCK",
+  "created_utc": "2026-10-29T07:02:54.751448+00:00",
+  "status": "R5C_TRIVIAL_BASELINE_INTERPRETATION_AND_CLAIM_LOCK_COMPLETE_READY_FOR_R6_DIRECT_CROSSING_CLASSIFIER",
+  "new_warning_experiment": false,
+  "source_r5b_comparison": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5B_trivial_always_red_always_green\\R5B_step7h_vs_trivial_baselines.csv",
+  "source_r5b_comparison_sha256": "87ffa99ba2ab66ac2de2684c181457031ff7bd6f01e3331ea5115393f5a5270b",
+  "source_r5b_review": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5B_trivial_always_red_always_green\\R5B_reviewer_facing_trivial_baseline_comparison.csv",
+  "source_r5b_review_sha256": "df01f470088c6f08251478712675ea5a72d6084fc180631958a99d181aeca0c7",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5C_interpretation_claim_lock\\R5C_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "028e2d6e85af60d967bb0647d4b209428be4dce915a99f2bbbe2f95f9823f064",
+  "dataset_task_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5C_interpretation_claim_lock\\R5C_dataset_task_summary.csv"
+}

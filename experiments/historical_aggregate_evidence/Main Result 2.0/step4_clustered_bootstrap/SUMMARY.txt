@@ -1,0 +1,68 @@
+STEP 4: CLUSTERED BOOTSTRAP + PAIRED SIGNIFICANCE
+==============================================================================
+
+Transformer regeneration uses the ORIGINAL TrajectoryTransformer class from evaluate_fresh_wildbox_holdout.py.
+Analysis is aborted unless regenerated Fresh WildBox metrics match the saved frozen evaluation metrics.
+
+Bootstrap protocol:
+- cluster = track_key
+- 10,000 bootstrap replicates
+- 95% percentile confidence intervals
+- all windows belonging to a track are resampled together
+- paired delta = Transformer ensemble - comparator; negative means ensemble has lower error
+- paired track-level sign-flip test used for inferential p-values
+- Holm correction applied across the planned pairwise tests
+
+TRANSFORMER EXACT SELF-CHECK
+----------------------------
+    task                      model                                                                                        constructor_kwargs  regenerated_ADE  saved_ADE  ADE_abs_diff  regenerated_FDE  saved_FDE  FDE_abs_diff
+2s_to_2s         Transformer_seed42 {'future_length': 20, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.028849   0.028849  5.898060e-17         0.054358   0.054358  8.326673e-17
+2s_to_2s         Transformer_seed52 {'future_length': 20, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.028882   0.028882  3.122502e-17         0.054035   0.054035  5.551115e-17
+2s_to_2s         Transformer_seed62 {'future_length': 20, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.029604   0.029604  5.898060e-17         0.054928   0.054928  1.387779e-17
+2s_to_2s Transformer_3Seed_Ensemble                                                                             mean of frozen seeds 42/52/62         0.028814   0.028814  6.245005e-17         0.053920   0.053920  6.938894e-18
+2s_to_5s         Transformer_seed42 {'future_length': 50, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.049988   0.049988  3.469447e-17         0.105831   0.105831  5.551115e-17
+2s_to_5s         Transformer_seed52 {'future_length': 50, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.049779   0.049779  6.938894e-18         0.104337   0.104337  9.714451e-17
+2s_to_5s         Transformer_seed62 {'future_length': 50, 'd_model': 64, 'nhead': 4, 'num_layers': 2, 'dim_feedforward': 128, 'dropout': 0.1}         0.052204   0.052204  7.632783e-17         0.107101   0.107101  6.938894e-17
+2s_to_5s Transformer_3Seed_Ensemble                                                                             mean of frozen seeds 42/52/62         0.050132   0.050132  2.081668e-17         0.105339   0.105339  8.326673e-17
+
+ADE CLUSTERED 95% CI
+----------------------
+    task                      model metric  samples  tracks  observed_window  window_CI_low  window_CI_high  observed_track_macro  track_CI_low  track_CI_high
+2s_to_2s            LSTM_3Seed_Mean    ADE      865      78         0.028609       0.024210        0.033249              0.031829      0.026955       0.036786
+2s_to_2s Transformer_3Seed_Ensemble    ADE      865      78         0.028814       0.024515        0.033374              0.032251      0.027326       0.037228
+2s_to_2s             GRU_3Seed_Mean    ADE      865      78         0.029166       0.024952        0.033689              0.031778      0.027328       0.036481
+2s_to_2s           ConstantVelocity    ADE      865      78         0.030126       0.026142        0.034343              0.033774      0.028850       0.038947
+2s_to_2s                 Stationary    ADE      865      78         0.032397       0.027494        0.037773              0.037783      0.031447       0.044542
+2s_to_2s                   KalmanCV    ADE      865      78         0.035785       0.030381        0.041900              0.037347      0.032279       0.042909
+2s_to_5s Transformer_3Seed_Ensemble    ADE      637      71         0.050132       0.043208        0.057132              0.061518      0.049692       0.074533
+2s_to_5s            LSTM_3Seed_Mean    ADE      637      71         0.050358       0.043668        0.057375              0.061636      0.049848       0.074116
+2s_to_5s             GRU_3Seed_Mean    ADE      637      71         0.050422       0.043407        0.057399              0.061569      0.049701       0.074119
+2s_to_5s                 Stationary    ADE      637      71         0.053056       0.045163        0.061108              0.066426      0.053222       0.080913
+2s_to_5s           ConstantVelocity    ADE      637      71         0.053774       0.047635        0.059305              0.051112      0.045197       0.056800
+2s_to_5s                   KalmanCV    ADE      637      71         0.054987       0.048654        0.060922              0.051548      0.045705       0.057263
+
+PAIRWISE TESTS
+--------------
+    task       comparator metric  samples  tracks  ensemble_mean  comparator_mean  window_delta_ensemble_minus_comparator  window_delta_CI_low  window_delta_CI_high  P_ensemble_better_window  ensemble_track_macro  comparator_track_macro  track_delta_ensemble_minus_comparator  track_delta_CI_low  track_delta_CI_high  P_ensemble_better_track  paired_track_signflip_p  holm_adjusted_p  significant_after_holm_0.05
+2s_to_2s  LSTM_3Seed_Mean    ADE      865      78       0.028814         0.028609                                0.000205            -0.000324              0.000719                    0.2202              0.032251                0.031829                               0.000421           -0.000337             0.001195                   0.1402                 0.288774         1.000000                        False
+2s_to_2s  LSTM_3Seed_Mean    FDE      865      78       0.053920         0.053802                                0.000118            -0.001077              0.001244                    0.4249              0.058932                0.058903                               0.000029           -0.001762             0.001683                   0.4764                 0.973961         1.000000                        False
+2s_to_2s   GRU_3Seed_Mean    ADE      865      78       0.028814         0.029166                               -0.000352            -0.000754              0.000079                    0.9484              0.032251                0.031778                               0.000473           -0.000215             0.001226                   0.1006                 0.209976         1.000000                        False
+2s_to_2s   GRU_3Seed_Mean    FDE      865      78       0.053920         0.054686                               -0.000766            -0.001747              0.000298                    0.9255              0.058932                0.057744                               0.001188           -0.000610             0.003224                   0.1067                 0.236395         1.000000                        False
+2s_to_2s ConstantVelocity    ADE      865      78       0.028814         0.030126                               -0.001312            -0.002234             -0.000360                    0.9956              0.032251                0.033774                              -0.001524           -0.002467            -0.000566                   0.9992                 0.002460         0.034439                         True
+2s_to_2s ConstantVelocity    FDE      865      78       0.053920         0.055769                               -0.001849            -0.003677              0.000074                    0.9719              0.058932                0.061380                              -0.002448           -0.004727            -0.000156                   0.9822                 0.041479         0.373313                        False
+2s_to_2s         KalmanCV    ADE      865      78       0.028814         0.035785                               -0.006971            -0.009879             -0.004625                    1.0000              0.032251                0.037347                              -0.005097           -0.007594            -0.002764                   1.0000                 0.000060         0.000900                         True
+2s_to_2s         KalmanCV    FDE      865      78       0.053920         0.070258                               -0.016338            -0.022605             -0.011300                    1.0000              0.058932                0.073619                              -0.014687           -0.020201            -0.009250                   1.0000                 0.000020         0.000400                         True
+2s_to_2s       Stationary    ADE      865      78       0.028814         0.032397                               -0.003582            -0.005254             -0.002071                    1.0000              0.032251                0.037783                              -0.005533           -0.008263            -0.003114                   1.0000                 0.000020         0.000400                         True
+2s_to_2s       Stationary    FDE      865      78       0.053920         0.060478                               -0.006558            -0.009738             -0.003711                    1.0000              0.058932                0.069546                              -0.010614           -0.015858            -0.005908                   1.0000                 0.000040         0.000640                         True
+2s_to_5s  LSTM_3Seed_Mean    ADE      637      71       0.050132         0.050358                               -0.000226            -0.000588              0.000134                    0.8899              0.061518                0.061636                              -0.000118           -0.000504             0.000250                   0.7336                 0.551669         1.000000                        False
+2s_to_5s  LSTM_3Seed_Mean    FDE      637      71       0.105339         0.106674                               -0.001335            -0.002013             -0.000679                    1.0000              0.125643                0.126904                              -0.001261           -0.002084            -0.000436                   0.9989                 0.003440         0.044719                         True
+2s_to_5s   GRU_3Seed_Mean    ADE      637      71       0.050132         0.050422                               -0.000290            -0.000630              0.000043                    0.9569              0.061518                0.061569                              -0.000051           -0.000437             0.000310                   0.5983                 0.789764         1.000000                        False
+2s_to_5s   GRU_3Seed_Mean    FDE      637      71       0.105339         0.106651                               -0.001312            -0.002115             -0.000518                    0.9994              0.125643                0.126535                              -0.000892           -0.001823             0.000030                   0.9707                 0.070799         0.495590                        False
+2s_to_5s ConstantVelocity    ADE      637      71       0.050132         0.053774                               -0.003642            -0.007504              0.000608                    0.9534              0.061518                0.051112                               0.010406            0.001512             0.020402                   0.0089                 0.035479         0.354793                        False
+2s_to_5s ConstantVelocity    FDE      637      71       0.105339         0.112707                               -0.007368            -0.015370              0.001132                    0.9559              0.125643                0.099199                               0.026444            0.005568             0.050262                   0.0037                 0.021980         0.263755                        False
+2s_to_5s         KalmanCV    ADE      637      71       0.050132         0.054987                               -0.004855            -0.008817             -0.000451                    0.9856              0.061518                0.051548                               0.009970            0.000623             0.020126                   0.0167                 0.055299         0.442391                        False
+2s_to_5s         KalmanCV    FDE      637      71       0.105339         0.114275                               -0.008936            -0.017020              0.000237                    0.9734              0.125643                0.098706                               0.026937            0.005222             0.052246                   0.0061                 0.027219         0.299414                        False
+2s_to_5s       Stationary    ADE      637      71       0.050132         0.053056                               -0.002924            -0.004468             -0.001411                    1.0000              0.061518                0.066426                              -0.004908           -0.006879            -0.003039                   1.0000                 0.000020         0.000400                         True
+2s_to_5s       Stationary    FDE      637      71       0.105339         0.111665                               -0.006326            -0.009097             -0.003638                    1.0000              0.125643                0.135209                              -0.009566           -0.013087            -0.006195                   1.0000                 0.000020         0.000400                         True
+
+Caution: non-significance does not prove equivalence.

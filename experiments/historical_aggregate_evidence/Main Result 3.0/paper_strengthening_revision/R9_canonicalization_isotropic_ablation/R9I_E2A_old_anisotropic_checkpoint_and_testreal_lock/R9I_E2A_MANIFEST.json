@@ -1,0 +1,18 @@
+{
+  "step": "R9I_E2A_OLD_ANISOTROPIC_CHECKPOINT_AND_TESTREAL_LOCK",
+  "created_utc": "2026-10-30T04:18:49.670508+00:00",
+  "status": "R9I_E2A_ALL_18_OLD_ANISOTROPIC_CHECKPOINTS_AND_TESTREAL_LOCKED_READY_FOR_R9I_E2B_FROZEN_ANISOTROPIC_REINFERENCE",
+  "checkpoints_expected": 18,
+  "checkpoints_resolved": 18,
+  "original_testreal_tasks_verified": 2,
+  "existing_prediction_files_found": 36,
+  "training": false,
+  "inference": false,
+  "old_results_modified": false,
+  "outputs": {
+    "checkpoint_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2A_old_anisotropic_checkpoint_and_testreal_lock\\R9I_E2A_OLD_ANISOTROPIC_CHECKPOINT_LOCK.csv",
+    "checkpoint_search_detail": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2A_old_anisotropic_checkpoint_and_testreal_lock\\R9I_E2A_CHECKPOINT_SEARCH_DETAIL.csv",
+    "original_testreal_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2A_old_anisotropic_checkpoint_and_testreal_lock\\R9I_E2A_OLD_ANISOTROPIC_TESTREAL_LOCK.csv",
+    "existing_prediction_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2A_old_anisotropic_checkpoint_and_testreal_lock\\R9I_E2A_EXISTING_OLD_PREDICTION_INVENTORY.csv"
+  }
+}

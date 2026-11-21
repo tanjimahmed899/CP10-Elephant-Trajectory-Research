@@ -1,0 +1,13 @@
+task,dataset,role,model,sources,ADE_source_macro,FDE_source_macro
+2s_to_2s,BIRDSAI_test,in_domain_test,ConstantVelocity,6,0.025200963763121264,0.04463293742710822
+2s_to_2s,BIRDSAI_test,in_domain_test,Stationary,6,0.02609929798689455,0.04673317697055498
+2s_to_2s,BIRDSAI_train,training,ConstantVelocity,3,0.022178430784757095,0.040761549623956485
+2s_to_2s,BIRDSAI_train,training,Stationary,3,0.03183989085928334,0.05679413103290023
+2s_to_2s,WildBox_external,external_test,ConstantVelocity,3,0.0499920309400854,0.0906891328511749
+2s_to_2s,WildBox_external,external_test,Stationary,3,0.06236686356907272,0.11132709971682943
+2s_to_5s,BIRDSAI_test,in_domain_test,ConstantVelocity,5,0.06345248099013441,0.12091460539616868
+2s_to_5s,BIRDSAI_test,in_domain_test,Stationary,5,0.0651768849697556,0.11653914013387508
+2s_to_5s,BIRDSAI_train,training,ConstantVelocity,2,0.041702728725533905,0.08231204697988823
+2s_to_5s,BIRDSAI_train,training,Stationary,2,0.021440589478511615,0.03407534893489059
+2s_to_5s,WildBox_external,external_test,ConstantVelocity,3,0.1347623134120175,0.25068196134628096
+2s_to_5s,WildBox_external,external_test,Stationary,3,0.13154619560064726,0.2456512494828884

@@ -1,0 +1,14 @@
+{
+  "step": "STEP_6D_K3C4_STEP18_BAMBI_COORDINATE_SYSTEM_COMPATIBILITY_AUDIT",
+  "step18_coordinate_system": "camera-corrected normalized image-plane coordinates",
+  "step18_boundaries": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "step18_is_normalized_image_plane": true,
+  "bambi_origins_are_metric_world_like": true,
+  "exact_mapping_evidence_found": false,
+  "status": "DIRECT_STEP18_TO_BAMBI_INCOMPATIBLE_EXACT_NORMALIZED_IMAGE_MAPPING_NOT_YET_RECOVERED",
+  "rule": "Do not apply Step18 thresholds 0.25/0.50/0.75 directly to BAMBI UTM/world-metre coordinates."
+}

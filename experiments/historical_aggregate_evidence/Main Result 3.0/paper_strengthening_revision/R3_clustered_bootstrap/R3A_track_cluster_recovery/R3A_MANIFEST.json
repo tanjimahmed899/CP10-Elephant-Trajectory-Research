@@ -1,0 +1,14 @@
+{
+  "step": "R3A_TRACK_CLUSTER_RECOVERY_PREFLIGHT",
+  "created_utc": "2026-10-29T06:34:53.308880+00:00",
+  "status": "R3A_TRACK_SOURCE_CLUSTERS_RECOVERED_AND_PAIRED_READY_FOR_BOOTSTRAP",
+  "metric_values_modified": false,
+  "source_r2e": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2E_six_model_fair_benchmark\\R2E_six_model_same_sample_metrics.csv",
+  "source_r2e_sha256": "c14b73b226820602c722531b8770dee4a92f45e518664f81e4fb62c54986ed71",
+  "cluster_ready_sample_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_six_model_same_sample_metrics_with_clusters.csv",
+  "cluster_ready_sample_sha256": "3040b7b63ec00318dab2d56fdf9486bed8fd272aee6e5e25bed41b48c4b1c14a",
+  "audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_testreal_track_recovery_audit.csv",
+  "readiness_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_cluster_readiness_checks.csv",
+  "paired_alignment_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_paired_cluster_alignment_checks.csv",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_cluster_ready_summary.csv"
+}

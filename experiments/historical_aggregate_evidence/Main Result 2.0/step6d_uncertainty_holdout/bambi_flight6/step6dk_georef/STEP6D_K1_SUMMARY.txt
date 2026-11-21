@@ -1,0 +1,87 @@
+STEP 6D-K1 — BAMBI FLIGHT 6 OFFICIAL GEOREFERENCING
+==============================================================================
+
+GT AUDIT
+--------
+{
+  "original_nonempty_rows": 4437,
+  "red_deer_rows": 3553,
+  "red_deer_tracks": 57,
+  "red_deer_unique_frames": 382,
+  "human_rows": 73,
+  "other_rows": 811,
+  "red_deer_frame_min": 847,
+  "red_deer_frame_max": 5034
+}
+
+POSE AUDIT
+----------
+{
+  "pose_records": 11857,
+  "first_location": [
+    89.582638,
+    76.769754,
+    66.694505
+  ],
+  "first_rotation": [
+    360.0,
+    0,
+    0.0
+  ],
+  "has_fovy": true,
+  "first_fovy": [
+    50.0
+  ],
+  "records_fovy_injected": 11857,
+  "fovy_unique_after_patch": [
+    50.0
+  ]
+}
+
+GEOREFERENCING SUMMARY
+----------------------
+{
+  "output_rows": 3553,
+  "valid_rows": 3553,
+  "invalid_rows": 0,
+  "success_rate": 1.0,
+  "valid_tracks": 57,
+  "valid_frames": 382
+}
+
+COORDINATE EXTENT
+-----------------
+{
+  "utm_x_min": 586908.3759320559,
+  "utm_x_max": 587084.3882517135,
+  "utm_y_min": 5338700.207137755,
+  "utm_y_max": 5338775.946470434,
+  "utm_z_min": 288.54119309990597,
+  "utm_z_max": 321.6071865658214
+}
+
+TRACK DIAGNOSTICS
+-----------------
+{
+  "tracks": 57,
+  "median_rows_per_track": 34.0,
+  "median_temporal_span_sec": 9.859976768493652
+}
+
+STEP-MOTION DIAGNOSTICS
+-----------------------
+{
+  "steps": 3496,
+  "median_speed_xy_mps": 5.530593497827427,
+  "p95_speed_xy_mps": 11.570663546528861,
+  "p99_speed_xy_mps": 19.099918792208307,
+  "max_speed_xy_mps": 86.47288208079902,
+  "robust_jump_flag_threshold_mps": 27.01014499861759,
+  "robust_jump_flags": 31
+}
+
+STATUS
+------
+K1_GEOMETRY_BUILT_PENDING_QUALITY_REVIEW
+
+IMPORTANT: robust jump flags are diagnostic only. No rows/tracks are removed in K1.

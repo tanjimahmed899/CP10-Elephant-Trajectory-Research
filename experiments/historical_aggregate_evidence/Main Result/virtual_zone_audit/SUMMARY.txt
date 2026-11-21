@@ -1,0 +1,26 @@
+VIRTUAL GEOFENCE AUDIT
+============================================================
+
+DATA USED: TrainReal CORE samples only
+
+2s_to_2s
+width=0.10 | eligible=2089 | positive=13 | negative=2076 | positive%=0.62 | median TTE=1.167s
+width=0.15 | eligible=2057 | positive=21 | negative=2036 | positive%=1.02 | median TTE=1.167s
+width=0.20 | eligible=2007 | positive=43 | negative=1964 | positive%=2.14 | median TTE=1.100s
+width=0.25 | eligible=1927 | positive=31 | negative=1896 | positive%=1.61 | median TTE=0.967s
+width=0.30 | eligible=1838 | positive=33 | negative=1805 | positive%=1.80 | median TTE=0.867s
+
+Screening recommendation: width=0.20, positive%=2.14
+
+2s_to_5s
+width=0.10 | eligible=1512 | positive=7 | negative=1505 | positive%=0.46 | median TTE=1.900s
+width=0.15 | eligible=1498 | positive=19 | negative=1479 | positive%=1.27 | median TTE=3.033s
+width=0.20 | eligible=1473 | positive=42 | negative=1431 | positive%=2.85 | median TTE=2.300s
+width=0.25 | eligible=1424 | positive=50 | negative=1374 | positive%=3.51 | median TTE=2.433s
+width=0.30 | eligible=1354 | positive=62 | negative=1292 | positive%=4.58 | median TTE=3.333s
+
+Screening recommendation: width=0.30, positive%=4.58
+
+IMPORTANT:
+TestReal was NOT used for zone selection.
+This is only benchmark-design screening, not final labels.

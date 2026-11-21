@@ -1,0 +1,74 @@
+STEP 6D-J: BAMBI FLIGHT 6 FPS + POSE RESOLUTION
+==============================================================================
+
+Selected FPS: 29.411834004179347
+
+FPS CANDIDATES
+--------------
+              source                    key     value                     method  priority
+6_matched_poses.json frame_delta/time_delta 29.411834 pose_frame_timestamp_ratio         3
+
+POSE SUMMARY
+------------
+{
+  "pose_records_detected": 11858,
+  "pose_records_with_frame_id": 11857,
+  "pose_records_with_location": 0,
+  "pose_records_with_rotation": 0,
+  "pose_records_with_fovy": 0,
+  "pose_records_with_lat": 11858,
+  "pose_records_with_lng": 11858,
+  "gt_unique_frames": 505,
+  "gt_pose_frame_overlap": 505,
+  "gt_pose_frame_coverage": 1.0
+}
+
+RED-DEER TRACK VIABILITY
+------------------------
+Red-deer tracks: 57
+Support 2->2 by temporal span: 46
+Support 2->5 by temporal span: 43
+
+ track_id             species_names  rows  first_frame  last_frame  span_frames  unique_annotation_frames  duration_sec  median_gap_frames  max_gap_frames  supports_2s_to_2s_by_duration  supports_2s_to_5s_by_duration
+      136 Cervus elaphus (Red deer)    38         3020        3362          343                        38     11.627973               10.0            13.0                           True                           True
+      151 Cervus elaphus (Red deer)    30         3094        3422          329                        30     11.151974               10.0            30.0                           True                           True
+      145 Cervus elaphus (Red deer)    32         3084        3402          319                        32     10.811975               10.0            13.0                           True                           True
+      164 Cervus elaphus (Red deer)    22         4719        5034          316                        22     10.709975               15.0            20.0                           True                           True
+      161 Cervus elaphus (Red deer)    24         4675        4989          315                        24     10.675975               10.0            20.0                           True                           True
+      163 Cervus elaphus (Red deer)    23         4705        5019          315                        23     10.675975               10.0            20.0                           True                           True
+      134 Cervus elaphus (Red deer)    38         3069        3382          314                        38     10.641975               10.0            13.0                           True                           True
+      122 Cervus elaphus (Red deer)   160          945        1253          309                       160     10.471975                2.0            20.0                           True                           True
+      148 Cervus elaphus (Red deer)    35         3084        3392          309                        35     10.471975               10.0            13.0                           True                           True
+      144 Cervus elaphus (Red deer)    32         3084        3392          309                        32     10.471975               10.0            13.0                           True                           True
+      149 Cervus elaphus (Red deer)    30         3124        3432          309                        30     10.471975               10.0            20.0                           True                           True
+      150 Cervus elaphus (Red deer)    30         3124        3432          309                        30     10.471975               10.0            20.0                           True                           True
+      154 Cervus elaphus (Red deer)    30         3144        3451          308                        30     10.437975               10.0            20.0                           True                           True
+      146 Cervus elaphus (Red deer)    34         3069        3372          304                        34     10.301976               10.0            13.0                           True                           True
+      113 Cervus elaphus (Red deer)   193          851        1153          303                       193     10.267976                2.0             3.0                           True                           True
+      132 Cervus elaphus (Red deer)    40         3004        3306          303                        40     10.267976               10.0            12.0                           True                           True
+      131 Cervus elaphus (Red deer)    42         2984        3284          301                        42     10.199976               10.0            11.0                           True                           True
+      141 Cervus elaphus (Red deer)    34         2994        3294          301                        34     10.199976               10.0            16.0                           True                           True
+      142 Cervus elaphus (Red deer)    34         2994        3294          301                        34     10.199976               10.0            16.0                           True                           True
+      115 Cervus elaphus (Red deer)   190          851        1150          300                       190     10.165976                2.0             3.0                           True                           True
+      133 Cervus elaphus (Red deer)    38         3030        3329          300                        38     10.165976               10.0            13.0                           True                           True
+      152 Cervus elaphus (Red deer)    29         3104        3402          299                        29     10.131976               10.0            20.0                           True                           True
+      120 Cervus elaphus (Red deer)   186          867        1161          295                       186      9.995976                2.0             6.0                           True                           True
+      121 Cervus elaphus (Red deer)   163          917        1211          295                       163      9.995976                2.0            20.0                           True                           True
+      160 Cervus elaphus (Red deer)    24         4645        4939          295                        24      9.995976               10.0            20.0                           True                           True
+      138 Cervus elaphus (Red deer)    33         3036        3329          294                        33      9.961977               10.0            13.0                           True                           True
+      139 Cervus elaphus (Red deer)    33         3036        3329          294                        33      9.961977               10.0            13.0                           True                           True
+      165 Cervus elaphus (Red deer)   131          961        1251          291                       131      9.859977                2.0            20.0                           True                           True
+      143 Cervus elaphus (Red deer)    39         2984        3274          291                        39      9.859977               10.0            11.0                           True                           True
+      135 Cervus elaphus (Red deer)    36         3049        3339          291                        36      9.859977               10.0            13.0                           True                           True
+      137 Cervus elaphus (Red deer)    33         3004        3294          291                        33      9.859977               10.0            16.0                           True                           True
+      140 Cervus elaphus (Red deer)    33         3049        3339          291                        33      9.859977               10.0            13.0                           True                           True
+      147 Cervus elaphus (Red deer)    33         3049        3339          291                        33      9.859977               10.0            13.0                           True                           True
+      153 Cervus elaphus (Red deer)    27         3061        3349          289                        27      9.791977               10.0            31.0                           True                           True
+      114 Cervus elaphus (Red deer)   171          851        1131          281                       171      9.519978                2.0             3.0                           True                           True
+      117 Cervus elaphus (Red deer)   174          849        1127          279                       174      9.451978                2.0             2.0                           True                           True
+      116 Cervus elaphus (Red deer)   168          907        1181          275                       168      9.315978                2.0            17.0                           True                           True
+      166 Cervus elaphus (Red deer)   125          971        1241          271                       125      9.179978                2.0            20.0                           True                           True
+      119 Cervus elaphus (Red deer)   162          849        1115          267                       162      9.043979                2.0             2.0                           True                           True
+      118 Cervus elaphus (Red deer)   161          849        1114          266                       161      9.009979                2.0             2.0                           True                           True
+
+No model prediction/error/coverage was computed.

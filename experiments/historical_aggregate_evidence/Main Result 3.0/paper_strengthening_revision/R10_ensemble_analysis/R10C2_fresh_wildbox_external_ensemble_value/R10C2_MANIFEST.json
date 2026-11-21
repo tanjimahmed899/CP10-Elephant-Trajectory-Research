@@ -1,0 +1,29 @@
+{
+  "step": "R10C2_FRESH_WILDBOX_EXTERNAL_TRANSFORMER_ENSEMBLE_VALUE",
+  "created_utc": "2026-10-30T05:19:36.527250+00:00",
+  "status": "R10C2_FRESH_WILDBOX_EXTERNAL_ENSEMBLE_VALUE_QUANTIFIED_READY_FOR_R10D_CROSS_DOMAIN_ENSEMBLE_CONCLUSION",
+  "training": false,
+  "new_inference": false,
+  "representation": "original frozen anisotropic canonical representation",
+  "metric_space": "native normalized coordinate space; comparisons are within representation",
+  "primary_comparators": [
+    "mean individual-seed error",
+    "validation-selected single seed"
+  ],
+  "primary_dependency_unit": "track_key",
+  "within_track_reduction": "median paired difference",
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed_base": 20261029,
+  "source_sensitivity": "leave-one-source-out over the 3 fresh WildBox videos",
+  "delta_definition": "ensemble - comparator; negative favors ensemble",
+  "claim_guardrail": "Do not generalize fresh WildBox ensemble benefit unless track-cluster CIs and leave-one-source-out sensitivity are directionally consistent. Do not call the 3-video fresh holdout broad ecological generalization.",
+  "outputs": {
+    "sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_FRESH_WILDBOX_ENSEMBLE_SAMPLE_METRICS.csv",
+    "validation_seed_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_VALIDATION_SELECTED_SEED_LOCK.csv",
+    "pairwise_diversity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_PAIRWISE_SEED_DIVERSITY.csv",
+    "track_cluster_bootstrap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_TRACK_CLUSTER_BOOTSTRAP.csv",
+    "leave_one_source_out": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_LEAVE_ONE_SOURCE_OUT_SENSITIVITY.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_EXTERNAL_ENSEMBLE_SUMMARY.csv",
+    "diversity_gain_association": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C2_fresh_wildbox_external_ensemble_value\\R10C2_DIVERSITY_GAIN_ASSOCIATION.csv"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "step": "R9G_SAME_SAMPLE_ANISOTROPIC_VS_ISOTROPIC_BASELINE_COMPARISON",
+  "created_utc": "2026-10-29T10:04:22.184507+00:00",
+  "status": "R9G_SAME_SAMPLE_ANISOTROPIC_VS_ISOTROPIC_BASELINE_COMPARISON_COMPLETE_READY_FOR_R9H_PAIRED_CLUSTERED_BOOTSTRAP",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "models": [
+    "Stationary",
+    "ConstantVelocity"
+  ],
+  "comparison_space": "pixel-equivalent",
+  "why_not_compare_raw_normalized_ADE_FDE": "Anisotropic and isotropic normalized coordinates use different scales. Direct normalized-unit ADE/FDE differences would confound geometry with scale. Both branches are therefore back-transformed to the same pixel-equivalent space.",
+  "anisotropic_backtransform": "x_px = x_aniso * W; y_px = y_aniso * H",
+  "isotropic_backtransform": "x_px = x_iso * S; y_px = y_iso * S; S=max(W,H)",
+  "sample_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_same_sample_baseline_comparison\\R9G_SAME_SAMPLE_PER_SAMPLE_METRICS.csv",
+  "sample_metrics_sha256": "70f6213bba44fefd00cc29594b833273573c3986b86435370d53f5af6667cd10",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_same_sample_baseline_comparison\\R9G_SAME_SAMPLE_BASELINE_SUMMARY.csv",
+  "summary_sha256": "9519b773da9d9106c1430ea06dcd99df854e8ffeb60f89d9b70e1fc811cd79b6",
+  "geometry_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_same_sample_baseline_comparison\\R9G_COMMON_GEOMETRY_AUDIT.csv",
+  "provenance": {
+    "2s_to_2s": {
+      "isotropic_npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_isotropic_2s_to_2s.npz",
+      "isotropic_npz_sha256": "20f665d89f2cfe651acbcec0fb2f7e82f8d2d003fcd9e457f2c45cd7eab2270c",
+      "isotropic_metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_isotropic_windows_2s_to_2s.csv",
+      "isotropic_metadata_sha256": "15296df77784da0ce81ed2cbe72548d9ae36aaa48f573d6640ead9762c38dbc8",
+      "anisotropic_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_2s.npz",
+      "anisotropic_npz_sha256": "8b0ffb1bc6f5528111874556f42e16205ff74c8db17ce67547cc0816d4aeff18",
+      "anisotropic_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_2s.csv",
+      "anisotropic_metadata_sha256": "8aed9b808184884e96aa843130bbd02434a093506eba8001b94b6a20f3b2a765"
+    },
+    "2s_to_5s": {
+      "isotropic_npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_isotropic_2s_to_5s.npz",
+      "isotropic_npz_sha256": "2130c5c6c6451ad3dc69f70a3a3249e6bbf8a0e13b6cddb1d1471f0aed911e7c",
+      "isotropic_metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_isotropic_windows_2s_to_5s.csv",
+      "isotropic_metadata_sha256": "cb2f53ccd4e073b66849659eee59854217efb3ba683ea1d67a7d88c4c7362a5a",
+      "anisotropic_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_5s.npz",
+      "anisotropic_npz_sha256": "db52df2fd07ebc84de0c7e2a718395878181e976e505d81176ac4d8e6e89fe86",
+      "anisotropic_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_5s.csv",
+      "anisotropic_metadata_sha256": "f13a9b73ab55f1fc5811883dfcf97ffe265c88c4f5a1fc9d3c86cecdfd65ad68"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "step": "R6A_DIRECT_CROSSING_CLASSIFIER_VALIDATION_ONLY_PREFLIGHT",
+  "created_utc": "2026-10-29T07:07:42.267387+00:00",
+  "status": "R6A_PREFLIGHT_COMPLETE_LEAKAGE_SAFE_VALIDATION_CANDIDATE_FOUND_READY_FOR_R6B_FEATURE_LOCK",
+  "classifier_trained": false,
+  "threshold_selected": false,
+  "candidate_count": 65,
+  "ready_candidate_count": 1,
+  "inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6A_validation_only_preflight\\R6A_candidate_instance_inventory.csv",
+  "evaluation_source_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6A_validation_only_preflight\\R6A_frozen_evaluation_source_sets.csv",
+  "overlap_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6A_validation_only_preflight\\R6A_candidate_source_overlap_audit.csv",
+  "readiness_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6A_validation_only_preflight\\R6A_direct_classifier_candidate_readiness.csv"
+}

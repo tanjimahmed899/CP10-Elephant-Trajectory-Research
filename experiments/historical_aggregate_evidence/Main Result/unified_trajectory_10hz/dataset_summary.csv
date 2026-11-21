@@ -1,0 +1,7 @@
+task,dataset,modality,role,samples,source_groups,tracks,history_shape,future_shape
+2s_to_2s,BIRDSAI,thermal,training,531,3,62,"(531, 20, 2)","(531, 20, 2)"
+2s_to_2s,BIRDSAI,thermal,in_domain_test,1053,6,89,"(1053, 20, 2)","(1053, 20, 2)"
+2s_to_2s,WildBox,RGB,external_test,93,3,11,"(93, 20, 2)","(93, 20, 2)"
+2s_to_5s,BIRDSAI,thermal,training,382,2,34,"(382, 20, 2)","(382, 50, 2)"
+2s_to_5s,BIRDSAI,thermal,in_domain_test,826,5,63,"(826, 20, 2)","(826, 50, 2)"
+2s_to_5s,WildBox,RGB,external_test,60,3,9,"(60, 20, 2)","(60, 50, 2)"

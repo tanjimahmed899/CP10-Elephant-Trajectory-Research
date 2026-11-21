@@ -1,0 +1,32 @@
+{
+  "step": "R12F_FINAL_TRACK_ACCOUNTING_LOCK",
+  "created_utc": "2026-10-30T10:17:48.869344+00:00",
+  "status": "R12_TRACK_ACCOUNTING_FULLY_RESOLVED_AND_LOCKED_COMPLETE_READY_FOR_R13_END_TO_END_PIPELINE",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "locked_values": {
+    "original_testreal_tracks": 45,
+    "final_2s_original_tracks": 37,
+    "final_2s_segments": 89,
+    "final_2s_windows": 1053,
+    "final_5s_original_tracks": 31,
+    "final_5s_segments": 63,
+    "final_5s_windows": 826,
+    "physical_window_mismatch_2s": 0,
+    "physical_window_mismatch_5s": 0
+  },
+  "locked_filter": "accepted == 1 AND quality_tier == 'core' AND sample_id >= 0",
+  "locked_terminology": {
+    "45": "original dataset-level tracks",
+    "37_31": "original tracks represented in final evaluation sets",
+    "89_63": "forecastable segments / tracklets",
+    "1053_826": "final evaluation windows"
+  },
+  "outputs": {
+    "terminology_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12F_final_track_accounting_lock\\R12F_TERMINOLOGY_LOCK.csv",
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12F_final_track_accounting_lock\\R12F_CLAIM_MATRIX.csv",
+    "manuscript_ready_wording": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12F_final_track_accounting_lock\\R12F_MANUSCRIPT_READY_WORDING.txt",
+    "evidence_hash_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12F_final_track_accounting_lock\\R12F_EVIDENCE_HASH_LOCK.csv"
+  }
+}

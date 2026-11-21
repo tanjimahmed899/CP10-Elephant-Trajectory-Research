@@ -1,0 +1,46 @@
+{
+  "step": "R9I_E0_MATCHED_BIRDSAI_TESTREAL_ISOTROPIC_DATASET_BUILD",
+  "created_utc": "2026-10-29T13:37:03.622582+00:00",
+  "status": "R9I_E0_MATCHED_TESTREAL_ISOTROPIC_CANONICAL_DATASETS_BUILT_READY_FOR_R9I_E1_FROZEN_18_CHECKPOINT_TESTREAL_INFERENCE",
+  "dataset": "BIRDSAI TestReal",
+  "coordinate_representation": "x/S,y/S where S=max(width_px,height_px)",
+  "scale_floor_source": "BIRDSAI TrainReal only, exact original pre-split 5th-percentile rule",
+  "testreal_used_for_scale_floor": false,
+  "training": false,
+  "model_inference": false,
+  "frozen_isotropic_checkpoints_modified": false,
+  "original_frozen_anisotropic_results_modified": false,
+  "dataset_directory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\dataset",
+  "task_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\R9I_E0_TESTREAL_ISOTROPIC_DATASET_SUMMARY.csv",
+  "provenance_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\R9I_E0_PROVENANCE.csv",
+  "tasks": [
+    {
+      "task": "2s_to_2s",
+      "samples": 1053,
+      "tracks": 89,
+      "sequences": 6,
+      "trainreal_derived_isotropic_scale_floor": 0.04227171020254203,
+      "original_anisotropic_history_abs_max_error": 0.0,
+      "original_anisotropic_future_abs_max_error": 0.0,
+      "pixel_roundtrip_max_abs_error": 5.684341886080802e-14,
+      "output_npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\dataset\\2s_to_2s_birdsai_test_canonical.npz",
+      "output_npz_sha256": "223c2e71cbf598bf375b83d391ba74915b0d0654730e93add64ccd6c25a248fe",
+      "output_metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\dataset\\2s_to_2s_birdsai_test_metadata.csv",
+      "output_metadata_sha256": "2da553aa0eb06a023fbe325674c7da7101f8023ab6dfcbad680b1384093cdb38"
+    },
+    {
+      "task": "2s_to_5s",
+      "samples": 826,
+      "tracks": 63,
+      "sequences": 5,
+      "trainreal_derived_isotropic_scale_floor": 0.04115874397295075,
+      "original_anisotropic_history_abs_max_error": 0.0,
+      "original_anisotropic_future_abs_max_error": 0.0,
+      "pixel_roundtrip_max_abs_error": 5.684341886080802e-14,
+      "output_npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\dataset\\2s_to_5s_birdsai_test_canonical.npz",
+      "output_npz_sha256": "e7686ffea6c5dfef94a02d60cda31d672f35a51a4f0d2f24162ec390148be1fc",
+      "output_metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E0_matched_testreal_isotropic_dataset\\dataset\\2s_to_5s_birdsai_test_metadata.csv",
+      "output_metadata_sha256": "b0bf44922c6cd1780da4d78d6d04b1914ec4e7323701d6b710c8f0e82992bdac"
+    }
+  ]
+}

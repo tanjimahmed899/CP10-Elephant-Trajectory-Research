@@ -1,0 +1,12 @@
+{
+  "step": "R9B_EXACT_NORMALIZATION_SOURCE_RECOVERY",
+  "created_utc": "2026-10-29T08:54:24.031788+00:00",
+  "status": "R9B_EXACT_NORMALIZATION_SOURCE_RECOVERY_COMPLETE_READY_FOR_R9C_TRANSFORM_LOCK",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "source_lock_json": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9B_exact_normalization_source_lock\\R9B_SOURCE_LOCK.json",
+  "source_lock_sha256": "e8499dbd98072ca547779e2cd0cb8a775ce8d12b990aa6ec3ff8e3af35cc0358",
+  "script_evidence_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9B_exact_normalization_source_lock\\R9B_SCRIPT_NORMALIZATION_EVIDENCE.csv",
+  "range_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9B_exact_normalization_source_lock\\R9B_CLEANED_TRACK_POINT_RANGE_AUDIT.csv",
+  "denominator_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9B_exact_normalization_source_lock\\R9B_TOP_IMPLIED_NORMALIZATION_DENOMINATORS.csv"
+}

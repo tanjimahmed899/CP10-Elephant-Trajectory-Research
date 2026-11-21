@@ -1,0 +1,61 @@
+{
+  "step": "STEP_6D_K3C12_EXACT_CANONICALIZATION_SOURCE_ADAPTER_AUDIT",
+  "selected_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+  "selected_source_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+  "ast_signature": [
+    {
+      "name": "history",
+      "default": null
+    },
+    {
+      "name": "future",
+      "default": null
+    },
+    {
+      "name": "scale_floor",
+      "default": null
+    }
+  ],
+  "return_statements": [
+    {
+      "line": 305,
+      "expression": "{'history_canonical': h_can.astype(np.float32), 'future_canonical': f_can.astype(np.float32), 'origin': origin.astype(np.float32), 'angle': np.float32(angle), 'scale': np.float32(scale), 'raw_path_length': np.float32(path_length)}"
+    }
+  ],
+  "candidate_count": 2,
+  "dry_run_tasks": [
+    {
+      "task": "2s_to_2s",
+      "source_file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+      "source_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+      "call_signature": "(history, future, scale_floor)",
+      "scale_floor": 0.0682026441687773,
+      "scale_floor_source": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_2s_bambi_flight6_canonical_metadata_LOCKED.csv",
+      "input_history_shape": "(20, 2)",
+      "input_future_shape": "(20, 2)",
+      "input_all_finite": true,
+      "dry_run_success": true,
+      "k3c11_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_reconstruction_v1\\2s_to_2s_BAMBI_Flight6_anchor_normalized_windows.npz"
+    },
+    {
+      "task": "2s_to_5s",
+      "source_file": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+      "source_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+      "call_signature": "(history, future, scale_floor)",
+      "scale_floor": 0.0673263877371514,
+      "scale_floor_source": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_5s_bambi_flight6_canonical_metadata_LOCKED.csv",
+      "input_history_shape": "(20, 2)",
+      "input_future_shape": "(50, 2)",
+      "input_all_finite": true,
+      "dry_run_success": true,
+      "k3c11_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_reconstruction_v1\\2s_to_5s_BAMBI_Flight6_anchor_normalized_windows.npz"
+    }
+  ],
+  "status": "EXACT_CANONICALIZE_SAMPLE_SOURCE_RECOVERED_AND_DRY_RUN_SUCCESS_READY_FOR_DERIVED_DATASET_LOCK",
+  "nonclaims": [
+    "No anchor-normalized canonical dataset was locked in this step.",
+    "No secondary BAMBI Transformer inference was run.",
+    "No conformal q value was recalibrated.",
+    "No Step7 geofence or alarm metric was generated."
+  ]
+}

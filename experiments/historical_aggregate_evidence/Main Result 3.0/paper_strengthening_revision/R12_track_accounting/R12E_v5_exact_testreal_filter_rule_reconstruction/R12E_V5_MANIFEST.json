@@ -1,0 +1,21 @@
+{
+  "step": "R12E_V5_EXACT_TESTREAL_FINAL_FILTER_RECONSTRUCTION",
+  "created_utc": "2026-10-30T06:40:24.142374+00:00",
+  "status": "R12E_V5_FINAL_FILTER_NOT_YET_EXACTLY_RESOLVED_REVIEW_CANDIDATES",
+  "training": false,
+  "inference": false,
+  "cross_stage_identity": "sequence + object_id + segment_id + obs_start_frame + future_end_frame",
+  "sample_id_used_for_cross_stage_matching": false,
+  "exact_rule_name": "",
+  "exact_rule_matches_both_tasks": false,
+  "final_count_lock_pass": true,
+  "source_rule_support": false,
+  "outputs": {
+    "testreal_stage_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_TESTREAL_STAGE_COUNTS.csv",
+    "filter_candidate_table": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_FILTER_CANDIDATE_EXACT_MATCH_TABLE.csv",
+    "exact_removed_testreal_windows": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_EXACT_FILTER_REMOVED_TESTREAL_WINDOWS.csv",
+    "removed_reason_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_EXACT_FILTER_REMOVED_REASON_SUMMARY.csv",
+    "final_builder_source_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_FINAL_BUILDER_FILTER_SOURCE_EVIDENCE.csv",
+    "corrector_source_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v5_exact_testreal_filter_rule_reconstruction\\R12E_V5_CORRECTOR_QUALITY_RULE_SOURCE_EVIDENCE.csv"
+  }
+}

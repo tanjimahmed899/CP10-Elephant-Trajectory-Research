@@ -1,0 +1,23 @@
+{
+  "step": "R9G_V3C0_EXACT_STEP2B_BASELINE_FORMULA_LOCK",
+  "created_utc": "2026-10-29T10:32:15.851581+00:00",
+  "status": "R9G_V3C0_EXACT_STEP2B_BASELINE_FORMULA_LOCK_COMPLETE_READY_FOR_R9G_V3C_CLEAN_COMPARISON",
+  "step2b_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_forecasting.py",
+  "step2b_source_sha256": "4da7ed8e5106998236f916b796e0fc8317ff7e1acf58a19fe7ef7d165e45510b",
+  "root_function": "evaluate_representation",
+  "relevant_functions": [
+    "estimate_velocity_linear_regression",
+    "evaluate_representation",
+    "metrics",
+    "predict_constant_velocity",
+    "predict_stationary"
+  ],
+  "new_training": false,
+  "comparison_performed": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "relevant_functions_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3C0_exact_baseline_formula_lock\\R9G_V3C0_RELEVANT_BASELINE_FUNCTIONS.csv",
+  "dependencies_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3C0_exact_baseline_formula_lock\\R9G_V3C0_FUNCTION_DEPENDENCIES.csv",
+  "constants_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3C0_exact_baseline_formula_lock\\R9G_V3C0_REFERENCED_CONSTANTS.csv",
+  "model_branch_lines_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3C0_exact_baseline_formula_lock\\R9G_V3C0_MODEL_BRANCH_LINES.csv"
+}

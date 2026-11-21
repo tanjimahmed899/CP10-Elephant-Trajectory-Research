@@ -1,0 +1,25 @@
+{
+  "step": "R2D_B2C_EXACT_FROZEN_KALMAN_PARAM_LOCK",
+  "created_utc": "2026-10-29T06:24:27.485268+00:00",
+  "status": "R2D_B2C_FROZEN_KALMAN_PARAMS_EXACTLY_RECOVERED_AND_LOCKED_READY_FOR_B2",
+  "new_metrics_generated": false,
+  "testreal_tuning": false,
+  "kalman_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_kalman_baseline.py",
+  "kalman_source_sha256": "f54b1eaf3087d5004449786ab11f5dc709504f66db475be806a5ece6a655e013",
+  "tuning_csv": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\baseline_kalman\\kalman_tuning.csv",
+  "tuning_csv_sha256": "cbdc00aaaf720270186c0d1025e13c9916444fd9ea84a79ddf94331113008878",
+  "sample_csv": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\baseline_kalman\\kalman_sample_metrics.csv",
+  "sample_csv_sha256": "f61dcaad04eee8878624ed66fac17966731606a40262b6147ccaaa7fb18ffd20",
+  "summary_txt": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\baseline_kalman\\SUMMARY.txt",
+  "summary_txt_sha256": "ebc02d63e28b2002e9feb3701074d3199fe5fc4869e9fa9cee74d380a4c5487c",
+  "source_selection_criterion": {
+    "assignment_line": 752,
+    "assignment_source": "best = sorted(\n\n        candidate_records,\n\n        key=lambda x: (\n\n            x[\n                \"track_macro_ADE\"\n            ],\n\n            x[\n                \"track_macro_FDE\"\n            ]\n\n        )\n\n    )[0]",
+    "sort_keys": [
+      "track_macro_ADE",
+      "track_macro_FDE"
+    ]
+  },
+  "locked_params_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2C_exact_kalman_param_lock\\R2D_B2C_LOCKED_KALMAN_PARAMS.csv",
+  "locked_params_sha256": "940a873bf2a0a422e748d6aa858b14ccd06f9fdbac7323d1c327d9e066741015"
+}

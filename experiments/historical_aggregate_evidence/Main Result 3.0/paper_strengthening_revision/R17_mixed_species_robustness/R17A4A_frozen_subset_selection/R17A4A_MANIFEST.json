@@ -1,0 +1,37 @@
+{
+  "step": "R17A4A_FROZEN_MIXED_SPECIES_SUBSET_SELECTION",
+  "created_utc": "2026-10-30T14:35:04.270990+00:00",
+  "status": "R17A4A_FROZEN_EVALUATION_SUBSET_LOCKED_453_COCO_PRIMARY_PLUS_DEDUPLICATED_IN_VOCAB_SUPPLEMENT_READY_FOR_R17A4B_PIXEL_DOWNLOAD",
+  "training": false,
+  "model_inference": false,
+  "pixel_download": false,
+  "selection_salt": "R17A4A_COCO_MAIN_V1_20261030",
+  "primary_group_size_each": 151,
+  "primary_total_images": 453,
+  "positive_policy": "all 151 unique COCO elephant+animal scenes",
+  "negative_policy": "151 deterministic SHA256-selected COCO multi-animal no-elephant scenes",
+  "control_policy": "151 deterministic elephant-only controls, prioritizing person-absent scenes",
+  "supplementary_in_vocab_unique_images": 9,
+  "identity_overlap_between_primary_groups": 0,
+  "source_manifest_sha256": {
+    "R17A3B": "f35c0ce63c78846e7dac0a800a9441b2ca1e50153d120d9ceca19d74ffd18547",
+    "R17A2": "a92d646cbd001d735222a81cec1042e118ba87a028261ab7f16513b688b62620"
+  },
+  "output_sha256": {
+    "positive": "320814bf098c0e6744f6711474f4e2307bee3eced8100043de5293ee911da521",
+    "negative": "774e1c90693230acffd2030a4c5b2c1132d6dec12c25602afaf5f0a8590e2305",
+    "control": "bfa4a248f02a8f05e24a1df741a635c42a3658b70641d9a46be95758697ca2fd",
+    "primary": "555465c542bcc643af2a8a98822e58c987040fcb7fa4115b2d7dbaeb1e3105b6",
+    "supplementary": "caddb6ff1f4742475ab15f8c624c52aa3b60f963d129ee5d3bf65c768617685d",
+    "pair_counts": "374bf5612a3dd1be309fa768277464ddc4919f14f0ad48f91c891d3c38e71de9"
+  },
+  "outputs": {
+    "positive": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_PRIMARY_POSITIVE_151.csv",
+    "negative": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_PRIMARY_NEGATIVE_151.csv",
+    "control": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_PRIMARY_CONTROL_151.csv",
+    "primary_453": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_PRIMARY_BALANCED_453.csv",
+    "supplementary_in_vocab": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_SUPPLEMENTARY_IN_VOCAB_UNIQUE.csv",
+    "positive_pair_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_SELECTED_POSITIVE_PAIR_COUNTS.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4A_frozen_subset_selection\\R17A4A_SELECTION_SUMMARY.csv"
+  }
+}

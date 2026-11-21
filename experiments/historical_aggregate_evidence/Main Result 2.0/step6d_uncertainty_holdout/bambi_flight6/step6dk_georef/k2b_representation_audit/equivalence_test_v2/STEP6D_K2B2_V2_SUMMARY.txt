@@ -1,0 +1,68 @@
+STEP 6D-K2B2-V2 — EQUIVALENCE + SCALE-FLOOR SOURCE AUDIT
+====================================================================================
+
+MAX NUMERICAL DIFFERENCES
+-------------------------
+{
+  "history_max_abs_diff": 0.0,
+  "future_max_abs_diff": 0.0,
+  "origin_max_abs_diff": 0.15000000037252903,
+  "angle_periodic_abs_diff": 1.1897249629910789e-07,
+  "scale_abs_diff": 5.225761228189185e-07,
+  "path_length_abs_diff": 5.225761228189185e-07
+}
+
+EQUIVALENCE STATUS
+------------------
+CANONICALIZER_MISMATCH_DO_NOT_PROCEED
+
+BUILD PIPELINE SCALE_FLOOR EVIDENCE
+-----------------------------------
+                  kind  line                                                expression                                                                                                                                                                                                                       context  resolved_numeric
+  top_level_assignment    34                               SCALE_FLOOR_QUANTILE = 0.05                                                                                                                                                                                                                                            0.05
+       lexical_context   234                                               scale_floor                                                                            00231: def canonicalize_sample(\n00232:     history,\n00233:     future,\n00234:     scale_floor\n00235: ):\n00236: \n00237:     origin = history[               NaN
+       lexical_context   259                                               scale_floor                                                                                                     00256: \n00257:     scale = max(\n00258:         path_length,\n00259:         scale_floor\n00260:     )\n00261: \n00262:                NaN
+       lexical_context   399                                               scale_floor                                                                                        00396: def transform_dataset(\n00397:     history,\n00398:     future,\n00399:     scale_floor\n00400: ):\n00401: \n00402:     hc = []               NaN
+canonicalizer_callsite   416 canonicalize_sample( history[i], future[i], scale_floor )                                                                                                                                                                                            scale_floor_expression=scale_floor               NaN
+       lexical_context   422                                               scale_floor                                                                                                           00419: \n00420:             future[i],\n00421: \n00422:             scale_floor\n00423: \n00424:         )\n00425:                NaN
+       lexical_context   905                                      scale_floor = float(                                                                                                               00902:     ])\n00903: \n00904: \n00905:     scale_floor = float(\n00906: \n00907:         np.quantile(\n00908:                NaN
+       lexical_context   920                                               scale_floor                                                                                       00917: \n00918:     print(\n00919:         "Training-derived scale floor:",\n00920:         scale_floor\n00921:     )\n00922: \n00923:                NaN
+       lexical_context   934                                               scale_floor                                                                                                                    00931: \n00932:         train_future,\n00933: \n00934:         scale_floor\n00935: \n00936:     )\n00937:                NaN
+       lexical_context   993                                             "scale_floor"                                                                                                          00990: \n00991: \n00992:     train_meta[\n00993:         "scale_floor"\n00994:     ] = scale_floor\n00995: \n00996:                NaN
+       lexical_context   994                                           ] = scale_floor                                            00991: \n00992:     train_meta[\n00993:         "scale_floor"\n00994:     ] = scale_floor\n00995: \n00996: \n00997:     # --------------------------------------------------------               NaN
+       lexical_context  1066                                               scale_floor                                                                                                                     01063: \n01064:         test_future,\n01065: \n01066:         scale_floor\n01067: \n01068:     )\n01069:                NaN
+       lexical_context  1117                                               scale_floor                                                                                                                     01114: \n01115:         wild_future,\n01116: \n01117:         scale_floor\n01118: \n01119:     )\n01120:                NaN
+       lexical_context  1209                                            "scale_floor": 01206:                     "source_group"\n01207:                 ].nunique(),\n01208: \n01209:             "scale_floor":\n01210:                 scale_floor,\n01211: \n01212:             "track_overlap_with_validation":               NaN
+       lexical_context  1210                                              scale_floor,            01207:                 ].nunique(),\n01208: \n01209:             "scale_floor":\n01210:                 scale_floor,\n01211: \n01212:             "track_overlap_with_validation":\n01213:                 overlap               NaN
+       lexical_context  1246                                            "scale_floor": 01243:                     "source_group"\n01244:                 ].nunique(),\n01245: \n01246:             "scale_floor":\n01247:                 scale_floor,\n01248: \n01249:             "track_overlap_with_validation":               NaN
+       lexical_context  1247                                              scale_floor,            01244:                 ].nunique(),\n01245: \n01246:             "scale_floor":\n01247:                 scale_floor,\n01248: \n01249:             "track_overlap_with_validation":\n01250:                 overlap               NaN
+       lexical_context  1279                                            "scale_floor": 01276:                     "source_group"\n01277:                 ].nunique(),\n01278: \n01279:             "scale_floor":\n01280:                 scale_floor,\n01281: \n01282:             "track_overlap_with_validation":               NaN
+       lexical_context  1280                                              scale_floor,             01277:                 ].nunique(),\n01278: \n01279:             "scale_floor":\n01280:                 scale_floor,\n01281: \n01282:             "track_overlap_with_validation":\n01283:                 np.nan               NaN
+       lexical_context  1312                                            "scale_floor": 01309:                     "source_group"\n01310:                 ].nunique(),\n01311: \n01312:             "scale_floor":\n01313:                 scale_floor,\n01314: \n01315:             "track_overlap_with_validation":               NaN
+       lexical_context  1313                                              scale_floor,             01310:                 ].nunique(),\n01311: \n01312:             "scale_floor":\n01313:                 scale_floor,\n01314: \n01315:             "track_overlap_with_validation":\n01316:                 np.nan               NaN
+       lexical_context  1457                                             "scale_floor"                                                                                                  01454: \n01455: \n01456:         floor = temp[\n01457:             "scale_floor"\n01458:         ].iloc[0]\n01459: \n01460:                NaN
+
+FRESH HOLDOUT SCALE_FLOOR EVIDENCE
+----------------------------------
+                  kind  line                                                  expression                                                                                                                                                                                               context  resolved_numeric
+       lexical_context    69                         "scale_floor": 0.06820264416877736, 00066:     "2s_to_2s": {\n00067:         "obs_frames": 20,\n00068:         "future_frames": 20,\n00069:         "scale_floor": 0.06820264416877736,\n00070:     },\n00071: \n00072:     "2s_to_5s": {               NaN
+       lexical_context    75                         "scale_floor": 0.06732638773715147,                 00072:     "2s_to_5s": {\n00073:         "obs_frames": 20,\n00074:         "future_frames": 50,\n00075:         "scale_floor": 0.06732638773715147,\n00076:     },\n00077: }\n00078:                NaN
+       lexical_context   927                                                 scale_floor                                        00924: def canonicalize_window(\n00925:     history_abs,\n00926:     future_abs,\n00927:     scale_floor\n00928: ):\n00929: \n00930:     origin = history_abs[               NaN
+       lexical_context   959                                                 scale_floor                                                                             00956: \n00957:     scale = max(\n00958:         path_length,\n00959:         scale_floor\n00960:     )\n00961: \n00962:                NaN
+       lexical_context  1079                                       scale_floor = config[                                                                                 01076:     )\n01077: \n01078: \n01079:     scale_floor = config[\n01080:         "scale_floor"\n01081:     ]\n01082:                NaN
+       lexical_context  1080                                               "scale_floor"                                                                                      01077: \n01078: \n01079:     scale_floor = config[\n01080:         "scale_floor"\n01081:     ]\n01082: \n01083:                NaN
+canonicalizer_callsite  1361 canonicalize_window( history_abs, future_abs, scale_floor )                                                                                                                                                                    scale_floor_expression=scale_floor               NaN
+       lexical_context  1367                                                 scale_floor                      01364: \n01365:                                 future_abs,\n01366: \n01367:                                 scale_floor\n01368: \n01369:                             )\n01370:                NaN
+       lexical_context  2654                                              "scale_floor":             02651:                 ].median()\n02652:             ),\n02653: \n02654:         "scale_floor":\n02655:             config[\n02656:                 "scale_floor"\n02657:             ],               NaN
+       lexical_context  2656                                               "scale_floor"                         02653: \n02654:         "scale_floor":\n02655:             config[\n02656:                 "scale_floor"\n02657:             ],\n02658: \n02659:         "floor_applied_pct":               NaN
+       lexical_context  2671                                               "scale_floor"              02668: \n02669:                     <\n02670:                     config[\n02671:                         "scale_floor"\n02672:                     ]\n02673: \n02674:                 )               NaN
+
+DIRECT NUMERIC CANDIDATES FOUND
+-------------------------------
+[0.05]
+
+OVERALL STATUS
+--------------
+CANONICALIZER_MISMATCH_DO_NOT_PROCEED__SINGLE_DIRECT_NUMERIC_CANDIDATE_FOUND_REVIEW_CONTEXT_BEFORE_LOCK
+
+Probe values are NOT used as the final pipeline scale floor.

@@ -1,0 +1,30 @@
+{
+  "step": "R17A2_EXISTING_DATASET_COOCCURRENCE_AUDIT",
+  "created_utc": "2026-10-30T13:53:05.515986+00:00",
+  "status": "R17A2_EXISTING_COOCCURRENCE_INSUFFICIENT_EXTERNAL_MIXED_SPECIES_EVALUATION_DATASET_REQUIRED_BEFORE_R17B_PROTOCOL_LOCK",
+  "training": false,
+  "inference": false,
+  "checkpoint_classes": [
+    "tiger",
+    "lion",
+    "elephant",
+    "crocodile"
+  ],
+  "total_elephant_images": 179,
+  "total_elephant_plus_other_images": 17,
+  "cooccurrence_rate_among_elephant_images": 0.09497206703910614,
+  "decision": "EXISTING_COOCCURRENCE_IS_SMALL_SUPPLEMENTARY_ONLY",
+  "new_external_dataset_required_for_main_test": true,
+  "important_interpretation": [
+    "A multi-class checkpoint does not prove same-image mixed-species robustness.",
+    "Cow/deer/dog/horse and BAMBI deer/human are out-of-class negative confusers for this 4-class checkpoint, not named supported classes.",
+    "If existing elephant+other co-occurrence is insufficient, acquire/freeze an external mixed-species evaluation dataset before robustness inference."
+  ],
+  "outputs": {
+    "image_level": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A2_existing_dataset_cooccurrence_audit\\R17A2_IMAGE_LEVEL_COOCCURRENCE_AUDIT.csv",
+    "split_level": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A2_existing_dataset_cooccurrence_audit\\R17A2_SPLIT_LEVEL_COOCCURRENCE_SUMMARY.csv",
+    "pair_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A2_existing_dataset_cooccurrence_audit\\R17A2_ELEPHANT_PAIR_COUNTS.csv",
+    "examples": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A2_existing_dataset_cooccurrence_audit\\R17A2_ELEPHANT_PLUS_OTHER_EXAMPLES.csv",
+    "decision_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A2_existing_dataset_cooccurrence_audit\\R17A2_DECISION_SUMMARY.csv"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "step": "R9H_B_EXACT_FROZEN_CANONICALIZATION_GEOMETRY_FORMULA_LOCK",
+  "created_utc": "2026-10-29T11:04:51.945766+00:00",
+  "status": "R9H_B_EXACT_FROZEN_CANONICALIZATION_FORMULA_LOCKED_READY_FOR_R9H_C_ANISOTROPY_GEOMETRY_DISTORTION_AUDIT",
+  "equivalence_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_k2b2_executable_canonicalizer_equivalence.py",
+  "equivalence_source_sha256": "9c3cc338a9f8b998ae51943c44bbac20756dc89842b507c78d93674bed12c6f9",
+  "selected_build_src": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+  "selected_build_src_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+  "canonicalize_sample_source_sha256": "05e6b382583116c0ce9bf5c79a368807f88bf9f681cea822ed686fe7b89b601d",
+  "recursive_local_dependencies": [
+    "canonicalize_sample",
+    "estimate_heading",
+    "history_path_length",
+    "rotation_to_heading"
+  ],
+  "referenced_global_names": [
+    "RECENT_HEADING_FRAMES",
+    "estimate_heading",
+    "history_path_length",
+    "rotation_to_heading"
+  ],
+  "fallback_used": false,
+  "new_training": false,
+  "geometry_metrics_run": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "outputs": {
+    "candidate_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_BUILD_FINAL_SOURCE_CANDIDATES.csv",
+    "formula_lock_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_EXACT_FORMULA_LOCK_SUMMARY.csv",
+    "function_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_EXACT_CANONICALIZER_FUNCTIONS.csv",
+    "function_dependencies": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_FUNCTION_DEPENDENCIES.csv",
+    "referenced_constants": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_REFERENCED_CONSTANTS.csv",
+    "formula_lines": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_GEOMETRY_FORMULA_LINES.csv",
+    "exact_source_bundle": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_EXACT_CANONICALIZER_SOURCE_BUNDLE.txt"
+  }
+}

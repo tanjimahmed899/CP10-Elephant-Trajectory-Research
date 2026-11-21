@@ -1,0 +1,10 @@
+{
+  "step": "STEP_6D_K3C7_BAMBI_ANCHOR_CAMERA_REPROJECTION_EQUIVALENCE_AUDIT",
+  "has_pose_orientation_evidence": true,
+  "has_camera_model_evidence": true,
+  "has_projection_code_evidence": true,
+  "has_full_worldpoint_pose_frame_overlap_candidate": false,
+  "status": "BAMBI_ANCHOR_REPROJECTION_NOT_YET_PROVEN_DO_NOT_RUN_STEP7",
+  "important_limit": "Flight-6 FOVY=50 degrees remains an assumed/default BAMBI reference-pipeline value, not independently measured camera calibration.",
+  "decision_rule": "Only proceed to BAMBI Step18/Step7 reconstruction if the same observation-start anchor-camera reprojection can be numerically constructed from the existing BAMBI world points and camera pose/model."
+}

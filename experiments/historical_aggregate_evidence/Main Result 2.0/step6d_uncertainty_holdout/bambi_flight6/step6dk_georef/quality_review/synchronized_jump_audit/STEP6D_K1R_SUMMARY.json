@@ -1,0 +1,15 @@
+{
+  "step": "STEP_6D_K1R_SYNCHRONIZED_JUMP_CAMERA_POSE_AUDIT",
+  "robust_jump_steps": 31,
+  "unique_robust_jump_transitions": 4,
+  "synchronized_events_ge_3_tracks": 3,
+  "verdict": "SYNCHRONIZED_GLOBAL_DISCONTINUITY_EVIDENCE_FOUND",
+  "proposed_breaks_applied": false,
+  "important_notes": [
+    "No animal-speed cutoff is used to delete detections.",
+    "Synchronized jumps across multiple animals at the same frame transition are evaluated as possible camera-pose/projection artefacts.",
+    "Raw-image box motion, camera-pose deltas, and projected-world motion are reported together.",
+    "Any segmentation breakpoint must be explicitly locked in a later step before 10 Hz interpolation.",
+    "The Flight-6 working pose uses the BAMBI reference 50-degree FOV assumption."
+  ]
+}

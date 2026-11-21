@@ -1,0 +1,13 @@
+{
+  "step": "STEP_6D_K3A0_FROZEN_TRANSFORMER_SOURCE_CHECKPOINT_AUDIT",
+  "canonical_lock_verified": true,
+  "checkpoint_files_found": 42,
+  "transformer_candidate_functions": 9,
+  "status": "FROZEN_MODEL_CANDIDATES_FOUND_PENDING_EXACT_TASK_SEED_MAPPING",
+  "important_rules": [
+    "No BAMBI prediction is generated in K3A0.",
+    "Canonical locked hashes are verified before any inference-related work.",
+    "Exact frozen task/seed/checkpoint mapping must be source-confirmed; filenames alone are not sufficient.",
+    "Do not retrain or recalibrate any model on BAMBI."
+  ]
+}

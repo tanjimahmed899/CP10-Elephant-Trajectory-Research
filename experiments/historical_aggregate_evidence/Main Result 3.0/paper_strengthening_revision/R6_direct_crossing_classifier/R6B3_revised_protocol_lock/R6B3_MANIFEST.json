@@ -1,0 +1,18 @@
+{
+  "step": "R6B3_REVISED_DIRECT_CROSSING_CLASSIFIER_PROTOCOL_LOCK",
+  "created_utc": "2026-10-29T08:01:46.081744+00:00",
+  "status": "R6B3_REVISED_TRACK_DISJOINT_FEATURE_MODEL_THRESHOLD_PROTOCOL_LOCKED_READY_FOR_R6C_OOF_FIT",
+  "classifier_trained": false,
+  "threshold_selected": false,
+  "evaluation_used_for_selection": false,
+  "external_sklearn_dependency": false,
+  "cv_grouping_unit": "track_key",
+  "cv_folds_per_task": 5,
+  "locked_protocol": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6B3_revised_protocol_lock\\R6B3_LOCKED_DIRECT_CLASSIFIER_PROTOCOL.json",
+  "locked_protocol_sha256": "17390d6bfff5bb71952d5a4af2186c5578c037fd1cfc4d2800a0d0ee09c61419",
+  "locked_fold_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6B3_revised_protocol_lock\\R6B3_LOCKED_5FOLD_TRACK_PARTITIONS.csv",
+  "locked_fold_csv_sha256": "096ae6ad079c0b9e937bc7a7c59616fa1fa97a3e057c7a600feb149c0a987b7f",
+  "validation_source_sha256": "65dd1b2b5f64802c144e64ce9e722c8765486e4a725a5feb17cc51a6b8af07c5",
+  "evaluation_source_sha256": "08d75da57a9f2ff42a30b6a70a42382a784628aa933882528f0a55c3b28ce024",
+  "source_overlap_count": 0
+}

@@ -1,0 +1,22 @@
+{
+  "step": "R13B_V2_BBOX_GT_AND_DETECTOR_PROVENANCE_FIX",
+  "created_utc": "2026-10-30T11:04:22.422083+00:00",
+  "status": "R13B_V2_COMPATIBILITY_PASS_DETECTOR_FRAMES_TRACKING_GT_AND_NEW_TRACKER_AVAILABLE_READY_FOR_R13C_FROZEN_END_TO_END_PROTOCOL_LOCK",
+  "training": false,
+  "detector_inference": false,
+  "tracker_inference": false,
+  "original_files_modified": false,
+  "detector_checkpoint_lock": "E:\\AIUB\\Capstone Project\\Final 1.0\\Elephant Detection.v2-resized640.yolov8 (2)\\Elephant Detection.v2-resized640.yolov8\\runs\\detect\\elephant_final_clean\\weights\\best.pt",
+  "detector_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "detector_provenance_pass": true,
+  "tracking_gt_schema_pass": true,
+  "sequence_compatibility_pass": true,
+  "new_tracker_available": true,
+  "historical_pipeline_end_to_end_claim_allowed": false,
+  "new_revision_end_to_end_experiment_allowed": true,
+  "outputs": {
+    "bbox_gt_semantics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_V2_bbox_gt_and_detector_provenance_fix\\R13B_V2_BBOX_GT_SEMANTICS_AUDIT.csv",
+    "detector_provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_V2_bbox_gt_and_detector_provenance_fix\\R13B_V2_DETECTOR_PROVENANCE_AUDIT.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_V2_bbox_gt_and_detector_provenance_fix\\R13B_V2_COMPATIBILITY_SUMMARY.csv"
+  }
+}

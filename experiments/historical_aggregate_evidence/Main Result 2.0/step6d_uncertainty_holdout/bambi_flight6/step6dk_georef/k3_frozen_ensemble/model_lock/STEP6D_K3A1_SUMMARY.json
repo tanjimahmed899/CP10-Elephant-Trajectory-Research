@@ -1,0 +1,17 @@
+{
+  "canonical_lock_verified": true,
+  "exact_checkpoint_set_match": true,
+  "source_mapping_complete_in_primary_evaluator": true,
+  "locked_tasks": [
+    "2s_to_2s",
+    "2s_to_5s"
+  ],
+  "locked_seeds": [
+    42,
+    52,
+    62
+  ],
+  "locked_checkpoint_count": 6,
+  "lock_status": "NEW_FROZEN_MODEL_LOCK_CREATED",
+  "status": "FROZEN_3SEED_TRANSFORMER_ENSEMBLE_READY_FOR_FIRST_BAMBI_INFERENCE"
+}

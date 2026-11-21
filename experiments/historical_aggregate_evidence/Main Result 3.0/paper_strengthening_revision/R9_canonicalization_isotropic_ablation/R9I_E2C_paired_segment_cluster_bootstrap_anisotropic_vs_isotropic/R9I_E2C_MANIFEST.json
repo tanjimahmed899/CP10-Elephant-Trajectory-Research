@@ -1,0 +1,29 @@
+{
+  "step": "R9I_E2C_PAIRED_ANISOTROPIC_VS_ISOTROPIC_SEGMENT_CLUSTER_BOOTSTRAP",
+  "created_utc": "2026-10-30T04:28:17.421642+00:00",
+  "status": "R9I_E2C_PAIRED_SEGMENT_CLUSTER_BOOTSTRAP_COMPLETE_READY_FOR_R9I_F_CANONICALIZATION_ABLATION_CONCLUSION",
+  "training": false,
+  "inference": false,
+  "paired_samples": true,
+  "primary_metric_space": "pixel",
+  "delta_definition": "isotropic - anisotropic; negative favors isotropic",
+  "seed_handling": "same-seed sample errors paired, then averaged across seeds before primary segment analysis",
+  "dependency_unit": "(sequence, segment_id)",
+  "primary_within_segment_reduction": "median paired pixel error difference",
+  "primary_across_segment_estimand": "mean of segment-level medians",
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261029,
+  "ci": "95% percentile cluster bootstrap",
+  "multiple_testing_adjustment": false,
+  "claim_guardrail": "Do not claim universal isotropic superiority unless the direction is consistent and the paired clustered CI supports it. Native normalized ADE/FDE are not used for cross-representation superiority claims.",
+  "outputs": {
+    "all_seed_paired_sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_ALL_SEED_PAIRED_SAMPLE_METRICS.csv",
+    "three_seed_mean_paired_sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_3SEED_MEAN_PAIRED_SAMPLE_METRICS.csv",
+    "segment_level_effects": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_SEGMENT_LEVEL_PAIRED_EFFECTS.csv",
+    "primary_bootstrap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_PRIMARY_SEGMENT_CLUSTER_BOOTSTRAP_RESULTS.csv",
+    "seed_sensitivity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_SEED_SENSITIVITY.csv",
+    "leave_one_sequence_out": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_LEAVE_ONE_SEQUENCE_OUT_SENSITIVITY.csv",
+    "transformer_3seed_prediction_ensemble": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_TRANSFORMER_3SEED_PREDICTION_ENSEMBLE_COMPARISON.csv",
+    "decision_table": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E2C_paired_segment_cluster_bootstrap_anisotropic_vs_isotropic\\R9I_E2C_REPRESENTATION_DECISION_TABLE.csv"
+  }
+}

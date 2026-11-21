@@ -1,0 +1,24 @@
+{
+  "step": "R10D_CROSS_DOMAIN_TRANSFORMER_ENSEMBLE_CONCLUSION",
+  "created_utc": "2026-10-30T05:22:24.244522+00:00",
+  "status": "R10D_CROSS_DOMAIN_ENSEMBLE_CONCLUSION_LOCKED_R10_COMPLETE_READY_FOR_R11_NOISE_FLOOR_ANALYSIS",
+  "training": false,
+  "inference": false,
+  "global_conclusion": "Frozen 3-seed Transformer averaging consistently improves ADE and FDE relative to mean individual-seed error on BIRDSAI TestReal and fresh WildBox for both 2s and 5s horizons.",
+  "all_primary_mean_seed_comparisons_significant": true,
+  "all_validation_selected_seed_comparisons_significant": true,
+  "all_fresh_wildbox_leave_one_source_out_effects_negative": true,
+  "all_diversity_gain_associations_negative": true,
+  "recommended_pipeline_role": "Use the frozen 3-seed Transformer prediction ensemble as the primary Transformer output for downstream uncertainty and warning analysis.",
+  "claim_guardrails": [
+    "Do not generalize ensemble benefit to GRU/LSTM without separate evidence.",
+    "Do not call the 3-video WildBox holdout broad ecological generalization.",
+    "Do not treat diversity-gain correlation as causal evidence.",
+    "Do not claim end-to-end field effectiveness from forecasting ensemble results alone."
+  ],
+  "outputs": {
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10D_cross_domain_ensemble_conclusion\\R10D_CROSS_DOMAIN_ENSEMBLE_CLAIM_MATRIX.csv",
+    "external_loo_consistency": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10D_cross_domain_ensemble_conclusion\\R10D_EXTERNAL_LEAVE_ONE_SOURCE_OUT_CONSISTENCY.csv",
+    "manuscript_ready_conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10D_cross_domain_ensemble_conclusion\\R10D_MANUSCRIPT_READY_ENSEMBLE_CONCLUSION.txt"
+  }
+}

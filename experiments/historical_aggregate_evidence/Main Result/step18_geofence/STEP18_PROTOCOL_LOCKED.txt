@@ -1,0 +1,99 @@
+STEP 18 — VIRTUAL-GEOFENCE EARLY-WARNING PROTOCOL
+==================================================================================
+
+STATUS
+- Protocol frozen before TestReal / fresh WildBox geofence evaluation.
+- No downstream classifier is trained.
+- No warning threshold is optimized using F1, AUROC, AUPRC or test performance.
+- Warning threshold = 0 signed normalized-coordinate units, corresponding to predicted boundary crossing.
+- Step18A uses only fixed TrainReal track-disjoint validation for diagnostic evaluation.
+- BIRDSAI TestReal is not loaded in Step18A.
+- WildBox is not loaded in Step18A.
+
+MODEL
+- Frozen Compact Temporal Transformer.
+- Frozen seeds: 42, 52, 62.
+- Forecast = arithmetic mean of the three seed trajectories.
+
+VIRTUAL GEOFENCES
+- Axes: x and y.
+- Fixed normalized boundaries: 0.25, 0.50, 0.75.
+- For each axis-boundary pair, the last observed position determines the current safe side.
+- The opposite side is treated as the virtual risk zone.
+- Therefore each trajectory normally produces six eligible directional boundary instances.
+- These are experimental virtual boundaries; they are NOT labeled crop/village conflict zones.
+
+EVENT DEFINITION
+- True crossing: ground-truth future reaches/crosses the boundary into the risk side.
+- Predicted warning: ensemble-mean future reaches/crosses the same boundary.
+- Continuous risk score: maximum directional signed boundary penetration.
+- Decision threshold: risk_score >= 0.
+- TTE: first future crossing timestep.
+- Warning lead time for a true positive is actual TTE because the warning is generated at forecast time zero.
+
+METRICS
+- Precision, recall, F1.
+- False-warning rate and miss rate.
+- AUROC and AUPRC using continuous risk score.
+- TTE MAE and TTE bias among correctly warned crossings.
+- Warning lead time.
+- Boundary-level and source-level metrics.
+- Seed vote/disagreement retained as diagnostic information only.
+
+LIMITATION
+- Geofence positives are rare and source-concentrated.
+- This experiment is a secondary downstream early-warning benchmark, not evidence of actual human-elephant conflict prediction.
+- Coordinates are normalized image-plane units, not metres.
+- Seed vote fraction is not interpreted as a calibrated probability.
+
+PROTOCOL SHA256
+23c47c8204c09dbc96bbb06bd2f9038929e9405fb5a64be95fce491f3155fa65
+
+VALIDATION AUDIT
+----------------------------------------------------------------------------------
+    task  validation_samples  expected_instances  actual_instances  exact_boundary_ties_excluded  sources  tracks
+2s_to_2s                  97                 582               582                             0        3      13
+2s_to_5s                  88                 528               528                             0        2       7
+
+VALIDATION SUMMARY
+----------------------------------------------------------------------------------
+ instances  positive  negative  positive_rate  TP  FP  FN  TN  precision   recall       F1  specificity  false_warning_rate  miss_rate    AUROC    AUPRC  TTE_MAE_sec  TTE_bias_sec  mean_warning_lead_sec  median_warning_lead_sec     task  warning_threshold
+       582        23       559       0.039519   5   3  18 556   0.625000 0.217391 0.322581     0.994633            0.005367   0.782609 0.962200 0.622290       0.6800        0.4400                   0.62                     0.60 2s_to_2s                0.0
+       528        26       502       0.049242   8   3  18 499   0.727273 0.307692 0.432432     0.994024            0.005976   0.692308 0.981995 0.746403       0.9625        0.5625                   0.65                     0.35 2s_to_5s                0.0
+
+BOUNDARY SUMMARY
+----------------------------------------------------------------------------------
+ instances  positive  negative  positive_rate  TP  FP  FN  TN  precision   recall       F1  specificity  false_warning_rate  miss_rate    AUROC    AUPRC  TTE_MAE_sec  TTE_bias_sec  mean_warning_lead_sec  median_warning_lead_sec     task boundary_id
+        10         1         9       0.100000   0   0   1   9        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_2s x_0.25_high
+        87         0        87       0.000000   0   0   0  87        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_2s  x_0.25_low
+        52         4        48       0.076923   1   1   3  47   0.500000 0.250000 0.333333     0.979167            0.020833   0.750000 0.984375 0.804167     0.200000          0.20               0.100000                     0.10 2s_to_2s x_0.50_high
+        45         1        44       0.022222   1   1   0  43   0.500000 1.000000 0.666667     0.977273            0.022727   0.000000 0.977273 0.500000     1.000000          1.00               0.100000                     0.10 2s_to_2s  x_0.50_low
+        86         3        83       0.034884   1   0   2  83   1.000000 0.333333 0.500000     1.000000            0.000000   0.666667 0.979920 0.791667     0.200000          0.20               1.200000                     1.20 2s_to_2s x_0.75_high
+        11         0        11       0.000000   0   0   0  11        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_2s  x_0.75_low
+        12         1        11       0.083333   0   0   1  11        NaN 0.000000      NaN     1.000000            0.000000   1.000000 0.818182 0.333333          NaN           NaN                    NaN                      NaN 2s_to_2s y_0.25_high
+        85         4        81       0.047059   1   0   3  81   1.000000 0.250000 0.400000     1.000000            0.000000   0.750000 1.000000 1.000000     1.400000          1.40               0.600000                     0.60 2s_to_2s  y_0.25_low
+        54         1        53       0.018519   0   0   1  53        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_2s y_0.50_high
+        43         5        38       0.116279   1   0   4  38   1.000000 0.200000 0.333333     1.000000            0.000000   0.800000 1.000000 1.000000     0.600000         -0.60               1.100000                     1.10 2s_to_2s  y_0.50_low
+        90         2        88       0.022222   0   0   2  88        NaN 0.000000      NaN     1.000000            0.000000   1.000000 0.897727 0.550000          NaN           NaN                    NaN                      NaN 2s_to_2s y_0.75_high
+         7         1         6       0.142857   0   1   1   5   0.000000 0.000000      NaN     0.833333            0.166667   1.000000 0.666667 0.333333          NaN           NaN                    NaN                      NaN 2s_to_2s  y_0.75_low
+         1         1         0       1.000000   0   0   1   0        NaN 0.000000      NaN          NaN                 NaN   1.000000      NaN 1.000000          NaN           NaN                    NaN                      NaN 2s_to_5s x_0.25_high
+        87         0        87       0.000000   0   0   0  87        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_5s  x_0.25_low
+        25         4        21       0.160000   1   0   3  21   1.000000 0.250000 0.400000     1.000000            0.000000   0.750000 0.988095 0.950000     1.200000         -1.20               1.900000                     1.90 2s_to_5s x_0.50_high
+        63         0        63       0.000000   0   0   0  63        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_5s  x_0.50_low
+        70         4        66       0.057143   1   0   3  66   1.000000 0.250000 0.400000     1.000000            0.000000   0.750000 1.000000 1.000000     1.600000          1.60               0.100000                     0.10 2s_to_5s x_0.75_high
+        18         0        18       0.000000   0   0   0  18        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_5s  x_0.75_low
+         2         1         1       0.500000   0   0   1   1        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_5s y_0.25_high
+        86         1        85       0.011628   0   0   1  85        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_5s  y_0.25_low
+        32         7        25       0.218750   3   2   4  23   0.600000 0.428571 0.500000     0.920000            0.080000   0.571429 0.891429 0.746032     0.366667          0.10               0.333333                     0.20 2s_to_5s y_0.50_high
+        56         6        50       0.107143   2   1   4  49   0.666667 0.333333 0.444444     0.980000            0.020000   0.666667 0.936667 0.707702     1.150000          1.15               0.350000                     0.35 2s_to_5s  y_0.50_low
+        85         1        84       0.011765   1   0   0  84   1.000000 1.000000 1.000000     1.000000            0.000000   0.000000 1.000000 1.000000     1.500000          1.50               1.500000                     1.50 2s_to_5s y_0.75_high
+         3         1         2       0.333333   0   0   1   2        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_5s  y_0.75_low
+
+SOURCE SUMMARY
+----------------------------------------------------------------------------------
+ instances  positive  negative  positive_rate  TP  FP  FN  TN  precision   recall       F1  specificity  false_warning_rate  miss_rate    AUROC    AUPRC  TTE_MAE_sec  TTE_bias_sec  mean_warning_lead_sec  median_warning_lead_sec     task          source_group
+        24         0        24       0.000000   0   0   0  24        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_2s 0000000010_0000000000
+        12         1        11       0.083333   0   0   1  11        NaN 0.000000      NaN     1.000000            0.000000   1.000000 1.000000 1.000000          NaN           NaN                    NaN                      NaN 2s_to_2s 0000000351_0000000000
+       546        22       524       0.040293   5   3  17 521   0.625000 0.227273 0.333333     0.994275            0.005725   0.772727 0.962266 0.630951       0.6800        0.4400                   0.62                     0.60 2s_to_2s 0000000367_0000000000
+         6         0         6       0.000000   0   0   0   6        NaN      NaN      NaN     1.000000            0.000000        NaN      NaN      NaN          NaN           NaN                    NaN                      NaN 2s_to_5s 0000000010_0000000000
+       522        26       496       0.049808   8   3  18 493   0.727273 0.307692 0.432432     0.993952            0.006048   0.692308 0.982940 0.760967       0.9625        0.5625                   0.65                     0.35 2s_to_5s 0000000367_0000000000

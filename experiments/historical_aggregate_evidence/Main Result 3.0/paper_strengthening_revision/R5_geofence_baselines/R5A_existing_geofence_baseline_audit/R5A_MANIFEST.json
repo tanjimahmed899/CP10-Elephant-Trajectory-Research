@@ -1,0 +1,15 @@
+{
+  "step": "R5A_EXISTING_GEOFENCE_BASELINE_AUDIT",
+  "created_utc": "2026-10-29T06:51:54.214163+00:00",
+  "status": "R5A_AUDIT_COMPLETE_MISSING_TRIVIAL_BASELINES_REQUIRE_TARGETED_ADDITION",
+  "new_warning_experiment": false,
+  "step7_root": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step7_response_aware_warning",
+  "missing_trivial_baselines": [
+    "always_alert_or_always_red",
+    "never_alert_or_always_green"
+  ],
+  "inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5A_existing_geofence_baseline_audit\\R5A_step7_artifact_inventory.csv",
+  "high_value_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5A_existing_geofence_baseline_audit\\R5A_high_value_geofence_csvs.csv",
+  "text_evidence_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5A_existing_geofence_baseline_audit\\R5A_geofence_text_evidence.csv",
+  "presence_matrix_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5A_existing_geofence_baseline_audit\\R5A_baseline_presence_matrix.csv"
+}

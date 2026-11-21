@@ -1,0 +1,9 @@
+task,dataset,split,samples,tracks,sources,scale_floor,track_overlap_with_validation
+2s_to_2s,BIRDSAI,neural_train,434,49,3,0.06820264416877736,0.0
+2s_to_2s,BIRDSAI,neural_validation,97,13,3,0.06820264416877736,0.0
+2s_to_2s,BIRDSAI,untouched_test,1053,89,6,0.06820264416877736,
+2s_to_2s,WildBox,external_test,93,11,3,0.06820264416877736,
+2s_to_5s,BIRDSAI,neural_train,294,27,2,0.06732638773715147,0.0
+2s_to_5s,BIRDSAI,neural_validation,88,7,2,0.06732638773715147,0.0
+2s_to_5s,BIRDSAI,untouched_test,826,63,5,0.06732638773715147,
+2s_to_5s,WildBox,external_test,60,9,3,0.06732638773715147,

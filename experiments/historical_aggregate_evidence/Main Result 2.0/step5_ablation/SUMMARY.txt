@@ -1,0 +1,59 @@
+STEP 5: CONTROLLED REPRESENTATION ABLATION
+==============================================================================
+
+Protocol:
+- Baseline uses the existing frozen canonical + scale-normalized Transformer.
+- NO_SCALE removes only path-length scale normalization while retaining translation and heading alignment.
+- NO_CANONICALIZATION uses corrected absolute normalized x,y directly.
+- Same track-disjoint train/validation split.
+- Same seeds: 42, 52, 62.
+- Same architecture and training protocol.
+- Model selection uses validation track-macro ADE only.
+- Fresh WildBox is used only after training/model selection as frozen external evaluation.
+
+BASELINE FRESH SELF-CHECK
+-------------------------
+    task                      model     ADE_diff     FDE_diff
+2s_to_2s         Transformer_seed42 1.925873e-12 9.097605e-12
+2s_to_2s         Transformer_seed52 3.906795e-12 1.375753e-11
+2s_to_2s         Transformer_seed62 3.139110e-12 4.458979e-11
+2s_to_2s Transformer_3Seed_Ensemble 2.345738e-12 2.177777e-11
+2s_to_5s         Transformer_seed42 1.287660e-11 4.378188e-11
+2s_to_5s         Transformer_seed52 6.238857e-12 2.795275e-11
+2s_to_5s         Transformer_seed62 3.283811e-11 8.883699e-12
+2s_to_5s Transformer_3Seed_Ensemble 1.346392e-11 4.381051e-12
+
+FINAL ENSEMBLE ABLATION SUMMARY
+-------------------------------
+    task       dataset                  variant      ADE      FDE  track_macro_ADE  track_macro_FDE  source_macro_ADE  source_macro_FDE  ADE_degradation_vs_baseline_pct  FDE_degradation_vs_baseline_pct  track_macro_ADE_degradation_vs_baseline_pct
+2s_to_2s  BIRDSAI_TEST BASELINE_CANONICAL_SCALE 0.019076 0.032890         0.028372         0.053761          0.024345          0.044802                         0.000000                         0.000000                                     0.000000
+2s_to_2s  BIRDSAI_TEST                 NO_SCALE 0.018951 0.033310         0.024377         0.046785          0.023147          0.041733                        -0.658501                         1.276226                                   -14.081362
+2s_to_2s  BIRDSAI_TEST      NO_CANONICALIZATION 0.038784 0.054007         0.047300         0.070590          0.040214          0.060018                       103.312533                        64.203644                                    66.714342
+2s_to_2s FRESH_WILDBOX BASELINE_CANONICAL_SCALE 0.028814 0.053920         0.032251         0.058932          0.020038          0.036969                         0.000000                         0.000000                                     0.000000
+2s_to_2s FRESH_WILDBOX                 NO_SCALE 0.031330 0.059562         0.036293         0.067898          0.022445          0.042734                         8.730579                        10.464260                                    12.534701
+2s_to_2s FRESH_WILDBOX      NO_CANONICALIZATION 0.047759 0.073734         0.062990         0.091569          0.032146          0.050112                        65.748795                        36.746989                                    95.314260
+2s_to_5s  BIRDSAI_TEST BASELINE_CANONICAL_SCALE 0.035590 0.067247         0.054378         0.115669          0.059587          0.107665                         0.000000                         0.000000                                     0.000000
+2s_to_5s  BIRDSAI_TEST                 NO_SCALE 0.037127 0.068845         0.048454         0.104246          0.060447          0.108900                         4.317603                         2.376380                                   -10.892926
+2s_to_5s  BIRDSAI_TEST      NO_CANONICALIZATION 0.070801 0.103165         0.089850         0.144467          0.101005          0.147678                        98.934180                        53.412461                                    65.233120
+2s_to_5s FRESH_WILDBOX BASELINE_CANONICAL_SCALE 0.050132 0.105339         0.061518         0.125643          0.035973          0.070609                         0.000000                         0.000000                                     0.000000
+2s_to_5s FRESH_WILDBOX                 NO_SCALE 0.051729 0.108599         0.064011         0.130494          0.037667          0.073005                         3.184693                         3.094651                                     4.053010
+2s_to_5s FRESH_WILDBOX      NO_CANONICALIZATION 0.081598 0.140949         0.105822         0.175660          0.061483          0.099644                        62.766230                        33.805426                                    72.017053
+
+ENSEMBLE BENEFIT
+----------------
+    task       dataset                  variant  mean_single_seed_ADE  ensemble_ADE  ADE_ensemble_improvement_pct  mean_single_seed_FDE  ensemble_FDE  FDE_ensemble_improvement_pct
+2s_to_2s  BIRDSAI_TEST BASELINE_CANONICAL_SCALE              0.019505      0.019076                      2.199308              0.033640      0.032890                      2.229409
+2s_to_2s  BIRDSAI_TEST                 NO_SCALE              0.019097      0.018951                      0.766914              0.033399      0.033310                      0.267043
+2s_to_2s  BIRDSAI_TEST      NO_CANONICALIZATION              0.040220      0.038784                      3.570248              0.054396      0.054007                      0.715335
+2s_to_2s FRESH_WILDBOX BASELINE_CANONICAL_SCALE              0.029111      0.028814                      1.021483              0.054440      0.053920                      0.955314
+2s_to_2s FRESH_WILDBOX                 NO_SCALE              0.031451      0.031330                      0.386272              0.059630      0.059562                      0.113884
+2s_to_2s FRESH_WILDBOX      NO_CANONICALIZATION              0.049187      0.047759                      2.903515              0.074221      0.073734                      0.656439
+2s_to_5s  BIRDSAI_TEST BASELINE_CANONICAL_SCALE              0.036326      0.035590                      2.024636              0.067889      0.067247                      0.946430
+2s_to_5s  BIRDSAI_TEST                 NO_SCALE              0.037390      0.037127                      0.704356              0.068887      0.068845                      0.061758
+2s_to_5s  BIRDSAI_TEST      NO_CANONICALIZATION              0.072798      0.070801                      2.743868              0.104440      0.103165                      1.221226
+2s_to_5s FRESH_WILDBOX BASELINE_CANONICAL_SCALE              0.050657      0.050132                      1.035899              0.105757      0.105339                      0.395032
+2s_to_5s FRESH_WILDBOX                 NO_SCALE              0.051945      0.051729                      0.415556              0.108635      0.108599                      0.033403
+2s_to_5s FRESH_WILDBOX      NO_CANONICALIZATION              0.083270      0.081598                      2.007325              0.141582      0.140949                      0.447028
+
+Interpretation:
+Positive degradation percentages mean the ablated representation performs worse than the canonical+scale baseline.

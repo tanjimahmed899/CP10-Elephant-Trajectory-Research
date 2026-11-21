@@ -1,0 +1,31 @@
+{
+  "step": "R9E_V2_EXACT_FROZEN_WINDOW_PROTOCOL_SAMPLE_MATCH",
+  "created_utc": "2026-10-29T09:33:07.489343+00:00",
+  "status": "R9E_V2_FROZEN_SAMPLE_UNIVERSE_AND_WINDOW_PROTOCOL_MATCH_LOCKED_READY_FOR_R9F_ISOTROPIC_WINDOW_BUILD",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "failure_fixed": "Step2b raw_vs_corrected_sample_metrics has two rows per sample because Stationary and ConstantVelocity share the same frozen sample universe.",
+  "reference_table": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_baseline\\raw_vs_corrected_sample_metrics.csv",
+  "reference_table_sha256": "5676b7c386956650e91b471b9b683375f5e067876bfc2a07efd6127f1e87781a",
+  "reference_columns": {
+    "task_col": "task",
+    "sequence_col": "sequence",
+    "track_col": "track_key",
+    "sample_col": "sample_id",
+    "model_col": "model"
+  },
+  "expected_counts": {
+    "2s_to_2s": 1053,
+    "2s_to_5s": 826
+  },
+  "expected_models": [
+    "ConstantVelocity",
+    "Stationary"
+  ],
+  "model_duplication_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9E_V2_exact_window_protocol_match\\R9E_V2_MODEL_DUPLICATION_AUDIT.csv",
+  "sample_key_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9E_V2_exact_window_protocol_match\\R9E_V2_FROZEN_REFERENCE_SAMPLE_KEY_LOCK.csv",
+  "sample_key_lock_sha256": "84d60c42102c9a749c69abc00af61184315c56156d0fa090beda4ac06f4288a6",
+  "isotropic_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_isotropic_cleaned_track_points.csv",
+  "isotropic_source_sha256": "27054f53934573a4169b37b68cae502f4be4db9684dfad28fc9480839091d035",
+  "coverage_all_pass": true
+}

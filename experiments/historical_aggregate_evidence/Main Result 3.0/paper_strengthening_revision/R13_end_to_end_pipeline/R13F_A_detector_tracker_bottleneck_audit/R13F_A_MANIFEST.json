@@ -1,0 +1,25 @@
+{
+  "step": "R13F_A_DETECTOR_TRACKER_BOTTLENECK_DECOMPOSITION",
+  "created_utc": "2026-10-30T13:05:24.482536+00:00",
+  "status": "R13F_A_DETECTOR_TRACKER_BOTTLENECK_DECOMPOSITION_COMPLETE_REVIEW_BEFORE_FORECAST_PROPAGATION",
+  "training": false,
+  "inference": false,
+  "tuning": false,
+  "primary_iou": 0.5,
+  "diagnostic_ious": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "raw_detector_count_upper_bound_recall": 0.0892310893767558,
+  "raw_detector_recall_iou050": 0.05058786806783894,
+  "bytetrack_id_recall_iou050": 0.025928623452294245,
+  "botsort_id_recall_iou050": 0.028030381854125482,
+  "outputs": {
+    "per_sequence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_A_detector_tracker_bottleneck_audit\\R13F_A_PER_SEQUENCE_STAGE_DETECTION_METRICS.csv",
+    "aggregate": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_A_detector_tracker_bottleneck_audit\\R13F_A_AGGREGATE_STAGE_DETECTION_METRICS.csv",
+    "primary_decomposition": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_A_detector_tracker_bottleneck_audit\\R13F_A_PRIMARY_IOU050_STAGE_DECOMPOSITION.csv",
+    "track_coverage": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_A_detector_tracker_bottleneck_audit\\R13F_A_GT_TRACK_OBSERVATION_COVERAGE_IOU050.csv",
+    "conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_A_detector_tracker_bottleneck_audit\\R13F_A_CONCLUSION_TABLE.csv"
+  }
+}

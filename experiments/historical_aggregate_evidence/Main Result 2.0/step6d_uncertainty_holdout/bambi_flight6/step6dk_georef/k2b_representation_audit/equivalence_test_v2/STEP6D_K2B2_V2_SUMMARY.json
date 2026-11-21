@@ -1,0 +1,28 @@
+{
+  "step": "STEP_6D_K2B2_V2_EQUIVALENCE_AND_SCALE_FLOOR_AUDIT",
+  "probe_scale_floors": [
+    1e-08,
+    1e-06,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "equivalence_rows": 2835,
+  "max_differences": {
+    "history_max_abs_diff": 0.0,
+    "future_max_abs_diff": 0.0,
+    "origin_max_abs_diff": 0.15000000037252903,
+    "angle_periodic_abs_diff": 1.1897249629910789e-07,
+    "scale_abs_diff": 5.225761228189185e-07,
+    "path_length_abs_diff": 5.225761228189185e-07
+  },
+  "equivalence_status": "CANONICALIZER_MISMATCH_DO_NOT_PROCEED",
+  "direct_numeric_candidates": [
+    0.05
+  ],
+  "scale_floor_status": "SINGLE_DIRECT_NUMERIC_CANDIDATE_FOUND_REVIEW_CONTEXT_BEFORE_LOCK",
+  "overall_status": "CANONICALIZER_MISMATCH_DO_NOT_PROCEED__SINGLE_DIRECT_NUMERIC_CANDIDATE_FOUND_REVIEW_CONTEXT_BEFORE_LOCK",
+  "important_note": "Probe scale floors are used only to test equivalence. They are NOT candidates for final BAMBI canonicalization unless independently resolved from the original pipeline source."
+}

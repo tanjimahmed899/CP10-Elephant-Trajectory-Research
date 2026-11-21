@@ -1,0 +1,22 @@
+{
+  "step": "R9I_C0_EXACT_SCALE_FLOOR_DERIVATION_POPULATION_AUDIT",
+  "created_utc": "2026-10-29T12:34:12.759091+00:00",
+  "status": "R9I_C0_EXACT_SCALE_FLOOR_DERIVATION_POPULATION_RECOVERED_READY_FOR_R9I_C_V2_MATCHED_ISOTROPIC_DATASET_BUILD",
+  "frozen_scale_floors": {
+    "2s_to_2s": 0.06820264416877736,
+    "2s_to_5s": 0.06732638773715147
+  },
+  "new_dataset_built": false,
+  "new_training": false,
+  "model_inference": false,
+  "frozen_results_modified": false,
+  "reason_for_audit": "R9-I-C attempt derived 2s_to_2s q05=0.06784638218230425 from neural_split=train, which did not match frozen 0.06820264416877736. Therefore the derivation population must be recovered exactly before isotropic floor derivation.",
+  "outputs": {
+    "source_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_BUILD_FINAL_SCALE_FLOOR_SOURCE_CONTEXT.csv",
+    "relevant_functions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_SCALE_FLOOR_RELEVANT_FUNCTIONS.csv",
+    "population_quantile_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_POPULATION_QUANTILE_AUDIT.csv",
+    "exactish_matches": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_EXACTISH_MATCHES.csv",
+    "best_match_by_task": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_BEST_MATCH_BY_TASK.csv",
+    "provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C0_exact_scale_floor_population_audit\\R9I_C0_PROVENANCE.csv"
+  }
+}

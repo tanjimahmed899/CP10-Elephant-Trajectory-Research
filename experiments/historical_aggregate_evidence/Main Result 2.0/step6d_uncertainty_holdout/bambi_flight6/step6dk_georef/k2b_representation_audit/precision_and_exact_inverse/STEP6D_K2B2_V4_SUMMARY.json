@@ -1,0 +1,80 @@
+{
+  "step": "STEP_6D_K2B2_V4_FLOAT64_UTM_AND_EXACT_SOURCE_INVERSE_AUDIT",
+  "task_summaries": {
+    "2s_to_2s": {
+      "scale_floor": 0.06820264416877736,
+      "samples_tested": 250,
+      "max_history_canonical_diff": 0.0,
+      "max_future_canonical_diff": 0.0,
+      "max_train_inverse_roundtrip_error_m": 6.565824151039124e-07,
+      "max_eval_inverse_roundtrip_error_m": 6.565824151039124e-07,
+      "max_train_vs_eval_inverse_diff_m": 0.0,
+      "float64_raw_quantization_audit": {
+        "windows": 1855,
+        "X_dtype_old": "float32",
+        "Y_dtype_old": "float32",
+        "X_dtype_new": "float64",
+        "Y_dtype_new": "float64",
+        "history_quantization": {
+          "max_abs_coordinate_error_m": 0.24985371436923742,
+          "median_abs_coordinate_error_m": 0.027778029558248818,
+          "p95_abs_coordinate_error_m": 0.22440985683351755,
+          "max_radial_xy_error_m": 0.25102170856207595,
+          "median_radial_xy_error_m": 0.12821647880992676,
+          "p95_radial_xy_error_m": 0.2389815638043913
+        },
+        "future_quantization": {
+          "max_abs_coordinate_error_m": 0.2499989029020071,
+          "median_abs_coordinate_error_m": 0.027874767780303955,
+          "p95_abs_coordinate_error_m": 0.22265031281858683,
+          "max_radial_xy_error_m": 0.2513666264727863,
+          "median_radial_xy_error_m": 0.12722985069626186,
+          "p95_radial_xy_error_m": 0.2384368613309528
+        }
+      }
+    },
+    "2s_to_5s": {
+      "scale_floor": 0.06732638773715147,
+      "samples_tested": 250,
+      "max_history_canonical_diff": 0.0,
+      "max_future_canonical_diff": 0.0,
+      "max_train_inverse_roundtrip_error_m": 1.4221295714378357e-06,
+      "max_eval_inverse_roundtrip_error_m": 1.4221295714378357e-06,
+      "max_train_vs_eval_inverse_diff_m": 0.0,
+      "float64_raw_quantization_audit": {
+        "windows": 623,
+        "X_dtype_old": "float32",
+        "Y_dtype_old": "float32",
+        "X_dtype_new": "float64",
+        "Y_dtype_new": "float64",
+        "history_quantization": {
+          "max_abs_coordinate_error_m": 0.24962645396590233,
+          "median_abs_coordinate_error_m": 0.027566697914153337,
+          "p95_abs_coordinate_error_m": 0.22755684237927198,
+          "max_radial_xy_error_m": 0.25062050606247677,
+          "median_radial_xy_error_m": 0.1272137978528599,
+          "p95_radial_xy_error_m": 0.240115622746468
+        },
+        "future_quantization": {
+          "max_abs_coordinate_error_m": 0.2499989029020071,
+          "median_abs_coordinate_error_m": 0.028260294115170836,
+          "p95_abs_coordinate_error_m": 0.22251756116747856,
+          "max_radial_xy_error_m": 0.2513666264727863,
+          "median_radial_xy_error_m": 0.12555356898969267,
+          "p95_radial_xy_error_m": 0.23813706308322488
+        }
+      }
+    }
+  },
+  "max_canonical_tensor_diff": 0.0,
+  "max_original_source_roundtrip_error_m": 1.4221295714378357e-06,
+  "max_train_vs_eval_inverse_diff_m": 0.0,
+  "status": "FLOAT64_RAW_WINDOWS_REBUILT_WITH_IDENTICAL_COUNTS__CANONICAL_MODEL_TENSORS_EQUIVALENT__ORIGINAL_SOURCE_INVERSE_ROUNDTRIP_FAIL__TRAIN_EVAL_INVERSE_AGREE",
+  "important_interpretation": [
+    "Absolute UTM windows are rebuilt as float64 before canonicalization.",
+    "Canonical model tensors may still be stored as float32 after canonicalization.",
+    "The round-trip uses the original project inverse_transform_batch implementation, not a hand-written reconstruction.",
+    "The fixed task-specific training-derived scale floors are preserved.",
+    "No Transformer prediction, conformal coverage, or warning evaluation is performed."
+  ]
+}

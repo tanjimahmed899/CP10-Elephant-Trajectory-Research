@@ -1,0 +1,43 @@
+{
+  "step": "R17A3B_COCO_ANIMAL_COOCCURRENCE_AUDIT",
+  "created_utc": "2026-10-30T14:30:49.014149+00:00",
+  "status": "R17A3B_COCO_ANIMAL_AMONG_ANIMALS_POOL_VERIFIED_READY_FOR_R17A4_FROZEN_SUBSET_SELECTION_AND_PIXEL_DOWNLOAD",
+  "training": false,
+  "model_inference": false,
+  "image_pixels_downloaded": false,
+  "source": "COCO 2017",
+  "annotation_zip_url": "https://huggingface.co/datasets/pcuenq/coco-2017-mirror/resolve/5200d2cffae8121713bec767b4693bdafc0eeb0b/annotations_trainval2017.zip",
+  "annotation_zip_expected_sha256": "113a836d90195ee1f884e704da6304dfaaecff1f023f49b6ca93c4aaae470268",
+  "annotation_zip_expected_size_bytes": 252907541,
+  "annotation_zip_sha256": "113a836d90195ee1f884e704da6304dfaaecff1f023f49b6ca93c4aaae470268",
+  "train_json_sha256": "610fce4944abdeb15354cc765333805529359d12d88f2f711393ca586901d01d",
+  "val_json_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "target": "elephant",
+  "animal_confusers": [
+    "bird",
+    "cat",
+    "dog",
+    "horse",
+    "sheep",
+    "cow",
+    "bear",
+    "zebra",
+    "giraffe"
+  ],
+  "person_reported_separately": true,
+  "positive_elephant_plus_animal_images": 151,
+  "distinct_elephant_animal_pairs": 9,
+  "negative_multi_animal_no_elephant_images": 1571,
+  "elephant_only_control_images": 2081,
+  "main_pool_ready": true,
+  "outputs": {
+    "class_map": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_COCO_TARGET_CLASS_MAP.csv",
+    "all_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_ALL_CANDIDATES.csv",
+    "positive_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_ELEPHANT_PLUS_ANIMAL_CANDIDATES.csv",
+    "negative_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_NEGATIVE_MULTI_ANIMAL_CANDIDATES.csv",
+    "elephant_only_controls": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_ELEPHANT_ONLY_CONTROLS.csv",
+    "pair_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_ELEPHANT_ANIMAL_PAIR_COUNTS.csv",
+    "split_stats": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_SPLIT_STATS.csv",
+    "decision_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A3B_coco_animal_cooccurrence_audit\\R17A3B_DECISION_SUMMARY.csv"
+  }
+}

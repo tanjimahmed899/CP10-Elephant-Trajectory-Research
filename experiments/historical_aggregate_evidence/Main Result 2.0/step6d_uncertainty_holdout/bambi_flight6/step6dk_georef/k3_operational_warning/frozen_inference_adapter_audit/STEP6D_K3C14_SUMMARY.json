@@ -1,0 +1,29 @@
+{
+  "step": "STEP_6D_K3C14_EXACT_FROZEN_INFERENCE_ADAPTER_MODEL_MAPPING_AUDIT",
+  "status": "EXACT_FROZEN_INFERENCE_ADAPTER_AND_6_CHECKPOINT_MAPPING_PROVEN_READY_FOR_SECONDARY_LOCKED_INFERENCE",
+  "k3c13_manifest": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_canonical_lock_v1\\STEP6D_K3C13_CANONICAL_DATASET_LOCK.json",
+  "k3c13_manifest_sha256": "71d83c774233538342f4b410a789750943e61a8513fe983249c8f8f5a2aee605",
+  "evaluator_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_birdsai_testreal_frozen_ensemble.py",
+  "evaluator_sha256": "b3002766925305adb2fd54339cda44188223aa85351c3c8299e2bbf1bab7ee66",
+  "load_transformer_signature": [
+    {
+      "name": "task",
+      "default": null
+    },
+    {
+      "name": "seed",
+      "default": null
+    },
+    {
+      "name": "future_length",
+      "default": null
+    }
+  ],
+  "k3a2_source": "C:\\Users\\HP\\Downloads\\step6d_k3a2_v4_first_locked_bambi_inference.py",
+  "readiness_reasons": [
+    "No load_transformer call found in K3A2 source."
+  ],
+  "no_prediction_generated": true,
+  "no_q_recalibration": true,
+  "no_step7_metric_generated": true
+}

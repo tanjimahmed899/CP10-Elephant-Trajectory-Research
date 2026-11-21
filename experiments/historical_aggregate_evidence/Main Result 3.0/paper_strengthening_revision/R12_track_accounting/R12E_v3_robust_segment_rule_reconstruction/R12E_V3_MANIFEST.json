@@ -1,0 +1,23 @@
+{
+  "step": "R12E_V3_ROBUST_SEGMENT_RULE_RECONSTRUCTION",
+  "created_utc": "2026-10-30T06:10:06.251296+00:00",
+  "status": "R12E_V3_RULE_EXTRACTED_BUT_RECONSTRUCTION_NOT_EXACT_REVIEW_BEFORE_R12F",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "builder_record_source": "R12D_RANKED_SEGMENT_BUILDER_SOURCE_CANDIDATES",
+  "locked_sha256": "3e2f61aad673a0a5e04dac470ee45d47f9c520dfc11a206017ef8bce128556f4",
+  "current_sha256": "3e2f61aad673a0a5e04dac470ee45d47f9c520dfc11a206017ef8bce128556f4",
+  "semantic_guard_pass": true,
+  "exact_count_reconstruction": false,
+  "exact_track_set_reconstruction": false,
+  "outputs": {
+    "provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_PROVENANCE_CHECK.csv",
+    "rule_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_EXACT_RULE_LOCK.csv",
+    "segments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_RECONSTRUCTED_SEGMENTS.csv",
+    "reconstructed_2s": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_RECONSTRUCTED_2S_WINDOWS.csv",
+    "reconstructed_5s": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_RECONSTRUCTED_5S_WINDOWS.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_RECONSTRUCTION_VS_FROZEN_COUNTS.csv",
+    "track_sets": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v3_robust_segment_rule_reconstruction\\R12E_V3_RECONSTRUCTED_VS_FROZEN_TRACK_SETS.csv"
+  }
+}

@@ -1,0 +1,495 @@
+STEP 7D — BOUNDARY-WISE / EVENT-AGGREGATION AUDIT
+================================================================================
+
+Purpose: determine whether Step-7B saturation is caused by collapsing multiple virtual geofence instances with an ANY/maximum-severity rule.
+This is a secondary diagnostic. k-of-N aggregation is not an operational rule unless the six boundaries are confirmed to represent simultaneous physical boundaries rather than separate evaluation scenarios.
+
+BOUNDARY DEFINITIONS
+--------------------
+axis  boundary direction boundary_id
+   x      0.25      high x_0.25_high
+   x      0.25       low  x_0.25_low
+   x      0.50      high x_0.50_high
+   x      0.50       low  x_0.50_low
+   x      0.75      high x_0.75_high
+   x      0.75       low  x_0.75_low
+   y      0.25      high y_0.25_high
+   y      0.25       low  y_0.25_low
+   y      0.50      high y_0.50_high
+   y      0.50       low  y_0.50_low
+   y      0.75      high y_0.75_high
+   y      0.75       low  y_0.75_low
+
+BOUNDARY COUNT AUDIT
+--------------------
+         dataset     task  response_time_sec  samples  min_boundaries  median_boundaries  max_boundaries
+BIRDSAI_TestReal 2s_to_2s                0.5     1053               6                6.0               6
+BIRDSAI_TestReal 2s_to_2s                1.0     1053               6                6.0               6
+BIRDSAI_TestReal 2s_to_2s                1.5     1053               6                6.0               6
+BIRDSAI_TestReal 2s_to_2s                2.0     1053               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                0.5      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                1.0      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                1.5      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                2.0      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                3.0      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                4.0      826               6                6.0               6
+BIRDSAI_TestReal 2s_to_5s                5.0      826               6                6.0               6
+   WildBox_Fresh 2s_to_2s                0.5      865               6                6.0               6
+   WildBox_Fresh 2s_to_2s                1.0      865               6                6.0               6
+   WildBox_Fresh 2s_to_2s                1.5      865               6                6.0               6
+   WildBox_Fresh 2s_to_2s                2.0      865               6                6.0               6
+   WildBox_Fresh 2s_to_5s                0.5      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                1.0      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                1.5      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                2.0      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                3.0      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                4.0      637               6                6.0               6
+   WildBox_Fresh 2s_to_5s                5.0      637               6                6.0               6
+
+BOUNDARY-MACRO SUMMARY
+----------------------
+         dataset     task  response_time_sec  boundaries  macro_green_rate  macro_yellow_rate  macro_red_rate  macro_alert_sensitivity  macro_false_alert_rate  macro_alert_precision  min_boundary_false_alert  max_boundary_false_alert  min_boundary_sensitivity  max_boundary_sensitivity
+BIRDSAI_TestReal 2s_to_2s                0.5          12          0.370338           0.612204        0.017458                 0.965774                0.617595               0.115309                  0.177215                       1.0                  0.714286                       1.0
+BIRDSAI_TestReal 2s_to_2s                1.0          12          0.370338           0.606608        0.023054                 0.965774                0.617595               0.115309                  0.177215                       1.0                  0.714286                       1.0
+BIRDSAI_TestReal 2s_to_2s                1.5          12          0.370338           0.601679        0.027983                 0.965774                0.617595               0.115309                  0.177215                       1.0                  0.714286                       1.0
+BIRDSAI_TestReal 2s_to_2s                2.0          12          0.370338           0.594015        0.035647                 0.965774                0.617595               0.115309                  0.177215                       1.0                  0.714286                       1.0
+BIRDSAI_TestReal 2s_to_5s                0.5          12          0.405207           0.582936        0.011857                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                1.0          12          0.405207           0.575083        0.019710                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                1.5          12          0.405207           0.570573        0.024219                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                2.0          12          0.405207           0.569064        0.025729                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                3.0          12          0.405207           0.562986        0.031807                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                4.0          12          0.405207           0.561073        0.033719                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+BIRDSAI_TestReal 2s_to_5s                5.0          12          0.405207           0.554856        0.039936                 0.981413                0.562795               0.217777                  0.156091                       1.0                  0.901961                       1.0
+   WildBox_Fresh 2s_to_2s                0.5          12          0.370689           0.620020        0.009291                 0.982917                0.607273               0.119174                  0.258953                       1.0                  0.875000                       1.0
+   WildBox_Fresh 2s_to_2s                1.0          12          0.370689           0.614833        0.014478                 0.982917                0.607273               0.119174                  0.258953                       1.0                  0.875000                       1.0
+   WildBox_Fresh 2s_to_2s                1.5          12          0.370689           0.608638        0.020673                 0.982917                0.607273               0.119174                  0.258953                       1.0                  0.875000                       1.0
+   WildBox_Fresh 2s_to_2s                2.0          12          0.370689           0.600074        0.029237                 0.982917                0.607273               0.119174                  0.258953                       1.0                  0.875000                       1.0
+   WildBox_Fresh 2s_to_5s                0.5          12          0.408064           0.584667        0.007270                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                1.0          12          0.408064           0.581933        0.010003                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                1.5          12          0.408064           0.577631        0.014306                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                2.0          12          0.408064           0.573075        0.018861                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                3.0          12          0.408064           0.567637        0.024299                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                4.0          12          0.408064           0.566209        0.025728                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+   WildBox_Fresh 2s_to_5s                5.0          12          0.408064           0.561241        0.030695                 0.926102                0.556652               0.216561                  0.214651                       1.0                  0.631579                       1.0
+
+ALERTING-BOUNDARY COUNT DISTRIBUTION
+-----------------------------------
+         dataset     task  response_time_sec  actual_crossing  alerting_boundaries  samples  fraction
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    1       74  0.090354
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    2      300  0.366300
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    3      255  0.311355
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    4      109  0.133089
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    5       30  0.036630
+BIRDSAI_TestReal 2s_to_2s                0.5            False                    6       51  0.062271
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    1        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    2       78  0.333333
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    3       83  0.354701
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    4       40  0.170940
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    5        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                0.5             True                    6       15  0.064103
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    1       74  0.090354
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    2      300  0.366300
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    3      255  0.311355
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    4      109  0.133089
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    5       30  0.036630
+BIRDSAI_TestReal 2s_to_2s                1.0            False                    6       51  0.062271
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    1        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    2       78  0.333333
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    3       83  0.354701
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    4       40  0.170940
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    5        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                1.0             True                    6       15  0.064103
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    1       74  0.090354
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    2      300  0.366300
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    3      255  0.311355
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    4      109  0.133089
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    5       30  0.036630
+BIRDSAI_TestReal 2s_to_2s                1.5            False                    6       51  0.062271
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    1        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    2       78  0.333333
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    3       83  0.354701
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    4       40  0.170940
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    5        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                1.5             True                    6       15  0.064103
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    1       74  0.090354
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    2      300  0.366300
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    3      255  0.311355
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    4      109  0.133089
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    5       30  0.036630
+BIRDSAI_TestReal 2s_to_2s                2.0            False                    6       51  0.062271
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    1        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    2       78  0.333333
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    3       83  0.354701
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    4       40  0.170940
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    5        9  0.038462
+BIRDSAI_TestReal 2s_to_2s                2.0             True                    6       15  0.064103
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                0.5            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                0.5             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                1.0            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                1.0             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                1.5            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                1.5             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                2.0            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                2.0             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                3.0            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                3.0             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                4.0            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                4.0             True                    6       21  0.064220
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    1       76  0.152305
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    2      222  0.444890
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    3      120  0.240481
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    4       47  0.094188
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    5        9  0.018036
+BIRDSAI_TestReal 2s_to_5s                5.0            False                    6       25  0.050100
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    1        9  0.027523
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    2      135  0.412844
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    3      104  0.318043
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    4       50  0.152905
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    5        8  0.024465
+BIRDSAI_TestReal 2s_to_5s                5.0             True                    6       21  0.064220
+   WildBox_Fresh 2s_to_2s                0.5            False                    0        3  0.004658
+   WildBox_Fresh 2s_to_2s                0.5            False                    1       32  0.049689
+   WildBox_Fresh 2s_to_2s                0.5            False                    2      264  0.409938
+   WildBox_Fresh 2s_to_2s                0.5            False                    3      177  0.274845
+   WildBox_Fresh 2s_to_2s                0.5            False                    4      136  0.211180
+   WildBox_Fresh 2s_to_2s                0.5            False                    5       25  0.038820
+   WildBox_Fresh 2s_to_2s                0.5            False                    6        7  0.010870
+   WildBox_Fresh 2s_to_2s                0.5             True                    1        1  0.004525
+   WildBox_Fresh 2s_to_2s                0.5             True                    2       93  0.420814
+   WildBox_Fresh 2s_to_2s                0.5             True                    3       52  0.235294
+   WildBox_Fresh 2s_to_2s                0.5             True                    4       27  0.122172
+   WildBox_Fresh 2s_to_2s                0.5             True                    5       27  0.122172
+   WildBox_Fresh 2s_to_2s                0.5             True                    6       21  0.095023
+   WildBox_Fresh 2s_to_2s                1.0            False                    0        3  0.004658
+   WildBox_Fresh 2s_to_2s                1.0            False                    1       32  0.049689
+   WildBox_Fresh 2s_to_2s                1.0            False                    2      264  0.409938
+   WildBox_Fresh 2s_to_2s                1.0            False                    3      177  0.274845
+   WildBox_Fresh 2s_to_2s                1.0            False                    4      136  0.211180
+   WildBox_Fresh 2s_to_2s                1.0            False                    5       25  0.038820
+   WildBox_Fresh 2s_to_2s                1.0            False                    6        7  0.010870
+   WildBox_Fresh 2s_to_2s                1.0             True                    1        1  0.004525
+   WildBox_Fresh 2s_to_2s                1.0             True                    2       93  0.420814
+   WildBox_Fresh 2s_to_2s                1.0             True                    3       52  0.235294
+   WildBox_Fresh 2s_to_2s                1.0             True                    4       27  0.122172
+   WildBox_Fresh 2s_to_2s                1.0             True                    5       27  0.122172
+   WildBox_Fresh 2s_to_2s                1.0             True                    6       21  0.095023
+   WildBox_Fresh 2s_to_2s                1.5            False                    0        3  0.004658
+   WildBox_Fresh 2s_to_2s                1.5            False                    1       32  0.049689
+   WildBox_Fresh 2s_to_2s                1.5            False                    2      264  0.409938
+   WildBox_Fresh 2s_to_2s                1.5            False                    3      177  0.274845
+   WildBox_Fresh 2s_to_2s                1.5            False                    4      136  0.211180
+   WildBox_Fresh 2s_to_2s                1.5            False                    5       25  0.038820
+   WildBox_Fresh 2s_to_2s                1.5            False                    6        7  0.010870
+   WildBox_Fresh 2s_to_2s                1.5             True                    1        1  0.004525
+   WildBox_Fresh 2s_to_2s                1.5             True                    2       93  0.420814
+   WildBox_Fresh 2s_to_2s                1.5             True                    3       52  0.235294
+   WildBox_Fresh 2s_to_2s                1.5             True                    4       27  0.122172
+   WildBox_Fresh 2s_to_2s                1.5             True                    5       27  0.122172
+   WildBox_Fresh 2s_to_2s                1.5             True                    6       21  0.095023
+   WildBox_Fresh 2s_to_2s                2.0            False                    0        3  0.004658
+   WildBox_Fresh 2s_to_2s                2.0            False                    1       32  0.049689
+   WildBox_Fresh 2s_to_2s                2.0            False                    2      264  0.409938
+   WildBox_Fresh 2s_to_2s                2.0            False                    3      177  0.274845
+   WildBox_Fresh 2s_to_2s                2.0            False                    4      136  0.211180
+   WildBox_Fresh 2s_to_2s                2.0            False                    5       25  0.038820
+   WildBox_Fresh 2s_to_2s                2.0            False                    6        7  0.010870
+   WildBox_Fresh 2s_to_2s                2.0             True                    1        1  0.004525
+   WildBox_Fresh 2s_to_2s                2.0             True                    2       93  0.420814
+   WildBox_Fresh 2s_to_2s                2.0             True                    3       52  0.235294
+   WildBox_Fresh 2s_to_2s                2.0             True                    4       27  0.122172
+   WildBox_Fresh 2s_to_2s                2.0             True                    5       27  0.122172
+   WildBox_Fresh 2s_to_2s                2.0             True                    6       21  0.095023
+   WildBox_Fresh 2s_to_5s                0.5            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                0.5            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                0.5            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                0.5            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                0.5            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                0.5            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                0.5            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                0.5             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                0.5             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                0.5             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                0.5             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                0.5             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                0.5             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                0.5             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                1.0            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                1.0            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                1.0            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                1.0            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                1.0            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                1.0            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                1.0            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                1.0             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                1.0             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                1.0             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                1.0             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                1.0             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                1.0             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                1.0             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                1.5            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                1.5            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                1.5            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                1.5            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                1.5            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                1.5            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                1.5            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                1.5             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                1.5             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                1.5             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                1.5             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                1.5             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                1.5             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                1.5             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                2.0            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                2.0            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                2.0            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                2.0            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                2.0            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                2.0            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                2.0            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                2.0             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                2.0             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                2.0             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                2.0             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                2.0             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                2.0             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                2.0             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                3.0            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                3.0            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                3.0            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                3.0            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                3.0            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                3.0            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                3.0            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                3.0             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                3.0             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                3.0             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                3.0             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                3.0             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                3.0             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                3.0             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                4.0            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                4.0            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                4.0            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                4.0            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                4.0            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                4.0            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                4.0            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                4.0             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                4.0             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                4.0             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                4.0             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                4.0             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                4.0             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                4.0             True                    6        2  0.007435
+   WildBox_Fresh 2s_to_5s                5.0            False                    0        2  0.005435
+   WildBox_Fresh 2s_to_5s                5.0            False                    1       24  0.065217
+   WildBox_Fresh 2s_to_5s                5.0            False                    2      185  0.502717
+   WildBox_Fresh 2s_to_5s                5.0            False                    3       81  0.220109
+   WildBox_Fresh 2s_to_5s                5.0            False                    4       67  0.182065
+   WildBox_Fresh 2s_to_5s                5.0            False                    5        8  0.021739
+   WildBox_Fresh 2s_to_5s                5.0            False                    6        1  0.002717
+   WildBox_Fresh 2s_to_5s                5.0             True                    0        3  0.011152
+   WildBox_Fresh 2s_to_5s                5.0             True                    1        2  0.007435
+   WildBox_Fresh 2s_to_5s                5.0             True                    2      132  0.490706
+   WildBox_Fresh 2s_to_5s                5.0             True                    3       73  0.271375
+   WildBox_Fresh 2s_to_5s                5.0             True                    4       39  0.144981
+   WildBox_Fresh 2s_to_5s                5.0             True                    5       18  0.066914
+   WildBox_Fresh 2s_to_5s                5.0             True                    6        2  0.007435
+
+K-OF-N DIAGNOSTIC
+-----------------
+         dataset     task  response_time_sec  k_required  n_boundaries  alert_rate  sensitivity  false_alert_rate  precision
+BIRDSAI_TestReal 2s_to_2s                0.5           1             6    1.000000     1.000000          1.000000   0.222222
+BIRDSAI_TestReal 2s_to_2s                0.5           2             6    0.921178     0.961538          0.909646   0.231959
+BIRDSAI_TestReal 2s_to_2s                0.5           3             6    0.562203     0.628205          0.543346   0.248311
+BIRDSAI_TestReal 2s_to_2s                0.5           4             6    0.241216     0.273504          0.231990   0.251969
+BIRDSAI_TestReal 2s_to_2s                0.5           5             6    0.099715     0.102564          0.098901   0.228571
+BIRDSAI_TestReal 2s_to_2s                0.5           6             6    0.062678     0.064103          0.062271   0.227273
+BIRDSAI_TestReal 2s_to_2s                1.0           1             6    1.000000     1.000000          1.000000   0.222222
+BIRDSAI_TestReal 2s_to_2s                1.0           2             6    0.921178     0.961538          0.909646   0.231959
+BIRDSAI_TestReal 2s_to_2s                1.0           3             6    0.562203     0.628205          0.543346   0.248311
+BIRDSAI_TestReal 2s_to_2s                1.0           4             6    0.241216     0.273504          0.231990   0.251969
+BIRDSAI_TestReal 2s_to_2s                1.0           5             6    0.099715     0.102564          0.098901   0.228571
+BIRDSAI_TestReal 2s_to_2s                1.0           6             6    0.062678     0.064103          0.062271   0.227273
+BIRDSAI_TestReal 2s_to_2s                1.5           1             6    1.000000     1.000000          1.000000   0.222222
+BIRDSAI_TestReal 2s_to_2s                1.5           2             6    0.921178     0.961538          0.909646   0.231959
+BIRDSAI_TestReal 2s_to_2s                1.5           3             6    0.562203     0.628205          0.543346   0.248311
+BIRDSAI_TestReal 2s_to_2s                1.5           4             6    0.241216     0.273504          0.231990   0.251969
+BIRDSAI_TestReal 2s_to_2s                1.5           5             6    0.099715     0.102564          0.098901   0.228571
+BIRDSAI_TestReal 2s_to_2s                1.5           6             6    0.062678     0.064103          0.062271   0.227273
+BIRDSAI_TestReal 2s_to_2s                2.0           1             6    1.000000     1.000000          1.000000   0.222222
+BIRDSAI_TestReal 2s_to_2s                2.0           2             6    0.921178     0.961538          0.909646   0.231959
+BIRDSAI_TestReal 2s_to_2s                2.0           3             6    0.562203     0.628205          0.543346   0.248311
+BIRDSAI_TestReal 2s_to_2s                2.0           4             6    0.241216     0.273504          0.231990   0.251969
+BIRDSAI_TestReal 2s_to_2s                2.0           5             6    0.099715     0.102564          0.098901   0.228571
+BIRDSAI_TestReal 2s_to_2s                2.0           6             6    0.062678     0.064103          0.062271   0.227273
+BIRDSAI_TestReal 2s_to_5s                0.5           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                0.5           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                0.5           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                0.5           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                0.5           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                0.5           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                1.0           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                1.0           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                1.0           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                1.0           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                1.0           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                1.0           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                1.5           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                1.5           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                1.5           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                1.5           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                1.5           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                1.5           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                2.0           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                2.0           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                2.0           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                2.0           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                2.0           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                2.0           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                3.0           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                3.0           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                3.0           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                3.0           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                3.0           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                3.0           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                4.0           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                4.0           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                4.0           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                4.0           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                4.0           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                4.0           6             6    0.055690     0.064220          0.050100   0.456522
+BIRDSAI_TestReal 2s_to_5s                5.0           1             6    1.000000     1.000000          1.000000   0.395884
+BIRDSAI_TestReal 2s_to_5s                5.0           2             6    0.897094     0.972477          0.847695   0.429150
+BIRDSAI_TestReal 2s_to_5s                5.0           3             6    0.464891     0.559633          0.402806   0.476562
+BIRDSAI_TestReal 2s_to_5s                5.0           4             6    0.193705     0.241590          0.162325   0.493750
+BIRDSAI_TestReal 2s_to_5s                5.0           5             6    0.076271     0.088685          0.068136   0.460317
+BIRDSAI_TestReal 2s_to_5s                5.0           6             6    0.055690     0.064220          0.050100   0.456522
+   WildBox_Fresh 2s_to_2s                0.5           1             6    0.996532     1.000000          0.995342   0.256381
+   WildBox_Fresh 2s_to_2s                0.5           2             6    0.958382     0.995475          0.945652   0.265380
+   WildBox_Fresh 2s_to_2s                0.5           3             6    0.545665     0.574661          0.535714   0.269068
+   WildBox_Fresh 2s_to_2s                0.5           4             6    0.280925     0.339367          0.260870   0.308642
+   WildBox_Fresh 2s_to_2s                0.5           5             6    0.092486     0.217195          0.049689   0.600000
+   WildBox_Fresh 2s_to_2s                0.5           6             6    0.032370     0.095023          0.010870   0.750000
+   WildBox_Fresh 2s_to_2s                1.0           1             6    0.996532     1.000000          0.995342   0.256381
+   WildBox_Fresh 2s_to_2s                1.0           2             6    0.958382     0.995475          0.945652   0.265380
+   WildBox_Fresh 2s_to_2s                1.0           3             6    0.545665     0.574661          0.535714   0.269068
+   WildBox_Fresh 2s_to_2s                1.0           4             6    0.280925     0.339367          0.260870   0.308642
+   WildBox_Fresh 2s_to_2s                1.0           5             6    0.092486     0.217195          0.049689   0.600000
+   WildBox_Fresh 2s_to_2s                1.0           6             6    0.032370     0.095023          0.010870   0.750000
+   WildBox_Fresh 2s_to_2s                1.5           1             6    0.996532     1.000000          0.995342   0.256381
+   WildBox_Fresh 2s_to_2s                1.5           2             6    0.958382     0.995475          0.945652   0.265380
+   WildBox_Fresh 2s_to_2s                1.5           3             6    0.545665     0.574661          0.535714   0.269068
+   WildBox_Fresh 2s_to_2s                1.5           4             6    0.280925     0.339367          0.260870   0.308642
+   WildBox_Fresh 2s_to_2s                1.5           5             6    0.092486     0.217195          0.049689   0.600000
+   WildBox_Fresh 2s_to_2s                1.5           6             6    0.032370     0.095023          0.010870   0.750000
+   WildBox_Fresh 2s_to_2s                2.0           1             6    0.996532     1.000000          0.995342   0.256381
+   WildBox_Fresh 2s_to_2s                2.0           2             6    0.958382     0.995475          0.945652   0.265380
+   WildBox_Fresh 2s_to_2s                2.0           3             6    0.545665     0.574661          0.535714   0.269068
+   WildBox_Fresh 2s_to_2s                2.0           4             6    0.280925     0.339367          0.260870   0.308642
+   WildBox_Fresh 2s_to_2s                2.0           5             6    0.092486     0.217195          0.049689   0.600000
+   WildBox_Fresh 2s_to_2s                2.0           6             6    0.032370     0.095023          0.010870   0.750000
+   WildBox_Fresh 2s_to_5s                0.5           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                0.5           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                0.5           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                0.5           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                0.5           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                0.5           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                1.0           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                1.0           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                1.0           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                1.0           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                1.0           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                1.0           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                1.5           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                1.5           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                1.5           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                1.5           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                1.5           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                1.5           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                2.0           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                2.0           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                2.0           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                2.0           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                2.0           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                2.0           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                3.0           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                3.0           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                3.0           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                3.0           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                3.0           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                3.0           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                4.0           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                4.0           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                4.0           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                4.0           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                4.0           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                4.0           6             6    0.004710     0.007435          0.002717   0.666667
+   WildBox_Fresh 2s_to_5s                5.0           1             6    0.992151     0.988848          0.994565   0.420886
+   WildBox_Fresh 2s_to_5s                5.0           2             6    0.951334     0.981413          0.929348   0.435644
+   WildBox_Fresh 2s_to_5s                5.0           3             6    0.453689     0.490706          0.426630   0.456747
+   WildBox_Fresh 2s_to_5s                5.0           4             6    0.211931     0.219331          0.206522   0.437037
+   WildBox_Fresh 2s_to_5s                5.0           5             6    0.045526     0.074349          0.024457   0.689655
+   WildBox_Fresh 2s_to_5s                5.0           6             6    0.004710     0.007435          0.002717   0.666667

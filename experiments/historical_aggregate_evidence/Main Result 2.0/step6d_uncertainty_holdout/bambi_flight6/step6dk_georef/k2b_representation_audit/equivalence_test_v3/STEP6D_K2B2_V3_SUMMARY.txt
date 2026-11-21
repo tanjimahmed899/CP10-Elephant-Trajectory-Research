@@ -1,0 +1,76 @@
+STEP 6D-K2B2-V3 — TASK-SPECIFIC FLOOR + CANONICAL EQUIVALENCE AUDIT
+========================================================================================
+
+TASK SUMMARIES
+--------------
+{
+  "2s_to_2s": {
+    "scale_floor": 0.06820264416877736,
+    "samples_tested": 250,
+    "max_history_canonical_diff": 0.0,
+    "max_future_canonical_diff": 0.0,
+    "max_origin_metadata_diff_m": 0.0,
+    "max_angle_metadata_diff_rad": 1.1664694676838394e-07,
+    "max_scale_metadata_diff": 4.726325713022561e-07,
+    "max_build_roundtrip_error_m": 26.47876285854727,
+    "max_fresh_roundtrip_error_m": 26.478763197548687,
+    "build_origin_dtypes": [
+      "float32"
+    ],
+    "fresh_origin_dtypes": [
+      "float64"
+    ]
+  },
+  "2s_to_5s": {
+    "scale_floor": 0.06732638773715147,
+    "samples_tested": 250,
+    "max_history_canonical_diff": 0.0,
+    "max_future_canonical_diff": 0.0,
+    "max_origin_metadata_diff_m": 0.0,
+    "max_angle_metadata_diff_rad": 1.1897249629910789e-07,
+    "max_scale_metadata_diff": 4.6749893911623985e-07,
+    "max_build_roundtrip_error_m": 59.904694797471166,
+    "max_fresh_roundtrip_error_m": 59.90469466056675,
+    "build_origin_dtypes": [
+      "float32"
+    ],
+    "fresh_origin_dtypes": [
+      "float64"
+    ]
+  }
+}
+
+SCALE-FLOOR SOURCE MATCHES
+--------------------------
+[
+  {
+    "task": "2s_to_2s",
+    "expected_scale_floor": 0.06820264416877736,
+    "exact_text_occurrences": 787,
+    "metadata_matches": 3,
+    "metadata_match_files": [
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\final_neural_trajectory_dataset\\2s_to_2s_birdsai_trainval_metadata.csv",
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\final_neural_trajectory_dataset\\neural_dataset_summary.csv",
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\fresh_holdout_dataset_summary.csv"
+    ]
+  },
+  {
+    "task": "2s_to_5s",
+    "expected_scale_floor": 0.06732638773715147,
+    "exact_text_occurrences": 577,
+    "metadata_matches": 3,
+    "metadata_match_files": [
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\final_neural_trajectory_dataset\\2s_to_5s_birdsai_trainval_metadata.csv",
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\final_neural_trajectory_dataset\\neural_dataset_summary.csv",
+      "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\fresh_holdout_dataset_summary.csv"
+    ]
+  }
+]
+
+STATUS
+------
+CANONICAL_MODEL_TENSORS_EQUIVALENT__FRESH_ROUNDTRIP_FAIL__TASK_FLOORS_CONFIRMED_IN_SOURCE
+
+RECOMMENDATION IF PASS
+----------------------
+If all PASS/CONFIRMED: use the fresh-holdout canonicalization implementation for BAMBI because its canonical tensors are identical to the training canonicalizer while its float64 origin/angle/scale metadata avoids UTM precision loss during inverse transformation.

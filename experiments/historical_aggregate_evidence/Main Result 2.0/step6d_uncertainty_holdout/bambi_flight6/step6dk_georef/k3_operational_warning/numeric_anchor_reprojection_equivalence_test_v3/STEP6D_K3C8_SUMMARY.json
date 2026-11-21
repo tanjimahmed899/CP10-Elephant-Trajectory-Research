@@ -1,0 +1,24 @@
+{
+  "step": "STEP_6D_K3C8_V3_NUMERIC_ANCHOR_REPROJECTION_AND_PREDICTION_Z_PROVENANCE_AUDIT",
+  "official_zero_based_mapping_already_proven": true,
+  "pose_geometry_provenance": {
+    "mode": "existing_enriched_pose_json",
+    "source": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\correction\\6_matched_poses.json"
+  },
+  "fovy_degrees_assumption": 50.0,
+  "fovy_status": "BAMBI reference-pipeline assumption/default; not independently measured calibration",
+  "camera_type": "<class 'alfspy.core.rendering.camera.Camera'>",
+  "camera_source_file": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\alfspy\\core\\rendering\\camera.py",
+  "dem_tif": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\DEM\\6_matched_dem.tif",
+  "dem_json": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\DEM\\6_matched_dem.json",
+  "dem_origin": [
+    586861.6020015613,
+    5338624.677140197,
+    275.80560302734375
+  ],
+  "successful_projection_api": false,
+  "prediction_dem_z_available": true,
+  "world_dem_consistency": true,
+  "status": "PREDICTION_Z_SOURCE_AVAILABLE_BUT_EXACT_WORLD_TO_IMAGE_API_NOT_YET_RESOLVED_DO_NOT_RUN_STEP7",
+  "important_nonclaim": "This step does not run Step18/Step7 and does not validate a real village/farm boundary."
+}

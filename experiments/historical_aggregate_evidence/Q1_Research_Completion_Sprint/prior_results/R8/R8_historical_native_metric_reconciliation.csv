@@ -1,0 +1,17 @@
+task,model,comparison,historical_reported,new_rerun,agrees_to_6_decimals
+2s_to_2s,ConstantVelocity,raw_native_ADE,0.076936,0.076936455911973,True
+2s_to_2s,ConstantVelocity,raw_native_FDE,0.138845,0.1388449651441373,True
+2s_to_2s,ConstantVelocity,corrected_native_ADE,0.020148,0.0201481661036269,True
+2s_to_2s,ConstantVelocity,corrected_native_FDE,0.035185,0.0351852952213294,True
+2s_to_2s,Stationary,raw_native_ADE,0.051284,0.0512840630441019,True
+2s_to_2s,Stationary,raw_native_FDE,0.08542,0.0854203287303268,True
+2s_to_2s,Stationary,corrected_native_ADE,0.020033,0.0200330183641851,True
+2s_to_2s,Stationary,corrected_native_FDE,0.035129,0.0351292591970269,True
+2s_to_5s,ConstantVelocity,raw_native_ADE,0.155138,0.1551381578814396,True
+2s_to_5s,ConstantVelocity,raw_native_FDE,0.290347,0.2903467935894852,True
+2s_to_5s,ConstantVelocity,corrected_native_ADE,0.040174,0.0401744482471169,True
+2s_to_5s,ConstantVelocity,corrected_native_FDE,0.079019,0.0790188228154968,True
+2s_to_5s,Stationary,raw_native_ADE,0.080359,0.0803593490435398,True
+2s_to_5s,Stationary,raw_native_FDE,0.124419,0.124419435927833,True
+2s_to_5s,Stationary,corrected_native_ADE,0.039685,0.0396850922551441,True
+2s_to_5s,Stationary,corrected_native_FDE,0.073737,0.0737374110884231,True

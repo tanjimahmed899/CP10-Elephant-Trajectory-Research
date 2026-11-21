@@ -1,0 +1,7 @@
+video,segment,image_frames,first_frame_number,last_frame_number,median_frame_step,label_files,label_rows,classes
+DJI_20240119152552_0006_V,seg1,200,1,598,3.0,200,200,elephant
+DJI_20240119152552_0006_V,seg2,200,601,1198,3.0,200,200,elephant
+DJI_20240119152552_0006_V,seg3,59,1201,1375,3.0,59,59,elephant
+DJI_20240626143832_0004_V,seg1,89,1,265,3.0,89,178,elephant
+DJI_20260227084907_0004_V,seg1,170,301,808,3.0,170,542,elephant
+DJI_20260227084907_0004_V,seg2,200,1051,1648,3.0,200,200,elephant

@@ -1,0 +1,57 @@
+UNIFIED ELEPHANT TRAJECTORY DATASET — 10 HZ
+========================================================================
+
+Common representation:
+- Sampling frequency: 10 Hz
+- Observation: 2 s / 20 frames
+- Forecast: 2 s / 20 frames or 5 s / 50 frames
+- Features used for common model: camera-corrected normalized x,y
+- Both absolute and relative-to-last-observation coordinates are saved.
+
+Experimental roles:
+- BIRDSAI TrainReal CORE = training
+- BIRDSAI TestReal CORE = untouched in-domain test
+- WildBox RGB = untouched external cross-modal test
+
+2s_to_2s | BIRDSAI | training
+Samples: 531
+Source groups: 3
+Tracks: 62
+History: (531, 20, 2)
+Future: (531, 20, 2)
+
+2s_to_2s | BIRDSAI | in_domain_test
+Samples: 1053
+Source groups: 6
+Tracks: 89
+History: (1053, 20, 2)
+Future: (1053, 20, 2)
+
+2s_to_2s | WildBox | external_test
+Samples: 93
+Source groups: 3
+Tracks: 11
+History: (93, 20, 2)
+Future: (93, 20, 2)
+
+2s_to_5s | BIRDSAI | training
+Samples: 382
+Source groups: 2
+Tracks: 34
+History: (382, 20, 2)
+Future: (382, 50, 2)
+
+2s_to_5s | BIRDSAI | in_domain_test
+Samples: 826
+Source groups: 5
+Tracks: 63
+History: (826, 20, 2)
+Future: (826, 50, 2)
+
+2s_to_5s | WildBox | external_test
+Samples: 60
+Source groups: 3
+Tracks: 9
+History: (60, 20, 2)
+Future: (60, 50, 2)
+

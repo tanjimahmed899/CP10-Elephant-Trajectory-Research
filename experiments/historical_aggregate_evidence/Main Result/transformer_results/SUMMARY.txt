@@ -1,0 +1,39 @@
+TEMPORAL TRANSFORMER ELEPHANT TRAJECTORY FORECASTING
+==============================================================================
+
+Training: BIRDSAI TrainReal only
+Validation: fixed track-disjoint TrainReal validation
+Model selection: validation track-macro ADE
+TestReal and WildBox never used for model selection.
+Seeds: [42, 52, 62]
+Architecture: 2-layer compact Transformer encoder, d_model=64, 4 heads, FFN=128.
+Metrics are calculated after inverse canonical transform.
+
+2s_to_2s | BIRDSAI_test
+ADE = 0.019505 ± 0.000403
+FDE = 0.033640 ± 0.001046
+Track-macro ADE = 0.029139 ± 0.000862
+Source-macro ADE = 0.024801 ± 0.000459
+Mean best epoch = 79.0
+
+2s_to_2s | WildBox_external
+ADE = 0.050880 ± 0.002021
+FDE = 0.087482 ± 0.003165
+Track-macro ADE = 0.053050 ± 0.002320
+Source-macro ADE = 0.044958 ± 0.002252
+Mean best epoch = 79.0
+
+2s_to_5s | BIRDSAI_test
+ADE = 0.036326 ± 0.000834
+FDE = 0.067889 ± 0.000888
+Track-macro ADE = 0.056053 ± 0.005335
+Source-macro ADE = 0.060200 ± 0.000947
+Mean best epoch = 53.7
+
+2s_to_5s | WildBox_external
+ADE = 0.099092 ± 0.000554
+FDE = 0.180634 ± 0.003456
+Track-macro ADE = 0.138219 ± 0.000282
+Source-macro ADE = 0.119424 ± 0.001842
+Mean best epoch = 53.7
+

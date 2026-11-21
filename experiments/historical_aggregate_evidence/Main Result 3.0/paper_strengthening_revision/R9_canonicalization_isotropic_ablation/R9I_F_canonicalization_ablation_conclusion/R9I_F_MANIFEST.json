@@ -1,0 +1,45 @@
+{
+  "step": "R9I_F_CANONICALIZATION_ABLATION_CONCLUSION",
+  "created_utc": "2026-10-30T04:54:01.541341+00:00",
+  "status": "R9I_F_CANONICALIZATION_ABLATION_CONCLUSION_LOCKED_R9_COMPLETE_READY_FOR_R10_ENSEMBLE_ANALYSIS",
+  "global_conclusion": "No universal isotropic forecasting superiority; effect is model- and horizon-dependent.",
+  "geometry_conclusion": "Isotropic normalization is geometrically principled because it avoids aspect-ratio distortion from separate x/W and y/H scaling.",
+  "strongest_positive_result": {
+    "configuration": "2s_to_2s Transformer 3-seed prediction ensemble",
+    "ADE_delta_px": -0.5976462558456471,
+    "ADE_CI95": [
+      -1.3030028787128878,
+      -0.0644779873747957
+    ],
+    "FDE_delta_px": -1.0985871208016065,
+    "FDE_CI95": [
+      -2.3430355560431217,
+      -0.0170028102081644
+    ]
+  },
+  "important_negative_results": [
+    {
+      "configuration": "2s_to_5s GRU",
+      "metric": "FDE",
+      "delta_px": 4.201555070142929,
+      "CI95": [
+        1.1143041509183484,
+        7.549912118454138
+      ]
+    },
+    {
+      "configuration": "2s_to_5s LSTM",
+      "metric": "FDE",
+      "delta_px": 3.090187647023332,
+      "CI95": [
+        0.6363723842642413,
+        5.8163893946219885
+      ]
+    }
+  ],
+  "paper_protocol_decision": "Keep frozen anisotropic primary results; report isotropic as a matched canonicalization ablation/sensitivity analysis. Specific 2s Transformer ensemble benefit may be reported with paired clustered CIs.",
+  "outputs": {
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_F_canonicalization_ablation_conclusion\\R9I_F_CANONICALIZATION_CLAIM_MATRIX.csv",
+    "manuscript_ready_conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_F_canonicalization_ablation_conclusion\\R9I_F_MANUSCRIPT_READY_CANONICALIZATION_CONCLUSION.txt"
+  }
+}

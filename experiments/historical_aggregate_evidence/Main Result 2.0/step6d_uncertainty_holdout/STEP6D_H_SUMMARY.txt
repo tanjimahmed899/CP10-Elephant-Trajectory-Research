@@ -1,0 +1,26 @@
+STEP 6D-H: UNUSED BIRDSAI SOURCE STRUCTURAL VIABILITY AUDIT
+==================================================================================
+
+No model predictions or forecast errors were computed.
+
+SOURCE STRUCTURAL VIABILITY
+---------------------------
+               source  raw_rows  raw_tracks  min_frame  max_frame  unique_frames  longest_contiguous_track_frames  tracks_with_at_least_120_contiguous_frames  tracks_with_at_least_210_contiguous_frames  structurally_supports_2s_to_2s_at_30hz  structurally_supports_2s_to_5s_at_30hz  ego_rows                                                                                                                                     ego_columns  ego_available  all_project_occurrence_files  model_or_eval_occurrence_files  untouched_by_model_eval_paths  eligible_raw_source_for_2s_to_2s_build  eligible_raw_source_for_2s_to_5s_build
+0000000054_0000000000       235           1          1        308            235                               46                                           0                                           0                                   False                                   False       308 pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion           True                           327                               0                           True                                   False                                   False
+0000000056_0000000000       137           1          0        162            137                               35                                           0                                           0                                   False                                   False       162 pair;split;sequence;frame_a;frame_b;estimated;features;inlier_ratio;dx_pixels;dy_pixels;rotation_deg;scale;reliable;motion_status;usable_motion           True                           181                               0                           True                                   False                                   False
+
+EXISTING CORRECTED WINDOW PRESENCE
+----------------------------------
+    task                source  existing_corrected_window_rows  existing_corrected_window_tracks
+2s_to_2s 0000000054_0000000000                               0                                 0
+2s_to_2s 0000000056_0000000000                               0                                 0
+2s_to_5s 0000000054_0000000000                               0                                 0
+2s_to_5s 0000000056_0000000000                               0                                 0
+
+CORRECTED NPZ STRUCTURE
+-----------------------
+    task  npz_exists           keys                           first_dim_preview                                                           sha256
+2s_to_2s        True history;future  history:(1704, 60, 7);future:(1704, 60, 7) 8b0ffb1bc6f5528111874556f42e16205ff74c8db17ce67547cc0816d4aeff18
+2s_to_5s        True history;future history:(1319, 60, 7);future:(1319, 150, 7) db52df2fd07ebc84de0c7e2a718395878181e976e505d81176ac4d8e6e89fe86
+
+NO PRE-LOCK CREATED: neither source is structurally eligible.

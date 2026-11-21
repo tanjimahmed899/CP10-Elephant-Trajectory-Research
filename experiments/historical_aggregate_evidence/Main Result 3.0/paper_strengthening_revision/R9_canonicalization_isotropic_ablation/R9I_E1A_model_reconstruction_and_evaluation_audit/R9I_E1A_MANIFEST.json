@@ -1,0 +1,18 @@
+{
+  "step": "R9I_E1A_MODEL_RECONSTRUCTION_AND_TESTREAL_EVALUATION_AUDIT",
+  "created_utc": "2026-10-29T13:42:20.791614+00:00",
+  "status": "R9I_E1A_MODEL_RECONSTRUCTION_AND_TESTREAL_EVALUATION_PROTOCOL_AUDITED_READY_FOR_R9I_E1B_FROZEN_18_CHECKPOINT_INFERENCE",
+  "checkpoints_verified": 18,
+  "expected_checkpoints": 18,
+  "testreal_tasks_verified": 2,
+  "training": false,
+  "model_inference": false,
+  "checkpoint_modification": false,
+  "outputs": {
+    "signatures": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E1A_model_reconstruction_and_evaluation_audit\\R9I_E1A_SIGNATURES.csv",
+    "checkpoint_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E1A_model_reconstruction_and_evaluation_audit\\R9I_E1A_CHECKPOINT_INVENTORY.csv",
+    "testreal_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E1A_model_reconstruction_and_evaluation_audit\\R9I_E1A_TESTREAL_INPUT_INVENTORY.csv",
+    "evaluation_function_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E1A_model_reconstruction_and_evaluation_audit\\R9I_E1A_EVALUATION_FUNCTION_SOURCES.csv",
+    "model_instantiation_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_E1A_model_reconstruction_and_evaluation_audit\\R9I_E1A_MODEL_INSTANTIATION_CONTEXT.csv"
+  }
+}

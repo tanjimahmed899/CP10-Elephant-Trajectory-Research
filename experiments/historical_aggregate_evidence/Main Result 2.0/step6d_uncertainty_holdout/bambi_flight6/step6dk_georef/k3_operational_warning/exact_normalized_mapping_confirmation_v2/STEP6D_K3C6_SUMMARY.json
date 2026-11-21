@@ -1,0 +1,9 @@
+{
+  "step": "STEP_6D_K3C6_V2_EXACT_NORMALIZED_IMAGE_MAPPING_FORMULA_CONFIRMATION",
+  "wildbox_build_sha256": "03f7c2948cc7318cda23e2634514faeb4cd378db96df619e8a5d314a14acb702",
+  "fresh_eval_sha256": "c95b8be1280d1129be31669f2c372a44115844bba0603971561b0692b0cf2d79",
+  "formula_xy_norm_evidence": true,
+  "prenormalization_correction_evidence": true,
+  "status": "NORMALIZED_MAPPING_FORMULA_AND_PRENORMALIZATION_CORRECTION_EVIDENCE_RECOVERED_PENDING_BAMBI_EQUIVALENCE_CHECK",
+  "rule": "Do not treat BAMBI raw MOT pixels divided by 1024 as equivalent to Step18 coordinates unless source proves the same pre-normalization camera-correction/anchor-frame convention."
+}

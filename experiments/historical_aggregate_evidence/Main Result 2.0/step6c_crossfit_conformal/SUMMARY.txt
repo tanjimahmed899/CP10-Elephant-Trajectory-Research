@@ -1,0 +1,53 @@
+STEP 6C: TRACK-LEVEL CROSS-FITTED CONFORMAL CALIBRATION
+==============================================================================
+
+Protocol:
+- All TrainReal tracks receive out-of-fold predictions.
+- Three outer folds are track-disjoint.
+- Outer held-out tracks are never used for training or early stopping.
+- Each outer training complement has a separate inner track-disjoint validation split for early stopping.
+- Three Transformer seeds (42/52/62) are trained per outer fold.
+- Training weights reproduce the original exact rule: each training track contributes equal total weight.
+- Primary conformal unit is TRACK, not sliding window.
+- Primary track score is the maximum canonical Euclidean forecast error over all windows and future steps in that track.
+- This handles within-track overlapping-window dependence more conservatively than window-level conformal calibration.
+- Existing TestReal and Fresh WildBox were already inspected during Step 6A/6B; Step 6C results on them are retrospective/diagnostic and are NOT a new untouched confirmatory uncertainty test.
+- A new untouched uncertainty holdout is still required before making a final confirmatory coverage claim.
+
+PROTOCOL AUDIT
+--------------
+    task  trainval_windows  trainval_tracks  outer_folds  seeds_per_outer_fold  total_crossfit_models  all_windows_have_oof_prediction  all_tracks_single_outer_fold  max_abs_vs_scaled_canonical_error_diff primary_calibration_unit                                                                  primary_score
+2s_to_2s               531               62            3                     3                      9                             True                          True                            3.171403e-08                    track max canonical Euclidean error across all windows and future steps within track
+2s_to_5s               382               34            3                     3                      9                             True                          True                            2.513241e-08                    track max canonical Euclidean error across all windows and future steps within track
+
+TRACK CONFORMAL CALIBRATION
+---------------------------
+    task  alpha  target_coverage  calibration_tracks  normalized_track_simultaneous_radius  order_statistic_k  calibration_track_simultaneous_coverage  mean_normalized_track_step_radius  endpoint_normalized_track_step_radius
+2s_to_2s   0.10             0.90                  62                              2.158768                 57                                 0.919355                           0.877027                               2.076248
+2s_to_2s   0.05             0.95                  62                              2.560773                 60                                 0.967742                           1.179196                               2.446776
+2s_to_5s   0.10             0.90                  34                              1.975130                 32                                 0.941176                           0.840190                               1.975130
+2s_to_5s   0.05             0.95                  34                              2.950976                 34                                 1.000000                           1.242523                               2.950976
+
+RETROSPECTIVE / DIAGNOSTIC EVALUATION
+-------------------------------------
+    task          dataset      dataset_role_for_uncertainty  alpha  target_coverage  samples  tracks  sources  normalized_track_simultaneous_radius  mean_absolute_radius  median_absolute_radius  p95_absolute_radius  window_simultaneous_coverage  window_coverage_gap_pp  window_CI_low  window_CI_high  track_macro_window_coverage  track_macro_CI_low  track_macro_CI_high  fully_covered_track_fraction  fully_covered_track_CI_low  fully_covered_track_CI_high  stepwise_window_coverage  mean_ADE  mean_FDE  mean_ensemble_disagreement  max_abs_vs_scaled_canonical_error_diff
+2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90     1053      89        6                              2.158768              0.228950                0.173146             0.507200                      0.984805                8.480532       0.974306        0.992565                     0.965345            0.943985             0.983609                      0.853933                    0.775281                     0.921348                  0.975499  0.019076  0.032890                    0.003508                            3.024081e-08
+2s_to_2s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95     1053      89        6                              2.560773              0.271585                0.205389             0.601650                      0.987654                3.765432       0.978009        0.994511                     0.969751            0.949482             0.986836                      0.876404                    0.808989                     0.943820                  0.985375  0.019076  0.032890                    0.003508                            3.024081e-08
+2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.10             0.90      865      78        3                              2.158768              0.235813                0.183652             0.412322                      0.983815                8.381503       0.972820        0.993549                     0.989395            0.981806             0.996136                      0.897436                    0.820513                     0.961538                  0.930809  0.028814  0.053920                    0.003555                            5.958041e-08
+2s_to_2s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.05             0.95      865      78        3                              2.560773              0.279725                0.217851             0.489104                      0.988439                3.843931       0.978750        0.996564                     0.992459            0.985671             0.997738                      0.923077                    0.858974                     0.974359                  0.969653  0.028814  0.053920                    0.003555                            5.958041e-08
+2s_to_5s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.10             0.90      826      63        5                              1.975130              0.207422                0.152795             0.465234                      0.940678                4.067797       0.900699        0.970733                     0.902051            0.847047             0.949819                      0.730159                    0.619048                     0.841270                  0.926247  0.035590  0.067247                    0.006072                            3.442883e-08
+2s_to_5s BIRDSAI_TESTREAL     RETROSPECTIVE_AFTER_STEP6A_6B   0.05             0.95      826      63        5                              2.950976              0.309902                0.228285             0.695091                      0.980630                3.062954       0.963114        0.993363                     0.962024            0.926609             0.989593                      0.873016                    0.777778                     0.952381                  0.964189  0.035590  0.067247                    0.006072                            3.442883e-08
+2s_to_5s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.10             0.90      637      71        3                              1.975130              0.186199                0.163691             0.317192                      0.860283               -3.971743       0.810376        0.905450                     0.791729            0.710240             0.865186                      0.549296                    0.436620                     0.661972                  0.836264  0.050132  0.105339                    0.006103                            4.460434e-08
+2s_to_5s    FRESH_WILDBOX DIAGNOSTIC_ONLY_ALREADY_INSPECTED   0.05             0.95      637      71        3                              2.950976              0.278194                0.244566             0.473907                      0.935636               -1.436421       0.907748        0.961672                     0.955014            0.932649             0.974617                      0.774648                    0.676056                     0.859507                  0.904835  0.050132  0.105339                    0.006103                            4.460434e-08
+
+FRESH TRANSFORMER SELF-CHECK
+----------------------------
+    task                      model     ADE_diff     FDE_diff
+2s_to_2s         Transformer_seed42 1.925873e-12 9.097605e-12
+2s_to_2s         Transformer_seed52 3.906795e-12 1.375753e-11
+2s_to_2s         Transformer_seed62 3.139110e-12 4.458979e-11
+2s_to_2s Transformer_3Seed_Ensemble 2.345738e-12 2.177777e-11
+2s_to_5s         Transformer_seed42 1.287660e-11 4.378188e-11
+2s_to_5s         Transformer_seed52 6.238857e-12 2.795275e-11
+2s_to_5s         Transformer_seed62 3.283811e-11 8.883699e-12
+2s_to_5s Transformer_3Seed_Ensemble 1.346392e-11 4.381051e-12

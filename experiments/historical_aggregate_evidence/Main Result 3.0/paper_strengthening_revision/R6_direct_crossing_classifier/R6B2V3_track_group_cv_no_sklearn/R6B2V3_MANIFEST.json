@@ -1,0 +1,10 @@
+{
+  "status": "R6B2V3_TRACK_DISJOINT_GROUPED_CV_FEASIBILITY_PROVEN_WITHOUT_SKLEARN_READY_FOR_PROTOCOL_REVISION",
+  "validation_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_geofence_instances.csv",
+  "validation_sha256": "65dd1b2b5f64802c144e64ce9e722c8765486e4a725a5feb17cc51a6b8af07c5",
+  "external_dependency_sklearn": false,
+  "grouping_unit": "track_key",
+  "selection_uses_model_performance": false,
+  "selection_uses_evaluation_data": false,
+  "selected_scheme_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6B2V3_track_group_cv_no_sklearn\\R6B2V3_SELECTED_TRACK_GROUP_CV_SCHEME.csv"
+}

@@ -1,0 +1,23 @@
+{
+  "step": "R10A_FROZEN_TRANSFORMER_ENSEMBLE_EVIDENCE_AUDIT",
+  "created_utc": "2026-10-30T04:58:04.940608+00:00",
+  "status": "R10A_PRIMARY_TESTREAL_READY_EXISTING_WILDBOX_NOT_FRESH_READY_FOR_R10B_TESTREAL_AND_R10C_FRESH_WILDBOX_REINFERENCE",
+  "training": false,
+  "inference": false,
+  "r9_final_status": "R9I_F_CANONICALIZATION_ABLATION_CONCLUSION_LOCKED_R9_COMPLETE_READY_FOR_R10_ENSEMBLE_ANALYSIS",
+  "primary_representation": "original frozen anisotropic pipeline",
+  "testreal_ready": true,
+  "existing_wildbox_matches_fresh_sample_counts": false,
+  "fresh_wildbox_target_counts": {
+    "2s_to_2s": 865,
+    "2s_to_5s": 637
+  },
+  "claim_guardrail": "Do not treat an older WildBox_external prediction set as the later fresh matched WildBox evaluation merely because the filename contains WildBox_external.",
+  "outputs": {
+    "prediction_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10A_frozen_transformer_ensemble_evidence_audit\\R10A_FROZEN_TRANSFORMER_PREDICTION_INVENTORY.csv",
+    "truth_identity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10A_frozen_transformer_ensemble_evidence_audit\\R10A_TRUTH_IDENTITY_ACROSS_SEEDS.csv",
+    "metadata_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10A_frozen_transformer_ensemble_evidence_audit\\R10A_METADATA_CANDIDATE_INVENTORY.csv",
+    "r2_fair_wildbox_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10A_frozen_transformer_ensemble_evidence_audit\\R10A_R2_FAIR_WILDBOX_CANDIDATES.csv",
+    "dataset_readiness": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10A_frozen_transformer_ensemble_evidence_audit\\R10A_DATASET_READINESS_DECISION.csv"
+  }
+}

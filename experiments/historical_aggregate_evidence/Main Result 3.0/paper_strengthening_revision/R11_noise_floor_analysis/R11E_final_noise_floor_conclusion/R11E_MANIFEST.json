@@ -1,0 +1,31 @@
+{
+  "step": "R11E_FINAL_EMPIRICAL_NOISE_FLOOR_CONCLUSION",
+  "created_utc": "2026-10-30T05:39:18.046028+00:00",
+  "status": "R11E_EMPIRICAL_NOISE_FLOOR_CONCLUSION_LOCKED_R11_COMPLETE_READY_FOR_R12_TRACK_ACCOUNTING",
+  "training": false,
+  "inference": false,
+  "F50_px": 0.2032955537988646,
+  "F95_px": 1.5533470192988588,
+  "absolute_error_conclusion": "BIRDSAI TestReal forecast error is substantially above the measured post-correction geometric residual envelope.",
+  "ensemble_gain_conclusion": "Primary ensemble gains versus mean individual-seed error are statistically supported but remain below F95; they are small-to-moderate relative to the empirical residual scale.",
+  "primary_mean_seed_gain_all_significant": true,
+  "primary_mean_seed_gain_all_below_F95": true,
+  "primary_mean_seed_gain_all_above_F50_overall": true,
+  "primary_mean_seed_gain_leave_one_sequence_out_all_positive": true,
+  "primary_mean_seed_gain_leave_one_sequence_out_all_above_F50": false,
+  "validation_selected_seed_5s_ADE_FDE_both_above_F95": true,
+  "claim_guardrails": [
+    "F50/F95 are empirical BIRDSAI TestReal post-correction geometric residual references.",
+    "Do not call them universal irreducible annotation-noise floors.",
+    "Do not subtract them from forecast errors as if additive error decomposition were established.",
+    "Do not transfer them directly to Fresh WildBox or BAMBI.",
+    "Describe ensemble gain over mean seed as statistically consistent but below the conservative F95 envelope."
+  ],
+  "outputs": {
+    "absolute_error_vs_residual": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11E_final_noise_floor_conclusion\\R11E_ABSOLUTE_ERROR_VS_RESIDUAL_ENVELOPE.csv",
+    "gain_scale_classification": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11E_final_noise_floor_conclusion\\R11E_ENSEMBLE_GAIN_RESIDUAL_SCALE_CLASSIFICATION.csv",
+    "leave_one_sequence_out": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11E_final_noise_floor_conclusion\\R11E_LEAVE_ONE_SEQUENCE_OUT_ROBUSTNESS.csv",
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11E_final_noise_floor_conclusion\\R11E_FINAL_CLAIM_MATRIX.csv",
+    "manuscript_ready_conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11E_final_noise_floor_conclusion\\R11E_MANUSCRIPT_READY_NOISE_FLOOR_CONCLUSION.txt"
+  }
+}

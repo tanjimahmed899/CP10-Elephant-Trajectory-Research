@@ -1,0 +1,34 @@
+STEP 7G — PARETO ANALYSIS + PROVISIONAL OPERATING-RULE LOCK
+====================================================================================
+
+VERDICT: PROVISIONAL_CANDIDATE_SELECTED
+LOCK STATUS: NEW_PROVISIONAL_LOCK_CREATED
+SELECTED N: 2
+
+SELECTION CRITERION
+-------------------
+Choose the smallest N>1 that, on BOTH BIRDSAI horizons, reduces false-alert rate by at least 20% relative to N=1 while retaining sensitivity >= 0.80.
+This criterion is exploratory/post-hoc and is frozen only for future untouched confirmatory evaluation.
+
+SELECTION AUDIT
+---------------
+ persistence_windows     task  baseline_false_alert_rate_N1  candidate_false_alert_rate  relative_false_alert_reduction  candidate_sensitivity  passes_false_alert_reduction  passes_sensitivity  passes_both
+                   2 2s_to_2s                      0.460498                    0.350651                        0.238539               0.823529                          True                True         True
+                   2 2s_to_5s                      0.403106                    0.305556                        0.241997               0.833333                          True                True         True
+
+SELECTED-N TRANSFER SUMMARY
+---------------------------
+         dataset     task  persistence_windows  persistent_alert_sensitivity  persistent_false_alert_rate  persistent_alert_precision  rescue_rate_among_nominal_misses  false_alerts_per_rescued_crossing
+BIRDSAI_TestReal 2s_to_2s                    2                      0.823529                     0.350651                    0.089897                          0.747191                          15.639098
+BIRDSAI_TestReal 2s_to_5s                    2                      0.833333                     0.305556                    0.186372                          0.778547                           6.071111
+   WildBox_Fresh 2s_to_2s                    2                      0.868056                     0.371073                    0.120831                          0.815534                          10.678571
+   WildBox_Fresh 2s_to_5s                    2                      0.771883                     0.309724                    0.214286                          0.717105                           4.848624
+
+IMPORTANT LIMITS
+----------------
+- N windows are consecutive available forecast windows, not seconds.
+- Exact physical time duration must not be claimed until window stride is verified.
+- The virtual geofence is a normalized experimental boundary, not a real village/farm boundary.
+- This operating rule is provisional and selected post hoc from BIRDSAI Step-7F diagnostics.
+- WildBox results are retrospective transfer diagnostics and were not used to choose N.
+- The rule should be evaluated unchanged on a genuinely untouched confirmatory set before final operational claims.

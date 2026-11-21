@@ -1,0 +1,23 @@
+{
+  "step": "R9I_A_MATCHED_ISOTROPIC_NEURAL_RETRAINING_PROTOCOL_AUDIT",
+  "created_utc": "2026-10-29T12:11:28.808936+00:00",
+  "status": "R9I_A_EXISTING_NEURAL_TRAINING_PROTOCOL_AUDITED_READY_FOR_R9I_B_EXACT_MODEL_HYPERPARAMETER_AND_SPLIT_LOCK",
+  "new_training": false,
+  "model_inference": false,
+  "frozen_results_modified": false,
+  "matched_ablation_principle": "Keep exact train/validation/test identity, architecture, optimizer, loss, batch size, epochs/early-stopping policy, seeds and evaluation protocol fixed. Change only coordinate representation to isotropic and re-derive the canonical scale floor from isotropic TrainReal.",
+  "prohibited_shortcuts": [
+    "Do not evaluate old anisotropic neural checkpoints on isotropic inputs.",
+    "Do not tune hyperparameters using TestReal or WildBox.",
+    "Do not change train/validation track membership.",
+    "Do not reuse the old anisotropic scale floor for final isotropic training."
+  ],
+  "split_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_SPLIT_SUMMARY.csv",
+  "split_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_EXACT_TRAIN_VAL_SPLIT_LOCK.csv",
+  "training_source_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_NEURAL_TRAINING_SOURCE_INVENTORY.csv",
+  "relevant_lines_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_TOP_SOURCE_RELEVANT_LINES.csv",
+  "hyperparameter_assignments_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_TOP_SOURCE_HYPERPARAMETER_ASSIGNMENTS.csv",
+  "checkpoint_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_A_matched_neural_retraining_protocol_lock\\R9I_A_EXISTING_CHECKPOINT_INVENTORY.csv",
+  "training_source_candidate_count": 36,
+  "checkpoint_count": 18
+}

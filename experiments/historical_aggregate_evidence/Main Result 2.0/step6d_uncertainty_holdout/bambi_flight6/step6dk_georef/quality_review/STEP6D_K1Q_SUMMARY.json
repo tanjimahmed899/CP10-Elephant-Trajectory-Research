@@ -1,0 +1,44 @@
+{
+  "step": "STEP_6D_K1Q_BAMBI_GEOREFERENCING_QUALITY_REVIEW",
+  "integrity": {
+    "trajectory_rows": 3553,
+    "tracks": 57,
+    "frames": 382,
+    "duplicate_track_frame_rows": 0,
+    "nonfinite_xy_rows": 0
+  },
+  "motion_summary": {
+    "steps": 3496,
+    "median_speed_xy_mps": 5.530593497827427,
+    "p95_speed_xy_mps": 11.570663546528861,
+    "p99_speed_xy_mps": 19.099918792208307,
+    "p995_speed_xy_mps": 52.59905760219959,
+    "max_speed_xy_mps": 86.47288208079902,
+    "mad_speed_xy_mps": 1.4487759004984597,
+    "robust_sigma_speed_xy_mps": 2.1479551500790164,
+    "robust_jump_threshold_mps": 27.01014499861759,
+    "robust_jump_steps": 31,
+    "tracks_with_robust_jumps": 30,
+    "p99_accel_mps2": 1241.470461240832,
+    "p995_accel_mps2": 1501.7382259366134
+  },
+  "continuity_summary": {
+    "tracks": 57,
+    "median_rows_per_track": 34.0,
+    "median_frame_gap_across_tracks": 10.0,
+    "median_max_frame_gap": 13.0,
+    "max_frame_gap_any_track": 31.0,
+    "median_longest_strict_contiguous_run_frames": 3.0,
+    "tracks_with_longest_strict_run_ge_20": 11,
+    "tracks_with_longest_strict_run_ge_40": 0,
+    "tracks_with_longest_strict_run_ge_70": 0
+  },
+  "verdict": "GEOMETRY_VALID_BUT_OUTLIER_REVIEW_REQUIRED",
+  "important_interpretation": [
+    "No biological speed threshold was used to delete data.",
+    "Robust jump flags are distributional diagnostics only.",
+    "No point or track is removed in K1Q.",
+    "K2 filtering/resampling rules must be decided only after reviewing whether flagged jumps are isolated projection artefacts, temporal gaps, or sustained track motion.",
+    "The 50-degree FOV remains a reference-pipeline assumption and not a Flight-6 independently calibrated intrinsic."
+  ]
+}

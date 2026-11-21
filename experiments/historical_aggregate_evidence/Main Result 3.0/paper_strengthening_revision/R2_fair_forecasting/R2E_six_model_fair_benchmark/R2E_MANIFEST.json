@@ -1,0 +1,31 @@
+{
+  "step": "R2E_SIX_MODEL_FAIR_SAME_SAMPLE_BENCHMARK",
+  "created_utc": "2026-10-29T06:33:03.738425+00:00",
+  "status": "R2E_SIX_MODEL_FAIR_SAME_SAMPLE_BENCHMARK_COMPLETE_READY_FOR_R3_CLUSTERED_BOOTSTRAP",
+  "retraining": false,
+  "model_selection": false,
+  "fresh_existing_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step3_fresh_wildbox_full_comparison\\step3_new_model_sample_metrics.csv",
+  "fresh_existing_source_sha256": "1ece0d969457566d740f4b4f2dfb4e517c8c29b90107faa6299323fec3108aad",
+  "fresh_existing_schema": {
+    "model_col": "model",
+    "task_col": "task",
+    "ade_col": "ADE",
+    "fde_col": "FDE",
+    "sample_col": "sample_id",
+    "track_col": "track_key",
+    "source_col": "source_group",
+    "seed_col": "seed"
+  },
+  "b1_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B1_stationary_cv_transformer\\R2D_B1_sample_metrics.csv",
+  "b1_source_sha256": "18a88d2ef9a83500e6709adcb7dee6a7d78427d9d08d583d0ad828b64b0ff6df",
+  "b2_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_sample_metrics.csv",
+  "b2_source_sha256": "c95690def5f8d24365e12f185e4fadc86c53aacd468cb9931207ade5e2d6a6a1",
+  "final_sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2E_six_model_fair_benchmark\\R2E_six_model_same_sample_metrics.csv",
+  "final_sample_metrics_sha256": "c14b73b226820602c722531b8770dee4a92f45e518664f81e4fb62c54986ed71",
+  "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2E_six_model_fair_benchmark\\R2E_six_model_fair_summary.csv",
+  "summary_sha256": "a80878786388fb080c3b0a33d8e4f69e3cc01a934f7651e10b12490af836ae3f",
+  "alignment": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2E_six_model_fair_benchmark\\R2E_same_sample_alignment.csv",
+  "alignment_sha256": "c5ac72912fc000e2b5719da1d3f2e86f9b3139f981d4ce13b71a4705bc255279",
+  "testreal_alignment_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2E_six_model_fair_benchmark\\R2E_testreal_B1_B2_alignment_audit.csv",
+  "testreal_alignment_audit_sha256": "b8a909b846d5655985f3495b8231f075e286d318a8d8e9e4260e317eb36bf578"
+}

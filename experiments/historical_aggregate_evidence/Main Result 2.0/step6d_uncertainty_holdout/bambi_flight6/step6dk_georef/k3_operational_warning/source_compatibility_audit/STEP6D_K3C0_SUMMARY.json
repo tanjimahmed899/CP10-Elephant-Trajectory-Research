@@ -1,0 +1,15 @@
+{
+  "step": "STEP_6D_K3C0_FROZEN_STEP7H_SOURCE_COMPATIBILITY_AUDIT",
+  "step7_manifest": "C:\\Users\\HP\\Downloads\\step7_response_aware_warning\\STEP7_FINAL_DEVELOPMENT_MANIFEST.json",
+  "step7_manifest_sha256": "ef346d16efbd972f4694beb688a252d680fe87e2935c184768bfbbebd1ff6eb0",
+  "candidate_source_files": 67,
+  "candidate_functions": 35,
+  "bambi_q90_context_rows": 2,
+  "status": "STEP7H_SOURCE_AND_BAMBI_COMPATIBILITY_CANDIDATES_FOUND_PENDING_EXACT_RULE_EXTRACTION",
+  "rules": [
+    "No Step7H tuning or warning evaluation is performed in K3C0.",
+    "If BAMBI Step7 evaluation proceeds, the final locked 90% conformal + N=2 persistence + per-geofence + response-escalation rule must remain unchanged.",
+    "N=2 means two consecutive available forecast windows, not two seconds.",
+    "BAMBI remains a cross-species external stress test; any Step7 result is operational stress testing, not field validation."
+  ]
+}

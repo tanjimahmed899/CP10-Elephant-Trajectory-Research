@@ -1,0 +1,19 @@
+{
+  "step": "R9H_A_V2_FOCUSED_PYTHON_CANONICALIZER_AUDIT",
+  "created_utc": "2026-10-29T10:47:55.009057+00:00",
+  "status": "R9H_A_V2_FOCUSED_PYTHON_CANONICALIZER_AUDIT_COMPLETE_READY_FOR_R9H_B_EXACT_GEOMETRY_FORMULA_LOCK",
+  "json_pose_files_excluded": true,
+  "new_training": false,
+  "geometry_metrics_run": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "candidate_count": 7,
+  "relevant_function_count": 31,
+  "formula_line_count": 772,
+  "identical_function_body_group_count": 1,
+  "source_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_V2_focused_python_canonicalizer_audit\\R9H_A_V2_PYTHON_SOURCE_INVENTORY.csv",
+  "relevant_functions_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_V2_focused_python_canonicalizer_audit\\R9H_A_V2_RELEVANT_FUNCTIONS.csv",
+  "formula_lines_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_V2_focused_python_canonicalizer_audit\\R9H_A_V2_FORMULA_LINES.csv",
+  "formula_context_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_V2_focused_python_canonicalizer_audit\\R9H_A_V2_FORMULA_CONTEXT.csv",
+  "identical_function_groups_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_V2_focused_python_canonicalizer_audit\\R9H_A_V2_IDENTICAL_FUNCTION_BODY_GROUPS.csv"
+}

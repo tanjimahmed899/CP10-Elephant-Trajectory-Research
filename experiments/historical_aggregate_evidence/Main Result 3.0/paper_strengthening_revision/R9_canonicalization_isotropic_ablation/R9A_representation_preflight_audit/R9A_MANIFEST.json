@@ -1,0 +1,19 @@
+{
+  "step": "R9A_CANONICALIZATION_REPRESENTATION_PREFLIGHT",
+  "created_utc": "2026-10-29T08:48:08.721825+00:00",
+  "status": "R9A_CANONICALIZATION_REPRESENTATION_PREFLIGHT_COMPLETE_READY_FOR_R9B_SOURCE_LOCK",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "search_roots": [
+    "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result",
+    "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0"
+  ],
+  "text_files_with_representation_evidence": 122,
+  "csv_coordinate_candidates": 345,
+  "anisotropic_xW_yH_pattern_hits": 0,
+  "existing_isotropic_pattern_hits": 0,
+  "width_height_metadata_candidate_tables": 3,
+  "corrected_xy_candidate_tables": 0,
+  "text_evidence_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9A_representation_preflight_audit\\R9A_TEXT_REPRESENTATION_EVIDENCE.csv",
+  "coordinate_candidates_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9A_representation_preflight_audit\\R9A_COORDINATE_SOURCE_CANDIDATES.csv"
+}

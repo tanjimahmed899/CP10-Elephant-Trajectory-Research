@@ -1,0 +1,15 @@
+{
+  "step": "STEP_6D_K3C3_EXACT_STEP18_GEOFENCE_GEOMETRY_ORIENTATION_TTE_AUDIT",
+  "step18a_sha256": "a949c40600b89b1531aba33d670f1202087e30082a12df17b7c5c340114857b8",
+  "step18b_sha256": "cf46cb83565251c7d9f40e47d7a21811dda546f3675898c2962093cd3402de33",
+  "protocol_lock_sha256": "12e7f67e5efb06a015452e81e277de7ebaded8b8fe0abd06c3176829ceb51662",
+  "geofence_instance_table_sha256": "08d75da57a9f2ff42a30b6a70a42382a784628aa933882528f0a55c3b28ce024",
+  "candidate_functions": 12,
+  "formula_statements": 98,
+  "status": "EXACT_STEP18_GEOMETRY_FORMULAS_EXTRACTED_READY_FOR_BAMBI_GEOFENCE_RECONSTRUCTION_DECISION",
+  "important_rule": [
+    "Do not infer orientation or units from sign agreement alone.",
+    "BAMBI base geofence reconstruction may proceed only after source code confirms boundary construction, risk orientation, crossing, TTE, and scale mapping.",
+    "No original Main Result file is modified by this audit."
+  ]
+}

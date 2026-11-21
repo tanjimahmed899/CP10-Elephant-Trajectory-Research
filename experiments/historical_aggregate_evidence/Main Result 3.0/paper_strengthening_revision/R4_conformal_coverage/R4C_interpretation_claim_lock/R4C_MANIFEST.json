@@ -1,0 +1,12 @@
+{
+  "step": "R4C_FIXED_CONFORMAL_INTERPRETATION_CLAIM_LOCK",
+  "created_utc": "2026-10-29T06:46:40.957530+00:00",
+  "status": "R4C_FIXED_CONFORMAL_INTERPRETATION_AND_CLAIM_LOCK_COMPLETE_READY_FOR_R5_GEOFENCE_BASELINES",
+  "recalibration": false,
+  "new_coverage_computation": false,
+  "source_r4b_coverage": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4B_method_lock_and_existing_coverage\\R4B_EXISTING_TESTREAL_FRESH_FIXED_COVERAGE.csv",
+  "source_r4b_coverage_sha256": "a9a6b7b41cdd441eef6f3d7998919ee903dc6f8dd900672aa91dc9313ccab46c",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4C_interpretation_claim_lock\\R4C_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "db674143a9246c13a366c49c4066657c55abcd7328c4ff7131fb556c8318b086",
+  "manuscript_table_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4C_interpretation_claim_lock\\R4C_manuscript_uncertainty_table.csv"
+}

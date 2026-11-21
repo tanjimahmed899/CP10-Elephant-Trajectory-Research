@@ -1,0 +1,88 @@
+{
+  "step": "R9H_A_CANONICALIZATION_SOURCE_AUDIT",
+  "created_utc": "2026-10-29T10:42:41.780399+00:00",
+  "status": "R9H_A_CANONICALIZATION_SOURCE_AUDIT_COMPLETE_READY_FOR_R9H_B_EXACT_GEOMETRY_FORMULA_LOCK",
+  "new_training": false,
+  "geometry_metrics_run": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "candidate_count": 170,
+  "candidate_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_canonicalization_source_lock\\R9H_A_CANONICALIZATION_SOURCE_CANDIDATES.csv",
+  "candidate_inventory_sha256": "6f02b10ae20661e6beb4e527120905e77209de7458ec8a5b7c82a4ee5b7080fa",
+  "classified_lines_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_canonicalization_source_lock\\R9H_A_TOP_CANDIDATE_CLASSIFIED_LINES.csv",
+  "context_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_A_canonicalization_source_lock\\R9H_A_TOP_CANDIDATE_CONTEXT.csv",
+  "top_candidate_files": [
+    {
+      "filename": "6_matched_poses.json",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\correction\\6_matched_poses.json",
+      "score": 130428,
+      "sha256": "b4abcabc53eb50b6fdcecdc107a62f53fc81980bb37ce7174fcf060a8f84cae1"
+    },
+    {
+      "filename": "STEP6D_K2B0_SUMMARY.txt",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b_representation_audit\\STEP6D_K2B0_SUMMARY.txt",
+      "score": 914,
+      "sha256": "ac23ddfa1358feaa887320f8a40089a3328911641b5937bf923c72dfbfe527df"
+    },
+    {
+      "filename": "step6d_k2b3_build_and_lock_final_canonical_dataset.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_k2b3_build_and_lock_final_canonical_dataset.py",
+      "score": 759,
+      "sha256": "d1ee6fc460089b1d40cc03212ad79adaa88b49adb215fddbc94fdfe65488b9ac"
+    },
+    {
+      "filename": "step6b_scale_adaptive_conformal.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6b_scale_adaptive_conformal.py",
+      "score": 690,
+      "sha256": "c5017e855f3e40d14a428422bc7c52371d960c846c1cef707ffb0ee6914ca4be"
+    },
+    {
+      "filename": "K3C13_full_anchor_normalized_canonical_dataset_lock.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\K3C13_full_anchor_normalized_canonical_dataset_lock.py",
+      "score": 610,
+      "sha256": "c6ccd1e1b6f23a36afa94631ce2f8e2f9795bd814a2d7cdda55d134d0f31ab99"
+    },
+    {
+      "filename": "step6d_k2b2_v4_float64_and_exact_inverse_roundtrip.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_k2b2_v4_float64_and_exact_inverse_roundtrip.py",
+      "score": 591,
+      "sha256": "6ccaa881c761c0c2bc682c4b1bb9c2cf3beef0b24b1b006837b980a7860a3dc0"
+    },
+    {
+      "filename": "K3C15_V3_MODELROOT_FIX_FRESH_COPY.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\K3C15_V3_MODELROOT_FIX_FRESH_COPY.py",
+      "score": 554,
+      "sha256": "e457e5deb920ca10795ac19cefac81bead1bc74bd3b9fc8cd614a3444935eea6"
+    },
+    {
+      "filename": "K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\K3C15_V2_secondary_frozen_3seed_transformer_inference_SAFE_LOADER.py",
+      "score": 546,
+      "sha256": "c17c2fb3d9f23e266ed857bb9b80c659eabe2bd1af4d729982ee284d84d9b7e0"
+    },
+    {
+      "filename": "audit_canonical_motion.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\audit_canonical_motion.py",
+      "score": 545,
+      "sha256": "17beabe676adeb09cd4faab898537d496bdaad6f669283ea199b60b34c1afe0b"
+    },
+    {
+      "filename": "step6d_k2b2_v3_task_floor_equivalence_roundtrip.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_k2b2_v3_task_floor_equivalence_roundtrip.py",
+      "score": 536,
+      "sha256": "82ac39d2716a760086b7f8205321ad4862a011ec7190dabc90c17c23f61c9f06"
+    },
+    {
+      "filename": "K3C15_secondary_frozen_3seed_transformer_inference.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\K3C15_secondary_frozen_3seed_transformer_inference.py",
+      "score": 530,
+      "sha256": "eb0bbbac48403204f6fe62d644cd56c61ca1d2001e223d92155d0b848fe7b1ef"
+    },
+    {
+      "filename": "step6d_k2b2_executable_canonicalizer_equivalence.py",
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6d_k2b2_executable_canonicalizer_equivalence.py",
+      "score": 497,
+      "sha256": "9c3cc338a9f8b998ae51943c44bbac20756dc89842b507c78d93674bed12c6f9"
+    }
+  ]
+}

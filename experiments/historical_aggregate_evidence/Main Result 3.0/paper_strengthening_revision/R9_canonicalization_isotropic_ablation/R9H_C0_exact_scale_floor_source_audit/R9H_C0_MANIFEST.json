@@ -1,0 +1,36 @@
+{
+  "step": "R9H_C0_EXACT_FROZEN_SCALE_FLOOR_SOURCE_AUDIT",
+  "created_utc": "2026-10-29T11:20:01.881729+00:00",
+  "status": "R9H_C0_SCALE_FLOOR_CANDIDATES_AUDITED_NEEDS_EXACT_TASK_FLOOR_RESOLUTION_BEFORE_R9H_C1",
+  "r9h_b_manifest": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_B_exact_geometry_formula_lock\\R9H_B_MANIFEST.json",
+  "r9h_b_manifest_sha256": "bd9556a6041bb6a2c14aeb21bfaa5828548105d9f4cee506bf5aab8dd5cec8a2",
+  "build_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+  "build_source_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+  "task_consensus": [
+    {
+      "task": "2s_to_2s",
+      "candidate_count": 24,
+      "unique_candidate_values": "0.06820264 | 0.068202644168777 | 0.068202644586563 | 0.102401502430439 | 0.141054525971413",
+      "strong_consensus_value": NaN,
+      "consensus": false
+    },
+    {
+      "task": "2s_to_5s",
+      "candidate_count": 26,
+      "unique_candidate_values": "0.067326387737151 | 0.067326389253139 | 0.06732639 | 0.102401502430439 | 0.132639214396477",
+      "strong_consensus_value": NaN,
+      "consensus": false
+    }
+  ],
+  "new_training": false,
+  "model_inference": false,
+  "geometry_distortion_metrics_run": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "outputs": {
+    "build_scale_floor_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_exact_scale_floor_source_audit\\R9H_C0_BUILD_FINAL_SCALE_FLOOR_CONTEXT.csv",
+    "all_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_exact_scale_floor_source_audit\\R9H_C0_ALL_SCALE_FLOOR_CANDIDATES.csv",
+    "plausible_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_exact_scale_floor_source_audit\\R9H_C0_PLAUSIBLE_TASK_SCALE_FLOOR_CANDIDATES.csv",
+    "task_consensus": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9H_C0_exact_scale_floor_source_audit\\R9H_C0_TASK_SCALE_FLOOR_CONSENSUS.csv"
+  }
+}

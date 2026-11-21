@@ -1,0 +1,44 @@
+MDT-U — TRAINREAL VALIDATION EXPERIMENT
+==================================================================================
+
+PROTOCOL
+- Training: BIRDSAI TrainReal neural-training tracks only.
+- Validation: fixed track-disjoint TrainReal validation only.
+- BIRDSAI TestReal NOT loaded.
+- WildBox NOT loaded.
+- Same three random seeds: 42, 52, 62.
+- Checkpoint selection: validation track-macro ADE.
+
+ARCHITECTURE
+- Compact temporal Transformer encoder.
+- Input per observation step: [x,y,dx,dy,ddx,ddy].
+- Future displacement-increment decoder.
+- Future positions reconstructed by cumulative sum.
+- Endpoint-aware trajectory loss.
+- Increment and acceleration-consistency losses.
+- Heteroscedastic Gaussian uncertainty head.
+
+MODEL COMPARISON
+----------------------------------------------------------------------------------
+    task       model  seeds  ADE_mean  ADE_std  FDE_mean  FDE_std  track_macro_ADE_mean  track_macro_ADE_std  track_macro_FDE_mean  track_macro_FDE_std
+2s_to_2s         GRU      3  0.017219 0.000217  0.030581 0.000323              0.020662             0.000278              0.038105             0.000694
+2s_to_2s        LSTM      3  0.018540 0.000129  0.033320 0.000413              0.024307             0.000075              0.045069             0.000156
+2s_to_2s       MDT-U      3  0.018156 0.000711  0.032339 0.001462              0.022669             0.002125              0.041167             0.004437
+2s_to_2s   RMPG-U-v2      3  0.017900 0.000128  0.031482 0.000316              0.021504             0.000304              0.039370             0.000559
+2s_to_2s Transformer      3  0.017104 0.000495  0.030611 0.000868              0.020570             0.001050              0.037979             0.002273
+2s_to_5s         GRU      3  0.021143 0.000061  0.037460 0.000250              0.021905             0.000506              0.038584             0.001349
+2s_to_5s        LSTM      3  0.020815 0.000197  0.036892 0.000517              0.020853             0.001093              0.038394             0.000072
+2s_to_5s       MDT-U      3  0.021076 0.000212  0.036868 0.000293              0.021709             0.000548              0.039953             0.001984
+2s_to_5s   RMPG-U-v2      3  0.021215 0.000352  0.037049 0.000255              0.024261             0.000254              0.040090             0.001132
+2s_to_5s Transformer      3  0.020367 0.000393  0.035684 0.001079              0.020718             0.000404              0.041467             0.001010
+
+MDT-U SUMMARY
+----------------------------------------------------------------------------------
+    task model  seeds  mean_best_epoch  ADE_mean_mean  ADE_mean_std  FDE_mean_mean  FDE_mean_std  ADE_track_macro_mean  ADE_track_macro_std  FDE_track_macro_mean  FDE_track_macro_std  ADE_source_macro_mean  ADE_source_macro_std  FDE_source_macro_mean  FDE_source_macro_std  coverage50_mean  coverage50_std  coverage90_mean  coverage90_std  coverage95_mean  coverage95_std  mean_sigma_mean  mean_sigma_std
+2s_to_2s MDT-U      3       125.333333       0.018156      0.000711       0.032339      0.001462              0.022669             0.002125              0.041167             0.004437               0.022191              0.002482               0.040563              0.004707         0.654124        0.009834         0.899313        0.002146         0.930928        0.001786         0.144848        0.005697
+2s_to_5s MDT-U      3        47.000000       0.021076      0.000212       0.036868      0.000293              0.021709             0.000548              0.039953             0.001984               0.017766              0.000334               0.024515              0.001920         0.711818        0.013553         0.968333        0.005370         0.985000        0.003348         0.254305        0.004900
+
+ADDITIONAL FILES
+----------------------------------------------------------------------------------
+mdtu_validation_error_curve.csv
+mdtu_uncertainty_by_time.csv

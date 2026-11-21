@@ -1,0 +1,42 @@
+{
+  "step": "R2D_B1_TARGETED_SAMPLE_LEVEL_RECOMPUTATION",
+  "created_utc": "2026-10-29T06:10:06.244121+00:00",
+  "status": "R2D_B1_TARGETED_RECOMPUTATION_COMPLETE_REFERENCE_SANITY_PASS",
+  "models": [
+    "Stationary",
+    "ConstantVelocity",
+    "TransformerEnsemble"
+  ],
+  "datasets": [
+    "BIRDSAI_TestReal",
+    "Fresh_WildBox"
+  ],
+  "retraining": false,
+  "model_selection": false,
+  "fresh_kalman_gru_lstm_recomputed": false,
+  "evaluator_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_birdsai_testreal_frozen_ensemble.py",
+  "evaluator_sha256": "b3002766925305adb2fd54339cda44188223aa85351c3c8299e2bbf1bab7ee66",
+  "safe_extraction": {
+    "selected_functions": [
+      "constant_velocity_prediction",
+      "inverse_transform_batch",
+      "load_transformer",
+      "predict_model",
+      "stationary_prediction"
+    ],
+    "selected_classes": [
+      "PositionalEncoding",
+      "TrajectoryTransformer"
+    ],
+    "selected_assignments": [
+      "DEVICE",
+      "MODEL_ROOT"
+    ],
+    "top_level_benchmark_executed": false
+  },
+  "sample_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B1_stationary_cv_transformer\\R2D_B1_sample_metrics.csv",
+  "sample_metrics_sha256": "18a88d2ef9a83500e6709adcb7dee6a7d78427d9d08d583d0ad828b64b0ff6df",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B1_stationary_cv_transformer\\R2D_B1_summary_metrics.csv",
+  "reference_sanity_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B1_stationary_cv_transformer\\R2D_B1_reference_sanity_check.csv",
+  "input_provenance_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B1_stationary_cv_transformer\\R2D_B1_input_provenance.csv"
+}

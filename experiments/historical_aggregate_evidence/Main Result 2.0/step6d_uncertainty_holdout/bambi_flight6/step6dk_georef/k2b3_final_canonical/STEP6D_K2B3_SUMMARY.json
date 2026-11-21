@@ -1,0 +1,77 @@
+{
+  "step": "STEP_6D_K2B3_FINAL_CANONICAL_DATASET",
+  "lock_status": "NEW_CANONICAL_LOCK_CREATED",
+  "task_outputs": {
+    "2s_to_2s": {
+      "windows": 1855,
+      "history_canonical_shape": [
+        1855,
+        20,
+        2
+      ],
+      "future_canonical_shape": [
+        1855,
+        20,
+        2
+      ],
+      "history_canonical_dtype": "float32",
+      "future_canonical_dtype": "float32",
+      "origin_dtype": "float64",
+      "angle_dtype": "float64",
+      "scale_dtype": "float64",
+      "absolute_gt_dtype": "float64",
+      "scale_floor": 0.06820264416877736,
+      "scale_floor_applied_windows": 0,
+      "scale_floor_applied_pct": 0.0,
+      "history_path_min": 4.31360343179692,
+      "history_path_median": 6.819777666193089,
+      "history_path_max": 13.319559689169123,
+      "scale_min": 4.31360343179692,
+      "scale_median": 6.819777666193089,
+      "scale_max": 13.319559689169123,
+      "max_train_inverse_roundtrip_error_m": 6.817281246185303e-07,
+      "max_eval_inverse_roundtrip_error_m": 6.817281246185303e-07,
+      "max_train_vs_eval_inverse_diff_m": 0.0,
+      "canonical_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_2s_bambi_flight6_canonical_LOCKED.npz",
+      "canonical_metadata": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_2s_bambi_flight6_canonical_metadata_LOCKED.csv",
+      "canonical_npz_sha256": "9e15556e34a0726d595962b1df0d3ab11c9f198aadaac88c11db72c24f6ffa85",
+      "canonical_metadata_sha256": "d65150de80f8ca147ee1e9259701fc9bc03f9a647b84402a259634e12a6d6ae7"
+    },
+    "2s_to_5s": {
+      "windows": 623,
+      "history_canonical_shape": [
+        623,
+        20,
+        2
+      ],
+      "future_canonical_shape": [
+        623,
+        50,
+        2
+      ],
+      "history_canonical_dtype": "float32",
+      "future_canonical_dtype": "float32",
+      "origin_dtype": "float64",
+      "angle_dtype": "float64",
+      "scale_dtype": "float64",
+      "absolute_gt_dtype": "float64",
+      "scale_floor": 0.06732638773715147,
+      "scale_floor_applied_windows": 0,
+      "scale_floor_applied_pct": 0.0,
+      "history_path_min": 4.31360343179692,
+      "history_path_median": 5.542208102155201,
+      "history_path_max": 12.61095628189792,
+      "scale_min": 4.31360343179692,
+      "scale_median": 5.542208102155201,
+      "scale_max": 12.61095628189792,
+      "max_train_inverse_roundtrip_error_m": 1.4221295714378357e-06,
+      "max_eval_inverse_roundtrip_error_m": 1.4221295714378357e-06,
+      "max_train_vs_eval_inverse_diff_m": 0.0,
+      "canonical_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_5s_bambi_flight6_canonical_LOCKED.npz",
+      "canonical_metadata": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\2s_to_5s_bambi_flight6_canonical_metadata_LOCKED.csv",
+      "canonical_npz_sha256": "1e821b2aa90cbd5193fd7fc1f362d5889059500e90cda3bab6287b339afde73b",
+      "canonical_metadata_sha256": "102cb44a34689b3669a70ce55d482427cdf93ac4e696bd4836495eb3fe316395"
+    }
+  },
+  "status": "BAMBI_CANONICAL_DATASET_READY_FOR_FROZEN_MODEL_INFERENCE"
+}

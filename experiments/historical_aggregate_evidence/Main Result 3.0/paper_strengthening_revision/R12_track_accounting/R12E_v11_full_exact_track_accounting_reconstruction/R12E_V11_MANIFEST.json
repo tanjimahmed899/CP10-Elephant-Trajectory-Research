@@ -1,0 +1,33 @@
+{
+  "step": "R12E_V11_FULL_EXACT_TRACK_ACCOUNTING_RECONSTRUCTION",
+  "created_utc": "2026-10-30T10:11:27.919224+00:00",
+  "status": "R12E_V11_FULL_EXACT_RECONSTRUCTION_PASS_45_ORIGINAL_37_31_TRACKS_89_63_SEGMENTS_1053_826_WINDOWS_ZERO_PHYSICAL_MISMATCH_READY_FOR_R12F_FINAL_LOCK",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "unified_builder": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_unified_10hz_dataset.py",
+  "unified_builder_sha256": "fd7b34868b877ef76e69acffed5010ca9ae2233af4b0851998a1dffe7c05b119",
+  "exact_filter": "accepted == 1 AND quality_tier == 'core' AND sample_id >= 0",
+  "total_original_tracks": 45,
+  "final_2s": {
+    "windows": 1053,
+    "original_tracks": 37,
+    "segments": 89,
+    "physical_window_mismatch": 0
+  },
+  "final_5s": {
+    "windows": 826,
+    "original_tracks": 31,
+    "segments": 63,
+    "physical_window_mismatch": 0
+  },
+  "outputs": {
+    "source_filter_expression": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_EXACT_SOURCE_FILTER_EXPRESSION.csv",
+    "physical_window_match": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_FILTERED_VS_FROZEN_PHYSICAL_WINDOW_MATCH.csv",
+    "full_track_accounting_chain": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_FULL_TRACK_ACCOUNTING_CHAIN.csv",
+    "removed_2s_windows": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_REMOVED_TESTREAL_2S_WINDOWS.csv",
+    "removed_5s_windows": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_REMOVED_TESTREAL_5S_WINDOWS.csv",
+    "removed_reason_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_REMOVED_WINDOW_REASON_SUMMARY.csv",
+    "manuscript_ready": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v11_full_exact_track_accounting_reconstruction\\R12E_V11_MANUSCRIPT_READY_TRACK_ACCOUNTING.txt"
+  }
+}

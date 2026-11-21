@@ -1,0 +1,220 @@
+STEP 19 — CLUSTERED BOOTSTRAP FINAL STATISTICAL ANALYSIS
+============================================================================================
+
+METHOD
+- Bootstrap replicates: 2000
+- Random seed: 20261017
+- Primary bootstrap cluster: trajectory track.
+- Resampling is stratified within source_group.
+- All overlapping windows belonging to a sampled track remain together as one resampled cluster.
+- 95% percentile bootstrap confidence intervals.
+- Source-level uncertainty is NOT presented as a bootstrap CI because only 3 fresh WildBox sources and 5-6 TestReal sources are available.
+- Source robustness is instead summarized using leave-one-source-out sensitivity.
+- No model retraining, model selection, warning threshold tuning, or protocol modification occurred.
+
+INTERPRETATION
+- BIRDSAI TestReal remains a frozen in-domain benchmark previously inspected during development.
+- Fresh WildBox remains the preregistered unseen source-video external holdout.
+- Forecasting errors are normalized image-plane coordinate errors, not metres.
+- Virtual-geofence events are experimental image-plane boundary crossings, not actual human-elephant conflict events.
+- Horizon and domain contrasts are descriptive independent clustered-bootstrap contrasts, not paired hypothesis tests.
+
+FORECASTING 95% CI
+--------------------------------------------------------------------------------------------
+         dataset     task           metric           estimate_95CI
+BIRDSAI_TestReal 2s_to_2s              ADE 0.0191 [0.0171, 0.0215]
+BIRDSAI_TestReal 2s_to_2s              FDE 0.0329 [0.0293, 0.0375]
+BIRDSAI_TestReal 2s_to_2s  track_macro_ADE 0.0284 [0.0243, 0.0327]
+BIRDSAI_TestReal 2s_to_2s  track_macro_FDE 0.0538 [0.0461, 0.0617]
+BIRDSAI_TestReal 2s_to_2s source_macro_ADE 0.0243 [0.0220, 0.0277]
+BIRDSAI_TestReal 2s_to_2s source_macro_FDE 0.0448 [0.0403, 0.0511]
+BIRDSAI_TestReal 2s_to_5s              ADE 0.0356 [0.0317, 0.0401]
+BIRDSAI_TestReal 2s_to_5s              FDE 0.0672 [0.0594, 0.0763]
+BIRDSAI_TestReal 2s_to_5s  track_macro_ADE 0.0544 [0.0486, 0.0607]
+BIRDSAI_TestReal 2s_to_5s  track_macro_FDE 0.1157 [0.0951, 0.1389]
+BIRDSAI_TestReal 2s_to_5s source_macro_ADE 0.0596 [0.0571, 0.0623]
+BIRDSAI_TestReal 2s_to_5s source_macro_FDE 0.1077 [0.1028, 0.1132]
+   WildBox_Fresh 2s_to_2s              ADE 0.0288 [0.0252, 0.0329]
+   WildBox_Fresh 2s_to_2s              FDE 0.0539 [0.0460, 0.0628]
+   WildBox_Fresh 2s_to_2s  track_macro_ADE 0.0323 [0.0283, 0.0366]
+   WildBox_Fresh 2s_to_2s  track_macro_FDE 0.0589 [0.0513, 0.0670]
+   WildBox_Fresh 2s_to_2s source_macro_ADE 0.0200 [0.0168, 0.0238]
+   WildBox_Fresh 2s_to_2s source_macro_FDE 0.0370 [0.0296, 0.0450]
+   WildBox_Fresh 2s_to_5s              ADE 0.0501 [0.0444, 0.0566]
+   WildBox_Fresh 2s_to_5s              FDE 0.1053 [0.0886, 0.1237]
+   WildBox_Fresh 2s_to_5s  track_macro_ADE 0.0615 [0.0510, 0.0727]
+   WildBox_Fresh 2s_to_5s  track_macro_FDE 0.1256 [0.1038, 0.1491]
+   WildBox_Fresh 2s_to_5s source_macro_ADE 0.0360 [0.0285, 0.0452]
+   WildBox_Fresh 2s_to_5s source_macro_FDE 0.0706 [0.0539, 0.0929]
+
+GEOFENCE 95% CI
+--------------------------------------------------------------------------------------------
+         dataset     task                  metric        estimate_95CI
+BIRDSAI_TestReal 2s_to_2s               precision 0.626 [0.540, 0.701]
+BIRDSAI_TestReal 2s_to_2s                  recall 0.302 [0.242, 0.357]
+BIRDSAI_TestReal 2s_to_2s                      F1 0.407 [0.338, 0.466]
+BIRDSAI_TestReal 2s_to_2s      false_warning_rate 0.008 [0.005, 0.010]
+BIRDSAI_TestReal 2s_to_2s               miss_rate 0.698 [0.643, 0.758]
+BIRDSAI_TestReal 2s_to_2s                   AUROC 0.942 [0.917, 0.962]
+BIRDSAI_TestReal 2s_to_2s                   AUPRC 0.506 [0.436, 0.569]
+BIRDSAI_TestReal 2s_to_2s             TTE_MAE_sec 0.542 [0.442, 0.662]
+BIRDSAI_TestReal 2s_to_2s            TTE_bias_sec 0.266 [0.150, 0.386]
+BIRDSAI_TestReal 2s_to_2s   mean_warning_lead_sec 0.629 [0.527, 0.747]
+BIRDSAI_TestReal 2s_to_2s median_warning_lead_sec 0.500 [0.300, 0.700]
+BIRDSAI_TestReal 2s_to_5s               precision 0.754 [0.664, 0.845]
+BIRDSAI_TestReal 2s_to_5s                  recall 0.247 [0.210, 0.286]
+BIRDSAI_TestReal 2s_to_5s                      F1 0.373 [0.323, 0.420]
+BIRDSAI_TestReal 2s_to_5s      false_warning_rate 0.007 [0.004, 0.010]
+BIRDSAI_TestReal 2s_to_5s               miss_rate 0.753 [0.714, 0.790]
+BIRDSAI_TestReal 2s_to_5s                   AUROC 0.926 [0.911, 0.939]
+BIRDSAI_TestReal 2s_to_5s                   AUPRC 0.559 [0.499, 0.618]
+BIRDSAI_TestReal 2s_to_5s             TTE_MAE_sec 1.179 [1.003, 1.364]
+BIRDSAI_TestReal 2s_to_5s            TTE_bias_sec 0.627 [0.268, 0.942]
+BIRDSAI_TestReal 2s_to_5s   mean_warning_lead_sec 1.018 [0.859, 1.210]
+BIRDSAI_TestReal 2s_to_5s median_warning_lead_sec 0.800 [0.600, 0.900]
+   WildBox_Fresh 2s_to_2s               precision 0.766 [0.667, 0.857]
+   WildBox_Fresh 2s_to_2s                  recall 0.285 [0.224, 0.347]
+   WildBox_Fresh 2s_to_2s                      F1 0.415 [0.342, 0.481]
+   WildBox_Fresh 2s_to_2s      false_warning_rate 0.005 [0.003, 0.008]
+   WildBox_Fresh 2s_to_2s               miss_rate 0.715 [0.653, 0.776]
+   WildBox_Fresh 2s_to_2s                   AUROC 0.902 [0.864, 0.937]
+   WildBox_Fresh 2s_to_2s                   AUPRC 0.570 [0.486, 0.645]
+   WildBox_Fresh 2s_to_2s             TTE_MAE_sec 0.448 [0.351, 0.548]
+   WildBox_Fresh 2s_to_2s            TTE_bias_sec 0.277 [0.162, 0.400]
+   WildBox_Fresh 2s_to_2s   mean_warning_lead_sec 0.611 [0.481, 0.719]
+   WildBox_Fresh 2s_to_2s median_warning_lead_sec 0.500 [0.300, 0.600]
+   WildBox_Fresh 2s_to_5s               precision 0.880 [0.789, 0.951]
+   WildBox_Fresh 2s_to_5s                  recall 0.194 [0.134, 0.254]
+   WildBox_Fresh 2s_to_5s                      F1 0.317 [0.231, 0.398]
+   WildBox_Fresh 2s_to_5s      false_warning_rate 0.003 [0.001, 0.005]
+   WildBox_Fresh 2s_to_5s               miss_rate 0.806 [0.746, 0.866]
+   WildBox_Fresh 2s_to_5s                   AUROC 0.845 [0.792, 0.893]
+   WildBox_Fresh 2s_to_5s                   AUPRC 0.509 [0.403, 0.610]
+   WildBox_Fresh 2s_to_5s             TTE_MAE_sec 1.329 [1.060, 1.595]
+   WildBox_Fresh 2s_to_5s            TTE_bias_sec 0.940 [0.595, 1.240]
+   WildBox_Fresh 2s_to_5s   mean_warning_lead_sec 0.999 [0.733, 1.237]
+   WildBox_Fresh 2s_to_5s median_warning_lead_sec 0.700 [0.400, 1.000]
+
+SOURCE SENSITIVITY
+--------------------------------------------------------------------------------------------
+analysis          dataset     task                  metric  sources  LOSO_min  LOSO_max  LOSO_mean
+forecast BIRDSAI_TestReal 2s_to_2s                     ADE        6  0.014166  0.025975   0.019504
+forecast BIRDSAI_TestReal 2s_to_2s                     FDE        6  0.023307  0.047577   0.033837
+forecast BIRDSAI_TestReal 2s_to_2s        source_macro_ADE        6  0.019680  0.027452   0.024345
+forecast BIRDSAI_TestReal 2s_to_2s        source_macro_FDE        6  0.037362  0.050521   0.044802
+forecast BIRDSAI_TestReal 2s_to_2s         track_macro_ADE        6  0.020024  0.032644   0.027903
+forecast BIRDSAI_TestReal 2s_to_2s         track_macro_FDE        6  0.037775  0.063711   0.052924
+forecast BIRDSAI_TestReal 2s_to_5s                     ADE        5  0.030785  0.047501   0.036919
+forecast BIRDSAI_TestReal 2s_to_5s                     FDE        5  0.055182  0.094605   0.070245
+forecast BIRDSAI_TestReal 2s_to_5s        source_macro_ADE        5  0.043485  0.069859   0.059587
+forecast BIRDSAI_TestReal 2s_to_5s        source_macro_FDE        5  0.082257  0.125821   0.107665
+forecast BIRDSAI_TestReal 2s_to_5s         track_macro_ADE        5  0.039341  0.065421   0.053503
+forecast BIRDSAI_TestReal 2s_to_5s         track_macro_FDE        5  0.068621  0.143960   0.112561
+forecast    WildBox_Fresh 2s_to_2s                     ADE        3  0.011372  0.032668   0.024599
+forecast    WildBox_Fresh 2s_to_2s                     FDE        3  0.019756  0.061598   0.045668
+forecast    WildBox_Fresh 2s_to_2s        source_macro_ADE        3  0.012958  0.025889   0.020038
+forecast    WildBox_Fresh 2s_to_2s        source_macro_FDE        3  0.023221  0.048892   0.036969
+forecast    WildBox_Fresh 2s_to_2s         track_macro_ADE        3  0.010785  0.037804   0.027208
+forecast    WildBox_Fresh 2s_to_2s         track_macro_FDE        3  0.017727  0.069758   0.049260
+forecast    WildBox_Fresh 2s_to_5s                     ADE        3  0.022071  0.056181   0.043269
+forecast    WildBox_Fresh 2s_to_5s                     FDE        3  0.038067  0.119247   0.088874
+forecast    WildBox_Fresh 2s_to_5s        source_macro_ADE        3  0.024684  0.046809   0.035973
+forecast    WildBox_Fresh 2s_to_5s        source_macro_FDE        3  0.043153  0.094440   0.070609
+forecast    WildBox_Fresh 2s_to_5s         track_macro_ADE        3  0.018245  0.074361   0.051887
+forecast    WildBox_Fresh 2s_to_5s         track_macro_FDE        3  0.031776  0.153162   0.104733
+geofence BIRDSAI_TestReal 2s_to_2s                   AUPRC        6  0.453399  0.578076   0.509318
+geofence BIRDSAI_TestReal 2s_to_2s                   AUROC        6  0.908964  0.972292   0.941124
+geofence BIRDSAI_TestReal 2s_to_2s                      F1        6  0.398058  0.421569   0.407809
+geofence BIRDSAI_TestReal 2s_to_2s             TTE_MAE_sec        6  0.523256  0.558108   0.540108
+geofence BIRDSAI_TestReal 2s_to_2s            TTE_bias_sec        6  0.211628  0.343902   0.268226
+geofence BIRDSAI_TestReal 2s_to_2s      false_warning_rate        6  0.005156  0.011011   0.007804
+geofence BIRDSAI_TestReal 2s_to_2s   mean_warning_lead_sec        6  0.553659  0.730233   0.630088
+geofence BIRDSAI_TestReal 2s_to_2s median_warning_lead_sec        6  0.400000  0.700000   0.525000
+geofence BIRDSAI_TestReal 2s_to_2s               miss_rate        6  0.676692  0.713287   0.697403
+geofence BIRDSAI_TestReal 2s_to_2s               precision        6  0.605634  0.650794   0.626571
+geofence BIRDSAI_TestReal 2s_to_2s                  recall        6  0.286713  0.323308   0.302597
+geofence BIRDSAI_TestReal 2s_to_5s                   AUPRC        5  0.540300  0.568298   0.558272
+geofence BIRDSAI_TestReal 2s_to_5s                   AUROC        5  0.895082  0.934701   0.923290
+geofence BIRDSAI_TestReal 2s_to_5s                      F1        5  0.323171  0.394958   0.371633
+geofence BIRDSAI_TestReal 2s_to_5s             TTE_MAE_sec        5  1.101887  1.351064   1.189299
+geofence BIRDSAI_TestReal 2s_to_5s            TTE_bias_sec        5  0.590217  0.717021   0.636075
+geofence BIRDSAI_TestReal 2s_to_5s      false_warning_rate        5  0.005429  0.009554   0.007081
+geofence BIRDSAI_TestReal 2s_to_5s   mean_warning_lead_sec        5  0.970968  1.108511   1.024544
+geofence BIRDSAI_TestReal 2s_to_5s median_warning_lead_sec        5  0.700000  0.800000   0.760000
+geofence BIRDSAI_TestReal 2s_to_5s               miss_rate        5  0.732955  0.792969   0.752949
+geofence BIRDSAI_TestReal 2s_to_5s               precision        5  0.736111  0.768595   0.752941
+geofence BIRDSAI_TestReal 2s_to_5s                  recall        5  0.207031  0.267045   0.247051
+geofence    WildBox_Fresh 2s_to_2s                   AUPRC        3  0.429259  0.588275   0.533480
+geofence    WildBox_Fresh 2s_to_2s                   AUROC        3  0.901212  0.954523   0.919676
+geofence    WildBox_Fresh 2s_to_2s                      F1        3  0.263158  0.423913   0.369649
+geofence    WildBox_Fresh 2s_to_2s             TTE_MAE_sec        3  0.440741  0.460000   0.451529
+geofence    WildBox_Fresh 2s_to_2s            TTE_bias_sec        3  0.267901  0.460000   0.334087
+geofence    WildBox_Fresh 2s_to_2s      false_warning_rate        3  0.002513  0.005851   0.004488
+geofence    WildBox_Fresh 2s_to_2s   mean_warning_lead_sec        3  0.240000  0.630769   0.495195
+geofence    WildBox_Fresh 2s_to_2s median_warning_lead_sec        3  0.200000  0.500000   0.400000
+geofence    WildBox_Fresh 2s_to_2s               miss_rate        3  0.706767  0.833333   0.750272
+geofence    WildBox_Fresh 2s_to_2s               precision        3  0.625000  0.778846   0.722851
+geofence    WildBox_Fresh 2s_to_2s                  recall        3  0.166667  0.293233   0.249728
+geofence    WildBox_Fresh 2s_to_5s                   AUPRC        3  0.487337  0.539798   0.517038
+geofence    WildBox_Fresh 2s_to_5s                   AUROC        3  0.846517  0.922293   0.872272
+geofence    WildBox_Fresh 2s_to_5s                      F1        3  0.304147  0.428571   0.350846
+geofence    WildBox_Fresh 2s_to_5s             TTE_MAE_sec        3  1.266667  1.338028   1.310656
+geofence    WildBox_Fresh 2s_to_5s            TTE_bias_sec        3  0.066667  1.009091   0.687224
+geofence    WildBox_Fresh 2s_to_5s      false_warning_rate        3  0.002350  0.003092   0.002773
+geofence    WildBox_Fresh 2s_to_5s   mean_warning_lead_sec        3  0.956061  1.644444   1.185614
+geofence    WildBox_Fresh 2s_to_5s median_warning_lead_sec        3  0.600000  1.800000   1.033333
+geofence    WildBox_Fresh 2s_to_5s               miss_rate        3  0.709677  0.816156   0.776926
+geofence    WildBox_Fresh 2s_to_5s               precision        3  0.818182  0.887500   0.861894
+geofence    WildBox_Fresh 2s_to_5s                  recall        3  0.183844  0.290323   0.223074
+
+HORIZON CONTRASTS
+--------------------------------------------------------------------------------------------
+analysis          dataset             metric    contrast  estimate_difference  CI95_low  CI95_high                                     interpretation
+forecast BIRDSAI_TestReal                ADE 5s_minus_2s             0.016514  0.011861   0.021424 descriptive independent cluster-bootstrap contrast
+forecast BIRDSAI_TestReal                FDE 5s_minus_2s             0.034356  0.025238   0.044109 descriptive independent cluster-bootstrap contrast
+forecast BIRDSAI_TestReal    track_macro_ADE 5s_minus_2s             0.026005  0.018686   0.033499 descriptive independent cluster-bootstrap contrast
+forecast BIRDSAI_TestReal    track_macro_FDE 5s_minus_2s             0.061907  0.040374   0.086983 descriptive independent cluster-bootstrap contrast
+forecast    WildBox_Fresh                ADE 5s_minus_2s             0.021318  0.014395   0.028893 descriptive independent cluster-bootstrap contrast
+forecast    WildBox_Fresh                FDE 5s_minus_2s             0.051419  0.032816   0.071899 descriptive independent cluster-bootstrap contrast
+forecast    WildBox_Fresh    track_macro_ADE 5s_minus_2s             0.029267  0.018109   0.041398 descriptive independent cluster-bootstrap contrast
+forecast    WildBox_Fresh    track_macro_FDE 5s_minus_2s             0.066711  0.043526   0.091508 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal          precision 5s_minus_2s             0.127952  0.013909   0.247271 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal             recall 5s_minus_2s            -0.054565 -0.121717   0.013673 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal                 F1 5s_minus_2s            -0.034858 -0.110399   0.044693 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal false_warning_rate 5s_minus_2s            -0.000807 -0.004826   0.003528 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal              AUROC 5s_minus_2s            -0.015479 -0.039693   0.012878 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal              AUPRC 5s_minus_2s             0.053549 -0.033325   0.146632 descriptive independent cluster-bootstrap contrast
+geofence BIRDSAI_TestReal        TTE_MAE_sec 5s_minus_2s             0.637389  0.416544   0.844365 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh          precision 5s_minus_2s             0.113163 -0.019914   0.239550 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh             recall 5s_minus_2s            -0.091088 -0.177350  -0.010795 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh                 F1 5s_minus_2s            -0.097799 -0.208086   0.004552 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh false_warning_rate 5s_minus_2s            -0.002197 -0.005347   0.000890 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh              AUROC 5s_minus_2s            -0.057068 -0.119356   0.003157 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh              AUPRC 5s_minus_2s            -0.060334 -0.193187   0.066534 descriptive independent cluster-bootstrap contrast
+geofence    WildBox_Fresh        TTE_MAE_sec 5s_minus_2s             0.881206  0.596309   1.163466 descriptive independent cluster-bootstrap contrast
+
+DOMAIN CONTRASTS
+--------------------------------------------------------------------------------------------
+analysis     task             metric               contrast  estimate_difference  CI95_low  CI95_high                                            interpretation
+forecast 2s_to_2s                ADE WildBox_minus_TestReal             0.009738  0.005411   0.014346 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_2s                FDE WildBox_minus_TestReal             0.021030  0.011802   0.030833 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_2s    track_macro_ADE WildBox_minus_TestReal             0.003878 -0.001745   0.009913 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_2s    track_macro_FDE WildBox_minus_TestReal             0.005170 -0.005477   0.016580 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_5s                ADE WildBox_minus_TestReal             0.014542  0.006832   0.022128 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_5s                FDE WildBox_minus_TestReal             0.038092  0.018725   0.058272 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_5s    track_macro_ADE WildBox_minus_TestReal             0.007140 -0.004706   0.020226 descriptive independent cluster-bootstrap domain contrast
+forecast 2s_to_5s    track_macro_FDE WildBox_minus_TestReal             0.009975 -0.020235   0.042942 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s          precision WildBox_minus_TestReal             0.140339  0.010063   0.269215 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s             recall WildBox_minus_TestReal            -0.017239 -0.102742   0.067087 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s                 F1 WildBox_minus_TestReal             0.007782 -0.086715   0.103148 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s false_warning_rate WildBox_minus_TestReal            -0.002487 -0.006032   0.000959 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s              AUROC WildBox_minus_TestReal            -0.039640 -0.081455   0.005773 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s              AUPRC WildBox_minus_TestReal             0.063722 -0.035296   0.165234 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_2s        TTE_MAE_sec WildBox_minus_TestReal            -0.093997 -0.243094   0.048530 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s          precision WildBox_minus_TestReal             0.125550 -0.003814   0.240497 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s             recall WildBox_minus_TestReal            -0.053762 -0.127217   0.015605 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s                 F1 WildBox_minus_TestReal            -0.055158 -0.155268   0.036843 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s false_warning_rate WildBox_minus_TestReal            -0.003878 -0.007633  -0.000342 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s              AUROC WildBox_minus_TestReal            -0.081230 -0.134868  -0.030378 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s              AUPRC WildBox_minus_TestReal            -0.050161 -0.177954   0.067726 descriptive independent cluster-bootstrap domain contrast
+geofence 2s_to_5s        TTE_MAE_sec WildBox_minus_TestReal             0.149820 -0.178346   0.465403 descriptive independent cluster-bootstrap domain contrast

@@ -1,0 +1,43 @@
+{
+  "step": "R9D_NONDESTRUCTIVE_ISOTROPIC_POINT_DATASET_BUILD",
+  "created_utc": "2026-10-29T09:18:46.345391+00:00",
+  "status": "R9D_NONDESTRUCTIVE_ISOTROPIC_POINT_DATASET_BUILT_READY_FOR_R9E_WINDOW_PROTOCOL_MATCH",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "source_points": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\trajectory_dataset\\cleaned_track_points.csv",
+  "source_points_sha256": "bd97998b80af087deff10bac8e342f32d5d7b655c5088da03efc79a0ff74477b",
+  "output_points": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_isotropic_cleaned_track_points.csv",
+  "output_points_sha256": "27054f53934573a4169b37b68cae502f4be4db9684dfad28fc9480839091d035",
+  "rows": 91419,
+  "sequences": 11,
+  "tracks": 130,
+  "track_column": "object_id",
+  "ordering_columns": [
+    "frame"
+  ],
+  "new_columns": [
+    "img_w_locked",
+    "img_h_locked",
+    "iso_scale_px",
+    "cx_iso",
+    "cy_iso",
+    "vx_iso",
+    "vy_iso",
+    "speed_iso",
+    "heading_iso_rad",
+    "ax_iso",
+    "ay_iso",
+    "accel_iso"
+  ],
+  "old_normalized_columns_preserved_but_not_modified": [
+    "cx_n",
+    "cy_n",
+    "vx_n",
+    "vy_n",
+    "speed_n",
+    "heading_rad"
+  ],
+  "row_integrity_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_row_integrity_audit.csv",
+  "sequence_geometry_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_sequence_geometry_audit.csv",
+  "transform_consistency_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_transform_consistency_audit.csv"
+}

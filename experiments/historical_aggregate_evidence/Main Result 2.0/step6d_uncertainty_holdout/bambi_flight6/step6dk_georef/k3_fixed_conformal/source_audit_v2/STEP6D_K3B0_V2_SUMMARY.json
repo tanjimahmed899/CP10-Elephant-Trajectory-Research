@@ -1,0 +1,30 @@
+{
+  "step": "STEP_6D_K3B0_V2_BROAD_STEP6C_PROVENANCE_RECOVERY",
+  "candidate_text_files_scanned": 2886,
+  "ranked_relevant_files": 322,
+  "q_value_hits": 371,
+  "q_labels_found": [
+    "2s_to_2s_endpoint_q90",
+    "2s_to_2s_endpoint_q95",
+    "2s_to_2s_primary_q90",
+    "2s_to_2s_primary_q95",
+    "2s_to_5s_endpoint_q90",
+    "2s_to_5s_endpoint_q95",
+    "2s_to_5s_primary_q90",
+    "2s_to_5s_primary_q95"
+  ],
+  "q_labels_expected": [
+    "2s_to_2s_endpoint_q90",
+    "2s_to_2s_endpoint_q95",
+    "2s_to_2s_primary_q90",
+    "2s_to_2s_primary_q95",
+    "2s_to_5s_endpoint_q90",
+    "2s_to_5s_endpoint_q95",
+    "2s_to_5s_primary_q90",
+    "2s_to_5s_primary_q95"
+  ],
+  "all_expected_q_labels_recovered": true,
+  "candidate_formula_functions": 61,
+  "status": "STEP6C_PROVENANCE_RECOVERED_PENDING_EXACT_FORMULA_EXTRACTION",
+  "rule": "Do not compute BAMBI conformal coverage until exact Step6C score/unit/aggregation definitions are source-confirmed."
+}

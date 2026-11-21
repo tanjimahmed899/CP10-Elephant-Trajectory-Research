@@ -1,0 +1,49 @@
+FROZEN TRANSFORMER 3-SEED ENSEMBLE — VALIDATION ONLY
+==================================================================================
+
+PROTOCOL
+- No retraining performed.
+- Frozen Compact Temporal Transformer checkpoints only.
+- Seeds: 42, 52, 62.
+- Evaluation: fixed BIRDSAI TrainReal track-disjoint validation only.
+- BIRDSAI TestReal NOT loaded.
+- WildBox NOT loaded.
+- Ensemble prediction = arithmetic mean of three frozen seed predictions.
+- Uncertainty diagnostic = RMS spatial disagreement among the three seed predictions.
+- Seed disagreement is diagnostic only; it is NOT claimed as calibrated probabilistic uncertainty.
+
+ENSEMBLE VALIDATION SUMMARY
+----------------------------------------------------------------------------------
+    task               ensemble  seeds  validation_samples  validation_tracks  validation_sources  single_seed_ADE_mean  ensemble_ADE  ADE_improvement_pct  single_seed_FDE_mean  ensemble_FDE  FDE_improvement_pct  single_seed_track_ADE_mean  ensemble_track_ADE  track_ADE_improvement_pct  single_seed_track_FDE_mean  ensemble_track_FDE  track_FDE_improvement_pct  ensemble_source_ADE  ensemble_source_FDE
+2s_to_2s Transformer-3Seed-Mean      3                  97                 13                   3              0.017104      0.016747             2.082894              0.030611      0.029968             2.099413                    0.020570            0.019974                   2.895368                    0.037979            0.036757                   3.219734             0.019181             0.035278
+2s_to_5s Transformer-3Seed-Mean      3                  88                  7                   2              0.020367      0.019410             4.695867              0.035684      0.034948             2.061822                    0.020718            0.019452                   6.112169                    0.041467            0.040930                   1.296222             0.015956             0.026300
+
+UNCERTAINTY SUMMARY
+----------------------------------------------------------------------------------
+    task  samples  future_steps  mean_disagreement  median_disagreement  pointwise_Pearson  pointwise_Spearman  sample_ADE_Pearson  sample_ADE_Spearman  endpoint_FDE_Pearson  endpoint_FDE_Spearman  bottom20_uncertainty_ADE  top20_uncertainty_ADE  top_bottom_error_ratio
+2s_to_2s       97            20           0.002986             0.002270           0.158734            0.363007            0.094709             0.258481              0.027306               0.176165                  0.012268               0.021448                1.748258
+2s_to_5s       88            50           0.006280             0.005463           0.394548            0.304026            0.331398            -0.002201              0.075390              -0.012997                  0.020593               0.026729                1.297963
+
+SEED-LEVEL METRICS
+----------------------------------------------------------------------------------
+    task  seed                     checkpoint  best_epoch  validation_samples  validation_tracks  validation_sources  ADE_mean  FDE_mean  ADE_track_macro  FDE_track_macro  ADE_source_macro  FDE_source_macro
+2s_to_2s    42 2s_to_2s_Transformer_seed42.pt          73                  97                 13                   3  0.017054  0.030576         0.020412         0.037697          0.019764          0.036591
+2s_to_2s    52 2s_to_2s_Transformer_seed52.pt          47                  97                 13                   3  0.017621  0.031495         0.021690         0.040381          0.021388          0.039357
+2s_to_2s    62 2s_to_2s_Transformer_seed62.pt         117                  97                 13                   3  0.016636  0.029761         0.019607         0.035861          0.017390          0.031773
+2s_to_5s    42 2s_to_5s_Transformer_seed42.pt          38                  88                  7                   2  0.020517  0.036744         0.020996         0.041522          0.016285          0.024437
+2s_to_5s    52 2s_to_5s_Transformer_seed52.pt          49                  88                  7                   2  0.019921  0.035721         0.020903         0.042450          0.016898          0.027591
+2s_to_5s    62 2s_to_5s_Transformer_seed62.pt          74                  88                  7                   2  0.020662  0.034587         0.020255         0.040431          0.017206          0.028012
+
+SELECTIVE RISK
+----------------------------------------------------------------------------------
+    task  retained_fraction  retained_samples  mean_ADE  mean_uncertainty
+2s_to_2s                1.0                97  0.016747          0.002986
+2s_to_2s                0.9                87  0.016936          0.002414
+2s_to_2s                0.8                78  0.015602          0.002225
+2s_to_2s                0.7                68  0.014805          0.002034
+2s_to_2s                0.5                48  0.013250          0.001722
+2s_to_5s                1.0                88  0.019410          0.006280
+2s_to_5s                0.9                79  0.017941          0.005547
+2s_to_5s                0.8                70  0.017528          0.005091
+2s_to_5s                0.7                62  0.018048          0.004791
+2s_to_5s                0.5                44  0.018406          0.004282

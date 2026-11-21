@@ -1,0 +1,10 @@
+{
+  "step": "STEP_6D_K3B0_V3_EXACT_STEP6C_FORMULA_UNIT_COVERAGE_EXTRACTION",
+  "step6c_source": "C:\\Users\\HP\\Downloads\\step6c_crossfit_conformal.py",
+  "step6c_source_sha256": "11915289be722d12035b37c641c0be3b16096d39810438d4e15bcdef695ebd0b",
+  "calibration_rows": 4,
+  "retrospective_rows": 8,
+  "timewise_rows": 280,
+  "formula_statement_count": 25,
+  "status": "EXACT_STEP6C_FORMULAS_EXTRACTED_READY_FOR_UNIT_AND_COVERAGE_CONFIRMATION"
+}

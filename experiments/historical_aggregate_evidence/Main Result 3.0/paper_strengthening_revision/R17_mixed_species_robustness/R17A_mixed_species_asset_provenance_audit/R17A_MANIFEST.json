@@ -1,0 +1,27 @@
+{
+  "step": "R17A_MIXED_SPECIES_ASSET_PROVENANCE_AUDIT",
+  "created_utc": "2026-10-30T13:44:01.373614+00:00",
+  "status": "R17A_MIXED_SPECIES_CORE_ASSETS_FOUND_CHECKPOINT_CLASSES_AND_MEDIA_AUDITED_READY_FOR_R17B_FROZEN_ROBUSTNESS_PROTOCOL_LOCK",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "selected_multiclass_checkpoint": "E:\\AIUB\\Capstone Project\\capstone\\wildlife_project\\wildlife_training\\four_animals_v5_final_50\\weights\\best.pt",
+  "selected_multiclass_checkpoint_sha256": "fd2c52cc31deb7673faf56a7e52a9dd92699a6943297a17017cd85c998ef48d7",
+  "selected_model_classes": "tiger|lion|elephant|crocodile",
+  "checkpoint_selection_rule": "Preferred by frozen provenance rule: v5_final_50 > v4_improved > v3 > other among checkpoints exposing elephant and at least one non-elephant class.",
+  "bambi_assets_found": true,
+  "thermal_or_night_asset_hint_found": true,
+  "important_claim_limits": [
+    "BAMBI deer/human is an elephant-negative cross-species/cross-domain stress test, not elephant-specific validation.",
+    "RGB and thermal/night evidence must be reported separately.",
+    "No mixed-species robustness claim is allowed until inference and class-filtering metrics are executed under a frozen protocol.",
+    "The historical single-class detector cannot by itself validate mixed-species elephant filtering."
+  ],
+  "outputs": {
+    "checkpoint_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A_mixed_species_asset_provenance_audit\\R17A_MULTICLASS_CHECKPOINT_AUDIT.csv",
+    "config_provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A_mixed_species_asset_provenance_audit\\R17A_DATASET_CONFIG_PROVENANCE.csv",
+    "media_directories": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A_mixed_species_asset_provenance_audit\\R17A_MIXED_SPECIES_MEDIA_DIRECTORIES.csv",
+    "bambi_asset_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A_mixed_species_asset_provenance_audit\\R17A_BAMBI_ASSET_AUDIT.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A_mixed_species_asset_provenance_audit\\R17A_SUMMARY.csv"
+  }
+}

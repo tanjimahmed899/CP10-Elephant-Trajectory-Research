@@ -1,0 +1,19 @@
+STEP 2B: RAW VS EGO-MOTION-CORRECTED FORECASTING ABLATION
+==============================================================================
+
+Fair comparison rules:
+- Same BIRDSAI TestReal core windows in raw and corrected representations.
+- Raw tracks come from cleaned_track_points.csv before ego-motion compensation.
+- Corrected tracks come from corrected_*.npz after ego-motion compensation.
+- Both are converted from 30 Hz to 10 Hz using every third frame.
+- Stationary and Constant-Velocity require no retraining, so this is a clean representation-level ablation.
+- Positive improvement means corrected trajectory has lower forecasting error.
+
+    task            model  samples  tracks  sequences  raw_mean_ADE  corrected_mean_ADE  raw_mean_FDE  corrected_mean_FDE  raw_track_macro_ADE  corrected_track_macro_ADE  raw_track_macro_FDE  corrected_track_macro_FDE  raw_source_macro_ADE  corrected_source_macro_ADE  raw_source_macro_FDE  corrected_source_macro_FDE  median_sample_ADE_improvement_pct  median_sample_FDE_improvement_pct  ADE_improvement_pct  FDE_improvement_pct  track_macro_ADE_improvement_pct  track_macro_FDE_improvement_pct  source_macro_ADE_improvement_pct  source_macro_FDE_improvement_pct
+2s_to_2s       Stationary     1053      89          6      0.051284            0.020033      0.085420            0.035129             0.068583                   0.025868             0.117513                   0.049196              0.079703                    0.026099              0.134408                    0.046733                          55.607620                          51.951505            60.937147            58.874826                        62.281767                        58.135832                         67.254473                         65.230442
+2s_to_2s ConstantVelocity     1053      89          6      0.076936            0.020148      0.138845            0.035185             0.115776                   0.032541             0.209704                   0.061584              0.102968                    0.025201              0.183031                    0.044633                          71.425673                          71.569990            73.811939            74.658573                        71.892996                        70.633151                         75.525334                         75.614588
+2s_to_5s       Stationary      826      63          5      0.080359            0.039685      0.124419            0.073737             0.100398                   0.051472             0.163271                   0.107747              0.133502                    0.065177              0.171591                    0.116539                          41.142245                          31.426614            50.615463            40.734813                        48.732402                        34.007145                         51.179219                         32.083181
+2s_to_5s ConstantVelocity      826      63          5      0.155138            0.040174      0.290347            0.079019             0.286564                   0.082565             0.582443                   0.184618              0.238801                    0.063452              0.471200                    0.120915                          70.867099                          68.437348            74.104083            72.784675                        71.188090                        68.302786                         73.428752                         74.339030
+
+IMPORTANT:
+This experiment tests whether ego-motion compensation improves short-horizon trajectory predictability. It does not establish independent metric world-coordinate ground truth.

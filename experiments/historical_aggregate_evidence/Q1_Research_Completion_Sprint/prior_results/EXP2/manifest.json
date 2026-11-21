@@ -1,0 +1,29 @@
+{
+  "experiment": "EXP2_R5_R7_TRANSFORMER_STEP7H_ABLATION",
+  "status": "RETROSPECTIVE_REPLAY",
+  "source_csv_sha256": "9b95f4ff0972bb8ce7f7bdddcd343cafc91022f693e0e38f6f9555a52a18d4a2",
+  "source_lock_sha256": "c7c94af84ee31b55a6b7e6ab35d3d0c0b5fae7f27ac65c1b53235e61ef6e40ad",
+  "input_rows_both_alpha_response_grid": 214956,
+  "primary_q90_rows_all_response_grid": 107478,
+  "unique_q90_evaluation_scenarios": 20286,
+  "q90_selected": 0.9,
+  "persistence_n": 2,
+  "lock_status": "PROVISIONAL_CANDIDATE_SELECTED",
+  "lock_selected_posthoc_on_testreal": true,
+  "selection_dataset": "BIRDSAI_TestReal",
+  "primary_response_threshold_seconds": {
+    "2s_to_2s": 1.0,
+    "2s_to_5s": 2.0
+  },
+  "response_thresholds_are_assumptions": true,
+  "unit": "per-virtual-geofence scenario, six boundary scenarios per forecast window",
+  "warnings": [
+    "Not a new independent confirmatory holdout",
+    "Fresh WildBox is existing frozen external retrospective transfer set",
+    "Original Step7B CSV is the source; frozen forecast trajectory is not retrained or re-inferred",
+    "N2 + Full Step7H binary alert outputs are identical by construction",
+    "Response-aware hierarchy impact must be assessed with RED urgent metrics, not any-alert F1",
+    "Only three external source videos; source-clustered intervals exploratory",
+    "No measured physical response time or true field geofence"
+  ]
+}

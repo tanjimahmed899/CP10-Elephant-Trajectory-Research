@@ -1,0 +1,17 @@
+{
+  "step": "R9F_V3A_EXACT_CORRECTED_SOURCE_MAPPING_AUDIT",
+  "created_utc": "2026-10-29T09:55:01.532120+00:00",
+  "status": "R9F_V3A_EXACT_CORRECTED_SOURCE_MAPPING_AUDIT_COMPLETE_READY_FOR_R9F_V3B_MAPPING_RECOVERY",
+  "new_training": false,
+  "isotropic_windows_built": false,
+  "frozen_results_modified": false,
+  "step2b_script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_forecasting.py",
+  "step2b_script_sha256": "4da7ed8e5106998236f916b796e0fc8317ff7e1acf58a19fe7ef7d165e45510b",
+  "metadata_candidate_count": 2,
+  "npz_candidate_count": 4,
+  "pair_audit_count": 4,
+  "script_context_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3A_exact_corrected_source_mapping_audit\\R9F_V3A_STEP2B_SCRIPT_CONTEXT.csv",
+  "metadata_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3A_exact_corrected_source_mapping_audit\\R9F_V3A_CORRECTED_METADATA_INVENTORY.csv",
+  "npz_inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3A_exact_corrected_source_mapping_audit\\R9F_V3A_CORRECTED_NPZ_INVENTORY.csv",
+  "pair_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3A_exact_corrected_source_mapping_audit\\R9F_V3A_METADATA_NPZ_PAIR_AUDIT.csv"
+}

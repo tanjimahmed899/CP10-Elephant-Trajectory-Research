@@ -1,0 +1,51 @@
+{
+  "step": "R9F_V3C_EXACT_SAME_SAMPLE_ISOTROPIC_WINDOW_BUILD",
+  "created_utc": "2026-10-29T10:01:25.231321+00:00",
+  "status": "R9F_V3C_EXACT_SAME_SAMPLE_ISOTROPIC_WINDOWS_BUILT_READY_FOR_R9G_BASELINE_COMPARISON",
+  "new_training": false,
+  "frozen_results_modified": false,
+  "isotropic_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9D_isotropic_point_dataset_build\\R9D_isotropic_cleaned_track_points.csv",
+  "isotropic_source_sha256": "27054f53934573a4169b37b68cae502f4be4db9684dfad28fc9480839091d035",
+  "exact_frame_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3B_exact_mapping_recovery\\R9F_V3B_EXACT_CORE_SAMPLE_FRAME_LOCK.csv",
+  "exact_frame_lock_sha256": "2436d2566b3fabe5452c72a542982f5afce05113d7f1febada9aca43baf3ee06",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_WINDOW_BUILD_SUMMARY.csv",
+  "summary_sha256": "b709d0a64f6b403bd50c1ccd45fa3a7a5367b4fd80956bcb87613f4d215198ed",
+  "geometry_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3C_exact_same_sample_isotropic_windows\\R9F_V3C_GEOMETRY_REPRESENTATION_AUDIT.csv",
+  "geometry_audit_sha256": "750d883a5c9cebbd97f60311370e81d05950db31de46c60a596bbc6b6a65b7d3",
+  "provenance": {
+    "2s_to_2s": {
+      "frozen_corrected_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_2s.csv",
+      "frozen_corrected_metadata_sha256": "8aed9b808184884e96aa843130bbd02434a093506eba8001b94b6a20f3b2a765",
+      "frozen_corrected_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_2s.npz",
+      "frozen_corrected_npz_sha256": "8b0ffb1bc6f5528111874556f42e16205ff74c8db17ce67547cc0816d4aeff18",
+      "mapping_rule": {
+        "lookup_key": "(split, sequence, segment_id)",
+        "window_start": "obs_start_frame",
+        "history_end": "obs_end_frame",
+        "window_end": "future_end_frame",
+        "coordinate_columns": [
+          "cx_iso",
+          "cy_iso"
+        ],
+        "downsample": "::3"
+      }
+    },
+    "2s_to_5s": {
+      "frozen_corrected_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_5s.csv",
+      "frozen_corrected_metadata_sha256": "f13a9b73ab55f1fc5811883dfcf97ffe265c88c4f5a1fc9d3c86cecdfd65ad68",
+      "frozen_corrected_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_5s.npz",
+      "frozen_corrected_npz_sha256": "db52df2fd07ebc84de0c7e2a718395878181e976e505d81176ac4d8e6e89fe86",
+      "mapping_rule": {
+        "lookup_key": "(split, sequence, segment_id)",
+        "window_start": "obs_start_frame",
+        "history_end": "obs_end_frame",
+        "window_end": "future_end_frame",
+        "coordinate_columns": [
+          "cx_iso",
+          "cy_iso"
+        ],
+        "downsample": "::3"
+      }
+    }
+  }
+}

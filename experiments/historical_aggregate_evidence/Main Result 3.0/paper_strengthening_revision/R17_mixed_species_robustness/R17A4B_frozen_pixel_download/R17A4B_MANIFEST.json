@@ -1,0 +1,20 @@
+{
+  "step": "R17A4B_FROZEN_COCO_PIXEL_DOWNLOAD",
+  "status": "R17A4B_FROZEN_453_COCO_PIXELS_DOWNLOADED_VERIFIED_AND_SHA256_LOCKED_READY_FOR_R17B_ROBUSTNESS_PROTOCOL_LOCK",
+  "training": false,
+  "model_inference": false,
+  "tuning": false,
+  "frozen_subset_rows": 453,
+  "valid_pixel_files": 453,
+  "failed_pixel_files": 0,
+  "duplicate_sha256_groups": 0,
+  "primary_subset_sha256": "555465c542bcc643af2a8a98822e58c987040fcb7fa4115b2d7dbaeb1e3105b6",
+  "annotation_integrity_source": "R17A3B checksum-verified COCO 2017 annotation JSON",
+  "image_validation": "Pillow decode + exact width/height match against verified COCO metadata + local SHA256 lock",
+  "important_limit": "Image transport is not used as annotation truth; annotation identity and dimensions come from the checksum-verified COCO JSON. Local SHA256 values are locked after acquisition.",
+  "outputs": {
+    "pixel_download_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4B_frozen_pixel_download\\R17A4B_PIXEL_DOWNLOAD_AUDIT.csv",
+    "download_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4B_frozen_pixel_download\\R17A4B_DOWNLOAD_SUMMARY.csv",
+    "pixel_root": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4B_frozen_pixel_download\\images"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "step": "R3C_BOOTSTRAP_INTERPRETATION_CLAIM_LOCK",
+  "created_utc": "2026-10-29T06:39:33.563540+00:00",
+  "status": "R3C_BOOTSTRAP_INTERPRETATION_AND_CLAIM_LOCK_COMPLETE_READY_FOR_R4_CONFORMAL_COVERAGE",
+  "new_statistics_generated": false,
+  "primary_inference": "paired track-cluster bootstrap from R3B",
+  "source_analysis_role": "sensitivity_only",
+  "source_r3b": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3B_paired_clustered_bootstrap_CI\\R3B_paired_cluster_bootstrap_results.csv",
+  "source_r3b_sha256": "289b429bbf45050223faeea470c2f5f9f92171cdbb2e43df67be1c4be0db75b5",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3C_interpretation_claim_lock\\R3C_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "ea57fb329ae4450bf4e1cef6475ec7fed82844cc468a9a2cbf4c82407481b7a4",
+  "manuscript_table_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3C_interpretation_claim_lock\\R3C_manuscript_comparison_table.csv"
+}

@@ -1,0 +1,5 @@
+video_id,segments_found,paired_segments,contaminated_by_prior_use,contaminating_file_count,eligible_as_step6d_untouched_source
+DJI_20240119152335_0005_V,5,5,True,856,False
+DJI_20240119152552_0006_V,3,3,True,29,False
+DJI_20240626142859_0001_V,8,8,True,1036,False
+DJI_20260227084135_0002_V,7,7,True,1076,False

@@ -1,0 +1,24 @@
+{
+  "step": "R8A_EXISTING_EGO_MOTION_ARTIFACT_AUDIT",
+  "created_utc": "2026-10-29T08:38:15.896372+00:00",
+  "status": "R8A_EXISTING_EGO_MOTION_ARTIFACT_AUDIT_COMPLETE_READY_FOR_R8B_RESULT_EXTRACTION",
+  "new_experiment": false,
+  "existing_roots": [
+    "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2_ego_motion_validation",
+    "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_baseline",
+    "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2c_ego_motion_geofence_ablation"
+  ],
+  "missing_roots": [
+    "C:\\Users\\HP\\Downloads\\step2_ego_motion_validation",
+    "C:\\Users\\HP\\Downloads\\step2b_raw_vs_corrected_baseline",
+    "C:\\Users\\HP\\Downloads\\step2c_ego_motion_geofence_ablation"
+  ],
+  "artifact_count": 13,
+  "csv_count": 10,
+  "likely_result_table_count": 10,
+  "inventory_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8A_existing_artifact_audit\\R8A_ALL_ARTIFACT_INVENTORY.csv",
+  "inventory_sha256": "a5c221fe47a5671555d84ed62d7efe05ec1d4a8518a6ef1d46f33b45a5a8cb53",
+  "likely_tables_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8A_existing_artifact_audit\\R8A_LIKELY_EGO_MOTION_RESULT_TABLES.csv",
+  "likely_tables_sha256": "a257e6157eb3e95ae62712f801dc8fd7fd61122c92459baddd74167f27ac62be",
+  "preview_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8A_existing_artifact_audit\\R8A_INTERESTING_TABLE_PREVIEWS.csv"
+}

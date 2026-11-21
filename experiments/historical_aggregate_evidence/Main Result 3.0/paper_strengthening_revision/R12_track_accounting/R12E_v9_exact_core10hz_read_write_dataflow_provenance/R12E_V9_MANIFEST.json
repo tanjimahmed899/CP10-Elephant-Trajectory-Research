@@ -1,0 +1,17 @@
+{
+  "step": "R12E_V9_EXACT_CORE10HZ_READ_WRITE_DATAFLOW_PROVENANCE",
+  "created_utc": "2026-10-30T06:55:28.555100+00:00",
+  "status": "R12E_V9_NO_TARGET_CORE10HZ_WRITER_FOUND_SOURCE_MAY_BE_MISSING",
+  "training": false,
+  "inference": false,
+  "v8_writer_attribution_treated_as_unconfirmed": true,
+  "actual_producer_lock": "",
+  "complete_producer_count": 0,
+  "outputs": {
+    "source_classification": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v9_exact_core10hz_read_write_dataflow_provenance\\R12E_V9_SOURCE_READ_WRITE_CLASSIFICATION.csv",
+    "path_assignments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v9_exact_core10hz_read_write_dataflow_provenance\\R12E_V9_TARGET_PATH_ASSIGNMENTS.csv",
+    "read_write_calls": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v9_exact_core10hz_read_write_dataflow_provenance\\R12E_V9_TARGET_READ_WRITE_CALLS.csv",
+    "producer_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v9_exact_core10hz_read_write_dataflow_provenance\\R12E_V9_PRODUCER_CANDIDATES.csv",
+    "filename_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v9_exact_core10hz_read_write_dataflow_provenance\\R12E_V9_TARGET_FILENAME_CONTEXT.csv"
+  }
+}

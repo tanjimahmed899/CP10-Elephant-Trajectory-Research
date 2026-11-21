@@ -1,0 +1,3 @@
+forecast,total_instances,positive,negative,positive_pct,unique_positive_histories,positive_source_sequences,median_tte_sec
+2s_to_2s,3186,107,3079,3.3584431889516635,100,3,0.6333333333333333
+2s_to_5s,2292,136,2156,5.93368237347295,120,2,1.8833333333333333

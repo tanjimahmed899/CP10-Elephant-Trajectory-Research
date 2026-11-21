@@ -1,0 +1,107 @@
+ELEPHANT TRAJECTORY FORECASTING — KALMAN BASELINE
+==============================================================================
+
+Kalman state: [x, y, vx, vy]
+Model: constant-velocity state-space model
+Sampling: 10 Hz
+Observation: 2 seconds
+Q/R selection: BIRDSAI TrainReal only
+Selection objective: track-macro ADE
+BIRDSAI TestReal and WildBox were NOT used for tuning.
+
+2s_to_2s selected q=0.1, r=0.0001
+2s_to_5s selected q=0.1, r=0.01
+
+FINAL RESULTS
+------------------------------------------------------------------------------
+
+2s_to_2s | BIRDSAI_test | ConstantVelocity
+ADE=0.020148, FDE=0.035185
+Track-macro ADE=0.032541, FDE=0.061584
+Source-macro ADE=0.025201, FDE=0.044633
+
+2s_to_2s | BIRDSAI_test | KalmanCV
+ADE=0.023802, FDE=0.042645
+Track-macro ADE=0.031057, FDE=0.059626
+Source-macro ADE=0.022749, FDE=0.041743
+
+2s_to_2s | BIRDSAI_test | Stationary
+ADE=0.020033, FDE=0.035129
+Track-macro ADE=0.025868, FDE=0.049196
+Source-macro ADE=0.026099, FDE=0.046733
+
+2s_to_2s | BIRDSAI_train | ConstantVelocity
+ADE=0.021888, FDE=0.039291
+Track-macro ADE=0.037509, FDE=0.070659
+Source-macro ADE=0.022178, FDE=0.040762
+
+2s_to_2s | BIRDSAI_train | KalmanCV
+ADE=0.025947, FDE=0.046618
+Track-macro ADE=0.032570, FDE=0.060585
+Source-macro ADE=0.025434, FDE=0.048737
+
+2s_to_2s | BIRDSAI_train | Stationary
+ADE=0.016569, FDE=0.028938
+Track-macro ADE=0.023067, FDE=0.040920
+Source-macro ADE=0.031840, FDE=0.056794
+
+2s_to_2s | WildBox_external | ConstantVelocity
+ADE=0.056044, FDE=0.099548
+Track-macro ADE=0.057437, FDE=0.104573
+Source-macro ADE=0.049992, FDE=0.090689
+
+2s_to_2s | WildBox_external | KalmanCV
+ADE=0.065478, FDE=0.121832
+Track-macro ADE=0.065213, FDE=0.121112
+Source-macro ADE=0.050789, FDE=0.095084
+
+2s_to_2s | WildBox_external | Stationary
+ADE=0.061250, FDE=0.107532
+Track-macro ADE=0.065919, FDE=0.120204
+Source-macro ADE=0.062367, FDE=0.111327
+
+2s_to_5s | BIRDSAI_test | ConstantVelocity
+ADE=0.040174, FDE=0.079019
+Track-macro ADE=0.082565, FDE=0.184618
+Source-macro ADE=0.063452, FDE=0.120915
+
+2s_to_5s | BIRDSAI_test | KalmanCV
+ADE=0.040086, FDE=0.077245
+Track-macro ADE=0.074362, FDE=0.161509
+Source-macro ADE=0.065280, FDE=0.122192
+
+2s_to_5s | BIRDSAI_test | Stationary
+ADE=0.039685, FDE=0.073737
+Track-macro ADE=0.051472, FDE=0.107747
+Source-macro ADE=0.065177, FDE=0.116539
+
+2s_to_5s | BIRDSAI_train | ConstantVelocity
+ADE=0.032445, FDE=0.065287
+Track-macro ADE=0.061235, FDE=0.123682
+Source-macro ADE=0.041703, FDE=0.082312
+
+2s_to_5s | BIRDSAI_train | KalmanCV
+ADE=0.032277, FDE=0.063987
+Track-macro ADE=0.061379, FDE=0.123250
+Source-macro ADE=0.040476, FDE=0.077619
+
+2s_to_5s | BIRDSAI_train | Stationary
+ADE=0.027554, FDE=0.052580
+Track-macro ADE=0.036166, FDE=0.069679
+Source-macro ADE=0.021441, FDE=0.034075
+
+2s_to_5s | WildBox_external | ConstantVelocity
+ADE=0.111567, FDE=0.200364
+Track-macro ADE=0.134637, FDE=0.241422
+Source-macro ADE=0.134762, FDE=0.250682
+
+2s_to_5s | WildBox_external | KalmanCV
+ADE=0.112042, FDE=0.198274
+Track-macro ADE=0.134437, FDE=0.236044
+Source-macro ADE=0.134398, FDE=0.243101
+
+2s_to_5s | WildBox_external | Stationary
+ADE=0.105127, FDE=0.191131
+Track-macro ADE=0.154882, FDE=0.291326
+Source-macro ADE=0.131546, FDE=0.245651
+

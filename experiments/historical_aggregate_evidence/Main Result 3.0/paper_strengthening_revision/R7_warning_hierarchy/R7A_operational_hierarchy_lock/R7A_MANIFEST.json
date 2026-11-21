@@ -1,0 +1,15 @@
+{
+  "step": "R7A_WARNING_HIERARCHY_FORMAL_LOCK",
+  "created_utc": "2026-10-29T08:33:34.335852+00:00",
+  "status": "R7A_WARNING_HIERARCHY_FORMALLY_LOCKED_READY_FOR_R8_EGO_MOTION_ABLATION",
+  "new_experiment": false,
+  "step7h_metrics": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step7_response_aware_warning\\TABLE_step7h_final_response_aware_metrics.csv",
+  "step7h_metrics_sha256": "37d69aa0352ebf89bb3673b487229eec68a2290bd36514630a74dc74884b6a29",
+  "step7h_instances": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step7_response_aware_warning\\step7h_final_response_aware_instances.csv",
+  "step7h_instances_sha256": "8f7b2a47ad6f6fe4bbeeceba1f09e7160082abd9ec8669cfe453905019d82434",
+  "hierarchy_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R7_warning_hierarchy\\R7A_operational_hierarchy_lock\\R7A_WARNING_HIERARCHY_LOCK.csv",
+  "hierarchy_sha256": "eeaf67f40a99fd0d94ba719efebc736d8d909304e2f5f30ee2761c3d92f52d7d",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R7_warning_hierarchy\\R7A_operational_hierarchy_lock\\R7A_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "70764055f1d4e4f147145138ce9b0c22571efd3d7d0473a7c2497b2ecb61e27a",
+  "manuscript_map_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R7_warning_hierarchy\\R7A_operational_hierarchy_lock\\R7A_MANUSCRIPT_SECTION_MAP.csv"
+}

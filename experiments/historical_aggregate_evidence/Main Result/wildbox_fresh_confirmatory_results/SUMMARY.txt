@@ -1,0 +1,101 @@
+FRESH WILDBOX CONFIRMATORY EXTERNAL HOLDOUT
+==================================================================================
+
+PROTOCOL
+- Three WildBox source videos were locked before download or inspection.
+- No holdout video was replaced after selection.
+- No model retraining or hyperparameter tuning was performed.
+- Frozen Compact Temporal Transformer checkpoints were used.
+- Ensemble = arithmetic mean of seeds 42, 52, 62.
+- Camera-motion compensation used WildBox camera metadata and observation-start common anchor frame.
+- Reported ADE/FDE are normalized image-plane coordinate errors, NOT metres.
+- Seed disagreement is diagnostic only and is not claimed as calibrated uncertainty.
+
+LOCKED SOURCES
+----------------------------------------------------------------------------------
+holdout_id elephant_group                           repo_path
+  fresh_01          elep1 elep1/DJI_20240119152335_0005_V.zip
+  fresh_02          elep2 elep2/DJI_20240626142859_0001_V.zip
+  fresh_03          elep3 elep3/DJI_20260227084135_0002_V.zip
+
+DATASET SUMMARY
+----------------------------------------------------------------------------------
+    task  samples  sources  segments  tracklets  median_history_path  scale_floor  floor_applied_pct
+2s_to_2s      865        3        19         78             0.085072     0.068203          28.786127
+2s_to_5s      637        3        18         71             0.082876     0.067326          29.513344
+
+MODEL METRICS
+----------------------------------------------------------------------------------
+    task                      model      ADE      FDE  track_macro_ADE  track_macro_FDE  source_macro_ADE  source_macro_FDE
+2s_to_2s         Transformer_seed42 0.028849 0.054358         0.032167         0.058991          0.019980          0.037082
+2s_to_2s         Transformer_seed52 0.028882 0.054035         0.032053         0.058700          0.019944          0.036633
+2s_to_2s         Transformer_seed62 0.029604 0.054928         0.033602         0.060986          0.020876          0.038314
+2s_to_2s Transformer_3Seed_Ensemble 0.028814 0.053920         0.032251         0.058932          0.020038          0.036969
+2s_to_2s                 Stationary 0.032397 0.060478         0.037783         0.069546          0.021589          0.039267
+2s_to_2s           ConstantVelocity 0.030126 0.055769         0.033774         0.061380          0.021581          0.039664
+2s_to_5s         Transformer_seed42 0.049988 0.105831         0.061024         0.126178          0.035849          0.070522
+2s_to_5s         Transformer_seed52 0.049779 0.104337         0.060947         0.123910          0.035626          0.069948
+2s_to_5s         Transformer_seed62 0.052204 0.107101         0.064107         0.128037          0.037927          0.072638
+2s_to_5s Transformer_3Seed_Ensemble 0.050132 0.105339         0.061518         0.125643          0.035973          0.070609
+2s_to_5s                 Stationary 0.053056 0.111665         0.066426         0.135209          0.036141          0.071746
+2s_to_5s           ConstantVelocity 0.053774 0.112707         0.051112         0.099199          0.040602          0.081355
+
+ENSEMBLE PER-SOURCE METRICS
+----------------------------------------------------------------------------------
+    task              source_group  samples  tracklets      ADE      FDE  track_macro_ADE  track_macro_FDE
+2s_to_2s DJI_20240119152335_0005_V       67          4 0.017580 0.033320         0.017747         0.033719
+2s_to_2s DJI_20240626142859_0001_V      137         15 0.008337 0.013123         0.008928         0.013463
+2s_to_2s DJI_20260227084135_0002_V      661         59 0.034197 0.064464         0.039163         0.072201
+2s_to_5s DJI_20240119152335_0005_V       55          4 0.035068 0.063359         0.035779         0.065037
+2s_to_5s DJI_20240626142859_0001_V       92         15 0.014300 0.022947         0.013570         0.022906
+2s_to_5s DJI_20260227084135_0002_V      490         52 0.058551 0.125521         0.077329         0.159941
+
+ENSEMBLE DISAGREEMENT DIAGNOSTIC
+----------------------------------------------------------------------------------
+    task  samples  mean_disagreement  pointwise_Pearson  pointwise_Spearman  sample_ADE_Pearson  sample_ADE_Spearman  endpoint_FDE_Pearson  endpoint_FDE_Spearman
+2s_to_2s      865           0.003806           0.462552            0.570633            0.523864             0.527983              0.384992               0.454774
+2s_to_5s      637           0.006500           0.307046            0.493430            0.305415             0.397981              0.167196               0.330452
+
+BUILD AUDIT
+----------------------------------------------------------------------------------
+    task                     video segment  tracks  camera_frames  valid_windows status
+2s_to_2s DJI_20240119152335_0005_V    seg1       1            200             17     OK
+2s_to_2s DJI_20240119152335_0005_V    seg2       1            200             16     OK
+2s_to_2s DJI_20240119152335_0005_V    seg3       1            200             17     OK
+2s_to_2s DJI_20240119152335_0005_V    seg4       1            200             17     OK
+2s_to_2s DJI_20240119152335_0005_V    seg5       1             99              0     OK
+2s_to_2s DJI_20240626142859_0001_V    seg1       2             80             10     OK
+2s_to_2s DJI_20240626142859_0001_V    seg2       2             70              8     OK
+2s_to_2s DJI_20240626142859_0001_V    seg3       2            130             20     OK
+2s_to_2s DJI_20240626142859_0001_V    seg4       2             90             12     OK
+2s_to_2s DJI_20240626142859_0001_V    seg5       2            130             20     OK
+2s_to_2s DJI_20240626142859_0001_V    seg6       2            200             34     OK
+2s_to_2s DJI_20240626142859_0001_V    seg7       2            130             20     OK
+2s_to_2s DJI_20240626142859_0001_V    seg8       1            160             13     OK
+2s_to_2s DJI_20260227084135_0002_V    seg1      10            200            129     OK
+2s_to_2s DJI_20260227084135_0002_V    seg2      10            200            147     OK
+2s_to_2s DJI_20260227084135_0002_V    seg3      10            200            143     OK
+2s_to_2s DJI_20260227084135_0002_V    seg4       8            110             56     OK
+2s_to_2s DJI_20260227084135_0002_V    seg5       9            200            136     OK
+2s_to_2s DJI_20260227084135_0002_V    seg6       6             50             10     OK
+2s_to_2s DJI_20260227084135_0002_V    seg7      11             70             40     OK
+2s_to_5s DJI_20240119152335_0005_V    seg1       1            200             14     OK
+2s_to_5s DJI_20240119152335_0005_V    seg2       1            200             13     OK
+2s_to_5s DJI_20240119152335_0005_V    seg3       1            200             14     OK
+2s_to_5s DJI_20240119152335_0005_V    seg4       1            200             14     OK
+2s_to_5s DJI_20240119152335_0005_V    seg5       1             99              0     OK
+2s_to_5s DJI_20240626142859_0001_V    seg1       2             80              4     OK
+2s_to_5s DJI_20240626142859_0001_V    seg2       2             70              2     OK
+2s_to_5s DJI_20240626142859_0001_V    seg3       2            130             14     OK
+2s_to_5s DJI_20240626142859_0001_V    seg4       2             90              6     OK
+2s_to_5s DJI_20240626142859_0001_V    seg5       2            130             14     OK
+2s_to_5s DJI_20240626142859_0001_V    seg6       2            200             28     OK
+2s_to_5s DJI_20240626142859_0001_V    seg7       2            130             14     OK
+2s_to_5s DJI_20240626142859_0001_V    seg8       1            160             10     OK
+2s_to_5s DJI_20260227084135_0002_V    seg1      10            200            105     OK
+2s_to_5s DJI_20260227084135_0002_V    seg2      10            200            119     OK
+2s_to_5s DJI_20260227084135_0002_V    seg3      10            200            114     OK
+2s_to_5s DJI_20260227084135_0002_V    seg4       8            110             35     OK
+2s_to_5s DJI_20260227084135_0002_V    seg5       9            200            107     OK
+2s_to_5s DJI_20260227084135_0002_V    seg6       6             50              0     OK
+2s_to_5s DJI_20260227084135_0002_V    seg7      11             70             10     OK

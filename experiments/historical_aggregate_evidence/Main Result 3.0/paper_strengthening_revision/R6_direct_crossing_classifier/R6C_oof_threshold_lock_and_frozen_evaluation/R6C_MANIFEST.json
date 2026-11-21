@@ -1,0 +1,20 @@
+{
+  "step": "R6C_DIRECT_CROSSING_CLASSIFIER_OOF_THRESHOLD_LOCK_FROZEN_EVALUATION",
+  "created_utc": "2026-10-29T08:08:38.928752+00:00",
+  "status": "R6C_VALIDATION_ONLY_THRESHOLD_LOCK_AND_FROZEN_DIRECT_CLASSIFIER_EVALUATION_COMPLETE_READY_FOR_R6D_INTERPRETATION",
+  "threshold_selection_source": "validation OOF only",
+  "evaluation_used_for_threshold_selection": false,
+  "evaluation_threshold_reselection": false,
+  "validation_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_geofence_instances.csv",
+  "validation_source_sha256": "65dd1b2b5f64802c144e64ce9e722c8765486e4a725a5feb17cc51a6b8af07c5",
+  "evaluation_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_all_geofence_instances.csv",
+  "evaluation_source_sha256": "08d75da57a9f2ff42a30b6a70a42382a784628aa933882528f0a55c3b28ce024",
+  "locked_protocol": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6B3_revised_protocol_lock\\R6B3_LOCKED_DIRECT_CLASSIFIER_PROTOCOL.json",
+  "locked_protocol_sha256": "17390d6bfff5bb71952d5a4af2186c5578c037fd1cfc4d2800a0d0ee09c61419",
+  "locked_threshold_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6C_oof_threshold_lock_and_frozen_evaluation\\R6C_LOCKED_VALIDATION_ONLY_THRESHOLDS.csv",
+  "locked_threshold_sha256": "426eb48a57e902d97aee54b7fcd13d898443d2c1bee1c333e492cbee119e5d59",
+  "evaluation_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6C_oof_threshold_lock_and_frozen_evaluation\\R6C_FROZEN_EVALUATION_METRICS.csv",
+  "evaluation_metrics_sha256": "a31710f8c209ab42ef43b0b203e99eeb114c5517a01f83344e1ea340da0f6706",
+  "comparison_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6C_oof_threshold_lock_and_frozen_evaluation\\R6C_DIRECT_CLASSIFIER_VS_NOMINAL_BASELINE.csv",
+  "comparison_sha256": "0f429c1afc5035d023b4904dab0db1658f590552ee15f994408a6a1994b1bdd5"
+}

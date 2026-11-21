@@ -1,0 +1,17 @@
+TRAJECTORY DATASET SUMMARY
+============================================================
+
+TRAIN_REAL
+Sequences: 5
+Continuous segments: 216
+Segment duration sec (min / median / max): 0.03 / 3.23 / 72.67
+2s history -> 2s future windows: 913
+2s history -> 5s future windows: 684
+
+TEST_REAL
+Sequences: 6
+Continuous segments: 265
+Segment duration sec (min / median / max): 0.13 / 1.93 / 75.10
+2s history -> 2s future windows: 1070
+2s history -> 5s future windows: 827
+

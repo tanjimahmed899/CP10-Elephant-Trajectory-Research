@@ -1,0 +1,27 @@
+MOTION REGIME AUDIT
+============================================================================
+
+Regime thresholds were derived from BIRDSAI neural-training samples ONLY.
+No TestReal or WildBox outcome was used to define thresholds.
+
+REGIME THRESHOLDS
+----------------------------------------------------------------------------
+    task  slow_path_threshold_q25  straightness_threshold_median  heading_change_threshold_median
+2s_to_2s                 0.084217                       0.222057                         1.097562
+2s_to_5s                 0.083108                       0.210197                         0.989310
+
+BEST MODEL BY REGIME
+----------------------------------------------------------------------------
+    task          dataset            regime       best_model  best_ADE  best_FDE
+2s_to_2s     BIRDSAI_test irregular_turning       Stationary  0.022566  0.037613
+2s_to_2s     BIRDSAI_test persistent_linear             LSTM  0.025031  0.044507
+2s_to_2s     BIRDSAI_test   slow_stationary             LSTM  0.011328  0.018495
+2s_to_2s WildBox_external irregular_turning             LSTM  0.094399  0.162710
+2s_to_2s WildBox_external persistent_linear      Transformer  0.072027  0.129155
+2s_to_2s WildBox_external   slow_stationary       Stationary  0.003800  0.004962
+2s_to_5s     BIRDSAI_test irregular_turning       Stationary  0.044027  0.078739
+2s_to_5s     BIRDSAI_test persistent_linear      Transformer  0.051822  0.101819
+2s_to_5s     BIRDSAI_test   slow_stationary ConstantVelocity  0.024642  0.047665
+2s_to_5s WildBox_external irregular_turning      Transformer  0.159472  0.273851
+2s_to_5s WildBox_external persistent_linear              GRU  0.184831  0.350866
+2s_to_5s WildBox_external   slow_stationary       Stationary  0.004804  0.005750

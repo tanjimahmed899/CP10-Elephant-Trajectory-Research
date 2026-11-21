@@ -1,0 +1,17 @@
+{
+  "step": "R3B_PAIRED_CLUSTERED_BOOTSTRAP_CI",
+  "created_utc": "2026-10-29T06:36:51.019654+00:00",
+  "status": "R3B_PAIRED_TRACK_SOURCE_CLUSTERED_BOOTSTRAP_COMPLETE_READY_FOR_R3C_INTERPRETATION",
+  "bootstrap_seed": 20261029,
+  "bootstrap_reps": 20000,
+  "primary_inference": "paired equal-track cluster bootstrap",
+  "source_analysis_role": "sensitivity_only",
+  "difference_definition": "model_A - model_B; negative favors model_A",
+  "source_r3a": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3A_track_cluster_recovery\\R3A_six_model_same_sample_metrics_with_clusters.csv",
+  "source_r3a_sha256": "3040b7b63ec00318dab2d56fdf9486bed8fd272aee6e5e25bed41b48c4b1c14a",
+  "results_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3B_paired_clustered_bootstrap_CI\\R3B_paired_cluster_bootstrap_results.csv",
+  "results_sha256": "289b429bbf45050223faeea470c2f5f9f92171cdbb2e43df67be1c4be0db75b5",
+  "transformer_focused_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3B_paired_clustered_bootstrap_CI\\R3B_transformer_focused_CI.csv",
+  "interpretation_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3B_paired_clustered_bootstrap_CI\\R3B_interpretation.csv",
+  "pairing_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R3_clustered_bootstrap\\R3B_paired_clustered_bootstrap_CI\\R3B_pairing_audit.csv"
+}

@@ -1,0 +1,24 @@
+WILDBOX 3-VIDEO BATCH AUDIT
+======================================================================
+
+DJI_20240119152552_0006_V
+Segments: 3
+Image frames: 459
+Label rows: 459
+Median frame steps: 3.0, 3.0, 3.0
+Tracks detected per segment: 1, 1, 1
+
+DJI_20240626143832_0004_V
+Segments: 1
+Image frames: 89
+Label rows: 178
+Median frame steps: 3.0
+Tracks detected per segment: 2
+
+DJI_20260227084907_0004_V
+Segments: 2
+Image frames: 370
+Label rows: 742
+Median frame steps: 3.0, 3.0
+Tracks detected per segment: 5, 1
+

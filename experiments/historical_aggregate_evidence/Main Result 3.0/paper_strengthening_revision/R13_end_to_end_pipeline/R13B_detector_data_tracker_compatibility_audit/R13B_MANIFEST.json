@@ -1,0 +1,23 @@
+{
+  "step": "R13B_DETECTOR_DATA_TRACKER_COMPATIBILITY_AUDIT",
+  "created_utc": "2026-10-30T10:51:36.711038+00:00",
+  "status": "R13B_COMPATIBILITY_INCOMPLETE_REVIEW_TRACKING_GT_COMPATIBLE_SCHEMA_IN_CLEANED_TRACK_POINTS",
+  "training": false,
+  "detector_inference": false,
+  "tracker_inference": false,
+  "original_files_modified": false,
+  "detector_lock": "E:\\AIUB\\Capstone Project\\Final 1.0\\Elephant Detection.v2-resized640.yolov8 (2)\\Elephant Detection.v2-resized640.yolov8\\runs\\detect\\elephant_final_clean\\weights\\best.pt",
+  "detector_lock_unique": true,
+  "sequence_compatibility_pass": true,
+  "tracking_gt_schema_pass": false,
+  "ultralytics_tracker_available": true,
+  "new_tracker_experiment_only": true,
+  "historical_pipeline_end_to_end_claim_allowed": false,
+  "outputs": {
+    "detector_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_detector_data_tracker_compatibility_audit\\R13B_DETECTOR_CANDIDATE_METRIC_AUDIT.csv",
+    "sequence_compatibility": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_detector_data_tracker_compatibility_audit\\R13B_TESTREAL_SEQUENCE_FRAME_COMPATIBILITY.csv",
+    "gt_schema": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_detector_data_tracker_compatibility_audit\\R13B_TRACKING_GT_SCHEMA_AUDIT.csv",
+    "tracker_availability": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_detector_data_tracker_compatibility_audit\\R13B_ULTRALYTICS_TRACKER_AVAILABILITY.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13B_detector_data_tracker_compatibility_audit\\R13B_COMPATIBILITY_SUMMARY.csv"
+  }
+}

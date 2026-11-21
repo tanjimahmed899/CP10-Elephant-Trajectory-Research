@@ -1,0 +1,17 @@
+{
+  "step": "R12D_SEGMENT_BUILD_RULE_SOURCE_PROVENANCE_AUDIT",
+  "created_utc": "2026-10-30T05:59:50.806703+00:00",
+  "status": "R12D_SEGMENT_BUILDER_SOURCE_LOCATED_READY_FOR_R12E_EXACT_RULE_EXTRACTION_AND_RECONSTRUCTION",
+  "training": false,
+  "inference": false,
+  "rule_inferred_from_counts": false,
+  "exact_builder_candidate_count": 3,
+  "scientific_guardrail": "Do not describe the continuity/gap rule until executable source evidence is recovered. Counts alone are insufficient to infer the rule.",
+  "outputs": {
+    "ranked_source_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12D_segment_build_rule_source_provenance_audit\\R12D_RANKED_SEGMENT_BUILDER_SOURCE_CANDIDATES.csv",
+    "rule_context_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12D_segment_build_rule_source_provenance_audit\\R12D_SEGMENT_RULE_CONTEXT_EVIDENCE.csv",
+    "metadata_csv_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12D_segment_build_rule_source_provenance_audit\\R12D_METADATA_PROVENANCE_CSV_CANDIDATES.csv",
+    "top_python_assignments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12D_segment_build_rule_source_provenance_audit\\R12D_TOP_PYTHON_RULE_ASSIGNMENTS.csv",
+    "exact_builder_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12D_segment_build_rule_source_provenance_audit\\R12D_EXACT_BUILDER_CANDIDATES.csv"
+  }
+}

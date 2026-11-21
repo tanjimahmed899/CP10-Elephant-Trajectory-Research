@@ -1,0 +1,34 @@
+{
+  "step": "R10C0B_FRESH_WILDBOX_NPZ_SCHEMA_AND_LOADER_AUDIT",
+  "created_utc": "2026-10-30T05:09:46.232687+00:00",
+  "status": "R10C0B_FRESH_WILDBOX_SCHEMA_AUDITED_LOADER_EVIDENCE_FOUND_READY_FOR_R10C1_ADAPTER_OR_DIRECT_INFERENCE_BUILD",
+  "training": false,
+  "inference": false,
+  "fresh_files": {
+    "2s_to_2s": {
+      "npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\2s_to_2s_fresh_dataset.npz",
+      "npz_sha256": "87f7b4cea2e2433b83421e2c82f06f67867e40997df8e06b53a7ea6ba57c092b",
+      "metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\2s_to_2s_fresh_metadata.csv",
+      "metadata_sha256": "2b686775122441883a95cb25280d4a9c35363f29a697b409fae871ca9d09ee5d",
+      "expected_samples": 865,
+      "expected_future_length": 20
+    },
+    "2s_to_5s": {
+      "npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\2s_to_5s_fresh_dataset.npz",
+      "npz_sha256": "1cd237f4eb5d950c0c1480add27874206fc07ddc797bf03dc9cd7b9b693d7f56",
+      "metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\wildbox_fresh_confirmatory_results\\2s_to_5s_fresh_metadata.csv",
+      "metadata_sha256": "7a97cf8b1add962273f423f63b12c145278621da60e87f1227f32ba9ae3c8a2d",
+      "expected_samples": 637,
+      "expected_future_length": 50
+    }
+  },
+  "claim_guardrail": "Do not call the fresh NPZ unusable merely because its keys differ from final_neural_trajectory_dataset. Recover the original R2 loader/adapter and reproduce that deterministic transformation before inference.",
+  "outputs": {
+    "npz_array_schema": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_NPZ_ARRAY_SCHEMA.csv",
+    "dataset_level_schema": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_DATASET_LEVEL_SCHEMA_SUMMARY.csv",
+    "metadata_identity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_METADATA_IDENTITY_SUMMARY.csv",
+    "exact_file_source_references": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_EXACT_FRESH_FILE_SOURCE_REFERENCES.csv",
+    "loader_pattern_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_LOADER_PATTERN_EVIDENCE.csv",
+    "r2_metric_artifacts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0B_fresh_wildbox_schema_and_loader_audit\\R10C0B_R2_FRESH_METRIC_ARTIFACT_SUMMARY.csv"
+  }
+}

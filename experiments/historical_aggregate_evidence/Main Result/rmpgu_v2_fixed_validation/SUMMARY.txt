@@ -1,0 +1,75 @@
+RMPG-U v2 FIXED — TRAINREAL VALIDATION EXPERIMENT
+==================================================================================
+
+IMPLEMENTATION FIX
+- Prediction and auxiliary gate supervision now use gate_logits from the SAME forward pass.
+- The previous second encoder/fusion/dropout pass has been removed.
+- Architecture and hyperparameters are otherwise unchanged.
+
+PROTOCOL
+- Training: BIRDSAI TrainReal neural-training tracks only.
+- Validation: fixed track-disjoint TrainReal validation.
+- BIRDSAI TestReal NOT loaded.
+- WildBox NOT loaded.
+- Feature normalization: training samples only.
+- Gate temperature: training targets only.
+- Validation future is used only after checkpoint selection for gate diagnostic scoring.
+
+ARCHITECTURE
+- GRU temporal encoder
+- explicit history-only motion features
+- stationary/CV physical-prior gate
+- nonlinear residual trajectory branch
+- heteroscedastic Gaussian uncertainty head
+
+MODEL COMPARISON
+----------------------------------------------------------------------------------
+    task           model  seeds  ADE_mean  ADE_std  FDE_mean  FDE_std  track_macro_ADE_mean  track_macro_ADE_std  track_macro_FDE_mean  track_macro_FDE_std
+2s_to_2s       AMPM-U-v1      3  0.018606 0.000091  0.033400 0.000220              0.025947             0.000099              0.048641             0.000151
+2s_to_2s             GRU      3  0.017219 0.000217  0.030581 0.000323              0.020662             0.000278              0.038105             0.000694
+2s_to_2s            LSTM      3  0.018540 0.000129  0.033320 0.000413              0.024307             0.000075              0.045069             0.000156
+2s_to_2s RMPG-U-v2-fixed      3  0.017900 0.000128  0.031482 0.000316              0.021504             0.000304              0.039370             0.000559
+2s_to_2s   RMPG-U-v2-old      3  0.017806 0.000193  0.031271 0.000629              0.021496             0.000268              0.039305             0.000889
+2s_to_2s     Transformer      3  0.017104 0.000495  0.030611 0.000868              0.020570             0.001050              0.037979             0.002273
+2s_to_5s       AMPM-U-v1      3  0.020037 0.000078  0.036519 0.000235              0.020958             0.000084              0.045928             0.001355
+2s_to_5s             GRU      3  0.021143 0.000061  0.037460 0.000250              0.021905             0.000506              0.038584             0.001349
+2s_to_5s            LSTM      3  0.020815 0.000197  0.036892 0.000517              0.020853             0.001093              0.038394             0.000072
+2s_to_5s RMPG-U-v2-fixed      3  0.021215 0.000352  0.037049 0.000255              0.024261             0.000254              0.040090             0.001132
+2s_to_5s   RMPG-U-v2-old      3  0.021266 0.000230  0.037045 0.000198              0.024325             0.000568              0.040349             0.001600
+2s_to_5s     Transformer      3  0.020367 0.000393  0.035684 0.001079              0.020718             0.000404              0.041467             0.001010
+
+FIXED RMPG-U v2 SUMMARY
+----------------------------------------------------------------------------------
+    task           model  seeds  mean_best_epoch  ADE_mean_mean  ADE_mean_std  FDE_mean_mean  FDE_mean_std  ADE_track_macro_mean  ADE_track_macro_std  FDE_track_macro_mean  FDE_track_macro_std  ADE_source_macro_mean  ADE_source_macro_std  FDE_source_macro_mean  FDE_source_macro_std  coverage50_mean  coverage50_std  coverage90_mean  coverage90_std  coverage95_mean  coverage95_std  mean_sigma_mean  mean_sigma_std  gate_accuracy_mean  gate_accuracy_std  gate_brier_mean  gate_brier_std  mean_cv_gate_mean  mean_cv_gate_std  mean_residual_magnitude_mean  mean_residual_magnitude_std
+2s_to_2s RMPG-U-v2-fixed      3        64.666667       0.017900      0.000128       0.031482      0.000316              0.021504             0.000304               0.03937             0.000559               0.021129              0.000625               0.038933              0.001097         0.655155        0.014032         0.890206        0.002362         0.918900        0.006960         0.141346        0.004039            0.544845           0.005455         0.082181        0.000949           0.450437          0.002411                      0.034053                     0.002975
+2s_to_5s RMPG-U-v2-fixed      3        15.000000       0.021215      0.000352       0.037049      0.000255              0.024261             0.000254               0.04009             0.001132               0.017741              0.000139               0.023213              0.000290         0.732803        0.048331         0.966364        0.012879         0.980379        0.008296         0.254517        0.017897            0.633712           0.015425         0.073170        0.001270           0.426197          0.011199                      0.046020                     0.006732
+
+GATE BY MOTION REGIME
+----------------------------------------------------------------------------------
+    task  seed            regime  samples  stationary_weight  cv_weight  residual_magnitude
+2s_to_2s    42 irregular_turning       45           0.580029   0.419971            0.036238
+2s_to_2s    42 persistent_linear       28           0.479700   0.520300            0.029271
+2s_to_2s    42   slow_stationary       24           0.583877   0.416123            0.049412
+2s_to_2s    52 irregular_turning       45           0.571952   0.428048            0.032184
+2s_to_2s    52 persistent_linear       28           0.491847   0.508153            0.027251
+2s_to_2s    52   slow_stationary       24           0.565372   0.434628            0.038150
+2s_to_2s    62 irregular_turning       45           0.579866   0.420134            0.033787
+2s_to_2s    62 persistent_linear       28           0.496874   0.503126            0.030098
+2s_to_2s    62   slow_stationary       24           0.553831   0.446169            0.032630
+2s_to_5s    42 irregular_turning       40           0.562056   0.437944            0.050594
+2s_to_5s    42 persistent_linear       16           0.575855   0.424145            0.056597
+2s_to_5s    42   slow_stationary       32           0.555264   0.444736            0.055385
+2s_to_5s    52 irregular_turning       40           0.576753   0.423247            0.039107
+2s_to_5s    52 persistent_linear       16           0.580606   0.419394            0.049643
+2s_to_5s    52   slow_stationary       32           0.569730   0.430270            0.037050
+2s_to_5s    62 irregular_turning       40           0.587034   0.412966            0.042457
+2s_to_5s    62 persistent_linear       16           0.589390   0.410610            0.052055
+2s_to_5s    62   slow_stationary       32           0.578648   0.421352            0.042887
+
+GATE-BY-TIME FILES
+----------------------------------------------------------------------------------
+Detailed seed-level temporal gate behavior:
+rmpgu_v2_fixed_gate_by_time.csv
+
+Mean ± std temporal gate behavior across seeds:
+rmpgu_v2_fixed_gate_by_time_mean.csv

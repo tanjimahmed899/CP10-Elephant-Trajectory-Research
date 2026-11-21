@@ -1,0 +1,52 @@
+{
+  "step": "R13F_B_TRACKER_DERIVED_FORECASTABILITY_AUDIT",
+  "created_utc": "2026-10-30T13:18:11.608449+00:00",
+  "status": "R13F_B_TRACKER_DERIVED_FORECASTABILITY_AUDIT_COMPLETE_REVIEW_COVERAGE_BEFORE_FORECAST_INFERENCE",
+  "training": false,
+  "forecast_inference": false,
+  "tuning": false,
+  "construction_rule": {
+    "source_fps": 30,
+    "target_fps": 10,
+    "max_small_gap": 3,
+    "resample_step": 3,
+    "history_points_10hz": 20,
+    "future_2s_points_10hz": 20,
+    "future_5s_points_10hz": 50,
+    "window_stride_10hz": 10
+  },
+  "reference_historical_final_windows": {
+    "2s": 1053,
+    "5s": 826
+  },
+  "aggregate_results": [
+    {
+      "tracker": "ByteTrack",
+      "raw_tracker_ids_sum_across_sequences": 74,
+      "segments_after_gap_rule": 131,
+      "forecastable_segments_2s": 1,
+      "forecastable_segments_5s": 0,
+      "windows_2s_to_2s": 2,
+      "windows_2s_to_5s": 0,
+      "window_coverage_vs_gt_final_2s": 0.001899335232668566,
+      "window_coverage_vs_gt_final_5s": 0.0
+    },
+    {
+      "tracker": "BoT-SORT",
+      "raw_tracker_ids_sum_across_sequences": 57,
+      "segments_after_gap_rule": 130,
+      "forecastable_segments_2s": 1,
+      "forecastable_segments_5s": 0,
+      "windows_2s_to_2s": 2,
+      "windows_2s_to_5s": 0,
+      "window_coverage_vs_gt_final_2s": 0.001899335232668566,
+      "window_coverage_vs_gt_final_5s": 0.0
+    }
+  ],
+  "outputs": {
+    "segments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_B_tracker_forecastability_audit\\R13F_B_TRACKER_SEGMENT_FORECASTABILITY.csv",
+    "per_sequence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_B_tracker_forecastability_audit\\R13F_B_PER_SEQUENCE_FORECASTABILITY.csv",
+    "aggregate": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_B_tracker_forecastability_audit\\R13F_B_AGGREGATE_FORECASTABILITY.csv",
+    "conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_B_tracker_forecastability_audit\\R13F_B_CONCLUSION.csv"
+  }
+}

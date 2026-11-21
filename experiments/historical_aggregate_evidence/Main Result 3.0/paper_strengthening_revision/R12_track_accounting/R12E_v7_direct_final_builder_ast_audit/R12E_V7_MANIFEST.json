@@ -1,0 +1,16 @@
+{
+  "step": "R12E_V7_DIRECT_FINAL_BUILDER_AST_AUDIT",
+  "created_utc": "2026-10-30T06:44:26.588369+00:00",
+  "status": "R12E_V7_BUILDER_CONTEXT_EXTRACTED_BUT_FILTER_EXPRESSION_STILL_NEEDS_MANUAL_LINE_REVIEW",
+  "training": false,
+  "inference": false,
+  "builder_path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+  "builder_sha256": "7156eeef6f91f6affe7067adc37fa8d20aafc34d82d53155c47019085aeb25e4",
+  "explicit_core_ast_expression_count": 0,
+  "source_rule_lockable": false,
+  "outputs": {
+    "full_ast_context_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v7_direct_final_builder_ast_audit\\R12E_V7_FULL_BUILDER_AST_CONTEXT_EVIDENCE.csv",
+    "high_value_execution_lines": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v7_direct_final_builder_ast_audit\\R12E_V7_HIGH_VALUE_EXECUTION_LINES.csv",
+    "explicit_core_ast_expressions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v7_direct_final_builder_ast_audit\\R12E_V7_EXPLICIT_CORE_AST_EXPRESSIONS.csv"
+  }
+}

@@ -1,0 +1,66 @@
+LSTM + GRU ELEPHANT TRAJECTORY FORECASTING
+==============================================================================
+
+Training data: BIRDSAI TrainReal only
+Validation: track-disjoint BIRDSAI TrainReal validation
+Model selection metric: validation track-macro ADE
+Evaluation: untouched BIRDSAI TestReal + untouched WildBox external RGB
+Seeds: [42, 52, 62]
+Final ADE/FDE computed after inverse canonical transform.
+
+2s_to_2s | BIRDSAI_test | GRU
+ADE = 0.017546 ± 0.000321
+FDE = 0.030032 ± 0.000599
+Track-macro ADE = 0.023996 ± 0.000190
+Source-macro ADE = 0.022924 ± 0.000540
+Mean best epoch = 114.3
+
+2s_to_2s | BIRDSAI_test | LSTM
+ADE = 0.017395 ± 0.000093
+FDE = 0.029637 ± 0.000362
+Track-macro ADE = 0.023031 ± 0.000140
+Source-macro ADE = 0.020534 ± 0.000153
+Mean best epoch = 23.7
+
+2s_to_2s | WildBox_external | GRU
+ADE = 0.051614 ± 0.001645
+FDE = 0.088870 ± 0.003028
+Track-macro ADE = 0.053602 ± 0.002033
+Source-macro ADE = 0.046294 ± 0.002498
+Mean best epoch = 114.3
+
+2s_to_2s | WildBox_external | LSTM
+ADE = 0.051323 ± 0.000280
+FDE = 0.088612 ± 0.000777
+Track-macro ADE = 0.053694 ± 0.000310
+Source-macro ADE = 0.047056 ± 0.000465
+Mean best epoch = 23.7
+
+2s_to_5s | BIRDSAI_test | GRU
+ADE = 0.036220 ± 0.000822
+FDE = 0.067864 ± 0.001741
+Track-macro ADE = 0.051896 ± 0.001924
+Source-macro ADE = 0.060149 ± 0.000973
+Mean best epoch = 41.3
+
+2s_to_5s | BIRDSAI_test | LSTM
+ADE = 0.036407 ± 0.000134
+FDE = 0.068380 ± 0.000149
+Track-macro ADE = 0.052957 ± 0.000489
+Source-macro ADE = 0.060231 ± 0.000280
+Mean best epoch = 111.7
+
+2s_to_5s | WildBox_external | GRU
+ADE = 0.099742 ± 0.002737
+FDE = 0.179479 ± 0.005864
+Track-macro ADE = 0.140549 ± 0.003223
+Source-macro ADE = 0.119581 ± 0.003246
+Mean best epoch = 41.3
+
+2s_to_5s | WildBox_external | LSTM
+ADE = 0.100576 ± 0.000657
+FDE = 0.182524 ± 0.001689
+Track-macro ADE = 0.140795 ± 0.000251
+Source-macro ADE = 0.119827 ± 0.000395
+Mean best epoch = 111.7
+

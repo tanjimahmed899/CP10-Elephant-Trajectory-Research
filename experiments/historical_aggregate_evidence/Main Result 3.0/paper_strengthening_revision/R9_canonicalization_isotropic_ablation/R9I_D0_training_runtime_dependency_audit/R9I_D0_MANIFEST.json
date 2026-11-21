@@ -1,0 +1,52 @@
+{
+  "step": "R9I_D0_ORIGINAL_TRAINING_RUNTIME_DATA_DEPENDENCY_AUDIT",
+  "created_utc": "2026-10-29T12:53:25.264755+00:00",
+  "status": "R9I_D0_TRAINING_RUNTIME_DEPENDENCIES_AUDITED_READY_FOR_R9I_D1_SAFE_TRAINING_ONLY_MATCHED_RUNNER",
+  "original_training_sources": {
+    "transformer": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_transformer.py",
+      "sha256": "da4041611d36f37de0fc6a8716e190bba465786813a4c1ee536594a66528baa9"
+    },
+    "recurrent": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_lstm_gru.py",
+      "sha256": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d"
+    }
+  },
+  "matched_isotropic_trainval_directory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset",
+  "target_function_signatures": [
+    {
+      "file": "train_transformer.py",
+      "function": "train_one",
+      "signature": "train_one(task, seed)"
+    },
+    {
+      "file": "train_transformer.py",
+      "function": "evaluate",
+      "signature": "evaluate(model, task, dataset_name, role, npz_path, metadata_path, seed, best_epoch)"
+    },
+    {
+      "file": "train_lstm_gru.py",
+      "function": "train_one",
+      "signature": "train_one(task, model_type, seed)"
+    },
+    {
+      "file": "train_lstm_gru.py",
+      "function": "evaluate_dataset",
+      "signature": "evaluate_dataset(model, task, dataset_name, role, npz_path, meta_path, model_type, seed, best_epoch)"
+    }
+  ],
+  "evaluation_dependency_flags": {
+    "birdsai_test_canonical_detected": false,
+    "wildbox_external_canonical_detected": false
+  },
+  "new_training": false,
+  "model_inference": false,
+  "frozen_results_modified": false,
+  "outputs": {
+    "path_assignments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D0_training_runtime_dependency_audit\\R9I_D0_TOP_LEVEL_PATH_ASSIGNMENTS.csv",
+    "function_io_dependencies": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D0_training_runtime_dependency_audit\\R9I_D0_FUNCTION_IO_DEPENDENCIES.csv",
+    "target_function_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D0_training_runtime_dependency_audit\\R9I_D0_TARGET_FUNCTION_SOURCES.csv",
+    "main_block_calls": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D0_training_runtime_dependency_audit\\R9I_D0_MAIN_BLOCK_CALLS.csv",
+    "isotropic_trainval_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D0_training_runtime_dependency_audit\\R9I_D0_ISOTROPIC_TRAINVAL_INPUT_INVENTORY.csv"
+  }
+}

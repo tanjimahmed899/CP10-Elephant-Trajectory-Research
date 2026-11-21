@@ -1,0 +1,66 @@
+{
+  "step": "R13D_FROZEN_DETECTOR_TRACKER_EXECUTION",
+  "created_utc": "2026-10-30T12:09:28.275597+00:00",
+  "status": "R13D_FROZEN_DETECTOR_BYTETRACK_BOTSORT_EXECUTION_COMPLETE_RAW_OUTPUTS_LOCKED_READY_FOR_R13E_TRACKING_METRICS",
+  "training": false,
+  "testreal_tuning": false,
+  "detector_inference": true,
+  "tracking_inference": true,
+  "forecast_inference": false,
+  "warning_analysis": false,
+  "original_files_modified": false,
+  "device": "cpu",
+  "device_name": "CPU",
+  "frozen_hashes": {
+    "protocol_sha256": "05e7be68961139834373fef3d28dcafab7364937ab3cfb8c9f6d679d751cf5ab",
+    "detector_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+    "bytetrack_yaml_sha256": "eaefad899964d7a12a13090d5da32bcdae8f0109968ffca982fdba2c60ad3c38",
+    "botsort_yaml_sha256": "0fd76813919051ee87ac0173afb39f4052063c593433fbc9d01fe7ed58f11fa4"
+  },
+  "sequences": [
+    "0000000055_0000000000",
+    "0000000058_0000000000",
+    "0000000349_0000000000",
+    "0000000352_0000000000",
+    "0000000353_0000000000",
+    "0000000357_0000000000"
+  ],
+  "summary": [
+    {
+      "component": "detections",
+      "frames": 9085,
+      "boxes": 4288,
+      "assigned_track_rows": 0,
+      "unique_track_ids_within_sequence_sum": 0,
+      "boxes_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_DETECTIONS_ALL_BOXES.csv",
+      "frames_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_DETECTIONS_ALL_FRAMES.csv",
+      "boxes_sha256": "7463014db43618b9f4d8075cfc91c597872fbc65631b3b1e7af96ca0a4de1d46",
+      "frames_sha256": "7fc8789c5f282afe9dcc625534c4d4a275198f58a547b86641b0a4fc71736711"
+    },
+    {
+      "component": "bytetrack",
+      "frames": 9085,
+      "boxes": 3137,
+      "assigned_track_rows": 1863,
+      "unique_track_ids_within_sequence_sum": 74,
+      "boxes_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_BYTETRACK_ALL_BOXES.csv",
+      "frames_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_BYTETRACK_ALL_FRAMES.csv",
+      "boxes_sha256": "3ee22483cfdf24e66340b3bd6805cc2ad57b24ddfcea0c6b5253b68f150338b2",
+      "frames_sha256": "fcb702128d22015c57cf6ef4b9481c28eb85b82b079e84002dfca461d6130a65"
+    },
+    {
+      "component": "botsort",
+      "frames": 9085,
+      "boxes": 3145,
+      "assigned_track_rows": 1998,
+      "unique_track_ids_within_sequence_sum": 57,
+      "boxes_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_BOTSORT_ALL_BOXES.csv",
+      "frames_path": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_BOTSORT_ALL_FRAMES.csv",
+      "boxes_sha256": "ffe01a2f526597c873c4bcf6599608b3964881d9871853490cd8f2a392e7909c",
+      "frames_sha256": "42bb11aea52361cd47d4355cb865037d105cf3db770adc3c032499b524a70bda"
+    }
+  ],
+  "outputs": {
+    "execution_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13D_frozen_detector_tracker_execution\\R13D_EXECUTION_SUMMARY.csv"
+  }
+}

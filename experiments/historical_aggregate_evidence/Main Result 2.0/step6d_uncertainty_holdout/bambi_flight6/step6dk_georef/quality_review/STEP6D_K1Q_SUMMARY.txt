@@ -1,0 +1,102 @@
+STEP 6D-K1Q — BAMBI GEOREFERENCING QUALITY REVIEW
+============================================================================
+
+INTEGRITY
+---------
+{
+  "trajectory_rows": 3553,
+  "tracks": 57,
+  "frames": 382,
+  "duplicate_track_frame_rows": 0,
+  "nonfinite_xy_rows": 0
+}
+
+MOTION SUMMARY
+--------------
+{
+  "steps": 3496,
+  "median_speed_xy_mps": 5.530593497827427,
+  "p95_speed_xy_mps": 11.570663546528861,
+  "p99_speed_xy_mps": 19.099918792208307,
+  "p995_speed_xy_mps": 52.59905760219959,
+  "max_speed_xy_mps": 86.47288208079902,
+  "mad_speed_xy_mps": 1.4487759004984597,
+  "robust_sigma_speed_xy_mps": 2.1479551500790164,
+  "robust_jump_threshold_mps": 27.01014499861759,
+  "robust_jump_steps": 31,
+  "tracks_with_robust_jumps": 30,
+  "p99_accel_mps2": 1241.470461240832,
+  "p995_accel_mps2": 1501.7382259366134
+}
+
+CONTINUITY SUMMARY
+------------------
+{
+  "tracks": 57,
+  "median_rows_per_track": 34.0,
+  "median_frame_gap_across_tracks": 10.0,
+  "median_max_frame_gap": 13.0,
+  "max_frame_gap_any_track": 31.0,
+  "median_longest_strict_contiguous_run_frames": 3.0,
+  "tracks_with_longest_strict_run_ge_20": 11,
+  "tracks_with_longest_strict_run_ge_40": 0,
+  "tracks_with_longest_strict_run_ge_70": 0
+}
+
+TOP 15 TRACKS FOR REVIEW
+------------------------
+ track_id  steps  rows  temporal_span_sec  median_frame_gap  max_frame_gap  longest_strict_contiguous_run_frames  median_speed_xy_mps  p95_speed_xy_mps  max_speed_xy_mps  robust_jump_steps  p99_speed_steps  p995_speed_steps  robust_jump_fraction  review_priority_score
+      114    170   171           9.519978               2.0            3.0                                    15             6.182704         16.103843         79.100244                  2                2                 1              0.011765            2199.100244
+      120    185   186           9.995976               2.0            6.0                                    29             5.855221         11.456750         76.780090                  1                3                 1              0.005405            1206.780090
+      127    104   105           8.601980               1.0           22.0                                    29             6.859769         15.665930         86.472882                  1                1                 1              0.009615            1196.472882
+      113    192   193          10.267976               2.0            3.0                                    29             6.089088         11.206407         73.463422                  1                2                 1              0.005208            1193.463422
+      122    159   160          10.471975               2.0           20.0                                    29             6.186139         13.436268         83.298535                  1                1                 1              0.006289            1193.298535
+      115    189   190          10.165976               2.0            3.0                                    26             5.825437         11.093629         71.581197                  1                2                 1              0.005291            1191.581197
+      119    161   162           9.043979               2.0            2.0                                    15             5.919735         11.916859         80.694523                  1                1                 1              0.006211            1190.694523
+      121    162   163           9.995976               2.0           20.0                                    29             6.472923         12.561061         79.640906                  1                1                 1              0.006173            1189.640906
+      116    167   168           9.315978               2.0           17.0                                    29             6.344407         12.629529         75.211094                  1                1                 1              0.005988            1185.211094
+      117    173   174           9.451978               2.0            2.0                                    15             5.910438         10.343879         73.815099                  1                1                 1              0.005780            1183.815099
+      118    160   161           9.009979               2.0            2.0                                    15             5.967637         11.571184         68.942587                  1                1                 1              0.006250            1178.942587
+      137     32    33           9.859977              10.0           16.0                                     3             3.430661          8.120748         68.260414                  1                1                 1              0.031250            1178.260414
+      142     33    34          10.199976              10.0           16.0                                     3             3.385944          6.141116         61.777406                  1                1                 1              0.030303            1171.777406
+      143     38    39           9.859977              10.0           11.0                                     3             3.201979          4.441319         59.892964                  1                1                 1              0.026316            1169.892964
+      141     33    34          10.199976              10.0           16.0                                     3             3.410883          4.604270         58.768952                  1                1                 1              0.030303            1168.768952
+
+ROBUST JUMP STEPS
+-----------------
+ track_id  frame_from  frame_to  frame_gap  dt_sec  step_xy_m  step_3d_m  speed_xy_mps  robust_jump_flag  robust_jump_flag_recomputed  p99_speed_flag  p995_speed_flag
+      113        1034      1035          1   0.034   2.497750   2.555514     73.463422              True                         True            True             True
+      114         989       990          1   0.034   0.968148   0.969923     28.475003              True                         True            True            False
+      114        1034      1035          1   0.034   2.689402   2.780135     79.100244              True                         True            True             True
+      115        1034      1035          1   0.034   2.433755   2.514460     71.581197              True                         True            True             True
+      116        1034      1035          1   0.034   2.557171   2.613082     75.211094              True                         True            True             True
+      117        1034      1035          1   0.034   2.509707   2.592049     73.815099              True                         True            True             True
+      118        1034      1035          1   0.034   2.344042   2.415503     68.942587              True                         True            True             True
+      119        1034      1035          1   0.034   2.743607   2.831729     80.694523              True                         True            True             True
+      120        1034      1035          1   0.034   2.610517   2.691824     76.780090              True                         True            True             True
+      121        1034      1035          1   0.034   2.707784   2.765014     79.640906              True                         True            True             True
+      122        1034      1035          1   0.034   2.832144   2.954982     83.298535              True                         True            True             True
+      127        1034      1035          1   0.034   2.940071   2.957551     86.472882              True                         True            True             True
+      131        3092      3093          1   0.034   1.819796   1.857978     53.523529              True                         True            True             True
+      132        3092      3093          1   0.034   1.611049   1.672298     47.383901              True                         True            True            False
+      133        3092      3093          1   0.034   1.856886   1.908086     54.614429              True                         True            True             True
+      134        3092      3093          1   0.034   1.732954   1.792037     50.969363              True                         True            True            False
+      135        3092      3093          1   0.034   1.747706   1.908235     51.403243              True                         True            True            False
+      136        3092      3093          1   0.034   1.716039   1.743884     50.471864              True                         True            True            False
+      137        3092      3093          1   0.034   2.320849   2.388297     68.260414              True                         True            True             True
+      138        3092      3093          1   0.034   1.751425   1.806123     51.512608              True                         True            True            False
+      139        3092      3093          1   0.034   1.753623   1.900556     51.577274              True                         True            True            False
+      140        3092      3093          1   0.034   1.671169   1.822299     49.152141              True                         True            True            False
+      141        3092      3093          1   0.034   1.998140   2.075055     58.768952              True                         True            True             True
+      142        3092      3093          1   0.034   2.100427   2.172998     61.777406              True                         True            True             True
+      143        3092      3093          1   0.034   2.036356   2.082544     59.892964              True                         True            True             True
+      146        3092      3093          1   0.034   1.647200   1.708406     48.447163              True                         True            True            False
+      147        3092      3093          1   0.034   1.917195   2.077363     56.388228              True                         True            True             True
+      153        3092      3093          1   0.034   1.711474   1.854391     50.337580              True                         True            True            False
+      165        1033      1035          2   0.068   3.063232   3.203028     45.047632              True                         True            True            False
+      166        1033      1035          2   0.068   3.008959   3.104326     44.249505              True                         True            True            False
+      167        1033      1035          2   0.068   2.622829   2.686119     38.571109              True                         True            True            False
+
+VERDICT
+-------
+GEOMETRY_VALID_BUT_OUTLIER_REVIEW_REQUIRED

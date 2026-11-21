@@ -1,0 +1,21 @@
+{
+  "step": "R11D_ENSEMBLE_GAIN_MAGNITUDE_VS_EMPIRICAL_GEOMETRIC_RESIDUAL_SCALE",
+  "created_utc": "2026-10-30T05:35:11.334009+00:00",
+  "status": "R11D_ENSEMBLE_GAIN_CONTEXTUALIZED_AGAINST_F50_F95_READY_FOR_R11E_FINAL_NOISE_FLOOR_CONCLUSION",
+  "training": false,
+  "inference": false,
+  "F50_px": 0.2032955537988646,
+  "F95_px": 1.5533470192988588,
+  "gain_definition": "comparator error - ensemble error; positive favors ensemble",
+  "primary_dependency_unit": "(sequence, segment_id)",
+  "within_segment_reduction": "median paired gain across overlapping windows",
+  "bootstrap_replicates": 20000,
+  "important_interpretation_rule": "F50/F95 are contextual scales, not statistical significance thresholds. A gain below F95 can still be statistically reproducible; it should simply be described as small relative to the conservative residual envelope.",
+  "outputs": {
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11D_ensemble_gain_vs_residual_scale\\R11D_ENSEMBLE_GAIN_VS_RESIDUAL_SCALE_SUMMARY.csv",
+    "bootstrap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11D_ensemble_gain_vs_residual_scale\\R11D_SEGMENT_CLUSTER_BOOTSTRAP_GAIN_SCALE.csv",
+    "leave_one_sequence_out": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11D_ensemble_gain_vs_residual_scale\\R11D_LEAVE_ONE_SEQUENCE_OUT_GAIN_SCALE.csv",
+    "sample_level": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11D_ensemble_gain_vs_residual_scale\\R11D_SAMPLE_LEVEL_GAIN_VS_RESIDUAL_SCALE.csv",
+    "r10b_reproducibility": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11D_ensemble_gain_vs_residual_scale\\R11D_R10B_EFFECT_REPRODUCIBILITY.csv"
+  }
+}

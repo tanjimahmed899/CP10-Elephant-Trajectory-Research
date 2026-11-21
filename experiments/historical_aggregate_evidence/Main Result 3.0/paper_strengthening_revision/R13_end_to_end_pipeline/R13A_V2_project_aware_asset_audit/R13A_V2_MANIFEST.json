@@ -1,0 +1,22 @@
+{
+  "step": "R13A_V2_PROJECT_AWARE_END_TO_END_ASSET_AUDIT",
+  "created_utc": "2026-10-30T10:45:27.819500+00:00",
+  "status": "R13A_V2_END_TO_END_ASSETS_INCOMPLETE_MISSING_GENUINE_TRACKER_IMPLEMENTATION",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "r13a_v1_status": "R13A_END_TO_END_ASSET_AUDIT_INCOMPLETE_MISSING_DETECTOR_CHECKPOINT",
+  "detector_checkpoint_found": true,
+  "project_media_or_sequence_found": true,
+  "genuine_tracker_implementation_found": false,
+  "birdsai_sequence_found": false,
+  "birdsai_annotation_gt_candidate_found": false,
+  "outputs": {
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_SUMMARY.csv",
+    "checkpoints": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_DETECTOR_CHECKPOINTS.csv",
+    "project_videos": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_PROJECT_VIDEOS.csv",
+    "image_sequences": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_PROJECT_IMAGE_SEQUENCE_DIRECTORIES.csv",
+    "tracker_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_GENUINE_TRACKER_SOURCE_AUDIT.csv",
+    "birdsai_gt_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_V2_project_aware_asset_audit\\R13A_V2_BIRDSAI_ANNOTATION_GT_CANDIDATES.csv"
+  }
+}

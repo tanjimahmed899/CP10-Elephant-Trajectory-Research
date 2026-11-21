@@ -1,0 +1,22 @@
+WILDBOX FRESH EXTERNAL HOLDOUT — PREREGISTERED SELECTION
+============================================================================
+
+PURPOSE
+- Final confirmatory RGB external evaluation of the already-frozen Transformer ensemble.
+
+SELECTION RULE
+- Repository filenames were listed without downloading or inspecting new videos.
+- Previously inspected WildBox source videos were excluded.
+- Three unused elephant video ZIPs were selected deterministically using SHA-256 hashes of repository paths.
+- Where possible, selection prefers one source from each elephant group.
+- Selection did NOT use model performance, track quality, video content, trajectory statistics, or difficulty.
+
+EXCLUDED PREVIOUSLY INSPECTED VIDEOS
+- DJI_20240119152552_0006_V.zip
+- DJI_20240626143832_0004_V.zip
+- DJI_20260227084907_0004_V.zip
+
+LOCKED FRESH HOLDOUT
+- fresh_01: elep1/DJI_20240119152335_0005_V.zip
+- fresh_02: elep2/DJI_20240626142859_0001_V.zip
+- fresh_03: elep3/DJI_20260227084135_0002_V.zip

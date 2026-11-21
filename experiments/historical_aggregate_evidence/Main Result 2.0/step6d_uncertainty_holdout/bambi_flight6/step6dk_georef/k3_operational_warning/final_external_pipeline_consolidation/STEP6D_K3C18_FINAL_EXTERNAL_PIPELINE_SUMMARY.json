@@ -1,0 +1,31 @@
+{
+  "step": "STEP_6D_K3C18_FINAL_EXTERNAL_PIPELINE_INTEGRITY_CONSOLIDATION",
+  "created_utc": "2026-10-28T11:23:33.715065+00:00",
+  "status": "BAMBI_SECONDARY_EXTERNAL_OPERATIONAL_PIPELINE_FINALIZED_AND_FROZEN",
+  "analysis_role": "BAMBI Flight 6 cross-species/cross-domain secondary external operational-transfer stress test.",
+  "core_hashes_verified": true,
+  "q90_window_coverage": {
+    "2s_to_2s": 1.0,
+    "2s_to_5s": 0.0256821829855537
+  },
+  "primary_findings": {
+    "2s_to_2s": "Forecast transfer is substantially stronger than 5s. Fixed q90 coverage is 100%, indicating a highly conservative uncertainty radius on this secondary representation. The combined warning layer is extremely sensitive but produces many false alerts; RED alerts remain much more selective and precise.",
+    "2s_to_5s": "Long-horizon forecast and uncertainty transfer degrade strongly. Fixed q90 coverage is severely below nominal, so the 5s uncertainty-assisted warning layer must not be described as 90%-calibrated. Combined alerts retain high event sensitivity but RED urgent-event sensitivity is modest."
+  },
+  "critical_nonclaims": [
+    "BAMBI Flight 6 is red-deer/human dominated and is not elephant-specific validation.",
+    "The analysis is a secondary operational-transfer stress test, not a pristine confirmatory uncertainty holdout.",
+    "The Flight-6 50 degree FOVY is an assumed/default reference-pipeline value, not independently measured calibration.",
+    "Virtual geofences are normalized synthetic boundaries, not real village/farm boundaries.",
+    "Response thresholds are scenario assumptions, not measured field-team response times.",
+    "No BAMBI q recalibration, model tuning, threshold tuning, persistence tuning, or response-threshold tuning was performed.",
+    "The 5s q90 uncertainty layer is not calibrated on this secondary representation.",
+    "This is not field validation."
+  ],
+  "files": {
+    "integrity_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\final_external_pipeline_consolidation\\TABLE_step6dk3c18_core_hash_integrity.csv",
+    "conformal_summary_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\final_external_pipeline_consolidation\\TABLE_step6dk3c18_conformal_summary.csv",
+    "step7_summary_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\final_external_pipeline_consolidation\\TABLE_step6dk3c18_step7_summary.csv",
+    "step7_task_ranges_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\final_external_pipeline_consolidation\\TABLE_step6dk3c18_step7_task_ranges.csv"
+  }
+}

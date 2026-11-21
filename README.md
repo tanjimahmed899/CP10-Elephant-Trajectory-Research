@@ -1,6 +1,6 @@
 # Camera-Motion-Corrected Elephant Trajectory Forecasting (CP 1.0)
 
-**Status:** audited retrospective research repository; **not** an operational wildlife-alert system. Prepared for faculty review and reproducible research. This repository is intended to be **private until dataset redistribution rights, software licenses, and sensitive wildlife-location information are reviewed**.
+**Status:** audited retrospective research repository; **not** an operational wildlife-alert system. Prepared for faculty review and reproducible research. This repository is **public**. Dataset redistribution rights, software licensing and sensitive wildlife-location information still require verification before adding further artifacts.
 
 ## Research questions
 
@@ -33,7 +33,12 @@ All ADE/FDE values above are normalized image-coordinate units unless the source
 - [`docs/analysis/`](docs/analysis/) — scientific audit findings and claim ledgers.
 - [`figures/`](figures/) — selected statistical plots (not copyrighted source video frames).
 - [`manifests/`](manifests/) — file-by-file SHA-256 manifest; source package inventory; exclusion reasons.
-- [`scripts/`](scripts/) — secret/file-size checks, local WSL supplement collection, private repository publishing.
+- [`scripts/`](scripts/) — secret/file-size checks, local WSL supplement collection, historical private-publishing helper.
+
+
+## Research evidence index
+
+Browse [the Stage 12 published manuscript-to-evidence index](docs/analysis/STAGE12_PUBLISHED_EVIDENCE_INDEX.md) and [public-release/reproducibility checklist](docs/analysis/STAGE12_PUBLICATION_AND_REPRODUCIBILITY.md). Each link identifies a published source artifact, not independent experimental replication.
 
 ## Datasets and models
 
@@ -47,4 +52,4 @@ The experiment archive manifests identify sources, included files and excluded c
 
 ## Publication and licensing
 
-The source code is provided for supervisor/private reproducibility review. **No general open-source license is granted yet.** Review rights to redistribute copied/adapted scripts, imported data and research photos before making public. Paper and figures may have separate copyright considerations.
+The source code is publicly viewable, but **no general open-source license has been selected or granted**. Review the rights to redistribute copied/adapted scripts, derived data, models and research photos before adding further artifacts. Paper and figures may have separate copyright considerations.

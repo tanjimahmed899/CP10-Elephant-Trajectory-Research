@@ -1,0 +1,20 @@
+{
+  "step": "STEP_7H_FINAL_RESPONSE_AWARE_DEVELOPMENT_EVALUATION",
+  "development_branch_status": "FROZEN_AFTER_STEP7H",
+  "primary_conformal_level": 0.9,
+  "locked_persistence_windows": 2,
+  "final_logic": {
+    "RED": "Nominal predicted crossing at or before the assumed response-time threshold; or already at/inside boundary with unavailable TTE.",
+    "YELLOW": "Nominal crossing after the response-time threshold, or 90% conformal uncertainty intersects the same virtual geofence for 2 consecutive available forecast windows.",
+    "GREEN": "Neither RED nor YELLOW condition is met."
+  },
+  "evaluation_unit": "individual virtual-geofence scenario, not OR-union across six scenarios",
+  "selection_note": "N=2 was selected post hoc on BIRDSAI using the frozen Step-7G exploratory criterion. WildBox was not used to select N.",
+  "confirmatory_requirement": "Apply this rule unchanged to a genuinely untouched confirmatory dataset before final operational claims.",
+  "nonclaims": [
+    "N=2 is not converted to seconds because exact window stride has not been verified.",
+    "Response-time thresholds are sensitivity-analysis assumptions, not measured field response times.",
+    "The virtual geofence is normalized and is not a real village/farm boundary.",
+    "BIRDSAI and WildBox results are retrospective development/transfer evidence."
+  ]
+}

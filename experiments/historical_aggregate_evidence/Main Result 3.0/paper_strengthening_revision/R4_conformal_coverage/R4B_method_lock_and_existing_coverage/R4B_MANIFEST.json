@@ -1,0 +1,21 @@
+{
+  "step": "R4B_STEP6C_METHOD_LOCK_EXISTING_COVERAGE",
+  "created_utc": "2026-10-29T06:44:59.275344+00:00",
+  "status": "R4B_STEP6C_METHOD_AND_EXISTING_TESTREAL_FRESH_COVERAGE_LOCKED_READY_FOR_R4C_INTERPRETATION",
+  "recalibration": false,
+  "new_forecasting_inference": false,
+  "new_q_selection": false,
+  "coverage_recomputed": false,
+  "coverage_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6c_crossfit_conformal\\track_conformal_retrospective_evaluation.csv",
+  "coverage_source_sha256": "0218b20bc92a31e90c9a1feb239549edc554cc981b253af2b71fa69fb3982088",
+  "calibration_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6c_crossfit_conformal\\track_conformal_calibration_summary.csv",
+  "calibration_source_sha256": "63783704eafbbf719bcaaaaaa25606fffdbd227c069e0875a2ce982136dabe11",
+  "protocol_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6c_crossfit_conformal\\crossfit_protocol_audit.csv",
+  "protocol_source_sha256": "104a04b15e1ed5ddaf7b60c3570bd14bec168c2047590a9611d9ccee17711239",
+  "track_scores_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step6c_crossfit_conformal\\crossfit_track_calibration_scores.csv",
+  "track_scores_source_sha256": "6e8350d767aadb976ff248b38a9a2c699147705ab2c51bc880ca6758715fdf66",
+  "locked_q_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4B_method_lock_and_existing_coverage\\R4B_LOCKED_FIXED_Q_VALUES.csv",
+  "locked_q_sha256": "57b8e7095703d1b597716fb0ef230757363855ecd2adb0c7855d44a7915a17ce",
+  "coverage_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R4_conformal_coverage\\R4B_method_lock_and_existing_coverage\\R4B_EXISTING_TESTREAL_FRESH_FIXED_COVERAGE.csv",
+  "coverage_sha256": "a9a6b7b41cdd441eef6f3d7998919ee903dc6f8dd900672aa91dc9313ccab46c"
+}

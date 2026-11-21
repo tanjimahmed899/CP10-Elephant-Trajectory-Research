@@ -1,0 +1,27 @@
+ELEPHANT DATASET AUDIT
+============================================================
+
+NESTLER
+Videos: 2
+Total frames: 1967
+Total duration: 80.74 sec
+
+BIRDSAI TRAIN REAL
+Sequences: 32
+Elephant sequences: 5
+Elephant bounding boxes: 42973
+Elephant tracks: 85
+Track length frames (min / median / max): 1 / 242.0 / 2180
+Track duration seconds @30Hz (min / median / max): 0.03 / 11.73 / 93.40
+Mean occlusion: 11.44%
+Mean noise: 3.29%
+
+BIRDSAI TEST REAL
+Sequences: 16
+Elephant sequences: 6
+Elephant bounding boxes: 48055
+Elephant tracks: 45
+Track length frames (min / median / max): 34 / 934.0 / 3090
+Track duration seconds @30Hz (min / median / max): 1.13 / 37.03 / 106.97
+Mean occlusion: 6.70%
+Mean noise: 9.35%

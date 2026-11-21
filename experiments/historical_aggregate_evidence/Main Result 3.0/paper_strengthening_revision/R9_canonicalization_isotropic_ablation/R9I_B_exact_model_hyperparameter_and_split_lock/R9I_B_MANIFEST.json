@@ -1,0 +1,42 @@
+{
+  "step": "R9I_B_EXACT_MODEL_HYPERPARAMETER_AND_SPLIT_LOCK",
+  "created_utc": "2026-10-29T12:24:52.009949+00:00",
+  "status": "R9I_B_EXACT_MODEL_HYPERPARAMETER_SPLIT_AND_CHECKPOINT_LOCK_COMPLETE_READY_FOR_R9I_C_ISOTROPIC_TRAINREAL_DATASET_BUILD",
+  "original_training_sources": {
+    "Transformer": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_transformer.py",
+      "sha256": "da4041611d36f37de0fc6a8716e190bba465786813a4c1ee536594a66528baa9"
+    },
+    "GRU_LSTM": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_lstm_gru.py",
+      "sha256": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d"
+    }
+  },
+  "checkpoint_inventory_bug_fixed": "R9-I-A inferred model type from full path and mislabeled LSTM checkpoints as GRU because parent directory is lstm_gru_results. R9-I-B classifies model identity from checkpoint filename.",
+  "expected_checkpoint_count": 18,
+  "actual_checkpoint_count": 18,
+  "matched_retraining_policy": [
+    "Keep exact train/validation sample and track membership.",
+    "Keep seeds 42, 52, 62.",
+    "Keep model architecture fixed per original training source.",
+    "Keep batch size, optimizer settings, scheduler, loss, sample weighting, early stopping and validation criterion fixed.",
+    "Change only coordinate representation to aspect-preserving isotropic coordinates.",
+    "Re-derive scale floor from isotropic BIRDSAI TrainReal only.",
+    "Do not use TestReal or WildBox for tuning or scale-floor derivation.",
+    "Do not evaluate old anisotropic checkpoints on isotropic tensors as a performance comparison."
+  ],
+  "new_training": false,
+  "model_inference": false,
+  "frozen_results_modified": false,
+  "outputs": {
+    "split_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_SPLIT_SUMMARY_LOCK.csv",
+    "split_identity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_EXACT_SPLIT_IDENTITY.csv",
+    "protocol_table": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_MODEL_PROTOCOL_TABLE.csv",
+    "assignments": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_EXACT_TOP_LEVEL_ASSIGNMENTS.csv",
+    "functions_and_classes": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_RELEVANT_FUNCTIONS_AND_CLASSES.csv",
+    "protocol_lines": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_PROTOCOL_LINES.csv",
+    "protocol_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_PROTOCOL_CONTEXT.csv",
+    "corrected_checkpoint_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_CORRECTED_CHECKPOINT_INVENTORY.csv",
+    "source_bundle": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_B_exact_model_hyperparameter_and_split_lock\\R9I_B_EXACT_TRAINING_SOURCE_BUNDLE.txt"
+  }
+}

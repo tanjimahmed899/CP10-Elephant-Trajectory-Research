@@ -1,0 +1,23 @@
+{
+  "step": "R10C0_FRESH_WILDBOX_MATCHED_INPUT_PROVENANCE_LOCK",
+  "created_utc": "2026-10-30T05:04:47.758332+00:00",
+  "status": "R10C0_FRESH_WILDBOX_INPUTS_NOT_UNIQUELY_RESOLVED_REVIEW_CANDIDATES_BEFORE_INFERENCE",
+  "training": false,
+  "inference": false,
+  "target_sample_counts": {
+    "2s_to_2s": 865,
+    "2s_to_5s": 637
+  },
+  "legacy_wildbox_external_counts_not_allowed": {
+    "2s_to_2s": 93,
+    "2s_to_5s": 60
+  },
+  "claim_guardrail": "No fresh-WildBox ensemble claim is allowed until exact canonical NPZ and metadata for 865/637 matched samples are uniquely resolved and hash-locked.",
+  "outputs": {
+    "known_r2_artifacts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0_fresh_wildbox_input_provenance_lock\\R10C0_KNOWN_R2_ARTIFACT_INVENTORY.csv",
+    "path_text_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0_fresh_wildbox_input_provenance_lock\\R10C0_R2_PATH_TEXT_EVIDENCE.csv",
+    "npz_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0_fresh_wildbox_input_provenance_lock\\R10C0_WILDBOX_NPZ_CANDIDATE_INVENTORY.csv",
+    "metadata_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0_fresh_wildbox_input_provenance_lock\\R10C0_WILDBOX_METADATA_CANDIDATE_INVENTORY.csv",
+    "task_resolution": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C0_fresh_wildbox_input_provenance_lock\\R10C0_TASK_INPUT_RESOLUTION.csv"
+  }
+}

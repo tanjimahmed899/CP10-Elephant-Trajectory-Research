@@ -1,0 +1,218 @@
+{
+  "step": "STEP_6D_K3C15_V2_SECONDARY_FROZEN_3SEED_TRANSFORMER_INFERENCE",
+  "created_utc": "2026-10-28T11:07:02.775245+00:00",
+  "status": "SECONDARY_FROZEN_INFERENCE_COMPLETE_PREDICTIONS_LOCKED_NO_STEP7_YET",
+  "analysis_role": "Secondary/exploratory frozen operational-transfer analysis on the K3C13 Step18-compatible BAMBI representation. Not a new pristine confirmatory uncertainty holdout.",
+  "evaluator_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_birdsai_testreal_frozen_ensemble.py",
+  "evaluator_sha256": "b3002766925305adb2fd54339cda44188223aa85351c3c8299e2bbf1bab7ee66",
+  "load_transformer_signature": "(task, seed, future_length)",
+  "safe_evaluator_extraction_audit": {
+    "selected_bound_names": [
+      "DEVICE",
+      "MODEL_ROOT",
+      "PositionalEncoding",
+      "TrajectoryTransformer",
+      "load_transformer"
+    ],
+    "selected_imports": [
+      "from pathlib import Path",
+      "import math",
+      "import torch",
+      "import torch.nn as nn"
+    ],
+    "top_level_benchmark_executed": false,
+    "model_root_binding": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results",
+    "model_root_binding_mode": "runtime namespace binding to K3C14-verified frozen checkpoint directory; no source/checkpoint modification"
+  },
+  "k3c13_manifest": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_canonical_lock_v1\\STEP6D_K3C13_CANONICAL_DATASET_LOCK.json",
+  "k3c13_manifest_sha256": "71d83c774233538342f4b410a789750943e61a8513fe983249c8f8f5a2aee605",
+  "checkpoint_mapping": [
+    {
+      "task": "2s_to_2s",
+      "seed": 42,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed42.pt",
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"
+    },
+    {
+      "task": "2s_to_2s",
+      "seed": 52,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed52.pt",
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"
+    },
+    {
+      "task": "2s_to_2s",
+      "seed": 62,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed62.pt",
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 42,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed42.pt",
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 52,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed52.pt",
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 62,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed62.pt",
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+    }
+  ],
+  "tasks": [
+    {
+      "task": "2s_to_2s",
+      "samples": 1855,
+      "tracks": 46,
+      "future_length": 20,
+      "seeds": [
+        42,
+        52,
+        62
+      ],
+      "inverse_convention": "R_transposed_sign",
+      "inverse_proof_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\TABLE_2s_to_2s_inverse_convention_proof.csv",
+      "model_forward_signatures": [
+        {
+          "seed": 42,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        },
+        {
+          "seed": 52,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        },
+        {
+          "seed": 62,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        }
+      ],
+      "seed_records": [
+        {
+          "seed": 42,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed42.pt",
+          "checkpoint_sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+          "prediction_canonical_abs_max": 0.8512592315673828
+        },
+        {
+          "seed": 52,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed52.pt",
+          "checkpoint_sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+          "prediction_canonical_abs_max": 1.009207844734192
+        },
+        {
+          "seed": 62,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed62.pt",
+          "checkpoint_sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+          "prediction_canonical_abs_max": 0.9546677470207214
+        }
+      ],
+      "metrics_anchor_normalized": {
+        "ade_instance_mean": 0.03946084682560921,
+        "fde_instance_mean": 0.08373834907564966,
+        "ade_instance_median": 0.03685355907322278,
+        "fde_instance_median": 0.08324834603250877,
+        "ade_p95": 0.0698023670658173,
+        "fde_p95": 0.16766232356666586,
+        "max_radial_error": 0.21975010969886416,
+        "ade_track_macro": 0.040104960933006244,
+        "fde_track_macro": 0.08713575691303455
+      },
+      "ensemble_spread_note": "Diagnostic spread across the three frozen seeds; not a calibrated probability.",
+      "prediction_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\2s_to_2s_BAMBI_Flight6_secondary_frozen_ensemble_predictions_LOCKED.npz",
+      "prediction_npz_sha256": "67f66fadb50975ea567827ae3eee024397e4dfbb639a446f831ef6029720d2eb",
+      "metadata_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\2s_to_2s_BAMBI_Flight6_secondary_frozen_inference_metadata_LOCKED.csv",
+      "metadata_csv_sha256": "bfbcb717c64253d07a5fd66caffec8efffa7b9431ada4dd75b01ada347528eae",
+      "locked_input_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_canonical_lock_v1\\2s_to_2s_BAMBI_Flight6_anchor_normalized_canonical_LOCKED.npz",
+      "locked_input_npz_sha256": "d79bbf83f379a1e21dc3a8445ef29dba1a3b5eff993d03ac4abbf6c27b141fa9"
+    },
+    {
+      "task": "2s_to_5s",
+      "samples": 623,
+      "tracks": 28,
+      "future_length": 50,
+      "seeds": [
+        42,
+        52,
+        62
+      ],
+      "inverse_convention": "R_transposed_sign",
+      "inverse_proof_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\TABLE_2s_to_5s_inverse_convention_proof.csv",
+      "model_forward_signatures": [
+        {
+          "seed": 42,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        },
+        {
+          "seed": 52,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        },
+        {
+          "seed": 62,
+          "model_type": "_k3c15_safe_frozen_loader_.TrajectoryTransformer",
+          "forward_signature": "(history)"
+        }
+      ],
+      "seed_records": [
+        {
+          "seed": 42,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed42.pt",
+          "checkpoint_sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+          "prediction_canonical_abs_max": 0.38678622245788574
+        },
+        {
+          "seed": 52,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed52.pt",
+          "checkpoint_sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+          "prediction_canonical_abs_max": 0.37209030985832214
+        },
+        {
+          "seed": 62,
+          "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed62.pt",
+          "checkpoint_sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a",
+          "prediction_canonical_abs_max": 0.3173627555370331
+        }
+      ],
+      "metrics_anchor_normalized": {
+        "ade_instance_mean": 0.19939900808896674,
+        "fde_instance_mean": 0.41571594954709107,
+        "ade_instance_median": 0.17966854960331935,
+        "fde_instance_median": 0.38971316126607475,
+        "ade_p95": 0.2952150768284732,
+        "fde_p95": 0.610106520834074,
+        "max_radial_error": 0.7688146884268741,
+        "ade_track_macro": 0.20194090644172724,
+        "fde_track_macro": 0.4238238620142128
+      },
+      "ensemble_spread_note": "Diagnostic spread across the three frozen seeds; not a calibrated probability.",
+      "prediction_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\2s_to_5s_BAMBI_Flight6_secondary_frozen_ensemble_predictions_LOCKED.npz",
+      "prediction_npz_sha256": "9508e7052c6f91fdb55db9b3f65294013ececa4841f334342e68e9eeade109a8",
+      "metadata_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\2s_to_5s_BAMBI_Flight6_secondary_frozen_inference_metadata_LOCKED.csv",
+      "metadata_csv_sha256": "fdde84b0ccb1ee8f3bb77a6f1e1920b0fff12779e844107ec3316bc57124b0a7",
+      "locked_input_npz": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\anchor_normalized_canonical_lock_v1\\2s_to_5s_BAMBI_Flight6_anchor_normalized_canonical_LOCKED.npz",
+      "locked_input_npz_sha256": "4cbcffe0b10f23aba7f47e5a06d8222f077e9602277032266282d925230caff5"
+    }
+  ],
+  "immutable_constraints_respected": {
+    "model_retraining": false,
+    "model_substitution": false,
+    "bambi_q_recalibration": false,
+    "bambi_threshold_tuning": false,
+    "step7_metrics_generated": false
+  },
+  "nonclaims": [
+    "This is not a new untouched confirmatory uncertainty holdout.",
+    "No conformal coverage result is produced in K3C15.",
+    "No Step7 geofence or alarm result is produced in K3C15.",
+    "Ensemble spread is not interpreted as calibrated probability."
+  ]
+}

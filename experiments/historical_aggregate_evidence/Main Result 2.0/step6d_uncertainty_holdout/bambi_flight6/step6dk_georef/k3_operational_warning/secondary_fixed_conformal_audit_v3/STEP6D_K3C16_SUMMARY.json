@@ -1,0 +1,75 @@
+{
+  "step": "STEP_6D_K3C16_V3_FIXED_STEP6C_CONFORMAL_TRANSFER_AUDIT_STEP18_COMPATIBLE_BAMBI",
+  "status": "FIXED_CONFORMAL_TRANSFER_AUDIT_COMPLETE_NO_RECALIBRATION_READY_FOR_FROZEN_STEP7_EVALUATION",
+  "analysis_role": "Secondary frozen operational-transfer uncertainty audit. Not a new pristine confirmatory holdout.",
+  "k3c15_prediction_manifest": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_frozen_inference_v2\\STEP6D_K3C15_SECONDARY_FROZEN_INFERENCE_LOCK.json",
+  "k3c15_prediction_manifest_sha256": "06a863cf9d86d1cf9faa3416d7fbfe41f0eadcb3d9ffba25845e7cf801a65c33",
+  "fixed_q_source_directory": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_fixed_conformal\\k3b1_v2_fixed_no_recalibration_animal_track_unit",
+  "fixed_q_values": [
+    {
+      "task": "2s_to_2s",
+      "alpha": 0.1,
+      "target_coverage": 0.9,
+      "q": 2.158767888280567,
+      "audited_expected_reference": 2.158767888280567,
+      "source_file": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_fixed_conformal\\k3b1_v2_fixed_no_recalibration_animal_track_unit\\TABLE_step6dk3b1v2_fixed_bambi_primary_coverage.csv",
+      "source_sha256": "f20c2b7c3d8331ac44b9e4cefd1427c53c1e33e7e86e3eefe5ca509d54ff8864",
+      "source_location": "row=0, column=normalized_track_simultaneous_radius",
+      "raw_value": "2.158767888280567",
+      "verification_abs_diff": 0.0,
+      "recalibrated_on_bambi": false
+    },
+    {
+      "task": "2s_to_2s",
+      "alpha": 0.05,
+      "target_coverage": 0.95,
+      "q": 2.560772554862189,
+      "audited_expected_reference": 2.560772554862189,
+      "source_file": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_fixed_conformal\\k3b1_v2_fixed_no_recalibration_animal_track_unit\\TABLE_step6dk3b1v2_fixed_bambi_primary_coverage.csv",
+      "source_sha256": "f20c2b7c3d8331ac44b9e4cefd1427c53c1e33e7e86e3eefe5ca509d54ff8864",
+      "source_location": "row=1, column=normalized_track_simultaneous_radius",
+      "raw_value": "2.560772554862189",
+      "verification_abs_diff": 0.0,
+      "recalibrated_on_bambi": false
+    },
+    {
+      "task": "2s_to_5s",
+      "alpha": 0.1,
+      "target_coverage": 0.9,
+      "q": 1.975129668255982,
+      "audited_expected_reference": 1.975129668255982,
+      "source_file": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_fixed_conformal\\k3b1_v2_fixed_no_recalibration_animal_track_unit\\TABLE_step6dk3b1v2_fixed_bambi_primary_coverage.csv",
+      "source_sha256": "f20c2b7c3d8331ac44b9e4cefd1427c53c1e33e7e86e3eefe5ca509d54ff8864",
+      "source_location": "row=2, column=normalized_track_simultaneous_radius",
+      "raw_value": "1.975129668255982",
+      "verification_abs_diff": 0.0,
+      "recalibrated_on_bambi": false
+    },
+    {
+      "task": "2s_to_5s",
+      "alpha": 0.05,
+      "target_coverage": 0.95,
+      "q": 2.950976253259077,
+      "audited_expected_reference": 2.950976253,
+      "source_file": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_fixed_conformal\\k3b1_v2_fixed_no_recalibration_animal_track_unit\\TABLE_step6dk3b1v2_fixed_bambi_primary_coverage.csv",
+      "source_sha256": "f20c2b7c3d8331ac44b9e4cefd1427c53c1e33e7e86e3eefe5ca509d54ff8864",
+      "source_location": "row=3, column=normalized_track_simultaneous_radius",
+      "raw_value": "2.950976253259077",
+      "verification_abs_diff": 2.5907720413442803e-10,
+      "recalibrated_on_bambi": false
+    }
+  ],
+  "summary_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_fixed_conformal_audit_v3\\TABLE_step6dk3c16_fixed_conformal_secondary_summary.csv",
+  "summary_csv_sha256": "a9fdb5e6b99df0980b6761895cfce336e70a80e7511cb216379be7e9592efd60",
+  "instance_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\secondary_fixed_conformal_audit_v3\\step6dk3c16_fixed_conformal_secondary_instances.csv",
+  "instance_csv_sha256": "b4c4e4301b54f02f5c0837d8f9501664da227eaffecf0aaa4b3364add18581f7",
+  "no_bambi_recalibration": true,
+  "no_q_tuning": true,
+  "no_step7_metric_generated": true,
+  "nonclaims": [
+    "This secondary representation has already been methodologically inspected during development.",
+    "Coverage here must not be described as a new untouched confirmatory uncertainty holdout.",
+    "No failed coverage result may be repaired by recalibrating q on BAMBI.",
+    "No Step7 warning/alarm result is produced in K3C16."
+  ]
+}

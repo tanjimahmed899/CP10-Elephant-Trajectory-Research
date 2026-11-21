@@ -1,0 +1,15 @@
+{
+  "step": "STEP_6D_K3C2_EXACT_STEP7B_V2_BASE_INSTANCE_RULE_EXTRACTION",
+  "step7b_source": "C:\\Users\\HP\\Downloads\\step7b_v2_response_aware_green_yellow_red.py",
+  "step7b_source_sha256": "a41f1cf5e9e0e26ae2111e5a121a43a76483489bea97815e4360924d6a4819b7",
+  "step7a_protocol_lock_sha256": "54f5d0dce3d299cb3713c3bd1ff2e386027cc87fdf8ce2a948b14d3b30e4807f",
+  "step7h_manifest_sha256": "ef346d16efbd972f4694beb688a252d680fe87e2935c184768bfbbebd1ff6eb0",
+  "statement_count": 85,
+  "top_level_assignment_count": 4,
+  "status": "EXACT_STEP7B_BASE_INSTANCE_RULE_EXTRACTED_READY_FOR_BAMBI_RECONSTRUCTION_DECISION",
+  "rules": [
+    "No BAMBI alarms are generated in K3C2.",
+    "No virtual-geofence definition, response-time assumption, conformal level, or persistence rule is modified.",
+    "The next step may reconstruct BAMBI Step7 base instances only if all required formulas and scenario parameters are source-confirmed."
+  ]
+}

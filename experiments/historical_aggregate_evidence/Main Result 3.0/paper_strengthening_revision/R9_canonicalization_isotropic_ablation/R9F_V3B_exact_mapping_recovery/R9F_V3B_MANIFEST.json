@@ -1,0 +1,21 @@
+{
+  "step": "R9F_V3B_EXACT_STEP2B_MAPPING_RECOVERY",
+  "created_utc": "2026-10-29T09:56:59.589232+00:00",
+  "status": "R9F_V3B_EXACT_STEP2B_MAPPING_RECOVERED_AND_LOCKED_READY_FOR_R9F_V3C_ISOTROPIC_WINDOW_BUILD",
+  "new_training": false,
+  "isotropic_windows_built": false,
+  "frozen_results_modified": false,
+  "step2b_script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_forecasting.py",
+  "step2b_script_sha256": "4da7ed8e5106998236f916b796e0fc8317ff7e1acf58a19fe7ef7d165e45510b",
+  "mapping_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3B_exact_mapping_recovery\\R9F_V3B_MAPPING_SUMMARY.csv",
+  "mapping_summary_sha256": "53db5d927c4e3b47e765812f7cabe9646e614de46635333895b4dbb1e77d7273",
+  "exact_core_sample_frame_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9F_V3B_exact_mapping_recovery\\R9F_V3B_EXACT_CORE_SAMPLE_FRAME_LOCK.csv",
+  "exact_core_sample_frame_lock_sha256": "2436d2566b3fabe5452c72a542982f5afce05113d7f1febada9aca43baf3ee06",
+  "filter": {
+    "accepted": 1,
+    "quality_tier": "core",
+    "split": "test_real"
+  },
+  "corrected_coordinate_slice": ":2",
+  "downsample": "::3"
+}

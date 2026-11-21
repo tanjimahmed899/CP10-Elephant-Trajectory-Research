@@ -1,0 +1,30 @@
+{
+  "step": "R17A4C_DETECTOR_DATASET_LEAKAGE_AUDIT",
+  "created_utc": "2026-10-30T15:26:06.363314+00:00",
+  "status": "R17A4C_NO_EXACT_OR_FLAGGED_NEAR_DUPLICATE_OVERLAP_READY_FOR_R17B_FROZEN_ROBUSTNESS_PROTOCOL_LOCK",
+  "training": false,
+  "model_inference": false,
+  "frozen_coco_images": 453,
+  "reference_datasets": [
+    "E:\\AIUB\\Capstone Project\\capstone\\wildlife_project\\V5",
+    "E:\\AIUB\\Capstone Project\\capstone\\wildlife_project\\exported_dataset\\project-2-dataset-instance1786346684.783013-ultralytics-_yolo-_detection-10"
+  ],
+  "exact_overlap_method": "SHA256",
+  "near_duplicate_method": "64-bit dHash <= 4 AND 64-bit aHash <= 4 AND relative aspect-ratio difference <= 10%; candidates require manual review",
+  "exact_sha256_overlap_pairs": 0,
+  "perceptual_candidate_pairs": 0,
+  "ready_for_r17b": true,
+  "important_interpretation": [
+    "Exact SHA256 overlap is treated as confirmed duplicate leakage.",
+    "Perceptual-hash matches are screening candidates only and are not automatically labeled leakage.",
+    "This audit compares against the selected V5 detector dataset and the earlier exported detector dataset found in R17-A.",
+    "If exact overlap is found, affected external evaluation images must be excluded and the frozen subset regenerated before inference."
+  ],
+  "outputs": {
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4C_detector_dataset_leakage_audit\\R17A4C_LEAKAGE_AUDIT_SUMMARY.csv",
+    "reference_hashes": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4C_detector_dataset_leakage_audit\\R17A4C_REFERENCE_IMAGE_HASHES.csv",
+    "frozen_coco_hashes": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4C_detector_dataset_leakage_audit\\R17A4C_FROZEN_COCO_IMAGE_HASHES.csv",
+    "exact_overlaps": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4C_detector_dataset_leakage_audit\\R17A4C_EXACT_SHA256_OVERLAPS.csv",
+    "perceptual_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17A4C_detector_dataset_leakage_audit\\R17A4C_PERCEPTUAL_NEAR_DUPLICATE_CANDIDATES.csv"
+  }
+}

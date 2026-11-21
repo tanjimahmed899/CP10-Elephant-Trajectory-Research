@@ -1,0 +1,91 @@
+{
+  "step": "STEP_6D_K3A1_FROZEN_TRANSFORMER_MODEL_LOCK",
+  "status": "LOCKED_BEFORE_ANY_BAMBI_MODEL_PREDICTIONS",
+  "model_family": "Transformer",
+  "ensemble_rule": "mean prediction across 3 frozen seed models",
+  "tasks": [
+    "2s_to_2s",
+    "2s_to_5s"
+  ],
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "checkpoint_set": [
+    {
+      "task": "2s_to_2s",
+      "seed": 42,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed42.pt",
+      "filename": "2s_to_2s_Transformer_seed42.pt",
+      "size_bytes": 317196,
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"
+    },
+    {
+      "task": "2s_to_2s",
+      "seed": 52,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed52.pt",
+      "filename": "2s_to_2s_Transformer_seed52.pt",
+      "size_bytes": 317196,
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"
+    },
+    {
+      "task": "2s_to_2s",
+      "seed": 62,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_2s_Transformer_seed62.pt",
+      "filename": "2s_to_2s_Transformer_seed62.pt",
+      "size_bytes": 317196,
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 42,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed42.pt",
+      "filename": "2s_to_5s_Transformer_seed42.pt",
+      "size_bytes": 332812,
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 52,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed52.pt",
+      "filename": "2s_to_5s_Transformer_seed52.pt",
+      "size_bytes": 332812,
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"
+    },
+    {
+      "task": "2s_to_5s",
+      "seed": 62,
+      "checkpoint": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\transformer_results\\2s_to_5s_Transformer_seed62.pt",
+      "filename": "2s_to_5s_Transformer_seed62.pt",
+      "size_bytes": 332812,
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+    }
+  ],
+  "exact_transformer_checkpoint_set_match": true,
+  "primary_frozen_evaluator": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_birdsai_testreal_frozen_ensemble.py",
+  "primary_load_transformer": {
+    "line_start": 581,
+    "line_end": 742,
+    "source_sha256": "fe07dffc898648715219f50455a2ffec77f5b493de46d53c8dd18dd04666f8ad"
+  },
+  "secondary_transformer_evaluator": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\evaluate_transformer_ensemble.py",
+  "secondary_load_transformer": {
+    "line_start": 312,
+    "line_end": 500,
+    "source_sha256": "8855969c5f5a84a702d74cb006c31790aba7ba7f78d7ebd3059f82697c6f4342"
+  },
+  "canonical_dataset_lock": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k2b3_final_canonical\\STEP6D_K2B3_CANONICAL_DATASET_LOCK.json",
+  "canonical_dataset_lock_sha256": "86f8b5f6a37a9b3837c871c312c42feca220f6b1288c8555ca456261df77683a",
+  "source_mapping_complete_in_primary_evaluator": true,
+  "no_predictions_generated": true,
+  "no_retraining": true,
+  "no_recalibration": true,
+  "important_rules": [
+    "Only the six locked Transformer checkpoints may be used for BAMBI confirmatory inference.",
+    "Seeds are fixed at 42, 52, and 62 for both 2s->2s and 2s->5s tasks.",
+    "The ensemble prediction is the mean of the three frozen seed predictions.",
+    "No model selection, retraining, checkpoint substitution, or hyperparameter tuning may use BAMBI outcomes.",
+    "BAMBI Flight 6 remains a cross-species external confirmatory robustness/stress test."
+  ]
+}

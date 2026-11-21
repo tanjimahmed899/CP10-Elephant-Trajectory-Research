@@ -1,0 +1,21 @@
+{
+  "step": "R12A_DATASET_TRACK_VS_FORECAST_SEGMENT_PROVENANCE_AUDIT",
+  "created_utc": "2026-10-30T05:42:47.394408+00:00",
+  "status": "R12A_89_63_FORECAST_UNITS_CONFIRMED_BUT_45_TRACK_SOURCE_NOT_YET_UNIQUELY_IDENTIFIED_REVIEW_CANDIDATES",
+  "training": false,
+  "inference": false,
+  "known_dataset_level_testreal_tracks": 45,
+  "forecast_counts_confirmed": true,
+  "authoritative_45_pair_candidate_count": 0,
+  "scientific_guardrail": "Do not call the 89/63 forecast units 'dataset tracks' until an exact mapping to original source-track identities proves equivalence. Use 'forecastable segments/tracklets' provisionally.",
+  "outputs": {
+    "forecast_metadata_accounting": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_FORECAST_METADATA_ACCOUNTING.csv",
+    "forecast_units_per_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_FORECAST_UNITS_PER_SOURCE.csv",
+    "forecast_unit_sample_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_FORECAST_UNIT_SAMPLE_COUNTS.csv",
+    "corrected_csv_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_CORRECTED_TRAJECTORY_CSV_INVENTORY.csv",
+    "ranked_original_track_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_RANKED_ORIGINAL_TRACK_SOURCE_CANDIDATES.csv",
+    "candidate_source_track_pair_counts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_CANDIDATE_SOURCE_TRACK_PAIR_COUNTS.csv",
+    "build_logic_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_TRACK_SEGMENT_BUILD_LOGIC_EVIDENCE.csv",
+    "2s_vs_5s_overlap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12A_track_segment_provenance_audit\\R12A_2S_VS_5S_FORECAST_UNIT_OVERLAP.csv"
+  }
+}

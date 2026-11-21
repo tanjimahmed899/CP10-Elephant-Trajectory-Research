@@ -1,0 +1,30 @@
+{
+  "step": "R11C_TESTREAL_FORECAST_ERROR_VS_EMPIRICAL_GEOMETRIC_RESIDUAL_FLOOR",
+  "created_utc": "2026-10-30T05:33:13.992848+00:00",
+  "status": "R11C_TESTREAL_FORECAST_ERROR_RELATIVE_TO_EMPIRICAL_RESIDUAL_FLOOR_QUANTIFIED_READY_FOR_R11D_NOISE_FLOOR_CONCLUSION",
+  "training": false,
+  "new_inference": false,
+  "F50_px": 0.2032955537988646,
+  "F95_px": 1.5533470192988588,
+  "forecast_output": "frozen 3-seed Transformer prediction ensemble",
+  "primary_domain": "BIRDSAI TestReal",
+  "metric_space": "pixel",
+  "dependency_unit": "(sequence, segment_id)",
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed_base": 20261029,
+  "important_interpretation_rule": "Forecast error is compared to empirical residual references by ratios and fractions above the reference. Residuals are not subtracted from forecast error as if a known additive-noise variance model had been established.",
+  "claim_guardrails": [
+    "F50/F95 are BIRDSAI TestReal post-correction geometric residual references.",
+    "Do not call F50/F95 universal irreducible annotation noise.",
+    "Do not transfer these pixel references directly to Fresh WildBox or BAMBI.",
+    "A forecast error above F95 indicates it exceeds the measured residual envelope, not that all excess is model error."
+  ],
+  "outputs": {
+    "sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_TESTREAL_SAMPLE_ERROR_VS_RESIDUAL_FLOOR.csv",
+    "pointwise_errors": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_TESTREAL_POINTWISE_PIXEL_ERRORS.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_TESTREAL_NOISE_FLOOR_SUMMARY.csv",
+    "segment_cluster_bootstrap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_SEGMENT_CLUSTER_BOOTSTRAP.csv",
+    "leave_one_sequence_out": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_LEAVE_ONE_SEQUENCE_OUT_SENSITIVITY.csv",
+    "r10b_reproducibility": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11C_testreal_forecast_error_vs_geometric_residual_floor\\R11C_R10B_REPRODUCIBILITY_CHECK.csv"
+  }
+}

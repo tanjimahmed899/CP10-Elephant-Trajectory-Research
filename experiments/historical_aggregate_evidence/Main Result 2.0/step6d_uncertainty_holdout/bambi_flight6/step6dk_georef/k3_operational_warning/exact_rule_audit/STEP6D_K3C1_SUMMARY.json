@@ -1,0 +1,17 @@
+{
+  "step": "STEP_6D_K3C1_EXACT_FROZEN_STEP7H_RULE_INPUT_COMPATIBILITY_EXTRACTION",
+  "step7h_source": "C:\\Users\\HP\\Downloads\\step7h_final_response_aware_with_locked_persistence.py",
+  "step7h_source_sha256": "e259a5a6170d928fce34cd859d020744b182439254afe90ed24e7619c0db364e",
+  "step7_manifest_sha256": "ef346d16efbd972f4694beb688a252d680fe87e2935c184768bfbbebd1ff6eb0",
+  "step7a_protocol_lock_sha256": "54f5d0dce3d299cb3713c3bd1ff2e386027cc87fdf8ce2a948b14d3b30e4807f",
+  "relevant_statement_count": 46,
+  "literal_assignment_count": 2,
+  "status": "EXACT_STEP7H_RULE_EXTRACTED_READY_FOR_FINAL_BAMBI_COMPATIBILITY_DECISION",
+  "nonclaims": [
+    "No BAMBI Step7 warning evaluation is performed here.",
+    "No Step7H threshold, persistence rule, geofence definition, or response assumption is modified.",
+    "N=2 remains two consecutive available forecast windows, not seconds.",
+    "The virtual geofence remains a normalized/virtual scenario, not a real village/farm boundary.",
+    "Response thresholds remain assumed sensitivity-analysis values, not measured field response times."
+  ]
+}

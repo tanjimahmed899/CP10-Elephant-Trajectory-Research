@@ -1,0 +1,117 @@
+ELEPHANT TRAJECTORY FORECASTING — NON-LEARNING BASELINES
+==============================================================================
+
+Input: camera-corrected normalized x,y at 10 Hz.
+Observation history: 2 seconds.
+Constant Velocity velocity estimator: least-squares linear regression over the full 2-second observation history.
+Predictions are anchored at the last observed position.
+Metrics: ADE and FDE in camera-corrected normalized coordinate units.
+
+2s_to_2s | BIRDSAI_test | in_domain_test | ConstantVelocity
+Samples: 1053
+ADE mean: 0.020148
+FDE mean: 0.035185
+Track-macro ADE: 0.032541
+Track-macro FDE: 0.061584
+Source-macro ADE: 0.025201
+Source-macro FDE: 0.044633
+
+2s_to_2s | BIRDSAI_test | in_domain_test | Stationary
+Samples: 1053
+ADE mean: 0.020033
+FDE mean: 0.035129
+Track-macro ADE: 0.025868
+Track-macro FDE: 0.049196
+Source-macro ADE: 0.026099
+Source-macro FDE: 0.046733
+
+2s_to_2s | BIRDSAI_train | training | ConstantVelocity
+Samples: 531
+ADE mean: 0.021888
+FDE mean: 0.039291
+Track-macro ADE: 0.037509
+Track-macro FDE: 0.070659
+Source-macro ADE: 0.022178
+Source-macro FDE: 0.040762
+
+2s_to_2s | BIRDSAI_train | training | Stationary
+Samples: 531
+ADE mean: 0.016569
+FDE mean: 0.028938
+Track-macro ADE: 0.023067
+Track-macro FDE: 0.040920
+Source-macro ADE: 0.031840
+Source-macro FDE: 0.056794
+
+2s_to_2s | WildBox_external | external_test | ConstantVelocity
+Samples: 93
+ADE mean: 0.056044
+FDE mean: 0.099548
+Track-macro ADE: 0.057437
+Track-macro FDE: 0.104573
+Source-macro ADE: 0.049992
+Source-macro FDE: 0.090689
+
+2s_to_2s | WildBox_external | external_test | Stationary
+Samples: 93
+ADE mean: 0.061250
+FDE mean: 0.107532
+Track-macro ADE: 0.065919
+Track-macro FDE: 0.120204
+Source-macro ADE: 0.062367
+Source-macro FDE: 0.111327
+
+2s_to_5s | BIRDSAI_test | in_domain_test | ConstantVelocity
+Samples: 826
+ADE mean: 0.040174
+FDE mean: 0.079019
+Track-macro ADE: 0.082565
+Track-macro FDE: 0.184618
+Source-macro ADE: 0.063452
+Source-macro FDE: 0.120915
+
+2s_to_5s | BIRDSAI_test | in_domain_test | Stationary
+Samples: 826
+ADE mean: 0.039685
+FDE mean: 0.073737
+Track-macro ADE: 0.051472
+Track-macro FDE: 0.107747
+Source-macro ADE: 0.065177
+Source-macro FDE: 0.116539
+
+2s_to_5s | BIRDSAI_train | training | ConstantVelocity
+Samples: 382
+ADE mean: 0.032445
+FDE mean: 0.065287
+Track-macro ADE: 0.061235
+Track-macro FDE: 0.123682
+Source-macro ADE: 0.041703
+Source-macro FDE: 0.082312
+
+2s_to_5s | BIRDSAI_train | training | Stationary
+Samples: 382
+ADE mean: 0.027554
+FDE mean: 0.052580
+Track-macro ADE: 0.036166
+Track-macro FDE: 0.069679
+Source-macro ADE: 0.021441
+Source-macro FDE: 0.034075
+
+2s_to_5s | WildBox_external | external_test | ConstantVelocity
+Samples: 60
+ADE mean: 0.111567
+FDE mean: 0.200364
+Track-macro ADE: 0.134637
+Track-macro FDE: 0.241422
+Source-macro ADE: 0.134762
+Source-macro FDE: 0.250682
+
+2s_to_5s | WildBox_external | external_test | Stationary
+Samples: 60
+ADE mean: 0.105127
+FDE mean: 0.191131
+Track-macro ADE: 0.154882
+Track-macro FDE: 0.291326
+Source-macro ADE: 0.131546
+Source-macro FDE: 0.245651
+

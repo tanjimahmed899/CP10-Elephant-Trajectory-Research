@@ -1,0 +1,23 @@
+WILDBOX ELEPHANT VIDEO ZIP AUDIT
+======================================================================
+
+Archive: DJI_20240119152552_0006_V.zip
+Archive files: 927
+Image files: 459
+JSON files: 9
+TXT files: 459
+
+Frame folders: 3
+Total observed image frames: 459
+
+Tracking-summary files: 3
+Possible track IDs discovered from tracking summaries: 0
+Camera metadata JSON files: 3
+FPS candidates found: []
+
+Label files detected: 459
+Non-empty label files: 459
+Total label rows: 459
+
+Label class/token counts:
+elephant: 459

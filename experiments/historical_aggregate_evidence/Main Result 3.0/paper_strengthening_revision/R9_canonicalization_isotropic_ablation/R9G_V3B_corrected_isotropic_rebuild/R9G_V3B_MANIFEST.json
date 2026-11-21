@@ -1,0 +1,41 @@
+{
+  "step": "R9G_V3B_VALID_CAMERA_CORRECTED_ISOTROPIC_REBUILD",
+  "created_utc": "2026-10-29T10:28:27.260514+00:00",
+  "status": "R9G_V3B_VALID_CAMERA_CORRECTED_ISOTROPIC_BRANCH_REBUILT_READY_FOR_R9G_V3C_CLEAN_BASELINE_COMPARISON",
+  "new_training": false,
+  "ego_motion_rerun": false,
+  "frozen_results_modified": false,
+  "source_of_corrected_geometry": "Frozen corrected NPZ first two channels",
+  "scientific_control": "Both anisotropic and isotropic branches now represent the same camera-corrected coordinates; only the normalization geometry differs.",
+  "sequence_geometry_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3B_corrected_isotropic_rebuild\\R9G_V3B_SEQUENCE_GEOMETRY_LOCK.csv",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3B_corrected_isotropic_rebuild\\R9G_V3B_REBUILD_SUMMARY.csv",
+  "roundtrip_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3B_corrected_isotropic_rebuild\\R9G_V3B_ROUNDTRIP_AUDIT.csv",
+  "provenance": {
+    "2s_to_2s": {
+      "frozen_corrected_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_2s.csv",
+      "frozen_corrected_metadata_sha256": "8aed9b808184884e96aa843130bbd02434a093506eba8001b94b6a20f3b2a765",
+      "frozen_corrected_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_2s.npz",
+      "frozen_corrected_npz_sha256": "8b0ffb1bc6f5528111874556f42e16205ff74c8db17ce67547cc0816d4aeff18",
+      "formula": {
+        "corrected_pixel_x": "x_corr_px = x_corr_aniso * W",
+        "corrected_pixel_y": "y_corr_px = y_corr_aniso * H",
+        "common_scale": "S = max(W,H)",
+        "corrected_isotropic_x": "x_corr_iso = x_corr_px / S",
+        "corrected_isotropic_y": "y_corr_iso = y_corr_px / S"
+      }
+    },
+    "2s_to_5s": {
+      "frozen_corrected_metadata": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_windows_2s_to_5s.csv",
+      "frozen_corrected_metadata_sha256": "f13a9b73ab55f1fc5811883dfcf97ffe265c88c4f5a1fc9d3c86cecdfd65ad68",
+      "frozen_corrected_npz": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\corrected_trajectory_dataset\\corrected_2s_to_5s.npz",
+      "frozen_corrected_npz_sha256": "db52df2fd07ebc84de0c7e2a718395878181e976e505d81176ac4d8e6e89fe86",
+      "formula": {
+        "corrected_pixel_x": "x_corr_px = x_corr_aniso * W",
+        "corrected_pixel_y": "y_corr_px = y_corr_aniso * H",
+        "common_scale": "S = max(W,H)",
+        "corrected_isotropic_x": "x_corr_iso = x_corr_px / S",
+        "corrected_isotropic_y": "y_corr_iso = y_corr_px / S"
+      }
+    }
+  }
+}

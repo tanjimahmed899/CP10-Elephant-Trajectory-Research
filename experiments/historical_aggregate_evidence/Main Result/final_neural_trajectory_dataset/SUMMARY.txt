@@ -1,0 +1,33 @@
+FINAL NEURAL TRAJECTORY DATASET
+============================================================================
+
+Input representation:
+1. Camera-motion corrected normalized x,y
+2. 10 Hz sampling
+3. Last observed point translated to origin
+4. Recent heading aligned to +X
+5. Divided by observed history path length
+6. Scale floor = TrainReal 5th percentile of history path length
+
+Important:
+- Scale floor derived from BIRDSAI TrainReal ONLY.
+- Validation split is TRACK-DISJOINT.
+- BIRDSAI TestReal remains untouched.
+- WildBox remains untouched external test.
+- Final ADE/FDE must be evaluated after inverse transform in original corrected normalized x,y.
+- Training sample weights equalize total contribution of each training track.
+
+2s_to_2s
+Training-derived scale floor: 0.06820264
+  BIRDSAI | neural_train | samples=434, tracks=49, sources=3
+  BIRDSAI | neural_validation | samples=97, tracks=13, sources=3
+  BIRDSAI | untouched_test | samples=1053, tracks=89, sources=6
+  WildBox | external_test | samples=93, tracks=11, sources=3
+
+2s_to_5s
+Training-derived scale floor: 0.06732639
+  BIRDSAI | neural_train | samples=294, tracks=27, sources=2
+  BIRDSAI | neural_validation | samples=88, tracks=7, sources=2
+  BIRDSAI | untouched_test | samples=826, tracks=63, sources=5
+  WildBox | external_test | samples=60, tracks=9, sources=3
+

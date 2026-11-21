@@ -1,0 +1,30 @@
+{
+  "step": "R10B_BIRDSAI_TESTREAL_FROZEN_TRANSFORMER_ENSEMBLE_VALUE_ANALYSIS",
+  "created_utc": "2026-10-30T05:01:48.499300+00:00",
+  "status": "R10B_TESTREAL_TRANSFORMER_ENSEMBLE_VALUE_QUANTIFIED_READY_FOR_R10C_FRESH_WILDBOX_TRANSFORMER_REINFERENCE",
+  "training": false,
+  "new_model_inference": false,
+  "representation": "original frozen anisotropic primary pipeline",
+  "ensemble": "arithmetic mean of prediction_abs across Transformer seeds 42,52,62",
+  "primary_metric_space": "pixel",
+  "primary_comparators": [
+    "per-sample mean individual-seed error",
+    "validation-selected single seed using best_validation_track_macro_ADE only"
+  ],
+  "test_selected_best_seed_used_as_primary_comparator": false,
+  "dependency_unit": "(sequence, segment_id)",
+  "within_segment_reduction": "median paired difference",
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed_base": 20261029,
+  "delta_definition": "ensemble - comparator; negative favors ensemble",
+  "outputs": {
+    "sample_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_TESTREAL_ENSEMBLE_SAMPLE_METRICS.csv",
+    "individual_seed_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_TESTREAL_INDIVIDUAL_SEED_METRICS.csv",
+    "validation_seed_selection_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_VALIDATION_SEED_SELECTION_LOCK.csv",
+    "pairwise_seed_diversity": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_PAIRWISE_SEED_DIVERSITY.csv",
+    "paired_bootstrap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_PAIRED_SEGMENT_CLUSTER_BOOTSTRAP.csv",
+    "diversity_gain_association": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_DIVERSITY_GAIN_ASSOCIATION.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_TESTREAL_ENSEMBLE_SUMMARY.csv",
+    "provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10B_testreal_transformer_ensemble_value\\R10B_PROVENANCE.csv"
+  }
+}

@@ -1,0 +1,89 @@
+STEP 6D-K3A2-V4 — FIRST LOCKED BAMBI FROZEN-ENSEMBLE INFERENCE
+========================================================================================
+
+TASK RESULTS
+------------
+{
+  "2s_to_2s": {
+    "windows": 1855,
+    "tracks": 46,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "ensemble_rule": "arithmetic mean of the three frozen canonical predictions",
+    "window_ADE_m": 1.8457765220521392,
+    "window_FDE_m": 4.317465910805103,
+    "track_macro_ADE_m": 1.8432696102177568,
+    "track_macro_FDE_m": 4.2853397398857815,
+    "median_window_ADE_m": 1.6855249019717955,
+    "median_window_FDE_m": 3.9873188028645172,
+    "p95_window_ADE_m": 3.0181163210146478,
+    "p95_window_FDE_m": 7.198798541299553,
+    "max_window_max_radial_error_m": 8.6168623574471,
+    "seed_metrics": {
+      "42": {
+        "window_ADE_m": 1.980790324679172,
+        "window_FDE_m": 4.458948719704251,
+        "track_macro_ADE_m": 1.9771336540424858,
+        "track_macro_FDE_m": 4.416605245733677
+      },
+      "52": {
+        "window_ADE_m": 1.866435760714199,
+        "window_FDE_m": 4.309576971244146,
+        "track_macro_ADE_m": 1.8577055843796908,
+        "track_macro_FDE_m": 4.262348591963447
+      },
+      "62": {
+        "window_ADE_m": 1.8155870119752089,
+        "window_FDE_m": 4.231477963130605,
+        "track_macro_ADE_m": 1.8243943546962793,
+        "track_macro_FDE_m": 4.221358934594442
+      }
+    }
+  },
+  "2s_to_5s": {
+    "windows": 623,
+    "tracks": 28,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "ensemble_rule": "arithmetic mean of the three frozen canonical predictions",
+    "window_ADE_m": 9.02299069822142,
+    "window_FDE_m": 17.9075024784744,
+    "track_macro_ADE_m": 9.021601179100905,
+    "track_macro_FDE_m": 18.084572326922338,
+    "median_window_ADE_m": 8.661439851383241,
+    "median_window_FDE_m": 16.911373942483937,
+    "p95_window_ADE_m": 12.429031235604672,
+    "p95_window_FDE_m": 25.48582129465687,
+    "max_window_max_radial_error_m": 30.852060697663163,
+    "seed_metrics": {
+      "42": {
+        "window_ADE_m": 8.706617100294913,
+        "window_FDE_m": 17.670702944156446,
+        "track_macro_ADE_m": 8.730096431581712,
+        "track_macro_FDE_m": 17.906400160201247
+      },
+      "52": {
+        "window_ADE_m": 8.814458842457334,
+        "window_FDE_m": 17.504973196448255,
+        "track_macro_ADE_m": 8.827951649818283,
+        "track_macro_FDE_m": 17.714188773649457
+      },
+      "62": {
+        "window_ADE_m": 9.57743444847766,
+        "window_FDE_m": 18.565738511869338,
+        "track_macro_ADE_m": 9.539972781928563,
+        "track_macro_FDE_m": 18.654554214736503
+      }
+    }
+  }
+}
+
+STATUS
+------
+FIRST_LOCKED_BAMBI_FORECAST_INFERENCE_COMPLETE_READY_FOR_FIXED_CONFORMAL_EVALUATION

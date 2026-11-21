@@ -1,0 +1,25 @@
+{
+  "step": "R13C_FROZEN_END_TO_END_PROTOCOL_LOCK",
+  "created_utc": "2026-10-30T11:08:13.132815+00:00",
+  "status": "R13C_FROZEN_END_TO_END_PROTOCOL_LOCKED_NO_TEST_TUNING_READY_FOR_R13D_DETECTOR_TRACKER_EXECUTION",
+  "training": false,
+  "detector_inference": false,
+  "tracker_inference": false,
+  "original_files_modified": false,
+  "protocol_sha256": "05e7be68961139834373fef3d28dcafab7364937ab3cfb8c9f6d679d751cf5ab",
+  "detector_checkpoint": "E:\\AIUB\\Capstone Project\\Final 1.0\\Elephant Detection.v2-resized640.yolov8 (2)\\Elephant Detection.v2-resized640.yolov8\\runs\\detect\\elephant_final_clean\\weights\\best.pt",
+  "detector_checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "sequence_count": 6,
+  "frame_mapping_pass": true,
+  "primary_tracker": "ByteTrack",
+  "sensitivity_tracker": "BoT-SORT",
+  "testreal_parameter_tuning_allowed": false,
+  "outputs": {
+    "protocol": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\R13C_FROZEN_PROTOCOL.json",
+    "sequence_frame_mapping": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\R13C_SEQUENCE_FRAME_MAPPING_LOCK.csv",
+    "gt_policy_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\R13C_TRACKING_GT_POLICY_AUDIT.csv",
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\R13C_CLAIM_AND_PROTOCOL_MATRIX.csv",
+    "bytetrack_frozen_yaml": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\bytetrack_FROZEN.yaml",
+    "botsort_frozen_yaml": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13C_frozen_end_to_end_protocol_lock\\botsort_FROZEN.yaml"
+  }
+}

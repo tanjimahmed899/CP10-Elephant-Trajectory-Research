@@ -1,0 +1,16 @@
+{
+  "step": "R9G_V2_CORRECTED_COORDINATE_SOURCE_AUDIT",
+  "created_utc": "2026-10-29T10:06:53.573925+00:00",
+  "status": "R9G_V2_CORRECTED_COORDINATE_SOURCE_AUDIT_COMPLETE_READY_FOR_R9G_V3_VALID_ISOTROPIC_REBUILD",
+  "r9g_previous_comparison_valid_for_claim": false,
+  "reason_previous_comparison_invalid": "Previous R9G compared camera-corrected anisotropic trajectories against isotropic windows rebuilt from cleaned_track_points. That mixes ego-motion correction/source differences with normalization.",
+  "new_training": false,
+  "bootstrap_run": false,
+  "frozen_results_modified": false,
+  "script_candidate_count": 15,
+  "corrected_point_table_candidate_count": 2,
+  "script_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V2_corrected_coordinate_source_audit\\R9G_V2_CORRECTED_BUILD_SCRIPT_AUDIT.csv",
+  "metadata_schema_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V2_corrected_coordinate_source_audit\\R9G_V2_CORRECTED_METADATA_SCHEMA.csv",
+  "npz_feature_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V2_corrected_coordinate_source_audit\\R9G_V2_CORRECTED_NPZ_FEATURE_AUDIT.csv",
+  "point_table_candidates_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V2_corrected_coordinate_source_audit\\R9G_V2_CORRECTED_POINT_TABLE_CANDIDATES.csv"
+}

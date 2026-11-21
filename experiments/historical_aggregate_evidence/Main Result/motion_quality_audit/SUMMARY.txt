@@ -1,0 +1,94 @@
+MOTION QUALITY AUDIT
+=================================================================
+
+UNRELIABLE MOTION RUNS
+
+test_real 0000000055_0000000000
+Reliable: 99.63%
+Bad runs: 1
+Maximum bad run: 1 frames
+Bad runs >5 frames: 0
+
+test_real 0000000058_0000000000
+Reliable: 96.49%
+Bad runs: 16
+Maximum bad run: 4 frames
+Bad runs >5 frames: 0
+
+test_real 0000000349_0000000000
+Reliable: 96.43%
+Bad runs: 21
+Maximum bad run: 12 frames
+Bad runs >5 frames: 2
+
+test_real 0000000352_0000000000
+Reliable: 92.27%
+Bad runs: 122
+Maximum bad run: 6 frames
+Bad runs >5 frames: 2
+
+test_real 0000000353_0000000000
+Reliable: 99.31%
+Bad runs: 14
+Maximum bad run: 2 frames
+Bad runs >5 frames: 0
+
+test_real 0000000357_0000000000
+Reliable: 99.64%
+Bad runs: 1
+Maximum bad run: 1 frames
+Bad runs >5 frames: 0
+
+train_real 0000000010_0000000000
+Reliable: 99.72%
+Bad runs: 1
+Maximum bad run: 1 frames
+Bad runs >5 frames: 0
+
+train_real 0000000054_0000000000
+Reliable: 99.35%
+Bad runs: 2
+Maximum bad run: 1 frames
+Bad runs >5 frames: 0
+
+train_real 0000000056_0000000000
+Reliable: 99.38%
+Bad runs: 1
+Maximum bad run: 1 frames
+Bad runs >5 frames: 0
+
+train_real 0000000351_0000000000
+Reliable: 100.00%
+Bad runs: 0
+Maximum bad run: 0 frames
+Bad runs >5 frames: 0
+
+train_real 0000000367_0000000000
+Reliable: 79.38%
+Bad runs: 650
+Maximum bad run: 5 frames
+Bad runs >5 frames: 0
+
+
+FORECAST WINDOW QUALITY
+
+2s_to_2s train_real
+Total windows: 913
+Strict usable: 463 (50.71%)
+Moderate usable: 531 (58.16%)
+
+2s_to_2s test_real
+Total windows: 1070
+Strict usable: 1047 (97.85%)
+Moderate usable: 1054 (98.50%)
+
+2s_to_5s train_real
+Total windows: 684
+Strict usable: 338 (49.42%)
+Moderate usable: 382 (55.85%)
+
+2s_to_5s test_real
+Total windows: 827
+Strict usable: 806 (97.46%)
+Moderate usable: 827 (100.00%)
+

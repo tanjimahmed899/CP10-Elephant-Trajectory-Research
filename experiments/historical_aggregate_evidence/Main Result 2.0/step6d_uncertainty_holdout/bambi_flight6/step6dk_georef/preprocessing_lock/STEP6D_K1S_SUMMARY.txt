@@ -1,0 +1,38 @@
+STEP 6D-K1S — BREAKPOINT LOCK + INTERPOLATION-GAP FEASIBILITY AUDIT
+======================================================================================
+
+LOCKED GLOBAL BREAKPOINTS
+-------------------------
+before frame 1035
+before frame 3093
+
+OBSERVED GAP SUMMARY AFTER GLOBAL SEGMENTATION
+----------------------------------------------
+{
+  "observed_gaps": 3463,
+  "median_gap_frames": 2.0,
+  "p75_gap_frames": 5.0,
+  "p90_gap_frames": 10.0,
+  "p95_gap_frames": 10.0,
+  "p99_gap_frames": 20.0,
+  "max_gap_frames": 31,
+  "median_gap_sec": 0.06799983978271484,
+  "p90_gap_sec": 0.3399991989135742,
+  "p95_gap_sec": 0.3399991989135742,
+  "p99_gap_sec": 0.6799983978271484,
+  "max_gap_sec": 1.05399751663208
+}
+
+MAX-GAP FEASIBILITY
+-------------------
+ max_gap_sec  max_gap_frames_equivalent  blocks  unique_tracks_with_any_block  median_block_duration_sec  p90_block_duration_sec  max_block_duration_sec  eligible_blocks_2to2  eligible_tracks_2to2  potential_windows_2to2  eligible_blocks_2to5  eligible_tracks_2to5  potential_windows_2to5  fraction_observed_gaps_within_threshold
+        0.25                   7.352959     892                            57                   0.000000                0.166600                6.289985                    19                    16                     204                     0                     0                       0                                 0.768409
+        0.50                  14.705917     167                            57                   1.019998                7.799582               10.505975                    44                    41                    1322                    19                    19                     398                                 0.977765
+        0.75                  22.058876      92                            57                   4.300990               10.131976               10.709975                    49                    46                    1876                    28                    28                     635                                 0.999422
+        1.00                  29.411834      92                            57                   4.300990               10.131976               10.709975                    49                    46                    1876                    28                    28                     635                                 0.999422
+
+STATUS
+------
+GLOBAL_BREAKPOINTS_LOCKED_GAP_THRESHOLD_NOT_YET_SELECTED
+
+No interpolation, forecasting, conformal evaluation, or warning evaluation was run in K1S.

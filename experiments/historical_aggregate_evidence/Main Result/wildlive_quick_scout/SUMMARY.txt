@@ -1,0 +1,115 @@
+WILDLIVE QUICK LABEL SCOUT
+============================================================
+
+DJI_0207
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0119
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0204_video2
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0601_video2
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0601_video6
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0117_video4
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0117_video3
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0601_video4
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0601_video3
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_0117_video2
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_20230719145427_0002_V_video2
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_20230719145427_0002_V_video4
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_20230719145427_0002_V_video5
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+
+DJI_vlc-record-2025-01-03-14h37m50s-DJI_20240624153820_0001_V
+Success: 0
+Failed: 3
+Labels: 
+Elephant seen: 0
+Elephant boxes sampled: 0
+Elephant IDs sampled: 0
+

@@ -1,0 +1,17 @@
+{
+  "step": "R12E_V8_TRACE_CORE_10HZ_DATASET_GENERATOR",
+  "created_utc": "2026-10-30T06:46:36.870463+00:00",
+  "status": "R12E_V8_CORE_10HZ_WRITER_LOCATED_READY_FOR_R12E_V9_EXACT_FILTER_EXPRESSION_LOCK",
+  "training": false,
+  "inference": false,
+  "final_builder_is_filter_stage": false,
+  "core_filter_occurs_upstream": true,
+  "top_writer_source": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_final_neural_dataset.py",
+  "outputs": {
+    "ranked_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v8_trace_core_10hz_dataset_generator\\R12E_V8_RANKED_CORE_10HZ_PROVENANCE_SOURCES.csv",
+    "context_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v8_trace_core_10hz_dataset_generator\\R12E_V8_CORE_10HZ_CONTEXT_EVIDENCE.csv",
+    "writer_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v8_trace_core_10hz_dataset_generator\\R12E_V8_CORE_10HZ_WRITER_CANDIDATES.csv",
+    "writer_rule_lines": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v8_trace_core_10hz_dataset_generator\\R12E_V8_WRITER_CORE_FILTER_RULE_LINES.csv",
+    "top_writer_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v8_trace_core_10hz_dataset_generator\\R12E_V8_TOP_WRITER_LOCK.csv"
+  }
+}

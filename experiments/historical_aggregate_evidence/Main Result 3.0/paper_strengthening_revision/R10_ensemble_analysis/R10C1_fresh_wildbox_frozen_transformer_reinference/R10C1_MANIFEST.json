@@ -1,0 +1,28 @@
+{
+  "step": "R10C1_FRESH_WILDBOX_FROZEN_TRANSFORMER_REINFERENCE",
+  "created_utc": "2026-10-30T05:14:04.373833+00:00",
+  "status": "R10C1_FRESH_WILDBOX_6_FROZEN_TRANSFORMER_RUNS_COMPLETE_R2_ENSEMBLE_ALIGNED_WITH_SMALL_NUMERICAL_DIFFERENCE_READY_FOR_R10C2",
+  "runs": 6,
+  "training": false,
+  "tuning": false,
+  "recalibration": false,
+  "checkpoint_modification": false,
+  "representation": "original frozen anisotropic canonical representation",
+  "metric_space": "native anisotropic normalized coordinates; only within-representation comparisons are made",
+  "direct_original_evaluator": "train_transformer.py::evaluate",
+  "schema_adapter_used": false,
+  "fresh_sample_counts": {
+    "2s_to_2s": 865,
+    "2s_to_5s": 637
+  },
+  "r2_ensemble_sample_metrics_aligned": true,
+  "r2_ensemble_exact_within_1e_9": false,
+  "r2_max_abs_ADE_difference": 2.5457888019886354e-08,
+  "r2_max_abs_FDE_difference": 9.319059213197534e-08,
+  "outputs": {
+    "input_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C1_fresh_wildbox_frozen_transformer_reinference\\R10C1_FRESH_INPUT_LOCK.csv",
+    "seed_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C1_fresh_wildbox_frozen_transformer_reinference\\R10C1_FRESH_WILDBOX_SEED_LEVEL_METRICS.csv",
+    "ensemble_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C1_fresh_wildbox_frozen_transformer_reinference\\R10C1_FRESH_WILDBOX_TRANSFORMER_ENSEMBLE_METRICS.csv",
+    "r2_reproducibility_check": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R10_ensemble_analysis\\R10C1_fresh_wildbox_frozen_transformer_reinference\\R10C1_R2_ENSEMBLE_REPRODUCIBILITY_CHECK.csv"
+  }
+}

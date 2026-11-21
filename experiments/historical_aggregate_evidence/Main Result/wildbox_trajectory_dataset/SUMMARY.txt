@@ -1,0 +1,26 @@
+WILDBOX CAMERA-CORRECTED TRAJECTORY DATASET
+========================================================================
+
+Sampling frequency: 10 Hz
+Observation history: 2 s = 20 frames
+Forecast horizons: 2 s and 5 s
+Window stride: 1 s = 10 frames
+
+Camera correction:
+1. Track centroid camera -> world using inverse per-frame extrinsic.
+2. World point -> observation-start anchor camera.
+3. Anchor-camera 3D point projected with anchor intrinsic.
+4. Result normalized by anchor image width and height.
+
+2s_to_2s
+Total windows: 93
+  DJI_20240119152552_0006_V: 36 windows
+  DJI_20240626143832_0004_V: 10 windows
+  DJI_20260227084907_0004_V: 47 windows
+
+2s_to_5s
+Total windows: 60
+  DJI_20240119152552_0006_V: 28 windows
+  DJI_20240626143832_0004_V: 4 windows
+  DJI_20260227084907_0004_V: 28 windows
+

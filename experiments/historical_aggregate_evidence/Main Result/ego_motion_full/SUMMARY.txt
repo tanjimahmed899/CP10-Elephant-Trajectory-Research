@@ -1,0 +1,58 @@
+ROBUST EGO MOTION SUMMARY
+======================================================================
+
+test 0000000055_0000000000
+Pairs: 267
+Estimated: 267 (100.00%)
+Reliable: 266 (99.63%)
+
+test 0000000058_0000000000
+Pairs: 683
+Estimated: 683 (100.00%)
+Reliable: 659 (96.49%)
+
+test 0000000349_0000000000
+Pairs: 1455
+Estimated: 1455 (100.00%)
+Reliable: 1403 (96.43%)
+
+test 0000000352_0000000000
+Pairs: 3208
+Estimated: 3206 (99.94%)
+Reliable: 2960 (92.27%)
+
+test 0000000353_0000000000
+Pairs: 3192
+Estimated: 3192 (100.00%)
+Reliable: 3170 (99.31%)
+
+test 0000000357_0000000000
+Pairs: 274
+Estimated: 274 (100.00%)
+Reliable: 273 (99.64%)
+
+train 0000000010_0000000000
+Pairs: 353
+Estimated: 353 (100.00%)
+Reliable: 352 (99.72%)
+
+train 0000000054_0000000000
+Pairs: 308
+Estimated: 308 (100.00%)
+Reliable: 306 (99.35%)
+
+train 0000000056_0000000000
+Pairs: 162
+Estimated: 161 (99.38%)
+Reliable: 161 (99.38%)
+
+train 0000000351_0000000000
+Pairs: 141
+Estimated: 141 (100.00%)
+Reliable: 141 (100.00%)
+
+train 0000000367_0000000000
+Pairs: 5447
+Estimated: 5447 (100.00%)
+Reliable: 4324 (79.38%)
+

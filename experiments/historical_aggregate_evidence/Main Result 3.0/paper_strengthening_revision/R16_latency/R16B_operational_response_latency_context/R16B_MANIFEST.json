@@ -1,0 +1,20 @@
+{
+  "step": "R16B_OPERATIONAL_RESPONSE_LATENCY_CONTEXT",
+  "created_utc": "2026-10-30T13:28:51.686955+00:00",
+  "status": "R16_OPERATIONAL_LATENCY_CONTEXT_FULLY_LOCKED_COMPUTE_MEASURED_NONCOMPUTE_UNMEASURED_NO_2S_5S_RESPONSE_SUFFICIENCY_CLAIM_READY_FOR_R17_MIXED_SPECIES_ROBUSTNESS",
+  "training": false,
+  "new_inference": false,
+  "tuning": false,
+  "prediction_horizon_equals_response_time": false,
+  "human_response_measured": false,
+  "communication_latency_measured": false,
+  "drone_dispatch_or_intervention_latency_measured": false,
+  "operational_sufficiency_claim_allowed": false,
+  "cpu_10hz_realtime_demonstrated": false,
+  "outputs": {
+    "response_budget": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16B_operational_response_latency_context\\R16B_OPERATIONAL_RESPONSE_BUDGET.csv",
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16B_operational_response_latency_context\\R16B_OPERATIONAL_LATENCY_CLAIM_MATRIX.csv",
+    "latency_terms": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16B_operational_response_latency_context\\R16B_LATENCY_TERM_DEFINITION.csv",
+    "manuscript_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16B_operational_response_latency_context\\R16B_MANUSCRIPT_READY_OPERATIONAL_LATENCY_CONTEXT.txt"
+  }
+}

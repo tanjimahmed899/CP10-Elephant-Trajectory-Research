@@ -1,0 +1,29 @@
+{
+  "step": "STEP_6D_K3C7_V3_MACHINE_VERIFIED_OFFICIAL_BAMBI_FRAME_POSE_INDEX_PROOF",
+  "official_source": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\bambi\\georeference_mot17_tracks.py",
+  "official_source_sha256": "0275fc1b8b50403d5098a812cb6e17be0188abe82ca103239d725aad5cea299e",
+  "pose_json": "C:\\Users\\HP\\Downloads\\Dataset-main\\Dataset-main\\bambi_downloads\\6_matched_poses.json",
+  "world_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\step6dk_valid_world_trajectory_rows.csv",
+  "required_ast_proof_types": [
+    "get_camera_for_frame_call",
+    "mot_frame_parse",
+    "pose_list_subscript"
+  ],
+  "observed_proof_types": [
+    "get_camera_for_frame_call",
+    "mot_frame_parse",
+    "pose_list_subscript"
+  ],
+  "direct_zero_based_mapping_proven": true,
+  "full_world_frame_overlap": true,
+  "overlap": {
+    "pose_images": 11857,
+    "world_unique_frames": 382,
+    "world_frame_min": 847,
+    "world_frame_max": 5034,
+    "overlap_frames": 382,
+    "world_overlap_fraction": 1.0,
+    "missing_world_frames": []
+  },
+  "status": "OFFICIAL_BAMBI_ZERO_BASED_FRAME_POSE_MAPPING_PROVEN_FULL_WORLD_FRAME_OVERLAP_READY_FOR_NUMERIC_ANCHOR_REPROJECTION_TEST"
+}

@@ -1,0 +1,41 @@
+{
+  "step": "R8B_EXACT_EGO_MOTION_RESULT_EXTRACTION",
+  "created_utc": "2026-10-29T08:43:14.363963+00:00",
+  "status": "R8B_EXACT_EXISTING_EGO_MOTION_RESULTS_EXTRACTED_READY_FOR_R8C_CLAIM_LOCK",
+  "new_experiment": false,
+  "source_files": {
+    "residual_split": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2_ego_motion_validation\\heldout_background_residual_split_summary.csv",
+      "sha256": "2895080bf78d288f442ba52beb943989bfbb573bb92652c33f3a59a454512f74"
+    },
+    "residual_sequence": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2_ego_motion_validation\\heldout_background_residual_summary.csv",
+      "sha256": "922634c9d9d8470efb50f5cdf4b6f28c9db50d209ce4d8d6e5b54bb7a0306079"
+    },
+    "forecast_summary": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_baseline\\raw_vs_corrected_summary.csv",
+      "sha256": "8e0ec9cd88725264d06354e90c526ed3f588ea73584bbc613404b8f3d1291acc"
+    },
+    "forecast_sequence": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2b_raw_vs_corrected_baseline\\raw_vs_corrected_per_sequence.csv",
+      "sha256": "6aa0a4c2c255607efdd038df4b5b4b991d28b0c6f91cd4cd22078ec0659a4983"
+    },
+    "warning_impact": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2c_ego_motion_geofence_ablation\\ego_motion_warning_impact_summary.csv",
+      "sha256": "e5e67bd88d0ae28b2479b11c33ef31687ac02f949d57ab23908650146098093b"
+    },
+    "warning_summary": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2c_ego_motion_geofence_ablation\\raw_vs_corrected_geofence_summary.csv",
+      "sha256": "401214311e6fd7d39d45ed2e863006ba758e0ebe25aedb82be9cff1279a39c90"
+    },
+    "label_distortion": {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step2c_ego_motion_geofence_ablation\\raw_imageplane_label_distortion_audit.csv",
+      "sha256": "146f604344f7e225bc2d2e3597770913916d4bbe370ece9d793216b2dab25f59"
+    }
+  },
+  "residual_result_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_stationary_landmark_residual_results.csv",
+  "forecast_result_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_raw_vs_corrected_forecasting_results.csv",
+  "warning_result_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_raw_vs_corrected_warning_results.csv",
+  "label_distortion_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_raw_imageplane_label_distortion.csv",
+  "evidence_checks_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_evidence_sufficiency_checks.csv"
+}

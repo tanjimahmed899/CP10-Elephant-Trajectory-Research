@@ -1,0 +1,55 @@
+{
+  "step": "R2D_B2_TESTREAL_KALMAN_GRU_LSTM_SAMPLE_LEVEL_RECOMPUTATION",
+  "created_utc": "2026-10-29T06:26:16.473994+00:00",
+  "status": "R2D_B2_TESTREAL_KALMAN_GRU_LSTM_SAMPLE_METRICS_COMPLETE_REFERENCE_SANITY_PASS",
+  "retraining": false,
+  "fresh_recomputed": false,
+  "kalman_post_test_tuning": false,
+  "kalman_param_source": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2C_exact_kalman_param_lock\\R2D_B2C_LOCKED_KALMAN_PARAMS.csv",
+  "kalman_param_source_sha256": "940a873bf2a0a422e748d6aa858b14ccd06f9fdbac7323d1c327d9e066741015",
+  "gru_lstm_aggregation": "per-sample mean ADE/FDE across frozen seeds 42/52/62; not trajectory ensemble",
+  "train_script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\train_lstm_gru.py",
+  "train_script_sha256": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d",
+  "kalman_script": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\run_kalman_baseline.py",
+  "kalman_script_sha256": "f54b1eaf3087d5004449786ab11f5dc709504f66db475be806a5ece6a655e013",
+  "recurrent_safe_extraction": {
+    "selected_functions": [
+      "inverse_transform_batch",
+      "predict_model"
+    ],
+    "selected_classes": [
+      "RecurrentForecaster"
+    ],
+    "selected_assignments": [
+      "DEVICE",
+      "DROPOUT",
+      "HIDDEN_SIZE",
+      "NUM_LAYERS"
+    ],
+    "top_level_script_executed": false
+  },
+  "kalman_safe_extraction": {
+    "selected_functions": [
+      "initial_velocity",
+      "kalman_forecast",
+      "make_Q"
+    ],
+    "selected_classes": [],
+    "selected_assignments": [
+      "DT",
+      "F",
+      "FPS",
+      "H",
+      "I4"
+    ],
+    "top_level_script_executed": false
+  },
+  "sample_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_sample_metrics.csv",
+  "sample_metrics_sha256": "c95690def5f8d24365e12f185e4fadc86c53aacd468cb9931207ade5e2d6a6a1",
+  "summary_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_summary_metrics.csv",
+  "reference_sanity_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_reference_sanity_check.csv",
+  "seed_level_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_GRU_LSTM_seed_level_sample_metrics.csv",
+  "model_loading_audit_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_model_loading_audit.csv",
+  "input_provenance_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_input_provenance.csv",
+  "kalman_params_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R2_fair_forecasting\\R2D_B2_testreal_kalman_gru_lstm\\R2D_B2_locked_frozen_kalman_params_used.csv"
+}

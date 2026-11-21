@@ -1,0 +1,28 @@
+{
+  "step": "R12C_V2_CANONICAL_ID_TRACK_ELIGIBILITY_RESOLUTION",
+  "created_utc": "2026-10-30T05:57:28.807816+00:00",
+  "status": "R12C_V2_45_TOTAL_TRACKS_37_2S_ELIGIBLE_31_5S_ELIGIBLE_EXACTLY_RESOLVED_READY_FOR_R12D_SEGMENT_BUILD_RULE_LOCK",
+  "training": false,
+  "inference": false,
+  "data_modified": false,
+  "identity_normalization_only": true,
+  "canonical_object_id_rule": "numeric-looking IDs normalize to integer string form; e.g. 1.0 -> 1",
+  "total_testreal_tracks": 45,
+  "represented_2s_tracks": 37,
+  "represented_5s_tracks": 31,
+  "2s_and_5s_eligible_tracks": 31,
+  "2s_only_tracks": 6,
+  "no_valid_2s_tracks": 8,
+  "2s_forecast_segments": 89,
+  "5s_forecast_segments": 63,
+  "counts_exactly_match_expected_resolution": true,
+  "remaining_requirement": "Lock exact continuity/gap segmentation rule producing segment_id.",
+  "outputs": {
+    "authoritative_source_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_AUTHORITATIVE_45_TRACK_SOURCE_LOCK.csv",
+    "forecast_representation_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_FORECAST_REPRESENTATION_LOCK.csv",
+    "eligibility": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_TRACK_FORECAST_ELIGIBILITY.csv",
+    "eligibility_with_length_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_TRACK_ELIGIBILITY_WITH_LENGTH_EVIDENCE.csv",
+    "eligibility_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_ELIGIBILITY_CLASS_SUMMARY.csv",
+    "manuscript_ready_resolution": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12C_v2_resolve_45_total_tracks_with_canonical_id_mapping\\R12C_V2_MANUSCRIPT_READY_45_37_31_RESOLUTION.txt"
+  }
+}

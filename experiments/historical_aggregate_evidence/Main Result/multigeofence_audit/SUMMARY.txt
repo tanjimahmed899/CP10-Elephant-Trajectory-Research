@@ -1,0 +1,27 @@
+MULTI-GEOFENCE AUDIT
+=================================================================
+
+DATA: TrainReal CORE only
+Thresholds: 0.25, 0.50, 0.75
+Axes: x and y
+Directions: low and high
+Total fixed geofences: 12
+
+2s_to_2s
+Instances: 3186
+Positive: 107
+Negative: 3079
+Positive rate: 3.36%
+Unique positive histories: 100
+Positive source sequences: 3
+Median TTE: 0.633s
+
+2s_to_5s
+Instances: 2292
+Positive: 136
+Negative: 2156
+Positive rate: 5.93%
+Unique positive histories: 120
+Positive source sequences: 2
+Median TTE: 1.883s
+

@@ -1,0 +1,240 @@
+{
+  "step": "STEP_7A_RESPONSE_AWARE_WARNING_PROTOCOL_LOCK",
+  "performance_evaluated_in_this_step": false,
+  "bambi_confirmatory_coverage_available": false,
+  "scope": "Virtual-geofence response-aware simulation using the selected Step-6C track-level cross-fitted conformal method. This is not field validation and does not establish actual team response times.",
+  "primary_warning_logic": {
+    "GREEN": "Across the evaluated forecast interval, the calibrated uncertainty region remains outside the virtual geofence.",
+    "YELLOW": "The nominal predicted path remains outside the geofence but the calibrated uncertainty region intersects/touches the virtual geofence; or a nominal crossing is predicted after the assumed response-time threshold but within the forecast horizon.",
+    "RED": "The nominal predicted path is already inside the virtual geofence or is predicted to cross it within the assumed response-time threshold."
+  },
+  "secondary_conservative_logic": {
+    "GREEN": "The calibrated uncertainty region remains outside the virtual geofence over the horizon.",
+    "YELLOW": "The calibrated uncertainty region first intersects the geofence after the assumed response-time threshold.",
+    "RED": "The calibrated uncertainty region is already intersecting the geofence or first intersects within the assumed response-time threshold."
+  },
+  "conformal_levels": {
+    "primary": 0.9,
+    "secondary_sensitivity": 0.95
+  },
+  "locked_step6c_q_values": {
+    "2s_to_2s": {
+      "q90": 2.158768,
+      "q95": 2.560773,
+      "calibration_tracks": 62,
+      "calibration_coverage_90": 0.919355,
+      "calibration_coverage_95": 0.967742
+    },
+    "2s_to_5s": {
+      "q90": 1.97513,
+      "q95": 2.950976,
+      "calibration_tracks": 34,
+      "calibration_coverage_90": 0.941176,
+      "calibration_coverage_95": 1.0
+    }
+  },
+  "response_time_sensitivity_seconds": {
+    "2s_to_2s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "2s_to_5s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ]
+  },
+  "sampling_rate_hz": 10,
+  "evaluation_units": [
+    "window-level alarm state",
+    "track-macro alarm rates",
+    "actual-future crossing classification"
+  ],
+  "primary_metrics_planned": [
+    "Green/Yellow/Red rate",
+    "actual future crossing prevalence",
+    "Red sensitivity for actual crossings",
+    "Yellow-or-Red sensitivity for actual crossings",
+    "false Red rate among non-crossing windows",
+    "false Yellow-or-Red rate among non-crossing windows",
+    "track-macro versions",
+    "response-time sensitivity curves"
+  ],
+  "important_nonclaims": [
+    "2 s and 5 s forecast horizons are not measured team response times.",
+    "The virtual geofence is not yet a real village/farm boundary.",
+    "Step 7 is a simulation/decision-layer experiment, not field deployment.",
+    "Until BAMBI confirmatory uncertainty coverage is completed, Step-6C external coverage remains retrospective diagnostic evidence."
+  ],
+  "step6c_source_scripts": [
+    {
+      "path": "C:\\Users\\HP\\Downloads\\step6c_crossfit_conformal.py",
+      "sha256": "11915289be722d12035b37c641c0be3b16096d39810438d4e15bcdef695ebd0b",
+      "size_bytes": 88835
+    }
+  ],
+  "geofence_source_files": [
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\audit_multigeofence.py",
+      "suffix": ".py",
+      "size_bytes": 14439,
+      "sha256": "abda60686e9362539399473478f7aecc0ff6a383d5f9fc6f5491fcb9e2761246"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\audit_virtual_geofences.py",
+      "suffix": ".py",
+      "size_bytes": 12425,
+      "sha256": "579b6745cfa7ee08c5fc8a9804a4203f4bc07fa8611d241699d699b852a169d3"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18a_lock_geofence_protocol.py",
+      "suffix": ".py",
+      "size_bytes": 44053,
+      "sha256": "a949c40600b89b1531aba33d670f1202087e30082a12df17b7c5c340114857b8"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18b_evaluate_locked_geofence.py",
+      "suffix": ".py",
+      "size_bytes": 41782,
+      "sha256": "cf46cb83565251c7d9f40e47d7a21811dda546f3675898c2962093cd3402de33"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\multigeofence_audit\\multigeofence_train_core_instances.csv",
+      "suffix": ".csv",
+      "size_bytes": 968204,
+      "sha256": "23f774d59a88dc969bdc56fe392830e8a78aca2564391ef1291e2afaf373b456"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\multigeofence_audit\\overall_balance.csv",
+      "suffix": ".csv",
+      "size_bytes": 258,
+      "sha256": "453f7a3dd48383bdc122440f5d26b8b1099fa37a71cb7fa8c97542a60e7c6660"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\multigeofence_audit\\per_geofence_balance.csv",
+      "suffix": ".csv",
+      "size_bytes": 1295,
+      "sha256": "638ed1210e3f82748ce64ea400e03a994021f527b7cc92cdd3056d407744ee55"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\multigeofence_audit\\per_sequence_positive_balance.csv",
+      "suffix": ".csv",
+      "size_bytes": 308,
+      "sha256": "6dc36a84a7f07f6c3f3c8c00cc54b0092649e1cefda8276d5a5d21e297e81814"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\multigeofence_audit\\SUMMARY.txt",
+      "suffix": ".txt",
+      "size_bytes": 546,
+      "sha256": "1dee6617ef06908f0c88870cbba9e5ac466d692e10e125b563a8a572a5235be9"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_audit.csv",
+      "suffix": ".csv",
+      "size_bytes": 160,
+      "sha256": "13d0a00a71119ec15b32a5f725bd1a3e039004cb18e05f4d0fd90e2de519b33b"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_by_boundary.csv",
+      "suffix": ".csv",
+      "size_bytes": 2984,
+      "sha256": "8cf29409608a6d17ac8ad748dfa3a2aaf85dc517300a88be5c9f8ef869d12724"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_by_source.csv",
+      "suffix": ".csv",
+      "size_bytes": 987,
+      "sha256": "55378bbf9a1dff27113719ded16a059f184fa25f68a4bd1b7a60f56ac3b05692"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_geofence_instances.csv",
+      "suffix": ".csv",
+      "size_bytes": 242906,
+      "sha256": "65dd1b2b5f64802c144e64ce9e722c8765486e4a725a5feb17cc51a6b8af07c5"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18a_validation_summary.csv",
+      "suffix": ".csv",
+      "size_bytes": 714,
+      "sha256": "2b421a6578a1dfa5f7a05e5ef24ca5c633a8144e226bb41b7509e3d134fff684"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\STEP18_PROTOCOL_HASH.txt",
+      "suffix": ".txt",
+      "size_bytes": 66,
+      "sha256": "c027353e4006f64bdc697abea9ac2cda5b9ea87cecc26adccadf968960176898"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\STEP18_PROTOCOL_LOCKED.json",
+      "suffix": ".json",
+      "size_bytes": 1491,
+      "sha256": "12e7f67e5efb06a015452e81e277de7ebaded8b8fe0abd06c3176829ceb51662"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\STEP18_PROTOCOL_LOCKED.txt",
+      "suffix": ".txt",
+      "size_bytes": 11707,
+      "sha256": "be9371ed4ef9f555eef53e4e366f689b564f2a0699adf9cf92d21422806ced27"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step19_clustered_bootstrap\\step19_geofence_clustered_CI.csv",
+      "suffix": ".csv",
+      "size_bytes": 5158,
+      "sha256": "c35acfab59160b9c8c33d6ad4fe175f6f7d2acab73a03a5a6b1a7a86adfda8cc"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step19_clustered_bootstrap\\TABLE_geofence_95CI.csv",
+      "suffix": ".csv",
+      "size_bytes": 2697,
+      "sha256": "82f82a22a53b110440816b7ba9e3b0c831e439107cb1849be6a3314acce8700b"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_all_geofence_instances.csv",
+      "suffix": ".csv",
+      "size_bytes": 4707754,
+      "sha256": "08d75da57a9f2ff42a30b6a70a42382a784628aa933882528f0a55c3b28ce024"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_by_boundary.csv",
+      "suffix": ".csv",
+      "size_bytes": 12093,
+      "sha256": "1e4624dd5c2ad0cd2d4cb1c630b40f3a77c82574af2ac7723000a4a5219fee3e"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_by_source.csv",
+      "suffix": ".csv",
+      "size_bytes": 4647,
+      "sha256": "3f46a2859765e8f537b6bbcce7e8b5fe17c998a5eed1711b34d29596b1e73dd2"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_data_audit.csv",
+      "suffix": ".csv",
+      "size_bytes": 810,
+      "sha256": "658f4672197cb362585c53f6873fca906c3b305224f127382ccfe6e4b29efd46"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_overall_metrics.csv",
+      "suffix": ".csv",
+      "size_bytes": 1661,
+      "sha256": "c990437fe50942e61c65f3171c0b2d8903a444be1bd374b0de12f79553623af2"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\step18b_seed_vote_diagnostic.csv",
+      "suffix": ".csv",
+      "size_bytes": 1766,
+      "sha256": "0658e13db3d7fcd1530dea8e09f3f0170ef6cdc3c6539b7bfc489aeaf20a9925"
+    },
+    {
+      "path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\step18_geofence\\step18b_evaluation\\SUMMARY.txt",
+      "suffix": ".txt",
+      "size_bytes": 24781,
+      "sha256": "d6b33b060950e4ef60b81a842c9d08ca500a82924f2f414f14d4c556e326f320"
+    }
+  ]
+}

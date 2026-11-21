@@ -1,0 +1,44 @@
+STEP 6: SPLIT-CONFORMAL TRAJECTORY UNCERTAINTY
+==============================================================================
+
+Protocol:
+- Calibration uses ONLY the fixed BIRDSAI TrainReal validation split.
+- TestReal and Fresh WildBox are never used to choose conformal radii.
+- Primary score = maximum Euclidean error over the entire future trajectory window.
+- Primary radius therefore targets simultaneous trajectory coverage.
+- Secondary step-wise radii target marginal coverage at each forecast time.
+- 90% and 95% nominal coverage levels.
+- Empirical simultaneous coverage is reported with track-cluster bootstrap 95% CIs.
+- Because sliding windows overlap within tracks, strict i.i.d. exchangeability is imperfect; results must be described as empirical calibrated coverage under an exchangeability approximation, not an unconditional field guarantee.
+
+FRESH TRANSFORMER SELF-CHECK
+----------------------------
+    task                      model     ADE_diff     FDE_diff
+2s_to_2s         Transformer_seed42 5.898060e-17 8.326673e-17
+2s_to_2s         Transformer_seed52 3.122502e-17 5.551115e-17
+2s_to_2s         Transformer_seed62 5.898060e-17 1.387779e-17
+2s_to_2s Transformer_3Seed_Ensemble 6.245005e-17 6.938894e-18
+2s_to_5s         Transformer_seed42 3.469447e-17 5.551115e-17
+2s_to_5s         Transformer_seed52 6.938894e-18 9.714451e-17
+2s_to_5s         Transformer_seed62 7.632783e-17 6.938894e-17
+2s_to_5s Transformer_3Seed_Ensemble 2.081668e-17 8.326673e-17
+
+CALIBRATION SUMMARY
+-------------------
+    task  alpha  target_coverage  calibration_samples  calibration_tracks  simultaneous_radius  order_statistic_k  calibration_simultaneous_coverage  calibration_pointwise_coverage_constant_radius  calibration_stepwise_marginal_coverage  mean_stepwise_radius  endpoint_stepwise_radius
+2s_to_2s   0.10             0.90                   97                  13             0.058501                 89                           0.917526                                        0.977320                                0.917526              0.029831                  0.050728
+2s_to_2s   0.05             0.95                   97                  13             0.133879                 94                           0.969072                                        0.991753                                0.969072              0.048958                  0.133879
+2s_to_5s   0.10             0.90                   88                   7             0.068393                 81                           0.920455                                        0.978864                                0.920455              0.035351                  0.063300
+2s_to_5s   0.05             0.95                   88                   7             0.092224                 85                           0.965909                                        0.995000                                0.965909              0.047980                  0.083247
+
+LOCKED EVALUATION SUMMARY
+-------------------------
+    task          dataset  alpha  target_coverage  samples  tracks  sources  simultaneous_radius  simultaneous_window_coverage  simultaneous_coverage_gap_pp  simultaneous_window_CI_low  simultaneous_window_CI_high  simultaneous_track_macro_coverage  simultaneous_track_macro_CI_low  simultaneous_track_macro_CI_high  pointwise_coverage_constant_radius  endpoint_coverage_constant_radius  stepwise_marginal_coverage  mean_stepwise_radius  endpoint_stepwise_radius  mean_ensemble_disagreement  mean_ADE  mean_FDE
+2s_to_2s BIRDSAI_TESTREAL   0.10             0.90     1053      89        6             0.058501                      0.867047                     -3.295347                    0.821965                     0.899614                           0.720602                         0.650363                          0.785191                            0.950902                           0.890788                    0.874644              0.029831                  0.050728                    0.003508  0.019076  0.032890
+2s_to_2s BIRDSAI_TESTREAL   0.05             0.95     1053      89        6             0.133879                      0.959164                      0.916429                    0.940261                     0.973443                           0.909801                         0.868486                          0.945199                            0.985992                           0.966762                    0.935280              0.048958                  0.133879                    0.003508  0.019076  0.032890
+2s_to_2s    FRESH_WILDBOX   0.10             0.90      865      78        3             0.058501                      0.721387                    -17.861272                    0.667446                     0.771429                           0.625124                         0.543711                          0.701205                            0.902139                           0.754913                    0.734624              0.029831                  0.050728                    0.003555  0.028814  0.053920
+2s_to_2s    FRESH_WILDBOX   0.05             0.95      865      78        3             0.133879                      0.942197                     -0.780347                    0.920482                     0.961755                           0.919135                         0.884208                          0.949915                            0.980462                           0.950289                    0.874104              0.048958                  0.133879                    0.003555  0.028814  0.053920
+2s_to_5s BIRDSAI_TESTREAL   0.10             0.90      826      63        5             0.068393                      0.585956                    -31.404358                    0.492329                     0.664001                           0.370371                         0.277177                          0.464452                            0.856392                           0.622276                    0.683971              0.035351                  0.063300                    0.006072  0.035590  0.067247
+2s_to_5s BIRDSAI_TESTREAL   0.05             0.95      826      63        5             0.092224                      0.703390                    -24.661017                    0.618815                     0.772046                           0.472428                         0.372916                          0.572984                            0.914455                           0.732446                    0.791913              0.047980                  0.083247                    0.006072  0.035590  0.067247
+2s_to_5s    FRESH_WILDBOX   0.10             0.90      637      71        3             0.068393                      0.480377                    -41.962323                    0.403277                     0.559570                           0.468694                         0.385965                          0.551861                            0.788697                           0.536892                    0.549011              0.035351                  0.063300                    0.006103  0.050132  0.105339
+2s_to_5s    FRESH_WILDBOX   0.05             0.95      637      71        3             0.092224                      0.618524                    -33.147567                    0.541118                     0.692420                           0.571917                         0.487664                          0.654672                            0.867284                           0.654631                    0.669482              0.047980                  0.083247                    0.006103  0.050132  0.105339

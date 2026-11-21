@@ -1,0 +1,94 @@
+{
+  "step": "STEP_6D_K3C17_FROZEN_STEP7_EXTERNAL_OPERATIONAL_WARNING_EVALUATION",
+  "created_utc": "2026-10-28T11:19:37.347368+00:00",
+  "status": "FROZEN_STEP7_EXTERNAL_EVALUATION_COMPLETE_SECONDARY_STRESS_TEST",
+  "analysis_role": "Secondary/exploratory frozen operational-transfer stress test on BAMBI Flight 6. Not field validation and not a pristine confirmatory uncertainty holdout.",
+  "verified_provenance": {
+    "prelock_hash": "8cc687c3f91ecbfb2a3c0f491427d91ccfdca959659a52e0836a98889c890bd1",
+    "pred_manifest_hash": "06a863cf9d86d1cf9faa3416d7fbfe41f0eadcb3d9ffba25845e7cf801a65c33",
+    "k3c16_summary_hash": "21685938c4995476cd6a45acca525c800a30ff12913690b059e92f16506e3104",
+    "q90": {
+      "2s_to_2s": 2.158767888280567,
+      "2s_to_5s": 1.975129668255982
+    }
+  },
+  "rules": {
+    "primary_conformal_level": 0.9,
+    "persistence_windows": 2,
+    "persistence_semantics": "two consecutive available forecast windows for the same track/segment/axis/boundary/direction",
+    "boundaries": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "axes": [
+      "x",
+      "y"
+    ],
+    "sampling_hz": 10.0,
+    "response_thresholds_sec": {
+      "2s_to_2s": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "2s_to_5s": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ]
+    },
+    "red": "Nominal predicted crossing at/before response threshold, or predicted crossing with unavailable TTE while already at/inside boundary.",
+    "yellow": "Not RED and (nominal predicted crossing after threshold OR 90% conformal intersection with same virtual geofence for two consecutive available windows).",
+    "green": "Neither RED nor YELLOW."
+  },
+  "fixed_q90_window_coverage_from_k3c16": {
+    "2s_to_2s": 1.0,
+    "2s_to_5s": 0.0256821829855537
+  },
+  "critical_interpretation": {
+    "2s_to_2s": "The secondary Step18-compatible q90 transfer was fully covered in K3C16 but highly conservative.",
+    "2s_to_5s": "The secondary Step18-compatible q90 transfer severely under-covered in K3C16. Therefore 5s Step7 uncertainty-assisted warning results must NOT be described as calibrated at 90%."
+  },
+  "base_geofence_files": [
+    {
+      "task": "2s_to_2s",
+      "path": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\2s_to_2s_STEP18_base_geofence_instances_with_persistence.csv",
+      "sha256": "69ad50dfe306f9440989b13f7b6eb40584de4ede7fc08d3bc01b11dccd038809"
+    },
+    {
+      "task": "2s_to_5s",
+      "path": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\2s_to_5s_STEP18_base_geofence_instances_with_persistence.csv",
+      "sha256": "c0410d864a96bc87603ab2e84e779f842ed2f3ed74445172b3b2ad53e464b2da"
+    }
+  ],
+  "instances_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\step6dk3c17_frozen_step7_instances.csv",
+  "instances_csv_sha256": "79690b4a54cdbf59ec07c684eb3dcba7aeced39bd2a408b792d007f100fd13ac",
+  "summary_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\TABLE_step6dk3c17_frozen_step7_metrics.csv",
+  "summary_csv_sha256": "60226e188fb488014aa973f47701bc0f36bafaad6be1660e2684da2f28656b06",
+  "per_boundary_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\TABLE_step6dk3c17_metrics_per_boundary.csv",
+  "per_boundary_csv_sha256": "c7ca1032ec6b27e899d20b89d4f67bde8621f59428c74fd155659429938893ac",
+  "boundary_macro_csv": "C:\\Users\\HP\\Downloads\\step6d_uncertainty_holdout\\bambi_flight6\\step6dk_georef\\k3_operational_warning\\frozen_step7_external_evaluation_v1\\TABLE_step6dk3c17_boundary_macro_metrics.csv",
+  "boundary_macro_csv_sha256": "8beec96cfdd6871739d27cfa23ae4a50753c2dfa0458b1ba9066526f0c9e4b05",
+  "frozen_constraints_respected": {
+    "model_tuning": false,
+    "q_recalibration": false,
+    "threshold_tuning": false,
+    "persistence_tuning": false,
+    "response_threshold_tuning": false
+  },
+  "nonclaims": [
+    "BAMBI Flight 6 is a red-deer/human cross-domain dataset, not elephant-specific validation.",
+    "The 50 degree Flight-6 FOVY remains an assumed/default BAMBI reference-pipeline value.",
+    "Virtual geofences are normalized synthetic boundaries, not measured village/farm boundaries.",
+    "Response thresholds are scenario assumptions, not measured team response times.",
+    "This is not field validation.",
+    "The 5s q90 uncertainty layer is not calibrated on this secondary representation because K3C16 showed severe undercoverage.",
+    "No result was tuned or repaired using BAMBI."
+  ]
+}

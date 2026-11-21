@@ -1,0 +1,24 @@
+{
+  "step": "R5B_TARGETED_TRIVIAL_GEOFENCE_BASELINES",
+  "created_utc": "2026-10-29T07:00:53.594941+00:00",
+  "status": "R5B_TRIVIAL_ALWAYS_RED_ALWAYS_GREEN_BASELINES_COMPLETE_READY_FOR_R5C_INTERPRETATION",
+  "existing_step7h_modified": false,
+  "new_prediction_model": false,
+  "new_threshold_selection": false,
+  "baselines_added": [
+    "ALWAYS_RED",
+    "ALWAYS_GREEN"
+  ],
+  "source_instances": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step7_response_aware_warning\\step7h_final_response_aware_instances.csv",
+  "source_instances_sha256": "8f7b2a47ad6f6fe4bbeeceba1f09e7160082abd9ec8669cfe453905019d82434",
+  "source_final_metrics": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result 2.0\\step7_response_aware_warning\\TABLE_step7h_final_response_aware_metrics.csv",
+  "source_final_metrics_sha256": "37d69aa0352ebf89bb3673b487229eec68a2290bd36514630a74dc74884b6a29",
+  "group_keys": [
+    "dataset",
+    "task",
+    "response_time_sec"
+  ],
+  "trivial_metrics_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5B_trivial_always_red_always_green\\R5B_trivial_baseline_metrics.csv",
+  "comparison_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5B_trivial_always_red_always_green\\R5B_step7h_vs_trivial_baselines.csv",
+  "review_table_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R5_geofence_baselines\\R5B_trivial_always_red_always_green\\R5B_reviewer_facing_trivial_baseline_comparison.csv"
+}

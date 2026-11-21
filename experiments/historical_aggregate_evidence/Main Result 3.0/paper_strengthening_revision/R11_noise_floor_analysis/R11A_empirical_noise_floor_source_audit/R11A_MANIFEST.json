@@ -1,0 +1,17 @@
+{
+  "step": "R11A_EMPIRICAL_NOISE_FLOOR_SOURCE_AUDIT",
+  "created_utc": "2026-10-30T05:25:38.448455+00:00",
+  "status": "R11A_EMPIRICAL_NOISE_SOURCES_FOUND_READY_FOR_R11B_NOISE_FLOOR_PROTOCOL_LOCK",
+  "training": false,
+  "inference": false,
+  "threshold_tuning": false,
+  "primary_scientific_rule": "Noise floor must come from an empirical measurement/correction-noise source or a clearly justified lower-bound process; model forecast error itself is not used to define the noise floor.",
+  "strong_candidate_count": 18,
+  "outputs": {
+    "candidate_artifacts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11A_empirical_noise_floor_source_audit\\R11A_CANDIDATE_NOISE_ARTIFACTS.csv",
+    "keyword_contexts": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11A_empirical_noise_floor_source_audit\\R11A_KEYWORD_CONTEXTS.csv",
+    "numeric_csv_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11A_empirical_noise_floor_source_audit\\R11A_NUMERIC_CSV_INVENTORY.csv",
+    "candidate_metric_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11A_empirical_noise_floor_source_audit\\R11A_CANDIDATE_METRIC_SUMMARY.csv",
+    "ranked_empirical_noise_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11A_empirical_noise_floor_source_audit\\R11A_RANKED_EMPIRICAL_NOISE_SOURCES.csv"
+  }
+}

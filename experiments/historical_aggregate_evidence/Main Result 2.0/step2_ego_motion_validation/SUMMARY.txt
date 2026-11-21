@@ -1,0 +1,12 @@
+STEP 2A: BIRDSAI EGO-MOTION GEOMETRIC CONSISTENCY VALIDATION
+========================================================================
+Background features inside annotated object masks are excluded.
+A 70% subset of background feature correspondences fits the affine transform.
+Residual motion is evaluated on the held-out 30% feature correspondences.
+Therefore the reported residual is NOT measured on the same points used to fit the transform.
+
+     split  reliable_pairs  sequences  median_raw_background_motion_px  median_corrected_residual_px  median_residual_reduction_pct  p95_corrected_residual_px
+ test_real            8730          6                         0.705481                      0.203296                      46.846236                   1.553347
+train_real            5298          5                         1.200805                      0.753953                       7.480417                   3.747141
+
+IMPORTANT: This is a geometric-consistency test, not independent metric ground truth.

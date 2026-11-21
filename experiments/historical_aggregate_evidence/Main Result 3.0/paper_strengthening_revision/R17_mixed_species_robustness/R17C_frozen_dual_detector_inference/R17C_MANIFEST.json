@@ -1,0 +1,38 @@
+{
+  "step": "R17C_FROZEN_DUAL_DETECTOR_INFERENCE",
+  "created_utc": "2026-10-30T15:39:13.054822+00:00",
+  "status": "R17C_FROZEN_DUAL_DETECTOR_INFERENCE_COMPLETE_RAW_PREDICTIONS_LOCKED_READY_FOR_R17D_METRIC_EVALUATION",
+  "training": false,
+  "threshold_tuning": false,
+  "metric_interpretation": false,
+  "primary_images": 453,
+  "supplement_images": 9,
+  "total_unique_images": 462,
+  "detectors": 2,
+  "detector_image_audit_rows": 924,
+  "raw_prediction_rows": 2056,
+  "frozen_inference_settings": {
+    "imgsz": 640,
+    "conf_floor": 0.05,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "agnostic_nms": false,
+    "augment": false
+  },
+  "important_interpretation": [
+    "This step produces raw frozen predictions only.",
+    "No test-dependent confidence threshold was selected.",
+    "The 4-class detector preserves all predicted classes in the raw output; elephant filtering is deferred to the pre-locked evaluation step.",
+    "The wall-clock timing in this step is descriptive only and does not replace the frozen R16 latency analysis."
+  ],
+  "output_sha256": {
+    "raw_predictions": "bbdd6e5d46525c8cf27c0aaded4a12a6aec4398a51bcced5b1e8f75c2d9e3ece",
+    "image_inference_audit": "2187f8cd9baf95c4dcdefd43367288ffd30a2228faddcedb91dc993850eac8e5",
+    "summary": "85659fdc2a4c7dec15f297a6c1042e28a249f28a1952ced221ce99bf3894fed3"
+  },
+  "outputs": {
+    "raw_predictions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17C_frozen_dual_detector_inference\\R17C_RAW_PREDICTIONS.csv",
+    "image_inference_audit": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17C_frozen_dual_detector_inference\\R17C_IMAGE_INFERENCE_AUDIT.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17C_frozen_dual_detector_inference\\R17C_INFERENCE_SUMMARY.csv"
+  }
+}

@@ -1,0 +1,69 @@
+BIRDSAI TESTREAL — FROZEN IN-DOMAIN BENCHMARK
+==================================================================================
+
+INTERPRETATION STATUS
+- This is a frozen-model in-domain benchmark.
+- BIRDSAI TestReal was previously inspected during exploratory development.
+- Therefore it is NOT described as an untouched or preregistered confirmatory test set.
+- No retraining, architecture selection, or hyperparameter adjustment was performed in Step 17C.
+- The genuinely preregistered confirmatory external evaluation remains the fresh WildBox holdout.
+
+FROZEN MODEL
+- Compact Temporal Transformer.
+- Seeds: 42, 52, 62.
+- Ensemble prediction: arithmetic mean of the three frozen seed predictions.
+- Reported ADE/FDE are camera-corrected normalized image-plane coordinate errors, NOT metres.
+- Seed disagreement is diagnostic only; no calibrated uncertainty claim is made.
+
+DATA AUDIT
+----------------------------------------------------------------------------------
+    task                            npz_file                      metadata_file  samples  tracks  sources status
+2s_to_2s 2s_to_2s_birdsai_test_canonical.npz 2s_to_2s_birdsai_test_metadata.csv     1053      89        6   PASS
+2s_to_5s 2s_to_5s_birdsai_test_canonical.npz 2s_to_5s_birdsai_test_metadata.csv      826      63        5   PASS
+
+ENSEMBLE METRICS
+----------------------------------------------------------------------------------
+    task                             model  samples  tracks  sources      ADE      FDE  track_macro_ADE  track_macro_FDE  source_macro_ADE  source_macro_FDE
+2s_to_2s Frozen_Transformer_3Seed_Ensemble     1053      89        6 0.019076 0.032890         0.028372         0.053761          0.024345          0.044802
+2s_to_5s Frozen_Transformer_3Seed_Ensemble      826      63        5 0.035590 0.067247         0.054378         0.115669          0.059587          0.107665
+
+MODEL COMPARISON
+----------------------------------------------------------------------------------
+    task                             model      ADE      FDE  track_macro_ADE  track_macro_FDE  source_macro_ADE  source_macro_FDE
+2s_to_2s Frozen_Transformer_3Seed_Ensemble 0.019076 0.032890         0.028372         0.053761          0.024345          0.044802
+2s_to_5s Frozen_Transformer_3Seed_Ensemble 0.035590 0.067247         0.054378         0.115669          0.059587          0.107665
+2s_to_2s                        Stationary 0.020033 0.035129         0.025868         0.049196          0.026099          0.046733
+2s_to_2s                  ConstantVelocity 0.020148 0.035185         0.032541         0.061584          0.025201          0.044633
+2s_to_5s                        Stationary 0.039685 0.073737         0.051472         0.107747          0.065177          0.116539
+2s_to_5s                  ConstantVelocity 0.040174 0.079019         0.082565         0.184618          0.063452          0.120915
+
+SEED METRICS
+----------------------------------------------------------------------------------
+    task  seed                     checkpoint  best_epoch      ADE      FDE  track_macro_ADE  track_macro_FDE  source_macro_ADE  source_macro_FDE
+2s_to_2s    42 2s_to_2s_Transformer_seed42.pt          73 0.019477 0.034464         0.029243         0.057244          0.024787          0.046894
+2s_to_2s    52 2s_to_2s_Transformer_seed52.pt          47 0.019117 0.032463         0.028230         0.052229          0.024348          0.043972
+2s_to_2s    62 2s_to_2s_Transformer_seed62.pt         117 0.019921 0.033994         0.029945         0.055701          0.025267          0.045582
+2s_to_5s    42 2s_to_5s_Transformer_seed42.pt          38 0.035983 0.068019         0.052861         0.113508          0.059656          0.108748
+2s_to_5s    52 2s_to_5s_Transformer_seed52.pt          49 0.035718 0.066944         0.053087         0.111879          0.059650          0.107386
+2s_to_5s    62 2s_to_5s_Transformer_seed62.pt          74 0.037276 0.068705         0.062212         0.125942          0.061294          0.108348
+
+PER-SOURCE ENSEMBLE METRICS
+----------------------------------------------------------------------------------
+    task          source_group  samples  tracklets      ADE      FDE  track_macro_ADE  track_macro_FDE
+2s_to_2s 0000000055_0000000000        3          1 0.047675 0.082001         0.047675         0.082001
+2s_to_2s 0000000058_0000000000       27          9 0.031972 0.065953         0.032653         0.075182
+2s_to_2s 0000000349_0000000000       89          6 0.008815 0.016206         0.008720         0.015489
+2s_to_2s 0000000352_0000000000      318         44 0.030426 0.055040         0.036910         0.070111
+2s_to_2s 0000000353_0000000000      607         26 0.014007 0.022099         0.018021         0.029652
+2s_to_2s 0000000357_0000000000        9          3 0.013178 0.027512         0.012887         0.025790
+2s_to_5s 0000000058_0000000000       18          3 0.123997 0.209296         0.123997         0.209296
+2s_to_5s 0000000349_0000000000       71          6 0.018499 0.035038         0.018264         0.034107
+2s_to_5s 0000000352_0000000000      200         33 0.050630 0.105009         0.068047         0.158439
+2s_to_5s 0000000353_0000000000      535         19 0.029111 0.052366         0.028803         0.050151
+2s_to_5s 0000000357_0000000000        2          2 0.075698 0.136614         0.075698         0.136614
+
+ENSEMBLE DISAGREEMENT DIAGNOSTIC
+----------------------------------------------------------------------------------
+    task  samples  mean_disagreement  pointwise_Pearson  pointwise_Spearman  sample_ADE_Pearson  sample_ADE_Spearman  endpoint_FDE_Pearson  endpoint_FDE_Spearman
+2s_to_2s     1053           0.003747           0.476479            0.519954            0.567871             0.499203              0.458508               0.425094
+2s_to_5s      826           0.006462           0.344993            0.434625            0.373113             0.318489              0.341520               0.248442

@@ -1,0 +1,27 @@
+{
+  "step": "R18A2_STRICT_WILDBOX_ONLY_METRIC_SCALE_AUDIT",
+  "created_utc": "2026-10-30T16:23:31.919068+00:00",
+  "status": "R18A2_WILDBOX_CAMERA_GEOMETRY_PRESENT_BUT_NO_VERIFIED_METRIC_SCALE_ANCHOR_NO_DEFENSIBLE_METER_CONVERSION_READY_FOR_R18B_LIMITATION_LOCK",
+  "coordinate_conversion_performed": false,
+  "forecast_rerun": false,
+  "corrective_reason": [
+    "R18-A aggregated non-WildBox/BAMBI metadata into physical-scale evidence.",
+    "R18-A generic 'height' keyword could confuse image/frame height with physical altitude.",
+    "R18-A2 restricts evidence to the exact three WildBox ZIPs and requires an explicit numeric metric-scale anchor."
+  ],
+  "scientific_rule": "Intrinsics, extrinsics, or monocular/SfM camera poses do not by themselves establish metric scale. A meter-space conversion requires an explicit source-specific metric anchor such as altitude in meters, known distance, GSD/meters-per-pixel, or independently calibrated metric scale.",
+  "sources_expected": [
+    "DJI_20240119152335_0005_V.zip",
+    "DJI_20240626142859_0001_V.zip",
+    "DJI_20260227084135_0002_V.zip"
+  ],
+  "sources_found": 3,
+  "sources_direct_meter_ready": 0,
+  "outputs": {
+    "provenance": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R18_meter_space_wildbox\\R18A2_wildbox_only_metric_scale_audit\\R18A2_WILDBOX_ZIP_PROVENANCE.csv",
+    "member_inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R18_meter_space_wildbox\\R18A2_wildbox_only_metric_scale_audit\\R18A2_WILDBOX_MEMBER_INVENTORY.csv",
+    "physical_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R18_meter_space_wildbox\\R18A2_wildbox_only_metric_scale_audit\\R18A2_WILDBOX_ONLY_PHYSICAL_EVIDENCE.csv",
+    "per_source_readiness": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R18_meter_space_wildbox\\R18A2_wildbox_only_metric_scale_audit\\R18A2_PER_SOURCE_SCALE_READINESS.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R18_meter_space_wildbox\\R18A2_wildbox_only_metric_scale_audit\\R18A2_SCALE_READINESS_SUMMARY.csv"
+  }
+}

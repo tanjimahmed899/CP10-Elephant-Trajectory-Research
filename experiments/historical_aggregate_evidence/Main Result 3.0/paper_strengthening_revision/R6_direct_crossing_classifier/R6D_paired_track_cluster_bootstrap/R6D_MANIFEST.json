@@ -1,0 +1,16 @@
+{
+  "step": "R6D_PAIRED_TRACK_CLUSTER_BOOTSTRAP_DIRECT_VS_NOMINAL",
+  "created_utc": "2026-10-29T08:23:11.159243+00:00",
+  "status": "R6D_PAIRED_TRACK_CLUSTER_BOOTSTRAP_COMPLETE_READY_FOR_R6E_CLAIM_LOCK",
+  "retraining": false,
+  "threshold_reselection": false,
+  "bootstrap_unit": "track_key",
+  "bootstrap_reps": 20000,
+  "bootstrap_seed": 20261029,
+  "source_predictions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6C_oof_threshold_lock_and_frozen_evaluation\\R6C_FROZEN_EVALUATION_PREDICTIONS.csv",
+  "source_predictions_sha256": "2e631209278b13880896d774837a1986404cece1d0f2f4fdce3d98cec93dab2a",
+  "results_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6D_paired_track_cluster_bootstrap\\R6D_TRACK_CLUSTER_BOOTSTRAP_RESULTS.csv",
+  "results_sha256": "a24acd26468c73b520dd7ad2646d1f1285b8781bd86817b9bcb85459f445e128",
+  "primary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R6_direct_crossing_classifier\\R6D_paired_track_cluster_bootstrap\\R6D_REVIEWER_FACING_PRIMARY_COMPARISON.csv",
+  "primary_sha256": "5d2bce0731bbbd5072130721666b7677848131c03316467e6636e228ffeb1cec"
+}

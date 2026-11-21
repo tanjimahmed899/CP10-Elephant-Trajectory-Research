@@ -1,0 +1,16 @@
+{
+  "step": "STEP_6D_K3B0_FIXED_STEP6C_CONFORMAL_SOURCE_UNIT_AUDIT",
+  "python_files_scanned": 34,
+  "keyword_positive_files": 29,
+  "candidate_functions": 72,
+  "qvalue_literal_hits": 0,
+  "bambi_inference_arrays": 10,
+  "status": "CONFORMAL_SOURCE_CANDIDATES_FOUND_PENDING_EXACT_SCORE_UNIT_CONFIRMATION",
+  "next_required_confirmation": [
+    "Exact Step6C primary nonconformity score formula.",
+    "Whether q90/q95 are canonical-distance units or absolute-distance units.",
+    "Exact track-level aggregation used for primary coverage.",
+    "Exact window-level and fully-covered-track definitions.",
+    "Task-specific fixed q90/q95 values and whether endpoint q differs from primary max-error q."
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "step": "R9I_D1_SAFE_MATCHED_ISOTROPIC_TRAINING_ONLY",
+  "created_utc": "2026-10-29T13:30:48.256563+00:00",
+  "status": "R9I_D1_ALL_18_MATCHED_ISOTROPIC_NEURAL_RUNS_TRAINED_READY_FOR_R9I_E_MATCHED_TESTREAL_ISOTROPIC_EVALUATION_BUILD",
+  "selected_family": "all",
+  "selected_task": "all",
+  "definition_loading_method": "AST definition-only execution: imports, assignments, functions and classes from locked original training sources; top-level operational/evaluation statements are not executed.",
+  "dataset_root": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset",
+  "transformer_output": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D1_matched_isotropic_training_only\\transformer",
+  "recurrent_output": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D1_matched_isotropic_training_only\\lstm_gru",
+  "training_source_hashes": {
+    "transformer": "da4041611d36f37de0fc6a8716e190bba465786813a4c1ee536594a66528baa9",
+    "recurrent": "769ab943f80ae26aaeabf6d6c1494302119fe2e1b21b960725beb7962991be9d"
+  },
+  "input_hashes": {
+    "2s_to_2s": {
+      "npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset\\2s_to_2s_birdsai_trainval_canonical.npz",
+      "npz_sha256": "8fe82849403f9801fc78eee00b6ab694056509cd36955a691732774d2b52caae",
+      "metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset\\2s_to_2s_birdsai_trainval_metadata.csv",
+      "metadata_sha256": "92f7e1bae4f59849c6c51cd98912114c7c1be51e043a09e92ddec2caaa753e8d"
+    },
+    "2s_to_5s": {
+      "npz": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset\\2s_to_5s_birdsai_trainval_canonical.npz",
+      "npz_sha256": "4ad8922cfa54f0cf88fd4b8fd9813ab1c641c98fbc1dacbc08f3d01357b3e1bc",
+      "metadata": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_C_V2_matched_isotropic_trainreal_dataset\\dataset\\2s_to_5s_birdsai_trainval_metadata.csv",
+      "metadata_sha256": "93f4b79c7605d8e7436e87a1dd0a3195cf5d51cc36e51688727b18e91735294b"
+    }
+  },
+  "hyperparameters_changed": false,
+  "seeds_changed": false,
+  "split_membership_changed": false,
+  "train_sample_weights_changed": false,
+  "coordinate_representation_changed": true,
+  "scale_floor_changed_by_matched_original_rule": true,
+  "testreal_evaluation": false,
+  "wildbox_evaluation": false,
+  "original_frozen_results_modified": false,
+  "all_18_runs_complete": true,
+  "selected_run_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D1_matched_isotropic_training_only\\R9I_D1_TRAINING_RUN_SUMMARY.csv",
+  "complete_matrix_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9I_D1_matched_isotropic_training_only\\R9I_D1_COMPLETE_18_RUN_MATRIX.csv",
+  "runs": [
+    {
+      "task": "2s_to_2s",
+      "model": "Transformer",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 6,
+      "best_validation_track_macro_ADE": 0.01810205921325114,
+      "checkpoint_sha256": "e78eaaad448c11754738f879ee4a5330b2ea4fd20dd0eb7c6c134a5817ee5d4c"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "LSTM",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 75,
+      "best_validation_track_macro_ADE": 0.016402120589081862,
+      "checkpoint_sha256": "9672cc7fb6dd9a3630e9af4ee99eedde9129543bf4ed0a79768f611d8c3094dc"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "GRU",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 57,
+      "best_validation_track_macro_ADE": 0.01639238178584322,
+      "checkpoint_sha256": "eea6f37d330b455b075f54c1f0993eb2bbce1016fa0999955a9fdd9951bbe1d4"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "Transformer",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 6,
+      "best_validation_track_macro_ADE": 0.018518645702695676,
+      "checkpoint_sha256": "c10181c68260953560addfb9fffc298b8be47e43830326a861c2ffaa49b4e34e"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "LSTM",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 18,
+      "best_validation_track_macro_ADE": 0.0180759787872911,
+      "checkpoint_sha256": "531cb82d03827525db31960deb4b2b690eaae78a951716209babecfd65b54501"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "GRU",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 2,
+      "best_validation_track_macro_ADE": 0.018466987334145698,
+      "checkpoint_sha256": "28f07e6bd8bb0db91595084f4f6e48e54dc3b706e215d61781e0f899dc7b6704"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "Transformer",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 124,
+      "best_validation_track_macro_ADE": 0.013767961138870478,
+      "checkpoint_sha256": "029bc59c4e2f85dd64f45013dcc529b885b99501796f7155b9f1cf35af3582dc"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "LSTM",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 62,
+      "best_validation_track_macro_ADE": 0.01637355753800546,
+      "checkpoint_sha256": "bbdeaa1096dff02aa67239fd847f4b4173eb392318c1fbe055bfc44b0e057537"
+    },
+    {
+      "task": "2s_to_2s",
+      "model": "GRU",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 114,
+      "best_validation_track_macro_ADE": 0.015186549859652065,
+      "checkpoint_sha256": "0d2019706facdb95be03ebffaefa68866ad515b002abd7d3210a1645ee385132"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "Transformer",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 12,
+      "best_validation_track_macro_ADE": 0.01519247055505398,
+      "checkpoint_sha256": "561ea24e02243298688dcd0df6c74776a538eef142b7a0edfe2c7da6f70ceac5"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "LSTM",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 14,
+      "best_validation_track_macro_ADE": 0.015211412560089942,
+      "checkpoint_sha256": "e2d2dec3f05bb7c8e23b473e8b125a45985ae5c5f105e078dc85ad87359fd92d"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "GRU",
+      "seed": 42,
+      "complete": true,
+      "best_epoch": 12,
+      "best_validation_track_macro_ADE": 0.015183309555477037,
+      "checkpoint_sha256": "bd5873b6ad7756ba05d5fe1374e6f978c721ea53621426bb48b0e1fb0a9dd0a3"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "Transformer",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 20,
+      "best_validation_track_macro_ADE": 0.015203485954889498,
+      "checkpoint_sha256": "85b796f14a6aa57ba243c3c9b7007c4637d74aba8d69aa19842f0b61486daa16"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "LSTM",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 33,
+      "best_validation_track_macro_ADE": 0.015133638859232279,
+      "checkpoint_sha256": "c422d6a1f5a30de7a0bec64986071c921e15ae9e8b7d6138c714dc637861152c"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "GRU",
+      "seed": 52,
+      "complete": true,
+      "best_epoch": 21,
+      "best_validation_track_macro_ADE": 0.01513850931088066,
+      "checkpoint_sha256": "3476d4798dddd096b3d39aa399783e593ae69859669cf67632449c92812f4311"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "Transformer",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 11,
+      "best_validation_track_macro_ADE": 0.015308701436087037,
+      "checkpoint_sha256": "a23875d048ca7f733237282406bb9ad6cd552579cac9407aa153a77b48c2a9ce"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "LSTM",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 11,
+      "best_validation_track_macro_ADE": 0.01521485112027393,
+      "checkpoint_sha256": "69db3f4d94da338fb5d6ed593cd4d9aec79285bf1c5cd85ea3d99f685e0934bb"
+    },
+    {
+      "task": "2s_to_5s",
+      "model": "GRU",
+      "seed": 62,
+      "complete": true,
+      "best_epoch": 9,
+      "best_validation_track_macro_ADE": 0.01526212895132333,
+      "checkpoint_sha256": "ff3773ae11c0eab3aeee3945d19e897f67600eba1a9af81cd28084629d604f6c"
+    }
+  ]
+}

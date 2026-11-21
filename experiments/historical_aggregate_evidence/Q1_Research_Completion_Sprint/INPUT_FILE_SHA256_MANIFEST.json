@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-16",
+  "manifest_type": "current_working_package_integrity_not_training_provenance",
+  "files": [
+    {
+      "path": "Q1_Initial_Manuscript_Draft.docx",
+      "size": 46833,
+      "sha256": "ed3eee911ba20c783e81b9e705ca871efd3382653f695a747a2a0e9419bd4d64"
+    },
+    {
+      "path": "Q1_Initial_Manuscript_Draft.md",
+      "size": 21057,
+      "sha256": "63e4f85fef1ebaf52b9cafaf5d3cfd65040a640bc07a6378fb95507fbca5e6a0"
+    },
+    {
+      "path": "README_FIRST.md",
+      "size": 3004,
+      "sha256": "685fa0ac7109b05f91a3132945e953b0bb35f4d938034b2bb3e072227efd11df"
+    },
+    {
+      "path": "checkpoints/2s_to_2s_Transformer_seed42.pt",
+      "size": 317196,
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f"
+    },
+    {
+      "path": "checkpoints/2s_to_2s_Transformer_seed52.pt",
+      "size": 317196,
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5"
+    },
+    {
+      "path": "checkpoints/2s_to_2s_Transformer_seed62.pt",
+      "size": 317196,
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2"
+    },
+    {
+      "path": "checkpoints/2s_to_5s_Transformer_seed42.pt",
+      "size": 332812,
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a"
+    },
+    {
+      "path": "checkpoints/2s_to_5s_Transformer_seed52.pt",
+      "size": 332812,
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958"
+    },
+    {
+      "path": "checkpoints/2s_to_5s_Transformer_seed62.pt",
+      "size": 332812,
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+    },
+    {
+      "path": "data/EXP3_new_video_holdout_LOCKED.csv",
+      "size": 930,
+      "sha256": "13700befd2eeb4f5fd399c1cf67353b586c37699e7eeb94e53e2fd717ee45069"
+    },
+    {
+      "path": "data/EXP3_uploaded_checkpoint_hashes.csv",
+      "size": 888,
+      "sha256": "918dde140f0da232d1ce077c86488a5f8ee688103a43e42f34cecad8a6275457"
+    },
+    {
+      "path": "data/Novelty_Literature_Matrix.csv",
+      "size": 3508,
+      "sha256": "efc82cdd99f09e3c2dc73e48dd688d5096ab66cd24e62a656a673aec860ab663"
+    },
+    {
+      "path": "reports/EXP3_current_input_preflight.json",
+      "size": 3327,
+      "sha256": "f0fbea0307c7cd066c581b76579035a60694f8940cd602b096abf8eb440ee175"
+    },
+    {
+      "path": "reports/Research_Readiness_Audit.md",
+      "size": 4272,
+      "sha256": "99e10b72c6e5b636fcacf63a194034b565c4867039ab2b5fa05a6b4357e115c0"
+    },
+    {
+      "path": "scripts/EXP3_Run_Windows.ps1",
+      "size": 1491,
+      "sha256": "f1470b6f19c70f166e14e756a9d78bcc6839267b070a98914166e13835414b24"
+    },
+    {
+      "path": "scripts/exp3_acquire_and_verify.py",
+      "size": 2725,
+      "sha256": "20486c93ecc2ad826738cc2ddd7b8999d3d442dac760495022c62f1d14e7926d"
+    },
+    {
+      "path": "scripts/exp3_download_revision_locked.py",
+      "size": 3290,
+      "sha256": "d2e72f8b86b030034ad62c9c851c9fa43ce577c41f53bbd1a25dcedfee5e0682"
+    },
+    {
+      "path": "scripts/exp3_frozen_forecaster_adapter.py",
+      "size": 54782,
+      "sha256": "f573746d65a14de602fd165610f7fc9dc8fe78e3cc8cac90c7f851135bb638dd"
+    },
+    {
+      "path": "scripts/exp3_postprocess.py",
+      "size": 2325,
+      "sha256": "6d365090f430f00da8b1a575931ab181a357c36dd59eff4bf3e103d3e6f2ef3f"
+    },
+    {
+      "path": "scripts/exp3_preflight.py",
+      "size": 2119,
+      "sha256": "e50da92fe4c288467265b87349100d1d45e0993414340cf8dcfd3c9ca486dcda"
+    },
+    {
+      "path": "scripts/make_manuscript_docx.py",
+      "size": 3381,
+      "sha256": "a27273696d07b3f49414887c9221cd1dd130e2b413f10fb590fab7968b2ec944"
+    },
+    {
+      "path": "scripts/r8_find_geometry_inputs.py",
+      "size": 1579,
+      "sha256": "e72fe7197ad19db40aaedbe3e52089b10caa4999f6c1d8f0880f54518e14f06e"
+    },
+    {
+      "path": "scripts/verify_checkpoint_upload_hashes.py",
+      "size": 1256,
+      "sha256": "79ee2546bcb06fe1387cfdb272b8dcfcce74cf11e3dc68e948b482b140e59f51"
+    }
+  ]
+}

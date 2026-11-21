@@ -1,0 +1,19 @@
+{
+  "step": "R12E_V10_DIRECT_UNIFIED10HZ_BUILDER_AUDIT",
+  "created_utc": "2026-10-30T09:59:28.386489+00:00",
+  "status": "R12E_V10_UNIFIED10HZ_PRODUCER_AND_SINGLE_EXACT_FILTER_RULE_LOCKED_READY_FOR_R12E_V11_FULL_RECONSTRUCTION",
+  "training": false,
+  "inference": false,
+  "candidate_path": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_unified_10hz_dataset.py",
+  "candidate_sha256": "fd7b34868b877ef76e69acffed5010ca9ae2233af4b0851998a1dffe7c05b119",
+  "producer_signal": true,
+  "filter_signal": true,
+  "unique_rule_types": [
+    "quality_tier_core"
+  ],
+  "outputs": {
+    "full_source_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v10_direct_unified10hz_builder_audit\\R12E_V10_FULL_SOURCE_EVIDENCE.csv",
+    "high_value_expressions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v10_direct_unified10hz_builder_audit\\R12E_V10_HIGH_VALUE_EXECUTABLE_EXPRESSIONS.csv",
+    "filter_rule_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v10_direct_unified10hz_builder_audit\\R12E_V10_FILTER_RULE_CANDIDATES.csv"
+  }
+}

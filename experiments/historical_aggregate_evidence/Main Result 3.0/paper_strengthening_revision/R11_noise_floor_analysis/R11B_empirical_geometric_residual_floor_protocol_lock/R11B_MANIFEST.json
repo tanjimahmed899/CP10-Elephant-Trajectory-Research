@@ -1,0 +1,29 @@
+{
+  "step": "R11B_EMPIRICAL_GEOMETRIC_RESIDUAL_FLOOR_PROTOCOL_LOCK",
+  "created_utc": "2026-10-30T05:30:07.000593+00:00",
+  "status": "R11B_TESTREAL_EMPIRICAL_GEOMETRIC_RESIDUAL_F50_F95_LOCKED_READY_FOR_R11C_FORECAST_ERROR_ABOVE_FLOOR_ANALYSIS",
+  "training": false,
+  "inference": false,
+  "threshold_tuning": false,
+  "primary_domain": "BIRDSAI TestReal",
+  "primary_evidence_type": "stationary-landmark residual after ego-motion correction",
+  "F50_px": 0.2032955537988646,
+  "F95_px": 1.5533470192988588,
+  "raw_median_background_motion_px": 0.7054814994335175,
+  "median_reduction_pct": 71.18343231366019,
+  "source_crosscheck_exact_within_1e_12": true,
+  "terminology": "empirical geometric residual reference/floor and residual envelope",
+  "claim_guardrails": [
+    "Do not call F50 a universal irreducible annotation-noise floor.",
+    "Do not transfer BIRDSAI F50/F95 directly to Fresh WildBox or BAMBI.",
+    "Do not tune F50/F95 using forecast errors.",
+    "Use only pixel-space forecast errors for direct comparison with these pixel-space residual references."
+  ],
+  "outputs": {
+    "protocol": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11B_empirical_geometric_residual_floor_protocol_lock\\R11B_EMPIRICAL_GEOMETRIC_RESIDUAL_PROTOCOL.csv",
+    "testreal_row_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11B_empirical_geometric_residual_floor_protocol_lock\\R11B_TESTREAL_RESIDUAL_ROW_LOCK.csv",
+    "source_crosscheck": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11B_empirical_geometric_residual_floor_protocol_lock\\R11B_SOURCE_CROSSCHECK.csv",
+    "sequence_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11B_empirical_geometric_residual_floor_protocol_lock\\R11B_TESTREAL_SEQUENCE_RESIDUAL_CONTEXT.csv",
+    "manuscript_ready_protocol": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R11_noise_floor_analysis\\R11B_empirical_geometric_residual_floor_protocol_lock\\R11B_MANUSCRIPT_READY_PROTOCOL.txt"
+  }
+}

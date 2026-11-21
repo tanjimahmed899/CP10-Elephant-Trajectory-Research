@@ -1,0 +1,83 @@
+{
+  "step": "STEP_6D_K2A_10HZ_RESAMPLING_RAW_WINDOW_CONSTRUCTION",
+  "lock_status": "NEW_FINAL_PREPROCESSING_LOCK_CREATED",
+  "preprocessing_lock": {
+    "step": "STEP_6D_K2A_FINAL_PREPROCESSING_LOCK",
+    "status": "LOCKED_BEFORE_BAMBI_FORECASTING",
+    "flight_id": 6,
+    "species": "Cervus elaphus (Red deer)",
+    "fps": 29.411834004179347,
+    "target_hz": 10.0,
+    "locked_global_break_before_frames": [
+      1035,
+      3093
+    ],
+    "locked_max_interpolation_gap_sec": 0.75,
+    "selection_rationale": "0.75 s and 1.00 s produced identical geometry-only feasibility, while 0.75 s is stricter; 0.50 s substantially reduced usable especially 2s-to-5s blocks/windows. 0.75 s covers 99.94% of post-breakpoint observed adjacent gaps in K1S.",
+    "history_steps": 20,
+    "future_steps": {
+      "2s_to_2s": 20,
+      "2s_to_5s": 50
+    },
+    "interpolation": "linear in UTM x/y/z on an absolute 10 Hz clock; no extrapolation",
+    "window_stride": "1 resampled point = 0.1 s",
+    "no_model_predictions_or_errors_used_for_selection": true,
+    "source_trajectory_sha256": "73217a1b9a23ceff5ad7967d43fcaa3de7ec4d3383c5b7503f63a67ad6fa2fe5",
+    "important_rules": [
+      "No interpolation may bridge a locked global breakpoint.",
+      "No interpolation may bridge an observed gap > 0.75 s.",
+      "No animal-speed cutoff is used for deletion.",
+      "No BAMBI forecasting/conformal results were inspected before this preprocessing lock.",
+      "The BAMBI working georeferencing uses the reference 50-degree FOV assumption."
+    ]
+  },
+  "overall": {
+    "resampled_points_10hz": 4602,
+    "resampled_tracks": 56,
+    "resampled_blocks": 87,
+    "max_interp_bracket_gap_sec": 0.7479982376098633,
+    "exact_10hz_grid_failures": 0
+  },
+  "tasks": {
+    "2s_to_2s": {
+      "windows": 1855,
+      "unique_tracks": 46,
+      "unique_blocks": 50,
+      "X_shape": [
+        1855,
+        20,
+        2
+      ],
+      "Y_shape": [
+        1855,
+        20,
+        2
+      ],
+      "max_interp_bracket_gap_sec": 0.7479982376098633
+    },
+    "2s_to_5s": {
+      "windows": 623,
+      "unique_tracks": 28,
+      "unique_blocks": 28,
+      "X_shape": [
+        623,
+        20,
+        2
+      ],
+      "Y_shape": [
+        623,
+        50,
+        2
+      ],
+      "max_interp_bracket_gap_sec": 0.7479982376098633
+    }
+  },
+  "resampled_motion_qc": {
+    "steps": 4515,
+    "median_speed_xy_mps": 4.241410308950958,
+    "p95_speed_xy_mps": 6.755390750628516,
+    "p99_speed_xy_mps": 7.798488563202052,
+    "max_speed_xy_mps": 10.646322398271517
+  },
+  "status": "K2A_RESAMPLING_AND_RAW_WINDOWS_COMPLETE_PENDING_QC_REVIEW"
+}

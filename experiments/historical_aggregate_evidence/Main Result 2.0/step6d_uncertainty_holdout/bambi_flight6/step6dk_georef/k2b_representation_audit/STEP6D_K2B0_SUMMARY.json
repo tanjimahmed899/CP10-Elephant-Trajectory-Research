@@ -1,0 +1,14 @@
+{
+  "step": "STEP_6D_K2B0_EXACT_CANONICAL_REPRESENTATION_SOURCE_AUDIT",
+  "python_files_scanned": 34,
+  "keyword_positive_python_files": 24,
+  "candidate_functions": 114,
+  "candidate_npz_files": 66,
+  "candidate_metadata_files": 19,
+  "bambi_source_tracks": 57,
+  "bambi_resampled_tracks": 56,
+  "bambi_missing_resampled_track_ids": [
+    5231
+  ],
+  "status": "SOURCE_CANDIDATES_FOUND_PENDING_EXACT_FORMULA_CONFIRMATION"
+}

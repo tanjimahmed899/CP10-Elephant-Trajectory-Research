@@ -1,0 +1,15 @@
+{
+  "step": "R8C_EGO_MOTION_ABLATION_INTERPRETATION_CLAIM_LOCK",
+  "created_utc": "2026-10-29T08:45:51.454531+00:00",
+  "status": "R8C_EGO_MOTION_ABLATION_INTERPRETATION_AND_CLAIM_LOCK_COMPLETE_READY_FOR_R9_CANONICALIZATION_ABLATION",
+  "new_experiment": false,
+  "existing_evidence_sufficient": true,
+  "additional_ego_motion_experiment_required": false,
+  "source_r8b_manifest": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8B_exact_result_extraction\\R8B_MANIFEST.json",
+  "source_r8b_manifest_sha256": "ddb93f5559674d6fbdd0c52ad04e4c5ab09d930d3690a76054ed8fc9c2f2b477",
+  "evidence_summary_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8C_interpretation_claim_lock\\R8C_EGO_MOTION_EVIDENCE_SUMMARY.csv",
+  "evidence_summary_sha256": "25c84a00a119c988f7f4ca1eac081f0d9c183186360b0eee0af5bf6bd35c63dd",
+  "claim_lock_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8C_interpretation_claim_lock\\R8C_CLAIM_LOCK.csv",
+  "claim_lock_sha256": "aadf90db62e5d7d25dc1c9d52bf97ab64376d5790673ae8179da108934206dc4",
+  "manuscript_map_csv": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R8_ego_motion_ablation\\R8C_interpretation_claim_lock\\R8C_MANUSCRIPT_SECTION_MAP.csv"
+}

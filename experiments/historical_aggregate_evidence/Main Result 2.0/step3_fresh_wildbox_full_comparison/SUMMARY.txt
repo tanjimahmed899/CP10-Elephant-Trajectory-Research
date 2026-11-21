@@ -1,0 +1,23 @@
+STEP 3: FULL FRESH WILDBOX FROZEN MODEL COMPARISON
+==============================================================================
+
+All models are evaluated on the SAME locked Fresh WildBox holdout.
+No Fresh WildBox result is used for training, parameter selection, or checkpoint selection.
+Kalman Q/R were previously selected using BIRDSAI TrainReal only.
+GRU/LSTM/Transformer checkpoints were already frozen before Fresh WildBox evaluation.
+
+    task                       model  seeds      ADE   ADE_SD      FDE   FDE_SD  track_macro_ADE  track_macro_ADE_SD  track_macro_FDE  track_macro_FDE_SD  source_macro_ADE  source_macro_ADE_SD  source_macro_FDE  source_macro_FDE_SD  ADE_rank  track_macro_ADE_rank
+2s_to_2s             LSTM_3Seed_Mean      3 0.028609 0.000069 0.053802 0.000222         0.031829            0.000119         0.058903            0.000283          0.019560             0.000056          0.035723             0.000189         1                     2
+2s_to_2s  Transformer_3Seed_Ensemble      3 0.028814 0.000000 0.053920 0.000000         0.032251            0.000000         0.058932            0.000000          0.020038             0.000000          0.036969             0.000000         2                     3
+2s_to_2s Transformer_SingleSeed_Mean      3 0.029111 0.000348 0.054440 0.000369         0.032607            0.000705         0.059559            0.001016          0.020266             0.000431          0.037343             0.000711         3                     4
+2s_to_2s              GRU_3Seed_Mean      3 0.029166 0.000468 0.054686 0.000852         0.031778            0.000376         0.057744            0.000942          0.020119             0.000312          0.036879             0.000435         4                     1
+2s_to_2s            ConstantVelocity      1 0.030126 0.000000 0.055769 0.000000         0.033774            0.000000         0.061380            0.000000          0.021581             0.000000          0.039664             0.000000         5                     5
+2s_to_2s                  Stationary      1 0.032397 0.000000 0.060478 0.000000         0.037783            0.000000         0.069546            0.000000          0.021589             0.000000          0.039267             0.000000         6                     7
+2s_to_2s                    KalmanCV      1 0.035785 0.000000 0.070258 0.000000         0.037347            0.000000         0.073619            0.000000          0.024885             0.000000          0.047775             0.000000         7                     6
+2s_to_5s  Transformer_3Seed_Ensemble      3 0.050132 0.000000 0.105339 0.000000         0.061518            0.000000         0.125643            0.000000          0.035973             0.000000          0.070609             0.000000         1                     3
+2s_to_5s             LSTM_3Seed_Mean      3 0.050358 0.000117 0.106674 0.000242         0.061636            0.000291         0.126904            0.000901          0.036153             0.000424          0.071295             0.000694         2                     5
+2s_to_5s              GRU_3Seed_Mean      3 0.050422 0.000291 0.106651 0.000978         0.061569            0.000529         0.126535            0.001455          0.035730             0.000181          0.070408             0.000622         3                     4
+2s_to_5s Transformer_SingleSeed_Mean      3 0.050657 0.001097 0.105757 0.001130         0.062026            0.001472         0.126042            0.001688          0.036467             0.001036          0.071036             0.001157         4                     6
+2s_to_5s                  Stationary      1 0.053056 0.000000 0.111665 0.000000         0.066426            0.000000         0.135209            0.000000          0.036141             0.000000          0.071746             0.000000         5                     7
+2s_to_5s            ConstantVelocity      1 0.053774 0.000000 0.112707 0.000000         0.051112            0.000000         0.099199            0.000000          0.040602             0.000000          0.081355             0.000000         6                     1
+2s_to_5s                    KalmanCV      1 0.054987 0.000000 0.114275 0.000000         0.051548            0.000000         0.098706            0.000000          0.041379             0.000000          0.082152             0.000000         7                     2

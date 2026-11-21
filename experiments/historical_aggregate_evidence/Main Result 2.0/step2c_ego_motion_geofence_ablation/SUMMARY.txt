@@ -1,0 +1,26 @@
+STEP 2C: EGO-MOTION CORRECTION IMPACT ON VIRTUAL-GEOFENCE WARNING
+================================================================================
+
+REFERENCE EVENT DEFINITION
+--------------------------
+True boundary-crossing events and the safe/risk-side direction are defined ONLY from the ego-motion-corrected TestReal trajectory. Therefore RAW and CORRECTED warnings are scored against exactly the same reference events.
+
+This avoids changing the target event between representations.
+
+WARNING PERFORMANCE
+-------------------
+    task            model  raw_precision  corrected_precision  precision_change_pp  raw_recall  corrected_recall  recall_change_pp   raw_F1  corrected_F1  F1_change_pp  raw_false_warning_rate  corrected_false_warning_rate  false_warning_rate_reduction_pct  raw_AUROC  corrected_AUROC  raw_AUPRC  corrected_AUPRC  raw_TTE_MAE_sec  corrected_TTE_MAE_sec  TTE_MAE_reduction_pct
+2s_to_2s ConstantVelocity       0.157757             0.615819            45.806171    0.474510          0.427451         -4.705882 0.236791      0.504630     26.783902                0.106548                      0.011216                         89.473684   0.829168         0.943454   0.134313         0.517542         0.600826               0.366972              38.922050
+2s_to_2s       Stationary       0.239554                  NaN                  NaN    0.337255          0.000000        -33.725490 0.280130           NaN           NaN                0.045027                      0.000000                        100.000000   0.865719         0.938615   0.196268         0.564186         0.630233                    NaN                    NaN
+2s_to_5s ConstantVelocity       0.212789             0.619938            40.714828    0.502604          0.518229          1.562500 0.298993      0.564539     26.554598                0.156168                      0.026684                         82.913165   0.775854         0.931584   0.186496         0.522506         1.318653               0.875879              33.577712
+2s_to_5s       Stationary       0.334559                  NaN                  NaN    0.236979          0.000000        -23.697917 0.277439           NaN           NaN                0.039589                      0.000000                        100.000000   0.827091         0.914102   0.274220         0.526658         1.382418                    NaN                    NaN
+
+RAW IMAGE-PLANE LABEL DISTORTION
+--------------------------------
+    task  instances  reference_positive  raw_native_positive  raw_vs_corrected_truth_disagreement_count  raw_vs_corrected_truth_disagreement_pct  current_safe_side_disagreement_count  current_safe_side_disagreement_pct
+2s_to_2s       6318                 255                  555                                        542                                 8.578664                                   354                            5.603039
+2s_to_5s       4956                 384                  765                                        617                                12.449556                                   267                            5.387409
+
+IMPORTANT:
+This is a representation-level geofence ablation using non-learning Stationary and Constant-Velocity predictors. It isolates the effect of camera-motion correction without retraining a neural model.
+It does NOT claim independent metric world-coordinate ground truth.

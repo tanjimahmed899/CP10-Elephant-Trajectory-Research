@@ -1,0 +1,76 @@
+STEP 6D-K2A — 10 Hz RESAMPLING + RAW WINDOW CONSTRUCTION
+==================================================================================
+
+FINAL PREPROCESSING LOCK
+------------------------
+{
+  "locked_global_break_before_frames": [
+    1035,
+    3093
+  ],
+  "locked_max_interpolation_gap_sec": 0.75,
+  "target_hz": 10.0
+}
+
+RESAMPLING SUMMARY
+------------------
+{
+  "resampled_points_10hz": 4602,
+  "resampled_tracks": 56,
+  "resampled_blocks": 87,
+  "max_interp_bracket_gap_sec": 0.7479982376098633,
+  "exact_10hz_grid_failures": 0
+}
+
+RAW WINDOW SUMMARY
+------------------
+{
+  "2s_to_2s": {
+    "windows": 1855,
+    "unique_tracks": 46,
+    "unique_blocks": 50,
+    "X_shape": [
+      1855,
+      20,
+      2
+    ],
+    "Y_shape": [
+      1855,
+      20,
+      2
+    ],
+    "max_interp_bracket_gap_sec": 0.7479982376098633
+  },
+  "2s_to_5s": {
+    "windows": 623,
+    "unique_tracks": 28,
+    "unique_blocks": 28,
+    "X_shape": [
+      623,
+      20,
+      2
+    ],
+    "Y_shape": [
+      623,
+      50,
+      2
+    ],
+    "max_interp_bracket_gap_sec": 0.7479982376098633
+  }
+}
+
+RESAMPLED MOTION QC
+-------------------
+{
+  "steps": 4515,
+  "median_speed_xy_mps": 4.241410308950958,
+  "p95_speed_xy_mps": 6.755390750628516,
+  "p99_speed_xy_mps": 7.798488563202052,
+  "max_speed_xy_mps": 10.646322398271517
+}
+
+STATUS
+------
+K2A_RESAMPLING_AND_RAW_WINDOWS_COMPLETE_PENDING_QC_REVIEW
+
+No canonicalization, forecasting, conformal coverage, or Step-7 warning evaluation was run.

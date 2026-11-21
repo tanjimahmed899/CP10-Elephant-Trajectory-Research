@@ -1,0 +1,16 @@
+{
+  "step": "R12E_V6_EXACT_FINAL_FILTER_SOURCE_PROVENANCE_AUDIT",
+  "created_utc": "2026-10-30T06:42:25.006412+00:00",
+  "status": "R12E_V6_EXACT_FINAL_FILTER_RULE_NOT_YET_LOCATED_REVIEW_TOP_SOURCE_CANDIDATES",
+  "training": false,
+  "inference": false,
+  "empirical_equivalence_not_used_as_proof": true,
+  "exact_rule": "",
+  "explicit_rule_evidence_rows": 0,
+  "outputs": {
+    "ranked_builder_candidates": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v6_exact_final_filter_source_provenance\\R12E_V6_RANKED_FINAL_DATASET_BUILDER_CANDIDATES.csv",
+    "context_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v6_exact_final_filter_source_provenance\\R12E_V6_FINAL_FILTER_CONTEXT_EVIDENCE.csv",
+    "top_executable_filter_lines": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v6_exact_final_filter_source_provenance\\R12E_V6_TOP_EXECUTABLE_FILTER_LINES.csv",
+    "explicit_filter_rule_evidence": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R12_track_accounting\\R12E_v6_exact_final_filter_source_provenance\\R12E_V6_EXPLICIT_FINAL_FILTER_RULE_EVIDENCE.csv"
+  }
+}

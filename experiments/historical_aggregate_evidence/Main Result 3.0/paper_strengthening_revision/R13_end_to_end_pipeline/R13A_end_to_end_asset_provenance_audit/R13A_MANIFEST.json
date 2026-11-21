@@ -1,0 +1,20 @@
+{
+  "step": "R13A_END_TO_END_ASSET_PROVENANCE_AUDIT",
+  "created_utc": "2026-10-30T10:22:48.981819+00:00",
+  "status": "R13A_END_TO_END_ASSET_AUDIT_INCOMPLETE_MISSING_DETECTOR_CHECKPOINT",
+  "training": false,
+  "inference": false,
+  "original_files_modified": false,
+  "checkpoint_found": false,
+  "video_found": true,
+  "tracker_implementation_found": true,
+  "trajectory_assets_found": true,
+  "outputs": {
+    "inventory": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_ASSET_INVENTORY.csv",
+    "summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_ASSET_SUMMARY.csv",
+    "detector_checkpoints": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_DETECTOR_CHECKPOINT_CANDIDATES.csv",
+    "videos": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_VIDEO_CANDIDATES.csv",
+    "tracker_sources": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_TRACKER_SOURCE_CANDIDATES.csv",
+    "trajectory_assets": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13A_end_to_end_asset_provenance_audit\\R13A_TRAJECTORY_ASSETS.csv"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "axes": [
+    "x",
+    "y"
+  ],
+  "boundary_thresholds": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "calibrated_probability_claim": false,
+  "coordinate_system": "camera-corrected normalized image-plane coordinates",
+  "development_data": "BIRDSAI TrainReal track-disjoint validation only for Step18A diagnostic evaluation.",
+  "direction_rule": "For each boundary, the current side of the last observed position is treated as the safe side; the opposite side is the virtual risk zone.",
+  "eligibility_rule": "Exactly one directional instance per axis-threshold pair, except exact boundary ties.",
+  "ensemble": "arithmetic mean of frozen seed predictions",
+  "forecast_horizons_seconds": [
+    2.0,
+    5.0
+  ],
+  "model": "Frozen Compact Temporal Transformer",
+  "observation_seconds": 2.0,
+  "prediction_score": "Maximum directional signed boundary penetration of the frozen 3-seed ensemble-mean forecast.",
+  "sampling_hz": 10.0,
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "testreal_used": false,
+  "threshold_selection": "No performance-based warning-threshold tuning. Zero is fixed by boundary-crossing semantics.",
+  "true_crossing_rule": "At least one ground-truth future point reaches or crosses the virtual risk side.",
+  "tte_rule": "First future timestep at which trajectory reaches or crosses the boundary.",
+  "version": "STEP18_VIRTUAL_GEOFENCE_V1",
+  "warning_rule": "risk_score >= 0",
+  "warning_threshold": 0.0,
+  "wildbox_used": false
+}

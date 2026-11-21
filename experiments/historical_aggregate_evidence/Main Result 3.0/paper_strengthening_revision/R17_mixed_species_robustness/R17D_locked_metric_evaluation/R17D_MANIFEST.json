@@ -1,0 +1,63 @@
+{
+  "step": "R17D_LOCKED_MIXED_SPECIES_METRIC_EVALUATION",
+  "status": "R17D_LOCKED_MIXED_SPECIES_METRICS_BOOTSTRAP_AND_FILTER_ABLATION_COMPLETE_READY_FOR_R17E_CLAIM_INTERPRETATION_LOCK",
+  "model_rerun": false,
+  "threshold_tuning": false,
+  "primary_confidence": 0.25,
+  "sensitivity_confidences": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "primary_match_iou": 0.5,
+  "ap_iou_grid": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "crowd_handling": "iscrowd=1 elephant GT excluded from scored denominator; predictions overlapping elephant crowd GT at scoring IoU are ignored",
+  "bootstrap_reps": 20000,
+  "bootstrap_seed": 20261030,
+  "supplementary_selective_lion_predictions_conf025": 1,
+  "input_hashes": {
+    "r17c_raw_predictions": "bbdd6e5d46525c8cf27c0aaded4a12a6aec4398a51bcced5b1e8f75c2d9e3ece",
+    "r17b_coco_gt": "65a220d0f1fc927dabc548109ecf7f066a26a924936e350123685b182f471851",
+    "r17b_supp_gt": "55ad901cf332c98cc0c2e3e66bd69455a876dfd47f516d0db8c03e63d0b63d03"
+  },
+  "output_hashes": {
+    "image_metrics": "1591a50bcbe6ae93a26cf85cf10fd2fd6aeede962da61b6b015113ab04f074d9",
+    "group_metrics": "c7c43dc83beba6dacb32e1eb0f96bf4e06b55a66e08d29170ff89d2bdad8b6bb",
+    "ap_metrics": "b4be0ed2710050f521efd05514d55e1d6adf98a618740d3131bb4df09595469f",
+    "pair_metrics": "2c5024ecb731f2d42cfcd0e0c6b5465b28690c0b3a672d3340b3b6bcb4548c0a",
+    "supplementary_metrics": "d5710f5c0137062d5d492ef0986537df3ffa10dcde67bb952116874536e2c6c4",
+    "alarm_ablation": "89ccbfca561c5b3b602629d7804a9e4cfa7685e7404d64881f8340a8041f6d34",
+    "bootstrap_ci": "e02263ee93d5def54e2848804f7891082353a76144a3bc2df9f0f32a2e7913fa",
+    "decision_summary": "a488797a7f8ad9b32cbddc8082f7224a974cf2a9cc8095fc3e1876dce639dfc9"
+  },
+  "important_interpretation_limits": [
+    "R17 evaluates image-level detector/selective-filter robustness, not detector-to-tracker-to-forecast end-to-end performance.",
+    "COCO animal classes are external OOD stressors relative to the 4-class checkpoint; success does not imply universal unseen-species robustness.",
+    "The 9-image elephant+lion set is a small supplementary in-vocabulary challenge only.",
+    "No formal non-inferiority margin was pre-specified for recall/sensitivity; absence of a significant loss is not proof of non-inferiority.",
+    "AP values are descriptive comparisons; no AP bootstrap significance rule was pre-locked."
+  ],
+  "outputs": {
+    "image_level_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_IMAGE_LEVEL_METRICS.csv",
+    "primary_conf025_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_PRIMARY_CONF025_METRICS.csv",
+    "group_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_GROUP_METRICS.csv",
+    "m5_gap": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_M5_MIXED_VS_CONTROL_RECALL_GAP.csv",
+    "ap_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_AP_METRICS.csv",
+    "per_confuser_pair": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_PER_CONFUSER_PAIR_METRICS.csv",
+    "supplementary_metrics": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_SUPPLEMENTARY_IN_VOCAB_METRICS.csv",
+    "selective_filter_ablation": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_SELECTIVE_FILTER_ALARM_ABLATION.csv",
+    "bootstrap_ci": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_PAIRED_BOOTSTRAP_CI.csv",
+    "decision_summary": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R17_mixed_species_robustness\\R17D_locked_metric_evaluation\\R17D_DECISION_SUMMARY.csv"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "step": "R16A_COMPUTATIONAL_LATENCY_AUDIT",
+  "created_utc": "2026-10-30T13:23:57.150698+00:00",
+  "status": "R16A_COMPUTATIONAL_LATENCY_AUDIT_COMPLETE_CPU_TIMING_LOCKED_READY_FOR_R16B_OPERATIONAL_RESPONSE_LATENCY_CONTEXT",
+  "training": false,
+  "new_inference": false,
+  "tuning": false,
+  "device": "CPU",
+  "source_fps": 30.0,
+  "target_fps": 10.0,
+  "source_frame_budget_ms": 33.333333333333336,
+  "target_frame_budget_ms": 100.0,
+  "byte_track_weighted_ms_per_frame": 114.48651808726636,
+  "byte_track_effective_fps": 8.734652924266232,
+  "botsort_weighted_ms_per_frame": 128.7975620423035,
+  "botsort_effective_fps": 7.7641221164694905,
+  "operational_response_time_claim_allowed": false,
+  "outputs": {
+    "per_sequence_wallclock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_PER_SEQUENCE_WALLCLOCK_LATENCY.csv",
+    "aggregate_wallclock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_AGGREGATE_WALLCLOCK_LATENCY.csv",
+    "ultralytics_reported_times": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_ULTRALYTICS_REPORTED_MODEL_TIMES.csv",
+    "warning_horizon_compute_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_WARNING_HORIZON_COMPUTE_CONTEXT.csv",
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_LATENCY_CLAIM_MATRIX.csv",
+    "manuscript_interpretation": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R16_latency\\R16A_computational_latency_audit\\R16A_MANUSCRIPT_READY_LATENCY_INTERPRETATION.txt"
+  }
+}

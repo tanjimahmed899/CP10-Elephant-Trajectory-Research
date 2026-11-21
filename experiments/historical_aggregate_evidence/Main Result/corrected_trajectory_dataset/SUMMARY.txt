@@ -1,0 +1,37 @@
+CAMERA-CORRECTED TRAJECTORY SUMMARY
+======================================================================
+
+Correction strategy:
+KLT+RANSAC reliable transforms retained.
+Unreliable runs <=5 frames interpolated between reliable transforms.
+Longer/unresolved transform gaps rejected.
+Each forecast window uses its own observation-start frame as the local anchor.
+
+2s_to_2s train_real
+Total: 913
+Accepted: 636 (69.66%)
+Core: 531
+Extended: 105
+Rejected: 277
+
+2s_to_2s test_real
+Total: 1070
+Accepted: 1068 (99.81%)
+Core: 1053
+Extended: 15
+Rejected: 2
+
+2s_to_5s train_real
+Total: 684
+Accepted: 493 (72.08%)
+Core: 382
+Extended: 111
+Rejected: 191
+
+2s_to_5s test_real
+Total: 827
+Accepted: 826 (99.88%)
+Core: 826
+Extended: 0
+Rejected: 1
+

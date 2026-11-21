@@ -1,0 +1,23 @@
+{
+  "step": "R9G_V3A_CORRECTED_BUILDER_FORMULA_AUDIT",
+  "created_utc": "2026-10-29T10:09:06.045742+00:00",
+  "status": "R9G_V3A_CORRECTED_BUILDER_FORMULA_AUDIT_COMPLETE_READY_FOR_R9G_V3B_VALID_ISOTROPIC_REBUILD",
+  "new_training": false,
+  "isotropic_rebuild_performed": false,
+  "baseline_comparison_performed": false,
+  "bootstrap_performed": false,
+  "frozen_results_modified": false,
+  "corrected_builder": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_corrected_trajectories.py",
+  "corrected_builder_sha256": "3395a100b1199383a965216bfe8167e31b6d0382bdd82ced62edba3576c94b51",
+  "unified_builder": "E:\\AIUB\\Capstone Project\\Journal Based Results\\Main Result\\build_unified_10hz_dataset.py",
+  "unified_builder_sha256": "fd7b34868b877ef76e69acffed5010ca9ae2233af4b0851998a1dffe7c05b119",
+  "outputs": {
+    "builder_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_BUILDER_RELEVANT_CONTEXT.csv",
+    "unified_context": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_UNIFIED_RELEVANT_CONTEXT.csv",
+    "builder_functions": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_BUILDER_FUNCTION_INDEX.csv",
+    "builder_classified": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_BUILDER_CLASSIFIED_LINES.csv",
+    "unified_classified": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_UNIFIED_CLASSIFIED_LINES.csv",
+    "builder_full": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_BUILDER_FULL_SOURCE_LINES.csv",
+    "unified_full": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R9_canonicalization_isotropic_ablation\\R9G_V3A_corrected_builder_formula_lock\\R9G_V3A_UNIFIED_FULL_SOURCE_LINES.csv"
+  }
+}

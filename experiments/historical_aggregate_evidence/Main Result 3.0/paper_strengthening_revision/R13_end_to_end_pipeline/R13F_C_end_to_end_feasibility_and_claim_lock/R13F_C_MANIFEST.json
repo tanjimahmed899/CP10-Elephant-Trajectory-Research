@@ -1,0 +1,27 @@
+{
+  "step": "R13F_C_END_TO_END_FEASIBILITY_AND_CLAIM_LOCK",
+  "created_utc": "2026-10-30T13:20:56.269663+00:00",
+  "status": "R13_END_TO_END_FEASIBILITY_FULLY_ASSESSED_DETECTOR_BOTTLENECK_LOCKED_REPRESENTATIVE_FORECAST_PROPAGATION_NOT_SUPPORTED_READY_FOR_NEXT_STRENGTHENING_STEP",
+  "training": false,
+  "new_inference": false,
+  "tuning": false,
+  "historical_pipeline_end_to_end_claim": false,
+  "new_r13_detector_tracker_execution_complete": true,
+  "representative_forecast_propagation_supported": false,
+  "representative_warning_propagation_supported": false,
+  "dominant_observed_bottleneck": "detector domain-transfer / coverage on BIRDSAI TestReal",
+  "raw_detector_recall_iou050": 0.05058786806783894,
+  "raw_detector_count_upper_bound_recall": 0.0892310893767558,
+  "max_tracker_2s_windows": 2,
+  "max_tracker_5s_windows": 0,
+  "max_tracker_2s_coverage_vs_historical": 0.001899335232668566,
+  "max_tracker_5s_coverage_vs_historical": 0.0,
+  "r14_tracking_metrics_requirement": "satisfied by R13-E",
+  "r15_representative_error_propagation": "not estimable due inadequate tracker-derived temporal coverage",
+  "outputs": {
+    "claim_matrix": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_C_end_to_end_feasibility_and_claim_lock\\R13F_C_CLAIM_MATRIX.csv",
+    "roadmap_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_C_end_to_end_feasibility_and_claim_lock\\R13F_C_ROADMAP_LOCK.csv",
+    "manuscript_ready_conclusion": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_C_end_to_end_feasibility_and_claim_lock\\R13F_C_MANUSCRIPT_READY_CONCLUSION.txt",
+    "evidence_hash_lock": "C:\\Users\\HP\\Downloads\\paper_strengthening_revision\\R13_end_to_end_pipeline\\R13F_C_end_to_end_feasibility_and_claim_lock\\R13F_C_EVIDENCE_HASH_LOCK.csv"
+  }
+}

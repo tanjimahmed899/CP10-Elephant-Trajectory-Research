@@ -1,0 +1,29 @@
+STEP 6D-K1R — SYNCHRONIZED JUMP / CAMERA-POSE DISCONTINUITY AUDIT
+==================================================================================
+
+ROBUST-JUMP TRANSITION COUNTS
+-----------------------------
+ frame_from  frame_to  robust_jump_tracks  robust_jump_steps  median_flagged_speed_mps  max_flagged_speed_mps
+       3092      3093                  16                 16                 51.544941              68.260414
+       1034      1035                  11                 11                 76.780090              86.472882
+       1033      1035                   3                  3                 44.249505              45.047632
+        989       990                   1                  1                 28.475003              28.475003
+
+SYNCHRONIZED EVENT AUDIT
+------------------------
+ frame_from  frame_to  frame_gap  dt_sec  robust_jump_tracks  robust_jump_steps  median_flagged_speed_mps  max_flagged_speed_mps  pose_available  cam_translation_m  rot_delta_norm_deg  rot0_delta_deg  rot1_delta_deg  rot2_delta_deg  local_pose_pairs  local_median_cam_translation_m  local_p95_cam_translation_m  local_median_rot_delta_norm_deg  local_p95_rot_delta_norm_deg  shared_raw_tracks  median_raw_shift_px  p95_raw_shift_px  raw_direction_coherence  shared_world_tracks  median_world_shift_m  p95_world_shift_m  world_direction_coherence  median_world_speed_mps  cam_translation_vs_local_median  rotation_vs_local_median  synchronized_multi_track_event
+       3092      3093          1   0.034                  16                 16                 51.544941              68.260414            True           0.104549            0.002532        0.000000             0.0       -0.002532                10                        0.098548                     0.119017                          0.00600                      0.018925                 16            47.005319         52.531593                 0.997656                   16              1.752524           2.155532                   0.996720               51.544941                         1.060895                  0.421917                            True
+       1034      1035          1   0.034                  11                 11                 76.780090              86.472882            True           0.214265            0.063243        0.022937             0.0        0.058937                10                        0.097794                     0.113345                          0.01725                      0.037510                 11            53.037722         58.857242                 0.997973                   11              2.610517           2.886107                   0.997588               76.780090                         2.190979                  3.666260                            True
+       1033      1035          2   0.068                   3                  3                 44.249505              45.047632            True           0.315688            0.101155        0.039937             0.0        0.092937                12                        0.098439                     0.162073                          0.01750                      0.049367                 14            55.051104         57.167723                 0.997401                   14              2.725322           3.100214                   0.995450               40.078359                         3.206928                  5.780262                            True
+        989       990          1   0.034                   1                  1                 28.475003              28.475003            True           0.101028            0.000000        0.000000             0.0        0.000000                10                        0.099505                     0.115859                          0.00000                      0.010714                 10            10.018099         15.408614                 0.880089                   10              0.518836           0.825525                   0.908143               15.259919                         1.015301                       NaN                           False
+
+PROPOSED SEGMENTATION BREAKS — NOT APPLIED
+------------------------------------------
+ break_before_frame  event_frame_from  event_frame_to  robust_jump_tracks                                                                              reason  applied
+               3093              3092            3093                  16 synchronized_multi_track_world_jump; candidate global pose/projection discontinuity    False
+               1035              1034            1035                  11 synchronized_multi_track_world_jump; candidate global pose/projection discontinuity    False
+               1035              1033            1035                   3 synchronized_multi_track_world_jump; candidate global pose/projection discontinuity    False
+
+VERDICT
+-------
+SYNCHRONIZED_GLOBAL_DISCONTINUITY_EVIDENCE_FOUND
