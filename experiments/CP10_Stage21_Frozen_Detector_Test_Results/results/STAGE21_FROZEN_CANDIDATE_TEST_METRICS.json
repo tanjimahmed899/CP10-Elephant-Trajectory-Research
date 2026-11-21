@@ -1,0 +1,66 @@
+{
+  "agreement_to_one_decimal_percent": {
+    "mAP50": true,
+    "mAP50_95": true,
+    "precision": true,
+    "recall": true
+  },
+  "all_four_agree_at_one_decimal": true,
+  "candidate_dataset_annotations": 4477,
+  "candidate_dataset_config_sha256": "dbc64441fd4112d6e8690c2fbaebaaeb0da86816d2309c2106d6240f9668cf48",
+  "candidate_dataset_images": 3280,
+  "checkpoint_sha256": "1d2eb19d22da78e82a92fcfb3a44ab87b78c5690d7d9caef6e0f55fba26d1055",
+  "classification": "NEW_FROZEN_CANDIDATE_TEST_NUMERICAL_CORROBORATION_NOT_ORIGINAL_PROTOCOL_RECONSTRUCTION",
+  "difference_percentage_points": {
+    "mAP50": 0.042,
+    "mAP50_95": 0.0322,
+    "precision": 0.0217,
+    "recall": -0.0349
+  },
+  "evaluated_test_annotations": 432,
+  "evaluated_test_images": 329,
+  "evaluation_protocol": {
+    "augment": false,
+    "batch": 8,
+    "confidence_threshold_for_ap": 0.001,
+    "device": "cpu",
+    "imgsz": 640,
+    "max_det": 300,
+    "nms_iou_threshold_NOT_AP_matching_IoU": 0.7,
+    "plots": false,
+    "rect": true,
+    "save_json": false,
+    "test_split": "test",
+    "workers": 0
+  },
+  "historical_reported_percent_context_only": {
+    "mAP50": 94.0,
+    "mAP50_95": 69.8,
+    "precision": 91.8,
+    "recall": 88.4
+  },
+  "independent_original_protocol_replication_claimed": false,
+  "input_evaluation_summary_sha256": "0951358d967f83ffa79bedd7dc3b9fbea10aa3050467c3b7489554a4fe1a2020",
+  "metrics_percent": {
+    "mAP50": 94.042,
+    "mAP50_95": 69.8322,
+    "precision": 91.8217,
+    "recall": 88.3651
+  },
+  "negative_images_empty_labels": 56,
+  "note": "The result numerically agrees with historical rounded metrics. The original training data YAML and historical evaluation command are unavailable; candidate-test validation is not proof of original-protocol reproduction.",
+  "original_historical_test_command_reconstructed": false,
+  "original_training_dataset_identity_verified": false,
+  "raw_dataset_or_weights_included": false,
+  "software_versions": {
+    "PyYAML": "6.0.4",
+    "numpy": "2.5.4",
+    "opencv-python": "5.1.0.95",
+    "python": "3.12.3",
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "ultralytics": "8.4.216"
+  },
+  "test_image_cross_split_byte_duplicates": 0,
+  "test_image_label_snapshot_sha256": "0d395d4edc956e54c5bc20d566b393f8999d8337527ae2d008234d0c183e1b08"
+}
