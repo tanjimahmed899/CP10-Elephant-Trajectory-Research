@@ -1,0 +1,27 @@
+{
+  "phase6_status": "DRAFT_PROTOCOL_CREATED_NO_NEW_ELEPHANT_DATA_NO_CONFIRMATORY_ANALYSIS",
+  "generation_date": "2026-11-22",
+  "actual_historical_source_sha256": {
+    "Phase5_policy_lock": "6d3cbc47a747b47b8b46532041e49768979e21941d5d9261649071a7df0a4d6d",
+    "Phase5_selected_comparison": "3c260341b03d200feae722f16cf83c27de61de1c83050a2525bf65f11e4fe50b",
+    "Step7G_operating_rule": "c7c94af84ee31b55a6b7e6ab35d3d0c0b5fae7f27ac65c1b53235e61ef6e40ad",
+    "Step6C_calibration_scores": "6e8350d767aadb976ff248b38a9a2c699147705ab2c51bc880ca6758715fdf66",
+    "Stage4_6_7_results_pdf": "4a917a7a007a0fe742b9f5fe1023094ff791f2bd8706034d74dcca72992de223",
+    "Original_2026_11_21_manuscript": "85010bd97aafe2068869efc8a9c698a40addc21f5f97ba333ee26ae201553ad2",
+    "Phase4_corrected_manuscript": "2a59751324139261820aaff1ad5ebe71fae2bb60322f0bd8c893a8cebea37a06"
+  },
+  "historical_q90_and_candidate_exactly_match_phase5_lock": true,
+  "source_equivalent_geometry": "moving_anchor",
+  "fixed_reference_geometry": "distinct secondary endpoint; no source-exact test rows provided",
+  "software_unit_tests": "5 passed; synthetic software unit tests only",
+  "word_document_pages": 5,
+  "unmet_gates": [
+    "supervisor approval",
+    "public or externally timestamped preregistration",
+    "untouched new elephant recording groups",
+    "verified prospective case labels/forecasts",
+    "new-group event annotation and geometry",
+    "prospective statistical power plan"
+  ],
+  "interpretation": "No new experimental results, and no performance claim may be made from software unit tests."
+}

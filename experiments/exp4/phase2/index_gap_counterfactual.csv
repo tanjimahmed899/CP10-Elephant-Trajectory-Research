@@ -1,0 +1,13 @@
+dataset,task,approach,instances,actual_crossings,tp,fp,fn,tn,sensitivity,far,precision,affected_windows,true_crossing_windows,already_nominal_alert_windows
+BIRDSAI_TestReal,2s_to_2s,original,6318,255,210,2126,45,3937,0.8235294117647058,0.35065149266039913,0.0898972602739726,,,
+BIRDSAI_TestReal,2s_to_2s,removed_after_gap,,,,,,,,,,109,31,9
+BIRDSAI_TestReal,2s_to_2s,strict_index_adjacency,6318,255,185,2051,70,4012,0.7254901960784313,0.33828137885535214,0.08273703041144902,,,
+BIRDSAI_TestReal,2s_to_5s,original,4956,384,320,1397,64,3175,0.8333333333333334,0.3055555555555556,0.186371578334304,,,
+BIRDSAI_TestReal,2s_to_5s,removed_after_gap,,,,,,,,,,90,31,18
+BIRDSAI_TestReal,2s_to_5s,strict_index_adjacency,4956,384,299,1346,85,3226,0.7786458333333334,0.29440069991251094,0.1817629179331307,,,
+WildBox_Fresh,2s_to_2s,original,5190,288,250,1819,38,3083,0.8680555555555556,0.37107303141574866,0.1208313194780087,,,
+WildBox_Fresh,2s_to_2s,removed_after_gap,,,,,,,,,,41,24,7
+WildBox_Fresh,2s_to_2s,strict_index_adjacency,5190,288,230,1805,58,3097,0.7986111111111112,0.3682170542635659,0.11302211302211303,,,
+WildBox_Fresh,2s_to_5s,original,3822,377,291,1067,86,2378,0.7718832891246684,0.3097242380261248,0.21428571428571427,,,
+WildBox_Fresh,2s_to_5s,removed_after_gap,,,,,,,,,,26,15,5
+WildBox_Fresh,2s_to_5s,strict_index_adjacency,3822,377,280,1057,97,2388,0.7427055702917772,0.30682148040638607,0.2094240837696335,,,

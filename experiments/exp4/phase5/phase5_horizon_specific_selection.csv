@@ -1,0 +1,3 @@
+task,policy,development_recall,development_fpr
+2s_to_2s,clearance_rho_0.75_available,0.8,0.26307108692066633
+2s_to_5s,clearance_rho_1_available,0.8333333333333334,0.3055555555555556

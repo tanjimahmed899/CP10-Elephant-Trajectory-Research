@@ -1,0 +1,5 @@
+population,TP,FP,FN,TN,sensitivity_pct,false_alert_rate_pct,precision_pct,evaluation_unit
+TestReal 2 s,210,2126,45,3937,82.3529,35.0651,8.9897,synthetic virtual-line instance
+TestReal 5 s,320,1397,64,3175,83.3333,30.5556,18.6372,synthetic virtual-line instance
+Fresh WildBox 2 s,250,1819,38,3083,86.8056,37.1073,12.0831,synthetic virtual-line instance
+Fresh WildBox 5 s,291,1067,86,2378,77.1883,30.9724,21.4286,synthetic virtual-line instance

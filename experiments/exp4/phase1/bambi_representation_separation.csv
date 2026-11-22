@@ -1,0 +1,5 @@
+representation,horizon,windows,coverage_reported_rounded,approx_covered_count_from_rounded_coverage,status
+original_metre,2s,1855,1.0,1855,SOURCE_PDF_REPORTED_NOT_INDEPENDENTLY_RECOMPUTED
+original_metre,5s,623,0.011236,7,SOURCE_PDF_REPORTED_NOT_INDEPENDENTLY_RECOMPUTED
+compatible_normalized,2s,1855,1.0,1855,SOURCE_PDF_REPORTED_NOT_INDEPENDENTLY_RECOMPUTED
+compatible_normalized,5s,623,0.025682,16,SOURCE_PDF_REPORTED_NOT_INDEPENDENTLY_RECOMPUTED

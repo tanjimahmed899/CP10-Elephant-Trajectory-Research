@@ -1,0 +1,37 @@
+{
+  "step": "EXP4_PHASE5_EXPLORATORY_SELECTION_FREEZE",
+  "status": "EXPLORATORY_NO_CONFIRMATORY_VALIDATION",
+  "source": "Step7B saved predictions + synthetic moving-anchor geofence case labels",
+  "source_csv_sha256": "9b95f4ff0972bb8ce7f7bdddcd343cafc91022f693e0e38f6f9555a52a18d4a2",
+  "method_name": "Forecast-clearance-gated N=2 uncertainty warning (heuristic)",
+  "nominal_crossing_red_unchanged": true,
+  "conformal_q90_frozen": {
+    "2s_to_2s": 2.158767888280567,
+    "2s_to_5s": 1.975129668255982
+  },
+  "uncertainty_candidate": "uncertainty_intersects_geofence AND oriented_risk_score >= -rho * absolute_conformal_radius",
+  "persistence": "two consecutive available forecast samples, scoped by dataset/task/source/track/axis/boundary/direction/boundary_id",
+  "horizon_specific_exploratory_rho": {
+    "2s_to_2s": 0.75,
+    "2s_to_5s": 1.0
+  },
+  "selection_method": "post-hoc select smallest FPR among grid rho=[.25,.5,.75,1.0], N2 available, satisfying >=0.80 recall on studied BIRDSAI_TestReal separately by horizon",
+  "not_preregistered": true,
+  "wildbox_fresh_previously_studied": true,
+  "do_not_claim": [
+    "novel conformal prediction theorem",
+    "improved calibration coverage",
+    "new independent elephant recording confirmation",
+    "fixed-physical-boundary evaluation",
+    "measured alerts per hour",
+    "real-time safe deployment",
+    "Q1 methodological novelty demonstrated"
+  ],
+  "future_requirements": [
+    "obtain new disjoint capture groups",
+    "lock reference frame geometry",
+    "separate development/calibration/untouched confirmation",
+    "measure episode-level false alerts and recall",
+    "report camera-aware valid-time intervals"
+  ]
+}

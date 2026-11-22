@@ -1,0 +1,13 @@
+task,held_out_group,method,calibration_tracks,test_tracks,calibration_low_tracks,calibration_high_tracks,test_low_tracks,test_high_tracks,empirical_whole_track_coverage,mean_radius,finite_radius,median_first_window_history_path_threshold
+2s_to_2s,elep1,"Pooled, track-unit",52,7,26,26,6,1,1.0,0.4704718192025967,True,0.1273318454544653
+2s_to_2s,elep1,"Mondrian, track-unit",52,7,26,26,6,1,1.0,0.36897446027200764,True,0.1273318454544653
+2s_to_2s,elep2,"Pooled, track-unit",42,17,21,21,0,17,0.47058823529411764,0.316274751597243,True,0.06389821574225305
+2s_to_2s,elep2,"Mondrian, track-unit",42,17,21,21,0,17,0.5294117647058824,0.3226775135719239,True,0.06389821574225305
+2s_to_2s,elep3,"Pooled, track-unit",24,35,12,12,26,9,1.0,0.6447221357770756,True,0.1471116913567754
+2s_to_2s,elep3,"Mondrian, track-unit",24,35,12,12,26,9,1.0,0.8013307700120575,True,0.1471116913567754
+2s_to_5s,elep1,"Pooled, track-unit",43,7,22,21,2,5,1.0,0.9219653337970792,True,0.0804948834929143
+2s_to_5s,elep1,"Mondrian, track-unit",43,7,22,21,2,5,1.0,0.8380041239189145,True,0.0804948834929143
+2s_to_5s,elep2,"Pooled, track-unit",34,16,17,17,0,16,0.375,0.3649672686638757,True,0.0626703883730385
+2s_to_5s,elep2,"Mondrian, track-unit",34,16,17,17,0,16,0.4375,0.5504075680853733,True,0.0626703883730385
+2s_to_5s,elep3,"Pooled, track-unit",23,27,12,11,24,3,1.0,1.0278665883823197,True,0.1443439016664817
+2s_to_5s,elep3,"Mondrian, track-unit",23,27,12,11,24,3,1.0,1.4908352733525292,True,0.1443439016664817

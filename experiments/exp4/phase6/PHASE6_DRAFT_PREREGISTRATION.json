@@ -1,0 +1,83 @@
+{
+  "protocol_title": "EXP4 Phase 6 independent recording-group confirmation: elephant trajectories and virtual-boundary warnings",
+  "version": "0.1-DRAFT",
+  "created_date_utc": "2026-11-22",
+  "status": "DRAFT_NOT_REGISTERED_NOT_EXECUTED",
+  "not_a_confirmatory_result": true,
+  "original_training_and_historical_test_groups": "BIRDSAI historical partitions and WildBox elep1/elep2/elep3 have already been inspected",
+  "legacy_source": "EXP4_Phase5_Method/PHASE5_EXPLORATORY_POLICY_LOCK.json",
+  "forecast_task": {
+    "resampling_hz": 10,
+    "observed_positions": 20,
+    "horizons_future_positions": {
+      "2s_to_2s": 20,
+      "2s_to_5s": 50
+    },
+    "nominal_output_stride_seconds": 1.0,
+    "clock_gap_tolerance_seconds": 0.1,
+    "coordinates": "camera-corrected normalized image plane; field-metric claims prohibited without verified georeferencing"
+  },
+  "locked_method_from_phase5": {
+    "alpha": 0.1,
+    "q90": {
+      "2s_to_2s": 2.158767888280567,
+      "2s_to_5s": 1.975129668255982
+    },
+    "n_available": 2,
+    "nominal_crossing_unmodified": true,
+    "baseline_rho": 1.0,
+    "candidate_rho_by_horizon": {
+      "2s_to_2s": 0.75,
+      "2s_to_5s": 1.0
+    },
+    "uncertainty_gate": "uncertainty_intersects AND oriented_risk_score >= -rho*absolute_conformal_radius",
+    "alarm_rule": "nominal_predicted_crossing OR last_two_available_uncertainty_candidates",
+    "prelocked_exploratory_selection": true,
+    "no_future_truth_used_in_alarm_decision": true
+  },
+  "primary_claim_to_test": "2-second clearance heuristic lowers moving-anchor virtual-boundary-instance FPR with a prespecified limit on recall loss on new recording groups",
+  "primary_evaluation_unit": "capture recording group; instance counts are nested and overlapping",
+  "primary_eval_scope": "new independent elephant RGB recording groups; source-equivalent moving-anchor synthetic-boundary instances; not physical fences",
+  "secondary_outcomes": [
+    "per-group 2-second precision and recall; instance rates descriptive",
+    "per-group 5-second frozen-q90 pathwise window coverage and width/radius",
+    "fixed-reference deduplicated crossing-event sensitivity and unassociated alert runs",
+    "track-macro and group-macro ADE/FDE",
+    "detection-to-track-to-strict-forecast-window yield",
+    "elapsed-time-sensitive N2 rule sensitivity analysis",
+    "alert runs per observed monitoring hour only if continuous timestamps and eligibility coverage are available"
+  ],
+  "research_design_targets_NOT_POWER_JUSTIFIED": {
+    "new_disjoint_calibration_groups_target": 3,
+    "new_untouched_confirmation_groups_target": 8,
+    "group_count_shortfall": "inconclusive; report per-group estimates and do not assert robust generalization",
+    "distinct_groups_from_all_elepx_earlier_evaluations": true
+  },
+  "primary_decision_criteria_PROPOSED_NOT_YET_APPROVED": {
+    "recall_noninferiority_absolute_margin": 0.05,
+    "false_alert_rate_superiority": "group-macro paired candidate - baseline must be < 0",
+    "confidence_interval_requirement": "paired group-level uncertainty reported; formal confirmation only if study adequately powered and CI supports both criteria",
+    "no_claim_from_pooled_instance_p_values": true
+  },
+  "rules_for_confirmation": [
+    "obtain supervisor-approved protocol and documented preregistration timestamp before viewing new test outcomes",
+    "freeze capture-group IDs, inclusion/exclusion rules, policy, metrics and software hashes before test access",
+    "separate development, optional new calibration, and untouched confirmation groups",
+    "never recalibrate q90 on confirmation groups",
+    "keep RGB and thermal or red-deer/human cross-domain findings separately labeled",
+    "avoid ground-distance or physical alert claims absent independent geometry and direct observation",
+    "report negative and inconclusive results without retuning"
+  ],
+  "open_gates": [
+    "no newly collected independent elephant recording groups supplied",
+    "no new per-instance moving-anchor forecast/GT table supplied; no validated fixed-reference case table either",
+    "no collection permissions or ethical approval documented",
+    "formal sample size/power and recall margin require supervisor review",
+    "external registration/timestamp evidence has not been created"
+  ],
+  "geometry_arms": {
+    "primary": "moving_anchor",
+    "secondary": "segment_fixed_reference (only after validated uncertainty transport and GT fixed-reference labels)",
+    "never_pool_between_geometry_arms": true
+  }
+}

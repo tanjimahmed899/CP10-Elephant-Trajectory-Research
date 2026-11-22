@@ -1,0 +1,38 @@
+{
+  "input_sha256": {
+    "step7b_v2_all_geofence_instance_alarms.csv": "9b95f4ff0972bb8ce7f7bdddcd343cafc91022f693e0e38f6f9555a52a18d4a2",
+    "TABLE_step7f_persistence_tradeoff.csv": "3d8ef15f3899cfb023d3b3fa53033c7fbc4c1bb5ec7b64e72ab8fe503c81470f",
+    "STEP7G_PROVISIONAL_OPERATING_RULE_LOCK.json": "c7c94af84ee31b55a6b7e6ab35d3d0c0b5fae7f27ac65c1b53235e61ef6e40ad"
+  },
+  "step7f_table_matches_json_hash": true,
+  "step7f_cell_checks": 256,
+  "step7f_mismatches": [],
+  "selection_according_to_code": 2,
+  "selection_in_uploaded_lock": 2,
+  "step7g_selection_match": true,
+  "full_csv_rows": 214956,
+  "primary_q90_rows_before_response_dedup": 107478,
+  "primary_q90_unique_instances": 20286,
+  "response_time_duplicate_inconsistent_labels": 0,
+  "stage7f_group_count": 2123,
+  "stage7f_groups_duplicate_sample_idx": 0,
+  "stage7f_groups_with_gaps": 208,
+  "stage7f_n2_persistent_intersection_after_index_gap": 266,
+  "stage7f_n2_persistent_intersection_total": 7384,
+  "step7h_group_count": 11258,
+  "step7h_groups_duplicate_index": 0,
+  "step7h_any_alert_disagreement_with_step7f_active_logic": 0,
+  "original_rows_by_population": {
+    "BIRDSAI_TestReal/2s_to_2s": 50544,
+    "BIRDSAI_TestReal/2s_to_5s": 69384,
+    "WildBox_Fresh/2s_to_2s": 41520,
+    "WildBox_Fresh/2s_to_5s": 53508
+  },
+  "source_code_methodology": "step7f_temporal_persistence_hysteresis_diagnostic.py and step7h_final_response_aware_with_locked_persistence.py (from uploaded All Python Code.zip)",
+  "limitations": [
+    "Retrospective test-set threshold selection",
+    "Window-level synthetic geofence metrics",
+    "No independent untouched elephant capture group",
+    "No online detector-to-warning end-to-end replay"
+  ]
+}

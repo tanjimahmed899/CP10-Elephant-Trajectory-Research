@@ -1,0 +1,25 @@
+{
+  "experiment": "exploratory decision layer only: frozen q90, do not infer calibrated coverage from warning metrics",
+  "source_csv_sha256": "9b95f4ff0972bb8ce7f7bdddcd343cafc91022f693e0e38f6f9555a52a18d4a2",
+  "source_original_script": "step7f_temporal_persistence_hysteresis_diagnostic.py",
+  "raw_rows": 214956,
+  "q90_rows_before_response_time_dedup": 107478,
+  "unique_q90_instances": 20286,
+  "scenario_groups": 2123,
+  "baseline_regression_checks": 20,
+  "baseline_regression_mismatches": 0,
+  "selection_criterion": "BIRDSAI TestReal post hoc exploratory: a single rho/mode with >=80% recall at both horizons; minimize macro mean FPR across horizons; WildBox Fresh descriptive replay only",
+  "selected_exploratory_policy": {
+    "policy": "clearance_rho_1_available",
+    "recall_2s": 0.8235294117647058,
+    "recall_5s": 0.8333333333333334,
+    "mean_fpr": 0.3281035241079774,
+    "mean_precision": 0.1381344193041383,
+    "eligible": true
+  },
+  "no_test_separation": "All four populations have previously been inspected, so no independent confirmatory inference is possible.",
+  "no_field_claim": "All labels are virtual image-plane boundaries, not physical/georeferenced conflict events.",
+  "no_time_claim": "Adjacent sample indices do not prove actual seconds of contiguous monitoring.",
+  "no_coverage_claim": "Thresholding uncertainty warning decisions does NOT modify or improve conformal pathwise coverage.",
+  "policy_basis": "No future labels, future GT, or event outcomes enter policy decisions; GT used for evaluation and post-hoc selection only."
+}

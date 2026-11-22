@@ -1,0 +1,21 @@
+{
+  "csv_rows": 96,
+  "task_counts": {
+    "2s_to_2s": 62,
+    "2s_to_5s": 34
+  },
+  "lock_status": "PROVISIONAL_CANDIDATE_SELECTED",
+  "sha256": {
+    "score_csv": "6e8350d767aadb976ff248b38a9a2c699147705ab2c51bc880ca6758715fdf66",
+    "lock_json": "c7c94af84ee31b55a6b7e6ab35d3d0c0b5fae7f27ac65c1b53235e61ef6e40ad"
+  },
+  "missing_to_verify_N2": [
+    "TABLE_step7f_persistence_tradeoff.csv",
+    "step7b_v2_all_geofence_instance_alarms.csv"
+  ],
+  "missing_to_verify_fixed_reference": [
+    "per-case raw crossing-labels and anchor reference transforms",
+    "GT 3-D centers, camera geometry/depth evidence"
+  ],
+  "limitation": "Quantiles recomputed from source CSV, no model re-training or untouched test performed."
+}
