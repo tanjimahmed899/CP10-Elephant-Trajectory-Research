@@ -85,3 +85,15 @@ warning system or universally superior forecaster.
 See:
 - experiments/wildlive_phase7e_to_7o/README.md
 - docs/analysis/EXP4_PHASE3_MANUSCRIPT_AUDIT_STATUS.md
+
+## Representative WildLive annotated elephant figures
+
+Six selected, SHA-256-verified contact sheets are indexed under
+[`figures/wildlive_annotated_examples/`](figures/wildlive_annotated_examples/README.md).
+These are **dataset-annotation/visual-QA examples**, not detector or tracker
+predictions. They are **not** proof of independent capture groups, model
+accuracy or field deployment. WildLive frame indices must not be interpreted
+as seconds without verified cadence. Original third-party videos and raw
+frame archives are not redistributed here. The source data catalogue lists
+the Non-Commercial Government Licence; see figure-level attribution and
+conditions, which are **separate** from any eventual licence for project code.
