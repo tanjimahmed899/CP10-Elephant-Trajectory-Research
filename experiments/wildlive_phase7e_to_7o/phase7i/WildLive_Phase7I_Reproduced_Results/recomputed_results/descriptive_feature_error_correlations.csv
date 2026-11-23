@@ -1,0 +1,17 @@
+sequence,horizon_frames,feature,n_windows,spearman_rho_descriptive
+DJI_0204_video2,20,mean_step_norm_per_frame,1272,0.348063527241
+DJI_0204_video2,20,straightness,1272,0.429036671674
+DJI_0204_video2,20,ols_line_residual_norm,1272,-0.239999489698
+DJI_0204_video2,20,acceleration_rms_norm_per_frame2,1272,-0.201119103019
+DJI_0204_video2,50,mean_step_norm_per_frame,1152,0.295093215021
+DJI_0204_video2,50,straightness,1152,0.363994678603
+DJI_0204_video2,50,ols_line_residual_norm,1152,-0.0524312873605
+DJI_0204_video2,50,acceleration_rms_norm_per_frame2,1152,-0.0695361692236
+DJI_0207,20,mean_step_norm_per_frame,2487,-0.0676881144488
+DJI_0207,20,straightness,2487,-0.102733008508
+DJI_0207,20,ols_line_residual_norm,2487,-0.0548117971417
+DJI_0207,20,acceleration_rms_norm_per_frame2,2487,-0.0527391490392
+DJI_0207,50,mean_step_norm_per_frame,2397,-0.155174222261
+DJI_0207,50,straightness,2397,-0.104656235185
+DJI_0207,50,ols_line_residual_norm,2397,-0.156933652463
+DJI_0207,50,acceleration_rms_norm_per_frame2,2397,-0.0820288334851

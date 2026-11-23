@@ -1,0 +1,15 @@
+{
+  "source_code_zip": "All Python Code.zip",
+  "source_code_scripts_inspected": [
+    "train_transformer.py", "evaluate_transformer_ensemble.py",
+    "R9B_exact_normalization_source_recovery_and_lock.py",
+    "R9I_B_exact_model_hyperparameter_split_and_checkpoint_lock_FRESH_COPY.py"
+  ],
+  "exp3_source_zip": "EXP3_Output_Review.zip",
+  "exp3_main_script": "scripts/exp3_frozen_forecaster_adapter.py",
+  "phase7e_reproduced_zip": "WildLive_Phase7E_Reproduced_Results.zip",
+  "phase7e_npz_sha256": "35b2ae5a4b28d3fbfc6de0b6d657d177dbdf5c543461fb2b70f55e612512fa8e",
+  "checkpoint_files_present_in_source_archives": 0,
+  "checkpoint_evaluation_performed": false,
+  "note": "No pretrained weights were present in supplied archives; all pretrained model metrics are unavailable."
+}

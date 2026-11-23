@@ -1,0 +1,142 @@
+{
+  "alpha": 25.0,
+  "experts": [
+    "stationary",
+    "cv_ols",
+    "transformer_ensemble"
+  ],
+  "feature_clip_z": 4,
+  "feature_mean": [
+    -3.098021991934848,
+    0.4451269910068107,
+    -3.1019147488197154,
+    -2.875536943418037,
+    1.4992149969362216,
+    -3.5439885310408856,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.010526315789473684,
+    0.0
+  ],
+  "feature_std": [
+    0.2907475070556861,
+    0.23863359491448954,
+    0.33259084130594063,
+    0.3490555536924344,
+    0.4412522058179877,
+    0.3100734762750371,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.10205641805087008,
+    1.0
+  ],
+  "feature_transforms": [
+    "log",
+    "plain",
+    "log",
+    "log",
+    "plain",
+    "log"
+  ],
+  "features": [
+    "mean_step_norm_per_frame",
+    "straightness",
+    "ols_line_residual_norm",
+    "acceleration_rms_norm_per_frame2",
+    "mean_abs_turn_rad",
+    "ols_velocity_norm_per_frame"
+  ],
+  "fill": {
+    "acceleration_rms_norm_per_frame2": 0.00104180311928,
+    "mean_abs_turn_rad": 1.52120904782,
+    "mean_step_norm_per_frame": 0.000711685077778,
+    "ols_line_residual_norm": 0.000850442066508,
+    "ols_velocity_norm_per_frame": 0.000319858045805,
+    "straightness": 0.438861508908
+  },
+  "global_best_train_expert": "cv_ols",
+  "history_frames": 20,
+  "horizon_frames": 20,
+  "n_nonoverlap_train_windows": 95,
+  "selection_criterion": "smallest_predicted_log_ADE",
+  "source_data_sha256": "a2fffea9b31186f4ac7b7490686fede82757ba61ac5c969742cfff260b8f81ac",
+  "status": "DEVELOPMENT_ONLY_NOT_INDEPENDENTLY_VALIDATED",
+  "target": "log(ADE+1e-6)",
+  "train_sequences": [
+    "DJI_0204_video2",
+    "DJI_0207"
+  ],
+  "trained_using": "DJI_0207 and DJI_0204_video2, previously inspected",
+  "training_tracks": 7,
+  "weights": [
+    [
+      -5.644005695857369,
+      -6.020205334648924,
+      -5.74070283130924
+    ],
+    [
+      0.1680198813877157,
+      0.13953555258985464,
+      0.14772821944871936
+    ],
+    [
+      0.06227192390218284,
+      -0.1015970476495899,
+      0.02100775472444997
+    ],
+    [
+      -0.0006313598273696679,
+      0.36080889364260804,
+      0.09878264885974554
+    ],
+    [
+      0.050810467209812145,
+      0.035544732538078,
+      0.036051082178946134
+    ],
+    [
+      -0.12417059754192983,
+      -0.04129846305349903,
+      -0.10283033747735466
+    ],
+    [
+      0.03887611263648394,
+      -6.223196652792949e-05,
+      -0.009051237864675151
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.0028305297195785444,
+      0.0039634303042223075,
+      -0.0017855902387794935
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ]
+}

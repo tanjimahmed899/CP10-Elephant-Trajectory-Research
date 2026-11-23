@@ -1,0 +1,27 @@
+{
+  "claim": "Retrospective experiment and development gate only; no independent confirmation",
+  "derived_files": {
+    "PHASE7J_SCIENTIFIC_DEVELOPMENT_REPORT.md": "12fa1040b77ee0a18143db7a0ec64de6c298b8170fee215e60d9b7943cd33e86",
+    "PHASE7K_PRE_REGISTER_NEW_DATA.md": "3584a819f686cd0ca3c382826a5ba6397b9a05ea25d82d5670abbbea3a13cc06",
+    "README_UBUNTU.md": "289ea783880689211138c31d904fff358291a5257d947624fd54652ff374dc24",
+    "examples/example_gate_choices_h20.csv": "0ea8ee9568d28280b94655898ec2d3feb01b4835a4d1f445e0c9b68fbef64824",
+    "examples/example_observation_features_h20.csv": "14a7077295dc41c9299c1893ecdc82de5dc79e7541a80b9f84c407016715878d",
+    "results/blocked_stress_per_track.csv": "353f565b675974e1ecd8d4f6ebc502091b94036e4a0647c6bc2cec5867eb83a9",
+    "results/blocked_stress_per_window.csv": "91d1850d004ed8f63962226e50bf9cf0174525c44317d8501618f9879af3ad40",
+    "results/blocked_stress_summary.csv": "33403a13d423d603e4141ec2b4bba5d0aa3689098252907b64a847293b850a1c",
+    "results/locked_models/phase7j_dev_gate_h20.json": "2988bf39a996016b1bd67026c7fe97ffa2756576114e007dcc5f2f047a5dd334",
+    "results/locked_models/phase7j_dev_gate_h50.json": "208d21c1d65734c5a96611eac4af7ea14bfd78d67f5f43f06c30d1bd2159e763",
+    "results/phase7j_blocked_comparison.png": "f0e6c25ea46c3045b3bb3b146d9c9fbeec5f47a5f1ee439e8aea2838976e7566",
+    "results/phase7j_manifest.json": "de8bac5d6b475fa0ee07c82a5ba658de6c7a4a71cd16b43aef50ccb5a5f446fe",
+    "src/phase7j.py": "dec23d4a763f8efed136e92520884ee2fa452ab6d475ec2869f01a035d4cbd31",
+    "src/test_phase7j.py": "cd1db8865be977d1c9fe4386ad4aa10acaa5bd5f848d3619a4c0465452f9c7ab"
+  },
+  "package_excludes": [
+    "raw elephant frames",
+    "raw annotations",
+    "Transformer .pt checkpoints"
+  ],
+  "phase": "7J",
+  "source_input": "WildLive_Phase7I_Reproduced_Results.zip",
+  "source_input_sha256": "a2fffea9b31186f4ac7b7490686fede82757ba61ac5c969742cfff260b8f81ac"
+}

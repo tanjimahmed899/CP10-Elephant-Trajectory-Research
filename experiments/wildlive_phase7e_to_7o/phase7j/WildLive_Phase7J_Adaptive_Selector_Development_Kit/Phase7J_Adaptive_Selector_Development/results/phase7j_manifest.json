@@ -1,0 +1,33 @@
+{
+  "adaptive_model_performs_real_time_inference": false,
+  "capture_group_independence_verified": false,
+  "checkpoint_weights_not_retrained": true,
+  "design": "two-fold leave-one-recording-out retrospective stress test; fixed ridge alpha 25",
+  "fps_verified": false,
+  "heldout_recordings_untouched": false,
+  "locked_models_trained_on_all_development_sequences": {
+    "phase7j_dev_gate_h20.json": "2988bf39a996016b1bd67026c7fe97ffa2756576114e007dcc5f2f047a5dd334",
+    "phase7j_dev_gate_h50.json": "208d21c1d65734c5a96611eac4af7ea14bfd78d67f5f43f06c30d1bd2159e763"
+  },
+  "model_input_strictly_observation_features": [
+    "mean_step_norm_per_frame",
+    "straightness",
+    "ols_line_residual_norm",
+    "acceleration_rms_norm_per_frame2",
+    "mean_abs_turn_rad",
+    "ols_velocity_norm_per_frame"
+  ],
+  "n_window_records": 7308,
+  "nonoverlap_train_stride": "history 20 + horizon (40 or 70) indexed start positions",
+  "note": "Forecast metric selection only; no conformal/alert evaluation, no physical-time mapping.",
+  "phase": "7J",
+  "results_not_for_statistical_significance": true,
+  "sequences": [
+    "DJI_0204_video2",
+    "DJI_0207"
+  ],
+  "source_phase7i_zip": "/mnt/data/WildLive_Phase7I_Reproduced_Results.zip",
+  "source_sha256": "a2fffea9b31186f4ac7b7490686fede82757ba61ac5c969742cfff260b8f81ac",
+  "training_group_disjoint_in_blocked_test": true,
+  "training_targets_future_ADE_used_only_in_fitting": true
+}

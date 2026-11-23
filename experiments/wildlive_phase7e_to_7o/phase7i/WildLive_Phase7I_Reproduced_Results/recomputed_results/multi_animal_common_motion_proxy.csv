@@ -1,0 +1,3 @@
+sequence,frames_with_all_tracks,adjacent_frame_pairs_used,n_elephants,mean_per_track_displacement_norm,median_per_track_displacement_norm,mean_common_mode_step_norm,mean_residual_step_norm,common_mode_over_animal_step_ratio
+DJI_0207,868,867,3,0.00144926727405,0.000859529495683,0.000890885299542,0.00101528034755,0.614714287346
+DJI_0204_video2,357,356,4,0.000546313970412,0.000454061192896,0.000380798676085,0.000397483332926,0.697032652849

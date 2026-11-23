@@ -1,0 +1,9 @@
+sequence,horizon_frames,total_windows,scale_floor_active_fraction,provenance
+DJI_0207,20,2487,0.975070365903,"archived preprocessing statistics, not camera-motion correction"
+DJI_0207,50,2397,0.972882770129,"archived preprocessing statistics, not camera-motion correction"
+DJI_0204_video2,20,1272,1,"archived preprocessing statistics, not camera-motion correction"
+DJI_0204_video2,50,1152,1,"archived preprocessing statistics, not camera-motion correction"
+DJI_0204_video1,20,1464,1,"archived preprocessing statistics, not camera-motion correction"
+DJI_0204_video1,50,1284,1,"archived preprocessing statistics, not camera-motion correction"
+DJI_0161_video1,20,1461,0.866529774127,"archived preprocessing statistics, not camera-motion correction"
+DJI_0161_video1,50,1431,0.849755415793,"archived preprocessing statistics, not camera-motion correction"

@@ -1,0 +1,87 @@
+{
+  "artifact": "Phase7M Authorless Scene-Grouping Alternative",
+  "source_media_bundled": false,
+  "phase7k_gate_or_checkpoint_retraining": false,
+  "files": [
+    {
+      "path": "PHASE7M_NO_AUTHOR_SCIENTIFIC_REPORT.md",
+      "sha256": "3ac9cd7fb79eafae098c66e02588a3bd78b1d26e3ad21e67def7bdaeab6eec51",
+      "bytes": 7571
+    },
+    {
+      "path": "README_UBUNTU.md",
+      "sha256": "323139e08e269d95ad6a10a1cc029d502dcffecd4adafc86c34132358b5cbd95",
+      "bytes": 3257
+    },
+    {
+      "path": "phase7m_download_json_census.sh",
+      "sha256": "e79b327968c12100e11fa9e69d59f217f09d86793229f09dd184bfc208a48124",
+      "bytes": 2285
+    },
+    {
+      "path": "protocol/PHASE7K_ORIGINAL_LOCK_DO_NOT_EDIT.json",
+      "sha256": "408022abb8923eb61afdf1eb665db8ba7bb02ce4258b21ae4a3fd89dab4abb5c",
+      "bytes": 4000
+    },
+    {
+      "path": "protocol/PROTOCOL_SHA256.txt",
+      "sha256": "0f239d7f4b612467b1211b5fcbb17c852203040cb48123fe14e74581608fee09",
+      "bytes": 105
+    },
+    {
+      "path": "protocol/wildlive_22_folders_prior_status.csv",
+      "sha256": "f38692e7e6beb8d62096e69f2ae1dd51c8991bad2521a4e78557b7a6197d566a",
+      "bytes": 4820
+    },
+    {
+      "path": "results/all_cross_recording_image_pairs.csv",
+      "sha256": "c14704e54fd7b79838be5363ccf7295d4e2d68f827fe8072d02dcce92e32d2ff",
+      "bytes": 17003
+    },
+    {
+      "path": "results/full_available_annotation_census.csv",
+      "sha256": "9b78d297051b11481ea91effaca5c703589ef0e6efb3e551c339dbaa644a4eb4",
+      "bytes": 632
+    },
+    {
+      "path": "results/prior_results_scope_table.csv",
+      "sha256": "c5666bd5d2f63b84a390458403ece5045a847ad50b6756686b4186db58e5859d",
+      "bytes": 1008
+    },
+    {
+      "path": "results/provisional_no_author_group_register.csv",
+      "sha256": "a663b9244e7db2c14aa6513f6f23274077894b9c937a65f708f24890d229aee5",
+      "bytes": 979
+    },
+    {
+      "path": "results/recording_pair_summary.csv",
+      "sha256": "f04cc1fa31d0807b8bc4e5abeb6ad4489dd517fc353a8e17d48f0f0818990817",
+      "bytes": 667
+    },
+    {
+      "path": "results/sample_image_metadata_presence.csv",
+      "sha256": "8d97d86584b05fe3ba8e008b954889b1e2624d8428abdc866ee3aa2ee10df38d",
+      "bytes": 2735
+    },
+    {
+      "path": "results/summary.json",
+      "sha256": "2dced34b3ac5f9ccf367473fa3d56d808a636c72f709d27c30c00c2b4f308a38",
+      "bytes": 1258
+    },
+    {
+      "path": "results/unit_tests.log",
+      "sha256": "fdaaca8ec098d0a3949c0707c420c17e3f54ea699ae233ef732ae8a69747ebee",
+      "bytes": 450
+    },
+    {
+      "path": "src/authorless_provenance.py",
+      "sha256": "d2f87e3aed4822e416947c9dd377c717cf1c66e5b1eb007612bfba52391e1fec",
+      "bytes": 10030
+    },
+    {
+      "path": "src/test_authorless.py",
+      "sha256": "d7f9869fee73e08930e05eb044a88658871ffd70ba06c9e7d6cd8859c79c0d12",
+      "bytes": 1768
+    }
+  ]
+}

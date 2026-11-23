@@ -1,0 +1,40 @@
+{
+  "phase": "7G",
+  "data": "WildLive DJI_0207; one capture group; unknown frame timing; uncorrected image-plane positions",
+  "input_phase7f_zip_sha256": "fc8909f24fea793f75f0a28229f2d9cb480ec777f035aba41778bb4d516427b7",
+  "input_phase7e_zip_sha256": "804b6ce1afa877322a18d88a8e8dcbd05358cdb29fdef56d1315e8cba9e505e9",
+  "phase7e_npz_sha256_matches_phase7f_manifest": true,
+  "phase7e_npz_sha256": "35b2ae5a4b28d3fbfc6de0b6d657d177dbdf5c543461fb2b70f55e612512fa8e",
+  "frozen_checkpoint_hashes_recorded_not_independently_rehashed": true,
+  "ZIP_CRC": "PASS",
+  "phase7f_summary_rows_recomputed": 64,
+  "input_window_rows": 4884,
+  "max_summary_absolute_difference": 5.204170427930421e-17,
+  "max_prediction_npz_vs_csv_absolute_difference": 4.007502124201909e-08,
+  "QA_flagged_window_counts": {
+    "20": 60,
+    "50": 90
+  },
+  "nonoverlap_phase_offsets": {
+    "20": {
+      "offsets": 40,
+      "T_better_fraction_across_offsets": 0.9,
+      "min_delta_ADE": -0.0007767729217598509,
+      "max_delta_ADE": 3.8299655493554e-05
+    },
+    "50": {
+      "offsets": 70,
+      "T_better_fraction_across_offsets": 0.02857142857142857,
+      "min_delta_ADE": -0.00018213848210689736,
+      "max_delta_ADE": 0.0032527423938399393
+    }
+  },
+  "invalid_claims": [
+    "seconds-based ADE",
+    "physical displacement error",
+    "independent recording inference",
+    "valid population CI from overlapping windows",
+    "image-plane motion equals elephant ground movement"
+  ],
+  "statistical_inference": "Not performed: one capture group, strongly overlapping windows, correlated tracks and camera motion."
+}

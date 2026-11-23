@@ -1,0 +1,57 @@
+{
+  "phase": "7N",
+  "scope": "descriptive/retrospective; no independent flight IDs or seconds-based forecasts",
+  "total_windows": 12948,
+  "windows_by_recording_and_horizon": [
+    {
+      "sequence": "DJI_0207",
+      "horizon_frames": 20,
+      "n_windows": 2487
+    },
+    {
+      "sequence": "DJI_0207",
+      "horizon_frames": 50,
+      "n_windows": 2397
+    },
+    {
+      "sequence": "DJI_0204_video2",
+      "horizon_frames": 20,
+      "n_windows": 1272
+    },
+    {
+      "sequence": "DJI_0204_video2",
+      "horizon_frames": 50,
+      "n_windows": 1152
+    },
+    {
+      "sequence": "DJI_0204_video1",
+      "horizon_frames": 20,
+      "n_windows": 1464
+    },
+    {
+      "sequence": "DJI_0204_video1",
+      "horizon_frames": 50,
+      "n_windows": 1284
+    },
+    {
+      "sequence": "DJI_0161_video1",
+      "horizon_frames": 20,
+      "n_windows": 1461
+    },
+    {
+      "sequence": "DJI_0161_video1",
+      "horizon_frames": 50,
+      "n_windows": 1431
+    }
+  ],
+  "n_consecutive_image_pairs": 8,
+  "n_animal_frame_pairs": 26,
+  "camera_bg_registration_qc_pass_pairs": 8,
+  "two_d_registration_not_ground_truth": true,
+  "n_verified_independent_capture_events": 0,
+  "prediction_coordinates_in_test_result_archives": false,
+  "camera_corrected_ADE_FDE_available": false,
+  "gate_retrained_in_7N": false,
+  "transformer_rerun_in_7N": false,
+  "claim": "no camera-corrected trajectory forecasting accuracy estimate from these sparse frames"
+}

@@ -1,0 +1,15 @@
+{
+  "PHASE7E_FRAME_BASED_FORECASTING_REPORT.md": "29464a752f3a58dccb72526a4c55431e7d23571ab73b90f50cba41061433547a",
+  "README.md": "4563ffd7616dd79e043c9416df84091cfd89f3dc92b22a2d3936f684b32968e4",
+  "outputs/DJI0207_frame_based_ADE_baselines.png": "e90dce2becec8671f881b2f713dede22e25e57e17e9fe9bb6ec563ea785ff9a0",
+  "outputs/DJI0207_raw_annotation_centre_tracks.png": "b19814266f117aee117663da0bbeefdeb88995450ebfe20143ae546c0ed9371e",
+  "outputs/audit_manifest.json": "dc009429957e32f94653593ecf7c411f059a458bbaa3c746e37a785d11199fad",
+  "outputs/baseline_summary.csv": "5837b47933c7d4c8b74149639dc002894310479756b87c8e669d60e0eeba3058",
+  "outputs/frame_based_windows_and_baselines.npz": "35b2ae5a4b28d3fbfc6de0b6d657d177dbdf5c543461fb2b70f55e612512fa8e",
+  "outputs/original_bbox_centres.csv": "0851e8efc86eee12b38d2eab9aedba66c48c959b35f2051d73626adbeea9dfa3",
+  "outputs/per_window_baseline_metrics.csv": "45e6019bfef4d9d76a2949c221a50713246d88fedf5707eac09b35035c4656b8",
+  "run_log.txt": "6ecb171e124c731a8eeb245e8aa04aae8f5ba52be6f1c2721d2067df80f2cf30",
+  "src/__pycache__/run_phase7e.cpython-313.pyc": "11c4fc23d9a29d7e342dc2d3b92b7f655fb7e2dc3b90955c91758dd36269fe12",
+  "src/run_phase7e.py": "879ce934aa0f2dbb021e121f27833164ff8fe0e1afa6354d0def954460267a2f",
+  "src/test_phase7e.py": "369c16f034ba942ac01b9352da4028f4df66c34c65811de9b992e9baf12fc3e3"
+}

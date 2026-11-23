@@ -1,0 +1,26 @@
+{
+  "zip_integrity": "PASS",
+  "source_annotation_zip_sha256_verified": true,
+  "checkpoint_sha256_and_size_manifest_matches": 6,
+  "summary_rows_verified": 40,
+  "per_window_rows": 2424,
+  "distinct_sequence_folders_compared": 2,
+  "capture_event_independence_verified": false,
+  "timestamp_fps_verified": false,
+  "actual_checkpoint_binaries_available_for_rehash": false,
+  "prediction_arrays_in_phase7h_upload": false,
+  "relative_ADE_pct_transformer_vs_cv_ols": {
+    "20": 120.8810153792144,
+    "50": 131.02630024723956
+  },
+  "nonoverlap_offset_transformer_better_than_cv_ols": {
+    "20": {
+      "better": 0,
+      "total": 40
+    },
+    "50": {
+      "better": 0,
+      "total": 70
+    }
+  }
+}

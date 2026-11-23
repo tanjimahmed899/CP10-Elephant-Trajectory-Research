@@ -1,0 +1,16 @@
+{
+  "files": {
+    "LOCKED_PROTOCOL.json": "8c1ec34ccb7d318ffe16a31f326824710891d788c3ec8873d22b88bb078ceac9",
+    "candidate_provenance_register.csv": "4e8532848610d832547913f88f8e62816ab977d8634eaf762dbe289fbc72fdd5",
+    "README_UBUNTU.md": "1f755c2a1437a207895a985d9e2d962ff6c2c8731dbab79c6cf8c500c8217d66",
+    "requirements.txt": "00aa0bb94b463b9ab4f3c44c015ea53ccb1611afe804dc31dca3a6ed559d2ee6",
+    "PHASE7H_EVIDENCE_AND_PROTOCOL.md": "4d5abcc8357650c6838be43edcbd5c92090ad9881ff209c35dfa761da4088125",
+    "checkpoint_lock.json": "df5ed8a5bad73d0313b29ec9f4250757b951871df8e5251f300b92eeae3c0a0e",
+    "results/unit_tests.log": "653b2a0c423e0b44f431888fdf89120aeeb4c5cab3ab876f38433663b8b1beea",
+    "src/phase7f_locked_reference.py": "cb8c0473da94cf43b5bb4811215ba335e3de5a974232f2262a73bc1660f19671",
+    "src/test_phase7h.py": "b2c545e43f77c87b6f0b6cb65d5a34205923a6226bd0dbfd65364652d57a8137",
+    "src/phase7h.py": "f8c1c93d8559cccc2bd633597532262bf328007ddbf9620f5f3ab52fc7b32a81",
+    "results/DJI_0207_regression_intake/intake_manifest.json": "e3cfc07ddaf5e434215376e42b735a5d4fe6690a7b3c0231080e9e52bb120dd3",
+    "results/DJI_0207_regression_intake/track_availability.csv": "238b60ed41574c1bf873bcb5366d2cbd11cc80d148fba02fc4b5da2bb0783238"
+  }
+}

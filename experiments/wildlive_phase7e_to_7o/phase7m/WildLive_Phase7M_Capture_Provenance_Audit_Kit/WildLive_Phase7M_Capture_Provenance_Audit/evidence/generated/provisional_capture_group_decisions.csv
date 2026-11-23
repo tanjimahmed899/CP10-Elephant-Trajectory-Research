@@ -1,0 +1,5 @@
+sequence_id,project_role,provisional_group,scene_overlap_with_development,flight_id_verified,original_video_time_verified,verified_fps,independent_of_development_capture_event,acceptable_independent_external_confirmation,rationale
+DJI_0207,DEVELOPMENT,UNRESOLVED_DJI0207,UNKNOWN_NOT_DISPROVEN,NO,NO,NO,NOT_ESTABLISHED,NO,Used for method development; cannot be untouched validation
+DJI_0204_video2,DEVELOPMENT,SCENE_FAMILY_0204_POTENTIALLY_LINKED,YES_WITH_DJI_0204_video1,NO,NO,NO,NOT_ESTABLISHED,NO,Used for method development; cannot be untouched validation
+DJI_0204_video1,RELATED_SCENE_EXPLORATORY,SCENE_FAMILY_0204_POTENTIALLY_LINKED,YES_WITH_DJI_0204_video2,NO,NO,NO,NOT_ESTABLISHED,NO,Same physical background scene documented; conservative grouping with development DJI_0204_video2
+DJI_0161_video1,EVALUATED_BUT_FLIGHT_INDEPENDENCE_UNVERIFIED,UNRESOLVED_DJI0161,UNKNOWN_NOT_DISPROVEN,NO,NO,NO,NOT_ESTABLISHED,NO,"No flight ID, verified capture timestamps, or author event mapping; results exploratory until provenance confirmed"

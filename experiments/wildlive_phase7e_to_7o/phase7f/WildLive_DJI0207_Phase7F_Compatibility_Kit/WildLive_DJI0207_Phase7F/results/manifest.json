@@ -1,0 +1,34 @@
+{
+  "phase": "7F",
+  "dataset": "WildLive DJI_0207",
+  "input_sha256": "35b2ae5a4b28d3fbfc6de0b6d657d177dbdf5c543461fb2b70f55e612512fa8e",
+  "input_path": "/mnt/data/WildLive_DJI0207_Phase7E/outputs/frame_based_windows_and_baselines.npz",
+  "timing_verified": false,
+  "data_origin": "WildLive bbox centres; no object world coordinates; no camera stabilization",
+  "interpretation": "exploratory frame-index-only; one capture group; overlapping windows",
+  "training_timing_context": "frozen legacy 10-Hz model; WildLive released frame cadence UNVERIFIED",
+  "model_architecture": "Compact Temporal Transformer (original archived Python implementation)",
+  "model_checkpoints": {
+    "2s_to_2s_Transformer_seed42.pt": null,
+    "2s_to_2s_Transformer_seed52.pt": null,
+    "2s_to_2s_Transformer_seed62.pt": null,
+    "2s_to_5s_Transformer_seed42.pt": null,
+    "2s_to_5s_Transformer_seed52.pt": null,
+    "2s_to_5s_Transformer_seed62.pt": null
+  },
+  "missing_checkpoints": [
+    "2s_to_2s_Transformer_seed42.pt",
+    "2s_to_2s_Transformer_seed52.pt",
+    "2s_to_2s_Transformer_seed62.pt",
+    "2s_to_5s_Transformer_seed42.pt",
+    "2s_to_5s_Transformer_seed52.pt",
+    "2s_to_5s_Transformer_seed62.pt"
+  ],
+  "canonical_roundtrip_max_abs": 9.963418978742311e-10,
+  "canonicalization_exact_task_floors": {
+    "2s_to_2s": 0.06820264416877736,
+    "2s_to_5s": 0.06732638773715147
+  },
+  "baseline_difference": "Phase7E CV20 uses endpoint slope; historical EXP3 CV uses OLS slope",
+  "status": "BLOCKED_MISSING_CHECKPOINTS"
+}

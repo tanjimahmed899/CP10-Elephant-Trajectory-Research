@@ -1,0 +1,7 @@
+sequence_id,sampled_frames,readable_samples,labels_in_samples,status,errors,full_recording_species_verified,flight_independence_verified
+DJI_0142_video1,"0,100,200,400,600",5,giraffe,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_0117_video1,"0,100,200,400,600",4,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,600:HTTPError,False,False
+DJI_0117_video4,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_0601_video4,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_0601_video5,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_20230719145816_0003_V_video2,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False

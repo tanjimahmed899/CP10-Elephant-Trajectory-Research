@@ -1,0 +1,9 @@
+sequence,horizon_frames,best_expert,best_ADE
+DJI_0161_video1,20,transformer_ensemble,0.0109335950914
+DJI_0161_video1,50,stationary,0.0204059256166
+DJI_0204_video1,20,cv_ols,0.00181757865124
+DJI_0204_video1,50,stationary,0.00462065291035
+DJI_0204_video2,20,cv_ols,0.00124606860395
+DJI_0204_video2,50,cv_ols,0.00227139703916
+DJI_0207,20,transformer_ensemble,0.00452197837957
+DJI_0207,50,stationary,0.00841647466942

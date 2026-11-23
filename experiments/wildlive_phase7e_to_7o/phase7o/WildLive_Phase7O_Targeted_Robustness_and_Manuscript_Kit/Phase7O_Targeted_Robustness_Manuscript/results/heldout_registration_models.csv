@@ -1,0 +1,25 @@
+sequence,frame_source,frame_target,method,n_matches,n_fit,n_heldout,median_heldout_error_resized_px,p90_heldout_error_resized_px,median_fit_error_resized_px,estimated_inlier_fraction,notes
+DJI_0207,389,390,translation,3844,2883,961,1.0,2.23606797749979,1.0,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,389,390,similarity,3844,2883,961,0.8576175251889736,2.1484655439518305,0.8582920813427309,0.9816163718348943,held-out ORB matches; same match set and split for all transforms
+DJI_0207,389,390,homography,3844,2883,961,0.4445796304711657,1.374496677010443,0.43864108021458564,0.9895941727367326,held-out ORB matches; same match set and split for all transforms
+DJI_0207,400,401,translation,3760,2821,939,1.199981689453125,2.44375654738615,1.20001220703125,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,400,401,similarity,3760,2821,939,0.8801191041887807,2.040948662235477,0.8891628120589223,0.9702233250620348,held-out ORB matches; same match set and split for all transforms
+DJI_0207,400,401,homography,3760,2821,939,0.7107739651002803,1.613957608383852,0.6909806900041724,0.9847571783055654,held-out ORB matches; same match set and split for all transforms
+DJI_0207,401,402,translation,3813,2860,953,1.20001220703125,2.9859619140625,1.1999969482421875,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,401,402,similarity,3813,2860,953,0.923343594034059,2.1925007965397056,0.9171594476493669,0.9006993006993007,held-out ORB matches; same match set and split for all transforms
+DJI_0207,401,402,homography,3813,2860,953,0.6332085275506392,1.7068855250003738,0.6356753494663989,0.987062937062937,held-out ORB matches; same match set and split for all transforms
+DJI_0207,858,859,translation,3553,2665,888,1.4654170499752457,2.933943658398164,1.4654160920837807,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,858,859,similarity,3553,2665,888,1.4893951925569144,2.710485264370814,1.5115536970582,0.7140712945590995,held-out ORB matches; same match set and split for all transforms
+DJI_0207,858,859,homography,3553,2665,888,0.7467238771072892,1.9395969549482908,0.7590133687503884,0.9816135084427767,held-out ORB matches; same match set and split for all transforms
+DJI_0207,859,860,translation,3520,2641,879,1.3251571846567247,2.668538621944706,1.3587701262919771,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,859,860,similarity,3520,2641,879,1.3088393029543075,2.52643099736909,1.3370722957565262,0.9651647103369936,held-out ORB matches; same match set and split for all transforms
+DJI_0207,859,860,homography,3520,2641,879,0.9332108275373661,1.9561844157918808,0.9362953845448009,0.9791745550927679,held-out ORB matches; same match set and split for all transforms
+DJI_0207,860,861,translation,3406,2553,853,1.341640787124624,2.23606797749979,1.3416407867775406,,held-out ORB matches; same match set and split for all transforms
+DJI_0207,860,861,similarity,3406,2553,853,1.0540390334354186,2.127353870360749,1.049280640719446,0.953779866823345,held-out ORB matches; same match set and split for all transforms
+DJI_0207,860,861,homography,3406,2553,853,0.8050749617355433,1.888346059381149,0.8443819539087937,0.9772816294555425,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,33,34,translation,3252,2440,812,1.44000244140625,5.740402576668499,1.44000244140625,,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,33,34,similarity,3252,2440,812,0.9768590426414747,4.86414863418219,1.0029164210575818,0.8356557377049181,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,33,34,homography,3252,2440,812,0.8159784248241619,4.977913011532077,0.8047175200202694,0.8610655737704918,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,303,304,translation,3429,2573,856,1.1999969497943956,2.395774322626136,1.2000000005587936,,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,303,304,similarity,3429,2573,856,0.893660808232476,1.9479593795793582,0.8949272777078301,0.9549164399533618,held-out ORB matches; same match set and split for all transforms
+DJI_0204_video2,303,304,homography,3429,2573,856,0.7573091675368062,1.8354757226533989,0.7719601691501351,0.9844539448115041,held-out ORB matches; same match set and split for all transforms

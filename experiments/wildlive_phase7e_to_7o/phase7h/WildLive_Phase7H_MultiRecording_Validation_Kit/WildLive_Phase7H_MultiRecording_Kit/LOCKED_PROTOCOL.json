@@ -1,0 +1,41 @@
+{
+  "protocol_id": "CP10-WildLive-Phase7H-v1",
+  "locked_on": "2026-11-22",
+  "status": "PROSPECTIVE_ADDITIONAL_RECORDINGS_PENDING",
+  "models": [
+    "stationary",
+    "cv20_endpoint",
+    "cv_ols_training_style",
+    "frozen_transformer_mean_ensemble_seeds_42_52_62"
+  ],
+  "frozen_checkpoints_sha256": {
+    "2s_to_2s_Transformer_seed42.pt": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+    "2s_to_2s_Transformer_seed52.pt": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+    "2s_to_2s_Transformer_seed62.pt": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+    "2s_to_5s_Transformer_seed42.pt": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+    "2s_to_5s_Transformer_seed52.pt": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+    "2s_to_5s_Transformer_seed62.pt": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a"
+  },
+  "data_representation": "bbox centre normalized independently by image width/height",
+  "preprocessing": "Exact phase7F canonicalization; origin last obs; last10 OLS heading; sum travel length scale floor; inverse to image plane",
+  "window_rule": "20 consecutive released frame IDs observed, 20/50 consecutive released future frame IDs; stride=1",
+  "primary_descriptive_comparison": "transformer vs stationary mean ADE by new independent capture group and horizon",
+  "secondary_metrics": [
+    "FDE",
+    "CV20",
+    "OLS CV",
+    "per-ID",
+    "camera-motion caveats"
+  ],
+  "independence_evidence_required": true,
+  "reported_inferential_unit": "independent capture event / herd / flight grouping after source review",
+  "not_allowed": [
+    "retrain or tune after seeing new sequence results",
+    "guess FPS",
+    "claim 2s/5s from filenames",
+    "claim field alerts",
+    "claim calibrated conformal coverage",
+    "claim significance from overlapping windows"
+  ],
+  "status_new_independent_groups": 0
+}

@@ -1,0 +1,44 @@
+{
+  "confirmed_independent_capture_events": 0,
+  "cross_recording_pairs": 223,
+  "note": "No match is not proof of independence; no source video/FPS/authoritative flight ID in these samples",
+  "parameters": {
+    "downsample": [
+      1024,
+      576
+    ],
+    "minimum_coverage": 0.015,
+    "minimum_fraction": 0.55,
+    "minimum_inliers": 80,
+    "orb_features": 3200,
+    "ransac_pixels": 4.0,
+    "ratio": 0.75
+  },
+  "positive_scene_links": [
+    [
+      "DJI_0204_video1",
+      "DJI_0204_video2"
+    ]
+  ],
+  "recording_pair_tests": 6,
+  "sampled_rgb_files": 25,
+  "scene_connected_components": [
+    [
+      "DJI_0207"
+    ],
+    [
+      "DJI_0204_video2",
+      "DJI_0204_video1"
+    ],
+    [
+      "DJI_0161_video1"
+    ]
+  ],
+  "source_zip_sha256": {
+    "DJI_0161_video1_visual_qa_frames.zip": "02c0516c64e25b255ebaa34698cc412415c426227b7951819c982ef89bb2a065",
+    "DJI_0204_video1_visual_qa_frames.zip": "9824b60be85401800a5798534f6b192b7856ba7d687d3b383fe61fb8b414bbf7",
+    "DJI_0204_video2_visual_QA_frames.zip": "df135a5bdd7ae631eaf0cd895b867cbe6f4100b115545b47d634ea8d665b356b",
+    "WildLive_DJI0207_priority_frames.zip": "4c823633eae9340eb485fbc9f68fa05142f131fdac2bfac746fd8a54d1550438"
+  },
+  "strong_shared_scene_image_pairs": 24
+}

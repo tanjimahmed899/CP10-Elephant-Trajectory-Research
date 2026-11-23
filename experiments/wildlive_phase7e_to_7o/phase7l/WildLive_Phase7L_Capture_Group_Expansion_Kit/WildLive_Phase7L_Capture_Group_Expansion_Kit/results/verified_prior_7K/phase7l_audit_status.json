@@ -1,0 +1,12 @@
+{
+  "phase": "7L",
+  "evaluated_recording_folders": 1,
+  "verified_independent_capture_groups": 0,
+  "group_independence": "NOT ESTABLISHED",
+  "primary_comparator": "CV-OLS",
+  "no_model_retraining": true,
+  "interpretation": "Descriptive across selected recording folders only, not independent capture event inference.",
+  "sequence_ids": [
+    "DJI_0161_video1"
+  ]
+}

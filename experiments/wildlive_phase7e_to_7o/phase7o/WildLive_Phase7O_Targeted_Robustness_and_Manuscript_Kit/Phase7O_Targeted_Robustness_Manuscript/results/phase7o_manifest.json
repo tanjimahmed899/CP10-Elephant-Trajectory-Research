@@ -1,0 +1,49 @@
+{
+  "phase": "7O",
+  "evaluated_pairs": 8,
+  "image_resized_dimensions": [
+    1536,
+    864
+  ],
+  "pair_selection": "previously targeted Phase7N pairs; nonrandom",
+  "threshold_registered_residual_px": 30.0,
+  "registered_heldout_matches": "25% within 4x4 spatial cells; fit solely on remaining 75%",
+  "records_per_method": 26,
+  "locked_predictor_retraining": false,
+  "new_forecasting_inference": false,
+  "new_camera_corrected_forecasting_ADE": false,
+  "new_independent_capture_events": false,
+  "scope": "Retrospective sampled-frame geometry model sensitivity and flagged-window descriptive error stratification",
+  "source_files": [
+    {
+      "filename": "DJI_0204_video2_boxid.zip",
+      "sha256": "e196356fb231aa520b63e709c9698b497bb0fa22edbbd94aacbe37b3a3ecd689",
+      "bytes": 245018
+    },
+    {
+      "filename": "DJI_0204_video2_visual_QA_frames.zip",
+      "sha256": "df135a5bdd7ae631eaf0cd895b867cbe6f4100b115545b47d634ea8d665b356b",
+      "bytes": 14510560
+    },
+    {
+      "filename": "Phase7F_Frozen_Results.zip",
+      "sha256": "fc8909f24fea793f75f0a28229f2d9cb480ec777f035aba41778bb4d516427b7",
+      "bytes": 1784594
+    },
+    {
+      "filename": "Phase7H_DJI0204_Frozen_Evaluation.zip",
+      "sha256": "45c27fcb933d5e54b6362a7c69ead9c5d5ed730c35408365bb8814a173a53b05",
+      "bytes": 195368
+    },
+    {
+      "filename": "WildLive_DJI0207_priority_frames.zip",
+      "sha256": "4c823633eae9340eb485fbc9f68fa05142f131fdac2bfac746fd8a54d1550438",
+      "bytes": 11929050
+    },
+    {
+      "filename": "WildLive_DJI_0207_boxid.zip",
+      "sha256": "ebfab57083f77f78955f14a10a9746a060c7873a9c3d3f0d618f1aa8b8d29350",
+      "bytes": 565169
+    }
+  ]
+}

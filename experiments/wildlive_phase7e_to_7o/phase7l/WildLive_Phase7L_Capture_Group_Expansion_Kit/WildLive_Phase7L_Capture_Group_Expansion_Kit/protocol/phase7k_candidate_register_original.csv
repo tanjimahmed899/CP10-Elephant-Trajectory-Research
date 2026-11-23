@@ -1,0 +1,23 @@
+sequence_id,sampled_species_label,evidence_scope,dataset_status,independence_verified,recording_FPS_verified,note
+DJI_0117_video1,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0117_video2,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0117_video3,zebra,historical limited user probe,sample only; not excluded by sample alone,NO,NO,Names do not prove independence; probe before full download
+DJI_0117_video4,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0119,zebra,official frame_0.json label,sample only,NO,NO,Names do not prove independence; probe before full download
+DJI_0133_video3,giraffe,official frame_0.json label,sample only,NO,NO,Names do not prove independence; probe before full download
+DJI_0142_video1,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0161_video1,elephant,official frame_0.json label,new candidate; provenance unverified,NO,NO,Names do not prove independence; probe before full download
+DJI_0204_video1,elephant,official frame_0.json label,related-development-risk,NO,NO,Names do not prove independence; probe before full download
+DJI_0204_video2,elephant,historical full ZIP and image QA,development; examined,NO,NO,Names do not prove independence; probe before full download
+DJI_0207,elephant,historical verified sample,development; examined,NO,NO,Names do not prove independence; probe before full download
+DJI_0601_video2,zebra,historical complete user ZIP,exclude elephant cohort,NO,NO,Names do not prove independence; probe before full download
+DJI_0601_video3,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0601_video4,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0601_video5,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_0601_video6,zebra,historical limited user probe,sample only; not excluded by sample alone,NO,NO,Names do not prove independence; probe before full download
+DJI_20230719145427_0002_V_video2,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_20230719145427_0002_V_video3,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_20230719145427_0002_V_video4,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_20230719145427_0002_V_video5,zebra,historical limited user probe,sample only; not excluded by sample alone,NO,NO,Names do not prove independence; probe before full download
+DJI_20230719145816_0003_V_video2,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download
+DJI_vlc-record-2025-01-03-14h37m50s-DJI_20240624153820_0001_V,unknown,no sample evidence,not yet screened,NO,NO,Names do not prove independence; probe before full download

@@ -1,0 +1,6 @@
+archive,frames_with_json,min_frame,max_frame,elephant_annotations,other_species_counts,unreadable_json,species_scope
+DJI_0161_video1_boxid.zip,1500,0,1499,1500,{},0,"full available annotation ZIP, not original video"
+DJI_0204_video1_boxid.zip,283,0,282,1698,{},0,"full available annotation ZIP, not original video"
+DJI_0204_video2_boxid.zip,357,0,356,1428,{},0,"full available annotation ZIP, not original video"
+DJI_0601_video2_boxid.zip,700,0,699,0,"{""zebra"": 15434}",0,"full available annotation ZIP, not original video"
+WildLive_DJI_0207_boxid.zip,868,0,867,2604,{},0,"full available annotation ZIP, not original video"

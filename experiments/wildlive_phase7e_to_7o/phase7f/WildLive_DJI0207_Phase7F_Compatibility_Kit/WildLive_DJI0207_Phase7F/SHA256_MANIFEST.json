@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "All Python Code.zip": "d802d819ddf757849acffe4241dfb5144bdf45d054f095dff4c247581db2071d",
+    "EXP3_Output_Review.zip": "eb718346da8344798b27d3175376b4bd9f739e5d32f1969da95fb0375e785d3e",
+    "WildLive_Phase7E_Reproduced_Results.zip": "804b6ce1afa877322a18d88a8e8dcbd05358cdb29fdef56d1315e8cba9e505e9",
+    "WildLive_DJI0207_Phase7E/outputs/frame_based_windows_and_baselines.npz": "35b2ae5a4b28d3fbfc6de0b6d657d177dbdf5c543461fb2b70f55e612512fa8e"
+  },
+  "generated": {
+    "README_UBUNTU.md": "f085408cedc70027a24d8d6486e702bf70cadd9318b56d6aac1b607cd82e1670",
+    "source_inventory.json": "593632bb888188a653e301a4cd798310988a7fec3224a504a44d50a49479e0ec",
+    "PHASE7F_SCIENTIFIC_COMPATIBILITY_REPORT.md": "c14f32203c53328a631b788f34b3e52e925fc83f09aaddccdcca22113b7bf3b4",
+    "results/baseline_per_window_phase7f.csv": "09e5b9cde270298e9ea7ddb7deb1e99942256bed138d6df611b98058f74f40af",
+    "results/baseline_comparison_phase7f.csv": "a2bf6c4d47f67c20b89e9fab562a0cedf22da9e48ad87cc28e7790b3fa9f47a5",
+    "results/manifest.json": "646297999a6ea40a6b4a4188cb0291fb3c4f1f34d9b27a2a5a128a4c79fba762",
+    "results/canonicalization_statistics.csv": "36eac7fbdba318f97c605dcae12e6d8fcd2d607dd9895740eb4c046a1e551e05",
+    "src/phase7f_preflight_and_inference.py": "cb8c0473da94cf43b5bb4811215ba335e3de5a974232f2262a73bc1660f19671",
+    "src/test_phase7f.py": "ea0a869b8753dbc7b9ed4bb5ff745985a5c774d72fbe7a7cb2321cab4b69a863",
+    "src/__pycache__/phase7f_preflight_and_inference.cpython-313.pyc": "bd02791c19cc1ca69f05f3d2447f269d3953cf49673d5bc1d5e31fda0c0451b1"
+  }
+}

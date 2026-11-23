@@ -1,0 +1,22 @@
+{
+  "phase": "7M",
+  "evidence_date": "2026-11-22",
+  "n_sequences_full_annotation_audited": 4,
+  "n_annotated_frames_sum_NOT_INDEPENDENT": 3008,
+  "n_elephant_boxes_sum_NOT_INDEPENDENT": 7230,
+  "n_eligible_windows_sum_NOT_INDEPENDENT": 12948,
+  "n_distinct_folders": 4,
+  "n_author_verified_independent_capture_events": 0,
+  "n_provisional_groups_NOT_INDEPENDENCE_PROOF": 3,
+  "n_image_samples_checked": 25,
+  "n_scene_pairs_checked": 6,
+  "n_strong_scene_pairs": 1,
+  "phase7k_protocol_sha256": "408022abb8923eb61afdf1eb665db8ba7bb02ce4258b21ae4a3fd89dab4abb5c",
+  "report_limitations": [
+    "Official dataset does not supply a verified per-sequence flight/clip lineage in provided README.",
+    "Image samples are sparse; negative image matches cannot prove different capture events.",
+    "No camera FPS, genuine UTC capture timestamps or original video flight metadata verified.",
+    "Only archived lock manifests verified, original neural checkpoint binaries not rerun.",
+    "All currently assessed forecasting evidence remains exploratory or method development."
+  ]
+}

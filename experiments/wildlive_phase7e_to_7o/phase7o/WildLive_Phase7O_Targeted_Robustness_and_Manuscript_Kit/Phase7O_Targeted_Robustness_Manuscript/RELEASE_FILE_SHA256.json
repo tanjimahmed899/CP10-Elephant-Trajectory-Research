@@ -1,0 +1,122 @@
+{
+  "phase": "7O",
+  "date": "2026-11-23",
+  "summary": "Retrospective 8-pair geometric robustness; report and supervisor Word draft",
+  "files": [
+    {
+      "relative_path": "MANUSCRIPT_CHANGELOG.md",
+      "sha256": "902f62e7d7829a08f68ab77006e757770df0c21ea6a279d6c9ae85f1c4251ae1",
+      "bytes": 2066
+    },
+    {
+      "relative_path": "PHASE7O_SCIENTIFIC_REPORT.md",
+      "sha256": "ced05f5acc52e07f3a4b46d43cf403aa293b99788bfa3b7384459dd5338d3cbe",
+      "bytes": 10278
+    },
+    {
+      "relative_path": "README_UBUNTU.md",
+      "sha256": "06f798ecd7e6c758553d3b0ee2490f22fc1b80f6172bb964ba413d792143595b",
+      "bytes": 2323
+    },
+    {
+      "relative_path": "manuscript/Final_Demo_paper_Phase7O_integrated.docx",
+      "sha256": "eb154b03a38ec6c2ee48a7d206660bd92f6fc32bd4b6cb1e46a00c62abd3364a",
+      "bytes": 1247353
+    },
+    {
+      "relative_path": "protocol/INPUT_SHA256_LOCK.json",
+      "sha256": "23c8747cb655ea74dcce7b23edcd5874f24eaca72d8b2dee783a767351ff0080",
+      "bytes": 634
+    },
+    {
+      "relative_path": "protocol/PHASE7N_original_recording_level_ADE_FDE.csv",
+      "sha256": "8c868e5533aba2988a7f3240f41ba8da7b3f7dce4f2288fc14dbe9a2cbb476f0",
+      "bytes": 3669
+    },
+    {
+      "relative_path": "protocol/PHASE7O_CLAIM_BOUNDARIES.md",
+      "sha256": "44b632a5c97e11d21693b99f83716fac932cfa76b3f9bfc0c08374f35cc9c294",
+      "bytes": 1293
+    },
+    {
+      "relative_path": "requirements.txt",
+      "sha256": "ef51cc9d7b52482f7c5e6de2575c95ea4be807a91dd7780d33d320cf0e35e9f8",
+      "bytes": 115
+    },
+    {
+      "relative_path": "results/QA_exposure_ADE_sensitivity.csv",
+      "sha256": "ff62781c79ee82b64d85ddcf258934723488f5552262849b69f22dbc8b14d21d",
+      "bytes": 1412
+    },
+    {
+      "relative_path": "results/archived_four_recording_model_ADE_FDE.csv",
+      "sha256": "8c868e5533aba2988a7f3240f41ba8da7b3f7dce4f2288fc14dbe9a2cbb476f0",
+      "bytes": 3669
+    },
+    {
+      "relative_path": "results/figures/01_heldout_registration_model_comparison.png",
+      "sha256": "66911cb226b0ba2fa7ad1319931ce5065f75bf787a0ff50f65a689923baa9074",
+      "bytes": 97946
+    },
+    {
+      "relative_path": "results/figures/02_QA_exposure_sensitivity.png",
+      "sha256": "d2730d7dd3b15c88d9579e655fabcf8bd67bf8819fd0e798fbf8777c42b5f925",
+      "bytes": 90989
+    },
+    {
+      "relative_path": "results/heldout_registration_models.csv",
+      "sha256": "01f1bea26313a923b758660b74f771b4a6c522bbb47a51d8acea89cc0ccb6d3d",
+      "bytes": 4434
+    },
+    {
+      "relative_path": "results/high_residual_QA_events_NOT_confirmed_errors.csv",
+      "sha256": "ae257a9c355bf2ede85f46944a07320e096e6221a798f6f7f8032708508d5441",
+      "bytes": 755
+    },
+    {
+      "relative_path": "results/per_animal_registration_model_sensitivity.csv",
+      "sha256": "16bef740c20ad9495a0a00c698c71e59960a470e6c81715907f345db790a1dc3",
+      "bytes": 9519
+    },
+    {
+      "relative_path": "results/per_window_QA_exposure.csv",
+      "sha256": "3283ccfdd8465e0903dab67e8f53be48853c5271d41e29072d7fe5324f826590",
+      "bytes": 1420411
+    },
+    {
+      "relative_path": "results/phase7o_manifest.json",
+      "sha256": "45b4d306412c77fdb178022174d90c0b7c71028b8867ee70d0e6b827e7832d97",
+      "bytes": 1685
+    },
+    {
+      "relative_path": "results/run.log",
+      "sha256": "6766616016d174fbcf851f627a6e219b6e31502127d73cada400f1c3b68492b9",
+      "bytes": 1006
+    },
+    {
+      "relative_path": "results/source_file_hashes.csv",
+      "sha256": "d88ea482ea66b2bf7809db9f8b95e5c0eae099001a9b39e171fafbe0b6558480",
+      "bytes": 652
+    },
+    {
+      "relative_path": "src/build_manuscript.py",
+      "sha256": "f06b26241df8021e6ba2804a058de7c303a682e475e3d66e4f56c3ab7b6b7f91",
+      "bytes": 14292
+    },
+    {
+      "relative_path": "src/phase7o.py",
+      "sha256": "005e869153163e38b5dbbabf67539f081c5227e8436e9a860300036bba777ece",
+      "bytes": 16835
+    },
+    {
+      "relative_path": "src/test_phase7o.py",
+      "sha256": "721ef66a9d60b45c091d6247d091482c737048f242840e67f5252703d7107f49",
+      "bytes": 2260
+    },
+    {
+      "relative_path": "src/verify_outputs.py",
+      "sha256": "738a6d29e07f6a6c7e55d381baf83f9560957420fb2617552ccb215d3ab4d51f",
+      "bytes": 1505
+    }
+  ]
+}

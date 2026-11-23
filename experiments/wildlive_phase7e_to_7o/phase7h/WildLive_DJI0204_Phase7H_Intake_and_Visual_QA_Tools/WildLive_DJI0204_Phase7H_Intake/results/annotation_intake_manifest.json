@@ -1,0 +1,34 @@
+{
+  "sequence": "DJI_0204_video2",
+  "input_file": "DJI_0204_video2_boxid.zip",
+  "input_sha256": "e196356fb231aa520b63e709c9698b497bb0fa22edbbd94aacbe37b3a3ecd689",
+  "input_bytes": 245018,
+  "n_frames": 357,
+  "frame_index_min": 0,
+  "frame_index_max": 356,
+  "contiguous_frame_indices": true,
+  "labels": {
+    "elephant": 1428
+  },
+  "n_elephant_boxes": 1428,
+  "n_tracks": 4,
+  "image_width_px": 3840,
+  "image_height_px": 2160,
+  "missing_elephant_scores": 649,
+  "points_per_box": {
+    "4": 1428
+  },
+  "eligible_windows_20": 1272,
+  "eligible_windows_50": 1152,
+  "fps_verified": false,
+  "source_independence_verified": false,
+  "visual_species_verified": false,
+  "visual_ID_verified": false,
+  "model_evaluation_performed": false,
+  "notes": [
+    "Annotations have label=elephant; no RGB sampled frame inspected",
+    "Overlap between IDs 1 and 3 needs visual identity check",
+    "Overlapping windows are not independent capture units",
+    "No timestamp or FPS evidence in annotation ZIP"
+  ]
+}

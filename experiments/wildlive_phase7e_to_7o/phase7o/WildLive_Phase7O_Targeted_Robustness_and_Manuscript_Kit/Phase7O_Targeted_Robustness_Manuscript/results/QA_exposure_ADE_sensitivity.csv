@@ -1,0 +1,7 @@
+sequence,horizon_frames,any_high_residual_pair,n_windows,n_tracks,scope,stationary_ADE,cv20_ADE,cv_ols_ADE,transformer_ensemble_ADE,best_expert_by_ADE
+DJI_0204_video2,20,False,1272,4,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.004055988519007926,0.001279002551924567,0.001246068603946916,0.00275232898471955,cv_ols
+DJI_0204_video2,50,False,1152,4,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.009767750752209418,0.0023424429512114856,0.002271397039164768,0.005247524543507706,cv_ols
+DJI_0207,20,False,2428,3,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.0047002608701946546,0.0047245547444890595,0.0047669713133065205,0.0043838938984304765,transformer_ensemble
+DJI_0207,20,True,59,2,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.010026086320660958,0.011080037270443318,0.010848876121735684,0.010204505840781915,stationary
+DJI_0207,50,False,2308,3,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.008362290721023019,0.0095988199627746,0.00978128158247507,0.009408680747671703,stationary
+DJI_0207,50,True,89,2,retrospective diagnostic: high registration residual is not a confirmed annotation error,0.00982160447733685,0.01404432561644782,0.0137400180447399,0.012911427101554998,stationary

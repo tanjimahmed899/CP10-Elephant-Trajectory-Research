@@ -1,0 +1,18 @@
+{
+  "phase": "7G",
+  "sha256": {
+    "PHASE7G_SCIENTIFIC_ROBUSTNESS_REPORT.md": "49ef3f151f4f727d1c89460936c2457736e9ed3508f769e0e8f17878a04e9d61",
+    "README_UBUNTU.md": "9547d6b52b7d4ea717a33435a48e206e6916ec3006fc7864fd9aa24ce7868ccc",
+    "results/per_forecast_step_errors.csv": "258af2ab7b6c2963d6c9ca3d4eb31478f6c4717ef2e0bf0c868dcfe3f28ac839",
+    "results/temporal_thirds_sensitivity.csv": "f64bcdd58e9b45518e9fff6b6e17c8626040876ff0f8cb410501bf94c55dbc39",
+    "results/per_elephant_ade_fde.csv": "318e9f817b0ce4377a2efdb8c73fcf9ce10cf95ec1e8223babe24b654292b00d",
+    "results/nonoverlapping_phase_offset_sensitivity.csv": "32c7518652fcea81685ff00b3b5bc5b7377ca9f04735d7072a07039c2c606296",
+    "results/audit_verification.json": "35e92eb400f656c154f49a4e43813bd7eed7b1fa39f3f339b1f43844e82a2c4f",
+    "results/pooled_and_QA_model_comparisons.csv": "3f17214eb28720a6bb868ac462567cbe98c72045d0627233f98162ea6cd21f2d",
+    "src/phase7g_robustness_audit.py": "60a9f88d67e643ed87668b1eda45d0689145dcca91abeca08fe2d1f44a7e979f",
+    "figures/04_forecast_step_error_curves.png": "ec721213c88dec4045452d340aec41e6f5526847995c45b40b062cc7feb6f3af",
+    "figures/02_per_elephant_delta_ADE.png": "36aabb2015d2c74b1d2b63cd920d763f173f70cdac40cb17fc9569aad4dc7815",
+    "figures/03_temporal_thirds.png": "5328552b0b89d0a8aa6ffeae71d40988e2192cc8b85ffabbec6f4822d2360910",
+    "figures/01_pooled_ADE_comparison.png": "c393ec07ed3d1034b54f1ce1ffb9cc20b5800feabef6d1bc2bd5960cb183ba60"
+  }
+}

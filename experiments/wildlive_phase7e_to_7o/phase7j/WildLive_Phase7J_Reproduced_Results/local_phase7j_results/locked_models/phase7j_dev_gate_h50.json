@@ -1,0 +1,142 @@
+{
+  "alpha": 25.0,
+  "experts": [
+    "stationary",
+    "cv_ols",
+    "transformer_ensemble"
+  ],
+  "feature_clip_z": 4,
+  "feature_mean": [
+    -3.0931848405044526,
+    0.42726273851351965,
+    -3.069901017199926,
+    -2.861092680292614,
+    1.4839448769270365,
+    -3.568913600392264,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "feature_std": [
+    0.2912432157012709,
+    0.23387239165134072,
+    0.3181526811016381,
+    0.339667212324299,
+    0.39004742480781185,
+    0.32828143614329264,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "feature_transforms": [
+    "log",
+    "plain",
+    "log",
+    "log",
+    "plain",
+    "log"
+  ],
+  "features": [
+    "mean_step_norm_per_frame",
+    "straightness",
+    "ols_line_residual_norm",
+    "acceleration_rms_norm_per_frame2",
+    "mean_abs_turn_rad",
+    "ols_velocity_norm_per_frame"
+  ],
+  "fill": {
+    "acceleration_rms_norm_per_frame2": 0.0011164340740650001,
+    "mean_abs_turn_rad": 1.5394978691299999,
+    "mean_step_norm_per_frame": 0.0007461857023705,
+    "ols_line_residual_norm": 0.000856981944864,
+    "ols_velocity_norm_per_frame": 0.00030247475302800004,
+    "straightness": 0.4063646508275
+  },
+  "global_best_train_expert": "cv_ols",
+  "history_frames": 20,
+  "horizon_frames": 50,
+  "n_nonoverlap_train_windows": 56,
+  "selection_criterion": "smallest_predicted_log_ADE",
+  "source_data_sha256": "a2fffea9b31186f4ac7b7490686fede82757ba61ac5c969742cfff260b8f81ac",
+  "status": "DEVELOPMENT_ONLY_NOT_INDEPENDENTLY_VALIDATED",
+  "target": "log(ADE+1e-6)",
+  "train_sequences": [
+    "DJI_0204_video2",
+    "DJI_0207"
+  ],
+  "trained_using": "DJI_0207 and DJI_0204_video2, previously inspected",
+  "training_tracks": 7,
+  "weights": [
+    [
+      -4.904046900186086,
+      -5.237514116773137,
+      -4.979024259519062
+    ],
+    [
+      0.09813523421848377,
+      0.11240543863892352,
+      0.07691294388496527
+    ],
+    [
+      0.04017947574268959,
+      -0.05026757052587169,
+      0.07840156806839296
+    ],
+    [
+      0.03823039615218671,
+      0.33985080533495704,
+      0.11056770833630608
+    ],
+    [
+      0.025737546810755445,
+      -0.026188533415044783,
+      0.019841662584415682
+    ],
+    [
+      -0.0938581865260554,
+      -0.052141830238187206,
+      -0.019692715575577908
+    ],
+    [
+      0.1386125574221733,
+      0.11744927714532846,
+      0.08496527468229736
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ]
+}

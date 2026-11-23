@@ -1,0 +1,14 @@
+{
+  "upload_zip_CRC_PASS": true,
+  "source_sha256_verified": true,
+  "released_gate_hashes_verified": 2,
+  "checkpoint_hashes_equal_to_locked_manifest": 6,
+  "checkpoint_binaries_recomputed": false,
+  "transformer_forward_inference_recomputed": false,
+  "gate_decisions_from_original_annotations_matched": 2748,
+  "unique_window_keys": 2748,
+  "source_independence_verified": false,
+  "source_capture_group_status": "DJI_0204 family; scene overlap with DJI_0204_video2; exploratory only",
+  "numeric_summary_rows_matched": 14,
+  "scale_floor_activation_all_windows": true
+}

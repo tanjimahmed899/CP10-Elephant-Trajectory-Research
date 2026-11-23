@@ -1,0 +1,7 @@
+sequence_a,frame_a,sequence_b,frame_b,ratio_filtered_matches,homography_inliers,inlier_fraction,scene_overlap_evidence,independence_verified,interpretation
+DJI_0204_video1,200,DJI_0204_video2,200,1351,1320,0.97705,STRONG,NO,matched background/scene; exact flight relationship UNKNOWN
+DJI_0204_video1,200,DJI_0161_video1,200,13,4,0.30769,INCONCLUSIVE_SAMPLE,NO,absence of a strong sample match does NOT prove independent flights
+DJI_0204_video2,200,DJI_0161_video1,200,7,4,0.57143,INCONCLUSIVE_SAMPLE,NO,absence of a strong sample match does NOT prove independent flights
+DJI_0207,389,DJI_0204_video1,200,13,5,0.38462,INCONCLUSIVE_SAMPLE,NO,absence of a strong sample match does NOT prove independent flights
+DJI_0207,389,DJI_0204_video2,200,16,5,0.3125,INCONCLUSIVE_SAMPLE,NO,absence of a strong sample match does NOT prove independent flights
+DJI_0207,389,DJI_0161_video1,200,9,4,0.44444,INCONCLUSIVE_SAMPLE,NO,absence of a strong sample match does NOT prove independent flights

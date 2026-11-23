@@ -1,0 +1,82 @@
+{
+  "phase": "7K",
+  "sequence_id": "DJI_0161_video1",
+  "file_sha256": "7a85daea3cb3735329b80b25d36ed23ef3a2edc677c6cbaa54b445f6ac0a179e",
+  "file_bytes": 742609,
+  "min_frame_index": 0,
+  "max_frame_index": 1499,
+  "n_annotation_frames": 1500,
+  "nonconsecutive_frame_indices": false,
+  "elephant_track_ids": 1,
+  "labels": {
+    "elephant": 1500
+  },
+  "source_dimensions_px": [
+    3840,
+    2160
+  ],
+  "missing_elephant_scores": 143,
+  "n_20_frame_windows": 1461,
+  "n_50_frame_windows": 1431,
+  "historical_wildbox_exact_id_match": false,
+  "known_wildbox_sources_checked": [
+    "DJI_20240119151437_0002_V",
+    "DJI_20240119151048_0001_V",
+    "DJI_20240626143443_0003_V",
+    "DJI_20240626143248_0002_V",
+    "DJI_20260227084724_0003_V",
+    "DJI_20260227082707_0003_V"
+  ],
+  "native_fps_verified": false,
+  "released_frame_timestamps_verified": false,
+  "source_independence_verified": false,
+  "new_independent_confirmation": false,
+  "recording_isolation": "UNVERIFIED; cross-sequence duplicates and same flight/herd must be reviewed",
+  "coordinate_units": "normalized image-plane box centre; no camera correction",
+  "review_requirements": [
+    "Visual species verification",
+    "Check nearby sequences share same flight/herd",
+    "Compare frames and source IDs against historical WildBox",
+    "Verify timestamps before claiming seconds-based performance"
+  ],
+  "fixed_primary_comparison": "adaptive - CV-OLS, group-level ADE, horizons separately",
+  "gate_fitted_on_untouched_test_data": false,
+  "models": "stationary, cv20, CV-OLS, frozen transformer 3-seed ensemble, locked 7J adaptive",
+  "candidate_output_status": "NEW_SEQUENCE_EXPLORATORY_CAPTURE_EVENT_INDEPENDENCE_UNVERIFIED",
+  "independent_capture_groups_verified": 0,
+  "source_video_fps_verified": false,
+  "method_effect_on_warnings_or_conformal_coverage": "NOT TESTED",
+  "gate_sha256": {
+    "phase7j_dev_gate_h20.json": "2988bf39a996016b1bd67026c7fe97ffa2756576114e007dcc5f2f047a5dd334",
+    "phase7j_dev_gate_h50.json": "208d21c1d65734c5a96611eac4af7ea14bfd78d67f5f43f06c30d1bd2159e763"
+  },
+  "checkpoint_hashes_verified": {
+    "2s_to_2s_Transformer_seed42.pt": {
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+      "bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed52.pt": {
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+      "bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed62.pt": {
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+      "bytes": 317196
+    },
+    "2s_to_5s_Transformer_seed42.pt": {
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+      "bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed52.pt": {
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+      "bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed62.pt": {
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a",
+      "bytes": 332812
+    }
+  },
+  "new_sequence_qa": "Sampled visual species and track review REQUIRED separately",
+  "n_scored_windows": 2892,
+  "summary": "Descriptive scores only; no population inference or independent claims"
+}

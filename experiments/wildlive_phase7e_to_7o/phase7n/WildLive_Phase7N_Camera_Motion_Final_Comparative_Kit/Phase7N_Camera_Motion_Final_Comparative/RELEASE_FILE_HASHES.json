@@ -1,0 +1,27 @@
+{
+  "release": "WildLive_Phase7N_Camera_Motion_Final_Comparative_Kit",
+  "source_data_redistributed": false,
+  "n_files": 20,
+  "files_sha256": {
+    "PHASE7N_SCIENTIFIC_REPORT.md": "8e2f92822b2ecf497d6338cc4006a685e73fbf4a56755987a6d2246ef7d6aaf3",
+    "README_UBUNTU.md": "cf4df407eababdf3084e719ed0f9c9c6bc8f5db0882304a8aa4f0b3056ee2311",
+    "protocol/PHASE7N_CLAIM_BOUNDARY.md": "4a51c2b7f3284092a866fe0dfad50266dbf41806752b6a5f608a6b67a4b51fc3",
+    "results/automated_tests.log": "ab5e8c54fa393229de1fcbc41b144ad347c7c83e3e1ed52e5ccbc637cc7a5e78",
+    "results/best_expert_per_recording.csv": "ba9ff31a6d670b44f41879210937d2adb07e097dc5869775961a1861a44526b6",
+    "results/consecutive_frame_camera_registration.csv": "6345e0171877706909d0a18d6b4fb1211cdce5125174b11e98c6915c633977c0",
+    "results/figures/01_locked_recording_ADE_h20.png": "2efbf6cdb71cc1691a649d2c430475e51e5b6a7310b77fddb64919874ac08889",
+    "results/figures/01_locked_recording_ADE_h50.png": "151ea1ac1fc90bb0d89731217ddfd4bfbfa60506758a5fc4167d7c588baee199",
+    "results/figures/02_sparse_background_motion_AUDIT.png": "5c39eeab53a3add08513e50b5a1c9a7e5ab2b8a31f0bd86fe62a5fe18ba64682",
+    "results/figures/03_track_residuals_spot_QA.png": "e7950245fc9ccef1bc2aee5e773878961601df8c713146141dfe0a110659eb02",
+    "results/input_provenance_sha256.csv": "41da0f804ddc77106a124fb2a7f8d7121c8c62dd3905bfdafad62ff30f1201f7",
+    "results/locked_adaptive_vs_cv_ols.csv": "bac717d0562c6069acd2aaaa52b688f1f6e08d90ca52887bc669a542533a7e0e",
+    "results/per_track_raw_vs_registered_motion.csv": "82a0dc2006f582ea869943ceefe587c3a0703a6b4fb29757a455b892e6fa75c2",
+    "results/phase7n_audit_manifest.json": "edd7c0790e5a7ba082925ea8b36e2589ba4567610446cbf188a28579a7621a82",
+    "results/provisional_scene_component_summary.csv": "d74469375324c2435de36296b7a83006216a77264ca645776b36b8f876fb4855",
+    "results/recompute_cli.log": "2afba3ae69aff67a3db04b4f377a9cb5542932cb044bd6048957949f90601fb7",
+    "results/recording_level_ADE_FDE.csv": "8c868e5533aba2988a7f3240f41ba8da7b3f7dce4f2288fc14dbe9a2cbb476f0",
+    "results/scale_floor_regime_summary.csv": "5141d768fd92604c34ef816f38385df136c9a4859cef390b682824bb53c87bcd",
+    "src/phase7n.py": "1354a33c4e765bde3f51b828db280818238bb1177e3db5c3a50f333789137f81",
+    "src/test_phase7n.py": "832ad8543a317e0d8870a920ed3225a5a1a4d5c3ee6af7c70048a0343cce943d"
+  }
+}

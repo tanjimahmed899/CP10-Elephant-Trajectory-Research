@@ -1,0 +1,41 @@
+{
+  "input_annotation_zip": "/home/student/WildLive_DJI_0207_boxid.zip",
+  "input_sha256": "ebfab57083f77f78955f14a10a9746a060c7873a9c3d3f0d618f1aa8b8d29350",
+  "dataset": "WildLive DJI_0207",
+  "source_annotation_resolution_px": [
+    3840,
+    2160
+  ],
+  "frames_per_track": 868,
+  "track_ids": [
+    0,
+    1,
+    2
+  ],
+  "observation_frames": 20,
+  "future_frames": [
+    20,
+    50
+  ],
+  "window_stride_frames": 1,
+  "prediction_units": "normalized original image-plane (not metres; no camera correction)",
+  "no_fps": true,
+  "no_verified_timestamps": true,
+  "no_transformer_evaluation": true,
+  "not_independent_confirmation": true,
+  "number_independent_capture_groups": 1,
+  "qa_flags_from_prior_image_review": {
+    "0": [
+      860
+    ],
+    "1": [],
+    "2": [
+      389,
+      401
+    ]
+  },
+  "qa_exclusion_criterion": "drop window if flagged frame lies anywhere in history OR future of that track",
+  "total_windows": 4884,
+  "overlapping_windows": true,
+  "missing_annotation_scores": 101
+}

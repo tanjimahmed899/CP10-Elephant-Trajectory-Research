@@ -1,0 +1,42 @@
+{
+  "phase": "7H",
+  "sequence_id": "DJI_0207",
+  "file_sha256": "ebfab57083f77f78955f14a10a9746a060c7873a9c3d3f0d618f1aa8b8d29350",
+  "file_bytes": 565169,
+  "min_frame_index": 0,
+  "max_frame_index": 867,
+  "n_annotation_frames": 868,
+  "nonconsecutive_frame_indices": false,
+  "elephant_track_ids": 3,
+  "labels": {
+    "elephant": 2604
+  },
+  "source_dimensions_px": [
+    3840,
+    2160
+  ],
+  "missing_elephant_scores": 101,
+  "n_20_frame_windows": 2487,
+  "n_50_frame_windows": 2397,
+  "historical_wildbox_exact_id_match": false,
+  "known_wildbox_sources_checked": [
+    "DJI_20240119151437_0002_V",
+    "DJI_20240119151048_0001_V",
+    "DJI_20240626143443_0003_V",
+    "DJI_20240626143248_0002_V",
+    "DJI_20260227084724_0003_V",
+    "DJI_20260227082707_0003_V"
+  ],
+  "native_fps_verified": false,
+  "released_frame_timestamps_verified": false,
+  "source_independence_verified": false,
+  "new_independent_confirmation": false,
+  "recording_isolation": "UNVERIFIED; cross-sequence duplicates and same flight/herd must be reviewed",
+  "coordinate_units": "normalized image-plane box centre; no camera correction",
+  "review_requirements": [
+    "Visual species verification",
+    "Check nearby sequences share same flight/herd",
+    "Compare frames and source IDs against historical WildBox",
+    "Verify timestamps before claiming seconds-based performance"
+  ]
+}

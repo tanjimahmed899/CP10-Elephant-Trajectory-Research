@@ -1,0 +1,5 @@
+sequence,horizon_frames,adaptive_ADE,cv_ols_ADE,adaptive_minus_cv_ols_ADE,adaptive_improvement_pct_vs_cv_ols,best_individual_model,best_individual_ADE,adaptive_vs_best_ADE_penalty_pct,inference_unit
+DJI_0161_video1,20,0.0111948076362,0.0129404936255,-0.0017456859893,13.4901035449,transformer_ensemble,0.0109335950914,2.38908193142,"one recording, not n_windows independent observations"
+DJI_0161_video1,50,0.0215236900759,0.0282699089145,-0.00674621883859,23.863603024,stationary,0.0204059256166,5.47764644601,"one recording, not n_windows independent observations"
+DJI_0204_video1,20,0.00182860061918,0.00181757865124,1.10219679422e-05,-0.606409408183,cv_ols,0.00181757865124,0.606409408183,"one recording, not n_windows independent observations"
+DJI_0204_video1,50,0.0051753264035,0.00517260426894,2.722134554e-06,-0.0526259967411,stationary,0.00462065291035,12.0042232972,"one recording, not n_windows independent observations"

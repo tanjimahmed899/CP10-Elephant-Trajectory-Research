@@ -1,0 +1,50 @@
+{
+  "input_annotation_zip": "/mnt/data/WildLive_DJI_0207_boxid.zip",
+  "input_sha256": "ebfab57083f77f78955f14a10a9746a060c7873a9c3d3f0d618f1aa8b8d29350",
+  "dataset": "WildLive DJI_0207",
+  "source_annotation_resolution_px": [
+    3840,
+    2160
+  ],
+  "frames_per_track": 868,
+  "track_ids": [
+    0,
+    1,
+    2
+  ],
+  "observation_frames": 20,
+  "future_frames": [
+    20,
+    50
+  ],
+  "window_stride_frames": 1,
+  "prediction_units": "normalized original image-plane (not metres; no camera correction)",
+  "no_fps": true,
+  "no_verified_timestamps": true,
+  "no_transformer_evaluation": true,
+  "not_independent_confirmation": true,
+  "number_independent_capture_groups": 1,
+  "qa_flags_from_prior_image_review": {
+    "0": [
+      860
+    ],
+    "1": [],
+    "2": [
+      389,
+      401
+    ]
+  },
+  "qa_exclusion_criterion": "drop window if flagged frame lies anywhere in history OR future of that track",
+  "total_windows": 4884,
+  "overlapping_windows": true,
+  "missing_annotation_scores": 101
+}
+SUMMARY:
+{'horizon_frames': 20, 'subset': 'all', 'track_id': 'pooled', 'baseline': 'stationary', 'windows': 2487, 'ade_norm': np.float64(0.004826607352533873), 'fde_norm': np.float64(0.008356044463104227)}
+{'horizon_frames': 20, 'subset': 'all', 'track_id': 'pooled', 'baseline': 'CV20', 'windows': 2487, 'ade_norm': np.float64(0.004875328153830205), 'fde_norm': np.float64(0.008539014856321756)}
+{'horizon_frames': 20, 'subset': 'QA_unflagged', 'track_id': 'pooled', 'baseline': 'stationary', 'windows': 2427, 'ade_norm': np.float64(0.00470094222602222), 'fde_norm': np.float64(0.00812856778304799)}
+{'horizon_frames': 20, 'subset': 'QA_unflagged', 'track_id': 'pooled', 'baseline': 'CV20', 'windows': 2427, 'ade_norm': np.float64(0.004724703152110949), 'fde_norm': np.float64(0.008266006056818322)}
+{'horizon_frames': 50, 'subset': 'all', 'track_id': 'pooled', 'baseline': 'stationary', 'windows': 2397, 'ade_norm': np.float64(0.008416474669421872), 'fde_norm': np.float64(0.01540762344776738)}
+{'horizon_frames': 50, 'subset': 'all', 'track_id': 'pooled', 'baseline': 'CV20', 'windows': 2397, 'ade_norm': np.float64(0.00976388045638204), 'fde_norm': np.float64(0.019471345414521845)}
+{'horizon_frames': 50, 'subset': 'QA_unflagged', 'track_id': 'pooled', 'baseline': 'stationary', 'windows': 2307, 'ade_norm': np.float64(0.008360860433503706), 'fde_norm': np.float64(0.015267605135656177)}
+{'horizon_frames': 50, 'subset': 'QA_unflagged', 'track_id': 'pooled', 'baseline': 'CV20', 'windows': 2307, 'ade_norm': np.float64(0.00960056390113467), 'fde_norm': np.float64(0.01907408239971336)}

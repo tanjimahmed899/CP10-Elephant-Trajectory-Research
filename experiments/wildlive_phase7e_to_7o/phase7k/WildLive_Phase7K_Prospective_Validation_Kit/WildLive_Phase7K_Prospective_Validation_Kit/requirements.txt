@@ -1,0 +1,4 @@
+numpy
+pandas
+# For checkpoint inference install PyTorch compatible with your existing WSL setup.
+# Do not modify model architecture or weight files.

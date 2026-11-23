@@ -1,0 +1,73 @@
+{
+  "phase": "7H",
+  "sequence_id": "DJI_0204_video2",
+  "file_sha256": "e196356fb231aa520b63e709c9698b497bb0fa22edbbd94aacbe37b3a3ecd689",
+  "file_bytes": 245018,
+  "min_frame_index": 0,
+  "max_frame_index": 356,
+  "n_annotation_frames": 357,
+  "nonconsecutive_frame_indices": false,
+  "elephant_track_ids": 4,
+  "labels": {
+    "elephant": 1428
+  },
+  "source_dimensions_px": [
+    3840,
+    2160
+  ],
+  "missing_elephant_scores": 649,
+  "n_20_frame_windows": 1272,
+  "n_50_frame_windows": 1152,
+  "historical_wildbox_exact_id_match": false,
+  "known_wildbox_sources_checked": [
+    "DJI_20240119151437_0002_V",
+    "DJI_20240119151048_0001_V",
+    "DJI_20240626143443_0003_V",
+    "DJI_20240626143248_0002_V",
+    "DJI_20260227084724_0003_V",
+    "DJI_20260227082707_0003_V"
+  ],
+  "native_fps_verified": false,
+  "released_frame_timestamps_verified": false,
+  "source_independence_verified": false,
+  "new_independent_confirmation": false,
+  "recording_isolation": "UNVERIFIED; cross-sequence duplicates and same flight/herd must be reviewed",
+  "coordinate_units": "normalized image-plane box centre; no camera correction",
+  "review_requirements": [
+    "Visual species verification",
+    "Check nearby sequences share same flight/herd",
+    "Compare frames and source IDs against historical WildBox",
+    "Verify timestamps before claiming seconds-based performance"
+  ],
+  "locked_model_checkpoint_hashes_verified": {
+    "2s_to_2s_Transformer_seed42.pt": {
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+      "bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed52.pt": {
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+      "bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed62.pt": {
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+      "bytes": 317196
+    },
+    "2s_to_5s_Transformer_seed42.pt": {
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+      "bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed52.pt": {
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+      "bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed62.pt": {
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a",
+      "bytes": 332812
+    }
+  },
+  "model_weights_retrained": false,
+  "forecast_errors_exploratory_only": true,
+  "any_statistical_significance_claim": false,
+  "new_confirmatory_evidence": false,
+  "status": "LOCKED_FRAME_EVALUATION_COMPLETE__INDEPENDENCE_UNVERIFIED"
+}

@@ -1,0 +1,123 @@
+{
+  "phase": "7M",
+  "created_date": "2026-11-22",
+  "contents": [
+    {
+      "file": "PHASE7M_SCIENTIFIC_REPORT.md",
+      "sha256": "1992019c50a0d0da3b39e2907abac85913931964fdb3517196fb4d3b602175e7",
+      "size_bytes": 10033
+    },
+    {
+      "file": "README_UBUNTU.md",
+      "sha256": "028302d55caccbefeecba5918e805bee81efa9dcee00650c42bbecf1f636a498",
+      "size_bytes": 4481
+    },
+    {
+      "file": "evidence/SOURCES_AND_EVIDENCE_URLS.md",
+      "sha256": "2b2dadf33f1be4fb007841d5f2bec75fefb39a06ffbbf9d6ec20e4f1120be156",
+      "size_bytes": 1251
+    },
+    {
+      "file": "evidence/complete_22_folder_status_register.csv",
+      "sha256": "f38692e7e6beb8d62096e69f2ae1dd51c8991bad2521a4e78557b7a6197d566a",
+      "size_bytes": 4820
+    },
+    {
+      "file": "evidence/generated/annotation_inventory.csv",
+      "sha256": "9a559602b39e315b91a06a754d22b0d92964c7402c09af6536194259188f34ab",
+      "size_bytes": 1579
+    },
+    {
+      "file": "evidence/generated/audit_summary.json",
+      "sha256": "56ff71e0ef6276af33e400240061b973bf2e518838c8d148e09a0fceef0a5e7f",
+      "size_bytes": 1080
+    },
+    {
+      "file": "evidence/generated/image_exif_presence_only.csv",
+      "sha256": "61cddb95562a5e167f9533d9f376768a4ed99c0ba1018046ba736cfb420be9bc",
+      "size_bytes": 2295
+    },
+    {
+      "file": "evidence/generated/locked_evaluation_manifest_checks.csv",
+      "sha256": "1ad784084a56db5bdbd72b75b2a9fbe81dd19e2b634203f405f3b74eb44c41e9",
+      "size_bytes": 644
+    },
+    {
+      "file": "evidence/generated/provisional_capture_group_decisions.csv",
+      "sha256": "0c07a8239f09990ae9c63b49b324d9b98f2b4f4f66842eb8a758737eaa3d3711",
+      "size_bytes": 1041
+    },
+    {
+      "file": "evidence/generated/scene_sample_matching.csv",
+      "sha256": "2f4425435e2a35e84eb34ccac23d02fd5c5dc96bbd6b8ce74de8008dabf121e3",
+      "size_bytes": 987
+    },
+    {
+      "file": "evidence/generated/source_sha256_inventory.csv",
+      "sha256": "76f84c1f0f36fab1901c8bc306b209fb530df3b970d6d1db2efd18a790b3f39b",
+      "size_bytes": 1349
+    },
+    {
+      "file": "evidence/phase7k_candidate_register_original.csv",
+      "sha256": "85b698433e3c89abf0efcb3ae4093917b6feb17408d82956235cc848e2885b38",
+      "size_bytes": 3231
+    },
+    {
+      "file": "evidence/phase7k_original_release_hash_verification.json",
+      "sha256": "367c2a7bc7aeab35c88fed62c5cca787e088c85dd99bcc0cd5e10cea7ef4e489",
+      "size_bytes": 95
+    },
+    {
+      "file": "evidence/remaining_six_candidate_species_samples.csv",
+      "sha256": "bec3765f605e3d52e2998aa268e9e59a19a292ccea59e2cb11dfed54627d4ff7",
+      "size_bytes": 791
+    },
+    {
+      "file": "evidence/selected_candidate_species_samples.csv",
+      "sha256": "2c1f5ab6b2045b7f5dd607a7b4d903069fadc31aae53dc03594edfa03a7c1f9f",
+      "size_bytes": 685
+    },
+    {
+      "file": "evidence/test_run.log",
+      "sha256": "c04259af9e5889ad5bed5da3d31530cf07c57da0d99c0efb27a983a0f3217fdc",
+      "size_bytes": 1541
+    },
+    {
+      "file": "protocol/PHASE7K_ORIGINAL_LOCK_DO_NOT_EDIT.json",
+      "sha256": "408022abb8923eb61afdf1eb665db8ba7bb02ce4258b21ae4a3fd89dab4abb5c",
+      "size_bytes": 4000
+    },
+    {
+      "file": "src/phase7m.py",
+      "sha256": "03979f8bb0547704d1668e02647765bce5373921f1f35d312069cd12d3dfb941",
+      "size_bytes": 15878
+    },
+    {
+      "file": "src/test_phase7m.py",
+      "sha256": "44f3a6d63e590ae77822d77af790234d35f055ae74926be5155cc720df0781a0",
+      "size_bytes": 4686
+    },
+    {
+      "file": "templates/CAPTURE_GROUP_DECISION_LOG.md",
+      "sha256": "e9ae016b1bee1b1b59f3d47bc34fc97c2f455797672433f3ee88fc43193694cc",
+      "size_bytes": 1094
+    },
+    {
+      "file": "templates/DATASET_AUTHOR_METADATA_REQUEST.md",
+      "sha256": "09c779bb986fbb79402a07095a2a36a94b71d9f4e0e45aef7d96a3ee143f1380",
+      "size_bytes": 2919
+    },
+    {
+      "file": "templates/PROVENANCE_REPLY_REVIEW_CHECKLIST.md",
+      "sha256": "e78a647c1aa647463b5b16635b6c2d7fc0ecd2f885e3463d5d931cd7ea96f096",
+      "size_bytes": 2338
+    },
+    {
+      "file": "templates/author_capture_event_reply_template.csv",
+      "sha256": "1edfc29648549a3ed72f4b1bbfe39d50638b3ae49d23634b058a7ecbc5e53d9f",
+      "size_bytes": 430
+    }
+  ],
+  "model_files_modified": false,
+  "raw_images_included": false
+}

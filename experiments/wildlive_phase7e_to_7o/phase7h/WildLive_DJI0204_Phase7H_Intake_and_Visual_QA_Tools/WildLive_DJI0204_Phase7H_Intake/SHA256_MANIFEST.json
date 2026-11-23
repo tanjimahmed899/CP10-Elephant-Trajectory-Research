@@ -1,0 +1,19 @@
+{
+  "PHASE7H_DJI0204_SCIENTIFIC_REPORT.md": "6272af0b6ffd263da7ff78e8f4d21fff5e84f3dcc2c5d6828d07ea88e6c5a197",
+  "README_UBUNTU.md": "a5b55f0c35582058e6238b4bcbf5e3984683d0bd27f7aa8989088e6fb06be93c",
+  "results/annotation_intake_manifest.json": "7506fe1a6de33dc47d8d41523e3fca0e7b93b5c6b30887c217a910a6f04259d6",
+  "results/top_20_motion_QA_pairs.csv": "71aef49b08d2d5b2feb705ea8f0067637945b0c20a68e33493b563d4655d7ca0",
+  "results/adjacent_frame_centre_jumps.csv": "233caa35c63d482e7f7d9093732f93191bcd3690a70444c67387935c71b04406",
+  "results/pairwise_overlap_summary.csv": "e3705922e843f2687df3d5960dcbb4a04c5f84e291729877598188185e8cc493",
+  "results/track_availability.csv": "36e65f1e05c2330f002ac15681db1ccec9d3a671f33cbef1335b77eabda8ffc7",
+  "results/pairwise_bbox_overlap.csv": "d0f1ce403745470bb9ff885cbae944a6748581dabfab46ffc521eb27ba574f03",
+  "results/elephant_bbox_centres.csv": "7ffb230160b9c494e338f6e859d0d3a35a9f965e49503d580681ba3a7bdfcba0",
+  "scripts/make_visual_overlays.py": "3e7f817b2b5f2b79babde8b270198e0c51495f360efd0b824e91abd932a92c7f",
+  "scripts/audit_dji0204.py": "8d2865219033d1b595d72e52792048e00bcd1d6b5f9a246212fc5f73738d1e74",
+  "scripts/test_intake_scripts.py": "102444a84e9a3daf234ac9e4644b506931c615142f076e631ace329a495a6521",
+  "figures/elephant_box_centre_tracks.png": "51849dbfc17af7dd2c2791c46d4eeb983d1176f49da4edb397b0eb6433fb835f",
+  "figures/ID1_ID3_box_overlap.png": "4368b1396aef82e9ec87eed0f14570871f83845010300153c18100f82d9a5a36",
+  "phase7h_reference_intake/intake_manifest.json": "de813a723d18122497dc0eaebfe4c9e578e3ec227c27430959f6dea46a67bf8a",
+  "phase7h_reference_intake/track_availability.csv": "00d9b1a00e3e0d76c3fcd9de857db1c6790c92f01bf2cc80c3875f1e1af33f67",
+  "scripts/__pycache__/audit_dji0204.cpython-313.pyc": "7d245668d03adaaedca4315fe9368bdb3f74cf2419c02b8d2ecc4281f249b28b"
+}

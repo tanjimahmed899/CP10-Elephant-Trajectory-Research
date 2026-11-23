@@ -1,0 +1,7 @@
+sequence_id,sampled_frames,readable_samples,labels_in_samples,status,errors,full_recording_species_verified,flight_independence_verified
+DJI_0117_video2,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_0601_video3,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_20230719145427_0002_V_video2,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_20230719145427_0002_V_video3,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_20230719145427_0002_V_video4,"0,100,200,400,600",5,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,,False,False
+DJI_vlc-record-2025-01-03-14h37m50s-DJI_20240624153820_0001_V,"0,100,200,400,600",2,zebra,OTHER_LABELS_ONLY_IN_SAMPLES,200:HTTPError;400:HTTPError;600:HTTPError,False,False

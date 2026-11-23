@@ -1,0 +1,7 @@
+sequence,horizon_frames,track_id,first_observed_frame,selected_expert
+DJI_0207,20,0,0,cv_ols
+DJI_0207,20,0,1,cv_ols
+DJI_0207,20,0,2,cv_ols
+DJI_0207,20,0,3,cv_ols
+DJI_0207,20,0,4,cv_ols
+DJI_0207,20,0,5,cv_ols

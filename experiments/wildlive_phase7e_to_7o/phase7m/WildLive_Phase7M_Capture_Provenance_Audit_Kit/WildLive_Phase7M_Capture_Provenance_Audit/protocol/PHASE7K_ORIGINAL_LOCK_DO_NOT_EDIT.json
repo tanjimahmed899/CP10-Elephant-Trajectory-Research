@@ -1,0 +1,79 @@
+{
+  "capture_group_verification": "required; filenames/IDs alone insufficient, compare flight/herd/capture metadata and content",
+  "coordinate_units": "normalized image-plane bounding-box centre; NOT metres",
+  "eligibility": "elephant-labelled group_id trajectory with 20+H consecutive indexed frames, same window set for all experts, visual QA, no overlap exclusion after viewing test model results",
+  "ethical_and_license_constraints": "No raw imagery/checkpoints/exact endangered-animal geolocations uploaded publicly; cite WildLive and follow noncommercial licence",
+  "external_lock_requirements": "Supervisor approval and externally timestamped preregistration before inspecting untouched test scores; this file alone is not such registration",
+  "fps_known": false,
+  "future_horizons_in_frames": [
+    20,
+    50
+  ],
+  "gate_models": [
+    "locked_models/phase7j_dev_gate_h20.json",
+    "locked_models/phase7j_dev_gate_h50.json"
+  ],
+  "gate_training_data": "two previously inspected development sequences; trained on nonoverlapping-within-track windows; no fresh test fitting",
+  "history_frames": 20,
+  "independent_groups_confirmed_now": 0,
+  "limitations": "No physical-time or geofence safety claims; group independence currently unverified",
+  "lock_document_version": "1.0",
+  "model_checkpoint_origin": "Main Result/transformer_results (original EXP3 three-seed checkpoints)",
+  "model_checkpoint_sha256": {
+    "2s_to_2s_Transformer_seed42.pt": {
+      "sha256": "8244d6dc60be34d5c7f3dcbb1a50036152f8c5e96d69f3b3f5a93ac6e4a7f14f",
+      "size_bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed52.pt": {
+      "sha256": "9264f2d81945601149cc2f6a970a2765942cb9a45e711c4d552434e9feb75eb5",
+      "size_bytes": 317196
+    },
+    "2s_to_2s_Transformer_seed62.pt": {
+      "sha256": "0257eb576a78a6a40da51d8bbf728df30d5d8b77cd6ca7e21be81fa0fd3cded2",
+      "size_bytes": 317196
+    },
+    "2s_to_5s_Transformer_seed42.pt": {
+      "sha256": "846e1398eb8354e871ea80b7a90888f99d02ce10dac56f0787bf3205588bbb0a",
+      "size_bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed52.pt": {
+      "sha256": "e8316f3db5a60e72d1fee28384726b5353ffaf8c68ffeec64abb2326b4098958",
+      "size_bytes": 332812
+    },
+    "2s_to_5s_Transformer_seed62.pt": {
+      "sha256": "44d1d6d0e15af6844667b44e2bf6a4cb574b90884df8250af138e7841ec82b3a",
+      "size_bytes": 332812
+    }
+  },
+  "negative_difference_favors": "adaptive",
+  "no_prospective_results_at_lock": true,
+  "not_for_scientific_significance_without_verified_groups": true,
+  "phase": "7K",
+  "prepared_date": "2026-11-22",
+  "previously_inspected_development_sequence_ids": [
+    "DJI_0207",
+    "DJI_0204_video2"
+  ],
+  "primary_comparator": "cv_ols",
+  "primary_estimand": "capture-event mean (adaptive-ADE minus CV-OLS-ADE), separately for 20- and 50-frame horizon",
+  "project": "CP 1.0",
+  "release_files_sha256": {
+    "checkpoint_lock.json": "df5ed8a5bad73d0313b29ec9f4250757b951871df8e5251f300b92eeae3c0a0e",
+    "locked_models/phase7j_dev_gate_h20.json": "2988bf39a996016b1bd67026c7fe97ffa2756576114e007dcc5f2f047a5dd334",
+    "locked_models/phase7j_dev_gate_h50.json": "208d21c1d65734c5a96611eac4af7ea14bfd78d67f5f43f06c30d1bd2159e763",
+    "src/phase7f_locked_reference.py": "cb8c0473da94cf43b5bb4811215ba335e3de5a974232f2262a73bc1660f19671",
+    "src/phase7h.py": "f8c1c93d8559cccc2bd633597532262bf328007ddbf9620f5f3ab52fc7b32a81",
+    "src/phase7i_features.py": "9012b32c7ab1b218cad651c1caa51333b552dec0029584efd896185fedd7afdf",
+    "src/phase7j.py": "dec23d4a763f8efed136e92520884ee2fa452ab6d475ec2869f01a035d4cbd31",
+    "src/phase7k.py": "d08ad019ee3f9512ce3cb63475dac6ec409d4898a6ed9c6adaf898429a4392ec"
+  },
+  "secondary_outcomes": [
+    "stationary and transformer ADE/FDE",
+    "per-capture-event paired FDE",
+    "error tails and worst-case windows",
+    "gate selection frequencies",
+    "per-track variation",
+    "QA sensitivity"
+  ],
+  "status": "PREPARATION_LOCK_ONLY_NOT_REGISTERED_NOT_INDEPENDENT_VALIDATION"
+}

@@ -1,0 +1,58 @@
+{
+  "phase": "7L",
+  "file_count": 13,
+  "files": {
+    "PHASE7L_SCIENTIFIC_STATUS_REPORT.md": {
+      "sha256": "a601adf4076a2dfeb7a59bfc2dd27d18a82d848f1a3677b41b709f3e535f2b20",
+      "size_bytes": 4238
+    },
+    "README_UBUNTU.md": {
+      "sha256": "5543680c853cd94dcd9f21f316336a0cc5931fb38cd944ba1c44641cf71cb6f3",
+      "size_bytes": 6179
+    },
+    "phase7l_download_candidate.sh": {
+      "sha256": "c57cf8fb24e4c62971d46c6ede9695fad5cc5801a01d59f3a1e3ae966d16c808",
+      "size_bytes": 1553
+    },
+    "phase7l_screen_selected.sh": {
+      "sha256": "2a31b191df607830b933f8170cc9bf9ecfe0f6500506de4176e32612690e0c1b",
+      "size_bytes": 804
+    },
+    "protocol/PHASE7K_ORIGINAL_LOCK_DO_NOT_EDIT.json": {
+      "sha256": "408022abb8923eb61afdf1eb665db8ba7bb02ce4258b21ae4a3fd89dab4abb5c",
+      "size_bytes": 4000
+    },
+    "protocol/capture_event_provenance_template.csv": {
+      "sha256": "de1f489c5f325932e3c21e7cffc462d87a6fb7ee6c9b290848d93882b7e6dd69",
+      "size_bytes": 755
+    },
+    "protocol/phase7k_candidate_register_original.csv": {
+      "sha256": "85b698433e3c89abf0efcb3ae4093917b6feb17408d82956235cc848e2885b38",
+      "size_bytes": 3231
+    },
+    "results/candidate_register.csv": {
+      "sha256": "2626a39ccf9ab15ffd4045a79d72a239d8abf01bf8f6896225a9980db5d4faf4",
+      "size_bytes": 7301
+    },
+    "results/unit_tests.log": {
+      "sha256": "01c4616d4f09875d4af215409ac1288e77f1a3a7f80b93e01cd52dd0b5c8caaf",
+      "size_bytes": 1442
+    },
+    "results/verified_prior_7K/phase7l_audit_status.json": {
+      "sha256": "b5da8d2c387292c9371dba8279c862f2571793313f9f87032204073791cfc9b0",
+      "size_bytes": 371
+    },
+    "results/verified_prior_7K/phase7l_verified_recording_comparisons.csv": {
+      "sha256": "08610743f206041f5e897b1e81c0b55754b8bdb1ebe81e5fda8a808fb5269306",
+      "size_bytes": 1180
+    },
+    "src/phase7l.py": {
+      "sha256": "27d5eaf5e631dbab8cd015451f0db46157b99f413e67804a4f14e32edfc95cc4",
+      "size_bytes": 11601
+    },
+    "src/test_phase7l.py": {
+      "sha256": "db8064adb8ec684d63150ae230011b9834cc8ba90cee201b9b662a0dc90dd139",
+      "size_bytes": 5096
+    }
+  }
+}

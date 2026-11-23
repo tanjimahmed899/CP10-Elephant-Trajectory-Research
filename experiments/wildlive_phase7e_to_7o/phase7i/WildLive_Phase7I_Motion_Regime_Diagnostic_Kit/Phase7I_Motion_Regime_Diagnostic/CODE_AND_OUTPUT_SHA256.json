@@ -1,0 +1,74 @@
+{
+  "PHASE7I_SCIENTIFIC_DIAGNOSTIC_REPORT.md": {
+    "sha256": "fac14d80a4e3419e848f711ee1e892154be0ff65ba0cc37722f0e7d702d38b34",
+    "bytes": 11907
+  },
+  "README_UBUNTU.md": {
+    "sha256": "6175067990d56a91aafd161df0c02a1ba04898f3b95ab8641825a3af7877fe89",
+    "bytes": 2726
+  },
+  "results/DJI0207_QA_subset_motion_results.csv": {
+    "sha256": "f7ac0c679b35ae961b843c448c57d3bb46860fd97a5842d5e0a4342873fc5370",
+    "bytes": 477
+  },
+  "results/analysis_manifest.json": {
+    "sha256": "267943df3c8d8e03ef6ca1e4230fd0a86dbc4175543a292c0bc9db4ec8d565db",
+    "bytes": 2166
+  },
+  "results/descriptive_feature_error_correlations.csv": {
+    "sha256": "acef873891c53057506abf7cefc78210676bf132b8206658a1752837a2d39011",
+    "bytes": 1029
+  },
+  "results/figures/01_sequence_model_ADE.png": {
+    "sha256": "3d38e0bb6aa85f5fb1008b1d12ee07a626bad67c96b6be175621578b5bf21481",
+    "bytes": 70766
+  },
+  "results/figures/02_observed_speed_regime_ADE.png": {
+    "sha256": "4f00ee09cbe8fec72733c2781358b9c6dabaead7b8e4df74944d888caecb769f",
+    "bytes": 112852
+  },
+  "results/figures/03_observed_speed_vs_error_gap.png": {
+    "sha256": "fd2a01836eee17fe93e6e200d7c7cd526cfca72622d86fac8f02fbfbf111374b",
+    "bytes": 279257
+  },
+  "results/figures/04_animal_common_motion_proxy.png": {
+    "sha256": "bcbe88457bda9c31fd2c3b633821d36ad8bc5a19a70d7cb23511c57ab5c2c053",
+    "bytes": 72297
+  },
+  "results/multi_animal_common_motion_proxy.csv": {
+    "sha256": "ed41329bc16051b322919f06ca979072aca8c1e20eb8dbc54f9e714c8baf1d6a",
+    "bytes": 441
+  },
+  "results/per_recording_horizon_summary.csv": {
+    "sha256": "9cbd0ffb9b64980ac425f0df5650c549dfa5d17bb5a4e7d3552a1c99e630dfc4",
+    "bytes": 1371
+  },
+  "results/per_track_motion_and_model_errors.csv": {
+    "sha256": "9b5d4fa1c910df88ab2da949d0a4a2ac17f20e7c3934c807e7ca85e2eb912bd9",
+    "bytes": 2424
+  },
+  "results/per_window_observation_motion_and_model_errors.csv": {
+    "sha256": "c3ea31685bc5f5bd3ce8bacb328151553482e883f299a89dfabf7d42e427b847",
+    "bytes": 2575135
+  },
+  "results/speed_tercile_error_table.csv": {
+    "sha256": "d377cc5d9b53802d6299f51bb9411c52b1ab02480cc817537088cdc45a01df2c",
+    "bytes": 2113
+  },
+  "results/straightness_tercile_error_table.csv": {
+    "sha256": "aac8268ac511d8caad74243b23197e8a282d3efd3115f7f7bd22870e289f9634",
+    "bytes": 1419
+  },
+  "results/within_elephant_speed_regime_deltas.csv": {
+    "sha256": "690205fb65d653cf41432196761ecaaed0b8f000d838ed1cb9a73ed0a0df9caf",
+    "bytes": 3488
+  },
+  "src/run_phase7i.py": {
+    "sha256": "366617a706c1b7b33b42f50358ccc28b3c6e10042cfbb962d429e2217bcaa46f",
+    "bytes": 22824
+  },
+  "src/test_phase7i.py": {
+    "sha256": "72fb8004d68378a279afb788020aa1770fb96d8c83355e8d6b0292d2cf97f586",
+    "bytes": 3032
+  }
+}

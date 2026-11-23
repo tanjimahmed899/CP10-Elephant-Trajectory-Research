@@ -1,0 +1,5 @@
+sequence_id,author_source_or_reply_date,source_video_identifier_anonymized,flight_session_identifier_anonymized,clip_start_offset_s,clip_end_offset_s,approx_capture_date_if_permitted,capture_fps_verified,annotation_stride_frames,related_to_other_sequence_ids,relationship_evidence,reviewed_by,review_date,review_decision
+DJI_0207,,,,,,,,,,,,,
+DJI_0204_video1,,,,,,,,,,,,,
+DJI_0204_video2,,,,,,,,,,,,,
+DJI_0161_video1,,,,,,,,,,,,,
