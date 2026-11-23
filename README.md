@@ -53,3 +53,35 @@ The experiment archive manifests identify sources, included files and excluded c
 ## Publication and licensing
 
 The source code is publicly viewable, but **no general open-source license has been selected or granted**. Review the rights to redistribute copied/adapted scripts, derived data, models and research photos before adding further artifacts. Paper and figures may have separate copyright considerations.
+
+## November 2026 Scientific Evidence Update
+
+The repository includes retrospective WildLive research
+evidence from Phase 7E through Phase 7O.
+
+### Interpretation limits
+
+- The WildLive evaluation used uncorrected image-plane
+  bounding-box centres with unverified frame cadence.
+  It is a representation/cadence mismatch stress test,
+  not controlled transfer validation.
+- Adaptive model-selection superiority was not established.
+- DJI_0204_video1 and DJI_0204_video2 have scene overlap.
+  Independent-flight generalization remains unverified.
+- The Stage 4 corrected-history Transformer improved ADE
+  over the corrected Stationary baseline by approximately
+  2.66% at 2 s and 8.43% at 5 s.
+- Stage 4 training windows were heavily concentrated in
+  BIRDSAI sequence 0367.
+- Camera-motion estimation used annotation-assisted masking
+  in the relevant historical experiments.
+- Camera-registration studies on selected frame pairs do
+  not establish full camera-corrected forecasting gains.
+- EXP4 Phase 3 evidence remains unverified.
+
+These findings do not establish a field-deployed wildlife
+warning system or universally superior forecaster.
+
+See:
+- experiments/wildlive_phase7e_to_7o/README.md
+- docs/analysis/EXP4_PHASE3_EVIDENCE_GAP.md
