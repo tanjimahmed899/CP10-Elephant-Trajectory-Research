@@ -34,3 +34,6 @@ Thumbs.db
 *.tmp
 *.swp
 logs/local/
+
+# Source excerpts containing unreviewed geolocation metadata
+/experiments/CP10_Research_Stage2_Revision_Reports/results/R9_canonicalization_isotropic_ablation/R9H_A_canonicalization_source_lock/R9H_A_CANONICALIZATION_SOURCE_CANDIDATES.csv
