@@ -77,11 +77,11 @@ evidence from Phase 7E through Phase 7O.
   in the relevant historical experiments.
 - Camera-registration studies on selected frame pairs do
   not establish full camera-corrected forecasting gains.
-- EXP4 Phase 3 evidence remains unverified.
+- EXP4 Phase 3 was a manuscript source-to-claim audit, not a separately verified new forecasting experiment. Its private review document has been identified; no Phase 3 numerical-results package was established by filename search.
 
 These findings do not establish a field-deployed wildlife
 warning system or universally superior forecaster.
 
 See:
 - experiments/wildlive_phase7e_to_7o/README.md
-- docs/analysis/EXP4_PHASE3_EVIDENCE_GAP.md
+- docs/analysis/EXP4_PHASE3_MANUSCRIPT_AUDIT_STATUS.md

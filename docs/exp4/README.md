@@ -5,6 +5,7 @@ This directory is an **additional research archive**, intended to sit alongside 
 ## Evidence status
 
 - **Phases 0–2:** Retrospective numerical replay and source-to-claim auditing on previously supplied experimental evidence.
+- **Phase 3:** Manuscript source-to-claim audit of the 21 November 2026 *Final Demo paper.docx* draft. It identified necessary corrections and did not establish a newly trained model, independent field trial or new numerical evaluation. See [Phase 3 status](phase3/README.md).
 - **Phase 4:** Editorial consistency updates based on those sources; revised unpublished manuscript is intentionally **not** part of this public add-on.
 - **Phase 5:** **Exploratory** threshold/clearance-gate warning-policy ablation on previously examined cohorts. No new recording-group confirmation, no novel conformal validity theorem and no improvement at the 5-second horizon under the chosen criterion.
 - **Phase 6:** Preregistration and independent-validation **design only**; no new confirmatory recordings were available.
